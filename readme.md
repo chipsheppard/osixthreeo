@@ -1,4 +1,4 @@
-=== Kelso ===
+# Kelso #
 
 Contributors: chip sheppard
 Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, featured-image-header, custom-logo, custom-colors, custom-background, flexible-header, grid-layout, right-sidebar, left-sidebar, two-columns
@@ -11,22 +11,22 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 A theme called Kelso, based on underscores.
 
-== Description ==
+## Description ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A basic but flexible that makes use of the WP Customizer.
 
-== Installation ==
+## Installation ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 1. In your admin panel, go to Appearance > Themes and click the Add New button.
 2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
 3. Click Activate to use your new theme right away.
 
-== Theme Stats ==
+## Theme Stats ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-= 7 Widget Areas =
+__ 7 Widget Areas __
   - Posts Sidebar
   - Pages Sidebar
   - Sub-Footer 1
@@ -35,11 +35,11 @@ Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A b
   - Sub-Footer 4
   - Footer Widget Area
 
-= 2 Supported Post Formats
+__ 2 Supported Post Formats
   - Aside
   - Status
 
-= 7 Theme Action Hooks for developers =
+__ 7 Theme Action Hooks for developers __
   - kelso_before_header
   - kelso_before_content
   - kelso_after_content
@@ -48,7 +48,7 @@ Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A b
   - kelso_single_after_entry
   - kelso_inside_navigation : used for inserting search into the menu
 
-= 17 Customizer controls =
+__ 17 Customizer controls __
   - global_width_setting
   - nav_search
   - back_to_top
@@ -67,7 +67,7 @@ Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A b
   - search_layout_setting
   - archive_layout_setting
 
-= 25 User CSS Classes =
+__ 25 User CSS Classes __
   - arrow           = for LINKS, adds an arrow
   - line            = for LINKS, adds an underscore on hover
   - ta-center       = text-align: center
@@ -94,33 +94,33 @@ Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A b
   - bg-black        = background-color: #000000;
   - text-black      = color: #000000;
 
-= 5 Button Classes =
+__ 5 Button Classes __
   - button
   - button white
   - button secondary
   - button darklight
   - button wide
 
-== THEME NOTES: ==
+## THEME NOTES: ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-= Logo =
+__ Logo __
 The logo is constrained to 300px wide max.
 
-= HR (horizontal rule) =
+__ HR (horizontal rule) __
 <hr>             is 10% black
 <hr class=“alt”> is 50% white
 
-= BlockQuote =
+__ BlockQuote __
 citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
 
-= Display Featured Image =
+__ Display Featured Image __
 The Display Featured Image checkbox does NOT appear when using Gutenberg.
 
-= Sidebar Widgets =
+__ Sidebar Widgets __
 There are separate sidebars for Posts and Pages.
 
-= Footer Widgets =
+__ Footer Widgets __
 Footer widget areas can be used as a single full-width column, two half-width columns, three third-width columns and four quarter-width columns.
 If a widget is placed into the 4th widget area - all four widget areas are displayed at 25%.
 If a widget is placed into the 3rd widget area and no widget is in the 4th - only widget areas 1, 2 & 3 are displayed at 33%.
@@ -128,16 +128,17 @@ If a widget is placed into the 2nd widget area and no widgets are in the 3rd or 
 If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3rd or 4th = only widget area 1 is displayed at 100%.
 
 
-== Changelog ==
+## Changelog ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-= 1.0 - September 2018 =
-* First deploy to GIT
+__ 1.0 - September 2018 __
+ First deploy to GIT
 
-= 0.1 - April 24 2018 =
-* Renamed to as "Kelso" - first deploy to GIT
+__ 0.1 - April 24 2018 __
+ _s downloaded and renamed to "Kelso"
 
-== Credits ==
+
+## Credits ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 * Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

@@ -132,13 +132,13 @@ If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3r
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 = 1.0 - September 2018 =
-* First deploy to GIT
+First deploy to GIT
 
 = 0.1 - April 24 2018 =
-* Renamed to as "Kelso" - first deploy to GIT
+_s downloaded and renamed to "Kelso"
 
 == Credits ==
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-* Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
