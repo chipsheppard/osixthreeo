@@ -26,7 +26,7 @@ Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A b
 ## Theme Stats ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-__ 7 Widget Areas __
+**7 Widget Areas**
   - Posts Sidebar
   - Pages Sidebar
   - Sub-Footer 1
@@ -35,11 +35,11 @@ __ 7 Widget Areas __
   - Sub-Footer 4
   - Footer Widget Area
 
-__ 2 Supported Post Formats
+**2 Supported Post Formats
   - Aside
   - Status
 
-__ 7 Theme Action Hooks for developers __
+**7 Theme Action Hooks for developers**
   - kelso_before_header
   - kelso_before_content
   - kelso_after_content
@@ -48,7 +48,7 @@ __ 7 Theme Action Hooks for developers __
   - kelso_single_after_entry
   - kelso_inside_navigation : used for inserting search into the menu
 
-__ 17 Customizer controls __
+**17 Customizer controls**
   - global_width_setting
   - nav_search
   - back_to_top
@@ -67,7 +67,7 @@ __ 17 Customizer controls __
   - search_layout_setting
   - archive_layout_setting
 
-__ 25 User CSS Classes __
+**25 User CSS Classes**
   - arrow           = for LINKS, adds an arrow
   - line            = for LINKS, adds an underscore on hover
   - ta-center       = text-align: center
@@ -94,7 +94,7 @@ __ 25 User CSS Classes __
   - bg-black        = background-color: #000000;
   - text-black      = color: #000000;
 
-__ 5 Button Classes __
+**5 Button Classes**
   - button
   - button white
   - button secondary
@@ -104,23 +104,23 @@ __ 5 Button Classes __
 ## THEME NOTES: ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-__ Logo __
+**Logo**
 The logo is constrained to 300px wide max.
 
-__ HR (horizontal rule) __
-<hr>             is 10% black
-<hr class=“alt”> is 50% white
+**HR (horizontal rule)**
+&lt;hr>             is 10% black
+&lt;hr class=“alt”> is 50% white
 
-__ BlockQuote __
+**BlockQuote**
 citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
 
-__ Display Featured Image __
+**Display Featured Image**
 The Display Featured Image checkbox does NOT appear when using Gutenberg.
 
-__ Sidebar Widgets __
+**Sidebar Widgets**
 There are separate sidebars for Posts and Pages.
 
-__ Footer Widgets __
+**Footer Widgets**
 Footer widget areas can be used as a single full-width column, two half-width columns, three third-width columns and four quarter-width columns.
 If a widget is placed into the 4th widget area - all four widget areas are displayed at 25%.
 If a widget is placed into the 3rd widget area and no widget is in the 4th - only widget areas 1, 2 & 3 are displayed at 33%.
@@ -131,10 +131,10 @@ If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3r
 ## Changelog ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-__ 1.0 - September 2018 __
+**1.0 - September 2018**
  First deploy to GIT
 
-__ 0.1 - April 24 2018 __
+**0.1 - April 24 2018**
  _s downloaded and renamed to "Kelso"
 
 
