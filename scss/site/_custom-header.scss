@@ -54,6 +54,10 @@
 		    min-width: 100%;
 		    min-height: 100%;
 		}
+
+		//@include breakpoint(tablet-m) {
+		//	display: none;
+		//}
 	}
 }
 .wp-custom-header {
@@ -74,18 +78,21 @@
 	}
 }
 
+/* THE TEXT
+- - - - - - - - - - - - - - - - - */
 .custom-header-image-text {
 	color: #ffffff;
-	padding-top: 320px;
-	position: relative;
+	//padding-top: 320px;
+	//position: relative;
+	position: absolute;
 	text-align: center;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
 	z-index: 5;
 
 	@include breakpoint(tablet-v) {
-		padding-top: 200px;
-	}
-	@include breakpoint(phone-h) {
-		padding-top: 120px;
+		padding-top: 3em;
 	}
 
 	.hero-primary{

@@ -14,7 +14,7 @@ A theme called Kelso, based on underscores.
 ## Description ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A basic but flexible that makes use of the WP Customizer.
+Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A basic but flexible that makes use of the WP Customizer.
 
 ## Installation ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -35,7 +35,7 @@ Kelso is based on Underscores ( _s ) by Automatic, the keepers of WordPress. A b
   - Sub-Footer 4
   - Footer Widget Area
 
-**2 Supported Post Formats
+**2 Supported Post Formats**
   - Aside
   - Status
 
@@ -135,10 +135,10 @@ If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3r
  First deploy to GIT
 
 **0.1 - April 24 2018**
- _s downloaded and renamed to "Kelso"
+ \_s downloaded and renamed to "Kelso"
 
 
-## Credits ##
+##Credits##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 * Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

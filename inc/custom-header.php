@@ -51,7 +51,7 @@ if ( ! function_exists( 'kelso_customheader_image_url' ) ) {
 
 		if ( is_home() && ! is_front_page() && has_post_thumbnail( $blog_id ) && $blog_key_value ) : // For blog page.
 			echo ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( $blog_id, 'full' ) ) . ')"';
-		elseif ( ! is_search() && ! is_archive() && get_the_post_thumbnail( $_post->ID ) && $key_value ) : // Pages & Posts that have a featured image with checkbox checked.
+		elseif ( ! is_home() && ! is_search() && ! is_archive() && get_the_post_thumbnail( $_post->ID ) && $key_value ) : // Pages & Posts that have a featured image with checkbox checked.
 			echo ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( $_post->ID, 'full' ) ) . ')"';
 		else :
 			echo ' style="background-image:url(' . esc_url( get_header_image() ) . ')"';
