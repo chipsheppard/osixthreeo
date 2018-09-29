@@ -1,0 +1,121 @@
+/*
+ * Site Header
+---------------------------------------------------------------- */
+
+.header-wrap {
+	background-color: #ffffff;
+	position: relative;
+	z-index: 100;
+
+	&.stuck {
+		left: 0;
+		position: fixed;
+		width: 100%;
+
+		@include breakpoint(tablet-v) {
+			max-height: 100%;
+		}
+	}
+}
+
+.site-header {
+	position: relative;
+	width: 100%;
+
+	.inner-wrap {
+			display: table;
+		padding-top: 1em;
+		padding-bottom: 1em;
+
+		@include breakpoint(phone-h) {
+			padding-top: .75em;
+			padding-bottom: .75em;
+		}
+	}
+
+	.wrap {
+		position: relative;
+		height: 460px;
+
+		@include breakpoint(phone-h) {
+			height: 180px;
+		}
+	}
+}
+
+// Homepage
+.home .site-header .wrap {
+	min-height: 600px;
+
+	@include breakpoint(tablet-v) {
+		min-height: auto;
+		height:  500px;
+	}
+	@include breakpoint(phone-h) {
+		height: 300px;
+	}
+}
+
+// The LOGO
+.site-branding {
+	//float:left;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: left;
+
+	@include breakpoint(tablet-v) {
+		width: 88%;
+		display:block;
+	}
+
+	a {
+		display: inline-block;
+		line-height: 1;
+	}
+
+}
+
+.custom-logo {
+	img {
+		display: block;
+		max-width: 300px;
+		width: 100%;
+	}
+
+	a:hover {
+		opacity: 0.8;
+	}
+}
+
+.site-title {
+	color: #000;
+	font-family: $font__site-title;
+	font-weight: $font__weight-bold;
+	line-height: 1;
+	margin: 0 0 .25em;
+	@include font-size(4);
+
+	a {
+		color: #000;
+		display:inline-block;
+		text-decoration: none;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+
+	@include breakpoint(tablet-l) {
+		@include font-size(4);
+	}
+
+	@include breakpoint(phone-h) {
+		@include font-size(3);
+	}
+}
+
+.site-description {
+	color: $color__base;
+	letter-spacing: 1px;
+	line-height: 1;
+}

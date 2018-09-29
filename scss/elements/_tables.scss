@@ -1,0 +1,51 @@
+/*
+ * Tables
+--------------------------------------------- */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1.5em;
+  	width: 100%;
+}
+
+th, td {
+    line-height: 1.5;
+    vertical-align: top;
+    border-top: 1px solid $color__base-xlight;
+}
+th {
+    padding: .75em 1em .5em;
+}
+td {
+    padding: 1em;
+}
+thead th, tfoot th {
+	text-align: left;
+    vertical-align: bottom;
+}
+thead th {
+	background-color: $color__base-xlight;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+caption + thead tr:first-child th,
+caption + thead tr:first-child td,
+colgroup + thead tr:first-child th,
+colgroup + thead tr:first-child td,
+thead:first-child tr:first-child th,
+thead:first-child tr:first-child td {
+    border-top: 0;
+}
+
+tbody + tbody {
+    border-top: 2px solid $color__base-xlight;
+}
+
+.striped tr:nth-child(odd) > td {
+  background: #fff;
+}
+.striped tr:nth-child(even) > td {
+  background: $color__base-xxlight;
+}

@@ -1,0 +1,61 @@
+/* Site Footer
+--------------------------------------------- */
+
+.site-footer {
+	clear: both;
+	width: $size__site-main;
+	-webkit-font-smoothing: antialiased;
+
+	.wrap {
+		background-color: #000;
+	}
+}
+
+.site-info {
+	color: $color__base-light;
+	letter-spacing: 1px;
+	padding: 2em 0 .5em;
+	position: relative;
+	@include font-size(1.4);
+
+	a {
+		color: $color__base-medium;
+
+		&:hover {
+			color: $color__base-light;
+		}
+	}
+
+}
+
+.backtotop {
+	display: inline-block;
+	padding: .5em 1em .125em;
+	color: #f0f0f0;
+	right: 0;
+	top: calc(50% - 12px);
+	position: absolute;
+	background: rgba(153, 153, 153, 0.25);
+	border-radius: 3px;
+	cursor: pointer;
+
+	&:after {
+		content: '';
+		color: #ffffff;
+		display: inline-block;
+		position: relative;
+		top: -2px;
+		right: 0;
+		width: 7px;
+	    height: 7px;
+		border-style: solid;
+	    border-width: 1px 0 0 1px;
+	    transform: rotate(45deg);
+	}
+
+    &:hover {
+ 		&:before {
+ 			background: rgba(102, 102, 102, 0.5);
+ 		}
+    }
+}

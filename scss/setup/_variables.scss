@@ -1,0 +1,49 @@
+/*
+ * Color
+ * ----------------------------------- */
+$color__base: #666666;
+$color__base-medium: #808080; // aka Gray
+$color__base-light: #c0c0c0; // aka Silver
+$color__base-xlight: #dcdcdc; // aka Gainsboro
+$color__base-xxlight: #f5f5f5; // aka = WhiteSmoke
+
+$color__highlight: #1e90ff; // aka DodgerBlue
+$color__secondary: #ff8c00; // aka DarkOrange
+$color__darklight: #222222;
+
+/*
+ * Typography
+ * ----------------------------------- */
+$font__main:  "Open Sans", Arial, sans-serif;
+$font__headers:  "Open Sans", Arial, sans-serif;
+
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__icon: "dashicons";
+
+$font__serif: 'Georgia', 'Times', serif;
+
+$font__line-height-body: 1.75;
+$font__line-height-pre: 1.6;
+
+$font__weight-light: 300;
+$font__weight-normal: 400;
+$font__weight-semibold: 600;
+$font__weight-bold: 700;
+$font__weight-xbold: 800;
+
+$font__site-title: $font__headers;
+$font__menus: $font__main;
+$font__entrymeta: $font__headers;
+$font__sitefooter: $font__serif;
+
+
+/*
+ * Structutal
+ * ----------------------------------- */
+
+$size__site-max: 80em;
+$size__site-main: 100%;
+$size__site-content: 75%;
+$size__site-padding: 4%;
+$size__site-sidebar: 25%;

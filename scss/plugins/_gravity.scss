@@ -1,0 +1,81 @@
+/*
+ * Gravity Forms
+--------------------------------------------- */
+.gform_wrapper {
+	margin: 0 !important;
+}
+
+.gform_wrapper ul li.gfield {
+	margin-bottom: 1em;
+}
+
+.gform_wrapper .top_label .gfield_label {
+	margin-bottom: 0 !important;
+	font-weight: $font__weight-normal !important;
+}
+
+.gform_wrapper .gravity-name span label,
+.gform_wrapper .ginput_complex label,
+.gform_wrapper .gravity-address span label {
+	display:none !important;
+}
+
+.gform_confirmation_wrapper {
+	padding: 7em 0;
+	@include font-size(2.4);
+}
+
+// ERRORS ---------------------------------------------
+.gform_wrapper li.gfield.gfield_error,
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+	background-color: transparent !important;
+	border-top: none !important;
+	border-bottom: none !important;
+}
+
+.gform_wrapper .gfield_description.validation_message {
+	padding:0 !important;
+	margin:0 !important;
+}
+
+.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container {
+	margin-left: 0 !important;
+}
+
+.footer-widgets .gform_wrapper .top_label .gfield_label,
+.footer-widgets .gform_wrapper .ginput_complex label,
+.footer-widgets .validation_error {
+	display:none;
+}
+
+.footer-widgets .gform_wrapper .gform_footer {
+	padding: 0;
+	margin:  0;
+}
+
+.footer-widgets input {
+	border: 0;
+	margin-bottom: 0;
+}
+
+.footer-widgets .gform_wrapper li.gfield.gfield_error {
+	background-color: transparent;
+	margin-bottom: 0;
+	padding: 0;
+	border-top: none;
+	border-bottom: none;
+}
+
+.footer-widgets .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.footer-widgets .gform_wrapper .gfield_description.validation_message,
+.footer-widgets .gform_wrapper .top_label .gfield_description.validation_message {
+	padding: 0!important;
+}
+
+.footer-widgets .gform_wrapper .validation_message {
+	color: #ff0000;
+}

@@ -1,0 +1,136 @@
+/*
+ * Containers
+--------------------------------------------- */
+
+.site-content {
+	position: relative;
+	clear: both;
+
+
+	.widget-area {
+		display: inline-block;
+		padding-top: 3em;
+		overflow: hidden;
+		width: $size__site-sidebar;
+	}
+}
+
+.content-area {
+	padding-top: 3em;
+	width: $size__site-main;
+}
+
+.site-main {
+	width: $size__site-main;
+}
+
+.page-wrap,
+.inner-wrap {
+	max-width: $size__site-max;
+	margin: 0 auto;
+	padding: 0 40px;
+	position: relative;
+	width: $size__site-main;
+
+	@include breakpoint(tablet-h) {
+ 		padding: 0 5%;
+	}
+}
+
+.page-wrap {
+	background-color: #f5f5f5;
+}
+
+.contained {
+	max-width: $size__site-max;
+	margin: 0 auto;
+}
+
+.nosidebar-silo .page-wrap {
+	padding: 0 15%;
+
+	@include breakpoint(tablet-h) {
+		padding: 0 8%;
+	}
+	@include breakpoint(phone-h) {
+		padding: 0 5%;
+	}
+}
+
+
+// Sidebar Content ------------------------------
+.sidebar-left {
+
+	.content-area {
+		float: right;
+		width: $size__site-content;
+	}
+
+	.site-main {
+		//border-left: 1px solid $color__base-xlight;
+		margin-bottom: 3em;
+		padding-left: 5%;
+	}
+
+	.site-content .widget-area {
+		float: left;
+		margin-bottom: 1.5em;
+	}
+
+	.sidebar-widget {
+		padding-right: 5%;
+		//padding-left: 5%;
+
+		@include breakpoint(tablet-v) {
+			padding-right: 0;
+		}
+	}
+}
+
+// Content Sidebar ------------------------------
+.sidebar-right {
+
+	.content-area {
+		float: left;
+		width: $size__site-content;
+	}
+	.site-main {
+		//border-right: 1px solid $color__base-xlight;
+		padding-right: 5%;
+		margin-bottom: 3em;
+	}
+
+	.site-content .widget-area {
+		float: right;
+	}
+
+	.sidebar-widget {
+		padding-left: 5%;
+		//padding-right: 5%;
+
+		@include breakpoint(tablet-v) {
+			padding-left: 0;
+		}
+	}
+}
+
+
+// Stack 'em up for Vertical iPads and smaller
+@include breakpoint(tablet-v) {
+	.content-area,
+	.site-main,
+	.site-content .widget-area,
+	.sidebar-right .content-area,
+	.sidebar-right .site-main,
+	.sidebar-right .site-content .widget-area,
+	.sidebar-left .content-area,
+	.sidebar-left .site-main,
+	.sidebar-left .site-content .widget-area {
+		display: block;
+		float: none;
+		width: $size__site-main;
+		padding-left: 0;
+		padding-right: 0;
+		border: none;
+	}
+}

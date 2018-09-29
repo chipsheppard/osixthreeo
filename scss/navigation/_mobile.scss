@@ -1,0 +1,132 @@
+/*
+ * Mobile Navigation
+---------------------------------------------------------------- */
+
+@include breakpoint(tablet-v) {
+	.site-navigation {
+		clear: both;
+		display: block;
+		float: none;
+		margin-left: -5.5%;
+		margin-right: -5.5%;
+		text-align: left;
+		min-width: 100%;
+
+		.menu-wrap {
+			background-color: $color__darklight;
+			display: none;
+		    padding: 1em 3%;
+			top: 1em;
+		}
+
+		&.toggled-on .menu-wrap {
+			display: block;
+		}
+
+		a {
+			color: #ffffff !important;
+			overflow: hidden;
+			padding: 1.25em 1em 1em 1.5em;
+			position: relative;
+			width: 100%;
+
+			&:hover {
+				background: rgba(153,153,153,.1);
+			}
+		}
+
+		ul {
+			border-top: 1px solid $color__base-medium;
+			display: block;
+			float: none;
+			margin-left: 0;
+		}
+
+		li {
+			border-bottom: 1px solid $color__base-medium;
+			display: block;
+			margin-left: 0;
+			position: relative;
+
+			&:last-of-type {
+				border: 0;
+			}
+
+			&.accent {
+				margin-top: 1em;
+				margin-bottom: .25em;
+
+				a {
+					padding-bottom: 1em;
+				}
+			}
+
+			li  {
+				display: block;
+
+				a { // indent the subs a bit
+					padding-left: .5em;
+					@include font-size(1.4);
+				}
+			}
+		}
+
+		li:not(.search-icon) a:before {
+			content: none;
+		}
+
+		.dropdown-toggle {
+			border-left: 1px solid $color__base-medium;
+			color: #ffffff !important;
+			cursor: pointer;
+			display: inline-block;
+			margin-left: 0;
+			padding: .25em 1em .5em;
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: 2;
+
+			&:hover {
+				background: #333;
+			}
+		}
+
+		/* SUB MENU -------------------- */
+		.sub-menu {
+			background: none;
+			border-top: 1px solid $color__base-medium;
+			display: none;
+			left: auto;
+			margin-left: 0;
+			opacity: 1;
+			position: relative;
+			top: auto;
+			width: 100%;
+
+			&.toggled-on {
+				display: block;
+			}
+
+			a {
+				border: 0;
+				color: #ffffff !important;
+				padding-left: 2em;
+				width: 100%;
+			}
+
+			button.dropdown-toggle {
+				padding: 0 1em .425em;
+				right: 0;
+			}
+
+			.sub-menu {
+				margin: 0;
+
+				a {
+					padding-left: 3em;
+				}
+			}
+		}
+	}
+}

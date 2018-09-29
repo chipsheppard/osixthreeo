@@ -1,0 +1,18 @@
+/*
+ * Jetpack
+--------------------------------------------- */
+img#wpstats {
+	display:none;
+}
+
+// Remove text site-title when Jetpack site-logo is used.
+body.has-site-logo .site-title,
+body.has-site-logo .site-description {
+	display:none !important;
+}
+
+@include breakpoint(phone-h) {
+	body.has-site-logo .site-logo {
+		width:75%;
+	}
+}

@@ -1,0 +1,47 @@
+/* Search Results
+--------------------------------------------- */
+
+.search {
+
+	.page-header {
+		margin-bottom: 2em;
+	}
+
+	.page-title {
+		span {
+			text-transform: none;
+			display: block;
+			@include font-size(1.6);
+		}
+	}
+
+	.hentry {
+		margin: 0 0 3.5em 0;
+		position: relative;
+	}
+
+	.entry-header {
+		padding-bottom: .5em;
+
+		&:after {
+			display: block;
+			content: '';
+			border-bottom: 1px solid $color__base-xlight;
+			height: 1px;
+			margin-top: .5em;
+		}
+	}
+	.entry-title {
+		font-weight: $font__weight-normal;
+		@include font-size(2.2);
+	}
+
+	.entry-content,
+	.entry-summary {
+		margin: 0;
+	}
+
+	.more-link {
+		padding: 0;
+	}
+}

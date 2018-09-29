@@ -1,0 +1,21 @@
+/* Woo Commerce
+--------------------------------------------- */
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+	background-color: $color__highlight;
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+
+	&:hover {
+		background-color: $color__base;
+		color: #fff;
+	}
+
+	&:focus,
+	&:active {
+		outline: 0;
+		background-color: #000;
+	}
+}

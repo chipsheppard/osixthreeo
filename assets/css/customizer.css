@@ -1,0 +1,20 @@
+#customize-theme-controls #sub-accordion-section-kelso_layout_settings .customize-control-radio .customize-inside-control-row {
+	float:left;margin-right:12px
+}
+
+#customize-theme-controls #customize-control-background_color,
+#customize-theme-controls #customize-control-kelso_settings-third_color,
+#customize-theme-controls #customize-control-kelso_settings-nav_link_color,
+#customize-theme-controls #customize-control-kelso_settings-footerwidgets_link_color_hover,
+#customize-theme-controls #customize-control-header_image,
+#customize-theme-controls #customize-control-kelso_settings-header_bg_color_right,
+#customize-theme-controls #customize-control-kelso_settings-hero_text_primary_color {
+	padding-bottom:1em;
+	border-bottom:1px solid #aaa
+}
+#customize-control-kelso_settings-hero_text_primary {
+	padding-bottom:1em;
+	padding-top:1em;
+	border-bottom:1px solid #aaa
+	border-top:1px solid #aaa
+}

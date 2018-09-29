@@ -1,0 +1,34 @@
+/*
+* ENTRY FOOTER ----------
+*/
+.entry-footer {
+	border-top: 1px dashed $color__base-xlight;
+	border-bottom: 1px dashed $color__base-xlight;
+	color: $color__base-light;
+	font-family: $font__entrymeta;
+	padding: .5em 0;
+	@include font-size(1.2);
+}
+
+.cat-links,
+.tags-links {
+	padding:5px 10px 5px 0;
+	color: $color__base-light;
+	display: inline;
+	font-style: italic;
+	font-family: $font__serif;
+	margin-right: .75em;
+
+	a {
+		font-family: $font__main;
+		font-style: normal;
+	}
+}
+
+.edit-link {
+	float: right;
+
+	a {
+		display: inline-block;
+	}
+}

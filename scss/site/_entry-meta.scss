@@ -1,0 +1,40 @@
+/*
+* ENTRY META ----------
+*/
+
+.entry-meta {
+	font-family: $font__entrymeta;
+	color: $color__base-light;
+	margin: 0;
+	@include font-size(1.2);
+
+	.posted-on,
+	.updated-on,
+	.byline {
+		color: $color__base-light;
+		display: inline-block;
+		font-style: italic;
+		font-family: $font__serif;
+		padding-right: .5em;
+
+		a {
+			color: $color__base-medium;
+			font-family: $font__main;
+			font-style: normal;
+		}
+	}
+
+	.updated-on {
+		display: block;
+	}
+
+	.comments-link {
+		margin-left: .5em;
+
+		a {
+			color: $color__base-medium;
+			font-family: $font__main;
+			font-style: normal;
+		}
+	}
+}

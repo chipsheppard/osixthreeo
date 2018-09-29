@@ -1,0 +1,93 @@
+/* Entries
+--------------------------------------------- */
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+.entry-title {
+	font-family: $font__headers;
+	margin: 0 0 .25em;
+}
+
+.page-title {
+	margin: 0;
+	font-family: $font__headers;
+
+	div {
+		@include font-size(1.6);
+		text-transform: uppercase;
+	}
+}
+
+body.page .entry-title,
+body.single .entry-title,
+body.blog .page-title,
+body.archive .page-title,
+body.search .page-title {
+	color: #ffffff;
+	font-weight: $font__weight-semibold;
+	letter-spacing: 1px;
+	padding: .25em .5em;
+	position: absolute;
+	text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
+	text-transform: uppercase;
+    top: -5em;
+	word-break: break-word;
+    z-index: 5;
+
+	@include breakpoint(phone-h) {
+		top: -3.5em;
+		@include font-size(2);
+	}
+}
+.home:not(.blog) .entry-title {
+	display: none;
+}
+
+.entry-content {
+	ol,
+	ul {
+		margin-left: 2.5em;
+		margin-bottom: 1.5em;
+
+		li {
+			line-height: 1.4;
+			padding-bottom: .5em;
+		}
+	}
+
+	ol > li {
+		list-style-type: decimal;
+	}
+
+	ul > li {
+		list-style-type: disc;
+	}
+
+	ol ol,
+	ul ul {
+		margin-bottom: 0;
+	}
+
+	dt {
+		font-weight: $font__weight-bold;
+	}
+
+	dd {
+		margin: 0 1em 1em;
+	}
+}
+
+
+.single {
+	.hentry {
+		margin-bottom: 6em;
+	}
+	.entry-header {
+		margin-bottom: 2em;
+	}
+	.entry-content {
+		margin-bottom: 2em;
+	}
+}

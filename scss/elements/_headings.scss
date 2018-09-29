@@ -1,0 +1,42 @@
+/*
+ * Headings
+ ------------------------------------------- */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headers;
+	font-weight: $font__weight-light;
+	line-height: 1.2;
+    margin: 0 0 3%;
+
+	a {
+		color: $color__base;
+		display: inline-block;
+		width: 100%;
+		&:hover {
+			color: $color__highlight;
+		}
+	}
+}
+
+h1 {@include font-size(4.2);}
+h2 {@include font-size(3.2);}
+h3 {@include font-size(2.8);}
+h4 {@include font-size(2.4);}
+h5 {@include font-size(2.2);}
+h6 {@include font-size(1.8);}
+
+@include breakpoint(tablet-v) {
+	h1 {@include font-size(4);}
+	h2 {@include font-size(3);}
+	h3 {@include font-size(2.4);}
+	h4 {@include font-size(2);}
+	h5 {@include font-size(1.8);}
+	h6 {@include font-size(1.4);}
+}
+
+@include breakpoint(phone-h) {
+	h1 {@include font-size(3.2);}
+	h2 {@include font-size(2.4);}
+	h3 {@include font-size(2);}
+	h4 {@include font-size(1.8);}
+}

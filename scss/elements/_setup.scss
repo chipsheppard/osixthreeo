@@ -1,0 +1,107 @@
+/*
+ * Setup
+--------------------------------------------- */
+
+html {
+	box-sizing: border-box;
+	font-size: 62.5%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+*,
+*:before,
+*:after { /* see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #ffffff;
+}
+
+img {
+	height: auto;
+	max-width: 100%;
+}
+
+
+ul, ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+
+/*
+ * Typography
+--------------------------------------------- */
+
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $font__main;
+	font-weight: $font__weight-normal;
+	color: $color__base;
+	line-height: $font__line-height-body;
+	@include font-size(1.6);
+}
+
+/* Copy */
+
+p, form, address {
+	margin: 0 0 1.4em;
+}
+
+b, strong {
+	font-weight: $font__weight-bold;
+}
+
+pre {
+	background: $color__base-xxlight;
+	font-family: $font__pre;
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+	@include font-size(1.5);
+}
+
+code, kbd, tt, var {
+	font-family: $font__code;
+	@include font-size(1.5);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color__base;
+	cursor: help;
+}
+
+
+hr {
+	background-color: rgba(0,0,0,0.1);
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+
+	&.alt {
+		background-color: rgba(255,255,255,0.5);
+	}
+}
+
+
+::-moz-selection {
+	background-color: $color__base-xlight;
+}
+::selection {
+	background-color: $color__base-xlight;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}

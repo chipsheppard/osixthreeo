@@ -1,0 +1,53 @@
+/*
+ * Mixins - Clearfix
+--------------------------------------------- */
+
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+@mixin clearfix-after() {
+	clear: both;
+}
+
+
+/*
+ * Mixins - Rem output with px fallback
+--------------------------------------------- */
+
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 10) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+
+/*
+ * Mixins - Media Queries
+--------------------------------------------- */
+
+@mixin breakpoint($point) {
+
+  @if $point == desktop-s {
+    @media all and (max-width: 1280px) { @content; }
+  }
+  @if $point == tablet-h {
+    @media all and (max-width: 1025px) { @content; }
+  }
+  @if $point == tablet-l {
+    @media all and (max-width: 970px) { @content; }
+  }
+  @if $point == tablet-m {
+    @media all and (max-width: 899px) { @content; }
+  }
+  @if $point == tablet-v {
+    @media all and (max-width: 820px) { @content; }
+  }
+  @if $point == phone-h {
+    @media all and (max-width: 500px) { @content; }
+  }
+  @if $point == phone-v {
+    @media all and (max-width: 400px) { @content; }
+  }
+}

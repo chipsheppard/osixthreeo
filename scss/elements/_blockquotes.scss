@@ -1,0 +1,95 @@
+/* Blockquotes
+--------------------------------------------- */
+q {
+  quotes: "“" "”" "‘" "’";
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
+
+blockquote {
+	background: #ffffff;
+	box-shadow: 0px 0px 8px $color__base-xlight;
+	font-family: $font__headers;
+	margin: 0 1.5em 1.5em 0;
+	padding: 1.5em 1.875em 1.5em 3.5em;
+	position: relative;
+	quotes: "\201C""\201D""\201C""\201D";
+
+	&:after {
+		content: "";
+	}
+
+	&:before {
+		display: block;
+		content: "\201C";
+		font-family: Georgia, serif;
+		color: $color__base-light;
+		height: 0;
+		position: relative;
+		top: -.4em;
+		left: -.625em;
+		@include font-size(6);
+	}
+
+	cite {
+		display: block;
+		font-weight: $font__weight-bold;
+		font-style: normal;
+		line-height:1.25;
+		margin-top: .5em;
+		text-transform: uppercase;
+		@include font-size(1.4);
+
+		&:before {
+			content: '';
+			width: 2.5em;
+			height: .25em;
+			margin-right: 1em;
+			border-top: 1px solid $color__base;
+			display: inline-block;
+		}
+
+		span {
+			font-weight: $font__weight-normal;
+			@include font-size(1.2);
+		}
+	}
+
+	&.pullright {
+		float: right;
+		width: 32%;
+		padding: 1em 1.5em .25em;
+		margin: 0 0 1.5em 1.5em;
+
+		&:before {
+			display: none;
+			content: "";
+		}
+	}
+
+	&.pullleft {
+		float:left;
+		width: 32%;
+		padding: 1em 1.5em .25em;
+		border-left: 0;
+
+		&:before {
+		    display: none;
+		    content: "";
+		}
+	}
+}
+
+@include breakpoint(tablet-v) {
+	blockquote.pullright,
+	blockquote.pullleft {
+	    float: none;
+	    width: 100%;
+	    padding: 1em 1.5em .25em;
+	    margin-left: 0;
+	}
+}

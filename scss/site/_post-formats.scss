@@ -1,0 +1,123 @@
+/* Post Formats
+--------------------------------------------- */
+.archive .format-aside .entry-header,
+.archive .format-aside .entry-bg,
+.archive .format-status .entry-header,
+.archive .format-status .entry-bg,
+.archive .format-status .link-more,
+.archive .format-status .entry-meta,
+.archive .format-status .entry-title,
+.blog .format-aside .entry-header,
+.blog .format-aside .entry-bg,
+.blog .format-status .entry-header,
+.blog .format-status .entry-bg,
+.blog .format-status .link-more,
+.blog .format-status .entry-meta,
+.blog .format-status .entry-title {
+    display: none;
+}
+
+.archive .format-aside,
+.archive .format-status,
+.blog .format-aside,
+.blog .format-status {
+	padding-top: 1em;
+}
+
+/* DASHICONS
+===============================
+.post_format-post-format-aside,
+.post_format-post-format-gallery,
+.post_format-post-format-link,
+.post_format-post-format-image,
+.post_format-post-format-quote,
+.post_format-post-format-status,
+.post_format-post-format-video,
+.post_format-post-format-audio,
+.post_format-post-format-chat {
+	position: relative;
+
+	&:before {
+		display: inline-block;
+		left: -20px;
+		top: 80px;
+		position: absolute;
+		z-index: 5;
+		font-family: $font__icon;
+		line-height: 1;
+		@include font-size(1.5);
+
+		@include breakpoint(phone-h) {
+			@include font-size(1.25);
+			left: -14px;
+		}
+	}
+}
+
+.post_format-post-format-aside:before {
+	content: "\f123";
+}
+.post_format-post-format-gallery:before {
+	content: "\f161";
+}
+.post_format-post-format-link:before {
+	content: "\f103";
+}
+.post_format-post-format-image:before {
+	content: "\f128";
+}
+.post_format-post-format-quote:before {
+	content: "\f122";
+}
+.post_format-post-format-status:before {
+	content: "\f130";
+}
+.post_format-post-format-video:before {
+	content: "\f126";
+}
+.post_format-post-format-audio:before {
+	content: "\f127";
+}
+.post_format-post-format-chat:before {
+	content: "\f125";
+}
+
+
+.single {
+	.post_format-post-format-aside,
+	.post_format-post-format-gallery,
+	.post_format-post-format-link,
+	.post_format-post-format-image,
+	.post_format-post-format-quote,
+	.post_format-post-format-status,
+	.post_format-post-format-video,
+	.post_format-post-format-audio,
+	.post_format-post-format-chat {
+		&:before {
+			top: 45px;
+			@include breakpoint(phone-h) {
+				top: 41px;
+			}
+		}
+	}
+}
+
+.blog,
+.archive {
+	.post_format-post-format-aside,
+	.post_format-post-format-gallery,
+	.post_format-post-format-link,
+	.post_format-post-format-image,
+	.post_format-post-format-quote,
+	.post_format-post-format-status,
+	.post_format-post-format-video,
+	.post_format-post-format-audio,
+	.post_format-post-format-chat {
+		&:before {
+			left: 2px;
+			top: 76px;
+			@include font-size(1.25);
+		}
+	}
+}
+*/

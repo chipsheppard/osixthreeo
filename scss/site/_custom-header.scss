@@ -1,0 +1,120 @@
+/*
+ * The Custom Header
+---------------------------------------------------------------- */
+.custom-header {
+	background: #5000aa;
+	background: linear-gradient(90deg, #5000aa 0%, #bb0005 100%);
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+
+	.wrap {
+		height: 100%;
+		position: relative;
+	}
+
+	.custom-header-image {
+		padding: 0;
+		height: auto;
+	    width: auto;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-position: center 50%;
+		background-size: cover;
+	}
+
+	.custom-header-media {
+		// https://codepen.io/shshaw/pen/OVGWLG
+		position: absolute;
+	    top: 0;
+	    bottom: 0;
+	    width: 100%;
+	    height: 100%;
+	    overflow: hidden;
+
+		img {
+			display: none;
+		}
+
+		video, iframe {
+			width: auto;
+			height: auto;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+		    z-index: 1;
+		    min-width: 100%;
+		    min-height: 100%;
+		}
+	}
+}
+.wp-custom-header {
+	.wp-custom-header-video-button {
+		display: none;
+	    background-color: rgba(34, 34, 34, 0.5);
+	    border: 1px solid rgba(255, 255, 255, 0.6);
+	    color: rgba(255, 255, 255, 0.6);
+	    height: 45px;
+	    overflow: hidden;
+	    padding: 0;
+	    position: absolute;
+		z-index: 15;
+	    right: 30px;
+	    bottom: 60px;
+	    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.3s ease-in-out;
+	    width: 65px;
+	}
+}
+
+.custom-header-image-text {
+	color: #ffffff;
+	padding-top: 320px;
+	position: relative;
+	text-align: center;
+	z-index: 5;
+
+	@include breakpoint(tablet-v) {
+		padding-top: 200px;
+	}
+	@include breakpoint(phone-h) {
+		padding-top: 120px;
+	}
+
+	.hero-primary{
+		text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
+		font-weight: 700;
+		letter-spacing: 1px;
+		line-height: 1.25;
+		margin-bottom: .5em;
+		@include font-size(6);
+
+		@include breakpoint(tablet-v) {
+			@include font-size(5);
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(3);
+		}
+	}
+
+	.hero-secondary  {
+		text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
+		font-weight: 600;
+		line-height: 1.25;
+		@include font-size(4);
+
+		@include breakpoint(tablet-v) {
+			@include font-size(3);
+		}
+		@include breakpoint(phone-h) {
+			@include font-size(2);
+		}
+	}
+}

@@ -1,0 +1,42 @@
+/*
+ * Clear Fix
+--------------------------------------------- */
+
+.clear:before,
+.clear:after,
+.cf:before,
+.cf:after,
+.page-wrap:before,
+.page-wrap:after,
+.inner-wrap:before,
+.inner-wrap:after,
+.home-widget-area:before,
+.home-widget-area:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.post-navigation:before,
+.post-navigation:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	@include clearfix;
+}
+
+.clear:after,
+.cf:after,
+.page-wrap:after,
+.inner-wrap:after,
+.home-widget-area:after,
+.entry-content:after,
+.comment-content:after,
+.post-navigation:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	@include clearfix-after;
+}
