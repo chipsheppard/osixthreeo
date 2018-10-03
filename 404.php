@@ -6,9 +6,7 @@
  */
 
 kelso_sidebar_bodyclass();
-
 get_header();
-
 kelso_get_left_sidebar();
 ?>
 
@@ -34,5 +32,4 @@ kelso_get_left_sidebar();
 
 <?php
 kelso_get_right_sidebar();
-
 get_footer();

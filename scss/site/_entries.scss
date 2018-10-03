@@ -20,24 +20,33 @@
 	}
 }
 
+body.page .entry-header,
+body.single .entry-header,
+body.blog .page-header,
+body.archive .page-header,
+body.search .page-header {
+	color: #ffffff;
+	position: absolute;
+    top: -15em;
+
+	@include breakpoint(phone-h) {
+		top: -5em;
+	}
+}
+
 body.page .entry-title,
 body.single .entry-title,
 body.blog .page-title,
 body.archive .page-title,
 body.search .page-title {
-	color: #ffffff;
 	font-weight: $font__weight-semibold;
 	letter-spacing: 1px;
-	padding: .25em .5em;
-	position: absolute;
+	padding: 0;
 	text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
 	text-transform: uppercase;
-    top: -5em;
 	word-break: break-word;
-    z-index: 5;
 
 	@include breakpoint(phone-h) {
-		top: -3.5em;
 		@include font-size(2);
 	}
 }

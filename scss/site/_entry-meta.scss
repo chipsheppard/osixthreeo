@@ -21,6 +21,10 @@
 			color: $color__base-medium;
 			font-family: $font__main;
 			font-style: normal;
+
+			&:hover {
+				color: $color__base-light;
+			}
 		}
 	}
 
@@ -35,6 +39,22 @@
 			color: $color__base-medium;
 			font-family: $font__main;
 			font-style: normal;
+
+			&:hover {
+				color: $color__base-light;
+			}
+		}
+	}
+}
+
+.single .entry-meta {
+
+	a {
+		color: #ffffff;
+		letter-spacing: 1px;
+
+		&:hover {
+			color: $color__base-light;
 		}
 	}
 }

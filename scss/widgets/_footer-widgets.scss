@@ -60,11 +60,11 @@
 
 	input[type="submit"] {
 		background-color: $color__secondary;
+		border-left: 0;
 		color: #ffffff;
 		line-height: 1;
 		padding: 1.125em 6%;
 		width: 20%;
-		@include font-size(2);
 	}
 
 	::-moz-placeholder {

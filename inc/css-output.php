@@ -46,6 +46,11 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		$default_header_bg_color_left = $defaults['header_bg_color_left'];
 		$default_header_bg_color_right = $defaults['header_bg_color_right'];
 
+		$stickyheader_bg_color = $kelso_settings['stickyheader_background_color'];
+		$stickyheader_link_color = $kelso_settings['stickyheader_link_color'];
+		$default_stickyheader_bg_color = $defaults['stickyheader_background_color'];
+		$default_stickyheader_link_color = $defaults['stickyheader_link_color'];
+
 		$hero_text_primary_color = $kelso_settings['hero_text_primary_color'];
 		$hero_text_secondary_color = $kelso_settings['hero_text_secondary_color'];
 		$default_hero_text_primary_color = $defaults['hero_text_primary_color'];
@@ -130,7 +135,7 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		if ( $default_link_color_hover !== $link_color_hover ) :
 			// Secondary Color.
 			$css->set_selector(
-				'a:hover,a:focus,a:active,a.arrow:hover,a.arrow:focus,a.arrow:active,.text-secondary'
+				'.site-content a:hover,.site-content a:focus,.site-content a:active,a.arrow:hover,a.arrow:focus,a.arrow:active,.text-secondary'
 			);
 			$css->add_property( 'color', esc_attr( $kelso_settings['link_color_hover'] ) );
 			// Secondary Backgrounds.
@@ -174,6 +179,33 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			);
 			$css->add_property( 'border-color', esc_attr( $kelso_settings['nav_link_color'] ) );
 
+		endif;
+
+		/*
+		 * Sticky Navigation --------------------------------
+		 */
+		if ( $default_stickyheader_bg_color !== $stickyheader_bg_color ) :
+			$css->set_selector(
+				'.header-wrap.stuck, .contained .header-wrap.stuck .inner-wrap'
+			);
+			$css->add_property( 'background-color', esc_attr( $kelso_settings['stickyheader_background_color'] ) );
+		endif;
+		if ( $default_stickyheader_link_color !== $stickyheader_link_color ) :
+			// Color.
+			$css->set_selector(
+				'.header-wrap.stuck .site-navigation ul:not(.sub-menu) a,.header-wrap.stuck button.dropdown-toggle,.header-wrap.stuck .responsive-menu-icon .menu-icon,.header-wrap.stuck .responsive-menu-icon .menu-icon::before,.header-wrap.stuck .responsive-menu-icon .menu-icon::after'
+			);
+			$css->add_property( 'color', esc_attr( $kelso_settings['stickyheader_link_color'] ) );
+			// Background.
+			$css->set_selector(
+				'.header-wrap.stuck .responsive-menu-icon .menu-icon,.header-wrap.stuck .responsive-menu-icon .menu-icon::before,.header-wrap.stuck .responsive-menu-icon .menu-icon::after,.header-wrap.stuck .site-navigation:not(.nav-search-active) li.search-icon .theicon:before'
+			);
+			$css->add_property( 'background-color', esc_attr( $kelso_settings['stickyheader_link_color'] ) );
+			// Borders.
+			$css->set_selector(
+				'.header-wrap.stuck .site-navigation li.search-icon .theicon'
+			);
+			$css->add_property( 'border-color', esc_attr( $kelso_settings['stickyheader_link_color'] ) );
 		endif;
 
 		/*

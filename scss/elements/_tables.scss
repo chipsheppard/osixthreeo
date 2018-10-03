@@ -49,3 +49,14 @@ tbody + tbody {
 .striped tr:nth-child(even) > td {
   background: $color__base-xxlight;
 }
+
+.sidebar-widget.widget_calendar {
+	th {
+	    padding-left: 0;
+		padding-right: 0;
+	}
+	td {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @param  string $url Request URL.
  * @return array Amended request arguments
  */
-function ea_dont_update_theme( $r, $url ) {
+function kelso_dont_update_theme( $r, $url ) {
 	if ( 0 !== strpos( $url, 'https://api.wordpress.org/themes/update-check/1.1/' ) ) {
 		return $r; // Not a theme update request. Bail immediately.
 	}
@@ -31,6 +31,86 @@ function ea_dont_update_theme( $r, $url ) {
 	$r['body']['themes'] = wp_json_encode( $themes );
 	return $r;
 }
+add_filter( 'http_request_args', 'kelso_dont_update_theme', 5, 2 );
+
+
+/**
+ * ARCHIVE TITLE
+ * puts a span around "Category:, Tag:, etc...
+ *
+ * @param string $title The title.
+ */
+function wrap_archive_title_part( $title ) {
+	if ( is_category() ) {
+		$title = single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$title = single_tag_title( '', false );
+	} elseif ( is_author() ) {
+		$title = __( '<div>written by:</div><span class="vcard">', 'kelso' ) . get_the_author() . '</span>';
+	} elseif ( is_year() ) {
+		$title = __( '<div>archive by year:</div>', 'kelso' ) . get_the_date( 'Y' );
+	} elseif ( is_month() ) {
+		$title = __( '<div>archive by month:</div>', 'kelso' ) . get_the_date( 'F Y' );
+	} elseif ( is_day() ) {
+		$title = __( '<div>archive by day:</div>', 'kelso' ) . get_the_date( 'F j, Y' );
+	} elseif ( is_post_type_archive() ) {
+		$title = post_type_archive_title( '', false );
+	} elseif ( is_tax() ) {
+		$title = single_term_title( '', false );
+	} elseif ( is_home() ) {
+		$title = get_the_title( get_option( 'page_for_posts', true ) );
+	} else {
+		$title = __( 'Archives', 'kelso' );
+	}
+	return $title;
+}
+add_filter( 'get_the_archive_title', 'wrap_archive_title_part' );
+
+
+/**
+ * Change Text in Search Submit Button
+ *
+ * @param string $text string of text.
+ * @link https://wordpress.org/support/topic/how-do-i-change-some-details-of-the-search-widget
+ */
+function kelso_search_button( $text ) {
+	$text = str_replace( 'value="Search"', 'value="go"', $text );
+	return $text;
+}
+add_filter( 'get_search_form', 'kelso_search_button' );
+
+
+
+/**
+ * EXCERPT LENGTH FILTER - to 16 words.
+ *
+ * @param int $length Excerpt length.
+ * @return int modified excerpt length.
+ */
+function kelso_custom_excerpt_length( $length ) {
+	if ( has_post_format( 'aside' ) || has_post_format( 'status' ) ) :
+		return 48;
+	elseif ( is_search() ) :
+		return 32;
+	else :
+		return 16;
+	endif;
+}
+add_filter( 'excerpt_length', 'kelso_custom_excerpt_length', 999 );
+
+
+/**
+ * Makes the Read More link on Archive templates.
+ */
+function kelso_read_more() {
+	$link = sprintf( '<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
+		get_permalink( get_the_ID() ),
+		/* translators: %s: Name of current post */
+		sprintf( __( 'Full Article<span class="screen-reader-text"> "%s"</span>', 'kelso' ), get_the_title( get_the_ID() ) )
+	);
+	echo wp_kses_post( $link );
+}
+
 
 /**
  * Adds custom classes to the array of body classes.
@@ -65,40 +145,12 @@ function kelso_pingback_header() {
 add_action( 'wp_head', 'kelso_pingback_header' );
 
 /**
- * Display Featured Image checkbox.
+ * Remove injected styles from recent comments widget.
  *
- * Adds checkbox to Featured Image metabox to automatically add it to post header
- *
- * @link https://www.billerickson.net/code/add-checkbox-to-featured-image-metabox/
- * @param Object $content the image.
- * @param Object $post_id the id from the query.
+ * @link http://www.narga.net/how-to-remove-or-disable-comment-reply-js-and-recentcomments-from-wordpress-header
  */
-function kelso_add_featured_image_display_settings( $content, $post_id ) {
-	$field_id    = 'show_featured_image';
-	$field_value = esc_attr( get_post_meta( $post_id, $field_id, true ) );
-	$field_text  = esc_html__( 'Display in header.', 'kelso' );
-	$field_state = checked( $field_value, 1, false );
-
-	$field_label = sprintf(
-		'<p><label for="%1$s"><input type="checkbox" name="%1$s" id="%1$s" value="%2$s" %3$s> %4$s</label></p>',
-		$field_id, $field_value, $field_state, $field_text
-	);
-
-	return $content .= $field_label;
+function kelso_remove_recent_comments_style() {
+	global $wp_widget_factory;
+	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
 }
-add_filter( 'admin_post_thumbnail_html', 'kelso_add_featured_image_display_settings', 10, 2 );
-
-/**
- * Sanitize user data and save/update the custom field value.
- *
- * @param String $post_id the image.
- * @param Object $post the post/page.
- * @param Object $update the post/page.
- */
-function kelso_save_featured_image_display_settings( $post_id, $post, $update ) {
-	$field_id    = 'show_featured_image';
-	$field_value = isset( $_REQUEST[ $field_id ] ) ? 1 : 0; // WPCS: CSRF ok. WPCS: input var ok.
-
-	update_post_meta( $post_id, $field_id, $field_value );
-}
-add_action( 'save_post', 'kelso_save_featured_image_display_settings', 10, 3 );
+add_action( 'widgets_init', 'kelso_remove_recent_comments_style' );

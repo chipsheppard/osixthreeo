@@ -128,6 +128,54 @@ function kelso_customize_register( $wp_customize ) {
 	);
 
 	/*
+	 * STICKY HEADER -----------------------
+	 */
+
+	 // Colors Sticky Background.
+	$wp_customize->add_setting(
+		'kelso_settings[stickyheader_background_color]', array(
+			'default' => $defaults['stickyheader_background_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_rgba',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new Customize_Alpha_Color_Control(
+			$wp_customize,
+			'kelso_settings[stickyheader_background_color]',
+			array(
+				'label' => __( 'Sticky Header Background Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[stickyheader_background_color]',
+				'priority' => 26,
+				'show_opacity' => true,
+			)
+		)
+	);
+
+	// Sticky Link.
+	$wp_customize->add_setting(
+		'kelso_settings[stickyheader_link_color]', array(
+			'default' => $defaults['stickyheader_link_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[stickyheader_link_color]',
+			array(
+				'label' => __( 'Sticky Header Navigation Link Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[stickyheader_link_color]',
+				'priority' => 27,
+			)
+		)
+	);
+
+	/*
 	 * CUSTOM HEADER ----------------------------------------------------
 	 * ------------------------------------------------------------------
 	 */

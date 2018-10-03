@@ -14,8 +14,6 @@
 		</div>
 	</div>
 
-	<?php do_action( 'kelso_after_content' ); ?>
-
 	<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
 	<div class="footer-widgets">
 
@@ -128,26 +126,35 @@
 	<?php endif; ?>
 
 
+	<?php tha_footer_before(); ?>
+
 	<footer id="colophon" class="site-footer" role="contentinfo">
 	<?php
 	if ( is_active_sidebar( 'site-footer' ) ) {
 	?>
 		<div class="wrap<?php kelso_sitecontain_class(); ?>">
 			<div class="inner-wrap">
+				<?php tha_footer_top(); ?>
+
 				<div class="site-info">
 					<?php dynamic_sidebar( 'site-footer' ); ?>
 					<?php kelso_back_to_top(); ?>
 				</div>
+
+				<?php tha_footer_bottom(); ?>
 			</div>
 		</div>
 	<?php } ?>
 	</footer>
 
-	<?php do_action( 'kelso_after_footer' ); ?>
+	<?php tha_footer_after(); ?>
 
 </div>
 
-<?php wp_footer(); ?>
+<?php
+wp_footer();
+tha_body_bottom();
+?>
 
 </body>
 </html>

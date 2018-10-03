@@ -2,49 +2,34 @@
  * Site Header
 ---------------------------------------------------------------- */
 
-.header-wrap {
-	background-color: #ffffff;
-	position: relative;
-	z-index: 100;
-
-	@include breakpoint(tablet-v) {
-		overflow-y: scroll;
-		overflow-x: visible;
-	}
-
-	&.stuck {
-		left: 0;
-		position: fixed;
-		width: 100%;
-	}
-}
-
 .site-header {
 	position: relative;
 	width: 100%;
 
-	.inner-wrap {
-		display: table;
-		padding-top: 1em;
-		//padding-bottom: 1em;
-
-		@include breakpoint(phone-h) {
-			padding-top: .75em;
-			//padding-bottom: .75em;
-		}
-	}
-
 	.wrap {
 		position: relative;
 		height: 460px;
+		transition: all .5s ease;
 
 		@include breakpoint(phone-h) {
-			height: 180px;
+			height: 230px;
 		}
+	}
+
+	.inner-wrap {
+		display: table;
 	}
 }
 
-// Homepage
+.header-wrap {
+	background-color: #ffffff;
+	position: relative;
+	z-index: 100;
+	min-height: 100px;
+	transition: all .5s ease;
+}
+
+// HOMEPAGE
 .home .site-header .wrap {
 	min-height: 600px;
 
@@ -57,13 +42,18 @@
 	}
 }
 
-// The LOGO
+// FULL HEIGHT FOR GLENRIDGE HOMEPAGE
+.home.fullheight .site-header .wrap {
+	height: 100vh;
+}
+
+// BRANDING BLOCK
 .site-branding {
-	//float:left;
 	display: table-cell;
 	text-align: left;
-	padding-bottom: 1em;
+	padding: 1em 0;
 	vertical-align: middle;
+	transition: all .5s ease;
 
 	@include breakpoint(tablet-v) {
 		width: 88%;
@@ -81,6 +71,7 @@
 
 }
 
+// Image logo
 .custom-logo {
 	img {
 		display: block;
@@ -93,8 +84,9 @@
 	}
 }
 
+// Site Title (text logo)
 .site-title {
-	color: #000;
+	color: #000000;
 	font-family: $font__site-title;
 	font-weight: $font__weight-bold;
 	line-height: 1;
@@ -102,7 +94,7 @@
 	@include font-size(4);
 
 	a {
-		color: #000;
+		color: #000000;
 		display:inline-block;
 		text-decoration: none;
 
@@ -120,8 +112,39 @@
 	}
 }
 
+// Description
 .site-description {
-	color: $color__base;
+	color: #000000;
 	letter-spacing: 1px;
 	line-height: 1;
+}
+
+/* STICKY HEADER
+------------------------------ */
+.header-wrap.stuck {
+	background-color: #ffffff;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	min-height: 50px;
+
+	.site-title {
+		margin-bottom: 0;
+	}
+
+	.site-description {
+		display: none;
+	}
+
+	.site-branding {
+		padding: .5em 0;
+	}
+}
+
+.contained .header-wrap.stuck {
+	background-color: transparent;
+
+	.inner-wrap {
+		background-color: #ffffff;
+	}
 }

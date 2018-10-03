@@ -40,12 +40,55 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
   - Status
 
 **7 Theme Action Hooks for developers**
-  - kelso_before_header
-  - kelso_before_content
-  - kelso_after_content
-  - kelso_after_footer
-  - kelso_single_before_entry
-  - kelso_single_after_entry
+  // BA header.php 8
+  - tha_html_before()
+  - tha_head_top()
+  - tha_head_bottom()
+  - tha_body_top()
+  - tha_header_before()
+  - tha_header_top()
+  - tha_header_bottom()
+  - tha_header_after()
+
+    // BA sidebar.php 4
+  - tha_sidebars_before()
+  - tha_sidebar_top()
+  - tha_sidebar_bottom()
+  - tha_sidebars_after()
+
+  // BA footer.php 5
+  - tha_footer_before()
+  - tha_footer_top()
+  - tha_footer_bottom()
+  - tha_footer_after()
+  - tha_body_bottom()
+
+  // BA index.php 7
+  - tha_content_before()
+  - tha_content_wrap_before()
+  - tha_content_top()
+  - tha_content_loop()
+  - tha_content_bottom()
+  - tha_content_wrap_after()
+  - tha_content_after()
+
+// BA comments.php 2
+  - tha_comments_before()
+  - tha_comments_after()
+
+  // BA loop.php 4
+  - tha_content_while_before()
+  - tha_entry_before()
+  - tha_entry_after()
+  - tha_content_while_after()
+
+  // BA content.php 4
+  - tha_entry_top()
+  - tha_entry_content_before()
+  - tha_entry_content_after()
+  - tha_entry_bottom()
+
+
   - kelso_inside_navigation : used for inserting search into the menu
 
 **17 Customizer controls**

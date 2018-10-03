@@ -9,23 +9,23 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-	<?php if ( ! is_single() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) : ?>
+	<?php if ( ! is_singular() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) : ?>
 		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
 	<?php endif; ?>
 
 	<header class="entry-header">
 		<?php
-		if ( is_single() ) :
+		if ( is_singular() ) : // post, attachment, page, custom post types.
 
 			the_title( '<h1 class="entry-title">', '</h1>' );
 
-		else :
+		else : // archive.
 
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+		if ( 'post' === get_post_type() ) : // post - single or archive.
 		?>
 			<div class="entry-meta">
 				<?php
@@ -36,13 +36,14 @@
 				?>
 			</div>
 		<?php endif; ?>
+		<?php tha_entry_top(); ?>
 	</header>
 
 	<div class="entry-content">
 		<?php
-		if ( is_single() ) :
+		tha_entry_content_before();
 
-			do_action( 'kelso_single_before_entry' );
+		if ( is_singular() ) : // single post, attachment, page, custom post types.
 
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
@@ -54,28 +55,32 @@
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
-			do_action( 'kelso_single_after_entry' );
-
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kelso' ),
 				'after'  => '</div>',
 			) );
 
-		else :
+		else : // archive.
 
 			the_excerpt();
 
 		endif;
-		?>
 
+		tha_entry_content_after();
+		?>
 	</div>
 
 
-	<?php if ( is_single() ) : ?>
+	<?php if ( is_single() ) : // single posts, custom post types? ?>
 		<footer class="entry-footer">
-			<?php kelso_entry_footer(); ?>
+		<?php
+			kelso_entry_footer();
+			tha_entry_bottom();
+		?>
 		</footer>
-	<?php else : ?>
+	<?php endif; ?>
+
+	<?php if ( is_archive() || is_home() || is_search() ) : // archive page? ?>
 		<?php kelso_read_more(); ?>
 	<?php endif; ?>
 

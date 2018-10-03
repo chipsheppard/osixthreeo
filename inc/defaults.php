@@ -26,6 +26,9 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'header_background_color' => '#ffffff',
 			'nav_link_color' => '#222222',
 
+			'stickyheader_background_color' => '#ffffff',
+			'stickyheader_link_color' => '#000000',
+
 			'footerwidgets_background_color' => '#494949',
 			'footerwidgets_text_color' => '#c0c0c0',
 			'footerwidgets_link_color' => '#808080',

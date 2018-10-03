@@ -20,6 +20,8 @@
 
 		&.toggled-on .menu-wrap {
 			display: block;
+			height: calc(100vh - 98px);
+			overflow-y: auto;
 		}
 
 		a {

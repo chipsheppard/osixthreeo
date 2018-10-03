@@ -27,12 +27,12 @@ Widgets
 		li {
 			border-bottom: 1px solid $color__base-xlight;
 			line-height: 1.4em;
-			padding-left: .75em;
+			padding: 0 1em .5em;
+			margin-bottom: .5em;
 		}
 
 		a {
 			color: $color__base;
-			display: inline-block;
 			padding: .75em 0;
 			width: 100%;
 
@@ -45,6 +45,7 @@ Widgets
 	.menu {
 		a {
 			color: $color__base;
+			display: inline-block;
 			font-weight: $font__weight-semibold;
 			padding: 1.125em 0;
 			text-transform: uppercase;

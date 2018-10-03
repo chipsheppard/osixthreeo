@@ -51,7 +51,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 					'clip': 'auto',
 					'position': 'relative'
 				} );
-				$( '.site-title a, .site-description' ).css( {
+				$( '.site-title, .site-title a, .site-description' ).css( {
 					'color': to
 				} );
 			}
@@ -72,6 +72,14 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'.header-wrap',
 		'background-color',
 		'rgba(0,0,0,0.75)'
+	);
+
+	// STICKY HEADER ----------------------------------- .
+	kelso_colors_live_update(
+		'stickyheader_background_color',
+		'.header-wrap.stuck,.contained .header-wrap.stuck .inner-wrap',
+		'background-color',
+		'#000000'
 	);
 
 	// SITE CONTENT --------------------------------- .

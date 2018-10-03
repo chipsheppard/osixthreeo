@@ -20,6 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
+<?php tha_comments_before(); ?>
 <div id="comments" class="comments-area">
 
 	<?php
@@ -79,3 +80,4 @@ if ( post_password_required() ) {
 	?>
 
 </div>
+<?php tha_comments_after(); ?>
