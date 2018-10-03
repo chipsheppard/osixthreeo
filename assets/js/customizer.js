@@ -139,10 +139,18 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		}
 	);
 
+	// FW Title
+	kelso_colors_live_update(
+		'footerwidgets_widget_title_color',
+		'.footer-widgets .widget-title',
+		'color',
+		'#c0c0c0'
+	);
+
 	// FW Text
 	kelso_colors_live_update(
 		'footerwidgets_text_color',
-		'.footer-widgets,.footer-widget .widget-title',
+		'.footer-widgets',
 		'color',
 		'#c0c0c0'
 	);

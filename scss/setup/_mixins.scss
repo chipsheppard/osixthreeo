@@ -1,7 +1,4 @@
-/*
- * Mixins - Clearfix
---------------------------------------------- */
-
+// Clearfix
 @mixin clearfix() {
 	content: "";
 	display: table;
@@ -12,21 +9,13 @@
 	clear: both;
 }
 
-
-/*
- * Mixins - Rem output with px fallback
---------------------------------------------- */
-
+// Rem output with px fallback
 @mixin font-size($sizeValue: 1) {
 	font-size: ($sizeValue * 10) * 1px;
 	font-size: $sizeValue * 1rem;
 }
 
-
-/*
- * Mixins - Media Queries
---------------------------------------------- */
-
+// Media Queries
 @mixin breakpoint($point) {
 
   @if $point == desktop-s {

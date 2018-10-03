@@ -57,10 +57,12 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		$default_hero_text_secondary_color = $defaults['hero_text_secondary_color'];
 
 		$footerwidgets_bg_color = $kelso_settings['footerwidgets_background_color'];
+		$footerwidgets_widget_title_color = $kelso_settings['footerwidgets_widget_title_color'];
 		$footerwidgets_text_color = $kelso_settings['footerwidgets_text_color'];
 		$footerwidgets_link_color = $kelso_settings['footerwidgets_link_color'];
 		$footerwidgets_link_color_hover = $kelso_settings['footerwidgets_link_color_hover'];
 		$default_footerwidgets_bg_color = $defaults['footerwidgets_background_color'];
+		$default_footerwidgets_widget_title_color = $defaults['footerwidgets_widget_title_color'];
 		$default_footerwidgets_text_color = $defaults['footerwidgets_text_color'];
 		$default_footerwidgets_link_color = $defaults['footerwidgets_link_color'];
 		$default_footerwidgets_link_color_hover = $defaults['footerwidgets_link_color_hover'];
@@ -239,8 +241,12 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			$css->set_selector( '.footer-widgets .button:not(li):hover' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_background_color'] ) );
 		endif;
+		if ( $default_footerwidgets_widget_title_color !== $footerwidgets_widget_title_color ) :
+			$css->set_selector( '.footer-widgets .widget-title' );
+			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_widget_title_color'] ) );
+		endif;
 		if ( $default_footerwidgets_text_color !== $footerwidgets_text_color ) :
-			$css->set_selector( '.footer-widgets,.footer-widget .widget-title' );
+			$css->set_selector( '.footer-widgets' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_text_color'] ) );
 		endif;
 		if ( $default_footerwidgets_link_color !== $footerwidgets_link_color ) :

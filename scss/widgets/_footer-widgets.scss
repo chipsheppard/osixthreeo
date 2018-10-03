@@ -63,8 +63,14 @@
 		border-left: 0;
 		color: #ffffff;
 		line-height: 1;
-		padding: 1.125em 6%;
+		min-width: 55px;
+		padding: 1.125em 0;
+		text-align: center;
 		width: 20%;
+
+		@include breakpoint(phone-h) {
+			padding: .925em 0;
+		}
 	}
 
 	::-moz-placeholder {

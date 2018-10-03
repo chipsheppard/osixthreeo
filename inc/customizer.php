@@ -426,6 +426,28 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Colors Footer Widgets - Widget Title.
+	$wp_customize->add_setting(
+		'kelso_settings[footerwidgets_widget_title_color]', array(
+			'default' => $defaults['footerwidgets_widget_title_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[footerwidgets_widget_title_color]',
+			array(
+				'label' => __( 'Footer Widget Title Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[footerwidgets_widget_title_color]',
+				'priority' => 136,
+			)
+		)
+	);
+
 	// Colors Footer Widgets Text.
 	$wp_customize->add_setting(
 		'kelso_settings[footerwidgets_text_color]', array(

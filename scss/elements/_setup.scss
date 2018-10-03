@@ -46,6 +46,10 @@ textarea {
 	color: $color__base;
 	line-height: $font__line-height-body;
 	@include font-size(1.6);
+
+	@include breakpoint(phone-h) {
+		@include font-size(1.4);
+	}
 }
 
 /* Copy */

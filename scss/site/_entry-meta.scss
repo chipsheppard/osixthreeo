@@ -13,7 +13,7 @@
 	.byline {
 		color: $color__base-light;
 		display: inline-block;
-		font-style: italic;
+		//font-style: italic;
 		font-family: $font__serif;
 		padding-right: .5em;
 
@@ -48,10 +48,17 @@
 }
 
 .single .entry-meta {
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
+
+	.posted-on,
+	.updated-on,
+	.byline {
+		color: #ffffff;
+	}
 
 	a {
 		color: #ffffff;
-		letter-spacing: 1px;
 
 		&:hover {
 			color: $color__base-light;

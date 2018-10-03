@@ -1,6 +1,4 @@
-/*
- * Color
- * ----------------------------------- */
+// Color
 $color__base: #666666;
 $color__base-medium: #808080; // aka Gray
 $color__base-light: #c0c0c0; // aka Silver
@@ -11,17 +9,14 @@ $color__highlight: #1e90ff; // aka DodgerBlue
 $color__secondary: #ff8c00; // aka DarkOrange
 $color__darklight: #222222;
 
-/*
- * Typography
- * ----------------------------------- */
-$font__main:  "Open Sans", Arial, sans-serif;
-$font__headers:  "Open Sans", Arial, sans-serif;
+// Typography
+$font__main:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font__headers:  "Lucida Bright", Georgia, serif;
 
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
-$font__icon: "dashicons";
 
-$font__serif: 'Georgia', 'Times', serif;
+$font__serif: 'Times', serif;
 
 $font__line-height-body: 1.75;
 $font__line-height-pre: 1.6;
@@ -38,10 +33,7 @@ $font__entrymeta: $font__headers;
 $font__sitefooter: $font__serif;
 
 
-/*
- * Structutal
- * ----------------------------------- */
-
+// Structutal
 $size__site-max: 80em;
 $size__site-main: 100%;
 $size__site-content: 75%;

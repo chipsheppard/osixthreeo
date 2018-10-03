@@ -56,8 +56,9 @@
 
 @include breakpoint(tablet-v) {
 	.col-1-2,.col-1-3,.col-2-3,.col-1-4,.col-3-4,.col-1-5,.col-2-5,.col-3-5,.col-4-5,.col-1-6,.col-5-6,.col-1-7,.col-2-7,.col-3-7,.col-4-7,.col-5-7,.col-6-7,.col-1-8,.col-3-8,.col-5-8,.col-7-8,.pullright {
-		float:none;
+		clear: both;
 		display:block;
+		float:none;
 		margin:0;
 		width:100%;
 	}

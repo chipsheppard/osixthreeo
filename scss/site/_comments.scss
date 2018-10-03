@@ -79,6 +79,10 @@
 	padding: 32px;
 	width: 100%;
 
+	@include breakpoint(phone-h) {
+		padding: 16px;
+	}
+
 	li {
 		background-color: $color__base-xxlight;
 		li {

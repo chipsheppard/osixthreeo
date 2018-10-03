@@ -3,11 +3,11 @@
 Contributors: chip sheppard
 Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, featured-image-header, custom-logo, custom-colors, custom-background, flexible-header, grid-layout, right-sidebar, left-sidebar, two-columns
 
-Requires at least: 4.0
-Tested up to: 4.9.8
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Requires at least: 4.0  
+Tested up to: 4.9.8  
+Stable tag: 1.0.0  
+License: GPLv2 or later  
+License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 A theme called Kelso, based on underscores.
 
@@ -26,7 +26,7 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
 ## Theme Stats ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-**7 Widget Areas**
+** 7 Widget Areas **
   - Posts Sidebar
   - Pages Sidebar
   - Sub-Footer 1
@@ -39,8 +39,8 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
   - Aside
   - Status
 
-**7 Theme Action Hooks for developers**
-  // BA header.php 8
+**35 Theme Action Hooks for developers**
+header.php 8
   - tha_html_before()
   - tha_head_top()
   - tha_head_bottom()
@@ -50,20 +50,20 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
   - tha_header_bottom()
   - tha_header_after()
 
-    // BA sidebar.php 4
+sidebar.php 4
   - tha_sidebars_before()
   - tha_sidebar_top()
   - tha_sidebar_bottom()
   - tha_sidebars_after()
 
-  // BA footer.php 5
+footer.php 5
   - tha_footer_before()
   - tha_footer_top()
   - tha_footer_bottom()
   - tha_footer_after()
   - tha_body_bottom()
 
-  // BA index.php 7
+index.php 7
   - tha_content_before()
   - tha_content_wrap_before()
   - tha_content_top()
@@ -72,43 +72,56 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
   - tha_content_wrap_after()
   - tha_content_after()
 
-// BA comments.php 2
+comments.php 2
   - tha_comments_before()
   - tha_comments_after()
 
-  // BA loop.php 4
+loop.php 4
   - tha_content_while_before()
   - tha_entry_before()
   - tha_entry_after()
   - tha_content_while_after()
 
-  // BA content.php 4
+content.php 5
   - tha_entry_top()
   - tha_entry_content_before()
   - tha_entry_content_after()
   - tha_entry_bottom()
-
-
   - kelso_inside_navigation : used for inserting search into the menu
 
-**17 Customizer controls**
-  - global_width_setting
-  - nav_search
-  - back_to_top
-  - background_color
-  - header_background_color
-  - customheader_background_gradient_left
-  - customheader_background_gradient_right
+**33 Customizer controls**
   - Logo color : if text
-  - nav_link_color
+  - background_color
+  - content_background_color
   - text_color
   - link_color
   - link_color_hover
-  - homepage_layout_setting
+  - header_background_color
+  - nav_link_color
+  - stickyheader_background_color
+  - stickyheader_link_color
+  - footerwidgets_background_color
+  - footerwidgets_text_color
+  - footerwidgets_link_color
+  - footerwidgets_link_color_hover
+  - footer_background_color
+  - footer_text_color
+  - footer_link_color
+  - footer_link_color_hover
+  - global_width_setting
+  - home_layout_setting
   - page_layout_setting
   - single_layout_setting
   - search_layout_setting
   - archive_layout_setting
+  - back_to_top
+  - nav_search
+  - header_bg_color_left
+  - header_bg_color_right
+  - hero_text_primary
+  - hero_text_secondary
+  - hero_text_primary_color
+  - hero_text_secondary_color
 
 **25 User CSS Classes**
   - arrow           = for LINKS, adds an arrow
@@ -155,7 +168,7 @@ The logo is constrained to 300px wide max.
 &lt;hr class=“alt”> is 50% white
 
 **BlockQuote**
-citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
+citations go in &lt;cite> tags. A &lt;span> tag inside the &lt;cite> tag will unBold the text.
 
 **Display Featured Image**
 The Display Featured Image checkbox does NOT appear when using Gutenberg.
@@ -165,9 +178,13 @@ There are separate sidebars for Posts and Pages.
 
 **Footer Widgets**
 Footer widget areas can be used as a single full-width column, two half-width columns, three third-width columns and four quarter-width columns.
+
 If a widget is placed into the 4th widget area - all four widget areas are displayed at 25%.
+
 If a widget is placed into the 3rd widget area and no widget is in the 4th - only widget areas 1, 2 & 3 are displayed at 33%.
+
 If a widget is placed into the 2nd widget area and no widgets are in the 3rd or 4th - only widget areas 1 & 2 are displayed at 50%.
+
 If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3rd or 4th = only widget area 1 is displayed at 100%.
 
 
@@ -181,7 +198,7 @@ If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3r
  \_s downloaded and renamed to "Kelso"
 
 
-##Credits##
+## Credits ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 * Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)

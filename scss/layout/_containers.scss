@@ -6,7 +6,6 @@
 	position: relative;
 	clear: both;
 
-
 	.widget-area {
 		display: inline-block;
 		padding-top: 3em;
@@ -17,7 +16,12 @@
 
 .content-area {
 	padding-top: 3em;
+	padding-bottom: 1.5em;
 	width: $size__site-main;
+	
+	@include breakpoint(phone-h) {
+		padding-top: 1.5em;
+	}
 }
 
 .site-main {
