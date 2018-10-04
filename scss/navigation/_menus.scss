@@ -3,12 +3,12 @@
 --------------------------------------------------------------*/
 
 .site-navigation {
-	//float: right;
 	display: table-cell;
-	vertical-align: middle;
-	text-align: right;
 	font-family: $font__menus;
 	min-width: 520px;
+	padding-top: .25em;
+	text-align: right;
+	vertical-align: middle;
 	z-index: 2;
 	@include font-size(1.4);
 

@@ -1346,10 +1346,11 @@ a.line:hover:before, a.line:focus:before, a.line:active:before {
 /* line 5, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/navigation/_menus.scss */
 .site-navigation {
   display: table-cell;
-  vertical-align: middle;
-  text-align: right;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   min-width: 520px;
+  padding-top: .25em;
+  text-align: right;
+  vertical-align: middle;
   z-index: 2;
   font-size: 14px;
   font-size: 1.4rem;
@@ -2101,39 +2102,40 @@ img.centered,
 .aligncenter {
   display: block;
   margin: 0 auto 24px;
+  text-align: center;
 }
 
-/* line 17, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+/* line 18, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
 img.alignnone {
   margin-bottom: 12px;
 }
 
-/* line 21, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+/* line 22, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
 .alignleft {
   float: left;
   text-align: left;
 }
 
-/* line 26, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+/* line 27, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
 .alignright {
   float: right;
   text-align: right;
 }
 
-/* line 31, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+/* line 32, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
 a.alignleft,
 a.alignright {
   max-width: 100%;
 }
 
-/* line 36, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+/* line 37, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
 a.alignleft,
 img.alignleft,
 .wp-caption.alignleft {
   margin: 0 24px 24px 0;
 }
 
-/* line 42, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+/* line 43, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
 a.alignright,
 img.alignright,
 .wp-caption.alignright {
@@ -2141,36 +2143,36 @@ img.alignright,
 }
 
 @media all and (max-width: 500px) {
-  /* line 49, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+  /* line 50, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
   .alignleft,
   .alignright {
     float: none;
     display: block;
     text-align: left;
   }
-  /* line 55, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+  /* line 56, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
   a.alignleft,
   img.alignleft,
   .wp-caption.alignleft {
     margin-right: 0;
   }
-  /* line 60, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+  /* line 61, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
   a.alignright,
   img.alignright,
   .wp-caption.alignright {
     margin-left: 0;
   }
-  /* line 65, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+  /* line 66, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
   img.centered,
   img.alignleft,
   img.alignright {
     width: 100%;
   }
-  /* line 70, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+  /* line 71, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
   img.alignleft {
     margin-left: 0;
   }
-  /* line 73, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
+  /* line 74, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_alignment.scss */
   img.alignleft {
     margin-right: 0;
   }

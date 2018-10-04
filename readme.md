@@ -1,6 +1,6 @@
 # Kelso #
 
-Contributors: chip sheppard
+Contributors: chip sheppard  
 Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, featured-image-header, custom-logo, custom-colors, custom-background, flexible-header, grid-layout, right-sidebar, left-sidebar, two-columns
 
 Requires at least: 4.0  
@@ -16,17 +16,10 @@ A theme called Kelso, based on underscores.
 
 Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A basic but flexible that makes use of the WP Customizer.
 
-## Installation ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
-
 ## Theme Stats ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-** 7 Widget Areas **
+**7 Widget Areas**
   - Posts Sidebar
   - Pages Sidebar
   - Sub-Footer 1
