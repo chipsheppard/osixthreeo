@@ -25,7 +25,6 @@
 	background-color: #ffffff;
 	position: relative;
 	z-index: 100;
-	min-height: 100px;
 	transition: all .5s ease;
 }
 
@@ -42,7 +41,7 @@
 	}
 }
 
-// FULL HEIGHT FOR GLENRIDGE HOMEPAGE
+// FULL HEIGHT
 .home.fullheight .site-header .wrap {
 	height: 100vh;
 }

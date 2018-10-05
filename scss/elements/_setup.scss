@@ -41,15 +41,11 @@ button,
 input,
 select,
 textarea {
+	color: $color__base;
 	font-family: $font__main;
 	font-weight: $font__weight-normal;
-	color: $color__base;
 	line-height: $font__line-height-body;
 	@include font-size(1.6);
-
-	@include breakpoint(phone-h) {
-		@include font-size(1.4);
-	}
 }
 
 /* Copy */

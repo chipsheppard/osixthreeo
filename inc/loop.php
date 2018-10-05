@@ -34,7 +34,7 @@ function kelso_default_loop() {
 			</header>
 		<?php endif; ?>
 
-		<div class="archive-content cf">
+		<div class="content-wrap do-masonry cf">
 
 			<?php
 			tha_content_while_before();

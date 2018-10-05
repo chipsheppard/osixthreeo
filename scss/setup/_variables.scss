@@ -10,28 +10,23 @@ $color__secondary: #ff8c00; // aka DarkOrange
 $color__darklight: #222222;
 
 // Typography
-$font__main:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font__headers:  "Lucida Bright", Georgia, serif;
+$font__main: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font__headers: $font__main;
 
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
 
-$font__serif: 'Times', serif;
-
-$font__line-height-body: 1.75;
-$font__line-height-pre: 1.6;
-
-$font__weight-light: 300;
-$font__weight-normal: 400;
-$font__weight-semibold: 600;
-$font__weight-bold: 700;
-$font__weight-xbold: 800;
+$font__serif: "Times New Roman", serif;
 
 $font__site-title: $font__headers;
 $font__menus: $font__main;
-$font__entrymeta: $font__headers;
-$font__sitefooter: $font__serif;
 
+$font__weight-normal: 400;
+$font__weight-semibold: 600;
+$font__weight-bold: 700;
+
+$font__line-height-body: 1.75;
+$font__line-height-pre: 1.6;
 
 // Structutal
 $size__site-max: 80em;

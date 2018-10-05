@@ -96,7 +96,13 @@ if ( ! function_exists( 'kelso_customheader_content' ) ) {
 			<?php if ( '' !== $herotextsecondary ) : ?>
 				<div class="hero-secondary"><?php echo esc_html( $herotextsecondary ); ?></div>
 			<?php endif; ?>
+			<?php if ( $kelso_settings['home_header_height'] ) : ?>
+				<a href="#custom-header-scroll-target" class="scrollbutton"><div class="arrow-down white"></div></a>
+			<?php endif; ?>
 		</div>
+		<?php if ( $kelso_settings['home_header_height'] ) : ?>
+			<div id="custom-header-scroll-target"></div>
+		<?php endif; ?>
 		<?php
 	}
 }

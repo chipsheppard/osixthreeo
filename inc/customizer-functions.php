@@ -181,44 +181,11 @@ if ( ! function_exists( 'kelso_get_left_sidebar' ) ) {
 
 
 /*
- * NAVIGATION
+ * NAVIGATION SEARCH FORM.
  -----------------------------------------------------------------
  */
-if ( ! function_exists( 'kelso_display_nav' ) ) {
-	/**
-	 * Get the menu
-	 * write the markup if conditions are met.
-	 */
-	function kelso_display_nav() {
 
-		if ( ! has_nav_menu( 'primary' ) ) {
-			return;
-		}
-		?>
-
-		<nav id="primary-navigation" class="site-navigation" role="navigation">
-			<button class="responsive-menu-icon" aria-controls="mobile-navigation" aria-expanded="false"><div class="menu-icon-wrap"><div class="menu-icon"></div></div></button>
-
-			<div class="menu-wrap"><span>
-				<?php
-
-				do_action( 'kelso_inside_navigation' );
-
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_id' => 'primary-menu',
-					'container' => '',
-				) );
-
-				?>
-			</span></div>
-
-		</nav>
-		<?php
-	}
-}
-
-// The form.
+// Write the search form.
 if ( ! function_exists( 'kelso_navigation_search' ) ) {
 	add_action( 'kelso_inside_navigation', 'kelso_navigation_search' );
 	/**
@@ -240,7 +207,7 @@ if ( ! function_exists( 'kelso_navigation_search' ) ) {
 	}
 }
 
-// Search button.
+// Append search button to the menu.
 if ( ! function_exists( 'kelso_menu_search_icon' ) ) {
 	add_filter( 'wp_nav_menu_items', 'kelso_menu_search_icon', 10, 2 );
 	/**
@@ -275,6 +242,38 @@ if ( ! function_exists( 'kelso_menu_search_icon' ) ) {
 	}
 }
 
+/*
+ * HOMEPAGE HEADER HEIGHT.
+ -----------------------------------------------------------------
+ */
+
+if ( ! function_exists( 'kelso_home_header_height' ) ) {
+	/**
+	 * Check if full-height is selected, write a body class if it is..
+	 *
+	 * @return string The sidebar layout location.
+	 */
+	function kelso_home_header_height() {
+
+		if ( ! is_front_page() ) {
+			return;
+		}
+
+		// Get Customizer options.
+		$kelso_settings = wp_parse_args(
+			get_option( 'kelso_settings', array() ),
+			kelso_get_defaults()
+		);
+
+		if ( ! $kelso_settings['home_header_height'] ) {
+			return;
+		}
+
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'fullheight' ) );
+		} );
+	}
+}
 
 /*
  * BACK TO TOP

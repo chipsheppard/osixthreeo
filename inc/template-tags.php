@@ -14,16 +14,15 @@ function kelso_posted_on() {
 
 	$time_string = sprintf( $time_string,
 		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date( 'm/d/Y' ) )
+		esc_html( get_the_date( 'M j, Y' ) )
 	);
 
 	$posted_on = sprintf(
-		/* translators: %s: puvlished date. */
-		esc_html_x( 'published %s', 'post date', 'kelso' ),
+		esc_html( '%s', 'post date', 'kelso' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span> '; // WPCS: XSS OK.
 }
 
 /**
@@ -43,7 +42,7 @@ function kelso_updated_on() {
 	);
 	$updated_on = sprintf(
 		/* translators: %s: modified date. */
-		esc_html_x( 'updated &nbsp;&nbsp; %s', 'modified date', 'kelso' ),
+		esc_html_x( 'updated %s', 'modified date', 'kelso' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $updated_string . '</a>'
 	);
 

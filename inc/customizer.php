@@ -224,7 +224,28 @@ function kelso_customize_register( $wp_customize ) {
 		 )
 	 );
 
-	// Homepage Custom Header Primary Text Area.
+	// Homepage Header Height.
+	$wp_customize->add_setting(
+		'kelso_settings[home_header_height]',
+		array(
+			'default' => $defaults['home_header_height'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'kelso_settings[home_header_height]',
+		array(
+			'type' => 'checkbox',
+			'label' => __( 'Full Height Homepage Header', 'kelso' ),
+			'description' => __( 'The header fills the whole browser on the homepage.', 'kelso' ),
+			'section' => 'header_image',
+			'settings' => 'kelso_settings[home_header_height]',
+			'priority' => 46,
+		)
+	);
+
+	// Homepage Header Primary Text Area.
 	$wp_customize->add_setting(
 		'kelso_settings[hero_text_primary]',
 		array(
@@ -243,7 +264,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Homepage Custom Header Primary Text Color.
+	// Homepage Header Primary Text Color.
 	$wp_customize->add_setting(
 		'kelso_settings[hero_text_primary_color]',
 		array(
@@ -266,7 +287,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Homepage Custom Header Secondary Text Area.
+	// Homepage Header Secondary Text Area.
 	$wp_customize->add_setting(
 		'kelso_settings[hero_text_secondary]',
 		array(
@@ -285,7 +306,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Homepage Custom Header Secondary Text Color.
+	// Homepage Header Secondary Text Color.
 	$wp_customize->add_setting(
 		'kelso_settings[hero_text_secondary_color]',
 		array(

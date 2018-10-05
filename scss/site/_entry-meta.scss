@@ -3,7 +3,6 @@
 */
 
 .entry-meta {
-	font-family: $font__entrymeta;
 	color: $color__base-light;
 	margin: 0;
 	@include font-size(1.2);
@@ -13,13 +12,11 @@
 	.byline {
 		color: $color__base-light;
 		display: inline-block;
-		//font-style: italic;
-		font-family: $font__serif;
 		padding-right: .5em;
 
 		a {
 			color: $color__base-medium;
-			font-family: $font__main;
+			font-family: $font__headers;
 			font-style: normal;
 
 			&:hover {
@@ -37,8 +34,6 @@
 
 		a {
 			color: $color__base-medium;
-			font-family: $font__main;
-			font-style: normal;
 
 			&:hover {
 				color: $color__base-light;

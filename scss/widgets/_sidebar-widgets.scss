@@ -46,7 +46,6 @@ Widgets
 		a {
 			color: $color__base;
 			display: inline-block;
-			font-weight: $font__weight-semibold;
 			padding: 1.125em 0;
 			text-transform: uppercase;
 
@@ -90,7 +89,7 @@ Widgets
 		}
 
 		li.current-menu-item > a {
-			font-weight: $font__weight-bold;
+			color: $color__highlight;
 		}
 	}
 

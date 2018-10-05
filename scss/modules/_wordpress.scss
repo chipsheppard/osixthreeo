@@ -26,7 +26,7 @@
 }
 
 .entry-content .wp-caption-text {
-	font-weight: $font__weight-bold;
+	font-weight: $font__weight-semibold;
 	margin: 0;
 	text-align: center;
 	@include font-size(1.4);

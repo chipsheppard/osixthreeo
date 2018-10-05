@@ -34,6 +34,45 @@ function kelso_dont_update_theme( $r, $url ) {
 add_filter( 'http_request_args', 'kelso_dont_update_theme', 5, 2 );
 
 
+/*
+ * NAVIGATION
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_display_nav' ) ) {
+	/**
+	 * Get the menu
+	 * write the markup if conditions are met.
+	 */
+	function kelso_display_nav() {
+
+		if ( ! has_nav_menu( 'primary' ) ) {
+			return;
+		}
+		?>
+
+		<nav id="primary-navigation" class="site-navigation" role="navigation">
+			<button class="responsive-menu-icon" aria-controls="mobile-navigation" aria-expanded="false"><div class="menu-icon-wrap"><div class="menu-icon"></div></div></button>
+
+			<div class="menu-wrap"><span>
+				<?php
+
+				do_action( 'kelso_inside_navigation' );
+
+				wp_nav_menu( array(
+					'theme_location' => 'primary',
+					'menu_id' => 'primary-menu',
+					'container' => '',
+				) );
+
+				?>
+			</span></div>
+
+		</nav>
+		<?php
+	}
+}
+
+
 /**
  * ARCHIVE TITLE
  * puts a span around "Category:, Tag:, etc...

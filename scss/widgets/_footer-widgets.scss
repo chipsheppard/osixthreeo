@@ -32,7 +32,7 @@
 	.button:not(li) {
 		border: 2px solid $color__base-medium;
 		color: $color__base-medium;
-		font-weight: 700;
+		font-weight: $font__weight-bold;
 		margin: .5em;
 
 		&:hover {

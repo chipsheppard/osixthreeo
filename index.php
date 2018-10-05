@@ -6,6 +6,7 @@
  */
 
 kelso_sidebar_bodyclass();
+kelso_home_header_height();
 get_header();
 tha_content_before();
 kelso_get_left_sidebar();

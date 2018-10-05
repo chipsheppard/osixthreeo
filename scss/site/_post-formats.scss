@@ -24,8 +24,8 @@
 	padding-top: 1em;
 }
 
-/* DASHICONS
-===============================
+/* MARKED
+=============================== */
 .post_format-post-format-aside,
 .post_format-post-format-gallery,
 .post_format-post-format-link,
@@ -43,7 +43,6 @@
 		top: 80px;
 		position: absolute;
 		z-index: 5;
-		font-family: $font__icon;
 		line-height: 1;
 		@include font-size(1.5);
 
@@ -55,31 +54,31 @@
 }
 
 .post_format-post-format-aside:before {
-	content: "\f123";
+	content: "a";
 }
 .post_format-post-format-gallery:before {
-	content: "\f161";
+	content: "g";
 }
 .post_format-post-format-link:before {
-	content: "\f103";
+	content: "l";
 }
 .post_format-post-format-image:before {
-	content: "\f128";
+	content: "i";
 }
 .post_format-post-format-quote:before {
-	content: "\f122";
+	content: "q";
 }
 .post_format-post-format-status:before {
-	content: "\f130";
+	content: "s";
 }
 .post_format-post-format-video:before {
-	content: "\f126";
+	content: "v";
 }
 .post_format-post-format-audio:before {
-	content: "\f127";
+	content: "ad";
 }
 .post_format-post-format-chat:before {
-	content: "\f125";
+	content: "c";
 }
 
 
@@ -120,4 +119,3 @@
 		}
 	}
 }
-*/
