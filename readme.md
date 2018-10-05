@@ -9,12 +9,10 @@ Stable tag: 1.0.0
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
-A theme called Kelso, based on underscores.
-
 ## Description ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A basic but flexible that makes use of the WP Customizer.
+Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A basic but flexible theme that makes use of the WP Customizer.
 
 ## Theme Stats ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -33,6 +31,7 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
   - Status
 
 **35 Theme Action Hooks for developers**
+
 header.php 8
   - tha_html_before()
   - tha_head_top()
@@ -182,7 +181,6 @@ If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3r
 
 
 ## Changelog ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 **1.0 - September 2018**
  First deploy to GIT
@@ -192,7 +190,6 @@ If a widget is placed into the 1st widget area and no widgets are in the 2nd, 3r
 
 
 ## Credits ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 * Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
