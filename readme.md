@@ -10,12 +10,10 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html  
 
 ## Description ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A basic but flexible theme that makes use of the WP Customizer.
 
 ## Theme Stats ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 **7 Widget Areas**
   - Posts Sidebar
@@ -32,7 +30,7 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
 
 **35 Theme Action Hooks for developers**
 
-header.php 8
+header.php (8)
   - tha_html_before()
   - tha_head_top()
   - tha_head_bottom()
@@ -42,20 +40,20 @@ header.php 8
   - tha_header_bottom()
   - tha_header_after()
 
-sidebar.php 4
-  - tha_sidebars_before()
-  - tha_sidebar_top()
-  - tha_sidebar_bottom()
-  - tha_sidebars_after()
-
-footer.php 5
+footer.php (5)
   - tha_footer_before()
   - tha_footer_top()
   - tha_footer_bottom()
   - tha_footer_after()
   - tha_body_bottom()
 
-index.php 7
+sidebar.php (4)
+  - tha_sidebars_before()
+  - tha_sidebar_top()
+  - tha_sidebar_bottom()
+  - tha_sidebars_after()
+
+index.php (7)
   - tha_content_before()
   - tha_content_wrap_before()
   - tha_content_top()
@@ -64,22 +62,22 @@ index.php 7
   - tha_content_wrap_after()
   - tha_content_after()
 
-comments.php 2
-  - tha_comments_before()
-  - tha_comments_after()
-
-loop.php 4
+loop.php (4)
   - tha_content_while_before()
   - tha_entry_before()
   - tha_entry_after()
   - tha_content_while_after()
 
-content.php 5
+content.php (5)
   - tha_entry_top()
   - tha_entry_content_before()
   - tha_entry_content_after()
   - tha_entry_bottom()
   - kelso_inside_navigation : used for inserting search into the menu
+
+comments.php (2)
+  - tha_comments_before()
+  - tha_comments_after()
 
 **33 Customizer controls**
   - Logo color : if text
@@ -108,6 +106,7 @@ content.php 5
   - archive_layout_setting
   - back_to_top
   - nav_search
+  - home_header_height
   - header_bg_color_left
   - header_bg_color_right
   - hero_text_primary
@@ -150,7 +149,6 @@ content.php 5
   - button wide
 
 ## THEME NOTES: ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
 **Logo**
 The logo is constrained to 300px wide max.

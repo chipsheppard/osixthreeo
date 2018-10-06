@@ -184,3 +184,14 @@
 .mejs-button>button {
 	background-color: transparent !important;
 }
+
+/*
+ * Recent Comments Widget
+--------------------------------------------- */
+.sidebar-widget.widget_recent_comments ul a {
+	display: inline;
+}
+
+.widget_media_gallery .gallery-item {
+	margin: 0 1%
+}

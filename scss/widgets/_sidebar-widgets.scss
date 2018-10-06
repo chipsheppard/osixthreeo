@@ -3,8 +3,8 @@ Widgets
 ----------------------------------------------------- */
 
 .sidebar-widget {
-	padding-bottom: 1.5em;
-	margin-bottom: 1.5em;
+	padding-bottom: 1em;
+	margin-bottom: 1em;
 	@include font-size(1.5);
 
 	&:last-of-type {
@@ -33,7 +33,7 @@ Widgets
 
 		a {
 			color: $color__base;
-			padding: .75em 0;
+			display: inline-block;
 			width: 100%;
 
 			&:hover {
@@ -46,7 +46,6 @@ Widgets
 		a {
 			color: $color__base;
 			display: inline-block;
-			padding: 1.125em 0;
 			text-transform: uppercase;
 
 			&:hover {
@@ -55,10 +54,6 @@ Widgets
 		}
 
 		li {
-			border-bottom: 1px solid $color__base-xxlight;
-			margin-bottom: 0;
-
-
 			li {
 				border: none;
 

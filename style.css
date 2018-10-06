@@ -1090,7 +1090,7 @@ select {
   background: rgba(102, 102, 102, 0.5);
   border: 0;
   color: #c0c0c0;
-  padding: .6em .75em .75em;
+  padding: .6em .75em;
   right: 52px;
 }
 
@@ -2393,6 +2393,19 @@ img.alignright,
   background-color: transparent !important;
 }
 
+/*
+ * Recent Comments Widget
+--------------------------------------------- */
+/* line 191, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_wordpress.scss */
+.sidebar-widget.widget_recent_comments ul a {
+  display: inline;
+}
+
+/* line 195, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/modules/_wordpress.scss */
+.widget_media_gallery .gallery-item {
+  margin: 0 1%;
+}
+
 /* Gutenberg
  --------------------------------------------- */
 /*
@@ -3097,7 +3110,7 @@ img.flex {
 /* line 9, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_site-header.scss */
 .site-header .wrap {
   position: relative;
-  height: 460px;
+  height: 400px;
   transition: all .5s ease;
 }
 
@@ -3424,17 +3437,16 @@ img.flex {
 /* line 83, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .custom-header-image-text {
   color: #ffffff;
-  padding-top: 3em;
   position: absolute;
   text-align: center;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -webkit-transform: translateY(-10%);
+          transform: translateY(-10%);
   width: 100%;
   z-index: 5;
 }
 
-/* line 94, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 93, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .hero-primary {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 700;
@@ -3447,7 +3459,7 @@ img.flex {
 }
 
 @media all and (max-width: 820px) {
-  /* line 94, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+  /* line 93, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
   .hero-primary {
     font-size: 50px;
     font-size: 5rem;
@@ -3455,14 +3467,14 @@ img.flex {
 }
 
 @media all and (max-width: 500px) {
-  /* line 94, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+  /* line 93, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
   .hero-primary {
     font-size: 30px;
     font-size: 3rem;
   }
 }
 
-/* line 111, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 110, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .hero-secondary {
   text-shadow: 1px 1px 16px rgba(0, 0, 0, 0.5);
   line-height: 1.25;
@@ -3471,7 +3483,7 @@ img.flex {
 }
 
 @media all and (max-width: 820px) {
-  /* line 111, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+  /* line 110, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
   .hero-secondary {
     font-size: 30px;
     font-size: 3rem;
@@ -3479,27 +3491,27 @@ img.flex {
 }
 
 @media all and (max-width: 500px) {
-  /* line 111, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+  /* line 110, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
   .hero-secondary {
     font-size: 20px;
     font-size: 2rem;
   }
 }
 
-/* line 124, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 123, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .scrollbutton {
   display: inline-block;
-  margin-top: 3em;
+  margin-top: 5em;
 }
 
 @media all and (max-width: 500px) {
-  /* line 124, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+  /* line 123, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
   .scrollbutton {
-    display: none;
+    margin-top: 3em;
   }
 }
 
-/* line 133, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 132, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .arrow-down {
   border-radius: 50%;
   border: 2px solid currentColor;
@@ -3509,7 +3521,7 @@ img.flex {
   position: relative;
 }
 
-/* line 141, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 140, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .arrow-down:after {
   content: '';
   display: inline-block;
@@ -3525,27 +3537,27 @@ img.flex {
           transform: rotate(45deg);
 }
 
-/* line 155, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 154, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .arrow-down.white {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 157, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 156, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .arrow-down.white:after {
   border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* line 161, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 160, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .arrow-down.white:hover {
   border-color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 163, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 162, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 .arrow-down.white:hover:after {
   border-color: rgba(255, 255, 255, 0.9);
 }
 
-/* line 170, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
+/* line 169, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_custom-header.scss */
 #custom-header-scroll-target {
   position: absolute;
   bottom: 40px;
@@ -3586,7 +3598,7 @@ body.archive .page-header,
 body.search .page-header {
   color: #ffffff;
   position: absolute;
-  top: -15em;
+  top: -11em;
 }
 
 @media all and (max-width: 500px) {
@@ -3596,7 +3608,7 @@ body.search .page-header {
   body.blog .page-header,
   body.archive .page-header,
   body.search .page-header {
-    top: -7em;
+    top: -5.5em;
   }
 }
 
@@ -3712,156 +3724,6 @@ body.search .page-title {
 .blog .format-aside,
 .blog .format-status {
   padding-top: 1em;
-}
-
-/* MARKED
-=============================== */
-/* line 29, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-aside,
-.post_format-post-format-gallery,
-.post_format-post-format-link,
-.post_format-post-format-image,
-.post_format-post-format-quote,
-.post_format-post-format-status,
-.post_format-post-format-video,
-.post_format-post-format-audio,
-.post_format-post-format-chat {
-  position: relative;
-}
-
-/* line 40, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-aside:before,
-.post_format-post-format-gallery:before,
-.post_format-post-format-link:before,
-.post_format-post-format-image:before,
-.post_format-post-format-quote:before,
-.post_format-post-format-status:before,
-.post_format-post-format-video:before,
-.post_format-post-format-audio:before,
-.post_format-post-format-chat:before {
-  display: inline-block;
-  left: -20px;
-  top: 80px;
-  position: absolute;
-  z-index: 5;
-  line-height: 1;
-  font-size: 15px;
-  font-size: 1.5rem;
-}
-
-@media all and (max-width: 500px) {
-  /* line 40, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-  .post_format-post-format-aside:before,
-  .post_format-post-format-gallery:before,
-  .post_format-post-format-link:before,
-  .post_format-post-format-image:before,
-  .post_format-post-format-quote:before,
-  .post_format-post-format-status:before,
-  .post_format-post-format-video:before,
-  .post_format-post-format-audio:before,
-  .post_format-post-format-chat:before {
-    font-size: 12.5px;
-    font-size: 1.25rem;
-    left: -14px;
-  }
-}
-
-/* line 56, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-aside:before {
-  content: "a";
-}
-
-/* line 59, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-gallery:before {
-  content: "g";
-}
-
-/* line 62, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-link:before {
-  content: "l";
-}
-
-/* line 65, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-image:before {
-  content: "i";
-}
-
-/* line 68, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-quote:before {
-  content: "q";
-}
-
-/* line 71, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-status:before {
-  content: "s";
-}
-
-/* line 74, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-video:before {
-  content: "v";
-}
-
-/* line 77, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-audio:before {
-  content: "ad";
-}
-
-/* line 80, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.post_format-post-format-chat:before {
-  content: "c";
-}
-
-/* line 95, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.single .post_format-post-format-aside:before,
-.single .post_format-post-format-gallery:before,
-.single .post_format-post-format-link:before,
-.single .post_format-post-format-image:before,
-.single .post_format-post-format-quote:before,
-.single .post_format-post-format-status:before,
-.single .post_format-post-format-video:before,
-.single .post_format-post-format-audio:before,
-.single .post_format-post-format-chat:before {
-  top: 45px;
-}
-
-@media all and (max-width: 500px) {
-  /* line 95, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-  .single .post_format-post-format-aside:before,
-  .single .post_format-post-format-gallery:before,
-  .single .post_format-post-format-link:before,
-  .single .post_format-post-format-image:before,
-  .single .post_format-post-format-quote:before,
-  .single .post_format-post-format-status:before,
-  .single .post_format-post-format-video:before,
-  .single .post_format-post-format-audio:before,
-  .single .post_format-post-format-chat:before {
-    top: 41px;
-  }
-}
-
-/* line 115, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/site/_post-formats.scss */
-.blog .post_format-post-format-aside:before,
-.blog .post_format-post-format-gallery:before,
-.blog .post_format-post-format-link:before,
-.blog .post_format-post-format-image:before,
-.blog .post_format-post-format-quote:before,
-.blog .post_format-post-format-status:before,
-.blog .post_format-post-format-video:before,
-.blog .post_format-post-format-audio:before,
-.blog .post_format-post-format-chat:before,
-.archive .post_format-post-format-aside:before,
-.archive .post_format-post-format-gallery:before,
-.archive .post_format-post-format-link:before,
-.archive .post_format-post-format-image:before,
-.archive .post_format-post-format-quote:before,
-.archive .post_format-post-format-status:before,
-.archive .post_format-post-format-video:before,
-.archive .post_format-post-format-audio:before,
-.archive .post_format-post-format-chat:before {
-  left: 2px;
-  top: 76px;
-  font-size: 12.5px;
-  font-size: 1.25rem;
 }
 
 /*
@@ -4456,8 +4318,8 @@ Widgets
 ----------------------------------------------------- */
 /* line 5, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget {
-  padding-bottom: 1.5em;
-  margin-bottom: 1.5em;
+  padding-bottom: 1em;
+  margin-bottom: 1em;
   font-size: 15px;
   font-size: 1.5rem;
 }
@@ -4492,7 +4354,7 @@ Widgets
 /* line 34, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget ul a {
   color: #666666;
-  padding: .75em 0;
+  display: inline-block;
   width: 100%;
 }
 
@@ -4505,59 +4367,52 @@ Widgets
 .sidebar-widget .menu a {
   color: #666666;
   display: inline-block;
-  padding: 1.125em 0;
   text-transform: uppercase;
 }
 
-/* line 52, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 51, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu a:hover {
   color: #1e90ff;
 }
 
 /* line 57, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
-.sidebar-widget .menu li {
-  border-bottom: 1px solid #f5f5f5;
-  margin-bottom: 0;
-}
-
-/* line 62, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu li li {
   border: none;
 }
 
-/* line 65, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 60, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu li li a {
   padding: .5em 0 .5em 1.5em;
 }
 
-/* line 70, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 65, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu li li li a {
   padding-left: 3em;
 }
 
-/* line 77, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 72, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu ul {
   display: none;
   padding-bottom: .75em;
 }
 
-/* line 81, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 76, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu ul ul {
   padding-bottom: .125em;
 }
 
-/* line 86, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 81, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu li.current-menu-item ul,
 .sidebar-widget .menu li.current-menu-ancestor ul {
   display: block;
 }
 
-/* line 91, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 86, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu li.current-menu-item > a {
   color: #1e90ff;
 }
 
-/* line 96, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
+/* line 91, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/kelso/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu-item-has-children.current-menu-item > a,
 .sidebar-widget .menu-item-has-children.current-menu-ancestor > a {
   padding-bottom: .5em;

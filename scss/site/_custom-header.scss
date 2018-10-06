@@ -82,11 +82,10 @@
 - - - - - - - - - - - - - - - - - */
 .custom-header-image-text {
 	color: #ffffff;
-	padding-top: 3em;
 	position: absolute;
 	text-align: center;
 	top: 50%;
-	transform: translateY(-50%);
+	transform: translateY(-10%);
 	width: 100%;
 	z-index: 5;
 }
@@ -123,10 +122,10 @@
 
 .scrollbutton {
 	display: inline-block;
-	margin-top: 3em;
+	margin-top: 5em;
 
 	@include breakpoint(phone-h) {
-		display: none;
+		margin-top: 3em;
 	}
 }
 

@@ -1,0 +1,91 @@
+/* TAG THE POST FORMATS
+=============================== */
+.post_format-post-format-aside,
+.post_format-post-format-gallery,
+.post_format-post-format-link,
+.post_format-post-format-image,
+.post_format-post-format-quote,
+.post_format-post-format-status,
+.post_format-post-format-video,
+.post_format-post-format-audio,
+.post_format-post-format-chat {
+	position: relative;
+
+	&:before {
+		background-color: #ffffff;
+		border-radius: 50%;
+		box-shadow: 1px 1px 4px rgba(153, 153, 153, .5);
+		color: $color__base-light;
+		display: inline-block;
+		line-height: 1;
+		padding: .5em .75em;
+		position: absolute;
+		z-index: 5;
+		@include font-size(1.5);
+	}
+}
+
+.post_format-post-format-aside:before {
+	content: "a";
+}
+.post_format-post-format-gallery:before {
+	content: "g";
+}
+.post_format-post-format-link:before {
+	content: "l";
+}
+.post_format-post-format-image:before {
+	content: "i";
+}
+.post_format-post-format-quote:before {
+	content: "q";
+}
+.post_format-post-format-status:before {
+	content: "s";
+}
+.post_format-post-format-video:before {
+	content: "v";
+}
+.post_format-post-format-audio:before {
+	content: "ad";
+}
+.post_format-post-format-chat:before {
+	content: "c";
+}
+
+
+.single {
+	.post_format-post-format-aside,
+	.post_format-post-format-gallery,
+	.post_format-post-format-link,
+	.post_format-post-format-image,
+	.post_format-post-format-quote,
+	.post_format-post-format-status,
+	.post_format-post-format-video,
+	.post_format-post-format-audio,
+	.post_format-post-format-chat {
+		&:before {
+			top: -2px;
+			left: -30px;
+		}
+	}
+}
+
+.blog,
+.archive {
+	.post_format-post-format-aside,
+	.post_format-post-format-gallery,
+	.post_format-post-format-link,
+	.post_format-post-format-image,
+	.post_format-post-format-quote,
+	.post_format-post-format-status,
+	.post_format-post-format-video,
+	.post_format-post-format-audio,
+	.post_format-post-format-chat {
+		&:before {
+			left: -.75em;
+			top: 1.5em;
+			@include font-size(1.25);
+		}
+	}
+}

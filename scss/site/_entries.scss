@@ -27,10 +27,10 @@ body.archive .page-header,
 body.search .page-header {
 	color: #ffffff;
 	position: absolute;
-    top: -15em;
+    top: -11em;
 
 	@include breakpoint(phone-h) {
-		top: -7em;
+		top: -5.5em;
 	}
 }
 

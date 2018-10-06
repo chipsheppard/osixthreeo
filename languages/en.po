@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-09-20 19:44-0400\n"
-"PO-Revision-Date: 2018-09-20 19:44-0400\n"
+"POT-Creation-Date: 2018-10-05 22:47-0400\n"
+"PO-Revision-Date: 2018-10-05 22:48-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_001\n"
@@ -15,55 +15,47 @@ msgstr ""
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_html_x;esc_attr_x\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: 404.php:21
+#: 404.php:19
 msgid "Page not found."
 msgstr ""
 
-#: 404.php:25
+#: 404.php:23
 msgid "error... error... page not found... going doOown"
 msgstr ""
 
-#: 404.php:26
+#: 404.php:24
 msgid "Please use the menu in the header or try a search."
 msgstr ""
 
-#: archive.php:43 index.php:61 search.php:40
-msgid "&laquo; Previous"
-msgstr ""
-
-#: archive.php:44 index.php:62 search.php:41
-msgid "Next &raquo;"
-msgstr ""
-
-#: comments.php:30
+#: comments.php:31
 msgid "Comments"
 msgstr ""
 
-#: comments.php:35 comments.php:56
+#: comments.php:36 comments.php:57
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:38 comments.php:59
+#: comments.php:39 comments.php:60
 msgid "Older Comments"
 msgstr ""
 
-#: comments.php:39 comments.php:60
+#: comments.php:40 comments.php:61
 msgid "Newer Comments"
 msgstr ""
 
-#: comments.php:74
+#: comments.php:75
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:68
+#: functions.php:138
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:22
+#: header.php:26
 msgid "Skip to content"
 msgstr ""
 
-#: inc/customizer-functions.php:271
+#: inc/customizer-functions.php:238
 msgid "Search"
 msgstr ""
 
@@ -76,237 +68,273 @@ msgid "Navigation Link Color"
 msgstr ""
 
 #: inc/customizer.php:148
-msgid "Header Background Color - Left"
-msgstr ""
-
-#: inc/customizer.php:150
-msgid "Set or change the left gradient starting color."
+msgid "Sticky Header Background Color"
 msgstr ""
 
 #: inc/customizer.php:170
+msgid "Sticky Header Navigation Link Color"
+msgstr ""
+
+#: inc/customizer.php:196
+msgid "Header Background Color - Left"
+msgstr ""
+
+#: inc/customizer.php:198
+msgid "Set or change the left gradient starting color."
+msgstr ""
+
+#: inc/customizer.php:218
 msgid "Header Background Color - Right"
 msgstr ""
 
-#: inc/customizer.php:172
+#: inc/customizer.php:220
 msgid "Set or change the right gradient starting color."
 msgstr ""
 
-#: inc/customizer.php:192
+#: inc/customizer.php:240
+msgid "Full Height Homepage Header"
+msgstr ""
+
+#: inc/customizer.php:241
+msgid "The header fills the whole browser on the homepage."
+msgstr ""
+
+#: inc/customizer.php:261
 msgid "Homepage Header Text - Primary"
 msgstr ""
 
-#: inc/customizer.php:213 inc/customizer.php:255
+#: inc/customizer.php:282 inc/customizer.php:324
 msgid "Color"
 msgstr ""
 
-#: inc/customizer.php:234
+#: inc/customizer.php:303
 msgid "Homepage Header Text - Secondary"
 msgstr ""
 
-#: inc/customizer.php:281
+#: inc/customizer.php:350
 msgid "Content Area Background Color"
 msgstr ""
 
-#: inc/customizer.php:303
+#: inc/customizer.php:372
 msgid "Text Color"
 msgstr ""
 
-#: inc/customizer.php:324
+#: inc/customizer.php:393
 msgid "Primary Highlight Color"
 msgstr ""
 
-#: inc/customizer.php:325
+#: inc/customizer.php:394
 msgid "Links & Buttons"
 msgstr ""
 
-#: inc/customizer.php:346
+#: inc/customizer.php:415
 msgid "Secondary Highlight Color"
 msgstr ""
 
-#: inc/customizer.php:347
+#: inc/customizer.php:416
 msgid "Link hover states, Menu \"accent\" border, \"secondary\" buttons"
 msgstr ""
 
-#: inc/customizer.php:373
+#: inc/customizer.php:442
 msgid "Footer Widgets Background Color"
 msgstr ""
 
-#: inc/customizer.php:395
+#: inc/customizer.php:464
+msgid "Footer Widget Title Color"
+msgstr ""
+
+#: inc/customizer.php:486
 msgid "Footer Widgets Text Color"
 msgstr ""
 
-#: inc/customizer.php:417
+#: inc/customizer.php:508
 msgid "Footer Widgets Link Color"
 msgstr ""
 
-#: inc/customizer.php:439
+#: inc/customizer.php:530
 msgid "Footer Widgets Link Hover Color"
 msgstr ""
 
-#: inc/customizer.php:465
+#: inc/customizer.php:556
 msgid "Footer Background Color"
 msgstr ""
 
-#: inc/customizer.php:487
+#: inc/customizer.php:578
 msgid "Footer Text Color"
 msgstr ""
 
-#: inc/customizer.php:509
+#: inc/customizer.php:600
 msgid "Footer Link Color"
 msgstr ""
 
-#: inc/customizer.php:531
+#: inc/customizer.php:622
 msgid "Footer Link Hover Color"
 msgstr ""
 
-#: inc/customizer.php:546
+#: inc/customizer.php:637
 msgid "Site Layout"
 msgstr ""
 
-#: inc/customizer.php:565
+#: inc/customizer.php:656
 msgid "Site Width"
 msgstr ""
 
-#: inc/customizer.php:568
+#: inc/customizer.php:659
 msgid "Full"
 msgstr ""
 
-#: inc/customizer.php:569
+#: inc/customizer.php:660
 msgid "Contained"
 msgstr ""
 
-#: inc/customizer.php:591
+#: inc/customizer.php:682
 msgid "Homepage Layout"
 msgstr ""
 
-#: inc/customizer.php:594 inc/customizer.php:624 inc/customizer.php:653
-#: inc/customizer.php:682 inc/customizer.php:711
+#: inc/customizer.php:685 inc/customizer.php:715 inc/customizer.php:744
+#: inc/customizer.php:773 inc/customizer.php:802
 msgid "layout-ns"
 msgstr ""
 
-#: inc/customizer.php:595 inc/customizer.php:625 inc/customizer.php:654
-#: inc/customizer.php:683 inc/customizer.php:712
+#: inc/customizer.php:686 inc/customizer.php:716 inc/customizer.php:745
+#: inc/customizer.php:774 inc/customizer.php:803
 msgid "layout-ls"
 msgstr ""
 
-#: inc/customizer.php:596 inc/customizer.php:626 inc/customizer.php:655
-#: inc/customizer.php:684 inc/customizer.php:713
+#: inc/customizer.php:687 inc/customizer.php:717 inc/customizer.php:746
+#: inc/customizer.php:775 inc/customizer.php:804
 msgid "layout-rs"
 msgstr ""
 
-#: inc/customizer.php:597 inc/customizer.php:627 inc/customizer.php:656
-#: inc/customizer.php:685 inc/customizer.php:714
+#: inc/customizer.php:688 inc/customizer.php:718 inc/customizer.php:747
+#: inc/customizer.php:776 inc/customizer.php:805
 msgid "layout-c"
 msgstr ""
 
-#: inc/customizer.php:620
+#: inc/customizer.php:711
 msgid "Page Layout"
 msgstr ""
 
-#: inc/customizer.php:621
+#: inc/customizer.php:712
 msgid "This can be overridden using the Page Template drop-down"
 msgstr ""
 
-#: inc/customizer.php:650
+#: inc/customizer.php:741
 msgid "Single Post Layout"
 msgstr ""
 
-#: inc/customizer.php:679
+#: inc/customizer.php:770
 msgid "Archive/Blog Layout"
 msgstr ""
 
-#: inc/customizer.php:708
+#: inc/customizer.php:799
 msgid "Search Results Layout"
 msgstr ""
 
-#: inc/customizer.php:729
+#: inc/customizer.php:820
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer.php:747
+#: inc/customizer.php:838
 msgid "Back to Top Button"
 msgstr ""
 
-#: inc/customizer.php:748
+#: inc/customizer.php:839
 msgid ""
 "Add a button to the right side of the lower footer. Note: The lower footer "
 "widget must be activated."
 msgstr ""
 
-#: inc/customizer.php:768
+#: inc/customizer.php:859
 msgid "Navigation Search"
 msgstr ""
 
-#: inc/customizer.php:769
+#: inc/customizer.php:860
 msgid "Append search functionality to the menu."
 msgstr ""
 
-#: inc/template-tags.php:23
-#, php-format
-msgid "published %s"
+#: inc/featured-image-checkbox.php:19
+msgid "Display in header."
 msgstr ""
 
-#: inc/template-tags.php:50
+#: inc/loop.php:31
 #, php-format
-msgid "updated &nbsp;&nbsp; %s"
+msgid "Search Results for:%1$s %2$s"
 msgstr ""
 
-#: inc/template-tags.php:66
+#: inc/loop.php:52
+msgid "<span>previous</span> %title"
+msgstr ""
+
+#: inc/loop.php:53
+msgid "<span>next</span> %title"
+msgstr ""
+
+#: inc/loop.php:74
+msgid "&laquo; Previous"
+msgstr ""
+
+#: inc/loop.php:75
+msgid "Next &raquo;"
+msgstr ""
+
+#: inc/template-tags.php:45
+#, php-format
+msgid "updated %s"
+msgstr ""
+
+#: inc/template-tags.php:59
 #, php-format
 msgid "by %s"
 msgstr ""
 
-#: inc/template-tags.php:89
+#: inc/template-tags.php:79
 #, php-format
 msgid "Comment<span class=\"screen-reader-text\"> on %s</span>"
 msgstr ""
 
-#: inc/template-tags.php:113 inc/template-tags.php:120
+#: inc/template-tags.php:100 inc/template-tags.php:107
 msgid ", "
 msgstr ""
 
-#: inc/template-tags.php:116
+#: inc/template-tags.php:103
 #, php-format
 msgid "Filed under %1$s"
 msgstr ""
 
-#: inc/template-tags.php:123
+#: inc/template-tags.php:110
 #, php-format
 msgid "Tagged %1$s"
 msgstr ""
 
-#: inc/template-tags.php:131
+#: inc/template-tags.php:118
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/template-tags.php:155
-#, php-format
-msgid "Full Article<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: inc/template-text.php:22
+#: inc/theme-functions.php:88
 msgid "<div>written by:</div><span class=\"vcard\">"
 msgstr ""
 
-#: inc/template-text.php:24
+#: inc/theme-functions.php:90
 msgid "<div>archive by year:</div>"
 msgstr ""
 
-#: inc/template-text.php:26
+#: inc/theme-functions.php:92
 msgid "<div>archive by month:</div>"
 msgstr ""
 
-#: inc/template-text.php:28
+#: inc/theme-functions.php:94
 msgid "<div>archive by day:</div>"
 msgstr ""
 
-#: inc/template-text.php:36
+#: inc/theme-functions.php:102
 msgid "Archives"
 msgstr ""
 
-#: inc/theme-functions.php:79
-msgid "Display in header."
+#: inc/theme-functions.php:148
+#, php-format
+msgid "Full Article<span class=\"screen-reader-text\"> \"%s\"</span>"
 msgstr ""
 
 #: inc/widgets.php:14
@@ -375,19 +403,6 @@ msgid ""
 "your website."
 msgstr ""
 
-#: search.php:24
-#, php-format
-msgid "Search Results for:%1$s %2$s"
-msgstr ""
-
-#: single.php:25
-msgid "<span>previous</span> %title"
-msgstr ""
-
-#: single.php:26
-msgid "<span>next</span> %title"
-msgstr ""
-
 #: template-parts/content-none.php:13
 msgid "Nothing Found"
 msgstr ""
@@ -408,11 +423,11 @@ msgid ""
 "searching can help."
 msgstr ""
 
-#: template-parts/content-page.php:22 template-parts/content.php:60
-msgid "Pages:"
-msgstr ""
-
-#: template-parts/content.php:49
+#: template-parts/content.php:50
 #, php-format
 msgid "Continue reading %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: template-parts/content.php:59
+msgid "Pages:"
 msgstr ""
