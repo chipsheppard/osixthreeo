@@ -85,25 +85,21 @@ if ( ! function_exists( 'kelso_setup' ) ) :
 	 */
 	function kelso_setup() {
 
-		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 		add_theme_support( 'title-tag' );
 		add_theme_support( 'post-thumbnails' );
 		add_theme_support( 'post-formats', array( 'aside', 'status' ) );
-		// Theme support for Gutenberg 'full' & 'wide' image sizes.
 		add_theme_support( 'align-wide' );
 		add_theme_support( 'html5', array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption' ) );
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
-		/*
-		 * Set the content width in pixels, based on the theme's design and stylesheet.
-		 */
+		// Set the content width in pixels, based on the theme's design and stylesheet.
 		$GLOBALS['content_width'] = apply_filters( 'kelso_content_width', 1200 );
 
 		// Custom Logo.
 		add_theme_support( 'custom-logo', array(
-			'height'      => 300,
 			'width'       => 600,
+			'height'      => 300,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
@@ -113,7 +109,7 @@ if ( ! function_exists( 'kelso_setup' ) ) :
 			'default-image'          => '',
 			'default-text-color'     => '000000',
 			'width'                  => 2000,
-			'height'                 => 1000,
+			'height'                 => 1500,
 			'flex-width'             => true,
 			'flex-height'            => true,
 			'video'                  => true,
@@ -141,10 +137,7 @@ if ( ! function_exists( 'kelso_setup' ) ) :
 		// Make theme available for translation.
 		load_theme_textdomain( 'kelso', get_template_directory() . '/languages' );
 
-		/*
-		 * This theme styles the visual editor to resemble the theme style,
-		 * specifically font, colors, and column width.
-	 	 */
+		// Theme styles for the visual editor.
 		add_editor_style( 'assets/css/editor-style.css' );
 	}
 endif;
