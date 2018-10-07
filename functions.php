@@ -48,7 +48,7 @@ function kelso_scripts() {
 	if ( '' !== $kelso_settings['nav_search'] ) {
 		wp_enqueue_script( 'kelso-navigation-search', get_template_directory_uri() . '/assets/js/navsearch.js', array(), KELSO_VERSION, true );
 	}
-	if ( is_archive() || is_home() ) {
+	if ( is_archive() && ! is_shop() || is_home() ) {
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'masonry-init-js', get_template_directory_uri() . '/assets/js/masonry-init.js', array( 'jquery', 'masonry' ), KELSO_VERSION, true );
 	}
@@ -98,20 +98,20 @@ if ( ! function_exists( 'kelso_setup' ) ) :
 
 		// Custom Logo.
 		add_theme_support( 'custom-logo', array(
-			'width'       => 600,
 			'height'      => 300,
-			'flex-width'  => true,
+			'width'       => 600,
 			'flex-height' => true,
+			'flex-width'  => true,
 		) );
 
 		// Custom header.
 		add_theme_support( 'custom-header', apply_filters( 'kelso_custom_header_args', array(
 			'default-image'          => '',
 			'default-text-color'     => '000000',
-			'width'                  => 2000,
 			'height'                 => 1500,
-			'flex-width'             => true,
+			'width'                  => 2000,
 			'flex-height'            => true,
+			'flex-width'             => true,
 			'video'                  => true,
 			'wp-head-callback'       => 'kelso_base_css', // inc/css-output.php.
 		) ) );

@@ -24,7 +24,8 @@ body.page .entry-header,
 body.single .entry-header,
 body.blog .page-header,
 body.archive .page-header,
-body.search .page-header {
+body.search .page-header,
+.woocommerce-products-header {
 	color: #ffffff;
 	position: absolute;
     top: -11em;
@@ -32,6 +33,12 @@ body.search .page-header {
 	@include breakpoint(phone-h) {
 		top: -5.5em;
 	}
+}
+
+.product_title.entry-title {
+	color: #ffffff;
+	position: absolute;
+    top: -4.25em;
 }
 
 body.page .entry-title,
