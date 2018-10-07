@@ -16,6 +16,19 @@ function kelso_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
 
+/**
+ * Remove WooCommerce Styles
+ *
+ * @param array $styles An array of stylesheets added by WooCommerce.
+function wpex_remove_woo_styles( $styles ) {
+	unset( $styles['woocommerce-general'] );
+	unset( $styles['woocommerce-layout'] );
+	unset( $styles['woocommerce-smallscreen'] );
+	return $styles;
+}
+add_filter( 'woocommerce_enqueue_styles', 'wpex_remove_woo_styles' );
+ */
+
 // add_theme_support( 'wc-product-gallery-slider' );.
 // add_theme_support( 'wc-product-gallery-zoom' );.
 // add_theme_support( 'wc-product-gallery-lightbox' );.

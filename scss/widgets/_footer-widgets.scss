@@ -58,9 +58,11 @@
 		}
 	}
 
-	input[type="submit"] {
+	input[type="submit"],
+	button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
 		background-color: $color__secondary;
-		border-left: 0;
+		border: 0;
+		border-radius: 0;
 		color: #ffffff;
 		line-height: 1;
 		min-width: 55px;
@@ -71,6 +73,9 @@
 		@include breakpoint(phone-h) {
 			padding: .925em 0;
 		}
+	}
+	button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
+		padding: 1.5em 0;
 	}
 
 	::-moz-placeholder {

@@ -3867,9 +3867,11 @@ Widgets
   border: 1px solid #ff8c00;
 }
 
-.footer-widgets input[type="submit"] {
+.footer-widgets input[type="submit"],
+.footer-widgets button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
   background-color: #ff8c00;
-  border-left: 0;
+  border: 0;
+  border-radius: 0;
   color: #ffffff;
   line-height: 1;
   min-width: 55px;
@@ -3879,9 +3881,14 @@ Widgets
 }
 
 @media all and (max-width: 500px) {
-  .footer-widgets input[type="submit"] {
+  .footer-widgets input[type="submit"],
+  .footer-widgets button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
     padding: .925em 0;
   }
+}
+
+.footer-widgets button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
+  padding: 1.5em 0;
 }
 
 .footer-widgets ::-moz-placeholder {
