@@ -38,7 +38,14 @@ function kelso_default_loop() {
 		</header>
 		<?php endif; ?>
 
-		<div class="content-wrap do-masonry cf">
+		<?php
+		if ( is_archive() && ! is_woocommerce() || is_home() ) {
+			$m = ' do-masonry';
+		} else {
+			$m = null;
+		}
+		?>
+		<div class="content-wrap<?php echo esc_attr( $m ); ?> cf">
 
 			<?php
 			tha_content_while_before();

@@ -30,10 +30,10 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'stickyheader_link_color' => '#000000',
 
 			'footerwidgets_background_color' => '#494949',
-			'footerwidgets_widget_title_color' => '#808080',
-			'footerwidgets_text_color' => '#c0c0c0',
-			'footerwidgets_link_color' => '#808080',
-			'footerwidgets_link_color_hover' => '#c0c0c0',
+			'footerwidgets_widget_title_color' => '#dcdcdc',
+			'footerwidgets_text_color' => '#dcdcdc',
+			'footerwidgets_link_color' => '#c0c0c0',
+			'footerwidgets_link_color_hover' => '#f5f5f5',
 
 			'footer_background_color' => '#000000',
 			'footer_text_color' => '#c0c0c0',

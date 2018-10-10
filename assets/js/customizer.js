@@ -128,15 +128,11 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 
 	// FOOTERWIDGETS ----------------------------------- .
 	// Background
-	wp.customize(
-		'kelso_settings[footerwidgets_background_color]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.footer-widgets .button:not(li):hover' ).css( 'color', newval );
-					$( '.footer-widgets .wrap' ).css( 'background-color', newval );
-				}
-			);
-		}
+	kelso_colors_live_update(
+		'footerwidgets_background_color',
+		'.footer-widgets .wrap',
+		'background-color',
+		'#494949'
 	);
 
 	// FW Title
@@ -144,7 +140,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'footerwidgets_widget_title_color',
 		'.footer-widgets .widget-title',
 		'color',
-		'#c0c0c0'
+		'#dcdcdc'
 	);
 
 	// FW Text
@@ -152,32 +148,23 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'footerwidgets_text_color',
 		'.footer-widgets',
 		'color',
-		'#c0c0c0'
+		'#dcdcdc'
 	);
 
 	// FW Link
-	wp.customize(
-		'kelso_settings[footerwidgets_link_color]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.footer-widgets a,.footer-widgets .button:not(li)' ).css( 'color', newval );
-					$( '.footer-widgets .button:not(li)' ).css( 'border-color', newval );
-				}
-			);
-		}
+	kelso_colors_live_update(
+		'footerwidgets_link_color',
+		'.footer-widgets a:not(.button)',
+		'color',
+		'#c0c0c0'
 	);
 
 	// FW Link Hover
-	wp.customize(
-		'kelso_settings[footerwidgets_link_color_hover]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.footer-widgets a:hover' ).css( 'color', newval );
-					$( '.footer-widgets .button:not(li):after' ).css( 'background-color', newval );
-					$( '.footer-widgets .button:not(li):hover' ).css( 'border-color', newval );
-				}
-			);
-		}
+	kelso_colors_live_update(
+		'footerwidgets_link_color_hover',
+		'.footer-widgets a:not(.button):hover',
+		'color',
+		'#f5f5f5'
 	);
 
 

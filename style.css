@@ -2406,7 +2406,6 @@ img.flex {
  * Containers
 --------------------------------------------- */
 .site-content {
-  position: relative;
   clear: both;
 }
 
@@ -2438,7 +2437,6 @@ img.flex {
   max-width: 80em;
   margin: 0 auto;
   padding: 0 40px;
-  position: relative;
   width: 100%;
 }
 
@@ -3120,9 +3118,21 @@ body.archive .page-header,
 body.search .page-header,
 body.error404 .page-header {
   color: #ffffff;
-  position: relative;
-  margin-top: -400px;
-  height: 400px;
+  height: 350px;
+  position: absolute;
+  top: 50px;
+  width: 70%;
+}
+
+@media all and (max-width: 820px) {
+  body.page .entry-header,
+  body.single .entry-header,
+  body.blog .page-header,
+  body.archive .page-header,
+  body.search .page-header,
+  body.error404 .page-header {
+    width: 82%;
+  }
 }
 
 @media all and (max-width: 500px) {
@@ -3132,8 +3142,8 @@ body.error404 .page-header {
   body.archive .page-header,
   body.search .page-header,
   body.error404 .page-header {
-    margin-top: -180px;
     height: 180px;
+    width: 88%;
   }
 }
 
@@ -3217,6 +3227,15 @@ body.error404 .page-title {
 
 .single .entry-content {
   margin-bottom: 2em;
+}
+
+body.admin-bar.page .entry-header,
+body.admin-bar.single .entry-header,
+body.admin-bar.blog .page-header,
+body.admin-bar.archive .page-header,
+body.admin-bar.search .page-header,
+body.admin-bar.error404 .page-header {
+  top: 82px;
 }
 
 /* Post Formats
@@ -3863,33 +3882,32 @@ Widgets
 }
 
 .footer-widgets .widget-title {
-  color: #808080;
+  color: #dcdcdc;
   margin-bottom: 1em;
 }
 
-.footer-widgets a {
+.footer-widgets a:not(.button) {
   display: inline-block;
-  color: #808080;
+  color: #c0c0c0;
+  position: relative;
 }
 
-.footer-widgets a:hover {
-  color: #dcdcdc;
+.footer-widgets a:not(.button):before {
+  background-color: currentColor;
+  bottom: 0;
+  content: '';
+  height: 1px;
+  position: absolute;
+  transition: all .1s ease;
+  width: 0;
 }
 
-.footer-widgets .button:not(li) {
-  border: 2px solid #808080;
-  color: #808080;
-  font-weight: 700;
-  margin: .5em;
+.footer-widgets a:not(.button):hover {
+  color: #f5f5f5;
 }
 
-.footer-widgets .button:not(li):hover {
-  color: #222222;
-  border-color: #dcdcdc;
-}
-
-.footer-widgets .button:not(li):after {
-  background-color: #dcdcdc;
+.footer-widgets a:not(.button):hover:before {
+  width: 100%;
 }
 
 .footer-widgets input[type="search"] {
@@ -4038,16 +4056,22 @@ body.has-site-logo .site-description {
 --------------------------------------------- */
 .woocommerce-products-header {
   color: #ffffff;
+  height: 350px;
   position: absolute;
-  margin-top: -400px;
-  height: 300px;
-  width: 100%;
+  top: 50px;
+  width: 70%;
+}
+
+@media all and (max-width: 820px) {
+  .woocommerce-products-header {
+    width: 82%;
+  }
 }
 
 @media all and (max-width: 500px) {
   .woocommerce-products-header {
-    margin-top: -180px;
     height: 180px;
+    width: 88%;
   }
 }
 
@@ -4060,14 +4084,31 @@ body.has-site-logo .site-description {
 
 .product_title.entry-title {
   color: #ffffff;
+  height: 200px;
+  margin: 0;
   position: absolute;
-  top: -4.25em;
+  top: 200px;
+  width: 70%;
+}
+
+@media all and (max-width: 820px) {
+  .product_title.entry-title {
+    width: 82%;
+  }
+}
+
+@media all and (max-width: 500px) {
+  .product_title.entry-title {
+    height: 100px;
+    top: 130px;
+    width: 88%;
+  }
 }
 
 .woocommerce .woocommerce-breadcrumb {
   border-top: 1px solid #dcdcdc;
   border-bottom: 1px solid #dcdcdc;
-  padding: .5em 0;
+  padding: .75em 0 .625em;
   margin-bottom: 1.5em;
 }
 

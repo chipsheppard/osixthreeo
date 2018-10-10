@@ -16,32 +16,31 @@
 	}
 
 	.widget-title {
-		color: $color__base-medium;
+		color: $color__base-xlight;
 		margin-bottom: 1em;
 	}
 
-	a {
+	a:not(.button) {
 		display: inline-block;
-		color: $color__base-medium;
+		color: $color__base-light;
+		position: relative;
 
-		&:hover {
-			color: $color__base-xlight;
-		}
-	}
-
-	.button:not(li) {
-		border: 2px solid $color__base-medium;
-		color: $color__base-medium;
-		font-weight: $font__weight-bold;
-		margin: .5em;
-
-		&:hover {
-			color: $color__darklight;
-			border-color: $color__base-xlight;
+		&:before {
+			background-color: currentColor;
+			bottom: 0;
+			content: '';
+			height: 1px;
+			position: absolute;
+			transition: all .1s ease;
+			width: 0;
 		}
 
-		&:after {
-			background-color: $color__base-xlight;
+		&:hover {
+			color: $color__base-xxlight;
+
+			&:before {
+				width: 100%;
+			}
 		}
 	}
 

@@ -2,14 +2,17 @@
 --------------------------------------------- */
 .woocommerce-products-header {
 	color: #ffffff;
+	height: 350px;
 	position: absolute;
-	margin-top: -400px;
-	height: 300px;
-	width: 100%;
+	top: 50px;
+	width: 70%;
 
+	@include breakpoint(tablet-v) {
+		width: 82%;
+	}
 	@include breakpoint(phone-h) {
-		margin-top: -180px;
 		height: 180px;
+		width: 88%;
 	}
 
 	.page-title {
@@ -21,14 +24,26 @@
 
 .product_title.entry-title {
 	color: #ffffff;
+	height: 200px;
+	margin: 0;
 	position: absolute;
-    top: -4.25em;
+	top: 200px;
+	width: 70%;
+
+	@include breakpoint(tablet-v) {
+		width: 82%;
+	}
+	@include breakpoint(phone-h) {
+		height: 100px;
+		top: 130px;
+		width: 88%;
+	}
 }
 
 .woocommerce .woocommerce-breadcrumb {
 	border-top: 1px solid $color__base-xlight;
 	border-bottom: 1px solid $color__base-xlight;
-	padding: .5em 0;
+	padding: .75em 0 .625em;
 	margin-bottom: 1.5em;
 }
 

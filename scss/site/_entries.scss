@@ -27,13 +27,20 @@ body.archive .page-header,
 body.search .page-header,
 body.error404 .page-header {
 	color: #ffffff;
-	position: relative;
-	margin-top: -400px;
-	height: 400px;
+	//position: relative;
+	//margin-top: -400px;
+	height: 350px;
+	position: absolute;
+	top: 50px;
+	width: 70%;
 
+	@include breakpoint(tablet-v) {
+		width: 82%;
+	}
 	@include breakpoint(phone-h) {
-		margin-top: -180px;
+		//margin-top: -180px;
 		height: 180px;
+		width: 88%;
 	}
 
 	.title-wrap {
@@ -105,4 +112,13 @@ body.error404 .page-title {
 	.entry-content {
 		margin-bottom: 2em;
 	}
+}
+
+body.admin-bar.page .entry-header,
+body.admin-bar.single .entry-header,
+body.admin-bar.blog .page-header,
+body.admin-bar.archive .page-header,
+body.admin-bar.search .page-header,
+body.admin-bar.error404 .page-header {
+	top: 82px;
 }

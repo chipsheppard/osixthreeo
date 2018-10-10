@@ -234,12 +234,8 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		 * Footer Widgets --------------------------------
 		 */
 		if ( $default_footerwidgets_bg_color !== $footerwidgets_bg_color ) :
-			// bg.
 			$css->set_selector( '.footer-widgets .wrap' );
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['footerwidgets_background_color'] ) );
-			// color.
-			$css->set_selector( '.footer-widgets .button:not(li):hover' );
-			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_background_color'] ) );
 		endif;
 		if ( $default_footerwidgets_widget_title_color !== $footerwidgets_widget_title_color ) :
 			$css->set_selector( '.footer-widgets .widget-title' );
@@ -250,23 +246,12 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_text_color'] ) );
 		endif;
 		if ( $default_footerwidgets_link_color !== $footerwidgets_link_color ) :
-			// color.
-			$css->set_selector( '.footer-widgets a, .footer-widgets .button:not(li)' );
+			$css->set_selector( '.footer-widgets a:not(.button)' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_link_color'] ) );
-			// border color.
-			$css->set_selector( '.footer-widgets .button:not(li)' );
-			$css->add_property( 'border-color', esc_attr( $kelso_settings['footerwidgets_link_color'] ) );
 		endif;
 		if ( $default_footerwidgets_link_color_hover !== $footerwidgets_link_color_hover ) :
-			// color.
-			$css->set_selector( '.footer-widgets a:hover' );
+			$css->set_selector( '.footer-widgets a:not(.button):hover' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_link_color_hover'] ) );
-			// border.
-			$css->set_selector( '.footer-widgets .button:not(li):hover' );
-			$css->add_property( 'border-color', esc_attr( $kelso_settings['footerwidgets_link_color_hover'] ) );
-			// bg.
-			$css->set_selector( '.footer-widgets .button:not(li):after' );
-			$css->add_property( 'background-color', esc_attr( $kelso_settings['footerwidgets_link_color_hover'] ) );
 		endif;
 
 		/*
