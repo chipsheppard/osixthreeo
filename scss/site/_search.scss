@@ -15,13 +15,29 @@
 		}
 	}
 
-	.hentry {
+	article {
 		margin: 0 0 3.5em 0;
 		position: relative;
+
+		&:before,
+		&:after {
+			@include clearfix;
+		}
+		&:after {
+			@include clearfix-after;
+		}
+	}
+
+	.featured-image {
+		display: inline-block;
+		float: left;
+		margin-right: 1em;
+		overflow: hidden;
 	}
 
 	.entry-header {
-		padding-bottom: .5em;
+		padding-bottom: 1em;
+		overflow: hidden;
 
 		&:after {
 			display: block;
@@ -31,6 +47,7 @@
 			margin-top: .5em;
 		}
 	}
+
 	.entry-title {
 		font-weight: $font__weight-normal;
 		@include font-size(2.2);
@@ -42,6 +59,6 @@
 	}
 
 	.more-link {
-		padding: 0;
+		padding:0;
 	}
 }

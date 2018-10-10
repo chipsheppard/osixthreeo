@@ -1,5 +1,53 @@
 /* Woo Commerce
 --------------------------------------------- */
+.woocommerce-products-header {
+	color: #ffffff;
+	position: absolute;
+	margin-top: -400px;
+	height: 300px;
+	width: 100%;
+
+	@include breakpoint(phone-h) {
+		margin-top: -180px;
+		height: 180px;
+	}
+
+	.page-title {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+}
+
+.product_title.entry-title {
+	color: #ffffff;
+	position: absolute;
+    top: -4.25em;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+	border-top: 1px solid $color__base-xlight;
+	border-bottom: 1px solid $color__base-xlight;
+	padding: .5em 0;
+	margin-bottom: 1.5em;
+}
+
+/*
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button {
+	background-color: $color__highlight;
+	border-radius: 6px;
+	color: #ffffff;
+	font-weight: $font__weight-normal;
+
+	&:hover {
+		background-color: $color__highlight;
+		color: #ffffff;
+	}
+}
+
 .woocommerce #respond input#submit.alt,
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
@@ -18,4 +66,4 @@
 		outline: 0;
 		background-color: #000;
 	}
-}
+}*/

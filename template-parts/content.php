@@ -10,10 +10,11 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( ! is_singular() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) : ?>
-		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'large' ); ?></a>
+		<a href="<?php the_permalink(); ?>" class="featured-image"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
 	<?php endif; ?>
 
 	<header class="entry-header">
+		<div class="title-wrap">
 		<?php
 		if ( is_singular() ) : // post, attachment, page, custom post types.
 
@@ -37,6 +38,7 @@
 			</div>
 		<?php endif; ?>
 		<?php tha_entry_top(); ?>
+		</div>
 	</header>
 
 	<div class="entry-content">
@@ -71,7 +73,7 @@
 	</div>
 
 
-	<?php if ( is_single() ) : // single posts, custom post types? ?>
+	<?php if ( is_single() && 'post' === get_post_type() ) : // single posts only. ?>
 		<footer class="entry-footer">
 		<?php
 			kelso_entry_footer();

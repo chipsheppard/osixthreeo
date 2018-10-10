@@ -25,39 +25,41 @@ body.single .entry-header,
 body.blog .page-header,
 body.archive .page-header,
 body.search .page-header,
-.woocommerce-products-header {
+body.error404 .page-header {
 	color: #ffffff;
-	position: absolute;
-    top: -11em;
+	position: relative;
+	margin-top: -400px;
+	height: 400px;
 
 	@include breakpoint(phone-h) {
-		top: -5.5em;
+		margin-top: -180px;
+		height: 180px;
 	}
-}
 
-.product_title.entry-title {
-	color: #ffffff;
-	position: absolute;
-    top: -4.25em;
+	.title-wrap {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
 }
 
 body.page .entry-title,
 body.single .entry-title,
 body.blog .page-title,
 body.archive .page-title,
-body.search .page-title {
+body.search .page-title,
+body.error404 .page-title {
 	font-weight: $font__weight-semibold;
 	letter-spacing: 1px;
 	padding: 0;
 	text-shadow: 1px 1px 8px rgba(0, 0, 0, .5);
-	text-transform: uppercase;
 	word-break: break-word;
 
 	@include breakpoint(phone-h) {
 		@include font-size(2);
 	}
 }
-.home:not(.blog) .entry-title {
+.home:not(.blog) .entry-header {
 	display: none;
 }
 
@@ -99,9 +101,6 @@ body.search .page-title {
 .single {
 	.hentry {
 		margin-bottom: 6em;
-	}
-	.entry-header {
-		margin-bottom: 2em;
 	}
 	.entry-content {
 		margin-bottom: 2em;

@@ -8,13 +8,14 @@
  * @package kelso
  */
 
-add_action( 'after_setup_theme', 'kelso_add_woocommerce_support' );
 /**
  * Add theme support.
  */
 function kelso_add_woocommerce_support() {
 	add_theme_support( 'woocommerce' );
 }
+add_action( 'after_setup_theme', 'kelso_add_woocommerce_support' );
+
 
 /**
  * Remove WooCommerce Styles
@@ -39,9 +40,29 @@ add_action( 'woocommerce_before_main_content', 'kelso_theme_wrapper_start', 10 )
 add_action( 'woocommerce_after_main_content', 'kelso_theme_wrapper_end', 10 );
 
 /**
+ * Body classes.
+ *
+ * @param array $classes The body classes.
+ */
+function kelso_woosidebar_bodyclass( $classes ) {
+	$layout = kelso_get_layout();
+	if ( 'layout-ls' === $layout ) :
+		$classes[] = 'sidebar-left';
+	elseif ( 'layout-rs' === $layout ) :
+		$classes[] = 'sidebar-right';
+	elseif ( 'layout-c' === $layout ) :
+		$classes[] = 'nosidebar-silo';
+	endif;
+	return $classes;
+}
+add_filter( 'body_class','kelso_woosidebar_bodyclass' );
+
+/**
  * The opening wrapper.
  */
 function kelso_theme_wrapper_start() {
+	tha_content_before();
+	kelso_get_left_sidebar();
 	echo '<div id="primary" class="content-area">';
 	tha_content_wrap_before();
 	echo '<main id="main" class="site-main cf" role="main">';
@@ -56,6 +77,8 @@ function kelso_theme_wrapper_end() {
 	echo '</main>';
 	tha_content_wrap_after();
 	echo '</div>';
+	kelso_get_right_sidebar();
+	tha_content_after();
 }
 
 /**

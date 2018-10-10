@@ -16,7 +16,9 @@ kelso_get_left_sidebar();
 		<section class="error-404 not-found">
 
 			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Page not found.', 'kelso' ); ?></h1>
+				<div class="title-wrap">
+					<h1 class="page-title"><?php esc_html_e( 'Page not found.', 'kelso' ); ?></h1>
+				</div>
 			</header>
 
 			<div class="page-content">

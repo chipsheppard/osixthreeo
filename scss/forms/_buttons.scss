@@ -32,6 +32,7 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
 	line-height: normal;
 	padding: .625em 1em .75em;
 	position: relative;
+	z-index: 1;
 	white-space: normal;
 
 	&:after {
@@ -39,7 +40,7 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
 		border-radius: 6px;
 		content: '';
 		position: absolute;
-		z-index: 0;
+		z-index: -1;
 		height: 0;
 		width: 100%;
 		bottom: 0;
@@ -68,7 +69,7 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
 	font-family: $font__headers;
 	font-weight: $font__weight-semibold;
 	line-height: normal;
-	padding: 1.125em 1em 1em;
+	padding: 1em;
 	position: relative;
 	white-space: normal;
 	width: auto;

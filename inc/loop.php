@@ -15,23 +15,27 @@ function kelso_default_loop() {
 		// archives and the "blog" page?
 		if ( is_home() && ! is_front_page() || is_archive() ) :
 		?>
-			<header class="page-header">
+		<header class="page-header">
+			<div class="title-wrap">
 			<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
 			?>
-			</header>
+			</div>
+		</header>
 		<?php endif; ?>
 
 		<?php if ( is_search() ) : ?>
-			<header class="page-header">
+		<header class="page-header">
+			<div class="title-wrap">
 				<h1 class="page-title">
 					<?php
 						/* translators: %$2s: is the search term */
 						printf( '<span>' . esc_html__( 'Search Results for:%1$s %2$s', 'kelso' ), '</span>', get_search_query() );
 					?>
 				</h1>
-			</header>
+			</div>
+		</header>
 		<?php endif; ?>
 
 		<div class="content-wrap do-masonry cf">

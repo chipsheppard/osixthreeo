@@ -66,16 +66,27 @@
 		color: #ffffff;
 		line-height: 1;
 		min-width: 55px;
-		padding: 1.125em 0;
+		padding: 1.5em 0;
 		text-align: center;
 		width: 20%;
 
 		@include breakpoint(phone-h) {
 			padding: .925em 0;
 		}
+
+		&:hover,
+		&:focus {
+			background: $color__base;
+			color: #fff;
+		}
+
+		&:after {
+			display: none;
+		}
 	}
-	button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
-		padding: 1.5em 0;
+
+	input[type="submit"] {
+		padding: 1.125em 0;
 	}
 
 	::-moz-placeholder {

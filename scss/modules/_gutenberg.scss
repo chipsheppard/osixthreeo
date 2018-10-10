@@ -32,6 +32,12 @@
 	display: block;
 	width: 100%;
 }
+.sidebar-right .alignfull {
+	margin-right: calc(35% - 65vw);
+}
+.sidebar-left .alignfull {
+	margin-left: calc(35% - 65vw);
+}
 
 .wp-block-image {
 	margin-bottom: 1.4em;
@@ -145,7 +151,6 @@
  * Videos
  ---------------------------------- */
 .wp-block-embed {
-
 	iframe {
 		width: 100%;
 	}
@@ -161,14 +166,13 @@
 	    display: inline-block;
 		font-family: $font__headers;
 		font-weight: $font__weight-semibold;
-		padding: .75em 1em;
 		position: relative;
 		white-space: normal;
 		width: auto;
 		z-index: 1;
 
 		&:after {
-			background-color: rgba(153,153,153,0.2);
+			background-color: rgba(0,0,0,0.2);
 			border-radius: 6px;
 			content: '';
 			position: absolute;
@@ -196,6 +200,13 @@
 	&.alignright {
 		margin-left: 1.5em;
 	}
+}
+
+.alignfull .jetpack-video-wrapper > iframe {
+	//margin-left: calc(50% - 50vw);
+	//margin-right: calc(50% - 50vw);
+	width: 100% !important;
+	//max-width: 1000%;
 }
 
 .wp-block-columns {

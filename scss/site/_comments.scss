@@ -32,6 +32,10 @@
 
 .comment-respond {
 
+	input:focus {
+		border: 0;
+	}
+
 	.comment-reply-title {
 		@include font-size(2.5);
 		margin-bottom: .5em;

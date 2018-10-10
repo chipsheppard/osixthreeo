@@ -107,8 +107,10 @@ if ( ! function_exists( 'kelso_get_layout' ) ) {
 
 		// Return the layout.
 		return apply_filters( 'kelso_sidebar_layout', $layout );
+
 	}
 }
+
 
 // SIDEBAR Body Class.
 if ( ! function_exists( 'kelso_sidebar_bodyclass' ) ) {

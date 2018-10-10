@@ -34,7 +34,9 @@
 
 			<div class="header-wrap">
 				<div class="inner-wrap">
+
 					<?php tha_header_top(); ?>
+
 					<div class="site-branding">
 
 						<?php
@@ -67,8 +69,10 @@
 					<?php kelso_display_nav(); ?>
 
 					<?php tha_header_bottom(); ?>
+
 				</div>
 			</div>
+
 		</div>
 	</header>
 
