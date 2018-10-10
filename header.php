@@ -79,4 +79,4 @@
 	<?php tha_header_after(); ?>
 
 	<div id="content" class="site-content">
-		<div class="page-wrap<?php kelso_sitecontain_class(); ?>">
+		<div class="content-wrap<?php kelso_sitecontain_class(); ?>">

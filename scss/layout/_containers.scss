@@ -28,20 +28,21 @@
 	width: $size__site-main;
 }
 
-.page-wrap,
+.content-wrap,
 .inner-wrap {
 	max-width: $size__site-max;
 	margin: 0 auto;
 	padding: 0 40px;
-	//position: relative;
 	width: $size__site-main;
 
 	@include breakpoint(tablet-h) {
  		padding: 0 5%;
 	}
 }
-
-.page-wrap {
+.inner-wrap {
+	position: relative;
+}
+.content-wrap {
 	background-color: #f5f5f5;
 }
 

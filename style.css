@@ -2432,7 +2432,7 @@ img.flex {
   width: 100%;
 }
 
-.page-wrap,
+.content-wrap,
 .inner-wrap {
   max-width: 80em;
   margin: 0 auto;
@@ -2441,13 +2441,17 @@ img.flex {
 }
 
 @media all and (max-width: 1025px) {
-  .page-wrap,
+  .content-wrap,
   .inner-wrap {
     padding: 0 5%;
   }
 }
 
-.page-wrap {
+.inner-wrap {
+  position: relative;
+}
+
+.content-wrap {
   background-color: #f5f5f5;
 }
 
