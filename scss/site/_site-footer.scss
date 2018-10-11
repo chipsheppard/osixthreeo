@@ -4,10 +4,7 @@
 .site-footer {
 	clear: both;
 	width: $size__site-main;
-
-	.wrap {
-		background-color: #000;
-	}
+	background-color: #000;
 }
 
 .site-info {
@@ -24,7 +21,6 @@
 			color: $color__base-light;
 		}
 	}
-
 }
 
 .backtotop {

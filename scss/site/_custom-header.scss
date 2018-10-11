@@ -1,6 +1,7 @@
 /*
  * The Custom Header
 ---------------------------------------------------------------- */
+
 .custom-header {
 	background: #5000aa;
 	background: linear-gradient(90deg, #5000aa 0%, #bb0005 100%);
@@ -9,11 +10,6 @@
 	width: 100%;
 	height: 100%;
 	z-index: 0;
-
-	.wrap {
-		height: 100%;
-		position: relative;
-	}
 
 	.custom-header-image {
 		padding: 0;

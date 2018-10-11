@@ -21,17 +21,12 @@ if ( ! function_exists( 'kelso_display_customheader' ) ) {
 	 */
 	function kelso_display_customheader() {
 	?>
-
-		<div class="custom-header">
-			<div class="wrap">
-				<div class="custom-header-image"<?php kelso_customheader_image_url(); ?>>
-
-					<?php kelso_customheader_content(); ?>
-
-				</div>
-			</div>
+	<div class="custom-header">
+		<div class="custom-header-image"<?php kelso_customheader_image_url(); ?>>
+			<?php kelso_customheader_content(); ?>
 		</div>
-		<?php
+	</div>
+	<?php
 	}
 }
 
@@ -89,7 +84,8 @@ if ( ! function_exists( 'kelso_customheader_content' ) ) {
 			</div>
 		<?php } ?>
 
-		<div class="custom-header-image-text">
+			<div class="custom-header-image-text">
+
 			<?php if ( '' !== $herotextprimary ) : ?>
 				<div class="hero-primary"><?php echo esc_html( $herotextprimary ); ?></div>
 			<?php endif; ?>
@@ -99,10 +95,12 @@ if ( ! function_exists( 'kelso_customheader_content' ) ) {
 			<?php if ( $kelso_settings['home_header_height'] ) : ?>
 				<a href="#custom-header-scroll-target" class="scrollbutton"><div class="arrow-down white"></div></a>
 			<?php endif; ?>
-		</div>
-		<?php if ( $kelso_settings['home_header_height'] ) : ?>
+
+			</div>
+
+			<?php if ( $kelso_settings['home_header_height'] ) : ?>
 			<div id="custom-header-scroll-target"></div>
-		<?php endif; ?>
+			<?php endif; ?>
 		<?php
 	}
 }

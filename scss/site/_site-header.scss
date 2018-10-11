@@ -1,19 +1,15 @@
 /*
  * Site Header
 ---------------------------------------------------------------- */
-
 .site-header {
+	height: 360px;
+
 	position: relative;
 	width: 100%;
+	transition: all .5s ease;
 
-	.wrap {
-		position: relative;
-		height: 360px;
-		transition: all .5s ease;
-
-		@include breakpoint(phone-h) {
-			height: 230px;
-		}
+	@include breakpoint(phone-h) {
+		height: 230px;
 	}
 
 	.inner-wrap {
@@ -21,15 +17,8 @@
 	}
 }
 
-.header-wrap {
-	background-color: #ffffff;
-	position: relative;
-	z-index: 100;
-	transition: all .5s ease;
-}
-
 // HOMEPAGE
-.home .site-header .wrap {
+.home .site-header {
 	min-height: 600px;
 
 	@include breakpoint(tablet-v) {
@@ -41,9 +30,17 @@
 	}
 }
 
-// FULL HEIGHT
-.home.fullheight .site-header .wrap {
+// HOMEPAGE FULL HEIGHT
+.home.fullheight .site-header {
 	height: 100vh;
+}
+
+
+.header-wrap {
+	background-color: #ffffff;
+	position: relative;
+	z-index: 100;
+	transition: all .5s ease;
 }
 
 // BRANDING BLOCK
@@ -72,7 +69,6 @@
 
 // Image logo
 .custom-logo {
-
 	line-height: 1;
 
 	img {
@@ -130,6 +126,7 @@
 	position: fixed;
 	width: 100%;
 	min-height: 50px;
+	z-index: 101;
 
 	.site-title {
 		margin-bottom: 0;
@@ -141,13 +138,5 @@
 
 	.site-branding {
 		padding: .5em 0;
-	}
-}
-
-.contained .header-wrap.stuck {
-	background-color: transparent;
-
-	.inner-wrap {
-		background-color: #ffffff;
 	}
 }

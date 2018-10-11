@@ -195,12 +195,12 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		if ( $default_stickyheader_link_color !== $stickyheader_link_color ) :
 			// Color.
 			$css->set_selector(
-				'.header-wrap.stuck .site-navigation ul:not(.sub-menu) a,.header-wrap.stuck button.dropdown-toggle,.header-wrap.stuck .responsive-menu-icon .menu-icon,.header-wrap.stuck .responsive-menu-icon .menu-icon::before,.header-wrap.stuck .responsive-menu-icon .menu-icon::after'
+				'.header-wrap.stuck .site-navigation ul:not(.sub-menu) a,.header-wrap.stuck button.dropdown-toggle'
 			);
 			$css->add_property( 'color', esc_attr( $kelso_settings['stickyheader_link_color'] ) );
 			// Background.
 			$css->set_selector(
-				'.header-wrap.stuck .responsive-menu-icon .menu-icon,.header-wrap.stuck .responsive-menu-icon .menu-icon::before,.header-wrap.stuck .responsive-menu-icon .menu-icon::after,.header-wrap.stuck .site-navigation:not(.nav-search-active) li.search-icon .theicon:before'
+				'.header-wrap.stuck .responsive-menu-icon .menu-icon,.header-wrap.stuck .responsive-menu-icon .menu-icon::before,.header-wrap.stuck .responsive-menu-icon .menu-icon::after,.header-wrap.stuck .site-navigation li.search-icon .theicon:before'
 			);
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['stickyheader_link_color'] ) );
 			// Borders.
@@ -234,7 +234,7 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		 * Footer Widgets --------------------------------
 		 */
 		if ( $default_footerwidgets_bg_color !== $footerwidgets_bg_color ) :
-			$css->set_selector( '.footer-widgets .wrap' );
+			$css->set_selector( '.footer-widgets' );
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['footerwidgets_background_color'] ) );
 		endif;
 		if ( $default_footerwidgets_widget_title_color !== $footerwidgets_widget_title_color ) :
@@ -258,7 +258,7 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		 * Site Footer --------------------------------
 		 */
 		if ( $default_footer_bg_color !== $footer_bg_color ) :
-			$css->set_selector( '.site-footer .wrap' );
+			$css->set_selector( '.site-footer' );
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['footer_background_color'] ) );
 		endif;
 		if ( $default_footer_text_color !== $footer_text_color ) :

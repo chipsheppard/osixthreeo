@@ -153,6 +153,12 @@ button.dropdown-toggle.toggled-on:after {
 	}
 	.site-navigation  li.search-icon .theicon {
 		border-color: #000000;
+
+		&:before,
+		&:after {
+			background-color: #000000;
+		}
+
 	}
 	.site-navigation a {
 		color: #222222;
