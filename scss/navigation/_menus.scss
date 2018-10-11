@@ -20,24 +20,6 @@
 		position: relative;
 	}
 
-	ul {
-		line-height: 1;
-
-		ul {
-			display: block;
-		}
-	}
-
-	li {
-		display: inline-block;
-		position: relative;
-
-		&:hover > .sub-menu {
-			left: auto;
-			opacity: 1;
-		}
-	}
-
 	a {
 		color: #222222;
 		display: inline-block;
@@ -54,12 +36,34 @@
 		background-color: rgba(153, 153, 153, 0.2);
 	}
 
-	li.accent {
-		border: 1px solid $color__secondary;
-		margin-left: .5em;
+	.menu-item-has-children > a {
+		padding-right: 1.5em;
+	}
 
-		a {
-			padding-bottom: 1.125em;
+	ul {
+		line-height: 1;
+
+		ul {
+			display: block;
+		}
+	}
+
+	li {
+		display: inline-block;
+		position: relative;
+
+		&:hover > .sub-menu {
+			left: auto;
+			opacity: 1;
+		}
+
+		&.accent {
+			border: 1px solid $color__secondary;
+			margin-left: .5em;
+
+			a {
+				padding-bottom: 1.125em;
+			}
 		}
 	}
 
@@ -109,7 +113,7 @@ button.dropdown-toggle {
 	color: #000000;
 	padding: 0;
     position: relative;
-    right: 13px;
+    right: 16px;
 
 	&:focus {
 		outline: 0;

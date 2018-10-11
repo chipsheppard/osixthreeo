@@ -37,6 +37,10 @@
 			}
 		}
 
+		.menu-item-has-children > a {
+			padding-right: 1em;
+		}
+
 		ul {
 			border-top: 1px solid $color__base-medium;
 			display: block;

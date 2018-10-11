@@ -1050,7 +1050,7 @@ select {
 
 .site-navigation.nav-search-active li.search-icon .theicon {
   padding: 0;
-  margin: 1.125em 0 .5em .875em;
+  margin: 1em 0 .5em .75em;
   width: 24px;
   height: 24px;
   border: 0;
@@ -1180,6 +1180,26 @@ a.line:hover:before, a.line:focus:before, a.line:active:before {
   position: relative;
 }
 
+.site-navigation a {
+  color: #222222;
+  display: inline-block;
+  letter-spacing: 1px;
+  padding: 1.25em;
+  text-transform: uppercase;
+}
+
+.site-navigation a:hover,
+.site-navigation .current_page_item > a,
+.site-navigation .current-menu-item > a,
+.site-navigation .current_page_ancestor > a,
+.site-navigation .current-menu-ancestor > a {
+  background-color: rgba(153, 153, 153, 0.2);
+}
+
+.site-navigation .menu-item-has-children > a {
+  padding-right: 1.5em;
+}
+
 .site-navigation ul {
   line-height: 1;
 }
@@ -1196,22 +1216,6 @@ a.line:hover:before, a.line:focus:before, a.line:active:before {
 .site-navigation li:hover > .sub-menu {
   left: auto;
   opacity: 1;
-}
-
-.site-navigation a {
-  color: #222222;
-  display: inline-block;
-  letter-spacing: 1px;
-  padding: 1.25em;
-  text-transform: uppercase;
-}
-
-.site-navigation a:hover,
-.site-navigation .current_page_item > a,
-.site-navigation .current-menu-item > a,
-.site-navigation .current_page_ancestor > a,
-.site-navigation .current-menu-ancestor > a {
-  background-color: rgba(153, 153, 153, 0.2);
 }
 
 .site-navigation li.accent {
@@ -1268,7 +1272,7 @@ button.dropdown-toggle {
   color: #000000;
   padding: 0;
   position: relative;
-  right: 13px;
+  right: 16px;
 }
 
 button.dropdown-toggle:focus {
@@ -1509,6 +1513,9 @@ button.dropdown-toggle.toggled-on:after {
   }
   .site-navigation a:hover {
     background: rgba(153, 153, 153, 0.1);
+  }
+  .site-navigation .menu-item-has-children > a {
+    padding-right: 1em;
   }
   .site-navigation ul {
     border-top: 1px solid #808080;
@@ -3924,13 +3931,6 @@ Widgets
   padding: 1.5em 0;
   text-align: center;
   width: 20%;
-}
-
-@media all and (max-width: 500px) {
-  .footer-widgets input[type="submit"],
-  .footer-widgets button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
-    padding: .925em 0;
-  }
 }
 
 .footer-widgets input[type="submit"]:hover, .footer-widgets input[type="submit"]:focus,
