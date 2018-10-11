@@ -45,7 +45,7 @@ function kelso_default_loop() {
 			$m = null;
 		}
 		?>
-		<div class="content-wrap<?php echo esc_attr( $m ); ?> cf">
+		<div class="loop-wrap<?php echo esc_attr( $m ); ?>">
 
 			<?php
 			tha_content_while_before();

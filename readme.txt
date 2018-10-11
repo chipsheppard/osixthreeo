@@ -151,11 +151,11 @@ content.php 5
   - text-black      = color: #000000;
 
 ** 5 Button Classes **
-  - button
-  - button white
-  - button secondary
-  - button darklight
-  - button wide
+  - btn
+  - btn white
+  - btn secondary
+  - btn darklight
+  - btn wide
 
 ## THEME NOTES: ##
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

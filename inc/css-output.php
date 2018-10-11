@@ -102,7 +102,7 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		endif;
 
 		if ( $default_content_bg_color !== $content_bg_color ) :
-			$css->set_selector( '.page-wrap' );
+			$css->set_selector( '.content-wrap' );
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['content_background_color'] ) );
 		endif;
 
@@ -125,7 +125,7 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			$css->add_property( 'color', esc_attr( $kelso_settings['link_color'] ) );
 			// Link Bg.
 			$css->set_selector(
-				'input[type="button"],input[type="reset"],input[type="submit"],.button,button,.bg-highlight,.subscription-toggle'
+				'input[type="button"],input[type="reset"],input[type="submit"],.btn,button,.bg-highlight,.subscription-toggle'
 			);
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['link_color'] ) );
 			// Link Borders.
@@ -142,7 +142,7 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			$css->add_property( 'color', esc_attr( $kelso_settings['link_color_hover'] ) );
 			// Secondary Backgrounds.
 			$css->set_selector(
-				'.button.secondary,button.secondary,.site-navigation li:not(.search-icon) a:before,.bg-secondary'
+				'.btn.secondary,button.secondary,.site-navigation li:not(.search-icon) a:before,.bg-secondary'
 			);
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['link_color_hover'] ) );
 			// Secondary Borders.
@@ -246,11 +246,11 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_text_color'] ) );
 		endif;
 		if ( $default_footerwidgets_link_color !== $footerwidgets_link_color ) :
-			$css->set_selector( '.footer-widgets a:not(.button)' );
+			$css->set_selector( '.footer-widgets a:not(.btn)' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_link_color'] ) );
 		endif;
 		if ( $default_footerwidgets_link_color_hover !== $footerwidgets_link_color_hover ) :
-			$css->set_selector( '.footer-widgets a:not(.button):hover' );
+			$css->set_selector( '.footer-widgets a:not(.btn):hover' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['footerwidgets_link_color_hover'] ) );
 		endif;
 

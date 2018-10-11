@@ -3,9 +3,10 @@
 .woocommerce-products-header {
 	color: #ffffff;
 	height: 350px;
+	//left: 40px;
 	position: absolute;
 	top: 50px;
-	width: 70%;
+	width: calc(100% - 80px);
 
 	@include breakpoint(tablet-v) {
 		width: 82%;
@@ -19,15 +20,16 @@
 		position: absolute;
 		top: 50%;
 		transform: translateY(-50%);
+		//bottom: -1px;
 	}
 }
 
 .product_title.entry-title {
 	color: #ffffff;
-	height: 200px;
+	height: 180px;
 	margin: 0;
 	position: absolute;
-	top: 200px;
+	top: 205px;
 	width: 70%;
 
 	@include breakpoint(tablet-v) {
@@ -35,7 +37,7 @@
 	}
 	@include breakpoint(phone-h) {
 		height: 100px;
-		top: 130px;
+		top: 120px;
 		width: 88%;
 	}
 }
