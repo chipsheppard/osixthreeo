@@ -26,19 +26,25 @@
 		}
 
 		a {
+			border: 0;
 			color: #ffffff !important;
 			overflow: hidden;
 			padding: 1.25em 1em 1em 1.5em;
 			position: relative;
 			width: 100%;
+		}
 
-			&:hover {
-				background: rgba(153,153,153,.1);
-			}
+		a:hover,
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			background-color: rgba(153, 153, 153, 0.1);
+			border: 0;
 		}
 
 		.menu-item-has-children > a {
-			padding-right: 1em;
+			padding-right: 0;
 		}
 
 		ul {
@@ -51,7 +57,7 @@
 		li {
 			border-bottom: 1px solid $color__base-medium;
 			display: block;
-			margin-left: 0;
+			margin-right: 0;
 			position: relative;
 
 			&:last-of-type {
@@ -87,7 +93,7 @@
 			cursor: pointer;
 			display: inline-block;
 			margin-left: 0;
-			padding: .25em 1em .5em;
+			padding: .5em 1em .75em;
 			position: absolute;
 			right: 0;
 			top: 0;

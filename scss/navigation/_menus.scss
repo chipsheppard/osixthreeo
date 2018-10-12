@@ -6,25 +6,21 @@
 	display: table-cell;
 	font-family: $font__menus;
 	min-width: 520px;
-	padding-top: .25em;
 	text-align: right;
 	vertical-align: middle;
 	z-index: 2;
 	@include font-size(1.4);
-
-	@include breakpoint(tablet-h) {
-		@include font-size(1.2);
-	}
 
 	.menu-wrap {
 		position: relative;
 	}
 
 	a {
+		border-bottom: 1px solid transparent;
 		color: #222222;
 		display: inline-block;
 		letter-spacing: 1px;
-		padding: 1.25em;
+		padding: 1.25em .125em 1em .125em;
 		text-transform: uppercase;
 	}
 
@@ -33,11 +29,11 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		background-color: rgba(153, 153, 153, 0.2);
+		border-bottom: 1px solid currentColor;
 	}
 
 	.menu-item-has-children > a {
-		padding-right: 1.5em;
+		padding-right: 1em;
 	}
 
 	ul {
@@ -51,6 +47,8 @@
 	li {
 		display: inline-block;
 		position: relative;
+		margin-right: 1em;
+
 
 		&:hover > .sub-menu {
 			left: auto;
@@ -91,10 +89,14 @@
 			transition: all .2s ease-in-out;
 			width: 190px;
 			@include font-size(1.2);
+		}
 
-			&:hover {
-				background: rgba(153,153,153,.15);
-			}
+		a:hover,
+		.current_page_item > a,
+		.current-menu-item > a,
+		.current_page_ancestor > a,
+		.current-menu-ancestor > a {
+			background-color: rgba(0, 0, 0, 0.05);
 		}
 
 		li {
@@ -110,10 +112,10 @@
 button.dropdown-toggle {
 	border: 0;
 	background: none;
-	color: #000000;
+	color: $color__base;
 	padding: 0;
     position: relative;
-    right: 16px;
+    right: 7px;
 
 	&:focus {
 		outline: 0;
@@ -144,7 +146,7 @@ button.dropdown-toggle.toggled-on:after {
 }
 
 .sub-menu button.dropdown-toggle {
-	color: #000000 !important;
+	color: $color__base;
 	position: absolute;
 	right: 8px;
 	top: 0;

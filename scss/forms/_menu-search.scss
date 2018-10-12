@@ -32,7 +32,9 @@
 	}
 
 	li.search-icon {
+		border-bottom: 1px solid transparent;
 	    float: right;
+		margin-right: 0;
 		position: relative;
 		width: 5rem;
 	    z-index: 4;
@@ -43,21 +45,17 @@
 
 		&:hover {
 			cursor: pointer;
-			background-color: rgba(153, 153, 153, 0.25);
+			border-bottom: 1px solid currentColor;
 		}
 
 		.theicon {
 			border: solid 2px #000000;
 			border-radius: 100%;
 			height: 12px;
-			margin: 1.125em 0 1.5em 1em;
+			margin: 1.175em 0 1.25em 1em;
 		    padding: 0;
 			transform: rotate(-45deg);
 			width: 12px;
-
-			@include breakpoint(tablet-h) {
-				margin-top: 1.25em;
-			}
 
 			&:before {
 				background-color: #000000;
@@ -116,6 +114,12 @@
 		}
 
 		li.search-icon {
+
+			&:hover {
+				cursor: pointer;
+				background-color: rgba(153, 153, 153, 0.25);
+				border-bottom: 1px solid transparent;
+			}
 
 			.theicon {
 				padding: 0;
