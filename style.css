@@ -1562,7 +1562,7 @@ button.dropdown-toggle.toggled-on:after {
     cursor: pointer;
     display: inline-block;
     margin-left: 0;
-    padding: .5em 1em .75em;
+    padding: .5em 1.375em .6125em;
     position: absolute;
     right: 0;
     top: 0;
@@ -1592,7 +1592,7 @@ button.dropdown-toggle.toggled-on:after {
     width: 100%;
   }
   .site-navigation .sub-menu button.dropdown-toggle {
-    padding: 0 1em .425em;
+    padding: 0 1.375em .425em;
     right: 0;
   }
   .site-navigation .sub-menu .sub-menu {
