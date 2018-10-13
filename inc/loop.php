@@ -16,7 +16,7 @@ function kelso_default_loop() {
 		if ( is_home() && ! is_front_page() || is_archive() ) :
 		?>
 		<header class="page-header">
-			<div class="title-wrap">
+			<div class="inner-wrap title-wrap">
 			<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
@@ -27,7 +27,7 @@ function kelso_default_loop() {
 
 		<?php if ( is_search() ) : ?>
 		<header class="page-header">
-			<div class="title-wrap">
+			<div class="inner-wrap title-wrap">
 				<h1 class="page-title">
 					<?php
 						/* translators: %$2s: is the search term */

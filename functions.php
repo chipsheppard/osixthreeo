@@ -75,6 +75,15 @@ function kelso_customizer_custom_css() {
 }
 add_action( 'customize_controls_enqueue_scripts', 'kelso_customizer_custom_css' );
 
+/**
+ * Enqueue editor styles for Gutenberg
+ */
+function kelso_gutenberg_editor_styles() {
+	wp_enqueue_style( 'kelso_gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style.css' );
+}
+add_action( 'enqueue_block_editor_assets', 'kelso_gutenberg_editor_styles' );
+
+
 
 if ( ! function_exists( 'kelso_setup' ) ) :
 	/**

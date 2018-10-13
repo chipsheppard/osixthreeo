@@ -10,7 +10,7 @@
 <section class="no-results not-found">
 
 	<header class="page-header">
-		<div class="title-wrap">
+		<div class="inner-wrap title-wrap">
 			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'kelso' ); ?></h1>
 		</div>
 	</header>

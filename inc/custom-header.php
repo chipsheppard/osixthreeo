@@ -23,7 +23,11 @@ if ( ! function_exists( 'kelso_display_customheader' ) ) {
 	?>
 	<div class="custom-header">
 		<div class="custom-header-image"<?php kelso_customheader_image_url(); ?>>
-			<?php kelso_customheader_content(); ?>
+			<?php
+			if ( is_front_page() ) :
+				kelso_customheader_content();
+			endif;
+			?>
 		</div>
 	</div>
 	<?php
