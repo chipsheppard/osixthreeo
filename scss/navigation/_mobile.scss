@@ -12,6 +12,7 @@
 		padding-top: 0;
 		text-align: left;
 		min-width: 100%;
+		@include font-size(1.4);
 
 		.menu-wrap {
 			background-color: $color__darklight;
@@ -28,6 +29,7 @@
 		a {
 			border: 0;
 			color: #ffffff !important;
+			display: block;
 			overflow: hidden;
 			padding: 1.25em 1em 1em 1.5em;
 			position: relative;
@@ -66,10 +68,10 @@
 
 			&.accent {
 				margin-top: 1em;
-				margin-bottom: .25em;
 
 				a {
-					padding-bottom: 1em;
+					padding-bottom: .75em;
+					padding-left: 1.5em;
 				}
 			}
 

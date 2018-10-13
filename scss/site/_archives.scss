@@ -20,6 +20,10 @@
 		.hentry {
 			width: 48%;
 			margin: 0 1% 2em;
+
+			@include breakpoint(phone-h) {
+				width: 98%;
+			}
 		}
 	}
 

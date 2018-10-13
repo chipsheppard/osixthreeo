@@ -983,7 +983,7 @@ select {
   border: solid 2px #000000;
   border-radius: 100%;
   height: 12px;
-  margin: 1.175em 0 1.25em 1em;
+  margin: 1em 0 1.125em 1em;
   padding: 0;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -1052,7 +1052,7 @@ select {
 
 .site-navigation.nav-search-active li.search-icon .theicon {
   padding: 0;
-  margin: 1em 0 .5em .75em;
+  margin: .875em 0 .688em .75em;
   width: 24px;
   height: 24px;
   border: 0;
@@ -1165,8 +1165,6 @@ a.line:hover:before, a.line:focus:before, a.line:active:before {
   text-align: right;
   vertical-align: middle;
   z-index: 2;
-  font-size: 14px;
-  font-size: 1.4rem;
   /* SUB MENU -------------------- */
 }
 
@@ -1179,8 +1177,7 @@ a.line:hover:before, a.line:focus:before, a.line:active:before {
   color: #222222;
   display: inline-block;
   letter-spacing: 1px;
-  padding: 1.25em .125em 1em .125em;
-  text-transform: uppercase;
+  padding: .938em .125em;
 }
 
 .site-navigation a:hover,
@@ -1216,11 +1213,15 @@ a.line:hover:before, a.line:focus:before, a.line:active:before {
 
 .site-navigation li.accent {
   border: 1px solid #ff8c00;
-  margin-left: .5em;
 }
 
 .site-navigation li.accent a {
-  padding-bottom: 1.125em;
+  padding: .938em .5em;
+  border-color: transparent;
+}
+
+.site-navigation li.accent a:hover {
+  border-color: transparent;
 }
 
 .site-navigation .sub-menu {
@@ -1492,6 +1493,8 @@ button.dropdown-toggle.toggled-on:after {
     padding-top: 0;
     text-align: left;
     min-width: 100%;
+    font-size: 14px;
+    font-size: 1.4rem;
     /* SUB MENU -------------------- */
   }
   .site-navigation .menu-wrap {
@@ -1507,6 +1510,7 @@ button.dropdown-toggle.toggled-on:after {
   .site-navigation a {
     border: 0;
     color: #ffffff !important;
+    display: block;
     overflow: hidden;
     padding: 1.25em 1em 1em 1.5em;
     position: relative;
@@ -1540,10 +1544,10 @@ button.dropdown-toggle.toggled-on:after {
   }
   .site-navigation li.accent {
     margin-top: 1em;
-    margin-bottom: .25em;
   }
   .site-navigation li.accent a {
-    padding-bottom: 1em;
+    padding-bottom: .75em;
+    padding-left: 1.5em;
   }
   .site-navigation li li {
     display: block;
@@ -3393,6 +3397,13 @@ body.admin-bar.error404 .page-header {
 .archive .do-masonry .hentry {
   width: 48%;
   margin: 0 1% 2em;
+}
+
+@media all and (max-width: 500px) {
+  .blog .do-masonry .hentry,
+  .archive .do-masonry .hentry {
+    width: 98%;
+  }
 }
 
 .blog .wp-post-image,

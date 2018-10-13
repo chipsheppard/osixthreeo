@@ -9,7 +9,6 @@
 	text-align: right;
 	vertical-align: middle;
 	z-index: 2;
-	@include font-size(1.4);
 
 	.menu-wrap {
 		position: relative;
@@ -20,8 +19,7 @@
 		color: #222222;
 		display: inline-block;
 		letter-spacing: 1px;
-		padding: 1.25em .125em 1em .125em;
-		text-transform: uppercase;
+		padding: .938em .125em;
 	}
 
 	a:hover,
@@ -57,10 +55,14 @@
 
 		&.accent {
 			border: 1px solid $color__secondary;
-			margin-left: .5em;
 
 			a {
-				padding-bottom: 1.125em;
+				padding: .938em .5em;
+				border-color: transparent;
+
+				&:hover {
+					border-color: transparent;
+				}
 			}
 		}
 	}
