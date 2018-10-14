@@ -4054,52 +4054,37 @@ body.has-site-logo .site-description {
 --------------------------------------------- */
 .woocommerce-products-header {
   color: #ffffff;
-  height: 350px;
+  height: 360px;
   position: absolute;
-  top: 50px;
-  width: calc(100% - 80px);
-}
-
-@media all and (max-width: 820px) {
-  .woocommerce-products-header {
-    width: 82%;
-  }
+  top: 0;
+  width: 100%;
 }
 
 @media all and (max-width: 500px) {
   .woocommerce-products-header {
-    height: 180px;
-    width: 88%;
+    height: 270px;
   }
 }
 
 .woocommerce-products-header .page-title {
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  bottom: 10%;
+  padding-left: 0;
+  padding-right: 80px;
 }
 
 .product_title.entry-title {
   color: #ffffff;
-  height: 180px;
+  height: 160px;
   margin: 0;
   position: absolute;
-  top: 205px;
-  width: 70%;
-}
-
-@media all and (max-width: 820px) {
-  .product_title.entry-title {
-    width: 82%;
-  }
+  top: 200px;
+  width: 100%;
 }
 
 @media all and (max-width: 500px) {
   .product_title.entry-title {
-    height: 100px;
-    top: 120px;
-    width: 88%;
+    height: 270px;
   }
 }
 

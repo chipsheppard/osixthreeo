@@ -1,44 +1,36 @@
 /* Woo Commerce
 --------------------------------------------- */
+// Shop page title
 .woocommerce-products-header {
 	color: #ffffff;
-	height: 350px;
-	//left: 40px;
+	height: 360px;
 	position: absolute;
-	top: 50px;
-	width: calc(100% - 80px);
+	top: 0;
+	width: 100%;
 
-	@include breakpoint(tablet-v) {
-		width: 82%;
-	}
 	@include breakpoint(phone-h) {
-		height: 180px;
-		width: 88%;
+		height: 270px;
 	}
 
 	.page-title {
 		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-		//bottom: -1px;
+		bottom: 10%;
+		padding-left: 0;
+		padding-right: 80px
 	}
 }
 
+// Product page titles
 .product_title.entry-title {
 	color: #ffffff;
-	height: 180px;
+	height: 160px;
 	margin: 0;
 	position: absolute;
-	top: 205px;
-	width: 70%;
+	top: 200px;
+	width: 100%;
 
-	@include breakpoint(tablet-v) {
-		width: 82%;
-	}
 	@include breakpoint(phone-h) {
-		height: 100px;
-		top: 120px;
-		width: 88%;
+		height: 270px;
 	}
 }
 
