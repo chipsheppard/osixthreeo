@@ -5,7 +5,7 @@ Widgets
 .sidebar-widget {
 	padding-bottom: 1em;
 	margin-bottom: 1em;
-	@include font-size(1.5);
+	@include font-size(.9375);
 
 	&:last-of-type {
 		border: none;

@@ -8,7 +8,7 @@
 #bbpress-forums,
 #bbpress-forums .bbp-topic-content,
 #bbpress-forums .bbp-reply-content {
-    font-size: 16px;
+    @include font-size(1);
 }
 
 #bbpress-forums p.bbp-topic-meta img.avatar,
@@ -31,7 +31,6 @@
 	color:  #ffffff;
 	cursor: pointer;
 	display: inline-block;
-	font-family: $font__headers;
 	font-weight: $font__weight-semibold;
 	line-height: normal;
 	margin-bottom: 1em;

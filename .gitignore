@@ -1,4 +1,5 @@
 *.DS_Store
 *config.codekit3
 php_errorlog
+php_errorlog.txt
 *_archive

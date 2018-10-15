@@ -1,0 +1,37 @@
+/* Fonts
+--------------------------------------------- */
+body,
+button,
+input,
+select,
+textarea {
+	font-family: $font__main;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: $font__headers;
+}
+blockquote {
+	font-family: $font__blockquotes;
+}
+.btn,
+.wp-block-button .wp-block-button__link {
+	font-family: $font__buttons;
+}
+.site-navigation {
+	font-family: $font__menus;
+}
+.site-title {
+	font-family: $font__site-title;
+	font-weight: $font__weight-bold;
+}
+.hero-primary {
+	font-family: $font__heroprimary;
+	font-weight: $font__weight-bold;
+}
+.hero-secondary {
+	font-family: $font__herosecondary;
+}
+.entry-title,
+.page-title {
+	font-family: $font__page-titles;
+}

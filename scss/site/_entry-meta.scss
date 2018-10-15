@@ -5,7 +5,7 @@
 .entry-meta {
 	color: $color__base-light;
 	margin: 0;
-	@include font-size(1.2);
+	@include font-size(.75);
 
 	.posted-on,
 	.updated-on,
@@ -16,8 +16,6 @@
 
 		a {
 			color: $color__base-medium;
-			font-family: $font__headers;
-			font-style: normal;
 
 			&:hover {
 				color: $color__base-light;

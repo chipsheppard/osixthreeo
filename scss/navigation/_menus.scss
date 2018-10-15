@@ -4,7 +4,6 @@
 
 .site-navigation {
 	display: table-cell;
-	font-family: $font__menus;
 	min-width: 520px;
 	text-align: right;
 	vertical-align: middle;
@@ -19,7 +18,7 @@
 		color: #222222;
 		display: inline-block;
 		letter-spacing: 1px;
-		padding: .938em .125em;
+		padding: .9375em .125em;
 	}
 
 	a:hover,
@@ -57,7 +56,7 @@
 			border: 1px solid $color__secondary;
 
 			a {
-				padding: .938em .5em;
+				padding: .9375em .5em;
 				border-color: transparent;
 
 				&:hover {
@@ -90,7 +89,7 @@
 			text-transform: none;
 			transition: all .2s ease-in-out;
 			width: 190px;
-			@include font-size(1.2);
+			@include font-size(.75);
 		}
 
 		a:hover,

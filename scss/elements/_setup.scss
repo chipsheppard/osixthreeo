@@ -4,7 +4,7 @@
 
 html {
 	box-sizing: border-box;
-	font-size: 62.5%;
+	font-size: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
 }
@@ -42,10 +42,9 @@ input,
 select,
 textarea {
 	color: $color__base;
-	font-family: $font__main;
 	font-weight: $font__weight-normal;
 	line-height: $font__line-height-body;
-	@include font-size(1.6);
+	@include font-size(1);
 }
 
 /* Copy */
@@ -66,12 +65,12 @@ pre {
 	max-width: 100%;
 	overflow: auto;
 	padding: 1.6em;
-	@include font-size(1.5);
+	@include font-size(.9375);
 }
 
 code, kbd, tt, var {
 	font-family: $font__code;
-	@include font-size(1.5);
+	@include font-size(.9375);
 }
 
 abbr, acronym {

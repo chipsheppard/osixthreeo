@@ -12,7 +12,7 @@
 	letter-spacing: 1px;
 	padding: 2em 0 .5em;
 	position: relative;
-	@include font-size(1.4);
+	@include font-size(.875);
 
 	a {
 		color: $color__base-medium;

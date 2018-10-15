@@ -10,16 +10,19 @@ $color__secondary: #ff8c00; // aka DarkOrange
 $color__darklight: #222222;
 
 // Typography
-$font__main: "Source Sans Pro", Helvetica, Arial, sans-serif;
-$font__headers: $font__main;
-
 $font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font__pre: "Courier 10 Pitch", Courier, monospace;
-
 $font__serif: "Times New Roman", serif;
 
-$font__site-title: $font__headers;
+$font__main: "Source Sans Pro", Helvetica, Arial, sans-serif;
+$font__headers: $font__main;
+$font__site-title: $font__main;
 $font__menus: $font__main;
+$font__buttons: $font__main;
+$font__blockquotes: $font__main;
+$font__heroprimary: $font__main;
+$font__herosecondary: $font__main;
+$font__page-titles: $font__main;
 
 $font__weight-normal: 400;
 $font__weight-semibold: 600;

@@ -13,7 +13,6 @@ q:after {
 blockquote {
 	background: #ffffff;
 	box-shadow: 0px 0px 8px $color__base-xlight;
-	font-family: $font__headers;
 	margin: 0 1.5em 1.5em 0;
 	padding: 1.5em 1.875em 1.5em 3.5em;
 	position: relative;
@@ -36,7 +35,7 @@ blockquote {
 		position: relative;
 		top: -.4em;
 		left: -.625em;
-		@include font-size(6);
+		@include font-size(3.75);
 
 		@include breakpoint(phone-h) {
 			left: -.5em;
@@ -50,7 +49,7 @@ blockquote {
 		line-height:1.25;
 		margin-top: .5em;
 		text-transform: uppercase;
-		@include font-size(1.4);
+		@include font-size(.875);
 
 		&:before {
 			content: '';
@@ -63,7 +62,7 @@ blockquote {
 
 		span {
 			font-weight: $font__weight-normal;
-			@include font-size(1.2);
+			@include font-size(.75);
 		}
 	}
 

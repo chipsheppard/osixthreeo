@@ -3,7 +3,6 @@
  ------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: $font__headers;
 	line-height: 1.2;
     margin: 0 0 3%;
 
@@ -17,25 +16,25 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
-h1 {@include font-size(4.2);}
-h2 {@include font-size(3.2);}
-h3 {@include font-size(2.8);}
-h4 {@include font-size(2.4);}
-h5 {@include font-size(2.2);}
-h6 {@include font-size(1.8);}
+h1 {@include font-size(2.625);}
+h2 {@include font-size(2);}
+h3 {@include font-size(1.75);}
+h4 {@include font-size(1.5);}
+h5 {@include font-size(1.375);}
+h6 {@include font-size(1.125);}
 
 @include breakpoint(tablet-v) {
-	h1 {@include font-size(4);}
-	h2 {@include font-size(3);}
-	h3 {@include font-size(2.4);}
-	h4 {@include font-size(2);}
-	h5 {@include font-size(1.8);}
-	h6 {@include font-size(1.4);}
+	h1 {@include font-size(2.5);}
+	h2 {@include font-size(1.875);}
+	h3 {@include font-size(1.5);}
+	h4 {@include font-size(1.25);}
+	h5 {@include font-size(1.125);}
+	h6 {@include font-size(.875);}
 }
 
 @include breakpoint(phone-h) {
-	h1 {@include font-size(3.2);}
-	h2 {@include font-size(2.4);}
-	h3 {@include font-size(2);}
-	h4 {@include font-size(1.8);}
+	h1 {@include font-size(2);}
+	h2 {@include font-size(1.5);}
+	h3 {@include font-size(1.25);}
+	h4 {@include font-size(1.125);}
 }

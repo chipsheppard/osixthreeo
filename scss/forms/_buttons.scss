@@ -8,8 +8,6 @@ input[type="submit"] {
 	border: 0;
 	border-radius: 6px;
 	cursor: pointer;
-	font-family: $font__headers;
-	font-weight: $font__weight-semibold;
 	line-height: normal;
 	padding: 1.125em 1em 1em;
 	position: relative;
@@ -23,12 +21,10 @@ input[type="submit"] {
 	}
 }
 
-button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button) {
+button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button) {
 	background-color: $color__highlight;
 	border-radius: 6px;
 	color:  #ffffff;
-	font-family: $font__headers;
-	font-weight: $font__weight-semibold;
 	line-height: normal;
 	padding: .625em 1em .75em;
 	position: relative;
@@ -66,8 +62,6 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
 	border-radius: 6px;
 	color:  #ffffff;
 	cursor: pointer;
-	font-family: $font__headers;
-	font-weight: $font__weight-semibold;
 	line-height: normal;
 	padding: 1em;
 	position: relative;

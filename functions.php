@@ -47,7 +47,7 @@ function kelso_scripts() {
 	if ( '' !== $kelso_settings['nav_search'] ) {
 		wp_enqueue_script( 'kelso-navigation-search', get_template_directory_uri() . '/assets/js/navsearch.js', array(), KELSO_VERSION, true );
 	}
-	if ( is_archive() && ! is_woocommerce() || is_home() ) {
+	if ( is_archive() && ! function_exists( 'is_woocommerce' ) || is_home() ) {
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'masonry-init-js', get_template_directory_uri() . '/assets/js/masonry-init.js', array( 'jquery', 'masonry' ), KELSO_VERSION, true );
 	}

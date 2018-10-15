@@ -5,7 +5,7 @@
 	padding: 1.5em 0;
 
 	.comments-title {
-		@include font-size(3);
+		@include font-size(1.875);
 	}
 }
 
@@ -37,7 +37,7 @@
 	}
 
 	.comment-reply-title {
-		@include font-size(2.5);
+		@include font-size(1.5);
 		margin-bottom: .5em;
 
 		small {
@@ -49,7 +49,7 @@
 		padding: .5em 0 .5em .75em;
 		position: relative;
 		width: auto;
-		@include font-size(1.4);
+		@include font-size(.875);
 
 		&:hover {
 			background-color: $color__base-xxlight;
@@ -85,7 +85,7 @@
 
 	@include breakpoint(tablet-v) {
 		padding: 16px;
-		@include font-size(1.4);
+		@include font-size(.875);
 	}
 	@include breakpoint(phone-v) {
 		padding: 12px;

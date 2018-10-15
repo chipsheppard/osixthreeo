@@ -45,7 +45,7 @@
 	figcaption {
 	    margin-top: .5em;
 	    color: $color__base-medium;
-	    @include font-size(1.4);
+	    @include font-size(.875);
 	}
 
 	&.aligncenter {
@@ -164,7 +164,6 @@
 	    box-shadow: none;
 	    cursor: pointer;
 	    display: inline-block;
-		font-family: $font__headers;
 		font-weight: $font__weight-semibold;
 		position: relative;
 		white-space: normal;
