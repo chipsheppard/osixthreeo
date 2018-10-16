@@ -39,7 +39,7 @@ function kelso_default_loop() {
 		<?php endif; ?>
 
 		<?php
-		if ( is_archive() && ! is_woocommerce() || is_home() ) {
+		if ( is_archive() && ! function_exists( 'is_woocommerce' ) || is_home() ) {
 			$m = ' do-masonry';
 		} else {
 			$m = null;

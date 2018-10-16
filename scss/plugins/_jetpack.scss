@@ -5,18 +5,6 @@ img#wpstats {
 	display:none;
 }
 
-// ?????? is this needed anymore ????? Remove text site-title when Jetpack site-logo is used.
-body.has-site-logo .site-title,
-body.has-site-logo .site-description {
-	display:none !important;
-}
-
-@include breakpoint(phone-h) {
-	body.has-site-logo .site-logo {
-		width:75%;
-	}
-}
-
 .jetpack-testimonial-shortcode {
 	.testimonial-entry {
 		border-bottom: 1px solid $color__base-light;

@@ -12,7 +12,6 @@ input[type="submit"] {
 	padding: 1.125em 1em 1em;
 	position: relative;
 	white-space: normal;
-	width: auto;
 	z-index: 1;
 
 	&:hover {
@@ -21,7 +20,7 @@ input[type="submit"] {
 	}
 }
 
-button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button) {
+button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button) {
 	background-color: $color__highlight;
 	border-radius: 6px;
 	color:  #ffffff;

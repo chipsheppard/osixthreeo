@@ -82,3 +82,13 @@ img.flex {
 .text-black {
 	color: #000000;
 }
+
+/*
+ * For contact form astiriks
+--------------------------------------------- */
+.required {
+	color:#c00;
+	position: relative;
+	top: 6px;
+	@include font-size(1.5);
+}

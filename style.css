@@ -757,7 +757,6 @@ input[type="submit"] {
   padding: 1.125em 1em 1em;
   position: relative;
   white-space: normal;
-  width: auto;
   z-index: 1;
 }
 
@@ -768,7 +767,7 @@ input[type="submit"]:hover {
   background-color: #ff8c00;
 }
 
-button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button) {
+button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button) {
   background-color: #1e90ff;
   border-radius: 6px;
   color: #ffffff;
@@ -779,7 +778,7 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
   white-space: normal;
 }
 
-button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):after {
+button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button):after {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   content: '';
@@ -793,12 +792,12 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
   transition: all 0.2s ease-in-out;
 }
 
-button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):hover:after {
+button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button):hover:after {
   height: 100%;
   opacity: 1;
 }
 
-button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):focus, button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):active {
+button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button):focus, button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button):active {
   outline: 0;
   border-color: transparent;
 }
@@ -896,7 +895,21 @@ input[type="search"]::-webkit-search-results-button {
 
 /* Form Fields
 --------------------------------------------- */
-input,
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
 textarea {
   background-color: #ffffff;
   border: 1px solid #dcdcdc;
@@ -905,7 +918,21 @@ textarea {
   -webkit-appearance: none;
 }
 
-input:focus,
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
 textarea:focus {
   border: 1px solid #c0c0c0;
   outline: none;
@@ -950,7 +977,7 @@ select {
   border-radius: 0;
   color: #666666;
   display: inline-block;
-  padding: .375em .75em .75em;
+  padding: .313em .75em .688em;
   position: absolute;
   right: 0;
   top: 0;
@@ -2460,6 +2487,17 @@ img.flex {
   color: #000000;
 }
 
+/*
+ * For contact form astiriks
+--------------------------------------------- */
+.required {
+  color: #c00;
+  position: relative;
+  top: 6px;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -3815,7 +3853,7 @@ Widgets
   font-weight: 400;
   line-height: 1;
   margin: 0 0 .5em 0;
-  padding: .625em .5em;
+  padding: .625em .25em;
 }
 
 .sidebar-widget select {
@@ -4026,17 +4064,6 @@ img#wpstats {
   display: none;
 }
 
-body.has-site-logo .site-title,
-body.has-site-logo .site-description {
-  display: none !important;
-}
-
-@media all and (max-width: 500px) {
-  body.has-site-logo .site-logo {
-    width: 75%;
-  }
-}
-
 .jetpack-testimonial-shortcode .testimonial-entry {
   border-bottom: 1px solid #c0c0c0;
   padding: 0 1em 1em;
@@ -4198,123 +4225,4 @@ body.has-site-logo .site-description {
 .subscription-toggle:hover:after {
   height: 100%;
   opacity: 1;
-}
-
-/*
- * Contact Form 7
---------------------------------------------- */
-.wpcf7-form label {
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.wpcf7-form .required {
-  color: #c00;
-  font-size: 24px;
-  font-size: 1.5rem;
-}
-
-.wpcf7-form .cap-letters {
-  float: left;
-  margin-right: 1.25em;
-  padding-top: .8125em;
-}
-
-.wpcf7-form .cap-input {
-  width: 180px;
-  color: black;
-  font-weight: 600;
-}
-
-.wpcf7-form .cform-submit {
-  float: right;
-  text-align: right;
-  margin-right: -0.9375em;
-}
-
-.wpcf7-form .cform-captcha {
-  float: left;
-  margin-bottom: 0.9375em;
-}
-
-/*
- * Gravity Forms
---------------------------------------------- */
-.gform_wrapper {
-  margin: 0 !important;
-}
-
-.gform_wrapper ul li.gfield {
-  margin-bottom: 1em;
-}
-
-.gform_wrapper .top_label .gfield_label {
-  margin-bottom: 0 !important;
-  font-weight: normal !important;
-}
-
-.gform_wrapper .gravity-name span label,
-.gform_wrapper .ginput_complex label,
-.gform_wrapper .gravity-address span label {
-  display: none !important;
-}
-
-.gform_confirmation_wrapper {
-  padding: 7em 0;
-  font-size: 24px;
-  font-size: 1.5rem;
-}
-
-.gform_wrapper li.gfield.gfield_error,
-.gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
-  background-color: transparent !important;
-  border-top: none !important;
-  border-bottom: none !important;
-}
-
-.gform_wrapper .gfield_description.validation_message {
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-.gform_wrapper li.gfield.gfield_error.gfield_contains_required div.ginput_container {
-  margin-left: 0 !important;
-}
-
-.footer-widgets .gform_wrapper .top_label .gfield_label,
-.footer-widgets .gform_wrapper .ginput_complex label,
-.footer-widgets .validation_error {
-  display: none;
-}
-
-.footer-widgets .gform_wrapper .gform_footer {
-  padding: 0;
-  margin: 0;
-}
-
-.footer-widgets input {
-  border: 0;
-  margin-bottom: 0;
-}
-
-.footer-widgets .gform_wrapper li.gfield.gfield_error {
-  background-color: transparent;
-  margin-bottom: 0;
-  padding: 0;
-  border-top: none;
-  border-bottom: none;
-}
-
-.footer-widgets .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
-  margin-top: 0;
-  padding-top: 0;
-}
-
-.footer-widgets .gform_wrapper .gfield_description.validation_message,
-.footer-widgets .gform_wrapper .top_label .gfield_description.validation_message {
-  padding: 0 !important;
-}
-
-.footer-widgets .gform_wrapper .validation_message {
-  color: #ff0000;
 }
