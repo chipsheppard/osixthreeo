@@ -22,7 +22,7 @@
 .inner-wrap {
 	max-width: $size__site-max;
 	margin: 0 auto;
-	padding: 0 40px;
+	padding: 0 2.5em;
 	width: $size__site-main;
 
 	@include breakpoint(tablet-h) {
@@ -31,6 +31,8 @@
 }
 .content-wrap {
 	background-color: #f5f5f5;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
 }
 .inner-wrap {
 	position: relative;
@@ -42,7 +44,7 @@
 
 .site-main {
 	background-color: #f3f3f3;
-	padding: 1em 4%;
+	padding: 1.5em 4%;
 	width: $size__site-main;
 }
 

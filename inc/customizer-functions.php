@@ -287,6 +287,10 @@ if ( ! function_exists( 'kelso_title_placement_class' ) ) {
 	 */
 	function kelso_title_placement_class() {
 
+		if ( is_front_page() ) {
+			return;
+		}
+
 		$kelso_settings = wp_parse_args(
 			get_option( 'kelso_settings', array() ),
 			kelso_get_defaults()

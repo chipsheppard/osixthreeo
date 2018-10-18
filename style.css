@@ -2526,7 +2526,7 @@ img.flex {
 .inner-wrap {
   max-width: 80em;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 2.5em;
   width: 100%;
 }
 
@@ -2539,6 +2539,8 @@ img.flex {
 
 .content-wrap {
   background-color: #f5f5f5;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
 }
 
 .inner-wrap {
@@ -2551,7 +2553,7 @@ img.flex {
 
 .site-main {
   background-color: #f3f3f3;
-  padding: 1em 4%;
+  padding: 1.5em 4%;
   width: 100%;
 }
 
@@ -3355,7 +3357,7 @@ body.admin-bar.error404 .titlelifted .page-header {
 
 .site-main.contentlifted {
   border-radius: 3px;
-  margin-top: -4em;
+  margin-top: -6em;
   position: relative;
 }
 
@@ -3472,7 +3474,6 @@ body.admin-bar.error404 .titlelifted .page-header {
 .blog .hentry img,
 .archive .hentry img {
   display: block;
-  width: 100%;
 }
 
 .blog .do-masonry .hentry,
@@ -3486,6 +3487,12 @@ body.admin-bar.error404 .titlelifted .page-header {
   .archive .do-masonry .hentry {
     width: 98%;
   }
+}
+
+.blog .do-masonry .hentry img,
+.archive .do-masonry .hentry img {
+  display: block;
+  width: 100%;
 }
 
 .blog .wp-post-image,
