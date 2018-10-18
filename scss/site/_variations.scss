@@ -1,0 +1,91 @@
+/* Title/Content Variations
+--------------------------------------------- */
+
+// TITLE ABOVE CONTENT IN HEADER
+body.page .titlelifted .entry-header,
+body.single .titlelifted .entry-header,
+body.blog .titlelifted .page-header,
+body.archive .titlelifted .page-header,
+body.search .titlelifted .page-header,
+body.error404 .titlelifted .page-header {
+	height: 360px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+
+	@include breakpoint(phone-h) {
+		height: 270px;
+	}
+
+	.inner-wrap {
+		max-width: $size__site-max;
+		margin: 0 auto;
+		padding: 0 40px;
+		width: $size__site-main;
+
+		@include breakpoint(tablet-h) {
+	 		padding: 0 5%;
+		}
+	}
+
+	.title-wrap {
+		position: absolute;
+		bottom: 10%;
+		padding-left: 0;
+		padding-right: 80px;
+	}
+}
+
+body.page .titlelifted .entry-title,
+body.single .titlelifted .entry-title,
+body.blog .titlelifted .page-title,
+body.archive .titlelifted .page-title,
+body.search .titlelifted .page-title,
+body.error404 .titlelifted .page-title {
+	color: #ffffff;
+	font-weight: $font__weight-semibold;
+	text-shadow: 0 0 8px rgba(0, 0, 0, .5);
+	line-height: 1;
+}
+
+body.admin-bar.page .titlelifted .entry-header,
+body.admin-bar.single .titlelifted .entry-header,
+body.admin-bar.blog .titlelifted .page-header,
+body.admin-bar.archive .titlelifted .page-header,
+body.admin-bar.search .titlelifted .page-header,
+body.admin-bar.error404 .titlelifted .page-header {
+	top: 32px;
+}
+
+.single .titlelifted .entry-meta {
+	letter-spacing: 1px;
+	text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
+
+	.posted-on,
+	.updated-on,
+	.byline {
+		color: #ffffff;
+	}
+
+	a {
+		color: #ffffff;
+
+		&:hover {
+			color: $color__base-light;
+		}
+	}
+}
+
+
+
+
+
+
+// TITLE UP INSIDE THE CUSTOM HEADER
+.site-main {
+	&.contentlifted {
+		border-radius: 3px;
+		margin-top: -4em;
+		position: relative;
+	}
+}

@@ -822,27 +822,6 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Back To Top.
-	$wp_customize->add_setting(
-		'kelso_settings[back_to_top]',
-		array(
-			'default' => $defaults['back_to_top'],
-			'type' => 'option',
-			'sanitize_callback' => 'kelso_sanitize_checkbox',
-		)
-	);
-	$wp_customize->add_control(
-		'kelso_settings[back_to_top]',
-		array(
-			'type' => 'checkbox',
-			'label' => __( 'Back to Top Button', 'kelso' ),
-			'description' => __( 'Add a button to the right side of the lower footer. Note: The lower footer widget must be activated.', 'kelso' ),
-			'section' => 'kelso_options_settings',
-			'settings' => 'kelso_settings[back_to_top]',
-			'priority' => 10,
-		)
-	);
-
 	// Append Search to Menu.
 	$wp_customize->add_setting(
 		'kelso_settings[nav_search]',
@@ -860,9 +839,80 @@ function kelso_customize_register( $wp_customize ) {
 			'description' => __( 'Append search functionality to the menu.', 'kelso' ),
 			'section' => 'kelso_options_settings',
 			'settings' => 'kelso_settings[nav_search]',
-			'priority' => 20,
+			'priority' => 10,
 		)
 	);
+
+	// Title Placement.
+	$wp_customize->add_setting(
+		'kelso_settings[title_placement]',
+		array(
+			'default' => $defaults['title_placement'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_choices',
+		)
+	);
+	$wp_customize->add_control(
+		new Customize_Radio_Image_Control(
+			$wp_customize,
+			'kelso_settings[title_placement]',
+			array(
+				'type' => 'select',
+				'label' => __( 'Page and Post Title Placement', 'kelso' ),
+				'section' => 'kelso_options_settings',
+				'choices' => array(
+					'normal' => __( 'titlenormal', 'kelso' ),
+					'titlelifted' => __( 'titlelifted', 'kelso' ),
+					'contentlifted' => __( 'contentlifted', 'kelso' ),
+				),
+				'settings' => 'kelso_settings[title_placement]',
+				'priority' => 20,
+			)
+		)
+	);
+
+	// Do Masonry.
+	$wp_customize->add_setting(
+		'kelso_settings[do_masonry]',
+		array(
+			'default' => $defaults['do_masonry'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'kelso_settings[do_masonry]',
+		array(
+			'type' => 'checkbox',
+			'label' => __( 'Masonry Layout', 'kelso' ),
+			'description' => __( 'Display post archives in "masonry" blocks layout.', 'kelso' ),
+			'section' => 'kelso_options_settings',
+			'settings' => 'kelso_settings[do_masonry]',
+			'priority' => 30,
+		)
+	);
+
+	// Back To Top.
+	$wp_customize->add_setting(
+		'kelso_settings[back_to_top]',
+		array(
+			'default' => $defaults['back_to_top'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_checkbox',
+		)
+	);
+	$wp_customize->add_control(
+		'kelso_settings[back_to_top]',
+		array(
+			'type' => 'checkbox',
+			'label' => __( 'Back to Top Button', 'kelso' ),
+			'description' => __( 'Add a button to the right side of the lower footer. Note: The lower footer widget must be activated.', 'kelso' ),
+			'section' => 'kelso_options_settings',
+			'settings' => 'kelso_settings[back_to_top]',
+			'priority' => 40,
+		)
+	);
+
 }
 
 

@@ -11,6 +11,10 @@ Widgets
 		border: none;
 	}
 
+	&.widget_search {
+		padding-top: .75em;
+	}
+
 	.widget-title {
 		border-bottom: 1px solid $color__base-light;
 		font-weight: $font__weight-normal;

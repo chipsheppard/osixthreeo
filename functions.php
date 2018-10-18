@@ -47,7 +47,7 @@ function kelso_scripts() {
 	if ( '' !== $kelso_settings['nav_search'] ) {
 		wp_enqueue_script( 'kelso-navigation-search', get_template_directory_uri() . '/assets/js/navsearch.js', array(), KELSO_VERSION, true );
 	}
-	if ( is_archive() && ! function_exists( 'is_woocommerce' ) || is_home() ) {
+	if ( is_archive() || is_home() && '' !== $kelso_settings['do_masonry'] ) {
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'masonry-init-js', get_template_directory_uri() . '/assets/js/masonry-init.js', array( 'jquery', 'masonry' ), KELSO_VERSION, true );
 	}
@@ -58,19 +58,6 @@ add_action( 'wp_enqueue_scripts', 'kelso_scripts' );
  * Theme Fonts URL
  */
 function kelso_theme_fonts_url() {
-	$font_families = apply_filters( 'kelso_theme_fonts', array( 'Source+Sans+Pro:400,400i,600,600i,700,700i' ) );
-	$query_args = array(
-		'family' => implode( '|', $font_families ),
-		'subset' => 'latin,latin-ext',
-	);
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
-	return esc_url_raw( $fonts_url );
-}
-
-/**
- * Enqueue script for custom customize control.
- */
-function kelso_customizer_custom_css() {
 	wp_enqueue_style( 'customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css' );
 }
 add_action( 'customize_controls_enqueue_scripts', 'kelso_customizer_custom_css' );

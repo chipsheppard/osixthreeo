@@ -32,7 +32,7 @@ get_sidebar( 'page' );
 <div id="primary" class="content-area">
 	<?php tha_content_wrap_before(); ?>
 
-	<main id="main" class="site-main cf" role="main">
+	<main id="main" class="site-main<?php kelso_title_placement_class(); ?>" role="main">
 		<?php
 		tha_content_top();
 		tha_content_loop();

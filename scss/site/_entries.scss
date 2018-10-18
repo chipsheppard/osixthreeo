@@ -6,7 +6,7 @@
 }
 
 .entry-title {
-	margin: 0 0 .25em;
+	margin: 0;
 }
 
 .page-title {
@@ -24,28 +24,13 @@ body.blog .page-header,
 body.archive .page-header,
 body.search .page-header,
 body.error404 .page-header {
-	color: #ffffff;
-	height: 360px;
-	position: absolute;
-	top: 0;
-	width: 100%;
 
-	@include breakpoint(phone-h) {
-		height: 270px;
-	}
-
-	.title-wrap {
-		position: absolute;
-		bottom: 10%;
-		padding-left: 0;
-		padding-right: 80px
+	.inner-wrap {
+		max-width: auto;
+		margin-bottom: 1.5em;
+		padding: 0;
 	}
 }
-
-.custom-header-image .inner-wrap {
-	height: 100%;
-}
-
 
 body.page .entry-title,
 body.single .entry-title,
@@ -53,17 +38,15 @@ body.blog .page-title,
 body.archive .page-title,
 body.search .page-title,
 body.error404 .page-title {
-	font-weight: $font__weight-semibold;
 	letter-spacing: 1px;
 	padding: 0;
 	word-break: break-word;
-	text-shadow: 0 0 8px rgba(0, 0, 0, .5);
-	line-height: 1;
 
 	@include breakpoint(phone-h) {
 		@include font-size(1.875);
 	}
 }
+
 .home:not(.blog) .entry-header {
 	display: none;
 }
@@ -100,6 +83,7 @@ body.error404 .page-title {
 	dd {
 		margin: 0 1em 1em;
 	}
+
 }
 
 .single {
@@ -109,13 +93,4 @@ body.error404 .page-title {
 	.entry-content {
 		margin-bottom: 2em;
 	}
-}
-
-body.admin-bar.page .entry-header,
-body.admin-bar.single .entry-header,
-body.admin-bar.blog .page-header,
-body.admin-bar.archive .page-header,
-body.admin-bar.search .page-header,
-body.admin-bar.error404 .page-header {
-	top: 32px;
 }

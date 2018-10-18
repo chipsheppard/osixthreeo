@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for single.php & archive.php.
+ * Template part for the content area.
  *
  * @package kelso
  */

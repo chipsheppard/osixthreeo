@@ -48,17 +48,20 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'search_layout_setting' => 'layout-ns',
 			'archive_layout_setting' => 'layout-ns',
 
-			'back_to_top' => '',
-			'nav_search' => '',
-
 			'header_bg_color_left' => '#5000aa',
-			'header_bg_color_right' => '#bb0005',
+			'header_bg_color_right' => '#aa0005',
 
 			'home_header_height' => '',
 			'hero_text_primary' => '',
 			'hero_text_secondary' => '',
 			'hero_text_primary_color' => '#ffffff',
 			'hero_text_secondary_color' => '#ffffff',
+
+			'nav_search' => '',
+			//'title_color' => '#222222',
+			'title_placement' => '',
+			'do_masonry' => '',
+			'back_to_top' => '',
 		);
 
 		return apply_filters( 'kelso_option_defaults', $kelso_defaults );

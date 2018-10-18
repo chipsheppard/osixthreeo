@@ -2,7 +2,7 @@
 /**
  * Loop
  *
- * @package      kelso
+ * @package kelso
  **/
 
 /**
@@ -38,14 +38,7 @@ function kelso_default_loop() {
 		</header>
 		<?php endif; ?>
 
-		<?php
-		if ( is_archive() && ! function_exists( 'is_woocommerce' ) || is_home() ) {
-			$m = ' do-masonry';
-		} else {
-			$m = null;
-		}
-		?>
-		<div class="loop-wrap<?php echo esc_attr( $m ); ?>">
+		<div class="loop-wrap<?php kelso_masonry_class(); ?>">
 
 			<?php
 			tha_content_while_before();

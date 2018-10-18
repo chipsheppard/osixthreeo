@@ -4,7 +4,7 @@
 
 .custom-header {
 	background: #5000aa;
-	background: linear-gradient(90deg, #5000aa 0%, #bb0005 100%);
+	background: linear-gradient(90deg, #5000aa 0%, #aa0005 100%);
 	position: absolute;
 	top: 0;
 	width: 100%;
@@ -24,6 +24,10 @@
 		background-repeat: no-repeat;
 		background-position: center 50%;
 		background-size: cover;
+
+		.inner-wrap {
+			height: 100%;
+		}
 	}
 
 	.custom-header-media {

@@ -65,7 +65,9 @@ function kelso_theme_wrapper_start() {
 	kelso_get_left_sidebar();
 	echo '<div id="primary" class="content-area">';
 	tha_content_wrap_before();
-	echo '<main id="main" class="site-main cf" role="main">';
+	echo '<main id="main" class="site-main';
+	kelso_title_placement_class();
+	echo '" role="main">';
 	tha_content_top();
 }
 

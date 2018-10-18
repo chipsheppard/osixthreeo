@@ -1,7 +1,13 @@
 /* Woo Commerce
 --------------------------------------------- */
 // Shop page title
-.woocommerce-products-header {
+
+.woocommerce-products-header,
+.product_title.entry-title {
+	margin-bottom: 1.5rem;
+}
+
+.titleabove .woocommerce-products-header {
 	color: #ffffff;
 	height: 360px;
 	position: absolute;
@@ -21,7 +27,7 @@
 }
 
 // Product page titles
-.product_title.entry-title {
+.titleabove .product_title.entry-title {
 	color: #ffffff;
 	height: 160px;
 	margin: 0;
@@ -38,7 +44,6 @@
 	border-top: 1px solid $color__base-xlight;
 	border-bottom: 1px solid $color__base-xlight;
 	padding: .75em 0 .625em;
-	margin-bottom: 1.5em;
 }
 
 /*

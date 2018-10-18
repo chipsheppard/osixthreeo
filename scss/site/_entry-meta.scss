@@ -1,10 +1,9 @@
 /*
-* ENTRY META ----------
-*/
+ * ENTRY META
+-------------------------------------------*/
 
 .entry-meta {
 	color: $color__base-light;
-	margin: 0;
 	@include font-size(.75);
 
 	.posted-on,
@@ -36,25 +35,6 @@
 			&:hover {
 				color: $color__base-light;
 			}
-		}
-	}
-}
-
-.single .entry-meta {
-	letter-spacing: 1px;
-	text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
-
-	.posted-on,
-	.updated-on,
-	.byline {
-		color: #ffffff;
-	}
-
-	a {
-		color: #ffffff;
-
-		&:hover {
-			color: $color__base-light;
 		}
 	}
 }

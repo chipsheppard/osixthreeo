@@ -2,22 +2,20 @@
  * Containers
 --------------------------------------------- */
 
+.contained {
+	max-width: $size__site-max;
+	margin: 0 auto;
+}
+
 .site-content {
 	clear: both;
 
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
+		padding-top: 1em;
 		width: $size__site-sidebar;
 	}
-}
-
-.content-area {
-	width: $size__site-main;
-}
-
-.site-main {
-	width: $size__site-main;
 }
 
 .content-wrap,
@@ -31,20 +29,24 @@
  		padding: 0 5%;
 	}
 }
+.content-wrap {
+	background-color: #f5f5f5;
+}
 .inner-wrap {
 	position: relative;
 }
-.content-wrap {
-	background-color: #f5f5f5;
-	padding-top: 3em;
-	padding-bottom: 1.5em;
+
+.content-area {
+	width: $size__site-main;
 }
 
-.contained {
-	max-width: $size__site-max;
-	margin: 0 auto;
+.site-main {
+	background-color: #f3f3f3;
+	padding: 1em 4%;
+	width: $size__site-main;
 }
 
+// No Sidebar Silo ------------------------------
 .nosidebar-silo .content-wrap {
 	padding-left: 15%;
 	padding-right: 15%;
@@ -59,7 +61,6 @@
 	}
 }
 
-
 // Sidebar Content ------------------------------
 .sidebar-left {
 
@@ -69,9 +70,8 @@
 	}
 
 	.site-main {
-		//border-left: 1px solid $color__base-xlight;
-		margin-bottom: 3em;
-		padding-left: 5%;
+		//margin-bottom: 3em;
+		//padding-left: 5%;
 	}
 
 	.site-content .widget-area {
@@ -96,8 +96,8 @@
 		width: $size__site-content;
 	}
 	.site-main {
-		padding-right: 5%;
-		margin-bottom: 3em;
+		//padding-right: 5%;
+		//margin-bottom: 3em;
 	}
 
 	.site-content .widget-area {
@@ -113,7 +113,6 @@
 	}
 }
 
-
 // Stack 'em up for Vertical iPads and smaller
 @include breakpoint(tablet-v) {
 	.content-area,
@@ -123,7 +122,7 @@
 	.sidebar-right .site-main,
 	.sidebar-right .site-content .widget-area,
 	.sidebar-left .content-area,
-	.sidebar-left .site-main,
+	//.sidebar-left .site-main,
 	.sidebar-left .site-content .widget-area {
 		display: block;
 		float: none;

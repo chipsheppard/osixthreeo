@@ -278,6 +278,58 @@ if ( ! function_exists( 'kelso_home_header_height' ) ) {
 }
 
 /*
+ * TITLE PLACEMENT
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_title_placement_class' ) ) {
+	/**
+	 * Adds custom class to section containers.
+	 */
+	function kelso_title_placement_class() {
+
+		$kelso_settings = wp_parse_args(
+			get_option( 'kelso_settings', array() ),
+			kelso_get_defaults()
+		);
+
+		$title_placement = $kelso_settings['title_placement'];
+
+		if ( 'titlelifted' === $title_placement ) {
+			$title_placement_class = ' titlelifted';
+		} elseif ( 'contentlifted' === $title_placement ) {
+			$title_placement_class = ' contentlifted';
+		} else {
+			return;
+		}
+
+		echo esc_html( $title_placement_class );
+	}
+}
+
+/*
+ * DO MASONRY
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_masonry_class' ) ) {
+	/**
+	 * Adds custom class to section containers.
+	 */
+	function kelso_masonry_class() {
+
+		$kelso_settings = wp_parse_args(
+			get_option( 'kelso_settings', array() ),
+			kelso_get_defaults()
+		);
+
+		if ( ! is_archive() && ! is_home() || ! $kelso_settings['do_masonry'] ) {
+			return;
+		}
+
+		echo ' do-masonry';
+	}
+}
+
+/*
  * BACK TO TOP
  -----------------------------------------------------------------
  */
