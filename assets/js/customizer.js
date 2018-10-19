@@ -125,6 +125,21 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		}
 	);
 
+	// Content Inner Background Coor
+	kelso_colors_live_update(
+		'content_inner_background_color',
+		'.site-main',
+		'background-color',
+		'rgba(0,0,0,0)'
+	);
+
+	// Post/Page Title Color
+	kelso_colors_live_update(
+		'content_title_color',
+		'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.single .entry-meta a,.single .entry-meta .posted-on,.single .entry-meta .updated-on,.single .entry-meta .byline,.woocommerce-products-header,.product_title.entry-title,body.page .titlelifted .entry-title,body.single .titlelifted .entry-title,body.blog .titlelifted .page-title,body.archive .titlelifted .page-title,body.search .titlelifted .page-title,body.error404 .titlelifted .page-title,.single .titlelifted .entry-meta a,.single .titlelifted .entry-meta .posted-on,.single .titlelifted .entry-meta .updated-on,.single .titlelifted .entry-meta .byline,.titlelifted .woocommerce-products-header,.titlelifted .product_title.entry-title',
+		'color',
+		'#222222'
+	);
 
 	// FOOTERWIDGETS ----------------------------------- .
 	// Background

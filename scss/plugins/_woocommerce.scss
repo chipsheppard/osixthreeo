@@ -7,7 +7,7 @@
 	margin-bottom: 1.5rem;
 }
 
-.titleabove .woocommerce-products-header {
+.titlelifted .woocommerce-products-header {
 	color: #ffffff;
 	height: 360px;
 	position: absolute;
@@ -27,16 +27,17 @@
 }
 
 // Product page titles
-.titleabove .product_title.entry-title {
+.titlelifted .product_title.entry-title {
 	color: #ffffff;
 	height: 160px;
 	margin: 0;
 	position: absolute;
-	top: 200px;
+	top: 280px;
 	width: 100%;
 
 	@include breakpoint(phone-h) {
 		height: 270px;
+		top: 200px;
 	}
 }
 

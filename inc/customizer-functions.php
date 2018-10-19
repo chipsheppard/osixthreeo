@@ -296,7 +296,7 @@ if ( ! function_exists( 'kelso_title_placement_class' ) ) {
 			kelso_get_defaults()
 		);
 
-		$title_placement = $kelso_settings['title_placement'];
+		$title_placement = $kelso_settings['content_title_placement'];
 
 		if ( 'titlelifted' === $title_placement ) {
 			$title_placement_class = ' titlelifted';

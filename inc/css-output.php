@@ -56,6 +56,11 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		$default_hero_text_primary_color = $defaults['hero_text_primary_color'];
 		$default_hero_text_secondary_color = $defaults['hero_text_secondary_color'];
 
+		$content_inner_bg_color = $kelso_settings['content_inner_background_color'];
+		$default_content_inner_bg_color = $defaults['content_inner_background_color'];
+		$content_title_color = $kelso_settings['content_title_color'];
+		$default_content_title_color = $defaults['content_title_color'];
+
 		$footerwidgets_bg_color = $kelso_settings['footerwidgets_background_color'];
 		$footerwidgets_widget_title_color = $kelso_settings['footerwidgets_widget_title_color'];
 		$footerwidgets_text_color = $kelso_settings['footerwidgets_text_color'];
@@ -228,6 +233,18 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		if ( $default_hero_text_secondary_color !== $hero_text_secondary_color ) :
 			$css->set_selector( '.hero-secondary' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['hero_text_secondary_color'] ) );
+		endif;
+
+		/*
+		 * Content Area --------------------------------
+		 */
+		if ( $default_content_inner_bg_color !== $content_inner_bg_color ) :
+			$css->set_selector( '.site-main' );
+			$css->add_property( 'background-color', esc_attr( $kelso_settings['content_inner_background_color'] ) );
+		endif;
+		if ( $default_content_title_color !== $content_title_color ) :
+			$css->set_selector( 'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.single .entry-meta a,.single .entry-meta .posted-on,.single .entry-meta .updated-on,.single .entry-meta .byline,.woocommerce-products-header,.product_title.entry-title,body.page .titlelifted .entry-title,body.single .titlelifted .entry-title,body.blog .titlelifted .page-title,body.archive .titlelifted .page-title,body.search .titlelifted .page-title,body.error404 .titlelifted .page-title,.single .titlelifted .entry-meta a,.single .titlelifted .entry-meta .posted-on,.single .titlelifted .entry-meta .updated-on,.single .titlelifted .entry-meta .byline,.titlelifted .woocommerce-products-header,.titlelifted .product_title.entry-title' );
+			$css->add_property( 'color', esc_attr( $kelso_settings['content_title_color'] ) );
 		endif;
 
 		/*

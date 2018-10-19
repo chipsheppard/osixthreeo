@@ -131,7 +131,7 @@ function kelso_customize_register( $wp_customize ) {
 	 * STICKY HEADER -----------------------
 	 */
 
-	 // Colors Sticky Background.
+	 // Sticky Header Background.
 	$wp_customize->add_setting(
 		'kelso_settings[stickyheader_background_color]', array(
 			'default' => $defaults['stickyheader_background_color'],
@@ -430,7 +430,7 @@ function kelso_customize_register( $wp_customize ) {
 		'kelso_settings[footerwidgets_background_color]', array(
 			'default' => $defaults['footerwidgets_background_color'],
 			'type' => 'option',
-			'sanitize_callback' => 'kelso_sanitize_rgba',
+			'sanitize_callback' => 'sanitize_hex_color',
 			'transport' => 'postMessage',
 		)
 	);
@@ -544,7 +544,7 @@ function kelso_customize_register( $wp_customize ) {
 		'kelso_settings[footer_background_color]', array(
 			'default' => $defaults['footer_background_color'],
 			'type' => 'option',
-			'sanitize_callback' => 'kelso_sanitize_rgba',
+			'sanitize_callback' => 'sanitize_hex_color',
 			'transport' => 'postMessage',
 		)
 	);
@@ -845,9 +845,9 @@ function kelso_customize_register( $wp_customize ) {
 
 	// Title Placement.
 	$wp_customize->add_setting(
-		'kelso_settings[title_placement]',
+		'kelso_settings[content_title_placement]',
 		array(
-			'default' => $defaults['title_placement'],
+			'default' => $defaults['content_title_placement'],
 			'type' => 'option',
 			'sanitize_callback' => 'kelso_sanitize_choices',
 		)
@@ -855,7 +855,7 @@ function kelso_customize_register( $wp_customize ) {
 	$wp_customize->add_control(
 		new Customize_Radio_Image_Control(
 			$wp_customize,
-			'kelso_settings[title_placement]',
+			'kelso_settings[content_title_placement]',
 			array(
 				'type' => 'select',
 				'label' => __( 'Page and Post Title Placement', 'kelso' ),
@@ -865,8 +865,52 @@ function kelso_customize_register( $wp_customize ) {
 					'titlelifted' => __( 'titlelifted', 'kelso' ),
 					'contentlifted' => __( 'contentlifted', 'kelso' ),
 				),
-				'settings' => 'kelso_settings[title_placement]',
+				'settings' => 'kelso_settings[content_title_placement]',
 				'priority' => 20,
+			)
+		)
+	);
+
+	 // Content Inner Background Color.
+	$wp_customize->add_setting(
+		'kelso_settings[content_inner_background_color]', array(
+			'default' => $defaults['content_inner_background_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_rgba',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new Customize_Alpha_Color_Control(
+			$wp_customize,
+			'kelso_settings[content_inner_background_color]',
+			array(
+				'label' => __( 'Inner Content Area Background Color', 'kelso' ),
+				'section' => 'kelso_options_settings',
+				'settings' => 'kelso_settings[content_inner_background_color]',
+				'priority' => 30,
+			)
+		)
+	);
+
+	// Post Page Title Color.
+	$wp_customize->add_setting(
+		'kelso_settings[content_title_color]', array(
+			'default' => $defaults['content_title_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[content_title_color]',
+			array(
+				'label' => __( 'Post/Page Title Color', 'kelso' ),
+				'section' => 'kelso_options_settings',
+				'settings' => 'kelso_settings[content_title_color]',
+				'priority' => 40,
 			)
 		)
 	);
@@ -888,7 +932,7 @@ function kelso_customize_register( $wp_customize ) {
 			'description' => __( 'Display post archives in "masonry" blocks layout.', 'kelso' ),
 			'section' => 'kelso_options_settings',
 			'settings' => 'kelso_settings[do_masonry]',
-			'priority' => 30,
+			'priority' => 50,
 		)
 	);
 
@@ -909,7 +953,7 @@ function kelso_customize_register( $wp_customize ) {
 			'description' => __( 'Add a button to the right side of the lower footer. Note: The lower footer widget must be activated.', 'kelso' ),
 			'section' => 'kelso_options_settings',
 			'settings' => 'kelso_settings[back_to_top]',
-			'priority' => 40,
+			'priority' => 60,
 		)
 	);
 

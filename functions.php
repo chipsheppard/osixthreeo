@@ -47,12 +47,23 @@ function kelso_scripts() {
 	if ( '' !== $kelso_settings['nav_search'] ) {
 		wp_enqueue_script( 'kelso-navigation-search', get_template_directory_uri() . '/assets/js/navsearch.js', array(), KELSO_VERSION, true );
 	}
-	if ( ( is_archive() || is_home() ) && $kelso_settings['do_masonry'] ) {
+	if ( ( is_archive() && ! kelso_is_shop() || is_home() ) && $kelso_settings['do_masonry'] ) {
 		wp_enqueue_script( 'masonry' );
 		wp_enqueue_script( 'masonry-init-js', get_template_directory_uri() . '/assets/js/masonry-init.js', array( 'jquery', 'masonry' ), KELSO_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kelso_scripts' );
+
+/**
+ * Don't load masonry on Woo Shop page
+ */
+function kelso_is_shop() {
+	if ( WPEX_WOOCOMMERCE_ACTIVE && is_shop() ) {
+		return true;
+	} else {
+		return false;
+	}
+}
 
 /**
  * Theme Fonts URL

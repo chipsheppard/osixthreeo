@@ -58,9 +58,10 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'hero_text_secondary_color' => '#ffffff',
 
 			'nav_search' => '',
-			// 'content_inner_background_color' => '#222222',
-			// 'title_color' => '#222222',
-			'title_placement' => '',
+			'content_inner_background_color' => 'rgba(0,0,0,0)',
+			'content_title_color' => '#222222',
+			'content_title_placement' => '',
+
 			'do_masonry' => '',
 			'back_to_top' => '',
 		);
