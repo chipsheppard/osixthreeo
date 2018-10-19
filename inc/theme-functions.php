@@ -35,6 +35,48 @@ add_filter( 'http_request_args', 'kelso_dont_update_theme', 5, 2 );
 
 
 /*
+ * BRANDING
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_display_branding' ) ) {
+	/**
+	 * Get the branding markup
+	 */
+	function kelso_display_branding() {
+		?>
+		<div class="site-branding">
+			<?php
+			$custom_logo_id = get_theme_mod( 'custom_logo' );
+			$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+
+			if ( has_custom_logo() ) {
+			?>
+				<div class="custom-logo">
+					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo '<img src="' . esc_url( $logo[0] ) . '">'; ?></a>
+				</div>
+			<?php
+			} else {
+				if ( is_front_page() && is_home() ) :
+				?>
+					<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
+				<?php else : ?>
+					<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
+				<?php
+				endif;
+			}
+
+			$description = get_bloginfo( 'description', 'display' );
+
+			if ( $description || is_customize_preview() ) :
+			?>
+				<div class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></div>
+			<?php endif; ?>
+		</div>
+		<?php
+	}
+}
+
+/*
  * NAVIGATION
  -----------------------------------------------------------------
  */
@@ -71,6 +113,150 @@ if ( ! function_exists( 'kelso_display_nav' ) ) {
 		<?php
 	}
 }
+
+/*
+ * FOOTER WIDGET AREA
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_display_footer_widgets' ) ) {
+	/**
+	 * Get the branding markup
+	 */
+	function kelso_display_footer_widgets() {
+		?>
+		<div class="footer-widget-area">
+			<?php if ( is_active_sidebar( 'footer-4' ) ) : ?>
+
+				<div class="col-1-4 first">
+					<?php
+					if ( is_active_sidebar( 'footer-1' ) ) :
+						dynamic_sidebar( 'footer-1' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+				<div class="col-1-4">
+					<?php
+					if ( is_active_sidebar( 'footer-2' ) ) :
+						dynamic_sidebar( 'footer-2' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+				<div class="col-1-4">
+					<?php
+					if ( is_active_sidebar( 'footer-3' ) ) :
+						dynamic_sidebar( 'footer-3' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+				<div class="col-1-4">
+					<?php
+					if ( is_active_sidebar( 'footer-4' ) ) :
+						dynamic_sidebar( 'footer-4' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+
+			<?php elseif ( is_active_sidebar( 'footer-3' ) ) : ?>
+
+				<div class="col-1-3 first">
+					<?php
+					if ( is_active_sidebar( 'footer-1' ) ) :
+						dynamic_sidebar( 'footer-1' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+				<div class="col-1-3">
+					<?php
+					if ( is_active_sidebar( 'footer-2' ) ) :
+						dynamic_sidebar( 'footer-2' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+				<div class="col-1-3">
+					<?php
+					if ( is_active_sidebar( 'footer-3' ) ) :
+						dynamic_sidebar( 'footer-3' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+
+			<?php elseif ( is_active_sidebar( 'footer-2' ) ) : ?>
+
+				<div class="col-1-2 first">
+					<?php
+					if ( is_active_sidebar( 'footer-1' ) ) :
+						dynamic_sidebar( 'footer-1' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+				<div class="col-1-2">
+					<?php
+					if ( is_active_sidebar( 'footer-2' ) ) :
+						dynamic_sidebar( 'footer-2' );
+					else :
+					?>
+					&nbsp;
+					<?php endif; ?>
+				</div>
+
+			<?php elseif ( is_active_sidebar( 'footer-1' ) ) : ?>
+
+				<div>
+					<?php dynamic_sidebar( 'footer-1' ); ?>
+				</div>
+
+			<?php endif; ?>
+			<div class="cf"></div>
+		</div>
+		<?php
+	}
+}
+
+
+
+/*
+ * SITE FOOTER
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_display_site_footer' ) ) {
+	/**
+	 * The Site Footer MArkup
+	 */
+	function kelso_display_site_footer() {
+		if ( is_active_sidebar( 'site-footer' ) ) {
+		?>
+			<div class="site-info">
+				<?php dynamic_sidebar( 'site-footer' ); ?>
+				<?php kelso_back_to_top(); ?>
+			</div>
+		<?php
+		} else {
+		?>
+			<div class="site-info">
+				"Kelso" WordPress theme by <a href="https://sheppco.com">Sheppco</a>
+				<?php kelso_back_to_top(); ?>
+			</div>
+		<?php
+		}
+	}
+}
+
 
 
 /**

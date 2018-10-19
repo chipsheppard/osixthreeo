@@ -30,42 +30,12 @@
 
 		<div class="header-wrap">
 			<div class="inner-wrap">
-
-				<?php tha_header_top(); ?>
-
-				<div class="site-branding">
-					<?php
-					$custom_logo_id = get_theme_mod( 'custom_logo' );
-					$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-
-					if ( has_custom_logo() ) {
-					?>
-						<div class="custom-logo">
-							<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php echo '<img src="' . esc_url( $logo[0] ) . '">'; ?></a>
-						</div>
-					<?php
-					} else {
-						if ( is_front_page() && is_home() ) :
-						?>
-							<h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
-						<?php else : ?>
-							<div class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></div>
-						<?php
-						endif;
-					}
-
-					$description = get_bloginfo( 'description', 'display' );
-
-					if ( $description || is_customize_preview() ) :
-					?>
-						<div class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></div>
-					<?php endif; ?>
-				</div>
-
-				<?php kelso_display_nav(); ?>
-
-				<?php tha_header_bottom(); ?>
-
+				<?php
+				tha_header_top();
+				kelso_display_branding();
+				kelso_display_nav();
+				tha_header_bottom();
+				?>
 			</div>
 		</div>
 
