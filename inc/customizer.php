@@ -180,6 +180,33 @@ function kelso_customize_register( $wp_customize ) {
 	 * ------------------------------------------------------------------
 	 */
 
+	 // Header Layout.
+	$wp_customize->add_setting(
+		'kelso_settings[header_layout]',
+		array(
+			'default' => $defaults['header_layout'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_choices',
+		)
+	);
+	$wp_customize->add_control(
+		new Customize_Radio_Image_Control(
+			$wp_customize,
+			'kelso_settings[header_layout]',
+			array(
+				'type' => 'select',
+				'label' => __( 'Logo and Navigation placement.', 'kelso' ),
+				'section' => 'kelso_options_settings',
+				'choices' => array(
+					'headernormal' => __( 'headernormal', 'kelso' ),
+					'headercentered' => __( 'headercentered', 'kelso' ),
+				),
+				'settings' => 'kelso_settings[header_layout]',
+				'priority' => 30,
+			)
+		)
+	);
+
 	 // Header Background Color - Left.
 	 $wp_customize->add_setting(
 		 'kelso_settings[header_bg_color_left]', array(
@@ -197,7 +224,7 @@ function kelso_customize_register( $wp_customize ) {
 				 'section' => 'header_image',
 				 'description'   => __( 'Set or change the left gradient starting color.', 'kelso' ),
 				 'settings' => 'kelso_settings[header_bg_color_left]',
-				 'priority' => 30,
+				 'priority' => 40,
 			 )
 		 )
 	 );
@@ -219,7 +246,7 @@ function kelso_customize_register( $wp_customize ) {
 				 'section' => 'header_image',
 				 'description'   => __( 'Set or change the right gradient starting color.', 'kelso' ),
 				 'settings' => 'kelso_settings[header_bg_color_right]',
-				 'priority' => 40,
+				 'priority' => 50,
 			 )
 		 )
 	 );
@@ -241,7 +268,7 @@ function kelso_customize_register( $wp_customize ) {
 			'description' => __( 'The header fills the whole browser on the homepage.', 'kelso' ),
 			'section' => 'header_image',
 			'settings' => 'kelso_settings[home_header_height]',
-			'priority' => 46,
+			'priority' => 60,
 		)
 	);
 
@@ -260,7 +287,7 @@ function kelso_customize_register( $wp_customize ) {
 			'type'     => 'textarea',
 			'label'    => __( 'Homepage Header Text - Primary', 'kelso' ),
 			'section'  => 'header_image',
-			'priority' => 50,
+			'priority' => 70,
 		)
 	);
 
@@ -282,7 +309,7 @@ function kelso_customize_register( $wp_customize ) {
 				'label' => __( 'Color', 'kelso' ),
 				'section' => 'header_image',
 				'settings' => 'kelso_settings[hero_text_primary_color]',
-				'priority' => 60,
+				'priority' => 80,
 			)
 		)
 	);
@@ -302,7 +329,7 @@ function kelso_customize_register( $wp_customize ) {
 			'type'     => 'textarea',
 			'label'    => __( 'Homepage Header Text - Secondary', 'kelso' ),
 			'section'  => 'header_image',
-			'priority' => 70,
+			'priority' => 90,
 		)
 	);
 
@@ -324,7 +351,7 @@ function kelso_customize_register( $wp_customize ) {
 				'label' => __( 'Color', 'kelso' ),
 				'section' => 'header_image',
 				'settings' => 'kelso_settings[hero_text_secondary_color]',
-				'priority' => 80,
+				'priority' => 100,
 			)
 		)
 	);

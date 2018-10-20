@@ -50,8 +50,8 @@
 	transition: all .5s ease;
 
 	@include breakpoint(tablet-v) {
-		width: 88%;
 		display:block;
+		width: 88%;
 	}
 
 	@include breakpoint(phone-h) {
@@ -75,7 +75,7 @@
 	}
 
 	a:hover {
-		opacity: 0.8;
+		opacity: 0.75;
 	}
 }
 

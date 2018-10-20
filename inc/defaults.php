@@ -51,6 +51,7 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'header_bg_color_left' => '#5000aa',
 			'header_bg_color_right' => '#aa0005',
 
+			'header_layout' => '',
 			'home_header_height' => '',
 			'hero_text_primary' => '',
 			'hero_text_secondary' => '',

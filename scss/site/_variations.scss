@@ -77,9 +77,20 @@ body.admin-bar.error404 .titlelifted .page-header {
 .site-main.contentlifted {
 	border-radius: 3px;
 	margin-top: -8em;
+	margin-left: 4%;
 	padding-top: 1.5em;
 	position: relative;
+	width: 92%;
 }
+.sidebar-left .site-main.contentlifted {
+	margin-right: 4%;
+	margin-left: 0;
+	width: 96%;
+}
+.sidebar-right .site-main.contentlifted {
+	width: 96%;
+}
+
 body.page .contentlifted .entry-header,
 body.single .contentlifted .entry-header,
 body.blog .contentlifted .page-header,
@@ -87,4 +98,65 @@ body.archive .contentlifted .page-header,
 body.search .contentlifted .page-header,
 body.error404 .contentlifted .page-header {
 	margin-bottom: 4em;
+}
+
+
+
+// HEADER CENTERED
+.header-centered {
+
+	.site-branding {
+		display: block;
+		text-align: center;
+	}
+	.header-wrap.stuck .site-branding {
+		display: table-cell;
+		text-align: left;
+		padding: .5em 0;
+	}
+
+	.site-navigation {
+		display: block;
+		margin: .5em 0;
+		text-align: center;
+
+		@include breakpoint(tablet-v) {
+			margin-left: -5.5%;
+			margin-right: -5.5%;
+			text-align: left;
+		}
+	}
+
+	.header-wrap.stuck .inner-wrap {
+
+		@include breakpoint(tablet-v) {
+			display: block;
+		}
+	}
+
+	.header-wrap.stuck .site-navigation {
+		display: table-cell;
+		text-align: right;
+
+		@include breakpoint(tablet-v) {
+			display: block;
+			text-align: left;
+		}
+	}
+
+	.site-navigation > ul {
+	    display: inline-block;
+
+		@include breakpoint(tablet-v) {
+			display: block;
+		}
+	}
+
+	.menu-wrap {
+		display: inline-block;
+
+		@include breakpoint(tablet-v) {
+			display: none;
+		}
+	}
 }

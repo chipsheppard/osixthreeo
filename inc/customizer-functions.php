@@ -183,6 +183,34 @@ if ( ! function_exists( 'kelso_get_left_sidebar' ) ) {
 
 
 /*
+ * HEADER LAYOUT
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_header_layout_class' ) ) {
+	/**
+	 * Adds custom class to section containers.
+	 */
+	function kelso_header_layout_class() {
+
+		$kelso_settings = wp_parse_args(
+			get_option( 'kelso_settings', array() ),
+			kelso_get_defaults()
+		);
+
+		$header_layout = $kelso_settings['header_layout'];
+
+		if ( 'headercentered' === $header_layout ) {
+			$header_layout_class = ' header-centered';
+		} else {
+			return;
+		}
+
+		echo esc_html( $header_layout_class );
+	}
+}
+
+
+/*
  * NAVIGATION SEARCH FORM.
  -----------------------------------------------------------------
  */

@@ -26,7 +26,7 @@
 
 	<?php tha_header_before(); ?>
 
-	<header id="masthead" class="site-header">
+	<header id="masthead" class="site-header<?php kelso_header_layout_class(); ?>">
 
 		<div class="header-wrap">
 			<div class="inner-wrap">
