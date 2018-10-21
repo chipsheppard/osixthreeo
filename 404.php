@@ -7,11 +7,15 @@
 
 kelso_sidebar_bodyclass();
 get_header();
+tha_content_before();
 kelso_get_left_sidebar();
 ?>
 
 <div id="primary" class="content-area">
-	<main id="main" class="site-main" role="main">
+	<?php tha_content_wrap_before(); ?>
+
+	<main id="main" class="site-main<?php kelso_title_placement_class(); ?>" role="main">
+		<?php tha_content_top(); ?>
 
 		<section class="error-404 not-found">
 
@@ -29,9 +33,11 @@ kelso_get_left_sidebar();
 
 		</section>
 
+		<?php tha_content_bottom(); ?>
 	</main>
 </div>
 
 <?php
 kelso_get_right_sidebar();
+tha_content_after();
 get_footer();

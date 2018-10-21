@@ -20,6 +20,10 @@
 	-webkit-appearance: none;
 	white-space: nowrap;
 }
+#customize-control-kelso_settings-header_layout .controls label,
+#customize-control-kelso_settings-content_title_placement .controls label {
+	max-width: 33%;
+}
 
 #kelso-img-container input {
 	position: absolute;

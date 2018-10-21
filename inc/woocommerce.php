@@ -88,10 +88,18 @@ function kelso_theme_wrapper_end() {
  *
  * @link https://www.kadencethemes.com/support-forums/topic/woocommerce-single-product-move-title-above-page-and-make-fullwidth/
  */
-function disable_woo_commerce_sidebar() {
+function kelso_adjust_woo() {
 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
-add_action( 'init', 'disable_woo_commerce_sidebar' );
+add_action( 'init', 'kelso_adjust_woo' );
+
+/**
+ * Remove the breadcrumbs
+ */
+function kelso_remove_wc_breadcrumbs() {
+	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+add_action( 'init', 'kelso_remove_wc_breadcrumbs' );
 
 /**
  * Move product entry title before image.

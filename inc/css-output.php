@@ -128,9 +128,9 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 				'a,h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover,.text-highlight'
 			);
 			$css->add_property( 'color', esc_attr( $kelso_settings['link_color'] ) );
-			// Link Bg.
+			// Link Backgroundgs.
 			$css->set_selector(
-				'input[type="button"],input[type="reset"],input[type="submit"],.btn,button,.bg-highlight,.subscription-toggle'
+				'input[type="button"],input[type="reset"],input[type="submit"],.btn,button,.bg-highlight,.search-form input[type="submit"]:hover,.search-form input[type="submit"]:focus'
 			);
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['link_color'] ) );
 			// Link Borders.
@@ -147,12 +147,12 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			$css->add_property( 'color', esc_attr( $kelso_settings['link_color_hover'] ) );
 			// Secondary Backgrounds.
 			$css->set_selector(
-				'.btn.secondary,button.secondary,.site-navigation li:not(.search-icon) a:before,.bg-secondary'
+				'.btn.secondary,button.secondary,.site-navigation li:not(.search-icon) a:before,.bg-secondaryy,.footer-widgets input[type="submit"],.footer-widgets button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button)[type="submit"]'
 			);
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['link_color_hover'] ) );
 			// Secondary Borders.
 			$css->set_selector(
-				'a.arrow:hover,a.arrow:focus,a.arrow:active,a.arrow:hover:after,a.arrow:focus:after,a.arrow:active:after,.site-navigation li.accent,.bb-secondary'
+				'a.arrow:hover,a.arrow:focus,a.arrow:active,a.arrow:hover:after,a.arrow:focus:after,a.arrow:active:after,.site-navigation li.accent,.bb-secondary,.footer-widgets input[type="search"]:focus'
 			);
 			$css->add_property( 'border-color', esc_attr( $kelso_settings['link_color_hover'] ) );
 		endif;

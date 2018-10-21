@@ -56,7 +56,7 @@
 	}
 
 	input[type="submit"],
-	button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button):not(.customize-partial-edit-shortcut-button)[type="submit"] {
+	button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button)[type="submit"] {
 		background-color: $color__secondary;
 		border: 0;
 		border-radius: 0;
@@ -69,7 +69,7 @@
 
 		&:hover,
 		&:focus {
-			background: $color__base;
+			background: $color__base-medium;
 			color: #fff;
 		}
 

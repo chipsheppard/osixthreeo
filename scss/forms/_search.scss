@@ -8,13 +8,13 @@
 	input[type="search"] {
 		border-color: $color__base-xlight;
 		display: inline-block;
-		font-weight: $font__weight-bold;
 	}
 
 	input[type="submit"] {
 		background: transparent;
 		border: none;
 		border-left: 1px solid $color__base-xlight;
+		border-right: 1px solid $color__base-xlight;
 		border-radius: 0;
 		color: $color__base;
 		display: inline-block;
@@ -22,12 +22,11 @@
 		position: absolute;
 		right: 0;
 		top: 0;
-		-webkit-font-smoothing: antialiased;
 		@include font-size(1.25);
 
 		&:hover,
 		&:focus {
-			background: $color__base;
+			background: $color__highlight;
 			color: #fff;
 		}
 	}

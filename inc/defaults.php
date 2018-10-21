@@ -18,12 +18,12 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 	function kelso_get_defaults() {
 		$kelso_defaults = array(
 			'background_color' => '#ffffff',
-			'content_background_color' => '#f3f3f3',
+			'content_background_color' => '',
 			'text_color' => '#222222',
 			'link_color' => '#1f9bde',
 			'link_color_hover' => '#ff9900',
 
-			'header_background_color' => '#ffffff',
+			'header_background_color' => '',
 			'nav_link_color' => '#222222',
 
 			'stickyheader_background_color' => '#ffffff',
@@ -59,8 +59,8 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'hero_text_secondary_color' => '#ffffff',
 
 			'nav_search' => '',
-			'content_inner_background_color' => 'rgba(0,0,0,0)',
-			'content_title_color' => '#222222',
+			'content_inner_background_color' => '',
+			'content_title_color' => '',
 			'content_title_placement' => '',
 
 			'do_masonry' => '',

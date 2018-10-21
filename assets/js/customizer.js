@@ -71,7 +71,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'header_background_color',
 		'.header-wrap',
 		'background-color',
-		'rgba(0,0,0,0.75)'
+		''
 	);
 
 	// STICKY HEADER ----------------------------------- .
@@ -79,7 +79,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'stickyheader_background_color',
 		'.header-wrap.stuck,.contained .header-wrap.stuck .inner-wrap',
 		'background-color',
-		'#000000'
+		'#ffffff'
 	);
 
 	// SITE CONTENT --------------------------------- .
@@ -88,7 +88,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'content_background_color',
 		'.content-wrap',
 		'background-color',
-		'#fafafa'
+		''
 	);
 
 	// Text Color
@@ -105,7 +105,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 			value.bind(
 				function( newval ) {
 					$( '.site-content a:not(.btn),h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover,.sidebar-widget ul a:hover,.sidebar-widget .menu a:hover,.comment-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-previous a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-previous a:hover,.post-navigation .nav-next a:hover,.text-highlight' ).css( 'color', newval );
-					$( 'input[type="button"],input[type="reset"],input[type="submit"],button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.customize-partial-edit-shortcut-button),.site-content .btn:not(.secondary):not(.darklight):not(.white),.bg-highlight,.subscription-toggle' ).css( 'background-color', newval );
+					$( 'input[type="button"],input[type="reset"],input[type="submit"],button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.customize-partial-edit-shortcut-button),.btn:not(.secondary):not(.darklight):not(.white),.bg-highlight,.search-form input[type="submit"]:hover,.search-form input[type="submit"]:focus' ).css( 'background-color', newval );
 					$( '.bb-highlight,.sticky .entry-header' ).css( 'border-color', newval );
 				}
 			);
@@ -118,8 +118,8 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 			value.bind(
 				function( newval ) {
 					$( '.site-content a:not(.btn):hover,.site-content a:not(.btn):focus,.site-content a:not(.btn):active,.text-secondary' ).css( 'color', newval );
-					$( 'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.site-content .btn.secondary,.site-content button.secondary,.site-navigation li:not(.search-icon) a:before,.bg-secondary' ).css( 'background-color', newval );
-					$( 'a.arrow:hover:after,a.arrow:focus:after,a.arrow:active:after,.site-navigation li.accent,.bb-secondary' ).css( 'border-color', newval );
+					$( 'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.site-content .btn.secondary,.site-content button.secondary,.site-navigation li:not(.search-icon) a:before,.bg-secondary,.footer-widgets input[type="submit"],.footer-widgets button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-video-button)[type="submit"]' ).css( 'background-color', newval );
+					$( 'a.arrow:hover:after,a.arrow:focus:after,a.arrow:active:after,.site-navigation li.accent,.bb-secondary,.footer-widgets input[type="search"]:focus' ).css( 'border-color', newval );
 				}
 			);
 		}
@@ -130,7 +130,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'content_inner_background_color',
 		'.site-main',
 		'background-color',
-		'rgba(0,0,0,0)'
+		''
 	);
 
 	// Post/Page Title Color
@@ -138,7 +138,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'content_title_color',
 		'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.single .entry-meta a,.single .entry-meta .posted-on,.single .entry-meta .updated-on,.single .entry-meta .byline,.woocommerce-products-header,.product_title.entry-title,body.page .titlelifted .entry-title,body.single .titlelifted .entry-title,body.blog .titlelifted .page-title,body.archive .titlelifted .page-title,body.search .titlelifted .page-title,body.error404 .titlelifted .page-title,.single .titlelifted .entry-meta a,.single .titlelifted .entry-meta .posted-on,.single .titlelifted .entry-meta .updated-on,.single .titlelifted .entry-meta .byline,.titlelifted .woocommerce-products-header,.titlelifted .product_title.entry-title',
 		'color',
-		'#222222'
+		''
 	);
 
 	// FOOTERWIDGETS ----------------------------------- .

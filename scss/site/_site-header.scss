@@ -35,7 +35,6 @@
 }
 
 .header-wrap {
-	background-color: #ffffff;
 	position: relative;
 	z-index: 100;
 	transition: all .5s ease;
@@ -92,7 +91,7 @@
 		text-decoration: none;
 
 		&:hover {
-			opacity: 0.8;
+			opacity: 0.75;
 		}
 	}
 

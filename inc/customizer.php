@@ -180,33 +180,6 @@ function kelso_customize_register( $wp_customize ) {
 	 * ------------------------------------------------------------------
 	 */
 
-	 // Header Layout.
-	$wp_customize->add_setting(
-		'kelso_settings[header_layout]',
-		array(
-			'default' => $defaults['header_layout'],
-			'type' => 'option',
-			'sanitize_callback' => 'kelso_sanitize_choices',
-		)
-	);
-	$wp_customize->add_control(
-		new Customize_Radio_Image_Control(
-			$wp_customize,
-			'kelso_settings[header_layout]',
-			array(
-				'type' => 'select',
-				'label' => __( 'Logo and Navigation placement.', 'kelso' ),
-				'section' => 'kelso_options_settings',
-				'choices' => array(
-					'headernormal' => __( 'headernormal', 'kelso' ),
-					'headercentered' => __( 'headercentered', 'kelso' ),
-				),
-				'settings' => 'kelso_settings[header_layout]',
-				'priority' => 30,
-			)
-		)
-	);
-
 	 // Header Background Color - Left.
 	 $wp_customize->add_setting(
 		 'kelso_settings[header_bg_color_left]', array(
@@ -885,7 +858,7 @@ function kelso_customize_register( $wp_customize ) {
 			'kelso_settings[content_title_placement]',
 			array(
 				'type' => 'select',
-				'label' => __( 'Page and Post Title Placement', 'kelso' ),
+				'label' => __( 'Page/Post Title Placement', 'kelso' ),
 				'section' => 'kelso_options_settings',
 				'choices' => array(
 					'normal' => __( 'titlenormal', 'kelso' ),
@@ -894,6 +867,33 @@ function kelso_customize_register( $wp_customize ) {
 				),
 				'settings' => 'kelso_settings[content_title_placement]',
 				'priority' => 20,
+			)
+		)
+	);
+
+	 // Header Layout.
+	$wp_customize->add_setting(
+		'kelso_settings[header_layout]',
+		array(
+			'default' => $defaults['header_layout'],
+			'type' => 'option',
+			'sanitize_callback' => 'kelso_sanitize_choices',
+		)
+	);
+	$wp_customize->add_control(
+		new Customize_Radio_Image_Control(
+			$wp_customize,
+			'kelso_settings[header_layout]',
+			array(
+				'type' => 'select',
+				'label' => __( 'Logo and Navigation placement.', 'kelso' ),
+				'section' => 'kelso_options_settings',
+				'choices' => array(
+					'headernormal' => __( 'headernormal', 'kelso' ),
+					'headercentered' => __( 'headercentered', 'kelso' ),
+				),
+				'settings' => 'kelso_settings[header_layout]',
+				'priority' => 30,
 			)
 		)
 	);
@@ -915,7 +915,7 @@ function kelso_customize_register( $wp_customize ) {
 				'label' => __( 'Inner Content Area Background Color', 'kelso' ),
 				'section' => 'kelso_options_settings',
 				'settings' => 'kelso_settings[content_inner_background_color]',
-				'priority' => 30,
+				'priority' => 40,
 			)
 		)
 	);
@@ -935,9 +935,10 @@ function kelso_customize_register( $wp_customize ) {
 			'kelso_settings[content_title_color]',
 			array(
 				'label' => __( 'Post/Page Title Color', 'kelso' ),
+				'description'   => __( 'The default color is white when the title is up in the custom header.', 'kelso' ),
 				'section' => 'kelso_options_settings',
 				'settings' => 'kelso_settings[content_title_color]',
-				'priority' => 40,
+				'priority' => 50,
 			)
 		)
 	);
@@ -959,7 +960,7 @@ function kelso_customize_register( $wp_customize ) {
 			'description' => __( 'Display post archives in "masonry" blocks layout.', 'kelso' ),
 			'section' => 'kelso_options_settings',
 			'settings' => 'kelso_settings[do_masonry]',
-			'priority' => 50,
+			'priority' => 60,
 		)
 	);
 
@@ -980,7 +981,7 @@ function kelso_customize_register( $wp_customize ) {
 			'description' => __( 'Add a button to the right side of the lower footer. Note: The lower footer widget must be activated.', 'kelso' ),
 			'section' => 'kelso_options_settings',
 			'settings' => 'kelso_settings[back_to_top]',
-			'priority' => 60,
+			'priority' => 70,
 		)
 	);
 
