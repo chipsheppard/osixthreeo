@@ -91,10 +91,10 @@ if ( ! function_exists( 'kelso_customheader_content' ) ) {
 			<div class="custom-header-image-text">
 
 			<?php if ( '' !== $herotextprimary ) : ?>
-				<div class="hero-primary"><?php echo esc_html( $herotextprimary ); ?></div>
+				<div class="hero-primary"><?php echo wp_kses_post( $herotextprimary ); ?></div>
 			<?php endif; ?>
 			<?php if ( '' !== $herotextsecondary ) : ?>
-				<div class="hero-secondary"><?php echo esc_html( $herotextsecondary ); ?></div>
+				<div class="hero-secondary"><?php echo wp_kses_post( $herotextsecondary ); ?></div>
 			<?php endif; ?>
 			<?php if ( $kelso_settings['home_header_height'] ) : ?>
 				<a href="#custom-header-scroll-target" class="scrollbutton"><div class="arrow-down white"></div></a>

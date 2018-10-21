@@ -251,7 +251,7 @@ function kelso_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['hero_text_primary'],
 			'type' => 'option',
-			'sanitize_callback' => 'esc_html',
+			'sanitize_callback' => 'wp_kses_post',
 		)
 	);
 	$wp_customize->add_control(
@@ -293,7 +293,7 @@ function kelso_customize_register( $wp_customize ) {
 		array(
 			'default' => $defaults['hero_text_secondary'],
 			'type' => 'option',
-			'sanitize_callback' => 'esc_html',
+			'sanitize_callback' => 'wp_kses_post',
 		)
 	);
 	$wp_customize->add_control(
