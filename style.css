@@ -2877,6 +2877,11 @@ img.flex {
   padding: .5em 0;
 }
 
+.header-wrap.stuck .custom-logo img {
+  max-height: 50px;
+  width: auto;
+}
+
 /* Site Footer
 --------------------------------------------- */
 .site-footer {

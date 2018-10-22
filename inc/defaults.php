@@ -59,7 +59,7 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'hero_text_secondary_color' => '#ffffff',
 
 			'nav_search' => '',
-			'content_inner_background_color' => '',
+			'content_inner_background_color' => '#ffffff',
 			'content_title_color' => '',
 			'content_title_placement' => '',
 

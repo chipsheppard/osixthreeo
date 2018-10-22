@@ -130,7 +130,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'content_inner_background_color',
 		'.site-main',
 		'background-color',
-		''
+		'#ffffff'
 	);
 
 	// Post/Page Title Color

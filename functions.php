@@ -148,7 +148,7 @@ if ( ! function_exists( 'kelso_setup' ) ) :
 			'footer'    => false,
 		) );
 
-		// This theme uses wp_nav_menu() in 1 location.
+		// wp_nav_menu() in 1 location.
 		register_nav_menus( array(
 			'primary' => __( 'Primary Menu', 'kelso' ),
 		) );
