@@ -34,6 +34,30 @@ function kelso_dont_update_theme( $r, $url ) {
 add_filter( 'http_request_args', 'kelso_dont_update_theme', 5, 2 );
 
 
+
+/*
+ * TOPBAR
+ -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'kelso_display_topbar' ) ) {
+	/**
+	 * Display the TopBar is a topbat widget is in place.
+	 */
+	function kelso_display_topbar() {
+		if ( is_active_sidebar( 'topbar' ) ) {
+		?>
+		<div class="topbar">
+			<div class="inner-wrap">
+				<?php dynamic_sidebar( 'topbar' ); ?>
+			</div>
+		</div>
+		<?php
+		}
+	}
+}
+
+
+
 /*
  * BRANDING
  -----------------------------------------------------------------

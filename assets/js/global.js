@@ -122,14 +122,15 @@ jQuery(function( $ ){
  * Sticky nav
  */
 jQuery(function( $ ){
+	var headerposition = $('.header-wrap').offset();
 	// On load
-	if( $( document ).scrollTop() > 0 ){
+	if( $( document ).scrollTop() > headerposition.top ){
 		$( '.header-wrap' ).addClass( 'stuck' );
 	}
 	// On scroll
 	$( document ).on('scroll', function(){
 
-		if ( $( document ).scrollTop() > 0 ){
+		if ( $( document ).scrollTop() > headerposition.top ){
 			$( '.header-wrap' ).addClass( 'stuck' );
 		} else {
 			$( '.header-wrap' ).removeClass( 'stuck' );

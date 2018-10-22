@@ -31,6 +31,16 @@ function kelso_widgets_init() {
 	) );
 
 	register_sidebar( array(
+		'name'          => esc_html__( 'Topbar Widget Area', 'kelso' ),
+		'id'            => 'topbar',
+		'description'   => esc_html__( 'Top Bar Widget - above the header', 'kelso' ),
+		'before_widget' => '<section id="%1$s" class="topbar-widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h5 class="widget-title">',
+		'after_title'   => '</h5>',
+	) );
+
+	register_sidebar( array(
 		'name' => esc_html__( '1st Sub-Footer Widget Area', 'kelso' ),
 		'id' => 'footer-1',
 		'description' => esc_html__( '1st widget area for the sub-footer. Placing a widget here and leaving the other 3 empty will create a single full width widget area.', 'kelso' ),

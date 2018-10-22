@@ -24,6 +24,8 @@
 <div id="page" class="site<?php kelso_sitecontain_class(); ?>">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kelso' ); ?></a>
 
+	<?php kelso_display_topbar(); ?>
+
 	<?php tha_header_before(); ?>
 
 	<header id="masthead" class="site-header<?php kelso_header_layout_class(); ?>">
