@@ -9,9 +9,21 @@
 		margin: 0 0 2em;
 		@include font-size(1);
 
-		img {
+		.featured-image {
+			display: inline-block;
+			float: left;
+			padding: 1.5em .5em 1.25em 1.5em;
+		}
+
+		.wp-post-image {
 			display: block;
 			//width: 100%;
+		}
+
+		.entry-header,
+		.entry-content,
+		.link-more {
+			overflow: hidden;
 		}
 	}
 
@@ -24,17 +36,19 @@
 				width: 98%;
 			}
 
-			img {
+			.featured-image {
+				display: block;
+				float: none;
+				padding: 0;
+			}
+
+			.wp-post-image {
 				display: block;
 				width: 100%;
 			}
 		}
 	}
 
-	.wp-post-image {
-		margin: 0 auto;
-		width: 100%;
-	}
 
 	.entry-content {
 		padding: 0 1.5em;

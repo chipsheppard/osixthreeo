@@ -3621,9 +3621,25 @@ body.single .contentlifted .entry-header {
   font-size: 1rem;
 }
 
-.blog .hentry img,
-.archive .hentry img {
+.blog .hentry .featured-image,
+.archive .hentry .featured-image {
+  display: inline-block;
+  float: left;
+  padding: 1.5em .5em 1.25em 1.5em;
+}
+
+.blog .hentry .wp-post-image,
+.archive .hentry .wp-post-image {
   display: block;
+}
+
+.blog .hentry .entry-header,
+.blog .hentry .entry-content,
+.blog .hentry .link-more,
+.archive .hentry .entry-header,
+.archive .hentry .entry-content,
+.archive .hentry .link-more {
+  overflow: hidden;
 }
 
 .blog .do-masonry .hentry,
@@ -3639,15 +3655,16 @@ body.single .contentlifted .entry-header {
   }
 }
 
-.blog .do-masonry .hentry img,
-.archive .do-masonry .hentry img {
+.blog .do-masonry .hentry .featured-image,
+.archive .do-masonry .hentry .featured-image {
   display: block;
-  width: 100%;
+  float: none;
+  padding: 0;
 }
 
-.blog .wp-post-image,
-.archive .wp-post-image {
-  margin: 0 auto;
+.blog .do-masonry .hentry .wp-post-image,
+.archive .do-masonry .hentry .wp-post-image {
+  display: block;
   width: 100%;
 }
 
@@ -3733,8 +3750,16 @@ body.single .contentlifted .entry-header {
 .search .featured-image {
   display: inline-block;
   float: left;
-  margin-right: 1em;
-  overflow: hidden;
+  margin-right: 1.5em;
+}
+
+@media all and (max-width: 500px) {
+  .search .featured-image {
+    display: block;
+    float: none;
+    margin: 0;
+    text-align: center;
+  }
 }
 
 .search .entry-header {
@@ -3759,6 +3784,7 @@ body.single .contentlifted .entry-header {
 .search .entry-content,
 .search .entry-summary {
   margin: 0;
+  overflow: hidden;
 }
 
 .search .more-link {

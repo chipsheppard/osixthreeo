@@ -273,7 +273,7 @@ if ( ! function_exists( 'kelso_display_site_footer' ) ) {
 		} else {
 		?>
 			<div class="site-info">
-				"Kelso" WordPress theme by <a href="https://sheppco.com">Sheppco</a>
+				<p>"Kelso" by <a href="https://sheppco.com">Sheppco</a></p>
 				<?php kelso_back_to_top(); ?>
 			</div>
 		<?php

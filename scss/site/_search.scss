@@ -31,8 +31,14 @@
 	.featured-image {
 		display: inline-block;
 		float: left;
-		margin-right: 1em;
-		overflow: hidden;
+		margin-right: 1.5em;
+
+		@include breakpoint(phone-h) {
+			display: block;
+			float: none;
+			margin: 0;
+			text-align: center;
+		}
 	}
 
 	.entry-header {
@@ -56,6 +62,7 @@
 	.entry-content,
 	.entry-summary {
 		margin: 0;
+		overflow: hidden;
 	}
 
 	.more-link {

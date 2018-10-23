@@ -10,7 +10,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<?php if ( ! is_singular() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) : ?>
-		<a href="<?php the_permalink(); ?>" class="featured-image"><?php the_post_thumbnail( 'thumbnail' ); ?></a>
+		<a href="<?php the_permalink(); ?>" class="featured-image"><?php the_post_thumbnail( 'medium' ); ?></a>
 	<?php endif; ?>
 
 	<header class="entry-header">
@@ -84,6 +84,7 @@
 
 	<?php if ( is_archive() || is_home() || is_search() ) : // archive page? ?>
 		<?php kelso_read_more(); ?>
+		<div class="cf"></div>
 	<?php endif; ?>
 
 </article>
