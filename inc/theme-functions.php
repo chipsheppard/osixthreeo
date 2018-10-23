@@ -34,7 +34,6 @@ function kelso_dont_update_theme( $r, $url ) {
 add_filter( 'http_request_args', 'kelso_dont_update_theme', 5, 2 );
 
 
-
 /*
  * TOPBAR
  -----------------------------------------------------------------
@@ -55,7 +54,6 @@ if ( ! function_exists( 'kelso_display_topbar' ) ) {
 		}
 	}
 }
-
 
 
 /*
@@ -100,6 +98,7 @@ if ( ! function_exists( 'kelso_display_branding' ) ) {
 	}
 }
 
+
 /*
  * NAVIGATION
  -----------------------------------------------------------------
@@ -137,6 +136,7 @@ if ( ! function_exists( 'kelso_display_nav' ) ) {
 		<?php
 	}
 }
+
 
 /*
  * FOOTER WIDGET AREA
@@ -253,7 +253,6 @@ if ( ! function_exists( 'kelso_display_footer_widgets' ) ) {
 }
 
 
-
 /*
  * SITE FOOTER
  -----------------------------------------------------------------
@@ -280,7 +279,6 @@ if ( ! function_exists( 'kelso_display_site_footer' ) ) {
 		}
 	}
 }
-
 
 
 /**
@@ -329,7 +327,6 @@ function kelso_search_button( $text ) {
 add_filter( 'get_search_form', 'kelso_search_button' );
 
 
-
 /**
  * EXCERPT LENGTH FILTER - to 16 words.
  *
@@ -362,6 +359,18 @@ function kelso_read_more() {
 
 
 /**
+ * Remove injected styles from recent comments widget.
+ *
+ * @link http://www.narga.net/how-to-remove-or-disable-comment-reply-js-and-recentcomments-from-wordpress-header
+ */
+function kelso_remove_recent_comments_style() {
+	global $wp_widget_factory;
+	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
+}
+add_action( 'widgets_init', 'kelso_remove_recent_comments_style' );
+
+
+/**
  * Adds custom classes to the array of body classes.
  *
  * @param Array $classes the array of body classes.
@@ -383,6 +392,7 @@ function kelso_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'kelso_body_classes' );
 
+
 /**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
@@ -392,14 +402,3 @@ function kelso_pingback_header() {
 	}
 }
 add_action( 'wp_head', 'kelso_pingback_header' );
-
-/**
- * Remove injected styles from recent comments widget.
- *
- * @link http://www.narga.net/how-to-remove-or-disable-comment-reply-js-and-recentcomments-from-wordpress-header
- */
-function kelso_remove_recent_comments_style() {
-	global $wp_widget_factory;
-	remove_action( 'wp_head', array( $wp_widget_factory->widgets['WP_Widget_Recent_Comments'], 'recent_comments_style' ) );
-}
-add_action( 'widgets_init', 'kelso_remove_recent_comments_style' );
