@@ -114,12 +114,11 @@ body.single .contentlifted .entry-header{
 	.header-wrap.stuck .site-branding {
 		display: table-cell;
 		text-align: left;
-		padding: .5em 0;
+		padding: .25em 0;
 	}
 
 	.site-navigation {
 		display: block;
-		margin: .5em 0;
 		text-align: center;
 
 		@include breakpoint(tablet-v) {

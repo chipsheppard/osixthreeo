@@ -2,7 +2,8 @@
  * Menus
 --------------------------------------------------------------*/
 
-.site-navigation {
+.site-navigation,
+.topbar-widget.widget_nav_menu {
 	display: table-cell;
 	min-width: 520px;
 	text-align: right;
@@ -27,7 +28,6 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 		border-bottom: 1px solid currentColor;
-		opacity: 0.9;
 	}
 
 	.menu-item-has-children > a {
@@ -57,7 +57,7 @@
 			border: 1px solid $color__secondary;
 
 			a {
-				padding: .9375em .5em;
+				padding: .9375em .5em .875em;
 				border-color: transparent;
 
 				&:hover {

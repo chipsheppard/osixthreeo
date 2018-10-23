@@ -39,7 +39,7 @@
 		});
 	}
 
-	initMainNavigation( $( '.site-navigation' ) );
+	initMainNavigation( $( '.site-navigation, .topbar-widget.widget_nav_menu' ) );
 
 	masthead       = $( '#masthead' );
 	menuToggle     = masthead.find( '.responsive-menu-icon' );

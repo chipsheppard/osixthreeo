@@ -12,7 +12,8 @@
 #customize-theme-controls #customize-control-header_image,
 #customize-theme-controls #customize-control-kelso_settings-home_header_height,
 #customize-theme-controls #customize-control-kelso_settings-header_bg_color_right,
-#customize-theme-controls #customize-control-kelso_settings-hero_text_primary_color {
+#customize-theme-controls #customize-control-kelso_settings-hero_text_primary_color,
+#customize-theme-controls #customize-control-kelso_settings-footer_link_color_hover {
 	padding-bottom:1em;
 	border-bottom:1px solid #aaa
 }

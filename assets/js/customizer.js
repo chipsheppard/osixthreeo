@@ -63,7 +63,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'background_color',
 		'body',
 		'background-color',
-		''
+		'#f5f5f5'
 	);
 
 	// HEADER ----------------------------------- .
@@ -71,7 +71,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'header_background_color',
 		'.header-wrap',
 		'background-color',
-		''
+		'#ffffff'
 	);
 
 	// STICKY HEADER ----------------------------------- .
@@ -88,7 +88,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'content_background_color',
 		'.content-wrap',
 		'background-color',
-		''
+		'#f5f5f5'
 	);
 
 	// Text Color
@@ -130,7 +130,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'content_inner_background_color',
 		'.site-main',
 		'background-color',
-		'#ffffff'
+		'#f5f5f5'
 	);
 
 	// Post/Page Title Color
@@ -207,6 +207,47 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'.site-info a:hover',
 		'color',
 		'#c0c0c0'
+	);
+
+	// TOPBAR ----------------------------------- .
+	// TB Background
+	kelso_colors_live_update(
+		'topbar_background_color',
+		'.topbar',
+		'background-color',
+		'#ffffff'
+	);
+
+	// TB Title
+	kelso_colors_live_update(
+		'topbar_widget_title_color',
+		'.topbar .widget-title',
+		'color',
+		'#222222'
+	);
+
+	// TB Text
+	kelso_colors_live_update(
+		'topbar_text_color',
+		'.topbar',
+		'color',
+		'#222222'
+	);
+
+	// TB Link
+	kelso_colors_live_update(
+		'topbar_link_color',
+		'.topbar a:not(.btn), .topbar button.dropdown-toggle',
+		'color',
+		'#1f9bde'
+	);
+
+	// TB Link Hover
+	kelso_colors_live_update(
+		'topbar_link_color_hover',
+		'.topbar a:not(.btn):hover',
+		'color',
+		'#ff9900'
 	);
 
 	// HERO TEXT ----------------------------------- .

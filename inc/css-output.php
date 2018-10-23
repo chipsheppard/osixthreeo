@@ -72,6 +72,17 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		$default_footerwidgets_link_color = $defaults['footerwidgets_link_color'];
 		$default_footerwidgets_link_color_hover = $defaults['footerwidgets_link_color_hover'];
 
+		$topbar_bg_color = $kelso_settings['topbar_background_color'];
+		$topbar_widget_title_color = $kelso_settings['topbar_widget_title_color'];
+		$topbar_text_color = $kelso_settings['topbar_text_color'];
+		$topbar_link_color = $kelso_settings['topbar_link_color'];
+		$topbar_link_color_hover = $kelso_settings['topbar_link_color_hover'];
+		$default_topbar_bg_color = $defaults['topbar_background_color'];
+		$default_topbar_widget_title_color = $defaults['topbar_widget_title_color'];
+		$default_topbar_text_color = $defaults['topbar_text_color'];
+		$default_topbar_link_color = $defaults['topbar_link_color'];
+		$default_topbar_link_color_hover = $defaults['topbar_link_color_hover'];
+
 		$footer_bg_color = $kelso_settings['footer_background_color'];
 		$footer_text_color = $kelso_settings['footer_text_color'];
 		$footer_link_color = $kelso_settings['footer_link_color'];
@@ -289,6 +300,30 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		if ( $default_footer_link_color_hover !== $footer_link_color_hover ) :
 			$css->set_selector( '.site-info a:hover' );
 			$css->add_property( 'color', esc_attr( $kelso_settings['footer_link_color_hover'] ) );
+		endif;
+
+		/*
+		 * Top Bar --------------------------------
+		 */
+		if ( $default_topbar_bg_color !== $topbar_bg_color ) :
+			$css->set_selector( '.topbar' );
+			$css->add_property( 'background-color', esc_attr( $kelso_settings['topbar_background_color'] ) );
+		endif;
+		if ( $default_topbar_widget_title_color !== $topbar_widget_title_color ) :
+			$css->set_selector( '.topbar .widget-title' );
+			$css->add_property( 'color', esc_attr( $kelso_settings['topbar_widget_title_color'] ) );
+		endif;
+		if ( $default_topbar_text_color !== $topbar_text_color ) :
+			$css->set_selector( '.topbar' );
+			$css->add_property( 'color', esc_attr( $kelso_settings['topbar_text_color'] ) );
+		endif;
+		if ( $default_topbar_link_color !== $topbar_link_color ) :
+			$css->set_selector( '.topbar a:not(.btn), .topbar button.dropdown-toggle' );
+			$css->add_property( 'color', esc_attr( $kelso_settings['topbar_link_color'] ) );
+		endif;
+		if ( $default_topbar_link_color_hover !== $topbar_link_color_hover ) :
+			$css->set_selector( '.topbar a:not(.btn):hover' );
+			$css->add_property( 'color', esc_attr( $kelso_settings['topbar_link_color_hover'] ) );
 		endif;
 
 		// Allow us to hook CSS into our output.

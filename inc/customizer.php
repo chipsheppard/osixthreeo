@@ -300,7 +300,8 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	 // Footer Widgets Background Color.
+	// FOOTER WIDGETS
+	 // FW - Background Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footerwidgets_background_color]', array(
 			'default' => $defaults['footerwidgets_background_color'],
@@ -322,7 +323,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Footer Widgets - Widget Title Color.
+	// FW - Widget Title Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footerwidgets_widget_title_color]', array(
 			'default' => $defaults['footerwidgets_widget_title_color'],
@@ -344,7 +345,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Footer Widgets Text Color.
+	// FW - Text Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footerwidgets_text_color]', array(
 			'default' => $defaults['footerwidgets_text_color'],
@@ -366,7 +367,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Footer Widgets Link.
+	// FW - Link Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footerwidgets_link_color]', array(
 			'default' => $defaults['footerwidgets_link_color'],
@@ -388,7 +389,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Footer Widgets Link-Hover.
+	// FW - Link Hover Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footerwidgets_link_color_hover]', array(
 			'default' => $defaults['footerwidgets_link_color_hover'],
@@ -410,7 +411,8 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	 // Site Footer Background.
+	// SITE FOOTER
+	// SF - Background Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footer_background_color]', array(
 			'default' => $defaults['footer_background_color'],
@@ -432,7 +434,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Site Footer Text.
+	// SF - Text Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footer_text_color]', array(
 			'default' => $defaults['footer_text_color'],
@@ -454,7 +456,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Site Footer Link.
+	// SF - Link Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footer_link_color]', array(
 			'default' => $defaults['footer_link_color'],
@@ -476,7 +478,7 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Site Footer Link-Hover.
+	// SF - Link Hover Color.
 	$wp_customize->add_setting(
 		'kelso_settings[footer_link_color_hover]', array(
 			'default' => $defaults['footer_link_color_hover'],
@@ -494,6 +496,117 @@ function kelso_customize_register( $wp_customize ) {
 				'section' => 'colors',
 				'settings' => 'kelso_settings[footer_link_color_hover]',
 				'priority' => 190,
+			)
+		)
+	);
+
+	// TOP BAR --------------------------------------------------
+	// TB - Background Color.
+	$wp_customize->add_setting(
+		'kelso_settings[topbar_background_color]', array(
+			'default' => $defaults['topbar_background_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[topbar_background_color]',
+			array(
+				'label' => __( 'Topbar Background Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[topbar_background_color]',
+				'priority' => 200,
+			)
+		)
+	);
+
+	// TB - Widget Title Color.
+	$wp_customize->add_setting(
+		'kelso_settings[topbar_widget_title_color]', array(
+			'default' => $defaults['topbar_widget_title_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[topbar_widget_title_color]',
+			array(
+				'label' => __( 'Topbar Widget Title Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[topbar_widget_title_color]',
+				'priority' => 210,
+			)
+		)
+	);
+
+	// TB - Text Color.
+	$wp_customize->add_setting(
+		'kelso_settings[topbar_text_color]', array(
+			'default' => $defaults['topbar_text_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[topbar_text_color]',
+			array(
+				'label' => __( 'Topbar Text Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[topbar_text_color]',
+				'priority' => 220,
+			)
+		)
+	);
+
+	// TB - Link Color.
+	$wp_customize->add_setting(
+		'kelso_settings[topbar_link_color]', array(
+			'default' => $defaults['topbar_link_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[topbar_link_color]',
+			array(
+				'label' => __( 'Topbar Link Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[topbar_link_color]',
+				'priority' => 230,
+			)
+		)
+	);
+
+	// TB - Link Hover Color.
+	$wp_customize->add_setting(
+		'kelso_settings[topbar_link_color_hover]', array(
+			'default' => $defaults['topbar_link_color_hover'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[topbar_link_color_hover]',
+			array(
+				'label' => __( 'Topbar Link Hover Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[topbar_link_color_hover]',
+				'priority' => 240,
 			)
 		)
 	);

@@ -17,13 +17,16 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 	 */
 	function kelso_get_defaults() {
 		$kelso_defaults = array(
-			'background_color' => '#ffffff',
+			'background_color' => '#f5f5f5',
 			'content_background_color' => '',
+			'content_inner_background_color' => '',
+			'content_title_color' => '',
+			'content_title_placement' => '',
 			'text_color' => '#222222',
 			'link_color' => '#1f9bde',
 			'link_color_hover' => '#ff9900',
 
-			'header_background_color' => '',
+			'header_background_color' => '#ffffff',
 			'nav_link_color' => '#222222',
 
 			'stickyheader_background_color' => '#ffffff',
@@ -39,6 +42,12 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'footer_text_color' => '#c0c0c0',
 			'footer_link_color' => '#808080',
 			'footer_link_color_hover' => '#c0c0c0',
+
+			'topbar_background_color' => '#ffffff',
+			'topbar_widget_title_color' => '#222222',
+			'topbar_text_color' => '#222222',
+			'topbar_link_color' => '#1f9bde',
+			'topbar_link_color_hover' => '#ff9900',
 
 			'global_width_setting' => 'full',
 
@@ -59,10 +68,6 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'hero_text_secondary_color' => '#ffffff',
 
 			'nav_search' => '',
-			'content_inner_background_color' => '#ffffff',
-			'content_title_color' => '',
-			'content_title_placement' => '',
-
 			'do_masonry' => '',
 			'back_to_top' => '',
 		);
