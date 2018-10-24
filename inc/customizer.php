@@ -315,7 +315,7 @@ function kelso_customize_register( $wp_customize ) {
 			$wp_customize,
 			'kelso_settings[footerwidgets_background_color]',
 			array(
-				'label' => __( 'Footer Widgets Background Color', 'kelso' ),
+				'label' => __( 'Sub-Footer Background Color', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[footerwidgets_background_color]',
 				'priority' => 110,
@@ -337,7 +337,7 @@ function kelso_customize_register( $wp_customize ) {
 			$wp_customize,
 			'kelso_settings[footerwidgets_widget_title_color]',
 			array(
-				'label' => __( 'Footer Widget Title Color', 'kelso' ),
+				'label' => __( 'Sub-Footer Title Color', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[footerwidgets_widget_title_color]',
 				'priority' => 120,
@@ -359,7 +359,7 @@ function kelso_customize_register( $wp_customize ) {
 			$wp_customize,
 			'kelso_settings[footerwidgets_text_color]',
 			array(
-				'label' => __( 'Footer Widgets Text Color', 'kelso' ),
+				'label' => __( 'Sub-Footer Text Color', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[footerwidgets_text_color]',
 				'priority' => 130,
@@ -381,7 +381,7 @@ function kelso_customize_register( $wp_customize ) {
 			$wp_customize,
 			'kelso_settings[footerwidgets_link_color]',
 			array(
-				'label' => __( 'Footer Widgets Link Color', 'kelso' ),
+				'label' => __( 'Sub-Footer Link Color', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[footerwidgets_link_color]',
 				'priority' => 140,
@@ -403,7 +403,7 @@ function kelso_customize_register( $wp_customize ) {
 			$wp_customize,
 			'kelso_settings[footerwidgets_link_color_hover]',
 			array(
-				'label' => __( 'Footer Widgets Link Hover Color', 'kelso' ),
+				'label' => __( 'Sub-Footer Link Hover Color', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[footerwidgets_link_color_hover]',
 				'priority' => 150,

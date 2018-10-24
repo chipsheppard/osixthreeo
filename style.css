@@ -2944,7 +2944,7 @@ img.flex {
 }
 
 .header-wrap.stuck .custom-logo img {
-  max-height: 50px;
+  max-height: 40px;
   width: auto;
 }
 
