@@ -981,6 +981,7 @@ function kelso_customize_register( $wp_customize ) {
 			'default' => $defaults['header_layout'],
 			'type' => 'option',
 			'sanitize_callback' => 'kelso_sanitize_choices',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(
@@ -1042,6 +1043,7 @@ function kelso_customize_register( $wp_customize ) {
 			'default' => $defaults['content_title_placement'],
 			'type' => 'option',
 			'sanitize_callback' => 'kelso_sanitize_choices',
+			'transport' => 'postMessage',
 		)
 	);
 	$wp_customize->add_control(

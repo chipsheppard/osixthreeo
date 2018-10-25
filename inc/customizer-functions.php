@@ -31,33 +31,6 @@ if ( ! function_exists( 'kelso_get_setting' ) ) {
 }
 
 /*
- * CONTAINMENT
- -----------------------------------------------------------------
- */
-if ( ! function_exists( 'kelso_sitecontain_class' ) ) {
-	/**
-	 * Adds custom class to section containers.
-	 */
-	function kelso_sitecontain_class() {
-
-		$kelso_settings = wp_parse_args(
-			get_option( 'kelso_settings', array() ),
-			kelso_get_defaults()
-		);
-
-		$site_layout = $kelso_settings['global_width_setting'];
-
-		if ( 'contained' === $site_layout ) {
-			$contain_class = ' contained';
-		} else {
-			return;
-		}
-
-		echo esc_html( $contain_class );
-	}
-}
-
-/*
  * SIDEBAR LAYOUTS
  -----------------------------------------------------------------
  */
@@ -112,100 +85,118 @@ if ( ! function_exists( 'kelso_get_layout' ) ) {
 }
 
 
-// SIDEBAR Body Class.
-if ( ! function_exists( 'kelso_sidebar_bodyclass' ) ) {
-	/**
-	 * Write the body class for the Layout, left, right or no sidebar.
-	 */
-	function kelso_sidebar_bodyclass() {
-
-		$layout = kelso_get_layout();
-
-		if ( 'layout-ls' === $layout ) :
-
-			add_filter( 'body_class', function( $classes ) {
-				return array_merge( $classes, array( 'sidebar-left' ) );
-			} );
-
-		elseif ( 'layout-rs' === $layout ) :
-
-			add_filter( 'body_class', function( $classes ) {
-				return array_merge( $classes, array( 'sidebar-right' ) );
-			} );
-
-		elseif ( 'layout-c' === $layout ) :
-
-			add_filter( 'body_class', function( $classes ) {
-				return array_merge( $classes, array( 'nosidebar-silo' ) );
-			} );
-
-		endif;
-	}
-}
-
-// SIDEBAR RIGHT.
-if ( ! function_exists( 'kelso_get_right_sidebar' ) ) {
-	/**
-	 * If layout is right sidebar...
-	 */
-	function kelso_get_right_sidebar() {
-
-		$layout = kelso_get_layout();
-
-		if ( 'layout-rs' === $layout ) :
-			if ( is_page() ) :
-				get_sidebar( 'page' );
-			else :
-				get_sidebar();
-			endif;
-		endif;
-	}
-}
-
-// SIDEBAR LEFT.
-if ( ! function_exists( 'kelso_get_left_sidebar' ) ) {
-	/**
-	 * If layout is left sidebar...
-	 */
-	function kelso_get_left_sidebar() {
-
-		$layout = kelso_get_layout();
-
-		if ( 'layout-ls' === $layout ) :
-			if ( is_page() ) :
-				get_sidebar( 'page' );
-			else :
-				get_sidebar();
-			endif;
-		endif;
-	}
-}
-
-
 /*
- * HEADER LAYOUT
+ * CONTAINMENT
  -----------------------------------------------------------------
  */
-if ( ! function_exists( 'kelso_header_layout_class' ) ) {
+if ( ! function_exists( 'kelso_sitecontain_class' ) ) {
 	/**
 	 * Adds custom class to section containers.
 	 */
-	function kelso_header_layout_class() {
+	function kelso_sitecontain_class() {
 
 		$kelso_settings = wp_parse_args(
 			get_option( 'kelso_settings', array() ),
 			kelso_get_defaults()
 		);
 
-		$header_layout = $kelso_settings['header_layout'];
+		$site_layout = $kelso_settings['global_width_setting'];
 
-		if ( 'headercentered' === $header_layout ) {
-			$header_layout_class = ' header-centered';
+		if ( 'contained' === $site_layout ) {
+			add_filter( 'body_class', function( $classes ) {
+				return array_merge( $classes, array( 'contained' ) );
+			} );
 		} else {
 			return;
 		}
+	}
+}
 
-		echo esc_html( $header_layout_class );
+/**
+ * SIDEBAR Body Class.
+ * -----------------------------------------------------------------
+ * Write the body class for the Layout, left, right or no sidebar.
+ */
+function kelso_sidebar_bodyclass() {
+
+	$layout = kelso_get_layout();
+
+	if ( 'layout-ls' === $layout ) :
+
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'sidebar-left' ) );
+		} );
+
+	elseif ( 'layout-rs' === $layout ) :
+
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'sidebar-right' ) );
+		} );
+
+	elseif ( 'layout-c' === $layout ) :
+
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'nosidebar-silo' ) );
+		} );
+
+	endif;
+}
+
+/**
+ * SIDEBAR RIGHT.
+ * If layout is right sidebar...
+ */
+function kelso_get_right_sidebar() {
+
+	$layout = kelso_get_layout();
+
+	if ( 'layout-rs' === $layout ) :
+		if ( is_page() ) :
+			get_sidebar( 'page' );
+		else :
+			get_sidebar();
+		endif;
+	endif;
+}
+
+/**
+ * SIDEBAR LEFT.
+ * If layout is left sidebar...
+ */
+function kelso_get_left_sidebar() {
+
+	$layout = kelso_get_layout();
+
+	if ( 'layout-ls' === $layout ) :
+		if ( is_page() ) :
+			get_sidebar( 'page' );
+		else :
+			get_sidebar();
+		endif;
+	endif;
+}
+
+
+/**
+ * HEADER LAYOUT
+ * -----------------------------------------------------------------
+ * Adds custom class to section containers.
+ */
+function kelso_header_layout_class() {
+
+	$kelso_settings = wp_parse_args(
+		get_option( 'kelso_settings', array() ),
+		kelso_get_defaults()
+	);
+
+	$header_layout = $kelso_settings['header_layout'];
+
+	if ( 'headercentered' === $header_layout ) {
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'headercentered' ) );
+		} );
+	} else {
+		return;
 	}
 }
 
@@ -217,7 +208,6 @@ if ( ! function_exists( 'kelso_header_layout_class' ) ) {
 
 // Write the search form.
 if ( ! function_exists( 'kelso_navigation_search' ) ) {
-	add_action( 'kelso_inside_navigation', 'kelso_navigation_search' );
 	/**
 	 * Add search to primary menu if set.
 	 */
@@ -235,11 +225,12 @@ if ( ! function_exists( 'kelso_navigation_search' ) ) {
 
 		get_search_form();
 	}
+
+	add_action( 'kelso_inside_navigation', 'kelso_navigation_search' );
 }
 
 // Append search button to the menu.
 if ( ! function_exists( 'kelso_menu_search_icon' ) ) {
-	add_filter( 'wp_nav_menu_items', 'kelso_menu_search_icon', 10, 2 );
 	/**
 	 * Add search icon to menu
 	 *
@@ -270,6 +261,8 @@ if ( ! function_exists( 'kelso_menu_search_icon' ) ) {
 
 		return $nav;
 	}
+
+	add_filter( 'wp_nav_menu_items', 'kelso_menu_search_icon', 10, 2 );
 }
 
 /*
@@ -309,32 +302,32 @@ if ( ! function_exists( 'kelso_home_header_height' ) ) {
  * TITLE PLACEMENT
  -----------------------------------------------------------------
  */
-if ( ! function_exists( 'kelso_title_placement_class' ) ) {
-	/**
-	 * Adds custom class to section containers.
-	 */
-	function kelso_title_placement_class() {
+/**
+ * Adds custom class to section containers.
+ */
+function kelso_title_placement_class() {
 
-		if ( is_front_page() ) {
-			return;
-		}
+	if ( is_front_page() ) {
+		return;
+	}
 
-		$kelso_settings = wp_parse_args(
-			get_option( 'kelso_settings', array() ),
-			kelso_get_defaults()
-		);
+	$kelso_settings = wp_parse_args(
+		get_option( 'kelso_settings', array() ),
+		kelso_get_defaults()
+	);
 
-		$title_placement = $kelso_settings['content_title_placement'];
+	$title_placement = $kelso_settings['content_title_placement'];
 
-		if ( 'titlelifted' === $title_placement ) {
-			$title_placement_class = ' titlelifted';
-		} elseif ( 'contentlifted' === $title_placement ) {
-			$title_placement_class = ' contentlifted';
-		} else {
-			return;
-		}
-
-		echo esc_html( $title_placement_class );
+	if ( 'titlelifted' === $title_placement ) {
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'titlelifted' ) );
+		} );
+	} elseif ( 'contentlifted' === $title_placement ) {
+		add_filter( 'body_class', function( $classes ) {
+			return array_merge( $classes, array( 'contentlifted' ) );
+		} );
+	} else {
+		return;
 	}
 }
 

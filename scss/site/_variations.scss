@@ -2,12 +2,12 @@
 --------------------------------------------- */
 
 // TITLE ABOVE CONTENT IN HEADER
-body.page .titlelifted .entry-header,
-body.single .titlelifted .entry-header,
-body.blog .titlelifted .page-header,
-body.archive .titlelifted .page-header,
-body.search .titlelifted .page-header,
-body.error404 .titlelifted .page-header {
+body.page.titlelifted .entry-header,
+body.single.titlelifted .entry-header,
+body.blog.titlelifted .page-header,
+body.archive.titlelifted .page-header,
+body.search.titlelifted .page-header,
+body.error404.titlelifted .page-header {
 	height: 360px;
 	position: absolute;
 	top: 0;
@@ -36,28 +36,19 @@ body.error404 .titlelifted .page-header {
 	}
 }
 
-body.page .titlelifted .entry-title,
-body.single .titlelifted .entry-title,
-body.blog .titlelifted .page-title,
-body.archive .titlelifted .page-title,
-body.search .titlelifted .page-title,
-body.error404 .titlelifted .page-title {
+body.page.titlelifted .entry-title,
+body.single.titlelifted .entry-title,
+body.blog.titlelifted .page-title,
+body.archive.titlelifted .page-title,
+body.search.titlelifted .page-title,
+body.error404.titlelifted .page-title {
 	color: #ffffff;
 	font-weight: $font__weight-semibold;
 	text-shadow: 0 0 8px rgba(0, 0, 0, .5);
 	line-height: 1;
 }
 
-body.admin-bar.page .titlelifted .entry-header,
-body.admin-bar.single .titlelifted .entry-header,
-body.admin-bar.blog .titlelifted .page-header,
-body.admin-bar.archive .titlelifted .page-header,
-body.admin-bar.search .titlelifted .page-header,
-body.admin-bar.error404 .titlelifted .page-header {
-	top: 32px;
-}
-
-.single .titlelifted .entry-meta {
+.single.titlelifted .entry-meta {
 	letter-spacing: 1px;
 	text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
 
@@ -74,7 +65,7 @@ body.admin-bar.error404 .titlelifted .page-header {
 
 
 // TITLE UP INSIDE THE CUSTOM HEADER
-.site-main.contentlifted {
+.contentlifted .site-main {
 	border-radius: 3px;
 	margin-top: -6em;
 	margin-left: 4%;
@@ -82,30 +73,30 @@ body.admin-bar.error404 .titlelifted .page-header {
 	position: relative;
 	width: 92%;
 }
-.sidebar-left .site-main.contentlifted {
+.sidebar-left.contentlifted .site-main {
 	margin-right: 4%;
 	margin-left: 0;
 	width: 96%;
 }
-.sidebar-right .site-main.contentlifted {
+.sidebar-right.contentlifted .site-main {
 	width: 96%;
 }
 
-body.page .contentlifted .entry-header,
-body.blog .contentlifted .page-header,
-body.error404 .contentlifted .page-header {
+body.page.contentlifted .entry-header,
+body.blog.contentlifted .page-header,
+body.error404.contentlifted .page-header {
 	margin-bottom: 3em;
 }
 
-body.archive .contentlifted .page-header,
-body.search .contentlifted .page-header,
-body.single .contentlifted .entry-header{
+body.archive.contentlifted .page-header,
+body.search.contentlifted .page-header,
+body.single.contentlifted .entry-header{
 	margin-bottom: .5em;
 }
 
 
 // HEADER CENTERED
-.header-centered {
+body.headercentered {
 
 	.site-branding {
 		display: block;

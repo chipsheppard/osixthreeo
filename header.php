@@ -21,14 +21,14 @@
 <body <?php body_class(); ?>>
 <?php tha_body_top(); ?>
 
-<div id="page" class="site<?php kelso_sitecontain_class(); ?>">
+<div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kelso' ); ?></a>
 
 	<?php kelso_display_topbar(); ?>
 
 	<?php tha_header_before(); ?>
 
-	<header id="masthead" class="site-header<?php kelso_header_layout_class(); ?>">
+	<header id="masthead" class="site-header">
 
 		<div class="header-wrap">
 			<div class="inner-wrap">

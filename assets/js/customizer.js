@@ -268,10 +268,40 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 	wp.customize( 'kelso_settings[global_width_setting]', function( value ) {
 		value.bind( function( newval ) {
 			if ( 'full' === newval ) {
-				$( '.site' ).removeClass( 'contained' );
+				$( 'body' ).removeClass( 'contained' );
 			}
 			if ( 'contained' === newval ) {
-				$( '.site' ).addClass( 'contained' );
+				$( 'body' ).addClass( 'contained' );
+			}
+		} );
+	} );
+
+	// HEADER LAYOUT
+	wp.customize( 'kelso_settings[header_layout]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'headernormal' === newval ) {
+				$( 'body' ).removeClass( 'headercentered' );
+			}
+			if ( 'headercentered' === newval ) {
+				$( 'body' ).addClass( 'headercentered' );
+			}
+		} );
+	} );
+
+	// CONTENT TITLE
+	wp.customize( 'kelso_settings[content_title_placement]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'normal' === newval ) {
+				$( 'body' ).removeClass( 'titlelifted' );
+				$( 'body' ).removeClass( 'contentlifted' );
+			}
+			if ( 'titlelifted' === newval ) {
+				$( 'body' ).removeClass( 'contentlifted' );
+				$( 'body' ).addClass( 'titlelifted' );
+			}
+			if ( 'contentlifted' === newval ) {
+				$( 'body' ).removeClass( 'titlelifted' );
+				$( 'body' ).addClass( 'contentlifted' );
 			}
 		} );
 	} );

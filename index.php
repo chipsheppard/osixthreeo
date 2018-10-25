@@ -7,6 +7,9 @@
 
 kelso_sidebar_bodyclass();
 kelso_home_header_height();
+kelso_sitecontain_class();
+kelso_header_layout_class();
+kelso_title_placement_class();
 get_header();
 tha_content_before();
 kelso_get_left_sidebar();
@@ -15,7 +18,7 @@ kelso_get_left_sidebar();
 <div id="primary" class="content-area">
 	<?php tha_content_wrap_before(); ?>
 
-	<main id="main" class="site-main<?php kelso_title_placement_class(); ?>" role="main">
+	<main id="main" class="site-main" role="main">
 		<?php
 		tha_content_top();
 		tha_content_loop();

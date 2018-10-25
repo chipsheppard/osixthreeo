@@ -345,7 +345,7 @@ function kelso_enqueue_dynamic_css() {
 	if ( ! get_option( 'kelso_dynamic_css_output', false ) || is_customize_preview() || apply_filters( 'kelso_dynamic_css_skip_cache', false ) ) {
 		$css = kelso_base_css();
 	} else {
-		$css = get_option( 'kelso_dynamic_css_output' ) . '/* End WP Customizer CSS */';
+		$css = get_option( 'kelso_dynamic_css_output' ) . '/* Customizer CSS */';
 	}
 
 	wp_add_inline_style( $handle, $css );

@@ -55,7 +55,7 @@ function kelso_scripts() {
 add_action( 'wp_enqueue_scripts', 'kelso_scripts' );
 
 /**
- * Don't load masonry on Woo Shop page
+ * Is this the Shop page?
  */
 function kelso_is_shop() {
 	if ( WPEX_WOOCOMMERCE_ACTIVE && is_shop() ) {

@@ -21,23 +21,28 @@ add_action( 'after_setup_theme', 'kelso_add_woocommerce_support' );
  * Remove WooCommerce Styles
  *
  * @param array $styles An array of stylesheets added by WooCommerce.
-function wpex_remove_woo_styles( $styles ) {
-	unset( $styles['woocommerce-general'] );
-	unset( $styles['woocommerce-layout'] );
-	unset( $styles['woocommerce-smallscreen'] );
-	return $styles;
-}
-add_filter( 'woocommerce_enqueue_styles', 'wpex_remove_woo_styles' );
+ * function wpex_remove_woo_styles( $styles ) {
+ * unset( $styles['woocommerce-general'] );
+ * unset( $styles['woocommerce-layout'] );
+ * unset( $styles['woocommerce-smallscreen'] );
+ * return $styles;
+ * }
+ * add_filter( 'woocommerce_enqueue_styles', 'wpex_remove_woo_styles' );
  */
 
-// add_theme_support( 'wc-product-gallery-slider' );.
-// add_theme_support( 'wc-product-gallery-zoom' );.
-// add_theme_support( 'wc-product-gallery-lightbox' );.
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+/*
+ * add_theme_support( 'wc-product-gallery-slider' );
+ * add_theme_support( 'wc-product-gallery-zoom' );
+ * add_theme_support( 'wc-product-gallery-lightbox' );
+*/
 
-add_action( 'woocommerce_before_main_content', 'kelso_theme_wrapper_start', 10 );
-add_action( 'woocommerce_after_main_content', 'kelso_theme_wrapper_end', 10 );
+/**
+ * This just does NOT work here. See body classes below
+ * kelso_sidebar_bodyclass();
+ */
+kelso_sitecontain_class();
+kelso_header_layout_class();
+kelso_title_placement_class();
 
 /**
  * Body classes.
@@ -56,6 +61,12 @@ function kelso_woosidebar_bodyclass( $classes ) {
 	return $classes;
 }
 add_filter( 'body_class','kelso_woosidebar_bodyclass' );
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+
+add_action( 'woocommerce_before_main_content', 'kelso_theme_wrapper_start', 10 );
+add_action( 'woocommerce_after_main_content', 'kelso_theme_wrapper_end', 10 );
 
 /**
  * The opening wrapper.
