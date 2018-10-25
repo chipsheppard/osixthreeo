@@ -62,9 +62,9 @@ function kelso_woosidebar_bodyclass( $classes ) {
 }
 add_filter( 'body_class','kelso_woosidebar_bodyclass' );
 
+
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
-
 add_action( 'woocommerce_before_main_content', 'kelso_theme_wrapper_start', 10 );
 add_action( 'woocommerce_after_main_content', 'kelso_theme_wrapper_end', 10 );
 
@@ -94,6 +94,7 @@ function kelso_theme_wrapper_end() {
 	tha_content_after();
 }
 
+
 /**
  * Remove the sidebar.
  *
@@ -104,6 +105,7 @@ function kelso_adjust_woo() {
 }
 add_action( 'init', 'kelso_adjust_woo' );
 
+
 /**
  * Remove the breadcrumbs
  */
@@ -111,6 +113,7 @@ function kelso_remove_wc_breadcrumbs() {
 	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
 }
 add_action( 'init', 'kelso_remove_wc_breadcrumbs' );
+
 
 /**
  * Move product entry title before image.

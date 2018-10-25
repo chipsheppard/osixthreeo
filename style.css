@@ -537,7 +537,7 @@ q:after {
 blockquote {
   background: #ffffff;
   box-shadow: 0px 0px 8px #dcdcdc;
-  margin: 0 1.5em 1.5em 0;
+  margin: .75em 1.5em 1.5em 0;
   padding: 1.5em 1.875em 1.5em 3.5em;
   position: relative;
   quotes: "“" "”" "“" "”";
@@ -602,7 +602,7 @@ blockquote.pullright {
   float: right;
   width: 32%;
   padding: 1em 1.5em .25em;
-  margin: 0 0 1.5em 1.5em;
+  margin: .75em 0 1.5em 1.5em;
 }
 
 blockquote.pullright:before {
@@ -3409,6 +3409,10 @@ body.error404.titlelifted .page-title {
   color: #ffffff;
 }
 
+.titlelifted .archive-description {
+  color: #ffffff;
+}
+
 .contentlifted .site-main {
   border-radius: 3px;
   margin-top: -6em;
@@ -3557,10 +3561,6 @@ body.headercentered .menu-wrap {
   opacity: .75;
 }
 
-.entry-meta .updated-on {
-  display: block;
-}
-
 .entry-meta .comments-link {
   margin-left: .5em;
 }
@@ -3633,32 +3633,6 @@ body.headercentered .menu-wrap {
   overflow: hidden;
 }
 
-.blog .do-masonry .hentry,
-.archive .do-masonry .hentry {
-  width: 48%;
-  margin: 0 1% 2em;
-}
-
-@media all and (max-width: 500px) {
-  .blog .do-masonry .hentry,
-  .archive .do-masonry .hentry {
-    width: 98%;
-  }
-}
-
-.blog .do-masonry .hentry .featured-image,
-.archive .do-masonry .hentry .featured-image {
-  display: block;
-  float: none;
-  padding: 0;
-}
-
-.blog .do-masonry .hentry .wp-post-image,
-.archive .do-masonry .hentry .wp-post-image {
-  display: block;
-  width: 100%;
-}
-
 .blog .entry-content,
 .archive .entry-content {
   padding: 0 1.5em;
@@ -3708,6 +3682,30 @@ body.headercentered .menu-wrap {
 ===============================*/
 .sticky .entry-header {
   border-top: 2px solid #1e90ff;
+}
+
+/* MASONRY
+===============================*/
+.do-masonry.blog .hentry, .do-masonry.archive .hentry {
+  width: 48%;
+  margin: 0 1% 2em;
+}
+
+@media all and (max-width: 500px) {
+  .do-masonry.blog .hentry, .do-masonry.archive .hentry {
+    width: 98%;
+  }
+}
+
+.do-masonry.blog .hentry .featured-image, .do-masonry.archive .hentry .featured-image {
+  display: block;
+  float: none;
+  padding: 0;
+}
+
+.do-masonry.blog .hentry .wp-post-image, .do-masonry.archive .hentry .wp-post-image {
+  display: block;
+  width: 100%;
 }
 
 /* Search Results
@@ -4190,7 +4188,7 @@ Widgets
 
 .footer-widgets input[type="search"] {
   background-color: rgba(0, 0, 0, 0.3);
-  border-color: #222222;
+  border-color: rgba(255, 255, 255, 0.3);
   color: #ffffff;
   float: left;
   margin-bottom: 2em;
@@ -4232,12 +4230,12 @@ Widgets
 }
 
 .footer-widgets ::-moz-placeholder {
-  color: #222222;
+  color: #808080;
   opacity: 1;
 }
 
 .footer-widgets ::-webkit-input-placeholder {
-  color: #222222;
+  color: #808080;
 }
 
 .footer-widget {

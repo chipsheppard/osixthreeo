@@ -26,29 +26,6 @@
 		}
 	}
 
-	.do-masonry {
-		.hentry {
-			width: 48%;
-			margin: 0 1% 2em;
-
-			@include breakpoint(phone-h) {
-				width: 98%;
-			}
-
-			.featured-image {
-				display: block;
-				float: none;
-				padding: 0;
-			}
-
-			.wp-post-image {
-				display: block;
-				width: 100%;
-			}
-		}
-	}
-
-
 	.entry-content {
 		padding: 0 1.5em;
 
@@ -93,5 +70,34 @@
 .sticky {
 	.entry-header {
 		border-top:2px solid $color__highlight;
+	}
+}
+
+
+/* MASONRY
+===============================*/
+.do-masonry {
+
+	&.blog,
+	&.archive {
+		.hentry {
+			width: 48%;
+			margin: 0 1% 2em;
+
+			@include breakpoint(phone-h) {
+				width: 98%;
+			}
+
+			.featured-image {
+				display: block;
+				float: none;
+				padding: 0;
+			}
+
+			.wp-post-image {
+				display: block;
+				width: 100%;
+			}
+		}
 	}
 }

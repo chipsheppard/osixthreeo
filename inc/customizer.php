@@ -211,6 +211,29 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Content Title Color.
+	$wp_customize->add_setting(
+		'kelso_settings[content_title_color]', array(
+			'default' => $defaults['content_title_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			'transport' => 'postMessage',
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[content_title_color]',
+			array(
+				'label' => __( 'Post/Page Title Color', 'kelso' ),
+				'description' => __( 'Page and Post titles (not homepage).', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[content_title_color]',
+				'priority' => 70,
+			)
+		)
+	);
+
 	// Colors Text.
 	$wp_customize->add_setting(
 		'kelso_settings[text_color]', array(
@@ -228,7 +251,7 @@ function kelso_customize_register( $wp_customize ) {
 				'label' => __( 'Text Color', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[text_color]',
-				'priority' => 70,
+				'priority' => 80,
 			)
 		)
 	);
@@ -250,7 +273,7 @@ function kelso_customize_register( $wp_customize ) {
 				'description' => __( 'Links & Buttons', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[link_color]',
-				'priority' => 80,
+				'priority' => 90,
 			)
 		)
 	);
@@ -272,29 +295,6 @@ function kelso_customize_register( $wp_customize ) {
 				'description' => __( 'Link hover states & "secondary" buttons', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[link_color_hover]',
-				'priority' => 90,
-			)
-		)
-	);
-
-	// Content Title Color.
-	$wp_customize->add_setting(
-		'kelso_settings[content_title_color]', array(
-			'default' => $defaults['content_title_color'],
-			'type' => 'option',
-			'sanitize_callback' => 'sanitize_hex_color',
-			'transport' => 'postMessage',
-		)
-	);
-	$wp_customize->add_control(
-		new WP_Customize_Color_Control(
-			$wp_customize,
-			'kelso_settings[content_title_color]',
-			array(
-				'label' => __( 'Post/Page Title Color', 'kelso' ),
-				'description' => __( 'Choose the color of all page and post titles.', 'kelso' ),
-				'section' => 'colors',
-				'settings' => 'kelso_settings[content_title_color]',
 				'priority' => 100,
 			)
 		)

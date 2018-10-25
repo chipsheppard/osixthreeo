@@ -10,6 +10,7 @@ kelso_home_header_height();
 kelso_sitecontain_class();
 kelso_header_layout_class();
 kelso_title_placement_class();
+kelso_masonry_class();
 get_header();
 tha_content_before();
 kelso_get_left_sidebar();

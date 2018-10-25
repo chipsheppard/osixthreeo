@@ -38,7 +38,7 @@ function kelso_default_loop() {
 		</header>
 		<?php endif; ?>
 
-		<div class="loop-wrap<?php kelso_masonry_class(); ?>">
+		<div class="loop-wrap">
 
 			<?php
 			tha_content_while_before();

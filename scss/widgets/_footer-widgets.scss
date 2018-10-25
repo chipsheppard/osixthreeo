@@ -43,7 +43,7 @@
 
 	input[type="search"] {
 		background-color: rgba(0,0,0,.3);
-		border-color: $color__base;
+		border-color: rgba(255,255,255,.3);
 		color: #ffffff;
 		float: left;
 		margin-bottom: 2em;
@@ -83,11 +83,11 @@
 	}
 
 	::-moz-placeholder {
-		color: $color__base;
+		color: $color__base-medium;
 		opacity: 1;
 	}
 	::-webkit-input-placeholder {
-		color: $color__base;
+		color: $color__base-medium;
 	}
 }
 
