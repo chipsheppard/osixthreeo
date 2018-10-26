@@ -863,11 +863,11 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
   background-color: #ff8c00;
 }
 
-.btn.darklight {
+.btn.dark {
   background-color: #222222;
 }
 
-.btn.darklight:after {
+.btn.dark:after {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -2456,10 +2456,6 @@ img.flex {
 
 .bg-base-xxlight {
   background-color: #f5f5f5;
-}
-
-.bg-darklight {
-  background-color: #222222;
 }
 
 .text-highlight {

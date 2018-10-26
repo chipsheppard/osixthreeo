@@ -103,7 +103,7 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
 		color: #000000;
 
 		&:after {
-			background-color: $color__darklight;
+			background-color: $color__base;
 		}
 
 		&:hover {
@@ -115,8 +115,8 @@ button:not(.responsive-menu-icon):not(.dropdown-toggle):not(.wp-custom-header-vi
 		background-color: $color__secondary;
 	}
 
-	&.darklight {
-		background-color: $color__darklight;
+	&.dark {
+		background-color: $color__base;
 
 		&:after {
 			background-color: rgba(255,255,255,0.2);

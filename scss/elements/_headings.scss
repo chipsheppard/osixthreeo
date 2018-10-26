@@ -3,12 +3,12 @@
  ------------------------------------------- */
 
 h1, h2, h3, h4, h5, h6 {
-	color: $color__darklight;
+	color: $color__base;
 	line-height: 1.2;
     margin: 0 0 3%;
 
 	a {
-		color: $color__darklight;
+		color: $color__base;
 		display: inline-block;
 
 		&:hover {
