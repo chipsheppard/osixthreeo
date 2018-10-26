@@ -65,7 +65,7 @@ function kelso_customize_register( $wp_customize ) {
 
 	// header image.
 	$wp_customize->add_setting( 'header_image' , array(
-		'default'     => '',
+		'default'     => get_template_directory_uri() . 'assets/imgages/noise.png',
 		'transport'   => 'refresh',
 		'sanitize_callback' => 'esc_url_raw',
 	) );

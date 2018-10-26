@@ -1,32 +1,25 @@
-# Kelso #
+=== Kelso ===
 
-Contributors: chip sheppard
+Contributors: chipsheppard
 Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, featured-image-header, custom-logo, custom-colors, custom-background, flexible-header, grid-layout, right-sidebar, left-sidebar, two-columns
-
 Requires at least: 4.0
-Tested up to: 4.9.8
+Tested up to: 4.9.9
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A theme called Kelso, based on underscores.
+Kelso, a flexible theme with a focus on the custom header area and featured images.
 
-## Description ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+== Description ==
+Kelso is a basic but flexible theme that makes use of the WP Customizer to make layout and design options to the user.
 
-Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A basic but flexible that makes use of the WP Customizer.
+== Frequently Asked Questions ==
 
-## Installation ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+= Does Kelso have widget areas? =
 
-1. In your admin panel, go to Appearance > Themes and click the Add New button.
-2. Click Upload and Choose File, then select the theme's .zip file. Click Install Now.
-3. Click Activate to use your new theme right away.
+An answer to that question.
 
-## Theme Stats ##
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-** 7 Widget Areas **
+** 8 Widget Areas **
   - Posts Sidebar
   - Pages Sidebar
   - Sub-Footer 1
@@ -34,6 +27,7 @@ Kelso is based on Underscores ( \_s ) by Automatic, the keepers of WordPress. A 
   - Sub-Footer 3
   - Sub-Footer 4
   - Footer Widget Area
+  - TopBar Widget Area
 
 ** 2 Supported Post Formats **
   - Aside
