@@ -58,7 +58,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		} );
 	} );
 
-	// Body background color
+	// BODY BG
 	kelso_colors_live_update(
 		'background_color',
 		'body',
@@ -66,7 +66,7 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'#f5f5f5'
 	);
 
-	// HEADER ----------------------------------- .
+	// HEADER BG ----------------------------------- .
 	kelso_colors_live_update(
 		'header_background_color',
 		'.header-wrap',
@@ -74,13 +74,51 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'#ffffff'
 	);
 
-	// STICKY HEADER ----------------------------------- .
+	/*
+	// NAV LINK COLOR ------------------------------------ .
+	wp.customize(
+		'kelso_settings[nav_link_color]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.site-navigation a, button.dropdown-toggle' ).css( 'color', newval );
+					$( '.responsive-menu-icon .menu-icon,.responsive-menu-icon .menu-icon::before,.responsive-menu-icon .menu-icon::after, .site-navigation li.search-icon .theicon:before' ).css( 'background-color', newval );
+					$( '.site-navigation li.search-icon .theicon,.site-navigation li.search-icon:hover' ).css( 'border-color', newval );
+				}
+			);
+		}
+	);
+	*/
+
+	// STICKY HEADER BG ----------------------------------- .
 	kelso_colors_live_update(
 		'stickyheader_background_color',
 		'.header-wrap.stuck,.contained .header-wrap.stuck .inner-wrap',
 		'background-color',
 		'#ffffff'
 	);
+
+	/*
+	// STICKY HEADER TEXT ----------------------------------- .
+	kelso_colors_live_update(
+		'stickyheader_text_color',
+		'.header-wrap.stuck .site-title, .header-wrap.stuck .site-title a, .header-wrap.stuck .site-description',
+		'color',
+		'#000000'
+	);
+
+	// STICKY HEADER NAV LINK COLOR ------------------------------------ .
+	wp.customize(
+		'kelso_settings[stickyheader_link_color]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.header-wrap.stuck .site-navigation ul:not(.sub-menu) a,.header-wrap.stuck button.dropdown-toggle' ).css( 'color', newval );
+					$( '.header-wrap.stuck .responsive-menu-icon .menu-icon,.header-wrap.stuck .responsive-menu-icon .menu-icon::before,.header-wrap.stuck .responsive-menu-icon .menu-icon::after,.header-wrap.stuck .site-navigation li.search-icon .theicon:before' ).css( 'background-color', newval );
+					$( '.header-wrap.stuck .site-navigation li.search-icon .theicon' ).css( 'border-color', newval );
+				}
+			);
+		}
+	);
+	*/
 
 	// SITE CONTENT --------------------------------- .
 	// Content Area Background Color
@@ -89,6 +127,22 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'.content-wrap',
 		'background-color',
 		'#f5f5f5'
+	);
+
+	// Content Inner Background Coor
+	kelso_colors_live_update(
+		'content_inner_background_color',
+		'.site-main',
+		'background-color',
+		'#f5f5f5'
+	);
+
+	// Post/Page Title Color
+	kelso_colors_live_update(
+		'content_title_color',
+		'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.single .entry-meta a,.single .entry-meta .posted-on,.single .entry-meta .updated-on,.single .entry-meta .byline,.woocommerce-products-header,.product_title.entry-title,body.page.titlelifted .entry-title,body.single.titlelifted .entry-title,body.blog.titlelifted .page-title,body.archive.titlelifted .page-title,body.search.titlelifted .page-title,body.error404.titlelifted .page-title,.single.titlelifted .entry-meta a,.single.titlelifted .entry-meta .posted-on,.single.titlelifted .entry-meta .updated-on,.single.titlelifted .entry-meta .byline,.titlelifted .archive-description,.titlelifted .woocommerce-products-header,.titlelifted .product_title.entry-title',
+		'color',
+		''
 	);
 
 	// Text Color
@@ -123,22 +177,6 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 				}
 			);
 		}
-	);
-
-	// Content Inner Background Coor
-	kelso_colors_live_update(
-		'content_inner_background_color',
-		'.site-main',
-		'background-color',
-		'#f5f5f5'
-	);
-
-	// Post/Page Title Color
-	kelso_colors_live_update(
-		'content_title_color',
-		'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.single .entry-meta a,.single .entry-meta .posted-on,.single .entry-meta .updated-on,.single .entry-meta .byline,.woocommerce-products-header,.product_title.entry-title,body.page.titlelifted .entry-title,body.single.titlelifted .entry-title,body.blog.titlelifted .page-title,body.archive.titlelifted .page-title,body.search.titlelifted .page-title,body.error404.titlelifted .page-title,.single.titlelifted .entry-meta a,.single.titlelifted .entry-meta .posted-on,.single.titlelifted .entry-meta .updated-on,.single.titlelifted .entry-meta .byline,.titlelifted .archive-description,.titlelifted .woocommerce-products-header,.titlelifted .product_title.entry-title',
-		'color',
-		''
 	);
 
 	// FOOTERWIDGETS ----------------------------------- .

@@ -30,6 +30,7 @@ if ( ! function_exists( 'kelso_get_defaults' ) ) {
 			'nav_link_color' => '#222222',
 
 			'stickyheader_background_color' => '#ffffff',
+			'stickyheader_text_color' => '#000000',
 			'stickyheader_link_color' => '#000000',
 
 			'footerwidgets_background_color' => '#494949',

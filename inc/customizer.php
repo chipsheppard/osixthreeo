@@ -38,7 +38,8 @@ function kelso_customize_register( $wp_customize ) {
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	// $wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+	$wp_customize->get_control( 'header_textcolor' )->priority = 20;
 
 	if ( isset( $wp_customize->selective_refresh ) ) {
 		$wp_customize->selective_refresh->add_partial( 'blogname', array(
@@ -65,7 +66,6 @@ function kelso_customize_register( $wp_customize ) {
 
 	// header image.
 	$wp_customize->add_setting( 'header_image' , array(
-		'default'     => get_template_directory_uri() . 'assets/imgages/noise.png',
 		'transport'   => 'refresh',
 		'sanitize_callback' => 'esc_url_raw',
 	) );
@@ -108,6 +108,7 @@ function kelso_customize_register( $wp_customize ) {
 			'default' => $defaults['nav_link_color'],
 			'type' => 'option',
 			'sanitize_callback' => 'sanitize_hex_color',
+			// 'transport' => 'postMessage', // psuedo elements in menu-search
 		)
 	);
 	$wp_customize->add_control(
@@ -118,7 +119,7 @@ function kelso_customize_register( $wp_customize ) {
 				'label' => __( 'Header Navigation Link Color', 'kelso' ),
 				'section' => 'colors',
 				'settings' => 'kelso_settings[nav_link_color]',
-				'priority' => 20,
+				'priority' => 25,
 			)
 		)
 	);
@@ -146,12 +147,35 @@ function kelso_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Sticky Text Color.
+	$wp_customize->add_setting(
+		'kelso_settings[stickyheader_text_color]', array(
+			'default' => $defaults['stickyheader_text_color'],
+			'type' => 'option',
+			'sanitize_callback' => 'sanitize_hex_color',
+			// 'transport' => 'postMessage', // gets overridden by non-sticky.
+		)
+	);
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'kelso_settings[stickyheader_text_color]',
+			array(
+				'label' => __( 'Sticky Header Text Color', 'kelso' ),
+				'section' => 'colors',
+				'settings' => 'kelso_settings[stickyheader_text_color]',
+				'priority' => 35,
+			)
+		)
+	);
+
 	// Sticky Link.
 	$wp_customize->add_setting(
 		'kelso_settings[stickyheader_link_color]', array(
 			'default' => $defaults['stickyheader_link_color'],
 			'type' => 'option',
 			'sanitize_callback' => 'sanitize_hex_color',
+			// 'transport' => 'postMessage', // gets overridden & psudo elements in menu-search
 		)
 	);
 	$wp_customize->add_control(

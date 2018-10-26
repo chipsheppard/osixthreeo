@@ -47,8 +47,10 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 		$default_header_bg_color_right = $defaults['header_bg_color_right'];
 
 		$stickyheader_bg_color = $kelso_settings['stickyheader_background_color'];
+		$stickyheader_text_color = $kelso_settings['stickyheader_text_color'];
 		$stickyheader_link_color = $kelso_settings['stickyheader_link_color'];
 		$default_stickyheader_bg_color = $defaults['stickyheader_background_color'];
+		$default_stickyheader_text_color = $defaults['stickyheader_text_color'];
 		$default_stickyheader_link_color = $defaults['stickyheader_link_color'];
 
 		$hero_text_primary_color = $kelso_settings['hero_text_primary_color'];
@@ -107,7 +109,7 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 				$css->add_property( 'position', 'absolute' );
 				$css->add_property( 'clip', 'rect(1px, 1px, 1px, 1px)' );
 			else :
-				$css->set_selector( '.site-title,.site-title a,.site-title a:hover,.site-description' );
+				$css->set_selector( '.site-title,.site-title a,.site-description' );
 				$css->add_property( 'color', esc_attr( $ht_color ) );
 			endif;
 		endif;
@@ -193,20 +195,27 @@ if ( ! function_exists( 'kelso_base_css' ) ) {
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['nav_link_color'] ) );
 			// Borders.
 			$css->set_selector(
-				'.site-navigation li.search-icon .theicon'
+				'.site-navigation li.search-icon .theicon,.site-navigation li.search-icon:hover'
 			);
 			$css->add_property( 'border-color', esc_attr( $kelso_settings['nav_link_color'] ) );
 
 		endif;
 
 		/*
-		 * Sticky Navigation --------------------------------
+		 * Sticky Header --------------------------------
 		 */
 		if ( $default_stickyheader_bg_color !== $stickyheader_bg_color ) :
 			$css->set_selector(
 				'.header-wrap.stuck, .contained .header-wrap.stuck .inner-wrap'
 			);
 			$css->add_property( 'background-color', esc_attr( $kelso_settings['stickyheader_background_color'] ) );
+		endif;
+		if ( $default_stickyheader_text_color !== $stickyheader_text_color ) :
+			// Color.
+			$css->set_selector(
+				'.header-wrap.stuck .site-title, .header-wrap.stuck .site-title a, .header-wrap.stuck .site-description'
+			);
+			$css->add_property( 'color', esc_attr( $kelso_settings['stickyheader_text_color'] ) );
 		endif;
 		if ( $default_stickyheader_link_color !== $stickyheader_link_color ) :
 			// Color.

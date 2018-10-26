@@ -125,7 +125,7 @@ if ( ! function_exists( 'kelso_setup' ) ) :
 
 		// Custom header.
 		add_theme_support( 'custom-header', apply_filters( 'kelso_custom_header_args', array(
-			'default-image'          => '',
+			'default-image'          => get_template_directory_uri() . '/assets/images/noise.png',
 			'default-text-color'     => '000000',
 			'height'                 => 1500,
 			'width'                  => 2000,

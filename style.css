@@ -2935,6 +2935,10 @@ body.contained .site {
   margin-bottom: 0;
 }
 
+.header-wrap.stuck .site-title a {
+  color: #000000;
+}
+
 .header-wrap.stuck .site-description {
   display: none;
 }
