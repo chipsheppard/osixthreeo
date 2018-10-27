@@ -74,22 +74,9 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'#ffffff'
 	);
 
-	/*
-	// NAV LINK COLOR ------------------------------------ .
-	wp.customize(
-		'kelso_settings[nav_link_color]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.site-navigation a, button.dropdown-toggle' ).css( 'color', newval );
-					$( '.responsive-menu-icon .menu-icon,.responsive-menu-icon .menu-icon::before,.responsive-menu-icon .menu-icon::after, .site-navigation li.search-icon .theicon:before' ).css( 'background-color', newval );
-					$( '.site-navigation li.search-icon .theicon,.site-navigation li.search-icon:hover' ).css( 'border-color', newval );
-				}
-			);
-		}
-	);
-	*/
+	// NAV LINK COLOR ------------------------------ .
 
-	// STICKY HEADER BG ----------------------------------- .
+	// STICKY HEADER BG ---------------------------- .
 	kelso_colors_live_update(
 		'stickyheader_background_color',
 		'.header-wrap.stuck,.contained .header-wrap.stuck .inner-wrap',
@@ -97,28 +84,8 @@ function kelso_colors_live_update( id, selector, property, default_value ) {
 		'#ffffff'
 	);
 
-	/*
-	// STICKY HEADER TEXT ----------------------------------- .
-	kelso_colors_live_update(
-		'stickyheader_text_color',
-		'.header-wrap.stuck .site-title, .header-wrap.stuck .site-title a, .header-wrap.stuck .site-description',
-		'color',
-		'#000000'
-	);
-
-	// STICKY HEADER NAV LINK COLOR ------------------------------------ .
-	wp.customize(
-		'kelso_settings[stickyheader_link_color]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.header-wrap.stuck .site-navigation ul:not(.sub-menu) a,.header-wrap.stuck button.dropdown-toggle' ).css( 'color', newval );
-					$( '.header-wrap.stuck .responsive-menu-icon .menu-icon,.header-wrap.stuck .responsive-menu-icon .menu-icon::before,.header-wrap.stuck .responsive-menu-icon .menu-icon::after,.header-wrap.stuck .site-navigation li.search-icon .theicon:before' ).css( 'background-color', newval );
-					$( '.header-wrap.stuck .site-navigation li.search-icon .theicon' ).css( 'border-color', newval );
-				}
-			);
-		}
-	);
-	*/
+	// STICKY HEADER TEXT --------------------------- .
+	// STICKY HEADER NAV LINK COLOR ----------------- .
 
 	// SITE CONTENT --------------------------------- .
 	// Content Area Background Color

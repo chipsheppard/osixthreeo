@@ -108,19 +108,14 @@
 })( jQuery );
 
 
- /**
-  * Parallax
- */
+ /* Parallax */
 jQuery(function( $ ){
 	$( window ).scroll(function() {
 		$('.custom-header-image').css('background-position', 'center ' + (50 + $(this).scrollTop()*-0.125) + '%');
 	}).scroll();
 });
 
-
-/**
- * Sticky nav
- */
+/* Sticky nav */
 jQuery(function( $ ){
 	var headerposition = $('.header-wrap').offset();
 	// On load
@@ -139,9 +134,7 @@ jQuery(function( $ ){
 });
 
 
-/**
- * Back to top
- */
+/* Back to top */
 jQuery(function( $ ){
 	$( '.backtotop' ).click(function() {
 		$( 'html, body' ).animate({ scrollTop: 0 }, 'slow');
@@ -150,9 +143,7 @@ jQuery(function( $ ){
 });
 
 
-/**
- * Smooth scroll homebutton
- */
+/* Smooth scroll homebutton */
 jQuery(function( $ ){
 	// Select all links for targeting
 	$('.scrollbutton')

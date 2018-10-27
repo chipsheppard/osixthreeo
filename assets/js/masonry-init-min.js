@@ -1,0 +1,1 @@
+jQuery(window).load(function(){var e=document.querySelector(".loop-wrap"),o=new Masonry(e,{itemSelector:".hentry",columnWidth:".hentry"})});

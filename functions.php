@@ -38,18 +38,18 @@ function kelso_scripts() {
 	);
 	wp_enqueue_style( 'kelso-style', get_stylesheet_uri(), array(), KELSO_VERSION );
 	wp_enqueue_style( 'kelso-fonts', kelso_theme_fonts_url() );
-	wp_enqueue_script( 'kelso-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), KELSO_VERSION, true );
-	wp_enqueue_script( 'kelso-globaljs', get_template_directory_uri() . '/assets/js/global.js', array( 'jquery' ), KELSO_VERSION, true );
+	wp_enqueue_script( 'kelso-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix-min.js', array(), KELSO_VERSION, true );
+	wp_enqueue_script( 'kelso-globaljs', get_template_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), KELSO_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 	if ( '' !== $kelso_settings['nav_search'] ) {
-		wp_enqueue_script( 'kelso-navigation-search', get_template_directory_uri() . '/assets/js/navsearch.js', array(), KELSO_VERSION, true );
+		wp_enqueue_script( 'kelso-navigation-search', get_template_directory_uri() . '/assets/js/navsearch-min.js', array(), KELSO_VERSION, true );
 	}
 	if ( ( is_archive() && ! kelso_is_shop() || is_home() ) && $kelso_settings['do_masonry'] ) {
 		wp_enqueue_script( 'masonry' );
-		wp_enqueue_script( 'masonry-init-js', get_template_directory_uri() . '/assets/js/masonry-init.js', array( 'jquery', 'masonry' ), KELSO_VERSION, true );
+		wp_enqueue_script( 'masonry-init-js', get_template_directory_uri() . '/assets/js/masonry-init-min.js', array( 'jquery', 'masonry' ), KELSO_VERSION, true );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'kelso_scripts' );

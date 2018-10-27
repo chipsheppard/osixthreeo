@@ -1170,6 +1170,6 @@ if ( ! function_exists( 'kelso_customizer_live_preview' ) ) {
 	 * @since 0.1
 	 */
 	function kelso_customizer_live_preview() {
-		wp_enqueue_script( 'kelso-themecustomizer', trailingslashit( get_template_directory_uri() ) . 'assets/js/customizer.js', array( 'customize-preview' ), KELSO_VERSION, true );
+		wp_enqueue_script( 'kelso-themecustomizer', trailingslashit( get_template_directory_uri() ) . 'assets/js/customizer-min.js', array( 'customize-preview' ), KELSO_VERSION, true );
 	}
 }
