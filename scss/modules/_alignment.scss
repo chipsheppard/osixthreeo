@@ -1,18 +1,14 @@
-/*
- * Alignment
---------------------------------------------- */
-
 a.aligncenter img,
 .wp-block-image.aligncenter img {
 	display: block;
 	margin: 0 auto;
 }
 
-img.centered,
+img.aligncenter,
 .aligncenter {
 	display: block;
 	margin: 0 auto 24px;
-	text-align: center;
+	//text-align: center;
 }
 
 img.alignnone {

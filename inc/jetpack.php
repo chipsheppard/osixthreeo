@@ -2,34 +2,42 @@
 /**
  * Jetpack Compatibility File.
  *
+ * @package  osixthreeo
+ * @subpackage osixthreeo/inc
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  * @link https://jetpack.com/
- *
- * @package kelso
  */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
 
 /**
  * Jetpack setup function.
  *
  * See: https://jetpack.com/support/infinite-scroll/
  * See: https://jetpack.com/support/responsive-videos/
+ * See: https://jetpack.com/support/content-options/
  */
-function kelso_jetpack_setup() {
+function osixthreeo_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'kelso_infinite_scroll_render',
+		'render'    => 'osixthreeo_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 }
-add_action( 'after_setup_theme', 'kelso_jetpack_setup' );
+add_action( 'after_setup_theme', 'osixthreeo_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function kelso_infinite_scroll_render() {
+function osixthreeo_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
@@ -42,30 +50,12 @@ function kelso_infinite_scroll_render() {
 
 
 /**
- * Add Theme support for JetPack Site Logo
- *
- * @link http://fikrirasy.id/2015/01/how-to-implement-jetpacks-site-logo-on-your-theme/
- */
-function kelso_jetpack_support() {
-	// Declaring site logo support.
-	add_image_size( 'site-logo', 0, 60 );
-	add_theme_support( 'site-logo', array(
-		'header-text' => array(
-			'site-title',
-			'site-description',
-		),
-		'size' => 'site-logo',
-	));
-}
-add_action( 'after_setup_theme', 'kelso_jetpack_support' );
-
-/**
  * Add Theme support for JetPack Social Menu
  *
  * @link http://fikrirasy.id/2015/01/how-to-implement-jetpacks-site-logo-on-your-theme/
  * USAGE <?php themename_social_menu(); ?>
  */
-function kelso_social_menu() {
+function osixthreeo_social_menu() {
 	if ( ! function_exists( 'jetpack_social_menu' ) ) {
 		return;
 	} else {

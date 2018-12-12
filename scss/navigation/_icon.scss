@@ -1,6 +1,3 @@
-/* Responsive Menu Icon
---------------------------------------------- */
-
 .responsive-menu-icon {
 	border: 0;
 	background: none;
@@ -87,13 +84,9 @@
 
 	&:hover {
 		.menu-icon {
-			opacity: 0.5;
+			opacity: 0.8;
 		}
 	}
-}
-
-.stuck .responsive-menu-icon {
-	top: .75em;
 }
 
 /*

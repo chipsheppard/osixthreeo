@@ -2,42 +2,40 @@
 /**
  * The template for displaying 404 pages (not found).
  *
- * @package kelso
+ * @package  osixthreeo
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
 
-kelso_sidebar_bodyclass();
+do_action( 'osixthreeo_init' );
+
 get_header();
+
 tha_content_before();
-kelso_get_left_sidebar();
-?>
+echo '<div id="primary" class="content-area">';
+tha_content_wrap_before();
+echo '<main id="main" class="site-main" role="main">';
+tha_content_top();
+echo '<section class="error-404 not-found">';
 
-<div id="primary" class="content-area">
-	<?php tha_content_wrap_before(); ?>
+	echo '<header class="page-header">';
+		echo '<div class="title-wrap">';
+		echo '<h1 class="page-title">' . esc_html__( 'Page not found.', 'osixthreeo' ) . '</h1>';
+		echo '</div>';
+	echo '</header>';
 
-	<main id="main" class="site-main<?php kelso_title_placement_class(); ?>" role="main">
-		<?php tha_content_top(); ?>
+	echo '<div class="page-content">';
+		echo '<div class="error-message">' . esc_html__( 'ERROR - ERROR - ERROR', 'osixthreeo' ) . '</div>';
+		echo '<p>' . esc_html__( 'Please use the menu in the header or try a search.', 'osixthreeo' ) . '</p>';
+		get_search_form();
+	echo '</div>';
 
-		<section class="error-404 not-found">
-
-			<header class="page-header">
-				<div class="title-wrap">
-					<h1 class="page-title"><?php esc_html_e( 'Page not found.', 'kelso' ); ?></h1>
-				</div>
-			</header>
-
-			<div class="page-content">
-				<div class="error-message"><?php esc_html_e( 'error... error... page not found... going doOown', 'kelso' ); ?></div>
-				<p><?php esc_html_e( 'Please use the menu in the header or try a search.', 'kelso' ); ?></p>
-				<?php get_search_form(); ?>
-			</div>
-
-		</section>
-
-		<?php tha_content_bottom(); ?>
-	</main>
-</div>
-
-<?php
-kelso_get_right_sidebar();
+echo '</section>';
+tha_content_bottom();
+echo '</main>';
+tha_content_wrap_after();
+echo '</div>';
 tha_content_after();
+
 get_footer();

@@ -1,31 +1,20 @@
-/*
- * Containers
---------------------------------------------- */
-body.contained .site {
-	max-width: $size__site-max;
-	margin: 0 auto;
-}
-
 .site-content {
 	clear: both;
 
 	.content-area {
 		width: $size__site-main;
+		padding: 2.5em 5%;
 	}
 
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 1em 2.5em;
+		padding: 2.5em 5%;
 		width: $size__site-sidebar;
-
-		@include breakpoint(tablet-h) {
-	 		padding: 1em 5%;
-		}
 	}
 }
 
-.content-wrap,
+.content-inner-wrap,
 .inner-wrap {
 	max-width: $size__site-max;
 	margin: 0 auto;
@@ -34,74 +23,23 @@ body.contained .site {
 
 .inner-wrap {
 	position: relative;
-	padding: 0 2.5em;
+	padding: 0 4em;
 
-	@include breakpoint(tablet-h) {
- 		padding: 0 5%;
-	}
-}
-
-.site-main {
-	padding: 1.5em 2.5em 0;
-	width: $size__site-main;
-
-	@include breakpoint(tablet-h) {
- 		padding: 1.5em 5% 0;
-	}
-}
-
-// No Sidebar Silo ------------------------------
-.nosidebar-silo .content-wrap {
-	padding-left: 15%;
-	padding-right: 15%;
-
-	@include breakpoint(tablet-h) {
-		padding-left: 8%;
-		padding-right: 8%;
-	}
-	@include breakpoint(phone-h) {
-		padding-left: 5%;
-		padding-right: 5%;
-	}
-}
-
-// Sidebar Content ------------------------------
-.sidebar-left {
-
-	.content-area {
-		float: right;
-		width: $size__site-content;
-	}
-
-	.site-content .widget-area {
-		float: left;
-		margin-bottom: 1.5em;
-	}
-}
-
-// Content Sidebar ------------------------------
-.sidebar-right {
-
-	.content-area {
-		float: left;
-		width: $size__site-content;
-	}
-
-	.site-content .widget-area {
-		float: right;
+	@include breakpoint(desktop-s) {
+		padding: 0 5%;
 	}
 }
 
 // Stack 'em up for Vertical iPads and smaller
 @include breakpoint(tablet-v) {
 	.content-area,
-	.site-content .widget-area,
-	.sidebar-right .content-area,
-	.sidebar-right .site-content .widget-area,
-	.sidebar-left .content-area,
-	.sidebar-left .site-content .widget-area {
+	.site-content .widget-area {
 		display: block;
 		float: none;
 		width: $size__site-main;
+	}
+	.site-content .widget-area {
+		padding-right: 5%;
+		padding-left: 5%;
 	}
 }

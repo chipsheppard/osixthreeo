@@ -1,9 +1,4 @@
-/*
- * Menus
---------------------------------------------------------------*/
-
-.site-navigation,
-.topbar-widget.widget_nav_menu {
+.site-navigation {
 	display: table-cell;
 	min-width: 520px;
 	text-align: right;
@@ -28,6 +23,7 @@
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
 		border-bottom: 1px solid currentColor;
+		opacity: .85;
 	}
 
 	.menu-item-has-children > a {
@@ -47,12 +43,6 @@
 		position: relative;
 		margin-right: 1em;
 
-
-		&:hover > .sub-menu {
-			left: auto;
-			opacity: 1;
-		}
-
 		&.accent {
 			border: 1px solid $color__secondary;
 
@@ -66,13 +56,19 @@
 				}
 			}
 		}
+
+		&:hover > .sub-menu {
+			left: auto;
+			opacity: 1;
+		}
 	}
 
 	/* SUB MENU -------------------- */
 	.sub-menu {
 		background:#ffffff;
-		border-top: 1px solid $color__base-xlight;
+		border-top: 1px solid #222;
 		left: -9999px;
+		margin-top: -1px;
 		opacity: 0;
 		position: absolute;
 		text-align: left;
@@ -99,7 +95,7 @@
 		.current-menu-item > a,
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
-			background-color: rgba(0, 0, 0, 0.05);
+			background-color: rgba(102, 102, 102, 0.1);
 		}
 
 		li {
@@ -154,22 +150,4 @@ button.dropdown-toggle.toggled-on:after {
 	right: 8px;
 	top: 0;
 	padding: 0;
-}
-
-.header-wrap.stuck {
-	button.dropdown-toggle {
-		color: #000000;
-	}
-	.site-navigation  li.search-icon .theicon {
-		border-color: #000000;
-
-		&:before,
-		&:after {
-			background-color: #000000;
-		}
-
-	}
-	.site-navigation a {
-		color: #222222;
-	}
 }

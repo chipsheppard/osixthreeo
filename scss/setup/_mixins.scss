@@ -16,27 +16,28 @@
 }
 
 // Media Queries
+// http://gs.statcounter.com/screen-resolution-stats
 @mixin breakpoint($point) {
 
-  @if $point == desktop-s {
-    @media all and (max-width: 1280px) { @content; }
+  @if $point == site-max {
+    @media all and (max-width: 1280px) { @content; } // 1280px and below.
   }
   @if $point == tablet-h {
-    @media all and (max-width: 1025px) { @content; }
-  }
-  @if $point == tablet-l {
-    @media all and (max-width: 970px) { @content; }
+    @media all and (max-width: 1024px) { @content; } // 1024px and below.
   }
   @if $point == tablet-m {
-    @media all and (max-width: 899px) { @content; }
+    @media all and (max-width: 900px) { @content; } // 900px and below.
   }
   @if $point == tablet-v {
-    @media all and (max-width: 820px) { @content; }
+    @media all and (max-width: 768px) { @content; } // 768px and below.
+  }
+  @if $point == tablet-min-v {
+    @media all and (min-width: 769px) { @content; } // 769px and above.
   }
   @if $point == phone-h {
-    @media all and (max-width: 500px) { @content; }
+    @media all and (max-width: 640px) { @content; } // 640px and below.
   }
   @if $point == phone-v {
-    @media all and (max-width: 400px) { @content; }
+    @media all and (max-width: 380px) { @content; } // 380px and below.
   }
 }

@@ -2,7 +2,11 @@
 /**
  * Custom Header.
  *
- * @package kelso
+ * @package  osixthreeo
+ * @subpackage osixthreeo/inc
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -10,101 +14,71 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /*
- * CUSTOM HEADER
- -----------------------------------------------------------------
+ * Sample implementation of the Custom Header feature
+ * You can add an optional custom header image to header.php like so ...
+ *
+	<?php the_header_image_tag(); ?>
+ *
+ * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  */
-if ( ! function_exists( 'kelso_display_customheader' ) ) {
-	/**
-	 * Get the Custom Header
-	 * Uses  kelso_customheader_image_url()
-	 *       kelso_customheader_content()
-	 */
-	function kelso_display_customheader() {
-	?>
-	<div class="custom-header">
-		<div class="custom-header-image"<?php kelso_customheader_image_url(); ?>>
-			<?php
-			if ( is_front_page() ) :
-				kelso_customheader_content();
-			endif;
-			?>
-		</div>
-	</div>
-	<?php
-	}
+
+/**
+ * Set up the WordPress core custom header feature.
+ *
+ * @uses osixthreeo_header_style()
+ */
+function osixthreeo_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'osixthreeo_custom_header_args', array(
+		'default-image'          => '',
+		'default-text-color'     => '000000',
+		'width'                  => 1200,
+		'height'                 => 1200,
+		'flex-height'            => true,
+		'flex-width'            => true,
+		'wp-head-callback'       => 'osixthreeo_header_style',
+	) ) );
 }
+add_action( 'after_setup_theme', 'osixthreeo_custom_header_setup' );
 
 
-if ( ! function_exists( 'kelso_customheader_image_url' ) ) {
+if ( ! function_exists( 'osixthreeo_header_style' ) ) :
 	/**
-	 * Write out the custom header image URL for the function above.
+	 * Styles the header image and text displayed on the blog.
 	 *
-	 * @link https://www.billerickson.net/code/add-checkbox-to-featured-image-metabox/
+	 * @see _s_custom_header_setup().
 	 */
-	function kelso_customheader_image_url() {
+	function osixthreeo_header_style() {
+		$header_text_color = get_header_textcolor();
 
-		$blog_id = get_option( 'page_for_posts' );
-		$_post = get_queried_object();
-		$key_value = get_post_meta( get_the_ID(), 'show_featured_image', true );
-		$blog_key_value = get_post_meta( $blog_id, 'show_featured_image', true );
-
-		if ( is_home() && ! is_front_page() && has_post_thumbnail( $blog_id ) && $blog_key_value ) : // For blog page.
-			echo ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( $blog_id, 'full' ) ) . ')"';
-		elseif ( ! is_home() && ! is_search() && ! is_archive() && ! is_404() && get_the_post_thumbnail( $_post->ID ) && $key_value ) : // Pages & Posts that have a featured image with checkbox checked.
-			echo ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( $_post->ID, 'full' ) ) . ')"';
-		else :
-			echo ' style="background-image:url(' . esc_url( get_header_image() ) . ')"';
-		endif;
-	}
-}
-
-
-if ( ! function_exists( 'kelso_customheader_content' ) ) {
-	/**
-	 * Put Video or Header Image and the Text into the Custom Header.
-	 */
-	function kelso_customheader_content() {
-
-		if ( ! is_front_page() ) :
+		/*
+		 * If no custom options for text are set, let's bail.
+		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
+		 */
+		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
 			return;
-		endif;
-
-		// Get Customizer options.
-		$kelso_settings = wp_parse_args(
-			get_option( 'kelso_settings', array() ),
-			kelso_get_defaults()
-		);
-
-		$herotextprimary = $kelso_settings['hero_text_primary'];
-		$herotextsecondary = $kelso_settings['hero_text_secondary'];
+		}
+		// If we get this far, we have custom styles. Let's do this.
 		?>
-
+		<style type="text/css">
 		<?php
-		// Get the video if there is one.
-		if ( is_header_video_active() && ( has_header_video() || is_customize_preview() ) ) {
-		?>
-			<div class="custom-header-media">
-				<?php the_custom_header_markup(); ?>
-			</div>
-		<?php } ?>
-
-			<div class="custom-header-image-text">
-
-			<?php if ( '' !== $herotextprimary ) : ?>
-				<div class="hero-primary"><?php echo wp_kses_post( $herotextprimary ); ?></div>
-			<?php endif; ?>
-			<?php if ( '' !== $herotextsecondary ) : ?>
-				<div class="hero-secondary"><?php echo wp_kses_post( $herotextsecondary ); ?></div>
-			<?php endif; ?>
-			<?php if ( $kelso_settings['home_header_height'] ) : ?>
-				<a href="#custom-header-scroll-target" class="scrollbutton"><div class="arrow-down white"></div></a>
-			<?php endif; ?>
-
-			</div>
-
-			<?php if ( $kelso_settings['home_header_height'] ) : ?>
-			<div id="custom-header-scroll-target"></div>
-			<?php endif; ?>
+		// Has the text been hidden?
+		if ( ! display_header_text() ) :
+			?>
+			.site-title,
+			.site-description {
+				position: absolute;
+				clip: rect(1px, 1px, 1px, 1px);
+			}
+		<?php
+		// If the user has set a custom color for the text use that.
+		else :
+			?>
+			.site-title a,
+			.site-description {
+				color: #<?php echo esc_attr( $header_text_color ); ?>;
+			}
+		<?php endif; ?>
+		</style>
 		<?php
 	}
-}
+endif;

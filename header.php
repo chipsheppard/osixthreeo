@@ -2,50 +2,37 @@
 /**
  * Site header
  *
- * @package kelso
+ * @package  osixthreeo
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
 
-?>
-<!DOCTYPE html>
-<?php tha_html_before(); ?>
-<html <?php language_attributes(); ?>>
-<head>
-<?php tha_head_top(); ?>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<?php wp_head(); ?>
-<?php tha_head_bottom(); ?>
-</head>
+echo '<!DOCTYPE html>';
+tha_html_before();
+echo '<html ' . get_language_attributes() . '>'; // WPCS: XSS OK.
 
-<body <?php body_class(); ?>>
-<?php tha_body_top(); ?>
+echo '<head>';
+	tha_head_top();
+	wp_head();
+	tha_head_bottom();
+echo '</head>';
 
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'kelso' ); ?></a>
+echo '<body class="' . join( ' ', get_body_class() ) . '">'; // WPCS: XSS OK.
+tha_body_top();
+echo '<div id="page" class="site">';
+	echo '<a class="skip-link screen-reader-text" href="#content">' . esc_html__( 'Skip to content', 'osixthreeo' ) . '</a>';
 
-	<?php kelso_display_topbar(); ?>
-
-	<?php tha_header_before(); ?>
-
-	<header id="masthead" class="site-header">
-
-		<div class="header-wrap">
-			<div class="inner-wrap">
-				<?php
+	tha_header_before();
+	echo '<header id="masthead" class="site-header">';
+		echo '<div class="header-wrap">';
+			echo '<div class="inner-wrap">';
 				tha_header_top();
-				kelso_display_branding();
-				kelso_display_nav();
 				tha_header_bottom();
-				?>
-			</div>
-		</div>
+			echo '</div>';
+		echo '</div>';
+	echo '</header>';
+	tha_header_after();
 
-		<?php kelso_display_customheader(); ?>
-
-	</header>
-
-	<?php tha_header_after(); ?>
-
-	<div id="content" class="site-content">
-		<div class="content-wrap">
+	echo '<div id="content" class="site-content">';
+		echo '<div class="content-inner-wrap">';

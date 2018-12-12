@@ -1,96 +1,160 @@
 <?php
 /**
  * Custom functions for WooCommerce.
- * https://docs.woocommerce.com/document/woocommerce-theme-developer-handbook/
- * https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
- * http://www.wpexplorer.com/woocommerce-compatible-theme/
  *
- * @package kelso
+ * @package  osixthreeo
+ * @subpackage osixthreeo/inc
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
+ * @link https://docs.woocommerce.com/document/woocommerce-theme-developer-handbook/
+ * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
+ * @link http://www.wpexplorer.com/woocommerce-compatible-theme/
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 /**
- * Add theme support.
+ * Is this the Shop page?
  */
-function kelso_add_woocommerce_support() {
+function osixthreeo_is_shop() {
+	if ( WPEX_WOOCOMMERCE_ACTIVE && is_shop() || WPEX_WOOCOMMERCE_ACTIVE && is_product_category() || WPEX_WOOCOMMERCE_ACTIVE && is_product_tag() ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+/**
+ * Is this the Shop page?
+ */
+function osixthreeo_is_prod() {
+	if ( WPEX_WOOCOMMERCE_ACTIVE && is_product() ) {
+		return true;
+	} else {
+		return false;
+	}
+}
+
+/**
+ * WooCommerce setup function.
+ *
+ * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
+ * @link https://github.com/woocommerce/woocommerce/wiki/Enabling-product-gallery-features-(zoom,-swipe,-lightbox)-in-3.0.0
+ *
+ * @return void
+ */
+function osixthreeo_woocommerce_setup() {
 	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
 }
-add_action( 'after_setup_theme', 'kelso_add_woocommerce_support' );
-
+add_action( 'after_setup_theme', 'osixthreeo_woocommerce_setup' );
 
 /**
- * Remove WooCommerce Styles
+ * Products per page.
  *
- * @param array $styles An array of stylesheets added by WooCommerce.
- * function wpex_remove_woo_styles( $styles ) {
- * unset( $styles['woocommerce-general'] );
- * unset( $styles['woocommerce-layout'] );
- * unset( $styles['woocommerce-smallscreen'] );
- * return $styles;
- * }
- * add_filter( 'woocommerce_enqueue_styles', 'wpex_remove_woo_styles' );
+ * @return integer number of products.
  */
-
-/*
- * add_theme_support( 'wc-product-gallery-slider' );
- * add_theme_support( 'wc-product-gallery-zoom' );
- * add_theme_support( 'wc-product-gallery-lightbox' );
-*/
-
-/**
- * This just does NOT work here. See body classes below
- * kelso_sidebar_bodyclass();
- */
-kelso_sitecontain_class();
-kelso_header_layout_class();
-kelso_title_placement_class();
-
-/**
- * Body classes.
- *
- * @param array $classes The body classes.
- */
-function kelso_woosidebar_bodyclass( $classes ) {
-	$layout = kelso_get_layout();
-	if ( 'layout-ls' === $layout ) :
-		$classes[] = 'sidebar-left';
-	elseif ( 'layout-rs' === $layout ) :
-		$classes[] = 'sidebar-right';
-	elseif ( 'layout-c' === $layout ) :
-		$classes[] = 'nosidebar-silo';
-	endif;
-	return $classes;
+function osixthreeo_woocommerce_products_per_page() {
+	return 12;
 }
-add_filter( 'body_class','kelso_woosidebar_bodyclass' );
+add_filter( 'loop_shop_per_page', 'osixthreeo_woocommerce_products_per_page' );
+
+
+/**
+ * Product gallery thumnbail columns.
+ *
+ * @return integer number of columns.
+ */
+function osixthreeo_woocommerce_thumbnail_columns() {
+	return 4;
+}
+add_filter( 'woocommerce_product_thumbnails_columns', 'osixthreeo_woocommerce_thumbnail_columns' );
+
+
+/**
+ * Default loop columns on product archives.
+ *
+ * @return integer products per row.
+ */
+function osixthreeo_woocommerce_loop_columns() {
+	return 3;
+}
+add_filter( 'loop_shop_columns', 'osixthreeo_woocommerce_loop_columns' );
+
+
+/**
+ * Related Products Args.
+ *
+ * @param array $args related products args.
+ * @return array $args related products args.
+ */
+function osixthreeo_woocommerce_related_products_args( $args ) {
+	$defaults = array(
+		'posts_per_page' => 3,
+		'columns'        => 3,
+	);
+	$args = wp_parse_args( $defaults, $args );
+	return $args;
+}
+add_filter( 'woocommerce_output_related_products_args', 'osixthreeo_woocommerce_related_products_args' );
+
+if ( ! function_exists( 'osixthreeo_woocommerce_product_columns_wrapper' ) ) {
+	/**
+	 * Product columns wrapper.
+	 *
+	 * @return  void
+	 */
+	function osixthreeo_woocommerce_product_columns_wrapper() {
+		$columns = osixthreeo_woocommerce_loop_columns();
+		echo '<div class="columns-' . absint( $columns ) . '">';
+	}
+}
+add_action( 'woocommerce_before_shop_loop', 'osixthreeo_woocommerce_product_columns_wrapper', 40 );
+
+if ( ! function_exists( 'osixthreeo_woocommerce_product_columns_wrapper_close' ) ) {
+	/**
+	 * Product columns wrapper close.
+	 *
+	 * @return  void
+	 */
+	function osixthreeo_woocommerce_product_columns_wrapper_close() {
+		echo '</div>';
+	}
+}
+add_action( 'woocommerce_after_shop_loop', 'osixthreeo_woocommerce_product_columns_wrapper_close', 40 );
 
 
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
-add_action( 'woocommerce_before_main_content', 'kelso_theme_wrapper_start', 10 );
-add_action( 'woocommerce_after_main_content', 'kelso_theme_wrapper_end', 10 );
+add_action( 'woocommerce_before_main_content', 'osixthreeo_theme_wrapper_start', 10 );
+add_action( 'woocommerce_after_main_content', 'osixthreeo_theme_wrapper_end', 10 );
+
+do_action( 'osixthreeo_init' );
+
 
 /**
  * The opening wrapper.
  */
-function kelso_theme_wrapper_start() {
+function osixthreeo_theme_wrapper_start() {
 	tha_content_before();
-	kelso_get_left_sidebar();
 	echo '<div id="primary" class="content-area">';
 	tha_content_wrap_before();
-	echo '<main id="main" class="site-main';
-	kelso_title_placement_class();
-	echo '" role="main">';
+	echo '<main id="main" class="site-main" role="main">';
 	tha_content_top();
 }
 
 /**
  * The closing wrapper.
  */
-function kelso_theme_wrapper_end() {
+function osixthreeo_theme_wrapper_end() {
 	tha_content_bottom();
 	echo '</main>';
 	tha_content_wrap_after();
 	echo '</div>';
-	kelso_get_right_sidebar();
 	tha_content_after();
 }
 
@@ -100,29 +164,97 @@ function kelso_theme_wrapper_end() {
  *
  * @link https://www.kadencethemes.com/support-forums/topic/woocommerce-single-product-move-title-above-page-and-make-fullwidth/
  */
-function kelso_adjust_woo() {
+function osixthreeo_remove_wc_sidebar() {
 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
-add_action( 'init', 'kelso_adjust_woo' );
+add_action( 'init', 'osixthreeo_remove_wc_sidebar' );
+
+/**
+ * Move WooCommerce price
+ */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
 
 
 /**
- * Remove the breadcrumbs
+ * From _s  the WooCommerce Mini Cart.
+ *
+ * You can add the WooCommerce Mini Cart to header.php like so ...
+ *
+	<?php
+		if ( function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
+			osixthreeo_woocommerce_header_cart();
+		}
+	?>
  */
-function kelso_remove_wc_breadcrumbs() {
-	remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
-}
-add_action( 'init', 'kelso_remove_wc_breadcrumbs' );
-
-
-/**
- * Move product entry title before image.
- */
-function change_product_page_order() {
-	if ( is_product() ) {
-		// Move Product Title above page.
-		remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
-		add_action( 'woocommerce_before_main_content', 'woocommerce_template_single_title', 10 );
+if ( ! function_exists( 'osixthreeo_woocommerce_cart_link_fragment' ) ) {
+	/**
+	 * Cart Fragments.
+	 *
+	 * Ensure cart contents update when products are added to the cart via AJAX.
+	 *
+	 * @param array $fragments Fragments to refresh via AJAX.
+	 * @return array Fragments to refresh via AJAX.
+	 */
+	function osixthreeo_woocommerce_cart_link_fragment( $fragments ) {
+		ob_start();
+		osixthreeo_woocommerce_cart_link();
+		$fragments['a.cart-contents'] = ob_get_clean();
+		return $fragments;
 	}
 }
-add_action( 'wp','change_product_page_order' );
+add_filter( 'woocommerce_add_to_cart_fragments', 'osixthreeo_woocommerce_cart_link_fragment' );
+
+if ( ! function_exists( 'osixthreeo_woocommerce_cart_link' ) ) {
+	/**
+	 * Cart Link.
+	 *
+	 * Displayed a link to the cart including the number of items present and the cart total.
+	 *
+	 * @return void
+	 */
+	function osixthreeo_woocommerce_cart_link() {
+		?>
+		<a class="cart-contents" href="<?php echo esc_url( wc_get_cart_url() ); ?>" title="<?php esc_attr_e( 'View your shopping cart', 'osixthreeo' ); ?>">
+			<?php
+			$item_count_text = sprintf(
+				/* translators: number of items in the mini cart. */
+				_n( '%d item', '%d items', WC()->cart->get_cart_contents_count(), 'osixthreeo' ),
+				WC()->cart->get_cart_contents_count()
+			);
+			?>
+			<span class="amount"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></span> <span class="count"><?php echo esc_html( $item_count_text ); ?></span>
+		</a>
+		<?php
+	}
+}
+
+if ( ! function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
+	/**
+	 * Display Header Cart.
+	 *
+	 * @return void
+	 */
+	function osixthreeo_woocommerce_header_cart() {
+		if ( is_cart() ) {
+			$class = 'current-menu-item';
+		} else {
+			$class = '';
+		}
+		?>
+		<ul id="site-header-cart" class="site-header-cart">
+			<li class="<?php echo esc_attr( $class ); ?>">
+				<?php osixthreeo_woocommerce_cart_link(); ?>
+			</li>
+			<li>
+				<?php
+				$instance = array(
+					'title' => '',
+				);
+				the_widget( 'WC_Widget_Cart', $instance );
+				?>
+			</li>
+		</ul>
+		<?php
+	}
+}

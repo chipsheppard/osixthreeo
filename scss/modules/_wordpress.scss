@@ -1,6 +1,3 @@
-/*
- * WordPress
---------------------------------------------- */
 .avatar {
 	float: left;
 }
@@ -26,7 +23,6 @@
 }
 
 .entry-content .wp-caption-text {
-	font-weight: $font__weight-semibold;
 	margin: 0;
 	text-align: center;
 	@include font-size(.875);
@@ -46,8 +42,6 @@
 	text-align: center;
 }
 
-
-
 /*
  * Smileys */
 .page-content .wp-smiley,
@@ -61,8 +55,7 @@
 
 
 /*
- * Captions
---------------------------------------------- */
+ * Captions */
 
 .wp-caption {
 	margin-bottom: 1.5em;
@@ -85,8 +78,7 @@
 
 
 /*
- * Galleries
---------------------------------------------- */
+ * Galleries */
 
 .gallery {
 	margin-bottom: 1.5em;
@@ -176,18 +168,17 @@
 	border: none;
 	height: auto;
 	margin: 0;
+	width: 100%;
 }
 
 /*
- * Audio Embeds
---------------------------------------------- */
+ * Audio Embeds */
 .mejs-button>button {
 	background-color: transparent !important;
 }
 
 /*
- * Recent Comments Widget
---------------------------------------------- */
+ * Recent Comments Widget */
 .sidebar-widget.widget_recent_comments ul a {
 	display: inline;
 }

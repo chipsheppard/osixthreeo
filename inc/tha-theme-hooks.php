@@ -128,9 +128,7 @@ function tha_head_top() {
 	do_action( 'tha_head_top' );
 }
 
-/**
- * Above.
- */
+/** Hook */
 function tha_head_bottom() {
 	do_action( 'tha_head_bottom' );
 }
@@ -144,16 +142,12 @@ function tha_header_before() {
 	do_action( 'tha_header_before' );
 }
 
-/**
- * Hook
- */
+/** Hook */
 function tha_header_after() {
 	do_action( 'tha_header_after' );
 }
 
-/**
- * Hook
- */
+/** Hook */
 function tha_header_top() {
 	do_action( 'tha_header_top' );
 }

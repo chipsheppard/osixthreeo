@@ -1,5 +1,3 @@
-/* Entries
---------------------------------------------- */
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -47,10 +45,6 @@ body.error404 .page-title {
 	}
 }
 
-.home:not(.blog) .entry-header {
-	display: none;
-}
-
 .entry-content {
 	ol,
 	ul {
@@ -73,7 +67,12 @@ body.error404 .page-title {
 
 	ol ol,
 	ul ul {
+		margin-top: .5em;
 		margin-bottom: 0;
+
+		li:last-child {
+			padding-bottom: 0;
+		}
 	}
 
 	dt {

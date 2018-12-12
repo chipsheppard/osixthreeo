@@ -1,44 +1,16 @@
-/*
- * Site Header
----------------------------------------------------------------- */
 .site-header {
-	min-height: 360px;
 	position: relative;
 	width: 100%;
-	transition: all .5s ease;
-
-	@include breakpoint(phone-h) {
-		min-height: 270px;
-	}
 
 	.inner-wrap {
 		display: table;
 	}
 }
 
-// HOMEPAGE
-.home .site-header {
-	min-height: 600px;
-
-	@include breakpoint(tablet-v) {
-		min-height: auto;
-		height:  500px;
-	}
-	@include breakpoint(phone-h) {
-		height: 300px;
-	}
-}
-
-// HOMEPAGE FULL HEIGHT
-.home.fullheight .site-header {
-	height: 100vh;
-}
-
 .header-wrap {
 	background-color: #ffffff;
 	position: relative;
 	z-index: 100;
-	transition: all .5s ease;
 }
 
 // BRANDING BLOCK
@@ -70,8 +42,11 @@
 
 	img {
 		display: block;
+		max-height: 300px;
 		max-width: 300px;
 		width: 100%;
+		height: auto;
+		transition: max-height 0.2s;
 	}
 
 	a:hover {
@@ -83,7 +58,7 @@
 .site-title {
 	color: #000000;
 	line-height: 1;
-	margin: 0 0 .25em;
+	margin-bottom: 0;
 	@include font-size(2.5);
 
 	a {
@@ -95,10 +70,6 @@
 			opacity: 0.75;
 		}
 	}
-
-	@include breakpoint(phone-h) {
-		@include font-size(1.875);
-	}
 }
 
 // Description
@@ -106,35 +77,22 @@
 	color: #000000;
 	letter-spacing: 1px;
 	line-height: 1;
+	padding-top: .5em;
 }
 
-/* STICKY HEADER
------------------------------- */
-.header-wrap.stuck {
-	background-color: #ffffff;
-	box-shadow: 0px 0px 4px rgba(0,0,0,0.5);
-	left: 0;
-	top: 0;
-	position: fixed;
-	width: 100%;
-	z-index: 101;
+@include breakpoint(phone-h) {
+
+	.site-branding {
+		padding: .25em 0 0;
+	}
 
 	.site-title {
 		margin-bottom: 0;
-		a {
-			color: #000000;
-		}
+		@include font-size(2);
 	}
 
-	.site-description {
-		display: none;
-	}
-
-	.site-branding {
-		padding: 0;
-	}
 	.custom-logo img {
-		max-height: 40px;
+		max-height: 32px;
 		width: auto;
 	}
 }

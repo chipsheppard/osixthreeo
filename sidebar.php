@@ -2,20 +2,20 @@
 /**
  * The main sidebar - posts, post types, archives.
  *
- * @package kelso
+ * @package  osixthreeo
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
 
-if ( ! is_active_sidebar( 'sidebar-1' ) ) {
+if ( ! is_active_sidebar( 'sidebar' ) ) {
 	return;
 }
-?>
 
-<?php tha_sidebars_before(); ?>
-<aside id="secondary" class="widget-area" role="complementary">
-<?php
-	tha_sidebar_top();
-	dynamic_sidebar( 'sidebar-1' );
-	tha_sidebar_bottom();
-?>
-</aside>
-<?php tha_sidebars_after(); ?>
+tha_sidebars_before();
+echo '<aside id="secondary" class="widget-area" role="complementary">';
+tha_sidebar_top();
+dynamic_sidebar( 'sidebar' );
+tha_sidebar_bottom();
+echo '</aside>';
+tha_sidebars_after();

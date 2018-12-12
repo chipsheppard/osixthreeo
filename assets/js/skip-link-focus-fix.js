@@ -4,11 +4,18 @@
  * Helps with accessibility for keyboard only users.
  *
  * Learn more: https://git.io/vWdr2
+ *
+ * @package  osixthreeo
+ * @subpackage osixthreeo/assets/js
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
+
 ( function() {
 	var isWebkit = navigator.userAgent.toLowerCase().indexOf( 'webkit' ) > -1,
-	    isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' )  > -1,
-	    isIe     = navigator.userAgent.toLowerCase().indexOf( 'msie' )   > -1;
+		isOpera  = navigator.userAgent.toLowerCase().indexOf( 'opera' ) > -1,
+		isIe     = navigator.userAgent.toLowerCase().indexOf( 'msie' ) > -1;
 
 	if ( ( isWebkit || isOpera || isIe ) && document.getElementById && window.addEventListener ) {
 		window.addEventListener( 'hashchange', function() {

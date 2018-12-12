@@ -7,7 +7,10 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package kelso
+ * @package  osixthreeo
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
 
 /*
@@ -18,66 +21,61 @@
 if ( post_password_required() ) {
 	return;
 }
-?>
 
-<?php tha_comments_before(); ?>
-<div id="comments" class="comments-area">
+tha_comments_before();
+echo '<div id="comments" class="comments-area">';
 
-	<?php
-	// You can start editing here -- including this comment!
-	if ( have_comments() ) :
-	?>
-		<h2 class="comments-title">
-			<?php esc_html_e( 'Comments', 'kelso' ); ?>
-		</h2>
+if ( have_comments() ) :
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-above" class="navigation comment-navigation cf" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'kelso' ); ?></h2>
-			<div class="nav-links">
+	echo '<h2 class="comments-title">';
+		esc_html__( 'Comments', 'osixthreeo' );
+	echo '</h2>';
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'kelso' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'kelso' ) ); ?></div>
+	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through?
+		echo '<nav id="comment-nav-above" class="navigation comment-navigation cf" role="navigation">';
+		echo '<h2 class="screen-reader-text">' . esc_html__( 'Comment navigation', 'osixthreeo' ) . '</h2>';
+		echo '<div class="nav-links">';
+			echo '<div class="nav-previous">';
+				previous_comments_link( esc_html__( 'Older Comments', 'osixthreeo' ) );
+			echo '</div>';
+			echo '<div class="nav-next">';
+				next_comments_link( esc_html__( 'Newer Comments', 'osixthreeo' ) );
+			echo '</div>';
+		echo '</div>';
+		echo '</nav>';
 
-			</div>
-		</nav>
-		<?php endif; // Check for comment navigation. ?>
+	endif; // Check for comment navigation.
 
-		<ol class="comment-list">
-			<?php
-				wp_list_comments( array(
-					'style'      => 'ol',
-					'short_ping' => true,
-				) );
-			?>
-		</ol>
+	echo '<ol class="comment-list">';
+		wp_list_comments( array(
+			'style'      => 'ol',
+			'short_ping' => true,
+		) );
+	echo '</ol>';
 
-		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
-		<nav id="comment-nav-below" class="navigation comment-navigation cf" role="navigation">
-			<h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'kelso' ); ?></h2>
-			<div class="nav-links">
+	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through?
+		echo '<nav id="comment-nav-below" class="navigation comment-navigation cf" role="navigation">';
+		echo '<h2 class="screen-reader-text">' . esc_html__( 'Comment navigation', 'osixthreeo' ) . '</h2>';
+		echo '<div class="nav-links">';
+			echo '<div class="nav-previous">';
+				previous_comments_link( esc_html__( 'Older Comments', 'osixthreeo' ) );
+			echo '</div>';
+			echo '<div class="nav-next">';
+				next_comments_link( esc_html__( 'Newer Comments', 'osixthreeo' ) );
+			echo '</div>';
+		echo '</div>';
+		echo '</nav>';
+	endif; // Check for comment navigation.
 
-				<div class="nav-previous"><?php previous_comments_link( esc_html__( 'Older Comments', 'kelso' ) ); ?></div>
-				<div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments', 'kelso' ) ); ?></div>
-
-			</div>
-		</nav>
-		<?php
-		endif; // Check for comment navigation.
-
-	endif; // Check for have_comments().
+endif; // Check for have_comments().
 
 
-	// If comments are closed and there are comments, let's leave a little note, shall we?
-	if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	?>
+// If comments are closed and there are comments, let's leave a little note, shall we?
+if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
+	echo '<p class="no-comments">' . esc_html__( 'Comments are closed.', 'osixthreeo' ) . '</p>';
+endif;
 
-		<p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'kelso' ); ?></p>
-	<?php
-	endif;
+comment_form();
 
-	comment_form();
-	?>
-
-</div>
-<?php tha_comments_after(); ?>
+echo '</div>';
+tha_comments_after();

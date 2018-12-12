@@ -2,44 +2,26 @@
 /**
  * Site footer
  *
- * @package kelso
+ * @package  osixthreeo
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
 
-?>
+echo '</div>';
+echo '</div>';
 
-		</div>
-	</div>
+tha_footer_before();
+echo '<footer id="colophon" class="site-footer" role="contentinfo">';
+echo '<div class="inner-wrap">';
+	tha_footer_top();
+	tha_footer_bottom();
+echo '</div>';
+echo '</footer>';
+tha_footer_after();
 
-	<?php if ( is_active_sidebar( 'footer-1' ) || is_active_sidebar( 'footer-2' ) || is_active_sidebar( 'footer-3' ) || is_active_sidebar( 'footer-4' ) ) : ?>
-	<div class="footer-widgets">
-
-		<div class="inner-wrap">
-			<?php kelso_display_footer_widgets(); ?>
-		</div>
-
-	</div>
-	<?php endif; ?>
-
-	<?php tha_footer_before(); ?>
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="inner-wrap">
-			<?php
-			tha_footer_top();
-			kelso_display_site_footer();
-			tha_footer_bottom();
-			?>
-		</div>
-	</footer>
-
-	<?php tha_footer_after(); ?>
-
-</div>
-
-<?php
-wp_footer();
+echo '</div>';
 tha_body_bottom();
-?>
+wp_footer();
 
-</body>
-</html>
+echo '</body></html>';

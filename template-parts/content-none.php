@@ -2,40 +2,36 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * @package kelso
+ * @package  osixthreeo
+ * @subpackage osixthreeo/template-parts
+ * @author   Chip Sheppard
+ * @since    1.0.0
+ * @license  GPL-2.0+
  */
 
-?>
+echo '<section class="no-results not-found">';
+echo '<header class="page-header">';
+	echo '<div class="inner-wrap title-wrap">';
+		echo '<h1 class="page-title">' . esc_html__( 'Nothing Found', 'osixthreeo' ) . '</h1>';
+	echo '</div>';
+echo '</header>';
 
-<section class="no-results not-found">
+echo '<div class="page-content">';
 
-	<header class="page-header">
-		<div class="inner-wrap title-wrap">
-			<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'kelso' ); ?></h1>
-		</div>
-	</header>
+if ( is_home() && current_user_can( 'publish_posts' ) ) :
 
-	<div class="page-content">
+	echo '<p>' . esc_html__( 'No posts to display.', 'osixthreeo' ) . '</p>';
 
-		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
+elseif ( is_search() ) :
 
-			<p><?php esc_html_e( 'No posts to display.', 'kelso' ); ?></p>
+	echo '<p>' . esc_html__( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'osixthreeo' ) . '</p>';
+	get_search_form();
 
-		<?php elseif ( is_search() ) : ?>
+else :
 
-			<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kelso' ); ?></p>
-			<?php
-			get_search_form();
+	echo '<p>' . esc_html__( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'osixthreeo' ) . '</p>';
+	get_search_form();
 
-		else :
-		?>
-
-			<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'kelso' ); ?></p>
-			<?php
-			get_search_form();
-
-		endif;
-		?>
-	</div>
-
-</section>
+endif;
+echo '</div>';
+echo '</section>';
