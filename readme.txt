@@ -9,11 +9,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-OsixthreeO is a basic but flexible starter theme.
-
-== Frequently Asked Questions ==
-
-= Does osixthreeo have widget areas? =
+OsixthreeO is a basic but flexible starter theme for WordPress 5.0.
 
 2 Widget Areas
   - Sidebar
@@ -89,13 +85,13 @@ citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the 
 
 == Changelog ==
 
-= 1.0.0 - 01 2019 =
+= 1.0.0 - 01 01 2019 =
 * Stable
 
-= 0.5.0 - 11 2018 =
+= 0.5.0 - 11 11 2018 =
 * First deploy to GIT
 
-= 0.0.1 - 11 11 2018 =
+= 0.0.1 - 11 07 2018 =
 * _s downloaded and renamed to "osixthreeo"
 
 == Credits ==
