@@ -3,13 +3,13 @@
 
 	.content-area {
 		width: $size__site-main;
-		padding: 2.5em 5%;
+		padding: 2.5em 0;
 	}
 
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 2.5em 5%;
+		padding: 3em 1em;
 		width: $size__site-sidebar;
 	}
 }
@@ -18,28 +18,33 @@
 .inner-wrap {
 	max-width: $size__site-max;
 	margin: 0 auto;
+	padding: 0 5%;
+	position: relative;
 	width: $size__site-main;
 }
 
-.inner-wrap {
-	position: relative;
-	padding: 0 4em;
+// Content Sidebar ------------------------------
+.sidebar-right .site-content {
 
-	@include breakpoint(desktop-s) {
-		padding: 0 5%;
+	.content-area {
+		float: left;
+		padding-right: 1em;
+		width: $size__site-content;
+	}
+
+	.widget-area {
+		float: right;
 	}
 }
 
 // Stack 'em up for Vertical iPads and smaller
 @include breakpoint(tablet-v) {
-	.content-area,
-	.site-content .widget-area {
+	.site-content .widget-area,
+	.sidebar-right .site-content .content-area {
 		display: block;
 		float: none;
+		padding-right: 0;
+		padding-left: 0;
 		width: $size__site-main;
-	}
-	.site-content .widget-area {
-		padding-right: 5%;
-		padding-left: 5%;
 	}
 }

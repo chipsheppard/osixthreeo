@@ -29,7 +29,7 @@ function osixthreeo_widgets_init() {
 	) );
 
 	register_sidebar( array(
-		'name' => esc_html__( 'Lower Footer Widget Area', 'osixthreeo' ),
+		'name' => esc_html__( 'Footer Widget Area', 'osixthreeo' ),
 		'id' => 'footer',
 		'description' => esc_html__( 'An optional widget area for your site footer. Displays at the very bottom of your website.', 'osixthreeo' ),
 		'before_widget' => '<div id="%1$s" class="site-footer %2$s">',

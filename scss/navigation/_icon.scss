@@ -4,7 +4,7 @@
 	cursor: pointer;
 	display: none;
 	position: absolute;
-	right: 2.5%;
+	right: 1em;
 	top: 1.25em;
 	overflow: visible;
 	transition-property: opacity, filter;
@@ -15,16 +15,15 @@
 	@include breakpoint(tablet-v) {
 		display: block;
 	}
+	@include breakpoint(phone-h) {
+		right: 1.125em;
+	}
 
 	&:hover,
 	&:focus,
 	&:active {
 		background: transparent;
 		outline: 0;
-	}
-
-	@include breakpoint(phone-h) {
-		right: 1.5%;
 	}
 
 	.menu-icon-wrap {

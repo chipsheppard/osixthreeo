@@ -2,7 +2,9 @@
 .archive {
 
 	.hentry {
+		background-color: #ffffff;
 		margin: 0 0 2em;
+		padding: 0 1.5em;
 		@include font-size(1);
 
 		.wp-post-image {
@@ -15,11 +17,13 @@
 		.link-more {
 			overflow: hidden;
 		}
+
+		&.sticky {
+			border-top:2px solid $color__highlight;
+		}
 	}
 
 	.entry-content {
-		padding: 0 1.5em;
-
 		p {
 			margin-bottom: .25em;
 		}
@@ -30,7 +34,7 @@
 	}
 
 	.entry-header {
-		padding: 1.5em 1.5em 1em;
+		padding: 1.5em 0 1em;
 	}
 
 	.entry-title {
@@ -41,7 +45,7 @@
 
 .fi-link {
 	display: inline-block;
-	margin: 1.5em;
+	margin: 1.5em 1.5em 1.5em 0;
 	max-width: 300px;
 	overflow: hidden;
 	float: left;
@@ -72,15 +76,8 @@
 	display: block;
 	font-weight: $font__weight-bold;
 	line-height: 1;
-	padding: 2em;
+	padding: 2em 0;
 	position: relative;
 	text-transform: uppercase;
 	@include font-size(.75);
-}
-
-/* STICKY POST */
-.sticky {
-	.entry-header {
-		border-top:2px solid $color__highlight;
-	}
 }

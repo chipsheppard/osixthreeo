@@ -13,30 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-
 /*
- * DISPLAY TOPBAR
- -----------------------------------------------------------------
- */
-if ( ! function_exists( 'osixthreeo_display_topbar' ) ) {
-	/**
-	 * Display the Topbar IF a topbar widget is in place.
-	 */
-	function osixthreeo_display_topbar() {
-		if ( is_active_sidebar( 'topbar' ) ) {
-			echo '<div class="topbar">';
-				echo '<div class="inner-wrap">';
-						dynamic_sidebar( 'topbar' );
-				echo '</div>';
-			echo '</div>';
-		}
-	}
-}
-add_action( 'tha_header_before', 'osixthreeo_display_topbar' );
-
-
-/*
- * DISPLAY BRANDING
+ * DISPLAY Branding
  -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_branding' ) ) {
@@ -75,7 +53,7 @@ add_action( 'tha_header_top', 'osixthreeo_display_branding' );
 
 
 /*
- * DISPLAY NAVIGATION
+ * DISPLAY Navigation
  -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
@@ -161,7 +139,7 @@ add_action( 'tha_entry_bottom', 'osixthreeo_display_entry_footer' );
 
 
 /*
- * DISPLAY read more link
+ * DISPLAY Read More link
 -----------------------------------------------------------------
 */
 if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
@@ -183,8 +161,36 @@ if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
 add_action( 'tha_entry_bottom', 'osixthreeo_display_read_more' );
 
 
+/**
+ * SIDEBAR Body Classes
+ * -----------------------------------------------------------------
+ *
+ * @param array $classes The body classes.
+ */
+function osixthreeo_sidebar_bodyclass( $classes ) {
+	if ( ! is_single() ) {
+		return $classes;
+	}
+	$classes[] = 'sidebar-right';
+	return $classes;
+}
+add_filter( 'body_class','osixthreeo_sidebar_bodyclass' );
+
+/**
+ * DISPLAY Sidebar
+ * -----------------------------------------------------------------
+ */
+function osixthreeo_get_right_sidebar() {
+	if ( ! is_single() ) :
+		return;
+	endif;
+	get_sidebar();
+}
+add_action( 'tha_content_after', 'osixthreeo_get_right_sidebar' );
+
+
 /*
- * DISPLAY SITE FOOTER
+ * DISPLAY Site Footer
  -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {

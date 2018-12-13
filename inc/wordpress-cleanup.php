@@ -37,7 +37,6 @@ function osixthreeo_dont_update_theme( $r, $url ) {
 }
 add_filter( 'http_request_args', 'osixthreeo_dont_update_theme', 5, 2 );
 
-
 /**
  * Header Meta Tags
  */
