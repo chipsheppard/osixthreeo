@@ -53,8 +53,9 @@
 	@include breakpoint(tablet-v) {
 		float:none;
 		margin-bottom: 0;
+		margin-right: 0;
 		max-width: none;
-		width: calc(100% - 3em);
+		width: 100%;
 	}
 }
 

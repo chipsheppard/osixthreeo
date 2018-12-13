@@ -1175,7 +1175,7 @@ button.dropdown-toggle.toggled-on:after {
   cursor: pointer;
   display: none;
   position: absolute;
-  right: 1em;
+  right: .125em;
   top: 1.25em;
   overflow: visible;
   transition-property: opacity, -webkit-filter;
@@ -1194,7 +1194,7 @@ button.dropdown-toggle.toggled-on:after {
 
 @media all and (max-width: 640px) {
   .responsive-menu-icon {
-    right: 1.125em;
+    right: .5em;
   }
 }
 
@@ -2391,7 +2391,7 @@ img.flex {
 .inner-wrap {
   max-width: 80em;
   margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 3%;
   position: relative;
   width: 100%;
 }
@@ -2918,8 +2918,9 @@ body.error404 .page-title {
   .fi-link {
     float: none;
     margin-bottom: 0;
+    margin-right: 0;
     max-width: none;
-    width: calc(100% - 3em);
+    width: 100%;
   }
 }
 

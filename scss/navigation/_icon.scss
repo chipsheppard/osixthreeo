@@ -4,7 +4,7 @@
 	cursor: pointer;
 	display: none;
 	position: absolute;
-	right: 1em;
+	right: .125em;
 	top: 1.25em;
 	overflow: visible;
 	transition-property: opacity, filter;
@@ -16,7 +16,7 @@
 		display: block;
 	}
 	@include breakpoint(phone-h) {
-		right: 1.125em;
+		right: .5em;
 	}
 
 	&:hover,
