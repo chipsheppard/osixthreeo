@@ -36,7 +36,7 @@ echo '<header class="entry-header">';
 if ( is_singular() ) :
 
 	// Title for posts, attachments, pages, custom post types.
-	echo '<div class="inner-wrap title-wrap">';
+	echo '<div class="title-wrap">';
 	the_title( '<h1 class="entry-title">', '</h1>' );
 
 else :

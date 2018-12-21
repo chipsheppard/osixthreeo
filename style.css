@@ -1026,6 +1026,25 @@ a:hover, a:active {
   position: relative;
 }
 
+.site-navigation ul {
+  line-height: 1;
+}
+
+.site-navigation ul ul {
+  display: block;
+}
+
+.site-navigation li {
+  display: inline-block;
+  position: relative;
+  margin-right: 1em;
+}
+
+.site-navigation li:hover > .sub-menu {
+  left: auto;
+  opacity: 1;
+}
+
 .site-navigation a {
   border-bottom: 1px solid transparent;
   color: #222222;
@@ -1047,42 +1066,10 @@ a:hover, a:active {
   padding-right: 1em;
 }
 
-.site-navigation ul {
-  line-height: 1;
-}
-
-.site-navigation ul ul {
-  display: block;
-}
-
-.site-navigation li {
-  display: inline-block;
-  position: relative;
-  margin-right: 1em;
-}
-
-.site-navigation li.accent {
-  border: 1px solid #b22222;
-}
-
-.site-navigation li.accent a {
-  padding: .9375em .5em .875em;
-  border-color: transparent;
-}
-
-.site-navigation li.accent a:hover {
-  border-color: transparent;
-  opacity: 0.75;
-}
-
-.site-navigation li:hover > .sub-menu {
-  left: auto;
-  opacity: 1;
-}
-
 .site-navigation .sub-menu {
   background: #ffffff;
   border-top: 1px solid #222;
+  display: block;
   left: -9999px;
   margin-top: -1px;
   opacity: 0;
@@ -1091,7 +1078,7 @@ a:hover, a:active {
   top: 100%;
   transition: all .2s ease-in;
   width: 190px;
-  z-index: 99;
+  z-index: 2;
 }
 
 .site-navigation .sub-menu a {
@@ -1133,10 +1120,6 @@ button.dropdown-toggle {
   right: 7px;
 }
 
-button.dropdown-toggle:focus {
-  outline: 0;
-}
-
 button.dropdown-toggle:after {
   content: '';
   display: inline-block;
@@ -1150,10 +1133,6 @@ button.dropdown-toggle:after {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   transition: all .05s ease-in-out;
-}
-
-button.dropdown-toggle:focus {
-  outline: 0;
 }
 
 button.dropdown-toggle.toggled-on:after {
@@ -1331,15 +1310,15 @@ button.dropdown-toggle.toggled-on:after {
   }
   .site-navigation .menu-wrap {
     background-color: #ffffff;
+    display: none;
     overflow: hidden;
-    padding: 0 2%;
+    padding: 1em 2%;
     max-height: 0;
     transition: all .25s ease;
   }
   .site-navigation.toggled-on .menu-wrap {
     display: block;
     max-height: 1000px;
-    padding: 1em 2%;
   }
   .site-navigation a {
     border: 0;
@@ -1375,13 +1354,6 @@ button.dropdown-toggle.toggled-on:after {
   }
   .site-navigation li:last-of-type {
     border-bottom: 0;
-  }
-  .site-navigation li.accent {
-    margin-top: .5em;
-  }
-  .site-navigation li.accent a {
-    padding-bottom: .75em;
-    padding-left: 1.5em;
   }
   .site-navigation li li {
     display: block;
@@ -2387,10 +2359,10 @@ img.flex {
   width: 29%;
 }
 
-.content-inner-wrap,
-.inner-wrap {
-  max-width: 80em;
+.inner-wrap,
+.content-inner-wrap {
   margin: 0 auto;
+  max-width: 80em;
   padding: 0 3%;
   position: relative;
   width: 100%;
@@ -2582,7 +2554,7 @@ img.flex {
 
 @media all and (max-width: 640px) {
   .site-branding {
-    padding-bottom: .75em;
+    padding: .75em 0;
   }
 }
 
@@ -2602,6 +2574,13 @@ img.flex {
   width: 100%;
   height: auto;
   transition: max-height 0.2s;
+}
+
+@media all and (max-width: 640px) {
+  .custom-logo {
+    max-height: 32px;
+    width: auto;
+  }
 }
 
 .custom-logo a:hover {
@@ -2626,26 +2605,19 @@ img.flex {
   opacity: 0.75;
 }
 
-.site-description {
-  color: #000000;
-  letter-spacing: 1px;
-  line-height: 1;
-  padding-top: .5em;
-}
-
 @media all and (max-width: 640px) {
-  .site-branding {
-    padding: .25em 0 0;
-  }
   .site-title {
     margin-bottom: 0;
     font-size: 32px;
     font-size: 2rem;
   }
-  .custom-logo img {
-    max-height: 32px;
-    width: auto;
-  }
+}
+
+.site-description {
+  color: #000000;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding-top: .5em;
 }
 
 .site-footer {
@@ -2690,13 +2662,7 @@ img.flex {
   text-transform: uppercase;
 }
 
-body.page .entry-header .inner-wrap,
-body.single .entry-header .inner-wrap,
-body.blog .page-header .inner-wrap,
-body.archive .page-header .inner-wrap,
-body.search .page-header .inner-wrap,
-body.error404 .page-header .inner-wrap {
-  max-width: auto;
+.title-wrap {
   margin-bottom: 1.5em;
   padding: 0;
 }

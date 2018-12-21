@@ -14,10 +14,10 @@
 	}
 }
 
-.content-inner-wrap,
-.inner-wrap {
-	max-width: $size__site-max;
+.inner-wrap,
+.content-inner-wrap {
 	margin: 0 auto;
+	max-width: $size__site-max;
 	padding: 0 3%;
 	position: relative;
 	width: $size__site-main;

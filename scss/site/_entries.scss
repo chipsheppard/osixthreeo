@@ -16,18 +16,9 @@
 	}
 }
 
-body.page .entry-header,
-body.single .entry-header,
-body.blog .page-header,
-body.archive .page-header,
-body.search .page-header,
-body.error404 .page-header {
-
-	.inner-wrap {
-		max-width: auto;
-		margin-bottom: 1.5em;
-		padding: 0;
-	}
+.title-wrap {
+	margin-bottom: 1.5em;
+	padding: 0;
 }
 
 body.page .entry-title,
