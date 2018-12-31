@@ -545,7 +545,6 @@ object {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #222222;
   line-height: 1.2;
   margin: 0 0 3%;
 }
@@ -593,12 +592,39 @@ h6 {
 
 @media all and (max-width: 768px) {
   h1 {
-    font-size: 34px;
-    font-size: 2.125rem;
+    font-size: 36px;
+    font-size: 2.25rem;
   }
   h2 {
     font-size: 30px;
     font-size: 1.875rem;
+  }
+  h3 {
+    font-size: 26px;
+    font-size: 1.625rem;
+  }
+  h4 {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+  h5 {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+  h6 {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width: 640px) {
+  h1 {
+    font-size: 36px;
+    font-size: 2.25rem;
+  }
+  h2 {
+    font-size: 28px;
+    font-size: 1.75rem;
   }
   h3 {
     font-size: 24px;
@@ -609,29 +635,6 @@ h6 {
     font-size: 1.25rem;
   }
   h5 {
-    font-size: 18px;
-    font-size: 1.125rem;
-  }
-  h6 {
-    font-size: 14px;
-    font-size: 0.875rem;
-  }
-}
-
-@media all and (max-width: 640px) {
-  h1 {
-    font-size: 32px;
-    font-size: 2rem;
-  }
-  h2 {
-    font-size: 24px;
-    font-size: 1.5rem;
-  }
-  h3 {
-    font-size: 20px;
-    font-size: 1.25rem;
-  }
-  h4 {
     font-size: 18px;
     font-size: 1.125rem;
   }
@@ -969,7 +972,6 @@ select {
 }
 
 .search-form input[type="search"] {
-  border-color: #dcdcdc;
   display: inline-block;
 }
 
@@ -2144,9 +2146,6 @@ img.alignright,
   }
 }
 
-/*
- * Utility
---------------------------------------------- */
 @media only screen and (min-width: 1024px) {
   .mobile-only {
     display: none;
