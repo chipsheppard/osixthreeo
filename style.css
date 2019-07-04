@@ -546,7 +546,7 @@ object {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
-  margin: 0 0 3%;
+  margin: 0 0 .75rem;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -556,7 +556,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
 }
 
 h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active, h5 a:hover, h5 a:focus, h5 a:active, h6 a:hover, h6 a:focus, h6 a:active {
-  opacity: .8;
+  opacity: 0.8;
   border-bottom: 1px solid currentColor;
 }
 
@@ -847,6 +847,7 @@ input[type="submit"]:hover {
   bottom: 0;
   left: 0;
   opacity: 0;
+  -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
 }
 
@@ -1078,6 +1079,7 @@ a:hover, a:active {
   position: absolute;
   text-align: left;
   top: 100%;
+  -webkit-transition: all .2s ease-in;
   transition: all .2s ease-in;
   width: 190px;
   z-index: 2;
@@ -1091,6 +1093,7 @@ a:hover, a:active {
   line-height: 1.25;
   padding: .75em 1.125em;
   text-transform: none;
+  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
   width: 190px;
   font-size: 12px;
@@ -1134,6 +1137,7 @@ button.dropdown-toggle:after {
   border-width: 0 1px 1px 0;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: all .05s ease-in-out;
   transition: all .05s ease-in-out;
 }
 
@@ -1159,11 +1163,14 @@ button.dropdown-toggle.toggled-on:after {
   right: .125em;
   top: 1.25em;
   overflow: visible;
+  -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
   transition-property: opacity, filter;
   transition-property: opacity, filter, -webkit-filter;
-  transition-duration: 0.15s;
-  transition-timing-function: linear;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
   z-index: 999;
 }
 
@@ -1209,11 +1216,14 @@ button.dropdown-toggle.toggled-on:after {
   background-color: #222222;
   position: absolute;
   height: 3px;
+  -webkit-transition-property: -webkit-transform;
   transition-property: -webkit-transform;
   transition-property: transform;
   transition-property: transform, -webkit-transform;
-  transition-duration: 0.15s;
-  transition-timing-function: ease;
+  -webkit-transition-duration: 0.15s;
+          transition-duration: 0.15s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
   width: 30px;
 }
 
@@ -1260,15 +1270,19 @@ button.dropdown-toggle.toggled-on:after {
  * Spin
  ------------------------------------------ */
 .menu-icon {
-  transition-duration: 0.3s;
-  transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+          transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .menu-icon::before {
+  -webkit-transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
   transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in;
 }
 
 .menu-icon::after {
+  -webkit-transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
   transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
@@ -1277,13 +1291,16 @@ button.dropdown-toggle.toggled-on:after {
 .toggled-on .menu-icon {
   -webkit-transform: rotate(225deg);
           transform: rotate(225deg);
-  transition-delay: 0.14s;
-  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  -webkit-transition-delay: 0.14s;
+          transition-delay: 0.14s;
+  -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+          transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .toggled-on .menu-icon::before {
   top: 0;
   opacity: 0;
+  -webkit-transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
   transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out;
 }
 
@@ -1291,6 +1308,7 @@ button.dropdown-toggle.toggled-on:after {
   bottom: 0;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+  -webkit-transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
   transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -1316,6 +1334,7 @@ button.dropdown-toggle.toggled-on:after {
     overflow: hidden;
     padding: 1em 2%;
     max-height: 0;
+    -webkit-transition: all .25s ease;
     transition: all .25s ease;
   }
   .site-navigation.toggled-on .menu-wrap {
@@ -1442,7 +1461,7 @@ button.dropdown-toggle.toggled-on:after {
   padding: 1em .5em;
   position: relative;
   width: 100%;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 .posts-navigation .nav-previous a:hover,
@@ -1488,6 +1507,7 @@ button.dropdown-toggle.toggled-on:after {
   border-width: 0 0 2px 2px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1514,6 +1534,7 @@ button.dropdown-toggle.toggled-on:after {
   border-width: 2px 2px 0px 0px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1569,6 +1590,7 @@ button.dropdown-toggle.toggled-on:after {
   border-width: 0 0 2px 2px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1592,6 +1614,7 @@ button.dropdown-toggle.toggled-on:after {
   border-width: 2px 2px 0px 0px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
@@ -1938,12 +1961,15 @@ img.alignright,
   width: 100%;
 }
 
-.sidebar-right .alignfull {
-  margin-right: calc(35% - 65vw);
-}
-
-.sidebar-left .alignfull {
-  margin-left: calc(35% - 65vw);
+@media all and (min-width: 769px) {
+  .sidebar-right .alignfull {
+    margin-left: calc(75% - 50vw);
+    margin-right: -40px;
+  }
+  .sidebar-left .alignfull {
+    margin-left: -40px;
+    margin-right: calc(75% - 50vw);
+  }
 }
 
 .wp-block-image {
@@ -2103,6 +2129,7 @@ img.alignright,
   bottom: 0;
   left: 0;
   opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -2129,7 +2156,8 @@ img.alignright,
 
 @media (max-width: 780px) and (min-width: 600px) {
   .wp-block-column {
-    flex-basis: 47%;
+    -webkit-flex-basis: 47%;
+            flex-basis: 47%;
   }
 }
 
@@ -2139,11 +2167,20 @@ img.alignright,
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 780px) {
   .wp-block-column:not(:first-child),
   .wp-block-column:nth-child(2n) {
     margin-left: 0;
   }
+}
+
+.wp-block-columns .wp-block-column {
+  margin-bottom: 0;
+  padding: .75em 1em 0;
+}
+
+.wp-block-columns.no-pad .wp-block-column {
+  padding: 0;
 }
 
 @media only screen and (min-width: 1024px) {
@@ -2348,13 +2385,13 @@ img.flex {
 
 .site-content .content-area {
   width: 100%;
-  padding: 2.5em 0;
+  padding: 2.5em 4%;
 }
 
 .site-content .widget-area {
   display: inline-block;
   overflow: hidden;
-  padding: 3em 1em;
+  padding: 2.5em 4%;
   width: 29%;
 }
 
@@ -2362,9 +2399,12 @@ img.flex {
 .content-inner-wrap {
   margin: 0 auto;
   max-width: 80em;
-  padding: 0 3%;
-  position: relative;
   width: 100%;
+}
+
+.inner-wrap {
+  position: relative;
+  padding: 0 4%;
 }
 
 .sidebar-right .site-content .content-area {
@@ -2541,6 +2581,7 @@ img.flex {
   text-align: left;
   padding: 1em 0;
   vertical-align: middle;
+  -webkit-transition: all .5s ease;
   transition: all .5s ease;
 }
 
@@ -2572,6 +2613,7 @@ img.flex {
   max-width: 300px;
   width: 100%;
   height: auto;
+  -webkit-transition: max-height 0.2s;
   transition: max-height 0.2s;
 }
 
@@ -2674,7 +2716,7 @@ body.search .page-title,
 body.error404 .page-title {
   letter-spacing: 1px;
   padding: 0;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 @media all and (max-width: 640px) {
@@ -2866,7 +2908,7 @@ body.error404 .page-title {
 
 .blog .entry-title,
 .archive .entry-title {
-  word-break: break-word;
+  word-break: break-all;
   font-size: 22px;
   font-size: 1.375rem;
 }
@@ -2891,6 +2933,7 @@ body.error404 .page-title {
 
 .featured-image {
   display: inline-block;
+  -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
@@ -3370,6 +3413,7 @@ body.error404 .page-title {
   content: '';
   height: 1px;
   position: absolute;
+  -webkit-transition: all .1s ease;
   transition: all .1s ease;
   width: 0;
 }
@@ -3612,6 +3656,7 @@ img#wpstats {
   bottom: 0;
   left: 0;
   opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 

@@ -3,13 +3,13 @@
 
 	.content-area {
 		width: $size__site-main;
-		padding: 2.5em 0;
+		padding: 2.5em $size__site-padding;
 	}
 
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 3em 1em;
+		padding: 2.5em $size__site-padding;
 		width: $size__site-sidebar;
 	}
 }
@@ -18,10 +18,14 @@
 .content-inner-wrap {
 	margin: 0 auto;
 	max-width: $size__site-max;
-	padding: 0 3%;
-	position: relative;
 	width: $size__site-main;
 }
+
+.inner-wrap {
+	position: relative;
+	padding: 0 $size__site-padding;
+}
+
 
 // Content Sidebar ------------------------------
 .sidebar-right .site-content {

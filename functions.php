@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.0.0' );
+define( 'OSIXTHREEO_VERSION', '1.1.0' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Sheppco' );
 define( 'OSIXTHREEO_AUTHOR_LINK', 'https://sheppco.com' );

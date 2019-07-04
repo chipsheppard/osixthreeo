@@ -29,11 +29,16 @@
 	display: block;
 	width: 100%;
 }
-.sidebar-right .alignfull {
-	margin-right: calc(35% - 65vw);
-}
-.sidebar-left .alignfull {
-	margin-left: calc(35% - 65vw);
+
+@include breakpoint(tablet-min-v) {
+	.sidebar-right .alignfull {
+		margin-left: calc(75% - 50vw);
+	    margin-right: -40px;
+	}
+	.sidebar-left .alignfull {
+		margin-left: -40px;
+	    margin-right: calc(75% - 50vw);
+	}
 }
 
 .wp-block-image {
@@ -246,9 +251,21 @@
 }
 
 // Override plugin styles to get even edges
-@media (min-width: 600px) {
+@media (min-width: 780px) {
 	.wp-block-column:not(:first-child),
 	.wp-block-column:nth-child(2n) {
 	    margin-left: 0;
+	}
+}
+
+.wp-block-columns {
+	.wp-block-column {
+		margin-bottom: 0;
+		padding: .75em 1em 0;
+
+	}
+
+	&.no-pad .wp-block-column {
+		padding: 0;
 	}
 }

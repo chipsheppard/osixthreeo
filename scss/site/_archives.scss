@@ -38,7 +38,7 @@
 	}
 
 	.entry-title {
-		word-break: break-word;
+		word-break: break-all;
 		@include font-size(1.375);
 	}
 }

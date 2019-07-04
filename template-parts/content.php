@@ -14,19 +14,19 @@ echo '<article id="post-' . get_the_ID() . '" class="' . join( ' ', get_post_cla
 if ( ! is_singular() && ! is_search() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
-	the_post_thumbnail( 'post-thumbnail', [
+	the_post_thumbnail( 'post-thumbnail', array(
 		'class' => 'featured-image',
 		'title' => 'Feature image',
-	] );
+	) );
 	echo '</a>';
 
 elseif ( is_search() && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
-	the_post_thumbnail( 'thumbnail', [
+	the_post_thumbnail( 'thumbnail', array(
 		'class' => 'featured-image',
 		'title' => 'Feature image',
-	] );
+	) );
 	echo '</a>';
 
 endif;

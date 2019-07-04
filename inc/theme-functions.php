@@ -68,9 +68,9 @@ if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
 		}
 
 		echo '<nav id="primary-navigation" class="site-navigation" role="navigation">';
-			echo '<button class="responsive-menu-icon" aria-controls="mobile-navigation" aria-expanded="false"><div class="menu-icon-wrap"><div class="menu-icon"></div></div></button>';
+			echo '<button class="responsive-menu-icon" aria-controls="primary-menu" aria-expanded="false"><div class="menu-icon-wrap"><div class="menu-icon"></div></div></button>';
 
-			echo '<div class="menu-wrap"><span>';
+			echo '<div class="menu-wrap"><div class="menu-span">';
 
 				do_action( 'osixthreeo_inside_navigation' );
 
@@ -80,7 +80,7 @@ if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
 					'container' => '',
 				) );
 
-			echo '</span></div>';
+			echo '</div></div>';
 		echo '</nav>';
 	}
 }
