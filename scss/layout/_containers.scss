@@ -2,14 +2,14 @@
 	clear: both;
 
 	.content-area {
+		padding: 2.5em 0;
 		width: $size__site-main;
-		padding: 2.5em $size__site-padding;
 	}
 
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 2.5em $size__site-padding;
+		padding: 2.5em 0;
 		width: $size__site-sidebar;
 	}
 }
@@ -19,11 +19,11 @@
 	margin: 0 auto;
 	max-width: $size__site-max;
 	width: $size__site-main;
+	padding: 0 $size__site-padding;
 }
 
 .inner-wrap {
 	position: relative;
-	padding: 0 $size__site-padding;
 }
 
 

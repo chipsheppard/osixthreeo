@@ -8,8 +8,8 @@
  * @license  GPL-2.0+
  */
 
-echo '</div>';
-echo '</div>';
+echo '</div>';  // /content-inner-wrap.
+echo '</div>'; // /site-content.
 
 tha_footer_before();
 echo '<footer id="colophon" class="site-footer" role="contentinfo">';

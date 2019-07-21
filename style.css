@@ -2384,15 +2384,15 @@ img.flex {
 }
 
 .site-content .content-area {
+  padding: 2.5em 0;
   width: 100%;
-  padding: 2.5em 4%;
 }
 
 .site-content .widget-area {
   display: inline-block;
   overflow: hidden;
-  padding: 2.5em 4%;
-  width: 29%;
+  padding: 2.5em 0;
+  width: 26%;
 }
 
 .inner-wrap,
@@ -2400,11 +2400,11 @@ img.flex {
   margin: 0 auto;
   max-width: 80em;
   width: 100%;
+  padding: 0 4%;
 }
 
 .inner-wrap {
   position: relative;
-  padding: 0 4%;
 }
 
 .sidebar-right .site-content .content-area {
