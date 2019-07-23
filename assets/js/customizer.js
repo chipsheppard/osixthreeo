@@ -40,4 +40,40 @@
 			}
 		} );
 	} );
+
+	// GLOBAL WIDTH.
+	wp.customize( 'osixthreeo_settings[global_width_setting]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'full' === newval ) {
+				$( 'body' ).removeClass( 'contained' );
+			}
+			if ( 'contained' === newval ) {
+				$( 'body' ).addClass( 'contained' );
+			}
+		} );
+	} );
+
+	// HEADER LAYOUT.
+	wp.customize( 'osixthreeo_settings[header_layout]', function( value ) {
+		value.bind( function( newval ) {
+			if ( 'headernormal' === newval ) {
+				$( 'body' ).removeClass( 'headercentered' );
+			}
+			if ( 'headercentered' === newval ) {
+				$( 'body' ).addClass( 'headercentered' );
+			}
+		} );
+	} );
+
+	// CONTAIN CONTENT.
+	wp.customize( 'osixthreeo_settings[content_contain]', function( value ) {
+		value.bind( function( newval ) {
+			if ( newval ) {
+				$( 'body' ).addClass( 'contentcontained' );
+			} else {
+				$( 'body' ).removeClass( 'contentcontained' );
+			}
+		} );
+	} );
+
 } )( jQuery );

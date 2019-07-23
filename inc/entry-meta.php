@@ -20,9 +20,14 @@ function osixthreeo_posted_on() {
 
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
-	$time_string = sprintf( $time_string,
-		esc_attr( get_the_date( 'c' ) ),
-		esc_html( get_the_date( 'M j, Y' ) )
+	$time_string = sprintf(
+		$time_string,
+		esc_attr(
+			get_the_date( 'c' )
+		),
+		esc_html(
+			get_the_date( 'M j, Y' )
+		)
 	);
 
 	$posted_on = sprintf(
@@ -30,7 +35,7 @@ function osixthreeo_posted_on() {
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span> '; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . wp_kses_post( $posted_on ) . '</span> ';
 }
 
 /**
@@ -44,17 +49,22 @@ function osixthreeo_updated_on() {
 
 	$updated_string = '<time class="entry-date updated" datetime="%1$s">%2$s</time>';
 
-	$updated_string = sprintf( $updated_string,
-		esc_attr( get_the_modified_date( 'c' ) ),
-		esc_html( get_the_modified_date( 'm/d/Y' ) )
+	$updated_string = sprintf(
+		$updated_string,
+		esc_attr(
+			get_the_modified_date( 'c' )
+		),
+		esc_html(
+			get_the_modified_date( 'm/d/Y' )
+		)
 	);
-	$updated_on = sprintf(
+	$updated_on     = sprintf(
 		/* translators: %s: modified date. */
 		esc_html_x( 'updated %s', 'modified date', 'osixthreeo' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $updated_string . '</a>'
 	);
 
-	echo '<span class="updated-on">' . $updated_on . '</span>'; // WPCS: XSS OK.
+	echo '<span class="updated-on">' . wp_kses_post( $updated_on ) . '</span>';
 }
 
 /**
@@ -68,7 +78,7 @@ function osixthreeo_posted_by() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="byline">' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="byline">' . wp_kses_post( $byline ) . '</span>';
 }
 
 /**

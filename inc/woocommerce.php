@@ -97,7 +97,7 @@ function osixthreeo_woocommerce_related_products_args( $args ) {
 		'posts_per_page' => 3,
 		'columns'        => 3,
 	);
-	$args = wp_parse_args( $defaults, $args );
+	$args     = wp_parse_args( $defaults, $args );
 	return $args;
 }
 add_filter( 'woocommerce_output_related_products_args', 'osixthreeo_woocommerce_related_products_args' );
@@ -176,17 +176,6 @@ remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_singl
 add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
 
 
-/**
- * From _s  the WooCommerce Mini Cart.
- *
- * You can add the WooCommerce Mini Cart to header.php like so ...
- *
-	<?php
-		if ( function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
-			osixthreeo_woocommerce_header_cart();
-		}
-	?>
- */
 if ( ! function_exists( 'osixthreeo_woocommerce_cart_link_fragment' ) ) {
 	/**
 	 * Cart Fragments.
@@ -258,3 +247,16 @@ if ( ! function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
+
+
+/**
+ * From _s  the WooCommerce Mini Cart.
+ *
+ * You can add the WooCommerce Mini Cart to header.php like so ...
+ *
+	<?php
+		if ( function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
+			osixthreeo_woocommerce_header_cart();
+		}
+	?>
+ */

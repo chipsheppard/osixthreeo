@@ -4,12 +4,12 @@ Contributors: chipsheppard
 Tags: translation-ready, theme-options, full-width-template, custom-logo, custom-colors, custom-background, flexible-header, grid-layout, align-wide, block-styles
 Requires at least: 4.0
 Tested up to: 5.2.2
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-OsixthreeO is a basic but flexible starter theme for WordPress 5.0.
+OsixthreeO is a basic but flexible starter theme for WordPress 5.0+.
 
 2 Widget Areas
   - Sidebar
@@ -84,6 +84,10 @@ BlockQuote:
 citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
 
 == ChangeLog ==
+
+= 1.2.0 - 07 30 2019 =
+* Customizer control for site containment, content containment and sidebar placements.
+*
 
 = 1.1.0 - 06 30 2019 =
 * Adjust block-editor 'alignfull' styles for sidebar pages.

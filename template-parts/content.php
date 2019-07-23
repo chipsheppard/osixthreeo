@@ -9,24 +9,31 @@
  * @license  GPL-2.0+
  */
 
-echo '<article id="post-' . get_the_ID() . '" class="' . join( ' ', get_post_class() ) . '">'; // WPCS: XSS OK.
-
+?>
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php
 if ( ! is_singular() && ! is_search() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
-	the_post_thumbnail( 'post-thumbnail', array(
-		'class' => 'featured-image',
-		'title' => 'Feature image',
-	) );
+	the_post_thumbnail(
+		'post-thumbnail',
+		array(
+			'class' => 'featured-image',
+			'title' => 'Feature image',
+		)
+	);
 	echo '</a>';
 
 elseif ( is_search() && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
-	the_post_thumbnail( 'thumbnail', array(
-		'class' => 'featured-image',
-		'title' => 'Feature image',
-	) );
+	the_post_thumbnail(
+		'thumbnail',
+		array(
+			'class' => 'featured-image',
+			'title' => 'Feature image',
+		)
+	);
 	echo '</a>';
 
 endif;
@@ -60,10 +67,12 @@ if ( is_singular() ) : // single posts, attachments, pages, custom post types.
 
 	the_content();
 
-	wp_link_pages( array(
-		'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'osixthreeo' ),
-		'after'  => '</div>',
-	) );
+	wp_link_pages(
+		array(
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'osixthreeo' ),
+			'after'  => '</div>',
+		)
+	);
 
 else : // archives & search.
 

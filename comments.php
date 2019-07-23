@@ -47,10 +47,12 @@ if ( have_comments() ) :
 	endif; // Check for comment navigation.
 
 	echo '<ol class="comment-list">';
-		wp_list_comments( array(
-			'style'      => 'ol',
-			'short_ping' => true,
-		) );
+		wp_list_comments(
+			array(
+				'style'      => 'ol',
+				'short_ping' => true,
+			)
+		);
 	echo '</ol>';
 
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through?

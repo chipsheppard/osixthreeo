@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.1.0' );
+define( 'OSIXTHREEO_VERSION', '1.2.0' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Sheppco' );
 define( 'OSIXTHREEO_AUTHOR_LINK', 'https://sheppco.com' );
@@ -28,13 +28,15 @@ require get_template_directory() . '/inc/entry-meta.php';
 require get_template_directory() . '/inc/theme-functions.php';
 require get_template_directory() . '/inc/loop.php';
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer/defaults.php';
+require get_template_directory() . '/inc/customizer/customizer-functions.php';
 
 /**
  * Enqueue scripts and styles.
  */
 function osixthreeo_scripts() {
 	wp_enqueue_style( 'osixthreeo-style', get_stylesheet_uri(), array(), OSIXTHREEO_VERSION );
-	wp_enqueue_style( 'osixthreeo-fonts', osixthreeo_theme_fonts_url() );
+	wp_enqueue_style( 'osixthreeo-fonts', osixthreeo_theme_fonts_url(), array(), OSIXTHREEO_VERSION );
 	wp_enqueue_script( 'osixthreeo-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), OSIXTHREEO_VERSION, true );
 	wp_enqueue_script( 'osixthreeo-globaljs', get_template_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), OSIXTHREEO_VERSION, true );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -47,21 +49,29 @@ add_action( 'wp_enqueue_scripts', 'osixthreeo_scripts' );
  * Theme Fonts URL
  */
 function osixthreeo_theme_fonts_url() {
-	$gfonts = 'Source+Sans+Pro:400,400i,700,700i';
+	$gfonts        = 'Source+Sans+Pro:400,400i,700,700i';
 	$font_families = apply_filters( 'osixthreeo_theme_fonts', array( $gfonts ) );
-	$query_args = array(
+	$query_args    = array(
 		'family' => implode( '|', $font_families ),
 		'subset' => 'latin,latin-ext',
 	);
-	$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
+	$fonts_url     = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 	return $fonts_url;
 }
+
+/**
+ * Enqueue editor styles for the customizer
+ */
+function osixthreeo_customizer_custom_css() {
+	wp_enqueue_style( 'customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css' );
+}
+add_action( 'customize_controls_enqueue_scripts', 'osixthreeo_customizer_custom_css' );
 
 /**
  * Enqueue editor styles for Gutenberg
  */
 function osixthreeo_gutenberg_editor_styles() {
-	wp_enqueue_style( 'osixthreeo_gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style.css' );
+	wp_enqueue_style( 'osixthreeo_gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style.css', array(), OSIXTHREEO_VERSION );
 }
 add_action( 'enqueue_block_editor_assets', 'osixthreeo_gutenberg_editor_styles' );
 
@@ -87,23 +97,34 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		$GLOBALS['content_width'] = apply_filters( 'osixthreeo_content_width', 1200 );
 
 		// Custom Logo.
-		add_theme_support( 'custom-logo', array(
-			'height'      => 40,
-			'width'       => 200,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 40,
+				'width'       => 200,
+				'flex-height' => true,
+				'flex-width'  => true,
+			)
+		);
 
-		// Set up the WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'osixthreeo_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		// WordPress core custom background feature.
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'osixthreeo_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// wp_nav_menu() in 1 location.
-		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'osixthreeo' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => __( 'Primary Menu', 'osixthreeo' ),
+			)
+		);
 
 		// Make theme available for translation.
 		load_theme_textdomain( 'osixthreeo', get_template_directory() . '/languages' );
@@ -113,25 +134,6 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 	}
 endif;
 add_action( 'after_setup_theme', 'osixthreeo_setup' );
-
-
-/**
- * Make the TEXT editor the default.
- */
- add_filter( 'wp_default_editor', create_function( '', 'return "html";' ) );
-
-
-/**
- * Limit the number of post revisions.
- *
- * @param string $num The number of post revisions to keep.
- * @param object $post The post object.
- */
-function osixthreeo_set_revision_max( $num, $post ) {
-	$num = 10;
-	return $num;
-}
-add_filter( 'wp_revisions_to_keep', 'osixthreeo_set_revision_max', 10, 2 );
 
 
 // Load Jetpack compatibility file.

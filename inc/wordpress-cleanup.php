@@ -30,7 +30,7 @@ function osixthreeo_dont_update_theme( $r, $url ) {
 		return $r; // Not a theme update request. Bail immediately.
 	}
 	$themes = json_decode( $r['body']['themes'] );
-	$child = get_option( 'stylesheet' );
+	$child  = get_option( 'stylesheet' );
 	unset( $themes->themes->$child );
 	$r['body']['themes'] = wp_json_encode( $themes );
 	return $r;

@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /*
  * DISPLAY Branding
- -----------------------------------------------------------------
+ * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_branding' ) ) {
 	/**
@@ -25,11 +25,11 @@ if ( ! function_exists( 'osixthreeo_display_branding' ) ) {
 		echo '<div class="site-branding">';
 
 		$custom_logo_id = get_theme_mod( 'custom_logo' );
-		$logo = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-		$sitename = get_bloginfo( 'name', 'display' );
-		$logoheight = absint( $logo[2] );
-		$logowidth = absint( $logo[1] );
-		$description = get_bloginfo( 'description', 'display' );
+		$logo           = wp_get_attachment_image_src( $custom_logo_id, 'full' );
+		$sitename       = get_bloginfo( 'name', 'display' );
+		$logoheight     = absint( $logo[2] );
+		$logowidth      = absint( $logo[1] );
+		$description    = get_bloginfo( 'description', 'display' );
 
 		if ( has_custom_logo() ) {
 			echo '<div class="custom-logo">';
@@ -44,7 +44,7 @@ if ( ! function_exists( 'osixthreeo_display_branding' ) ) {
 		}
 
 		if ( $description || is_customize_preview() ) :
-			echo '<div class="site-description">' . $description . '</div>'; /* WPCS: xss ok. */
+			echo '<div class="site-description">' . wp_kses_post( $description ) . '</div>';
 		endif;
 		echo '</div>';
 	}
@@ -54,7 +54,7 @@ add_action( 'tha_header_top', 'osixthreeo_display_branding' );
 
 /*
  * DISPLAY Navigation
- -----------------------------------------------------------------
+ * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
 	/**
@@ -74,11 +74,13 @@ if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
 
 				do_action( 'osixthreeo_inside_navigation' );
 
-				wp_nav_menu( array(
-					'theme_location' => 'primary',
-					'menu_id' => 'primary-menu',
-					'container' => '',
-				) );
+				wp_nav_menu(
+					array(
+						'theme_location' => 'primary',
+						'menu_id'        => 'primary-menu',
+						'container'      => '',
+					)
+				);
 
 			echo '</div></div>';
 		echo '</nav>';
@@ -89,7 +91,7 @@ add_action( 'tha_header_top', 'osixthreeo_display_nav' );
 
 /*
  * DISPLAY Entry Footer
- -----------------------------------------------------------------
+ * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
 	/**
@@ -105,13 +107,13 @@ if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
 				/* translators: used between list items, there is a space after the comma */
 				$categories_list = get_the_category_list( esc_html__( ', ', 'osixthreeo' ) );
 				if ( $categories_list ) {
-					printf( '<span class="cat-links"><div class="cssicon-folder"></div>%1$s</span>', $categories_list ); // WPCS: XSS OK.
+					printf( '<span class="cat-links"><div class="cssicon-folder"></div>%1$s</span>', wp_kses_post( $categories_list ) );
 				}
 
 				/* translators: used between list items, there is a space after the comma */
 				$tags_list = get_the_tag_list( '', esc_html__( ', ', 'osixthreeo' ) );
 				if ( $tags_list ) {
-					printf( '<span class="tags-links"><div class="cssicon-tag"></div>%1$s</span>', $tags_list ); // WPCS: XSS OK.
+					printf( '<span class="tags-links"><div class="cssicon-tag"></div>%1$s</span>', wp_kses_post( $tags_list ) );
 				}
 			}
 
@@ -140,18 +142,22 @@ add_action( 'tha_entry_bottom', 'osixthreeo_display_entry_footer' );
 
 /*
  * DISPLAY Read More link
------------------------------------------------------------------
-*/
+ * -----------------------------------------------------------------
+ */
 if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
 	/**
 	 * The Read More link markup
 	 */
 	function osixthreeo_display_read_more() {
 		if ( is_archive() || is_home() || is_search() ) :
-			$link = sprintf( '<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
+			$link = sprintf(
+				'<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
 				get_permalink( get_the_ID() ),
-				/* translators: %s: Name of current post */
-				sprintf( __( 'Read more<span class="screen-reader-text"> "%s"</span>', 'osixthreeo' ), get_the_title( get_the_ID() ) )
+				sprintf(
+					/* translators: %s: Name of current post */
+					__( 'Read more<span class="screen-reader-text"> "%s"</span>', 'osixthreeo' ),
+					get_the_title( get_the_ID() )
+				)
 			);
 			echo wp_kses_post( $link );
 			echo '<div class="cf"></div>';
@@ -161,37 +167,9 @@ if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
 add_action( 'tha_entry_bottom', 'osixthreeo_display_read_more' );
 
 
-/**
- * SIDEBAR Body Classes
- * -----------------------------------------------------------------
- *
- * @param array $classes The body classes.
- */
-function osixthreeo_sidebar_bodyclass( $classes ) {
-	if ( ! is_single() ) {
-		return $classes;
-	}
-	$classes[] = 'sidebar-right';
-	return $classes;
-}
-add_filter( 'body_class','osixthreeo_sidebar_bodyclass' );
-
-/**
- * DISPLAY Sidebar
- * -----------------------------------------------------------------
- */
-function osixthreeo_get_right_sidebar() {
-	if ( ! is_single() ) :
-		return;
-	endif;
-	get_sidebar();
-}
-add_action( 'tha_content_after', 'osixthreeo_get_right_sidebar' );
-
-
 /*
  * DISPLAY Site Footer
- -----------------------------------------------------------------
+ * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 	/**

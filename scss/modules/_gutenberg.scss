@@ -32,12 +32,12 @@
 
 @include breakpoint(tablet-min-v) {
 	.sidebar-right .alignfull {
-		margin-left: calc(75% - 50vw);
+		margin-left: calc(70% + 1em - 50vw);
 	    margin-right: -40px;
 	}
 	.sidebar-left .alignfull {
 		margin-left: -40px;
-	    margin-right: calc(75% - 50vw);
+	    margin-right: calc(70% + 1em - 50vw);
 	}
 }
 
@@ -79,11 +79,8 @@
 	clear: both;
 }
 
-
-.sidebar-right .wp-block-image.alignfull,
-.sidebar-left .wp-block-image.alignfull {
-	margin-left: calc(20% - 20vw);
-	margin-right: calc(80% - 80vw);
+.wp-block-spacer {
+	clear: both;
 }
 
 .wp-block-cover-image {
@@ -142,28 +139,18 @@
  ---------------------------------- */
 
 .entry-content ul.wp-block-gallery {
-	margin: 0;
-
-	&.alignwide {
-		margin-left: -4%;
-		margin-right: -4%;
-		width: auto;
-		max-width: 1000%;
-	}
-	&.alignfull {
-		margin-left: calc(50% - 50vw);
-		margin-right: calc(50% - 50vw);
-		width: auto;
-		max-width: 1000%;
-	}
+	margin-left: 0;
 }
-
-
 .wp-block-separator {
 	clear:both;
 	display: block;
 }
-
+.wp-block-gallery.alignleft {
+	margin-right: 1.5em;
+}
+.wp-block-gallery.alignright {
+	margin-lef: 1.5em;
+}
 /*
  * Videos
  ---------------------------------- */

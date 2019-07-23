@@ -79,11 +79,13 @@ add_action( 'tha_content_while_before', 'osixthreeo_archive_page_titles' );
 function osixthreeo_postpagination() {
 
 	if ( is_archive() || is_home() ) :
-		the_posts_pagination( array(
-			'mid_size' => 2,
-			'prev_text' => __( '&laquo; Previous', 'osixthreeo' ),
-			'next_text' => __( 'Next &raquo;', 'osixthreeo' ),
-		) );
+		the_posts_pagination(
+			array(
+				'mid_size'  => 2,
+				'prev_text' => __( '&laquo; Previous', 'osixthreeo' ),
+				'next_text' => __( 'Next &raquo;', 'osixthreeo' ),
+			)
+		);
 	endif;
 
 }
@@ -96,10 +98,12 @@ add_action( 'tha_content_while_after', 'osixthreeo_postpagination' );
 function osixthreeo_postnav() {
 
 	if ( is_single() ) :
-		the_post_navigation( array(
-			'prev_text' => __( '<span>previous</span> %title', 'osixthreeo' ),
-			'next_text' => __( '<span>next</span> %title', 'osixthreeo' ),
-		) );
+		the_post_navigation(
+			array(
+				'prev_text' => __( '<span>previous</span> %title', 'osixthreeo' ),
+				'next_text' => __( '<span>next</span> %title', 'osixthreeo' ),
+			)
+		);
 	endif;
 
 }
