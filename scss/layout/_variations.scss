@@ -1,0 +1,49 @@
+/* Variations - ala WP Customizer controls
+--------------------------------------------- */
+
+// Site Containment
+body.contained .site {
+	max-width: $size__site-max;
+	margin: 0 auto;
+}
+
+// HEADER CENTERED
+body.headercentered {
+
+	.site-branding {
+		display: block;
+		text-align: center;
+	}
+
+	.site-navigation {
+		display: block;
+		text-align: center;
+
+		@include breakpoint(tablet-v) {
+			margin-left: -5.5%;
+			margin-right: -5.5%;
+			text-align: left;
+		}
+	}
+
+	.site-navigation > ul {
+	    display: inline-block;
+
+		@include breakpoint(tablet-v) {
+			display: block;
+		}
+	}
+
+	.menu-wrap {
+		display: inline-block;
+
+		@include breakpoint(tablet-v) {
+			display: none;
+		}
+	}
+}
+
+// CONTENT CONTAINED
+body.contentcontained .site-content {
+	background-color: #ffffff;
+}
