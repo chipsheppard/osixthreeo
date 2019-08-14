@@ -4,7 +4,7 @@
 	cursor: pointer;
 	display: none;
 	position: absolute;
-	right: .625em;
+	right: .75em;
 	top: 1.25em;
 	overflow: visible;
 	transition-property: opacity, filter;
@@ -15,8 +15,8 @@
 	@include breakpoint(tablet-v) {
 		display: block;
 	}
-	@include breakpoint(phone-h) {
-		right: .75em;
+	@include breakpoint(phone-v) {
+		right: .5em;
 	}
 
 	&:hover,
@@ -31,7 +31,7 @@
 		height: 24px;
 		display: inline-block;
 
-		@include breakpoint(phone-h) {
+		@include breakpoint(phone-v) {
 			width: 20px;
 			height: 16px;
 		}
@@ -53,7 +53,7 @@
 		transition-timing-function: ease;
 		width: 30px;
 
-		@include breakpoint(phone-h) {
+		@include breakpoint(phone-v) {
 			width: 20px;
 			height: 2px;
 		}
@@ -68,7 +68,7 @@
 	.menu-icon::before {
 		top: -8px;
 
-		@include breakpoint(phone-h) {
+		@include breakpoint(phone-v) {
 			top: -6px;
 		}
 	}
@@ -76,7 +76,7 @@
 	.menu-icon::after {
 		bottom: -8px;
 
-		@include breakpoint(phone-h) {
+		@include breakpoint(phone-v) {
 			bottom: -6px;
 		}
 	}

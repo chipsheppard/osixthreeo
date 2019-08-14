@@ -19,7 +19,13 @@
 	?>
 </head>
 <body <?php body_class(); ?>>
-<?php tha_body_top(); ?>
+	<?php
+	if ( function_exists( 'wp_body_open' ) ) {
+		wp_body_open();
+	}
+
+	tha_body_top();
+	?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'osixthreeo' ); ?></a>
 
@@ -33,8 +39,14 @@
 				?>
 			</div>
 		</div>
-		</header>
-		<?php tha_header_after(); ?>
+		<?php
+		/**
+		 * Write the Custom Header markup
+		 */
+		osixthreeo_display_customheader();
+		?>
+	</header>
+	<?php tha_header_after(); ?>
 
-		<div id="content" class="site-content">
-			<div class="content-inner-wrap">
+	<div id="content" class="site-content">
+		<div class="content-inner-wrap">

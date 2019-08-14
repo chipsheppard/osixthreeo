@@ -9,8 +9,7 @@ q:after {
 }
 
 blockquote {
-	background: #ffffff;
-	box-shadow: 0px 0px 8px $color__base-xlight;
+	background: rgba(153,153,153,0.15);
 	margin: .75em 1.5em 1.5em 0;
 	padding: 1.5em 2em 1.5em 3.5em;
 	position: relative;
@@ -28,7 +27,7 @@ blockquote {
 		display: block;
 		content: "\201C";
 		font-family: Georgia, serif;
-		color: $color__base-light;
+		color: rgba(153,153,153,0.25);
 		height: 0;
 		position: absolute;
 		top: 0;

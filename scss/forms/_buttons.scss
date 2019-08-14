@@ -23,6 +23,7 @@ input[type="submit"] {
 	border-radius: 6px;
 	color:  #ffffff;
 	cursor: pointer;
+	display: inline-block;
 	line-height: normal;
 	padding: 1em 1em .875em;
 	position: relative;
@@ -82,7 +83,10 @@ input[type="submit"] {
 		background-color: $color__base;
 
 		&:after {
-			background-color: rgba(255,255,255,0.2);
+			background-color: #ffffff;
+		}
+		&:hover {
+			color: $color__base;
 		}
 	}
 
@@ -92,13 +96,15 @@ input[type="submit"] {
 	}
 }
 
+button {
+	&:focus {
+		outline: thin dotted;
+	}
+}
+
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-results-button {
 	display: none;
-}
-
-.btn {
-	display: inline-block;
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {

@@ -42,13 +42,17 @@ echo '<header class="entry-header">';
 
 if ( is_singular() ) :
 
-	// Title for posts, attachments, pages, custom post types.
+	/**
+	 * Title for posts, attachments, pages, custom post types.
+	 */
 	echo '<div class="title-wrap">';
 	the_title( '<h1 class="entry-title">', '</h1>' );
 
 else :
 
-	// Title for archives & search.
+	/**
+	 * Title for archives & search.
+	 */
 	echo '<div class="title-wrap">';
 	the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 
@@ -63,8 +67,10 @@ echo '<div class="entry-content">';
 
 tha_entry_content_before();
 
-if ( is_singular() ) : // single posts, attachments, pages, custom post types.
-
+if ( is_singular() ) :
+	/**
+	 * Single posts, attachments, pages, custom post types.
+	 */
 	the_content();
 
 	wp_link_pages(
@@ -74,8 +80,10 @@ if ( is_singular() ) : // single posts, attachments, pages, custom post types.
 		)
 	);
 
-else : // archives & search.
-
+else :
+	/**
+	 * Archives & search.
+	 */
 	the_excerpt();
 
 endif;

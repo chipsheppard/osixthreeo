@@ -107,6 +107,8 @@
  ---------------------------------------------- */
 .wp-block-pullquote {
 
+	text-align: left;
+
 	&:before {
 		display: none;
 	}
@@ -174,6 +176,9 @@
 	    box-shadow: none;
 	    cursor: pointer;
 	    display: inline-block;
+		font-size: 1rem;
+	    padding-top: .625em;
+		padding-bottom: .625em;
 		position: relative;
 		white-space: normal;
 		width: auto;
@@ -210,6 +215,10 @@
 	}
 }
 
+
+/*
+ * Columns
+ ---------------------------------- */
 .wp-block-columns {
 
 	&.has-6-columns,
@@ -218,11 +227,53 @@
 	&.has-3-columns,
 	&.has-2-columns {
 
-	.wp-block-column:last-of-type {
+		.wp-block-column:last-of-type {
 			margin-right: 0;
 		}
+
+	}
+
+	.wp-block-column {
+		margin-bottom: 2em;
+	}
+
+	.wp-block-image {
+		margin: 0 0 1em;
+		border-radius: 8px 8px 0 0;
+		overflow: hidden;
+		//height: 150px;
+
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+
+	// A styling expirement... just add a class!
+	&.boxed {
+		.wp-block-column {
+			background-color: #ffffff;
+			border-radius: 8px;
+			box-shadow: 0px 0px 10px 0px rgba(176,180,183,0.17);
+
+			p, h2, h3, h4, div {
+				padding-left: 1.5rem;
+				padding-right: 1.5rem;
+			}
+		}
+		
+		&.up160 {
+			margin-top: -10em;
+			position: relative;
+			z-index: 2;
+		}
+	}
+
+	&.no-pad .wp-block-column {
+		padding: 0;
 	}
 }
+
 
 // Transition to 2 columns for all rows
 @media (max-width: 780px) and (min-width: 600px) {
@@ -233,26 +284,14 @@
 // 2 columns for all rows
 @media (max-width: 780px) {
 	.wp-block-column:nth-child(even) {
-	    margin-right: 0;
+	    //margin-right: 0;
 	}
 }
 
 // Override plugin styles to get even edges
-@media (min-width: 780px) {
+@media (min-width: 781px) {
 	.wp-block-column:not(:first-child),
 	.wp-block-column:nth-child(2n) {
-	    margin-left: 0;
-	}
-}
-
-.wp-block-columns {
-	.wp-block-column {
-		margin-bottom: 0;
-		padding: .75em 1em 0;
-
-	}
-
-	&.no-pad .wp-block-column {
-		padding: 0;
+	    //margin-left: 0;
 	}
 }

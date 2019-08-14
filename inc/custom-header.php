@@ -5,7 +5,7 @@
  * @package  osixthreeo
  * @subpackage osixthreeo/inc
  * @author   Chip Sheppard
- * @since    1.0.0
+ * @since    1.2.0
  * @license  GPL-2.0+
  */
 
@@ -13,78 +13,123 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-/*
- * Sample implementation of the Custom Header feature
- * You can add an optional custom header image to header.php like so ...
- *
-	<?php the_header_image_tag(); ?>
- *
- * @link https://developer.wordpress.org/themes/functionality/custom-headers/
- */
 
-/**
- * Set up the WordPress core custom header feature.
- *
- * @uses osixthreeo_header_style()
- */
-function osixthreeo_custom_header_setup() {
-	add_theme_support(
-		'custom-header',
-		apply_filters(
-			'osixthreeo_custom_header_args',
-			array(
-				'default-image'      => '',
-				'default-text-color' => '000000',
-				'width'              => 1200,
-				'height'             => 1200,
-				'flex-height'        => true,
-				'flex-width'         => true,
-				'wp-head-callback'   => 'osixthreeo_header_style',
-			)
-		)
-	);
-}
-add_action( 'after_setup_theme', 'osixthreeo_custom_header_setup' );
-
-
-if ( ! function_exists( 'osixthreeo_header_style' ) ) :
+if ( ! function_exists( 'osixthreeo_header_setup' ) ) :
 	/**
-	 * Styles the header image and text displayed on the blog.
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @see _s_custom_header_setup().
+	 * @since 0.1
 	 */
-	function osixthreeo_header_style() {
-		$header_text_color = get_header_textcolor();
-
-		/*
-		 * If no custom options for text are set, let's bail.
-		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: add_theme_support( 'custom-header' ).
-		 */
-		if ( get_theme_support( 'custom-header', 'default-text-color' ) === $header_text_color ) {
-			return;
-		}
-		// If we get this far, we have custom styles. Let's do this.
-		?>
-		<style type="text/css">
-		<?php
-		// Has the text been hidden?
-		if ( ! display_header_text() ) :
-			?>
-			.site-title,
-			.site-description {
-				position: absolute;
-				clip: rect(1px, 1px, 1px, 1px);
-			}
-			<?php
-			// If the user has set a custom color for the text use that.
-			else :
-				?>
-				.site-title a,
-				.site-description {
-					color: #<?php echo esc_attr( $header_text_color ); ?>;
-				}
-			<?php endif; ?>
-		</style>
-		<?php
+	function osixthreeo_header_setup() {
+		// Custom header.
+		add_theme_support( 'custom-header', apply_filters( 'osixthreeo_custom_header_args', array(
+			'default-text-color' => '000000',
+			'height'             => 1200,
+			'width'              => 1600,
+			'flex-height'        => true,
+			'flex-width'         => true,
+			'video'              => true,
+			'wp-head-callback'   => 'osixthreeo_base_css',
+		) ) );
 	}
 endif;
+add_action( 'after_setup_theme', 'osixthreeo_header_setup' );
+
+
+/**
+ * CUSTOM HEADER
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_display_customheader' ) ) {
+	/**
+	 * Get the Custom Header
+	 * Uses  osixthreeo_customheader_image_url()
+	 *       osixthreeo_customheader_content()
+	 */
+	function osixthreeo_display_customheader() {
+		echo '<div class="custom-header">';
+		echo '<div class="custom-header-image"';
+		osixthreeo_customheader_image_url();
+		echo '>';
+		if ( is_front_page() ) :
+			osixthreeo_customheader_content();
+		endif;
+		echo '</div>';
+		echo '</div>';
+	}
+}
+
+
+if ( ! function_exists( 'osixthreeo_customheader_image_url' ) ) {
+	/**
+	 * Write out the custom header image URL for the function above.
+	 */
+	function osixthreeo_customheader_image_url() {
+
+		$blog_id        = get_option( 'page_for_posts' );
+		$_post          = get_queried_object();
+		$key_value      = get_post_meta( get_the_ID(), '_show_featured_image', true );
+		$blog_key_value = get_post_meta( $blog_id, '_show_featured_image', true );
+
+		/**
+		 * Is it a Blog page (or home) that has a featured image with checkbox checked?
+		 * or is it a Page or Post that has a featured image with checkbox checked?
+		 */
+
+		if ( is_home() && ! is_front_page() && has_post_thumbnail( $blog_id ) && $blog_key_value ) :
+			echo ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( $blog_id, 'full' ) ) . ')"';
+		elseif ( is_singular() && get_the_post_thumbnail( $_post->ID ) && $key_value ) :
+			echo ' style="background-image:url(' . esc_url( get_the_post_thumbnail_url( $_post->ID, 'full' ) ) . ')"';
+		elseif ( get_header_image() ) :
+			echo ' style="background-image:url(' . esc_url( get_header_image() ) . ')"';
+		else :
+			return;
+		endif;
+	}
+}
+
+if ( ! function_exists( 'osixthreeo_customheader_content' ) ) {
+	/**
+	 * Put Video or Header Image and the Text into the Custom Header.
+	 */
+	function osixthreeo_customheader_content() {
+
+		if ( ! is_front_page() ) :
+			return;
+		endif;
+
+		// Get Customizer options.
+		$osixthreeo_settings = wp_parse_args(
+			get_option( 'osixthreeo_settings', array() ),
+			osixthreeo_get_defaults()
+		);
+
+		$herotextprimary   = $osixthreeo_settings['hero_text_primary'];
+		$herotextsecondary = $osixthreeo_settings['hero_text_secondary'];
+
+		// Get the video if there is one.
+		if ( is_header_video_active() && ( has_header_video() || is_customize_preview() ) ) {
+			echo '<div class="custom-header-media">';
+				the_custom_header_markup();
+			echo '</div>';
+		}
+
+		echo '<div class="custom-header-image-text">';
+
+		if ( '' !== $herotextprimary ) :
+			echo '<div class="hero-primary">' . wp_kses_post( $herotextprimary ) . '</div>';
+		endif;
+		if ( '' !== $herotextsecondary ) :
+			echo '<div class="hero-secondary">' . wp_kses_post( $herotextsecondary ) . '</div>';
+		endif;
+		if ( 'full' === $osixthreeo_settings['home_header_fullheight'] ) :
+			echo '<a href="#custom-header-scroll-target" class="scrollbutton"><div class="arrow-down white"></div></a>';
+		endif;
+
+		echo '</div>';
+
+		if ( 'full' === $osixthreeo_settings['home_header_fullheight'] ) :
+			echo '<div id="custom-header-scroll-target"></div>';
+		endif;
+	}
+}

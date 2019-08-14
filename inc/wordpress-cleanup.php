@@ -14,30 +14,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Don't Update the Theme
- *
- * If there is a theme in the repo with the same name, this prevents WP from prompting an update.
- *
- * @since  1.0.0
- * @author Bill Erickson
- * @link   http://www.billerickson.net/excluding-theme-from-updates
- * @param  array  $r Existing request arguments.
- * @param  string $url Request URL.
- * @return array Amended request arguments
- */
-function osixthreeo_dont_update_theme( $r, $url ) {
-	if ( 0 !== strpos( $url, 'https://api.wordpress.org/themes/update-check/1.1/' ) ) {
-		return $r; // Not a theme update request. Bail immediately.
-	}
-	$themes = json_decode( $r['body']['themes'] );
-	$child  = get_option( 'stylesheet' );
-	unset( $themes->themes->$child );
-	$r['body']['themes'] = wp_json_encode( $themes );
-	return $r;
-}
-add_filter( 'http_request_args', 'osixthreeo_dont_update_theme', 5, 2 );
-
-/**
  * Header Meta Tags
  */
 function osixthreeo_header_meta_tags() {
@@ -67,7 +43,7 @@ add_action( 'widgets_init', 'osixthreeo_remove_recent_comments_style' );
  *
  * @param string $title The title.
  */
-function wrap_archive_title_part( $title ) {
+function osixthreeo_archive_title_part( $title ) {
 	if ( is_category() ) {
 		$title = single_cat_title( '', false );
 	} elseif ( is_tag() ) {
@@ -91,7 +67,7 @@ function wrap_archive_title_part( $title ) {
 	}
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'wrap_archive_title_part' );
+add_filter( 'get_the_archive_title', 'osixthreeo_archive_title_part' );
 
 
 /**

@@ -17,7 +17,7 @@
  * @link       http://themehybrid.com/hybrid-core
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-class Customize_Alpha_Color_Control extends WP_Customize_Control {
+class Osixthreeo_Alpha_Color_Control extends WP_Customize_Control {
 
 	/**
 	 * Official control name.

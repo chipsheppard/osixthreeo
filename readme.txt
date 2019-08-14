@@ -1,7 +1,7 @@
 === OsixthreeO ===
 
-Contributors: chipsheppard
-Tags: translation-ready, theme-options, full-width-template, custom-logo, custom-colors, custom-background, flexible-header, grid-layout, align-wide, block-styles
+Contributors: Chip Sheppard
+Tags: translation-ready, theme-options, full-width-template, featured-image-header, featured-images, sticky-post, custom-logo, custom-header, custom-colors, custom-background, flexible-header, one-column, two-columns, wide-blocks, block-styles
 Requires at least: 4.0
 Tested up to: 5.2.2
 Stable tag: 1.2.0
@@ -86,8 +86,8 @@ citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the 
 == ChangeLog ==
 
 = 1.2.0 - 07 30 2019 =
-* Customizer control for site containment, content containment and sidebar placements.
-*
+* Customizer control for site containment, content containment, sidebar placements, colors.
+* Added custom-header plus customizer enhancements & page-by-page display control.
 
 = 1.1.0 - 06 30 2019 =
 * Adjust block-editor 'alignfull' styles for sidebar pages.
@@ -102,5 +102,5 @@ citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the 
 * _s downloaded and renamed to "osixthreeo"
 
 == Credits ==
-* Based on Underscores http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+* Started out as an Underscores starter theme http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+* Uses normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)

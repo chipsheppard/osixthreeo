@@ -1,23 +1,44 @@
 .site-header {
+	min-height: 360px;
 	position: relative;
 	width: 100%;
+
+	@include breakpoint(phone-h) {
+		min-height: 270px;
+	}
 
 	.inner-wrap {
 		display: table;
 	}
 }
 
+// HOMEPAGE
+.home .site-header {
+	min-height: 640px;
+
+	@include breakpoint(phone-h) {
+		min-height: 400px;
+	}
+}
+
+.home.fullheight .site-header {
+	height: 100vh;
+}
+
 .header-wrap {
-	background-color: #ffffff;
 	position: relative;
 	z-index: 100;
+
+	.inner-wrap {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
 }
 
 // BRANDING BLOCK
 .site-branding {
 	display: table-cell;
 	text-align: left;
-	padding: 1em 0;
 	vertical-align: middle;
 	transition: all .5s ease;
 
@@ -61,13 +82,13 @@
 
 // Site Title (text logo)
 .site-title {
-	color: #000000;
+	color: $color__base;
 	line-height: 1;
 	margin-bottom: 0;
 	@include font-size(3);
 
 	a {
-		color: #000000;
+		color:  $color__base;
 		display:inline-block;
 		text-decoration: none;
 
@@ -84,7 +105,7 @@
 
 // Description
 .site-description {
-	color: #000000;
+	color:  $color__base;
 	letter-spacing: 1px;
 	line-height: 1;
 	padding-top: .5em;

@@ -22,7 +22,9 @@ if ( ! defined( 'ABSPATH' ) ) {
  * See: https://jetpack.com/support/content-options/
  */
 function osixthreeo_jetpack_setup() {
-	// Add theme support for Infinite Scroll.
+	/**
+	 * Add theme support for Infinite Scroll.
+	 */
 	add_theme_support(
 		'infinite-scroll',
 		array(
@@ -32,7 +34,9 @@ function osixthreeo_jetpack_setup() {
 		)
 	);
 
-	// Add theme support for Responsive Videos.
+	/**
+	 * Add theme support for Responsive Videos.
+	 */
 	add_theme_support( 'jetpack-responsive-videos' );
 }
 add_action( 'after_setup_theme', 'osixthreeo_jetpack_setup' );

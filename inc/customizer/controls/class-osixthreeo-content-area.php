@@ -1,6 +1,6 @@
 <?php
 /**
- * Customizer Custom_Content_Area.
+ * Customizer Osixthreeo_Content_Area.
  *
  * @package  osixthreeo
  * @subpackage osixthreeo/inc/customizer
@@ -13,11 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Custom_Content_Area' ) ) :
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Osixthreeo_Content_Area' ) ) :
 	/**
 	 * Creates HTML section in customizer.
 	 */
-	class Custom_Content_Area extends WP_Customize_Control {
+	class Osixthreeo_Content_Area extends WP_Customize_Control {
 
 		/**
 		 * Whitelist content parameter

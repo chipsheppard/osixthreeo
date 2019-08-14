@@ -1,4 +1,38 @@
-#customize-theme-controls #sub-accordion-section-osixthreeo_page_layouts .customize-control-radio .customize-inside-control-row {
+#customize-theme-controls #sub-accordion-section-osixthreeo_ch_height .customize-control-radio .customize-inside-control-row,
+#customize-theme-controls #sub-accordion-section-osixthreeo_site_layout .customize-control-radio .customize-inside-control-row {
 	float:left;
 	margin-right:12px
+}
+
+#customize-theme-controls #customize-control-osixthreeo_settings-hero_text_primary_color,
+#customize-theme-controls #customize-control-osixthreeo_settings-hero_text_secondary_color,
+#customize-theme-controls #customize-control-osixthreeo_settings-home_mobile_header_height,
+#customize-theme-controls #customize-control-osixthreeo_settings-header_bg_color_right,
+#customize-theme-controls #customize-control-background_color,
+#customize-theme-controls #customize-control-osixthreeo_settings-nav_link_color,
+#customize-theme-controls #customize-control-osixthreeo_settings-link_color_hover,
+#customize-theme-controls #customize-control-osixthreeo_settings-subnav_border_color {
+	padding-bottom:1.5em;
+	border-bottom:1px solid #aaaaaa;
+	margin-bottom:1.5em;
+}
+#customize-theme-controls #customize-control-header_image,
+#customize-theme-controls #customize-control-osixthreeo_settings-hero_text_secondary_color {
+	padding-bottom: 2em;
+}
+#sub-accordion-section-header_image .description.customize-section-description {
+	display: none;
+}
+
+.osixthreeo-range-text {
+	float: right;
+	padding-right: 140px;
+}
+
+#customize-control-meta-message,
+#customize-control-osixthreeo_settings-meta_date,
+#customize-control-osixthreeo_settings-meta_author,
+#customize-control-osixthreeo_settings-meta_comments,
+#customize-control-osixthreeo_settings-meta_updated {
+	margin-bottom: 0;
 }

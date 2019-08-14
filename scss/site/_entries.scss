@@ -29,7 +29,7 @@ body.search .page-title,
 body.error404 .page-title {
 	letter-spacing: 1px;
 	padding: 0;
-	word-break: break-all;
+	//word-break: break-all;
 
 	@include breakpoint(phone-h) {
 		@include font-size(1.875);

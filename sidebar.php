@@ -1,6 +1,6 @@
 <?php
 /**
- * The main sidebar - posts, post types, archives.
+ * The Sidebar.
  *
  * @package  osixthreeo
  * @author   Chip Sheppard

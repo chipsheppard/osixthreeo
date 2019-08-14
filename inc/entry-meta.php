@@ -88,22 +88,9 @@ function osixthreeo_comment_count() {
 
 	$num_comments = get_comments_number();
 
-	if ( ! is_single() && ! post_password_required() && comments_open() && ( $num_comments > 0 ) ) {
+	if ( is_single() || is_archive() || is_home() && ! post_password_required() && comments_open() && ( $num_comments > 0 ) ) {
 		echo '<span class="comments-link">';
-		comments_popup_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: post title */
-					__( 'Comment<span class="screen-reader-text"> on %s</span>', 'osixthreeo' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			)
-		);
+		comments_popup_link( 'No comments yet', '1 comment', '% comments' );
 		echo '</span>';
 	}
 }
@@ -113,11 +100,29 @@ function osixthreeo_comment_count() {
  */
 function osixthreeo_display_entry_meta() {
 	if ( 'post' === get_post_type() ) :
+
+		$osixthreeo_settings = wp_parse_args(
+			get_option( 'osixthreeo_settings', array() ),
+			osixthreeo_get_defaults()
+		);
+		$meta_date           = $osixthreeo_settings['meta_date'];
+		$meta_author         = $osixthreeo_settings['meta_author'];
+		$meta_comments       = $osixthreeo_settings['meta_comments'];
+		$meta_updated        = $osixthreeo_settings['meta_updated'];
+
 		echo '<div class="entry-meta">';
-		osixthreeo_posted_on();
-		osixthreeo_posted_by();
-		osixthreeo_comment_count();
-		osixthreeo_updated_on();
+		if ( true === $meta_date ) {
+			osixthreeo_posted_on();
+		}
+		if ( true === $meta_author ) {
+			osixthreeo_posted_by();
+		}
+		if ( true === $meta_comments ) {
+			osixthreeo_comment_count();
+		}
+		if ( true === $meta_updated ) {
+			osixthreeo_updated_on();
+		}
 		echo '</div>';
 	endif;
 }

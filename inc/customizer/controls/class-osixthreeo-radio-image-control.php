@@ -18,7 +18,7 @@
  * @link       https://napitwptech.com/tutorial/wordpress-development/extend-customizer-options-include-radio-image-option/
  * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
-class Customize_Radio_Image_Control extends WP_Customize_Control {
+class Osixthreeo_Radio_Image_Control extends WP_Customize_Control {
 
 	/**
 	 * The type of customize control being rendered.

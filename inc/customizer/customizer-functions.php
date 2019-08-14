@@ -23,9 +23,15 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @todo Ability to specify different option name and defaults.
  */
 function osixthreeo_get_setting( $setting ) {
+	$defaults = osixthreeo_get_defaults();
+
+	if ( ! isset( $defaults[ $setting ] ) ) {
+		return;
+	}
+
 	$osixthreeo_settings = wp_parse_args(
 		get_option( 'osixthreeo_settings', array() ),
-		osixthreeo_get_defaults()
+		$defaults
 	);
 	return $osixthreeo_settings[ $setting ];
 }
@@ -133,7 +139,7 @@ function osixthreeo_sitecontain_class() {
 		osixthreeo_get_defaults()
 	);
 
-	$site_layout = $osixthreeo_settings['global_width_setting'];
+	$site_layout = $osixthreeo_settings['containment_setting'];
 
 	if ( 'contained' === $site_layout ) {
 		add_filter(
@@ -176,27 +182,34 @@ function osixthreeo_header_layout_class() {
 }
 add_action( 'osixthreeo_init', 'osixthreeo_header_layout_class' );
 
+
 /**
- * CONTENT CONTAIN - Checkbox
+ * HOMEPAGE HEADER HEIGHT Checkbox
  * -----------------------------------------------------------------
- * Adds custom body class if customizer setting is true.
+ * Check if full-height is selected, write a body class if it is..
  */
-function osixthreeo_content_contain_class() {
+function osixthreeo_home_header_fullheight() {
+
+	if ( ! is_front_page() ) {
+		return;
+	}
 
 	$osixthreeo_settings = wp_parse_args(
 		get_option( 'osixthreeo_settings', array() ),
 		osixthreeo_get_defaults()
 	);
 
-	if ( ! $osixthreeo_settings['content_contain'] ) {
+	$header_height = $osixthreeo_settings['home_header_fullheight'];
+
+	if ( 'full' === $header_height ) {
+		add_filter(
+			'body_class',
+			function( $classes ) {
+				return array_merge( $classes, array( 'fullheight' ) );
+			}
+		);
+	} else {
 		return;
 	}
-
-	add_filter(
-		'body_class',
-		function( $classes ) {
-			return array_merge( $classes, array( 'contentcontained' ) );
-		}
-	);
 }
-add_action( 'osixthreeo_init', 'osixthreeo_content_contain_class' );
+add_action( 'osixthreeo_init', 'osixthreeo_home_header_fullheight' );

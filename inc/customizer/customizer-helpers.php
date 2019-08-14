@@ -9,6 +9,17 @@
  * @license  GPL-2.0+
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
+// Controls.
+require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-alpha-color-control.php';
+require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-radio-image-control.php';
+require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-range-control.php';
+require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-content-area.php';
+
+// Color Palette.
 if ( ! function_exists( 'osixthreeo_get_default_color_palettes' ) ) {
 	/**
 	 * Set up our colors for the color picker palettes and filter them so you can change them.

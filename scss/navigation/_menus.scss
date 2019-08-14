@@ -18,8 +18,8 @@
 
 	li {
 		display: inline-block;
-		position: relative;
 		margin-right: 1em;
+		position: relative;
 
 		&:hover > .sub-menu {
 			left: auto;
@@ -36,23 +36,19 @@
 	}
 
 	a:hover,
-	.current_page_item > a,
-	.current-menu-item > a,
 	.current_page_ancestor > a,
-	.current-menu-ancestor > a {
+	.current-menu-ancestor > a
+	.current_page_item > a,
+	.current-menu-item > a {
 		border-bottom: 1px solid currentColor;
-		opacity: .85;
 	}
 
 	.menu-item-has-children > a {
-		padding-right: 1em;
+		padding-right: 1.5em;
 	}
-
 
 	/* SUB MENU -------------------- */
 	.sub-menu {
-		background:#ffffff;
-		border-top: 1px solid #222;
 		display: block;
 		left: -9999px;
 		margin-top: -1px;
@@ -60,33 +56,40 @@
 		position: absolute;
 		text-align: left;
 		top: 100%;
-		transition: all .2s ease-in;
+		transition: all .05s ease-in;
 		width: 190px;
 		z-index: 2;
 
 		a {
-			border-bottom: 1px solid $color__base-xlight;
-			border-left: 1px solid $color__base-xlight;
-			border-right: 1px solid $color__base-xlight;
-			color: $color__base !important;
+			background:#ffffff;
+			border: 0;
+			color: $color__base;
 			line-height: 1.25;
 			padding: .75em 1.125em;
 			text-transform: none;
-			transition: all .2s ease-in-out;
+			transition: all .05s ease-in;
 			width: 190px;
 			@include font-size(.75);
+
+			&:hover {
+				background:#f3f3f3;
+			}
 		}
 
-		a:hover,
 		.current_page_item > a,
-		.current-menu-item > a,
-		.current_page_ancestor > a,
-		.current-menu-ancestor > a {
-			background-color: rgba(102, 102, 102, 0.1);
+		.current-menu-item > a {
+			background:#f3f3f3;
 		}
 
 		li {
+			border-bottom: 1px solid $color__base-xlight;
+			border-left: 1px solid $color__base-xlight;
+			border-right: 1px solid $color__base-xlight;
 			margin-left: 0;
+
+			&:first-of-type {
+				border-top: 1px solid $color__base-xlight;
+			}
 		}
 
 		.sub-menu {
@@ -95,13 +98,16 @@
 	}
 }
 
+
+
 button.dropdown-toggle {
 	border: 0;
 	background: none;
 	color: $color__base;
 	padding: 0;
     position: relative;
-    right: 7px;
+    right: .5em;
+	z-index: 1;
 }
 
 button.dropdown-toggle:after {
@@ -115,18 +121,19 @@ button.dropdown-toggle:after {
 	border-style: solid;
     border-width: 0 1px 1px 0;
     transform: rotate(45deg);
-	transition: all .05s ease-in-out;
+	transition: all .05s ease-in;
 }
 
 button.dropdown-toggle.toggled-on:after {
     border-width: 1px 0 0 1px;
-	top: 3px;
+	top: 1px;
 }
 
 .sub-menu button.dropdown-toggle {
 	color: $color__base;
+	padding: 0;
 	position: absolute;
 	right: 8px;
 	top: 0;
-	padding: 0;
+	z-index: 1;
 }

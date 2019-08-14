@@ -26,24 +26,22 @@ function osixthreeo_default_loop() {
 
 		while ( have_posts() ) :
 			the_post();
-
 			tha_entry_before();
 			get_template_part( 'template-parts/content', get_post_format() );
 			tha_entry_after();
-
 		endwhile;
 
 		echo '</div>';
 
 		tha_content_while_after();
 
-	else :
+		else :
 
-		tha_entry_before();
-		get_template_part( 'template-parts/content', 'none' );
-		tha_entry_after();
+			tha_entry_before();
+			get_template_part( 'template-parts/content', 'none' );
+			tha_entry_after();
 
-	endif;
+		endif;
 }
 add_action( 'tha_content_loop', 'osixthreeo_default_loop' );
 

@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Is this the Shop page?
  */
 function osixthreeo_is_shop() {
-	if ( WPEX_WOOCOMMERCE_ACTIVE && is_shop() || WPEX_WOOCOMMERCE_ACTIVE && is_product_category() || WPEX_WOOCOMMERCE_ACTIVE && is_product_tag() ) {
+	if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE && is_shop() || OSIXTHREEO_WOOCOMMERCE_ACTIVE && is_product_category() || OSIXTHREEO_WOOCOMMERCE_ACTIVE && is_product_tag() ) {
 		return true;
 	} else {
 		return false;
@@ -30,7 +30,7 @@ function osixthreeo_is_shop() {
  * Is this the Shop page?
  */
 function osixthreeo_is_prod() {
-	if ( WPEX_WOOCOMMERCE_ACTIVE && is_product() ) {
+	if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE && is_product() ) {
 		return true;
 	} else {
 		return false;
@@ -133,6 +133,8 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 add_action( 'woocommerce_before_main_content', 'osixthreeo_theme_wrapper_start', 10 );
 add_action( 'woocommerce_after_main_content', 'osixthreeo_theme_wrapper_end', 10 );
 
+// Since we are using Woo templates (with adjustments)
+// we need to include our Global functions.
 do_action( 'osixthreeo_init' );
 
 
@@ -168,6 +170,7 @@ function osixthreeo_remove_wc_sidebar() {
 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
 add_action( 'init', 'osixthreeo_remove_wc_sidebar' );
+
 
 /**
  * Move WooCommerce price
@@ -218,6 +221,7 @@ if ( ! function_exists( 'osixthreeo_woocommerce_cart_link' ) ) {
 	}
 }
 
+
 if ( ! function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
 	/**
 	 * Display Header Cart.
@@ -247,7 +251,6 @@ if ( ! function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
 		<?php
 	}
 }
-
 
 /**
  * From _s  the WooCommerce Mini Cart.

@@ -160,6 +160,16 @@ function tha_header_bottom() {
 	do_action( 'tha_header_bottom' );
 }
 
+/** XTRA Hook */
+function osixthreeo_header_before_wrap() {
+	do_action( 'osixthreeo_header_before_wrap' );
+}
+
+/** XTRA Hook */
+function osixthreeo_header_after_wrap() {
+	do_action( 'osixthreeo_header_after_wrap' );
+}
+
 /**
  * Semantic <content> hooks
  *

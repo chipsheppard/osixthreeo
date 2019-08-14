@@ -2,19 +2,18 @@
 	.site-navigation {
 		clear: both;
 		display: block;
-		float: none;
-		margin-left: -5.5%;
-		margin-right: -5.5%;
+		margin-left: calc(50% - 50vw);
+		margin-right: calc(50% - 50vw);
+		width: auto;
+		max-width: 1000%;
 		padding-top: 0;
 		text-align: left;
 		min-width: 100%;
 		@include font-size(.875);
 
 		.menu-wrap {
-			background-color: #ffffff;
 			display: none;
 			overflow: hidden;
-			padding: 1em 2%;
 			max-height: 0;
 			transition: all .25s ease;
 		}
@@ -25,6 +24,7 @@
 		}
 
 		a {
+			background-color: #ffffff;
 			border: 0;
 			color: #222222 !important;
 			display: block;
@@ -36,10 +36,13 @@
 
 		a:hover,
 		.current_page_item > a,
-		.current-menu-item > a,
+		.current-menu-item > a {
+			background-color: #f3f3f3;
+			border: 0;
+		}
+
 		.current_page_ancestor > a,
 		.current-menu-ancestor > a {
-			background-color: rgba(102, 102, 102, 0.15);
 			border: 0;
 		}
 
@@ -48,20 +51,19 @@
 		}
 
 		ul {
-			border-top: 1px solid $color__base-light;
 			display: block;
 			float: none;
 			margin-left: 0;
 		}
 
 		li {
-			border-bottom: 1px solid $color__base-light;
+			border-bottom: 1px solid $color__base-xlight;
 			display: block;
 			margin-right: 0;
 			position: relative;
 
-			&:last-of-type {
-				border-bottom: 0;
+			&:first-of-type {
+				border-top: 1px solid $color__base-xlight;
 			}
 
 			li  {
@@ -79,26 +81,29 @@
 		}
 
 		.dropdown-toggle {
-			border-left: 1px solid $color__base-light;
-			color: #222222 !important;
+			border-left: 1px solid rgba(153, 153, 153, 0.25);
+			color: #222222;
 			cursor: pointer;
 			display: inline-block;
 			margin-left: 0;
-			padding: .5em 1.375em .6125em;
+			padding: .5em 2em .6125em;
 			position: absolute;
 			right: 0;
 			top: 0;
 			z-index: 2;
 
+			@include breakpoint(phone-v) {
+				padding-left: 1.5em;
+				padding-right: 1.5em;
+			}
+
 			&:hover {
-				background-color: rgba(0, 0, 0, 0.05);
+				background-color: rgba(153, 153, 153, 0.25);
 			}
 		}
 
 		/* SUB MENU -------------------- */
 		.sub-menu {
-			background: none;
-			border-top: 1px solid $color__base-light;
 			display: none;
 			left: auto;
 			margin-left: 0;
@@ -111,10 +116,18 @@
 				display: block;
 			}
 
+			li {
+				border-left: 0;
+				border-right: 0;
+
+				&:last-of-type {
+					border-bottom: 0;
+				}
+			}
+
 			a {
 				border: 0;
-				color: #222222 !important;
-				padding-left: 2.5em;
+				padding-left: 4em;
 				width: 100%;
 			}
 
@@ -127,7 +140,7 @@
 				margin: 0;
 
 				a {
-					padding-left: 3.5em;
+					padding-left: 6em;
 				}
 			}
 		}
