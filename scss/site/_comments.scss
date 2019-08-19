@@ -2,7 +2,8 @@
 	padding: 1.5em 0;
 
 	.comments-title {
-		@include font-size(1.875);
+		text-transform: uppercase;
+		@include font-size(1.25);
 	}
 }
 
@@ -33,8 +34,9 @@
 	}
 
 	.comment-reply-title {
-		@include font-size(1.5);
 		margin-bottom: .5em;
+		text-transform: uppercase;
+		@include font-size(1.25);
 
 		small {
 			display: block;

@@ -83,14 +83,14 @@ class Osixthreeo_Radio_Image_Control extends WP_Customize_Control {
 	public function enqueue() {
 		wp_enqueue_script(
 			'osixthreeo-radio-image-control-js',
-			get_template_directory_uri() . '/assets/js/customize-radio-image-control.js',
+			get_template_directory_uri() . '/assets/js/customize-radio-image-control-min.js',
 			array( 'jquery' ),
 			OSIXTHREEO_VERSION,
 			true
 		);
 		wp_enqueue_style(
 			'osixthreeo-radio-image-control-css',
-			get_template_directory_uri() . '/assets/css/customize-radio-image-control.css',
+			get_template_directory_uri() . '/assets/css/customize-radio-image-control-min.css',
 			array(),
 			OSIXTHREEO_VERSION
 		);

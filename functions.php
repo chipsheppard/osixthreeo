@@ -3,7 +3,6 @@
  * Main Functions File
  *
  * @package  osixthreeo
- * @author   Chip Sheppard
  * @since    1.0.0
  * @license  GPL-2.0+
  */
@@ -32,6 +31,7 @@ require get_template_directory() . '/inc/loop.php';
 require get_template_directory() . '/inc/class-fi-checkbox.php';
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/fonts.php';
 require get_template_directory() . '/inc/customizer/defaults.php';
 require get_template_directory() . '/inc/customizer/customizer-functions.php';
 require get_template_directory() . '/inc/customizer/class-customizer-css.php';
@@ -43,7 +43,8 @@ require get_template_directory() . '/inc/customizer/css-output.php';
 function osixthreeo_scripts() {
 	wp_enqueue_style( 'osixthreeo-style', get_stylesheet_uri(), array(), OSIXTHREEO_VERSION );
 	wp_enqueue_script( 'osixthreeo-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), OSIXTHREEO_VERSION, true );
-	wp_enqueue_script( 'osixthreeo-globaljs', get_template_directory_uri() . '/assets/js/global.js', array( 'jquery' ), OSIXTHREEO_VERSION, true );
+	wp_enqueue_script( 'osixthreeo-globaljs', get_template_directory_uri() . '/assets/js/global-min.js', array( 'jquery' ), OSIXTHREEO_VERSION, true );
+	wp_enqueue_style( 'osixthreeo-fonts', osixthreeo_theme_fonts_url(), array(), OSIXTHREEO_VERSION );
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}

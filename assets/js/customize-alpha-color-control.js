@@ -11,8 +11,7 @@
  */
 
 /**
- * Override the stock color.js toString() method to add support for
- * outputting RGBa or Hex.
+ * Override the stock color.js toString() method to add support for outputting RGBa or Hex.
  */
 Color.prototype.toString = function( flag ) {
 

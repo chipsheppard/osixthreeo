@@ -1,5 +1,5 @@
 /**
- * Customizer Panel JS
+ * Customizer Hide/Show Panel functions
  *
  * @package  osixthreeo
  * @subpackage osixthreeo/assets/js

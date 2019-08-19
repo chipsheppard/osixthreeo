@@ -1,5 +1,5 @@
 /**
- * Customizer Radio Image
+ * Customizer Radio Image Control
  *
  * @package  osixthreeo
  * @subpackage osixthreeo/assets/js

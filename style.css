@@ -499,6 +499,7 @@ html {
 /* line 14, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/elements/_setup.scss */
 body {
   background: #f3f5f7;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* line 19, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/elements/_setup.scss */
@@ -876,15 +877,8 @@ button,
 input,
 select,
 textarea,
-blockquote,
-h1 div, h2 div, h3 div, h4 div, h5 div, h6 div {
+blockquote {
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/* line 11, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/elements/_fonts.scss */
-h1, h2, h3, h4, h5, h6, .site-title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: 400;
 }
 
 /*--------------------------------------------------------------
@@ -1193,28 +1187,44 @@ a:hover, a:active {
 
 /* line 30, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation a {
-  border-bottom: 1px solid transparent;
   color: #222222;
   display: inline-block;
   letter-spacing: 1px;
   padding: .9375em .125em;
+  position: relative;
 }
 
-/* line 38, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
-.site-navigation a:hover,
-.site-navigation .current_page_ancestor > a,
-.site-navigation .current-menu-ancestor > a
-.current_page_item > a,
-.site-navigation .current-menu-item > a {
-  border-bottom: 1px solid currentColor;
+/* line 37, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+.site-navigation a:before {
+  border-bottom: 3px solid currentColor;
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  width: 0%;
+  -webkit-transition: all 0.125s ease-in;
+  transition: all 0.125s ease-in;
 }
 
-/* line 46, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 51, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+.site-navigation a:hover:before,
+.site-navigation .current_page_ancestor > a:before,
+.site-navigation .current-menu-ancestor > a:before,
+.site-navigation .current_page_item > a:before,
+.site-navigation .current-menu-item > a:before {
+  opacity: .5;
+  width: 100%;
+}
+
+/* line 60, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .menu-item-has-children > a {
   padding-right: 1.5em;
 }
 
-/* line 51, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 65, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .sub-menu {
   display: block;
   left: -9999px;
@@ -1229,7 +1239,7 @@ a:hover, a:active {
   z-index: 2;
 }
 
-/* line 63, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 77, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .sub-menu a {
   background: #ffffff;
   border: 0;
@@ -1244,18 +1254,23 @@ a:hover, a:active {
   font-size: 0.75rem;
 }
 
-/* line 74, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 88, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .sub-menu a:hover {
   background: #f3f3f3;
 }
 
-/* line 79, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 91, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+.site-navigation .sub-menu a:before {
+  display: none;
+}
+
+/* line 96, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .sub-menu .current_page_item > a,
 .site-navigation .sub-menu .current-menu-item > a {
   background: #f3f3f3;
 }
 
-/* line 84, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 101, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .sub-menu li {
   border-bottom: 1px solid #dcdcdc;
   border-left: 1px solid #dcdcdc;
@@ -1263,17 +1278,17 @@ a:hover, a:active {
   margin-left: 0;
 }
 
-/* line 90, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 107, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .sub-menu li:first-of-type {
   border-top: 1px solid #dcdcdc;
 }
 
-/* line 95, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 112, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .site-navigation .sub-menu .sub-menu {
   margin: -14% 0 0 90%;
 }
 
-/* line 103, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 120, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 button.dropdown-toggle {
   border: 0;
   background: none;
@@ -1284,7 +1299,7 @@ button.dropdown-toggle {
   z-index: 1;
 }
 
-/* line 113, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 130, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 button.dropdown-toggle:after {
   content: '';
   display: inline-block;
@@ -1301,13 +1316,13 @@ button.dropdown-toggle:after {
   transition: all .05s ease-in;
 }
 
-/* line 127, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 144, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 button.dropdown-toggle.toggled-on:after {
   border-width: 1px 0 0 1px;
   top: 1px;
 }
 
-/* line 132, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
+/* line 149, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_menus.scss */
 .sub-menu button.dropdown-toggle {
   color: #222222;
   padding: 0;
@@ -1530,7 +1545,6 @@ button.dropdown-toggle.toggled-on:after {
   /* line 26, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation a {
     background-color: #ffffff;
-    border: 0;
     color: #222222 !important;
     display: block;
     overflow: hidden;
@@ -1538,54 +1552,48 @@ button.dropdown-toggle.toggled-on:after {
     position: relative;
     width: 100%;
   }
-  /* line 37, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 36, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation a:hover,
   .site-navigation .current_page_item > a,
   .site-navigation .current-menu-item > a {
     background-color: #f3f3f3;
-    border: 0;
   }
-  /* line 44, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
-  .site-navigation .current_page_ancestor > a,
-  .site-navigation .current-menu-ancestor > a {
-    border: 0;
-  }
-  /* line 49, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 42, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .menu-item-has-children > a {
     padding-right: 0;
   }
-  /* line 53, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 46, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation ul {
     display: block;
     float: none;
     margin-left: 0;
   }
-  /* line 59, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 52, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation li {
     border-bottom: 1px solid #dcdcdc;
     display: block;
     margin-right: 0;
     position: relative;
   }
-  /* line 65, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 58, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation li:first-of-type {
     border-top: 1px solid #dcdcdc;
   }
-  /* line 69, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 62, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation li li {
     display: block;
   }
-  /* line 72, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 65, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation li li a {
     padding-left: .5em;
     font-size: 14px;
     font-size: 0.875rem;
   }
-  /* line 79, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 72, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation li:not(.search-icon) a:before {
     content: none;
   }
-  /* line 83, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 76, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .dropdown-toggle {
     border-left: 1px solid rgba(153, 153, 153, 0.25);
     color: #222222;
@@ -1601,7 +1609,7 @@ button.dropdown-toggle.toggled-on:after {
 }
 
 @media all and (max-width: 768px) and (max-width: 380px) {
-  /* line 83, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 76, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .dropdown-toggle {
     padding-left: 1.5em;
     padding-right: 1.5em;
@@ -1609,11 +1617,11 @@ button.dropdown-toggle.toggled-on:after {
 }
 
 @media all and (max-width: 768px) {
-  /* line 100, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 93, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .dropdown-toggle:hover {
     background-color: rgba(153, 153, 153, 0.25);
   }
-  /* line 106, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 99, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu {
     display: none;
     left: auto;
@@ -1623,35 +1631,35 @@ button.dropdown-toggle.toggled-on:after {
     top: auto;
     width: 100%;
   }
-  /* line 115, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 108, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu.toggled-on {
     display: block;
   }
-  /* line 119, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 112, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu li {
     border-left: 0;
     border-right: 0;
   }
-  /* line 123, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 116, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu li:last-of-type {
     border-bottom: 0;
   }
-  /* line 128, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 121, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu a {
     border: 0;
     padding-left: 4em;
     width: 100%;
   }
-  /* line 134, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 127, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu button.dropdown-toggle {
     padding: 0 1.375em .425em;
     right: 0;
   }
-  /* line 139, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 132, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu .sub-menu {
     margin: 0;
   }
-  /* line 142, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
+  /* line 135, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_mobile.scss */
   .site-navigation .sub-menu .sub-menu a {
     padding-left: 6em;
   }
@@ -2583,81 +2591,6 @@ img.flex {
   width: 100%;
 }
 
-/* line 33, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-base {
-  background-color: #222222;
-}
-
-/* line 36, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-base-medium {
-  background-color: #808080;
-}
-
-/* line 39, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-base-light {
-  background-color: #c0c0c0;
-}
-
-/* line 42, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-base-xlight {
-  background-color: #dcdcdc;
-}
-
-/* line 45, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-base-xxlight {
-  background-color: #f5f5f5;
-}
-
-/* line 48, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.text-highlight {
-  color: #1e90ff;
-}
-
-/* line 51, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-highlight {
-  background-color: #1e90ff;
-}
-
-/* line 54, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bb-highlight {
-  border-bottom: 2px solid #1e90ff;
-}
-
-/* line 57, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.text-secondary {
-  color: #b22222;
-}
-
-/* line 60, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-secondary {
-  background-color: #b22222;
-}
-
-/* line 63, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bb-secondary {
-  border-bottom: 2px solid #b22222;
-}
-
-/* line 66, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-white {
-  background-color: #ffffff;
-}
-
-/* line 69, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.text-white {
-  color: #ffffff;
-}
-
-/* line 72, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.bg-black {
-  background-color: #000000;
-}
-
-/* line 75, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
-.text-black {
-  color: #000000;
-}
-
 /*
  * CSS Icons
 --------------------------------------------- */
@@ -2749,13 +2682,12 @@ img.flex {
   width: 15px;
   height: 10px;
   margin-right: 4px;
-  margin-top: 2px;
   position: relative;
   background-color: currentColor;
   border-radius: 0 1px 1px 1px;
 }
 
-/* line 88, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_css-icons.scss */
+/* line 87, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_css-icons.scss */
 .cssicon-folder:before {
   content: '';
   width: 60%;
@@ -2806,7 +2738,7 @@ img.flex {
 /* line 33, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
 .sidebar-left .content-area {
   float: right;
-  width: 70%;
+  width: 66%;
 }
 
 /* line 38, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
@@ -2815,25 +2747,25 @@ img.flex {
   margin-bottom: 1.5em;
 }
 
-/* line 48, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
+/* line 47, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
 .sidebar-right .content-area {
   float: left;
-  width: 70%;
+  width: 66%;
 }
 
-/* line 53, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
+/* line 52, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
 .sidebar-right .widget-area {
   float: right;
 }
 
-/* line 59, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
+/* line 58, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
 .nosidebar-silo .content-inner-wrap {
   padding-left: 15%;
   padding-right: 15%;
 }
 
 @media all and (max-width: 1024px) {
-  /* line 59, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
+  /* line 58, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
   .nosidebar-silo .content-inner-wrap {
     padding-left: 8%;
     padding-right: 8%;
@@ -2841,7 +2773,7 @@ img.flex {
 }
 
 @media all and (max-width: 640px) {
-  /* line 59, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
+  /* line 58, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
   .nosidebar-silo .content-inner-wrap {
     padding-left: 5%;
     padding-right: 5%;
@@ -2849,7 +2781,7 @@ img.flex {
 }
 
 @media all and (max-width: 768px) {
-  /* line 75, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
+  /* line 74, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
   .content-area,
   .site-content .widget-area,
   .sidebar-right .content-area,
@@ -2860,7 +2792,7 @@ img.flex {
     float: none;
     width: 100%;
   }
-  /* line 85, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
+  /* line 84, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/layout/_containers.scss */
   .site-content .widget-area,
   .sidebar-right .site-content .widget-area,
   .sidebar-left .site-content .widget-area {
@@ -3468,6 +3400,7 @@ body.search .page-title,
 body.error404 .page-title {
   letter-spacing: 1px;
   padding: 0;
+  word-break: break-word;
 }
 
 @media all and (max-width: 640px) {
@@ -3570,8 +3503,7 @@ body.error404 .page-title {
 .entry-meta {
   color: #c0c0c0;
   display: inline-block;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 80%;
 }
 
 /* line 6, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-meta.scss */
@@ -3605,13 +3537,11 @@ body.error404 .page-title {
 .entry-footer {
   border-top: 1px dashed #dcdcdc;
   border-bottom: 1px dashed #dcdcdc;
-  color: #c0c0c0;
   padding: .5em 0;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 80%;
 }
 
-/* line 9, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+/* line 8, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
 .cat-links,
 .tags-links {
   color: #c0c0c0;
@@ -3620,12 +3550,12 @@ body.error404 .page-title {
   padding: 5px 10px 5px 0;
 }
 
-/* line 17, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+/* line 16, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
 .edit-link {
   float: right;
 }
 
-/* line 20, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+/* line 19, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
 .edit-link a {
   display: inline-block;
 }
@@ -3636,24 +3566,22 @@ body.error404 .page-title {
   background-color: #ffffff;
   margin: 0 0 2em;
   padding: 1.5em 1.5em 0;
-  font-size: 16px;
-  font-size: 1rem;
 }
 
-/* line 10, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 9, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .hentry .title-wrap,
 .archive .hentry .title-wrap {
   margin-bottom: 0;
 }
 
-/* line 14, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 13, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .hentry .wp-post-image,
 .archive .hentry .wp-post-image {
   display: block;
   width: 100%;
 }
 
-/* line 19, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 18, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .hentry .entry-header,
 .blog .hentry .entry-content,
 .blog .hentry .link-more,
@@ -3663,39 +3591,37 @@ body.error404 .page-title {
   overflow: hidden;
 }
 
-/* line 25, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 24, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .hentry.sticky,
 .archive .hentry.sticky {
   border-top: 2px solid #1e90ff;
 }
 
-/* line 31, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 30, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .entry-content p,
 .archive .entry-content p {
   margin-bottom: .25em;
 }
 
-/* line 36, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 35, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .format-status .entry-content p,
 .archive .format-status .entry-content p {
   margin-bottom: 1em;
 }
 
-/* line 40, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 39, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .entry-header,
 .archive .entry-header {
   padding: 0 0 1em;
 }
 
-/* line 44, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 43, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .entry-title,
 .archive .entry-title {
-  word-break: break-all;
-  font-size: 22px;
-  font-size: 1.375rem;
+  word-break: break-word;
 }
 
-/* line 50, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 48, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .fi-link {
   display: inline-block;
   margin: 0 1.5em 1.5em 0;
@@ -3705,7 +3631,7 @@ body.error404 .page-title {
 }
 
 @media all and (max-width: 768px) {
-  /* line 50, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+  /* line 48, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
   .fi-link {
     float: none;
     margin-bottom: 0;
@@ -3715,26 +3641,26 @@ body.error404 .page-title {
   }
 }
 
-/* line 66, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 64, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .featured-image {
   display: inline-block;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 
-/* line 70, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 68, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .featured-image:hover {
   -webkit-transform: scale(1.15, 1.15);
           transform: scale(1.15, 1.15);
 }
 
-/* line 75, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 73, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .archive-description {
   line-height: 1.2;
 }
 
 /* READ MORE LINKS */
-/* line 80, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
+/* line 78, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .more-link {
   display: block;
   font-weight: 700;
@@ -3742,8 +3668,7 @@ body.error404 .page-title {
   padding: 2em 0;
   position: relative;
   text-transform: uppercase;
-  font-size: 12px;
-  font-size: 0.75rem;
+  font-size: 75%;
 }
 
 /* Search Results
@@ -3990,52 +3915,54 @@ body.error404 .page-title {
 
 /* line 4, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comments-area .comments-title {
-  font-size: 30px;
-  font-size: 1.875rem;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-/* line 9, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 10, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond,
 .entry-comments,
 .entry-pings {
   margin: 2.5em 0;
 }
 
-/* line 15, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 16, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-content {
   clear: both;
 }
 
-/* line 19, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 20, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .entry-comments .comment-author {
   margin-bottom: 0;
 }
 
-/* line 23, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 24, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond input[type="email"],
 .comment-respond input[type="text"],
 .comment-respond input[type="url"] {
   width: 50%;
 }
 
-/* line 31, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 32, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond input:focus {
   border: 0;
 }
 
-/* line 35, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 36, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond .comment-reply-title {
-  font-size: 24px;
-  font-size: 1.5rem;
   margin-bottom: .5em;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
-/* line 39, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 41, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond .comment-reply-title small {
   display: block;
 }
 
-/* line 44, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 46, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond #cancel-comment-reply-link {
   padding: .5em 0 .5em .75em;
   position: relative;
@@ -4044,12 +3971,12 @@ body.error404 .page-title {
   font-size: 0.875rem;
 }
 
-/* line 50, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 52, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond #cancel-comment-reply-link:hover {
   background-color: #f5f5f5;
 }
 
-/* line 54, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 56, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond #cancel-comment-reply-link:before {
   content: 'x';
   position: absolute;
@@ -4057,19 +3984,19 @@ body.error404 .page-title {
   top: .5em;
 }
 
-/* line 62, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 64, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-respond label {
   display: block;
   margin-right: 12px;
 }
 
-/* line 68, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 70, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-list li,
 .ping-list li {
   list-style-type: none;
 }
 
-/* line 73, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 75, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-list li {
   background-color: #ffffff;
   box-shadow: 0px 0px 8px #dcdcdc;
@@ -4080,7 +4007,7 @@ body.error404 .page-title {
 }
 
 @media all and (max-width: 768px) {
-  /* line 73, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+  /* line 75, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
   .comment-list li {
     padding: 16px;
     font-size: 14px;
@@ -4089,44 +4016,44 @@ body.error404 .page-title {
 }
 
 @media all and (max-width: 380px) {
-  /* line 73, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+  /* line 75, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
   .comment-list li {
     padding: 12px;
   }
 }
 
-/* line 89, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 91, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-list li li {
   background-color: #f5f5f5;
 }
 
-/* line 91, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 93, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-list li li li {
   background-color: #ffffff;
 }
 
-/* line 93, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 95, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-list li li li li {
   background-color: #f5f5f5;
 }
 
-/* line 95, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 97, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-list li li li li li {
   background-color: #ffffff;
 }
 
-/* line 103, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 105, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .entry-pings .reply {
   display: none;
 }
 
-/* line 107, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 109, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .comment-edit-link,
 .says {
   display: none;
 }
 
-/* line 112, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
+/* line 114, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_comments.scss */
 .bypostauthor {
   display: inline-block;
 }

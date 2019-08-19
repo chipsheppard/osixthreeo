@@ -71,11 +71,10 @@ class Fi_Checkbox {
 	/**
 	 * Handles saving the meta box.
 	 *
-	 * @param int     $post_id Post ID.
-	 * @param WP_Post $post    Post object.
+	 * @param int $post_id Post ID.
 	 * @return null
 	 */
-	public function save_fi_checkbox( $post_id, $post ) {
+	public function save_fi_checkbox( $post_id ) {
 		// Add nonce for security and authentication.
 		$nonce_name   = isset( $_POST['osixthreeo_nonce'] ) ? sanitize_text_field( wp_unslash( $_POST['osixthreeo_nonce'] ) ) : '';
 		$nonce_action = 'osixthreeo_nonce_action';

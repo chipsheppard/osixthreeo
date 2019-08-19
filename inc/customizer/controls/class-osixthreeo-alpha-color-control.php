@@ -80,14 +80,14 @@ class Osixthreeo_Alpha_Color_Control extends WP_Customize_Control {
 	public function enqueue() {
 		wp_enqueue_script(
 			'osixthreeo-alpha-color-control-js',
-			get_template_directory_uri() . '/assets/js/customize-alpha-color-control.js',
+			get_template_directory_uri() . '/assets/js/customize-alpha-color-control-min.js',
 			array( 'jquery', 'wp-color-picker' ),
 			OSIXTHREEO_VERSION,
 			true
 		);
 		wp_enqueue_style(
 			'osixthreeo-alpha-color-control-css',
-			get_template_directory_uri() . '/assets/css/customize-alpha-color-control.css',
+			get_template_directory_uri() . '/assets/css/customize-alpha-color-control-min.css',
 			array( 'wp-color-picker' ),
 			OSIXTHREEO_VERSION
 		);

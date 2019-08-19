@@ -25,7 +25,6 @@
 
 		a {
 			background-color: #ffffff;
-			border: 0;
 			color: #222222 !important;
 			display: block;
 			overflow: hidden;
@@ -38,12 +37,6 @@
 		.current_page_item > a,
 		.current-menu-item > a {
 			background-color: #f3f3f3;
-			border: 0;
-		}
-
-		.current_page_ancestor > a,
-		.current-menu-ancestor > a {
-			border: 0;
 		}
 
 		.menu-item-has-children > a {

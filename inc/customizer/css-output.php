@@ -27,60 +27,108 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		);
 		$defaults            = osixthreeo_get_defaults();
 
-		$header_bg_color_left                 = $osixthreeo_settings['header_bg_color_left'];
-		$header_bg_color_right                = $osixthreeo_settings['header_bg_color_right'];
-		$header_gradient_angle                = $osixthreeo_settings['header_gradient_angle'];
-		$header_left_stop                     = $osixthreeo_settings['header_left_stop'];
-		$header_right_stop                    = $osixthreeo_settings['header_right_stop'];
-		$default_header_bg_color_left         = $defaults['header_bg_color_left'];
-		$default_header_bg_color_right        = $defaults['header_bg_color_right'];
-		$default_header_gradient_angle        = $defaults['header_gradient_angle'];
-		$default_header_left_stop             = $defaults['header_left_stop'];
-		$default_header_right_stop            = $defaults['header_right_stop'];
-		$hero_text_primary_color              = $osixthreeo_settings['hero_text_primary_color'];
-		$hero_text_secondary_color            = $osixthreeo_settings['hero_text_secondary_color'];
-		$default_hero_text_primary_color      = $defaults['hero_text_primary_color'];
-		$default_hero_text_secondary_color    = $defaults['hero_text_secondary_color'];
-		$home_header_height                   = $osixthreeo_settings['home_header_height'];
-		$subpage_header_height                = $osixthreeo_settings['subpage_header_height'];
-		$default_home_header_height           = $defaults['home_header_height'];
-		$default_subpage_header_height        = $defaults['subpage_header_height'];
-		$home_mobile_header_height            = $osixthreeo_settings['home_mobile_header_height'];
-		$subpage_mobile_header_height         = $osixthreeo_settings['subpage_mobile_header_height'];
-		$default_home_mobile_header_height    = $defaults['home_mobile_header_height'];
-		$default_subpage_mobile_header_height = $defaults['subpage_mobile_header_height'];
-		$header_padding                       = $osixthreeo_settings['header_padding'];
-		$default_header_padding               = $defaults['header_padding'];
-		$header_bg_color                      = $osixthreeo_settings['header_background_color'];
-		$default_header_bg_color              = $defaults['header_background_color'];
-		$nav_link_color                       = $osixthreeo_settings['nav_link_color'];
-		$default_nav_link_color               = $defaults['nav_link_color'];
-		$subnav_text_color                    = $osixthreeo_settings['subnav_text_color'];
-		$default_subnav_text_color            = $defaults['subnav_text_color'];
-		$subnav_bg_color                      = $osixthreeo_settings['subnav_bg_color'];
-		$default_subnav_bg_color              = $defaults['subnav_bg_color'];
-		$subnav_border_color                  = $osixthreeo_settings['subnav_border_color'];
-		$default_subnav_border_color          = $defaults['subnav_border_color'];
-		$subnav_hover_text_color              = $osixthreeo_settings['subnav_hover_text_color'];
-		$default_subnav_hover_text_color      = $defaults['subnav_hover_text_color'];
-		$subnav_hover_bg_color                = $osixthreeo_settings['subnav_hover_bg_color'];
-		$default_subnav_hover_bg_color        = $defaults['subnav_hover_bg_color'];
-		$content_bgcolor                      = $osixthreeo_settings['content_bgcolor'];
-		$default_content_bgcolor              = $defaults['content_bgcolor'];
-		$text_color                           = $osixthreeo_settings['text_color'];
-		$link_color                           = $osixthreeo_settings['link_color'];
-		$link_color_hover                     = $osixthreeo_settings['link_color_hover'];
-		$default_text_color                   = $defaults['text_color'];
-		$default_link_color                   = $defaults['link_color'];
-		$default_link_color_hover             = $defaults['link_color_hover'];
-		$footer_bg_color                      = $osixthreeo_settings['footer_background_color'];
-		$footer_text_color                    = $osixthreeo_settings['footer_text_color'];
-		$footer_link_color                    = $osixthreeo_settings['footer_link_color'];
-		$footer_link_color_hover              = $osixthreeo_settings['footer_link_color_hover'];
-		$default_footer_bg_color              = $defaults['footer_background_color'];
-		$default_footer_text_color            = $defaults['footer_text_color'];
-		$default_footer_link_color            = $defaults['footer_link_color'];
-		$default_footer_link_color_hover      = $defaults['footer_link_color_hover'];
+		$header_bg_color_left                  = $osixthreeo_settings['header_bg_color_left'];
+		$header_bg_color_right                 = $osixthreeo_settings['header_bg_color_right'];
+		$header_gradient_angle                 = $osixthreeo_settings['header_gradient_angle'];
+		$header_left_stop                      = $osixthreeo_settings['header_left_stop'];
+		$header_right_stop                     = $osixthreeo_settings['header_right_stop'];
+		$default_header_bg_color_left          = $defaults['header_bg_color_left'];
+		$default_header_bg_color_right         = $defaults['header_bg_color_right'];
+		$default_header_gradient_angle         = $defaults['header_gradient_angle'];
+		$default_header_left_stop              = $defaults['header_left_stop'];
+		$default_header_right_stop             = $defaults['header_right_stop'];
+
+		$hero_text_primary_color               = $osixthreeo_settings['hero_text_primary_color'];
+		$hero_text_secondary_color             = $osixthreeo_settings['hero_text_secondary_color'];
+		$default_hero_text_primary_color       = $defaults['hero_text_primary_color'];
+		$default_hero_text_secondary_color     = $defaults['hero_text_secondary_color'];
+
+		$home_header_height                    = $osixthreeo_settings['home_header_height'];
+		$subpage_header_height                 = $osixthreeo_settings['subpage_header_height'];
+		$home_mobile_header_height             = $osixthreeo_settings['home_mobile_header_height'];
+		$subpage_mobile_header_height          = $osixthreeo_settings['subpage_mobile_header_height'];
+		$default_home_header_height            = $defaults['home_header_height'];
+		$default_subpage_header_height         = $defaults['subpage_header_height'];
+		$default_home_mobile_header_height     = $defaults['home_mobile_header_height'];
+		$default_subpage_mobile_header_height  = $defaults['subpage_mobile_header_height'];
+
+		$header_bg_color                       = $osixthreeo_settings['header_background_color'];
+		$header_padding                        = $osixthreeo_settings['header_padding'];
+		$default_header_bg_color               = $defaults['header_background_color'];
+		$default_header_padding                = $defaults['header_padding'];
+
+		$nav_link_color                        = $osixthreeo_settings['nav_link_color'];
+		$default_nav_link_color                = $defaults['nav_link_color'];
+
+		$subnav_text_color                     = $osixthreeo_settings['subnav_text_color'];
+		$subnav_bg_color                       = $osixthreeo_settings['subnav_bg_color'];
+		$subnav_border_color                   = $osixthreeo_settings['subnav_border_color'];
+		$subnav_hover_text_color               = $osixthreeo_settings['subnav_hover_text_color'];
+		$subnav_hover_bg_color                 = $osixthreeo_settings['subnav_hover_bg_color'];
+		$default_subnav_text_color             = $defaults['subnav_text_color'];
+		$default_subnav_bg_color               = $defaults['subnav_bg_color'];
+		$default_subnav_border_color           = $defaults['subnav_border_color'];
+		$default_subnav_hover_text_color       = $defaults['subnav_hover_text_color'];
+		$default_subnav_hover_bg_color         = $defaults['subnav_hover_bg_color'];
+
+		$content_bgcolor                       = $osixthreeo_settings['content_bgcolor'];
+		$text_color                            = $osixthreeo_settings['text_color'];
+		$link_color                            = $osixthreeo_settings['link_color'];
+		$link_color_hover                      = $osixthreeo_settings['link_color_hover'];
+		$default_content_bgcolor               = $defaults['content_bgcolor'];
+		$default_text_color                    = $defaults['text_color'];
+		$default_link_color                    = $defaults['link_color'];
+		$default_link_color_hover              = $defaults['link_color_hover'];
+
+		$footer_bg_color                       = $osixthreeo_settings['footer_background_color'];
+		$footer_text_color                     = $osixthreeo_settings['footer_text_color'];
+		$footer_link_color                     = $osixthreeo_settings['footer_link_color'];
+		$footer_link_color_hover               = $osixthreeo_settings['footer_link_color_hover'];
+		$default_footer_bg_color               = $defaults['footer_background_color'];
+		$default_footer_text_color             = $defaults['footer_text_color'];
+		$default_footer_link_color             = $defaults['footer_link_color'];
+		$default_footer_link_color_hover       = $defaults['footer_link_color_hover'];
+
+		$hero_text_primary_font                = $osixthreeo_settings['hero_text_primary_font'];
+		$hero_text_secondary_font              = $osixthreeo_settings['hero_text_secondary_font'];
+		$default_hero_text_primary_font        = $defaults['hero_text_primary_font'];
+		$default_hero_text_secondary_font      = $defaults['hero_text_secondary_font'];
+
+		$base_font                             = $osixthreeo_settings['base_font'];
+		$header_font                           = $osixthreeo_settings['header_font'];
+		$highlite_font                         = $osixthreeo_settings['highlite_font'];
+		$default_base_font                     = $defaults['base_font'];
+		$default_header_font                   = $defaults['header_font'];
+		$default_highlite_font                 = $defaults['highlite_font'];
+
+		$sitetitle_font                        = $osixthreeo_settings['sitetitle_font'];
+		$sitedescription_font                  = $osixthreeo_settings['sitedescription_font'];
+		$menu_font                             = $osixthreeo_settings['menu_font'];
+		$default_sitetitle_font                = $defaults['sitetitle_font'];
+		$default_sitedescription_font          = $defaults['sitedescription_font'];
+		$default_menu_font                     = $defaults['menu_font'];
+
+		$header_font_weight                    = $osixthreeo_settings['header_font_weight'];
+		$sitetitle_font_weight                 = $osixthreeo_settings['sitetitle_font_weight'];
+		$sitedescription_font_weight           = $osixthreeo_settings['sitedescription_font_weight'];
+		$menu_font_weight                      = $osixthreeo_settings['menu_font_weight'];
+		$default_header_font_weight            = $defaults['header_font_weight'];
+		$default_sitetitle_font_weight         = $defaults['sitetitle_font_weight'];
+		$default_sitedescription_font_weight   = $defaults['sitedescription_font_weight'];
+		$default_menu_font_weight              = $defaults['menu_font_weight'];
+
+		$base_font_size                        = $osixthreeo_settings['base_font_size'];
+		$sitetitle_font_size                   = $osixthreeo_settings['sitetitle_font_size'];
+		$sitedescription_font_size             = $osixthreeo_settings['sitedescription_font_size'];
+		$menu_font_size                        = $osixthreeo_settings['menu_font_size'];
+		$hero_text_primary_font_size           = $osixthreeo_settings['hero_text_primary_font_size'];
+		$hero_text_secondary_font_size         = $osixthreeo_settings['hero_text_secondary_font_size'];
+		$default_base_font_size                = $defaults['base_font_size'];
+		$default_sitetitle_font_size           = $defaults['sitetitle_font_size'];
+		$default_sitedescription_font_size     = $defaults['sitedescription_font_size'];
+		$default_menu_font_size                = $defaults['menu_font_size'];
+		$default_hero_text_primary_font_size   = $defaults['hero_text_primary_font_size'];
+		$default_hero_text_secondary_font_size = $defaults['hero_text_secondary_font_size'];
 
 		// Initiate our class.
 		$css = new Customizer_CSS();
@@ -264,40 +312,35 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_link_color !== $link_color ) :
 			// Link Color.
 			$css->set_selector(
-				'a,.site-content h2 a:hover,.site-content h3 a:hover,.site-content h4 a:hover,.site-content h5 a:hover,.site-content h6 a:hover,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover,.text-highlight'
+				'a,.site-content h2 a:hover,.site-content h3 a:hover,.site-content h4 a:hover,.site-content h5 a:hover,.site-content h6 a:hover,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover'
 			);
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color'] ) );
 
 			// Link Backgrounds.
 			$css->set_selector(
-				'input[type="button"],input[type="reset"],input[type="submit"],.btn,.bg-highlight,.woocommerce a.button,.woocommerce button.button,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button,.woocommerce #respond input#submit'
+				'input[type="button"],input[type="reset"],input[type="submit"],.btn,.woocommerce a.button,.woocommerce button.button,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button,.woocommerce #respond input#submit'
 			);
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color'] ) );
 
 			// Link Borders.
 			$css->set_selector(
-				'.bb-highlight,.sticky .entry-header,.blog .hentry.sticky,.archive .hentry.sticky'
+				'.sticky .entry-header,.blog .hentry.sticky,.archive .hentry.sticky'
 			);
 			$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['link_color'] ) );
 		endif;
+
 		if ( $default_link_color_hover !== $link_color_hover ) :
-			// Hover Color.
+			// Color.
 			$css->set_selector(
-				'.site-content a:not(.btn):hover,.site-content a:not(.btn):focus,.site-content a:not(.btn):active,a.arrow:hover,a.arrow:focus,a.arrow:active,.text-secondary'
+				'.site-content a:not(.btn):hover,.site-content a:not(.btn):focus,.site-content a:not(.btn):active'
 			);
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
 
-			// Hover Backgrounds.
+			// Backgrounds.
 			$css->set_selector(
-				'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.btn.secondary,.site-navigation li:not(.search-icon) a:before,.bg-secondary,.footer-widgets input[type="submit"],.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce #respond input#submit.alt,.woocommerce input.button.alt,.woocommerce input.button:hover,.woocommerce #respond input#submit:hover'
+				'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.btn.secondary,.footer-widgets input[type="submit"],.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce #respond input#submit.alt,.woocommerce input.button.alt,.woocommerce input.button:hover,.woocommerce #respond input#submit:hover'
 			);
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
-
-			// Hover Borders.
-			$css->set_selector(
-				'a.arrow:hover,a.arrow:focus,a.arrow:active,a.arrow:hover:after,a.arrow:focus:after,a.arrow:active:after,.site-navigation li.accent,.bb-secondary,.footer-widgets input[type="search"]:focus'
-			);
-			$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
 		endif;
 
 		/*
@@ -318,6 +361,282 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_footer_link_color_hover !== $footer_link_color_hover ) :
 			$css->set_selector( '.site-info a:hover' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['footer_link_color_hover'] ) );
+		endif;
+
+		/*
+		 * Fonts --------------------------------
+		 */
+		if ( $default_base_font !== $base_font ) :
+			$css->set_selector( 'body,button,input,select,textarea,blockquote,h1 div,h2 div,h3 div,h4 div,h5 div,h6 div,.search .page-title span' );
+			if ( 'lato' === $base_font ) {
+				$basefont = '"Lato", sans-serif';
+			} elseif ( 'lora' === $base_font ) {
+				$basefont = '"Lora", serif';
+			} elseif ( 'merriweather' === $base_font ) {
+				$basefont = '"Merriweather", serif';
+			} elseif ( 'oswald' === $base_font ) {
+				$basefont = '"Oswald", sans-serif';
+			} elseif ( 'playfairdisplay' === $base_font ) {
+				$basefont = '"Playfair Display", serif';
+			} elseif ( 'raleway' === $base_font ) {
+				$basefont = '"Raleway", sans-serif';
+			} elseif ( 'roboto' === $base_font ) {
+				$basefont = '"Roboto", sans-serif';
+			} elseif ( 'robotoslab' === $base_font ) {
+				$basefont = '"Roboto Slab", serif';
+			} elseif ( 'playfairdisplay' === $base_font ) {
+				$basefont = '"Playfair Display", serif';
+			} elseif ( 'sourcesanspro' === $base_font ) {
+				$basefont = '"Source Sans Pro", sans-serif';
+			} elseif ( 'century' === $base_font ) {
+				$basefont = 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
+			} elseif ( 'verdana' === $base_font ) {
+				$basefont = 'Verdana, Geneva, sans-serif';
+			} elseif ( 'gillsans' === $base_font ) {
+				$basefont = '"Gill Sans", "Gill Sans MT", Calibri, sans-serif';
+			} elseif ( 'helvetica' === $base_font ) {
+				$basefont = '"Helvetica Neue", Helvetica, Arial, sans-serif';
+			} elseif ( 'impact' === $base_font ) {
+				$basefont = 'Impact, Haettenschweiler , Charcoal, "Arial Black", sans serif';
+			} elseif ( 'tahoma' === $base_font ) {
+				$basefont = 'Tahoma, Arial, Helvetica, sans-serif';
+			} elseif ( 'trebuchet' === $base_font ) {
+				$basefont = '"Trebuchet MS", Tahoma, sans-serif';
+			} elseif ( 'lucidagrande' === $base_font ) {
+				$basefont = '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif';
+			} elseif ( 'georgia' === $base_font ) {
+				$basefont = 'Georgia, "Times New Roman", Times, serif';
+			} elseif ( 'times' === $base_font ) {
+				$basefont = 'TimesNewRoman, "Times New Roman", Times, serif';
+			} elseif ( 'bookantiqua' === $base_font ) {
+				$basefont = '"Book Antiqua", Georgia, serif';
+			} elseif ( 'lucidabright' === $base_font ) {
+				$basefont = '"Lucida Bright", Georgia, serif';
+			} elseif ( 'palatino' === $base_font ) {
+				$basefont = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
+			} elseif ( 'courier' === $base_font ) {
+				$basefont = '"Courier New", Courier, monospace';
+			} elseif ( 'lucidatypewritter' === $base_font ) {
+				$basefont = '"Lucida Sans Typewriter", "Lucida Console", monaco, monospace';
+			} elseif ( 'copperplate' === $base_font ) {
+				$basefont = 'Copperplate, "Copperplate Gothic Light", fantasy';
+			} elseif ( 'papyrus' === $base_font ) {
+				$basefont = 'Papyrus, fantasy';
+			} elseif ( 'comicsans' === $base_font ) {
+				$basefont = 'Comic Sans MS, cursive';
+			}
+			$css->add_property( 'font-family', $basefont );
+		endif;
+
+		if ( $default_header_font !== $header_font ) :
+			$css->set_selector( 'h1:not(.site-title),h2,h3,h4,h5,h6' );
+			if ( 'lato' === $header_font ) {
+				$headerfont = '"Lato", sans-serif';
+			} elseif ( 'lora' === $header_font ) {
+				$headerfont = '"Lora", serif';
+			} elseif ( 'merriweather' === $header_font ) {
+				$headerfont = '"Merriweather", serif';
+			} elseif ( 'oswald' === $header_font ) {
+				$headerfont = '"Oswald", sans-serif';
+			} elseif ( 'playfairdisplay' === $header_font ) {
+				$headerfont = '"Playfair Display", serif';
+			} elseif ( 'raleway' === $header_font ) {
+				$headerfont = '"Raleway", sans-serif';
+			} elseif ( 'roboto' === $header_font ) {
+				$headerfont = '"Roboto", sans-serif';
+			} elseif ( 'robotoslab' === $header_font ) {
+				$headerfont = '"Roboto Slab", serif';
+			} elseif ( 'playfairdisplay' === $header_font ) {
+				$headerfont = '"Playfair Display", serif';
+			} elseif ( 'sourcesanspro' === $header_font ) {
+				$headerfont = '"Source Sans Pro", sans-serif';
+			} elseif ( 'century' === $header_font ) {
+				$headerfont = 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
+			} elseif ( 'verdana' === $header_font ) {
+				$headerfont = 'Verdana, Geneva, sans-serif';
+			} elseif ( 'gillsans' === $header_font ) {
+				$headerfont = '"Gill Sans", "Gill Sans MT", Calibri, sans-serif';
+			} elseif ( 'helvetica' === $header_font ) {
+				$headerfont = '"Helvetica Neue", Helvetica, Arial, sans-serif';
+			} elseif ( 'impact' === $header_font ) {
+				$headerfont = 'Impact, Haettenschweiler , Charcoal, "Arial Black", sans serif';
+			} elseif ( 'tahoma' === $header_font ) {
+				$headerfont = 'Tahoma, Arial, Helvetica, sans-serif';
+			} elseif ( 'trebuchet' === $header_font ) {
+				$headerfont = '"Trebuchet MS", Tahoma, sans-serif';
+			} elseif ( 'lucidagrande' === $header_font ) {
+				$headerfont = '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif';
+			} elseif ( 'georgia' === $header_font ) {
+				$headerfont = 'Georgia, "Times New Roman", Times, serif';
+			} elseif ( 'times' === $header_font ) {
+				$headerfont = 'TimesNewRoman, "Times New Roman", Times, serif';
+			} elseif ( 'bookantiqua' === $header_font ) {
+				$headerfont = '"Book Antiqua", Georgia, serif';
+			} elseif ( 'lucidabright' === $header_font ) {
+				$headerfont = '"Lucida Bright", Georgia, serif';
+			} elseif ( 'palatino' === $header_font ) {
+				$headerfont = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
+			} elseif ( 'courier' === $header_font ) {
+				$headerfont = '"Courier New", Courier, monospace';
+			} elseif ( 'lucidatypewritter' === $header_font ) {
+				$headerfont = '"Lucida Sans Typewriter", "Lucida Console", monaco, monospace';
+			} elseif ( 'copperplate' === $header_font ) {
+				$headerfont = 'Copperplate, "Copperplate Gothic Light", fantasy';
+			} elseif ( 'papyrus' === $header_font ) {
+				$headerfont = 'Papyrus, fantasy';
+			} elseif ( 'comicsans' === $header_font ) {
+				$headerfont = 'Comic Sans MS, cursive';
+			}
+			$css->add_property( 'font-family', $headerfont );
+		endif;
+
+		if ( $default_highlite_font !== $highlite_font ) :
+			if ( 'lato' === $highlite_font ) {
+				$highlitefont = '"Lato", sans-serif';
+			} elseif ( 'lora' === $highlite_font ) {
+				$highlitefont = '"Lora", serif';
+			} elseif ( 'merriweather' === $highlite_font ) {
+				$highlitefont = '"Merriweather", serif';
+			} elseif ( 'oswald' === $highlite_font ) {
+				$highlitefont = '"Oswald", sans-serif';
+			} elseif ( 'playfairdisplay' === $highlite_font ) {
+				$highlitefont = '"Playfair Display", serif';
+			} elseif ( 'raleway' === $highlite_font ) {
+				$highlitefont = '"Raleway", sans-serif';
+			} elseif ( 'roboto' === $highlite_font ) {
+				$highlitefont = '"Roboto", sans-serif';
+			} elseif ( 'robotoslab' === $highlite_font ) {
+				$highlitefont = '"Roboto Slab", serif';
+			} elseif ( 'playfairdisplay' === $highlite_font ) {
+				$highlitefont = '"Playfair Display", serif';
+			} elseif ( 'sourcesanspro' === $highlite_font ) {
+				$highlitefont = '"Source Sans Pro", sans-serif';
+			} elseif ( 'century' === $highlite_font ) {
+				$highlitefont = 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
+			} elseif ( 'verdana' === $highlite_font ) {
+				$highlitefont = 'Verdana, Geneva, sans-serif';
+			} elseif ( 'gillsans' === $highlite_font ) {
+				$highlitefont = '"Gill Sans", "Gill Sans MT", Calibri, sans-serif';
+			} elseif ( 'helvetica' === $highlite_font ) {
+				$highlitefont = '"Helvetica Neue", Helvetica, Arial, sans-serif';
+			} elseif ( 'impact' === $highlite_font ) {
+				$highlitefont = 'Impact, Haettenschweiler , Charcoal, "Arial Black", sans serif';
+			} elseif ( 'tahoma' === $highlite_font ) {
+				$highlitefont = 'Tahoma, Arial, Helvetica, sans-serif';
+			} elseif ( 'trebuchet' === $highlite_font ) {
+				$highlitefont = '"Trebuchet MS", Tahoma, sans-serif';
+			} elseif ( 'lucidagrande' === $highlite_font ) {
+				$highlitefont = '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif';
+			} elseif ( 'georgia' === $highlite_font ) {
+				$highlitefont = 'Georgia, "Times New Roman", Times, serif';
+			} elseif ( 'times' === $highlite_font ) {
+				$highlitefont = 'TimesNewRoman, "Times New Roman", Times, serif';
+			} elseif ( 'bookantiqua' === $highlite_font ) {
+				$highlitefont = '"Book Antiqua", Georgia, serif';
+			} elseif ( 'lucidabright' === $highlite_font ) {
+				$highlitefont = '"Lucida Bright", Georgia, serif';
+			} elseif ( 'palatino' === $highlite_font ) {
+				$highlitefont = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
+			} elseif ( 'courier' === $highlite_font ) {
+				$highlitefont = '"Courier New", Courier, monospace';
+			} elseif ( 'lucidatypewritter' === $highlite_font ) {
+				$highlitefont = '"Lucida Sans Typewriter", "Lucida Console", monaco, monospace';
+			} elseif ( 'copperplate' === $highlite_font ) {
+				$highlitefont = 'Copperplate, "Copperplate Gothic Light", fantasy';
+			} elseif ( 'papyrus' === $highlite_font ) {
+				$highlitefont = 'Papyrus, fantasy';
+			} elseif ( 'comicsans' === $highlite_font ) {
+				$highlitefont = 'Comic Sans MS, cursive';
+			}
+		endif;
+
+		if ( $default_sitetitle_font !== $sitetitle_font ) :
+			$css->set_selector( '.site-title' );
+			if ( 'header' === $sitetitle_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $sitetitle_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+
+		if ( $default_sitedescription_font !== $sitedescription_font ) :
+			$css->set_selector( '.site-description' );
+			if ( 'header' === $sitedescription_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $sitedescription_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+
+		if ( $default_menu_font !== $menu_font ) :
+			$css->set_selector( '.site-navigation' );
+			if ( 'header' === $menu_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $menu_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+
+		if ( $default_header_font_weight !== $header_font_weight ) :
+			$css->set_selector( 'h1:not(.site-title), h2, h3, h4, h5, h6' );
+			$css->add_property( 'font-weight', 'bold' );
+		endif;
+
+		if ( $default_sitetitle_font_weight !== $sitetitle_font_weight ) :
+			$css->set_selector( '.site-title' );
+			$css->add_property( 'font-weight', 'bold' );
+		endif;
+
+		if ( $default_sitedescription_font_weight !== $sitedescription_font_weight ) :
+			$css->set_selector( '.site-description' );
+			$css->add_property( 'font-weight', 'bold' );
+		endif;
+
+		if ( $default_menu_font_weight !== $menu_font_weight ) :
+			$css->set_selector( '.site-navigation a' );
+			$css->add_property( 'font-weight', 'bold' );
+		endif;
+
+		if ( $default_hero_text_primary_font !== $hero_text_primary_font ) :
+				$css->set_selector( '.hero-primary' );
+			if ( 'header' === $hero_text_primary_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $hero_text_primary_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+		if ( $default_hero_text_secondary_font !== $hero_text_secondary_font ) :
+				$css->set_selector( '.hero-secondary' );
+			if ( 'header' === $hero_text_secondary_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $hero_text_secondary_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+
+		if ( absint( $default_base_font_size ) !== absint( $base_font_size ) ) :
+			$css->set_selector( '.content-inner-wrap' );
+			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['base_font_size'] . 'px' ) );
+		endif;
+		if ( absint( $default_sitetitle_font_size ) !== absint( $sitetitle_font_size ) ) :
+			$css->set_selector( '.site-title' );
+			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['sitetitle_font_size'] . 'px' ) );
+		endif;
+		if ( absint( $default_sitedescription_font_size ) !== absint( $sitedescription_font_size ) ) :
+			$css->set_selector( '.site-description' );
+			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['sitedescription_font_size'] . 'px' ) );
+		endif;
+		if ( absint( $default_menu_font_size ) !== absint( $menu_font_size ) ) :
+			$css->set_selector( '#primary-navigation' );
+			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['menu_font_size'] . 'px' ) );
+		endif;
+		if ( absint( $default_hero_text_primary_font_size ) !== absint( $hero_text_primary_font_size ) ) :
+			$css->set_selector( '.hero-primary' );
+			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_primary_font_size'] . 'px' ) );
+		endif;
+		if ( absint( $default_hero_text_secondary_font_size ) !== absint( $hero_text_secondary_font_size ) ) :
+			$css->set_selector( '.hero-secondary' );
+			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_secondary_font_size'] . 'px' ) );
 		endif;
 
 		// Allow us to hook CSS into our output - where we would hook our "Pro" features?

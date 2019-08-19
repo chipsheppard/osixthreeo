@@ -28,18 +28,18 @@ echo '<div id="comments" class="comments-area">';
 if ( have_comments() ) :
 
 	echo '<h2 class="comments-title">';
-		esc_html__( 'Comments', 'osixthreeo' );
+		esc_html_e( 'Comments', 'osixthreeo' );
 	echo '</h2>';
 
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through?
 		echo '<nav id="comment-nav-above" class="navigation comment-navigation cf" role="navigation">';
-		echo '<h2 class="screen-reader-text">' . esc_html__( 'Comment navigation', 'osixthreeo' ) . '</h2>';
+		echo '<h2 class="screen-reader-text">' . esc_html_e( 'Comment navigation', 'osixthreeo' ) . '</h2>';
 		echo '<div class="nav-links">';
 			echo '<div class="nav-previous">';
-				previous_comments_link( esc_html__( 'Older Comments', 'osixthreeo' ) );
+				previous_comments_link( esc_html_e( 'Older Comments', 'osixthreeo' ) );
 			echo '</div>';
 			echo '<div class="nav-next">';
-				next_comments_link( esc_html__( 'Newer Comments', 'osixthreeo' ) );
+				next_comments_link( esc_html_e( 'Newer Comments', 'osixthreeo' ) );
 			echo '</div>';
 		echo '</div>';
 		echo '</nav>';
@@ -57,13 +57,13 @@ if ( have_comments() ) :
 
 	if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through?
 		echo '<nav id="comment-nav-below" class="navigation comment-navigation cf" role="navigation">';
-		echo '<h2 class="screen-reader-text">' . esc_html__( 'Comment navigation', 'osixthreeo' ) . '</h2>';
+		echo '<h2 class="screen-reader-text">' . esc_html_e( 'Comment navigation', 'osixthreeo' ) . '</h2>';
 		echo '<div class="nav-links">';
 			echo '<div class="nav-previous">';
-				previous_comments_link( esc_html__( 'Older Comments', 'osixthreeo' ) );
+				previous_comments_link( esc_html_e( 'Older Comments', 'osixthreeo' ) );
 			echo '</div>';
 			echo '<div class="nav-next">';
-				next_comments_link( esc_html__( 'Newer Comments', 'osixthreeo' ) );
+				next_comments_link( esc_html_e( 'Newer Comments', 'osixthreeo' ) );
 			echo '</div>';
 		echo '</div>';
 		echo '</nav>';
@@ -74,7 +74,7 @@ endif; // Check for have_comments().
 
 // If comments are closed and there are comments, let's leave a little note, shall we?
 if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
-	echo '<p class="no-comments">' . esc_html__( 'Comments are closed.', 'osixthreeo' ) . '</p>';
+	echo '<p class="no-comments">' . esc_html_e( 'Comments are closed.', 'osixthreeo' ) . '</p>';
 endif;
 
 comment_form();
