@@ -31,7 +31,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Osixthreeo_Range
 		 */
 		public function enqueue() {
 			wp_enqueue_script( 'custom_range', get_template_directory_uri() . '/assets/js/customize-range-control-min.js', array( 'jquery', 'customize-base' ), OSIXTHREEO_VERSION, true );
-			wp_enqueue_style( 'custom_range', get_template_directory_uri() . '/assets/css/customize-range-control-min.css', null );
+			wp_enqueue_style( 'custom_range', get_template_directory_uri() . '/assets/css/customize-range-control-min.css', array(), OSIXTHREEO_VERSION );
 		}
 
 		/**

@@ -37,12 +37,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_header_gradient_angle         = $defaults['header_gradient_angle'];
 		$default_header_left_stop              = $defaults['header_left_stop'];
 		$default_header_right_stop             = $defaults['header_right_stop'];
-
 		$hero_text_primary_color               = $osixthreeo_settings['hero_text_primary_color'];
 		$hero_text_secondary_color             = $osixthreeo_settings['hero_text_secondary_color'];
 		$default_hero_text_primary_color       = $defaults['hero_text_primary_color'];
 		$default_hero_text_secondary_color     = $defaults['hero_text_secondary_color'];
-
 		$home_header_height                    = $osixthreeo_settings['home_header_height'];
 		$subpage_header_height                 = $osixthreeo_settings['subpage_header_height'];
 		$home_mobile_header_height             = $osixthreeo_settings['home_mobile_header_height'];
@@ -51,15 +49,12 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_subpage_header_height         = $defaults['subpage_header_height'];
 		$default_home_mobile_header_height     = $defaults['home_mobile_header_height'];
 		$default_subpage_mobile_header_height  = $defaults['subpage_mobile_header_height'];
-
 		$header_bg_color                       = $osixthreeo_settings['header_background_color'];
 		$header_padding                        = $osixthreeo_settings['header_padding'];
 		$default_header_bg_color               = $defaults['header_background_color'];
 		$default_header_padding                = $defaults['header_padding'];
-
 		$nav_link_color                        = $osixthreeo_settings['nav_link_color'];
 		$default_nav_link_color                = $defaults['nav_link_color'];
-
 		$subnav_text_color                     = $osixthreeo_settings['subnav_text_color'];
 		$subnav_bg_color                       = $osixthreeo_settings['subnav_bg_color'];
 		$subnav_border_color                   = $osixthreeo_settings['subnav_border_color'];
@@ -70,7 +65,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_subnav_border_color           = $defaults['subnav_border_color'];
 		$default_subnav_hover_text_color       = $defaults['subnav_hover_text_color'];
 		$default_subnav_hover_bg_color         = $defaults['subnav_hover_bg_color'];
-
 		$content_bgcolor                       = $osixthreeo_settings['content_bgcolor'];
 		$text_color                            = $osixthreeo_settings['text_color'];
 		$link_color                            = $osixthreeo_settings['link_color'];
@@ -79,7 +73,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_text_color                    = $defaults['text_color'];
 		$default_link_color                    = $defaults['link_color'];
 		$default_link_color_hover              = $defaults['link_color_hover'];
-
 		$footer_bg_color                       = $osixthreeo_settings['footer_background_color'];
 		$footer_text_color                     = $osixthreeo_settings['footer_text_color'];
 		$footer_link_color                     = $osixthreeo_settings['footer_link_color'];
@@ -88,26 +81,22 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_footer_text_color             = $defaults['footer_text_color'];
 		$default_footer_link_color             = $defaults['footer_link_color'];
 		$default_footer_link_color_hover       = $defaults['footer_link_color_hover'];
-
 		$hero_text_primary_font                = $osixthreeo_settings['hero_text_primary_font'];
 		$hero_text_secondary_font              = $osixthreeo_settings['hero_text_secondary_font'];
 		$default_hero_text_primary_font        = $defaults['hero_text_primary_font'];
 		$default_hero_text_secondary_font      = $defaults['hero_text_secondary_font'];
-
 		$base_font                             = $osixthreeo_settings['base_font'];
 		$header_font                           = $osixthreeo_settings['header_font'];
 		$highlite_font                         = $osixthreeo_settings['highlite_font'];
 		$default_base_font                     = $defaults['base_font'];
 		$default_header_font                   = $defaults['header_font'];
 		$default_highlite_font                 = $defaults['highlite_font'];
-
 		$sitetitle_font                        = $osixthreeo_settings['sitetitle_font'];
 		$sitedescription_font                  = $osixthreeo_settings['sitedescription_font'];
 		$menu_font                             = $osixthreeo_settings['menu_font'];
 		$default_sitetitle_font                = $defaults['sitetitle_font'];
 		$default_sitedescription_font          = $defaults['sitedescription_font'];
 		$default_menu_font                     = $defaults['menu_font'];
-
 		$header_font_weight                    = $osixthreeo_settings['header_font_weight'];
 		$sitetitle_font_weight                 = $osixthreeo_settings['sitetitle_font_weight'];
 		$sitedescription_font_weight           = $osixthreeo_settings['sitedescription_font_weight'];
@@ -116,7 +105,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_sitetitle_font_weight         = $defaults['sitetitle_font_weight'];
 		$default_sitedescription_font_weight   = $defaults['sitedescription_font_weight'];
 		$default_menu_font_weight              = $defaults['menu_font_weight'];
-
 		$base_font_size                        = $osixthreeo_settings['base_font_size'];
 		$sitetitle_font_size                   = $osixthreeo_settings['sitetitle_font_size'];
 		$sitedescription_font_size             = $osixthreeo_settings['sitedescription_font_size'];
@@ -210,7 +198,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		 * Header Top/Bottom Padding --------------------------------
 		 */
 		if ( absint( $default_header_padding ) !== absint( $header_padding ) ) :
-			$css->set_selector( '.header-wrap .inner-wrap' );
+			$css->set_selector( '.header-wrap' );
 			$css->add_property( 'padding-top', esc_attr( $osixthreeo_settings['header_padding'] . 'px' ) );
 			$css->add_property( 'padding-bottom', esc_attr( $osixthreeo_settings['header_padding'] . 'px' ) );
 			$css->set_selector( 'responsive-menu-icon' );
@@ -247,7 +235,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->stop_media_query();
 		endif;
 
-		 // BG Color.
+		// BG Color.
 		if ( $default_subnav_bg_color !== $subnav_bg_color ) :
 			$css->set_selector( '.site-navigation .sub-menu a' );
 			$css->add_property( 'background', esc_attr( $osixthreeo_settings['subnav_bg_color'] ) );
@@ -257,7 +245,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->stop_media_query();
 		endif;
 
-		 // Border Color.
+		// Border Color.
 		if ( $default_subnav_border_color !== $subnav_border_color ) :
 			$css->set_selector(
 				'.site-navigation .sub-menu li,.site-navigation .sub-menu li:first-of-type'
@@ -269,7 +257,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->stop_media_query();
 		endif;
 
-		 // Hover Text Color.
+		// Hover Text Color.
 		if ( $default_subnav_hover_text_color !== $subnav_hover_text_color ) :
 			$css->set_selector(
 				'.site-navigation .sub-menu a:hover,.site-navigation .sub-menu .current_page_item > a,.site-navigation .sub-menu .current-menu-item > a'
@@ -281,7 +269,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->stop_media_query();
 		endif;
 
-		 // Hover BG Color.
+		// Hover BG Color.
 		if ( $default_subnav_hover_bg_color !== $subnav_hover_bg_color ) :
 			$css->set_selector(
 				'.site-navigation .sub-menu a:hover,.site-navigation .sub-menu .current_page_item > a,.site-navigation .sub-menu .current-menu-item > a'
@@ -368,185 +356,605 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		 */
 		if ( $default_base_font !== $base_font ) :
 			$css->set_selector( 'body,button,input,select,textarea,blockquote,h1 div,h2 div,h3 div,h4 div,h5 div,h6 div,.search .page-title span' );
-			if ( 'lato' === $base_font ) {
+			if ( 'arialblack' === $base_font ) {
+				$basefont = 'Arial Black, Gadget, sans-serif';
+			} elseif ( 'impact' === $base_font ) {
+				$basefont = 'Impact, Charcoal, sans-serif';
+			} elseif ( 'trebuchet' === $base_font ) {
+				$basefont = 'Trebuchet MS, sans-serif';
+			} elseif ( 'verdana' === $base_font ) {
+				$basefont = 'Verdana, sans-serif';
+			} elseif ( 'georgia' === $base_font ) {
+				$basefont = 'Georgia, serif';
+			} elseif ( 'palatino' === $base_font ) {
+				$basefont = 'Palatino, Palatino Linotype, serif';
+			} elseif ( 'tahoma' === $base_font ) {
+				$basefont = 'Tahoma, sans-serif';
+			} elseif ( 'times' === $base_font ) {
+				$basefont = 'Times New Roman, Times, serif';
+			} elseif ( 'comicsans' === $base_font ) {
+				$basefont = 'Comic Sans MS, cursive';
+			} elseif ( 'copperplate' === $base_font ) {
+				$basefont = 'Copperplate, "Copperplate Gothic Light", fantasy';
+			} elseif ( 'papyrus' === $base_font ) {
+				$basefont = 'Papyrus, cursive';
+			} elseif ( 'courier' === $base_font ) {
+				$basefont = 'Courier, monospace';
+			} elseif ( 'lucidatypewritter' === $base_font ) {
+				$basefont = '"Lucida Sans Typewriter", monaco, monospace';
+			} elseif ( 'alegreyasans' === $base_font ) {
+				$basefont = '"Alegreya Sans", sans-serif';
+			} elseif ( 'alegreyasanssc' === $base_font ) {
+				$basefont = '"Alegreya Sans SC", sans-serif';
+			} elseif ( 'archivo' === $base_font ) {
+				$basefont = '"Archivo", sans-serif';
+			} elseif ( 'archivonarrow' === $base_font ) {
+				$basefont = '"Archivo Narrow", sans-serif';
+			} elseif ( 'b612' === $base_font ) {
+				$basefont = '"B612", sans-serif';
+			} elseif ( 'cabin' === $base_font ) {
+				$basefont = '"Cabin", sans-serif';
+			} elseif ( 'cairo' === $base_font ) {
+				$basefont = '"Cairo", sans-serif';
+			} elseif ( 'chivo' === $base_font ) {
+				$basefont = '"Chivo", sans-serif';
+			} elseif ( 'exo2' === $base_font ) {
+				$basefont = '"Exo 2", sans-serif';
+			} elseif ( 'fjallaone' === $base_font ) {
+				$basefont = '"Fjalla One", sans-serif';
+			} elseif ( 'firasans' === $base_font ) {
+				$basefont = '"Fira Sans", sans-serif';
+			} elseif ( 'ibmplexsans' === $base_font ) {
+				$basefont = '"IBM Plex Sans", sans-serif';
+			} elseif ( 'karla' === $base_font ) {
+				$basefont = '"Karla", sans-serif';
+			} elseif ( 'lato' === $base_font ) {
 				$basefont = '"Lato", sans-serif';
-			} elseif ( 'lora' === $base_font ) {
-				$basefont = '"Lora", serif';
-			} elseif ( 'merriweather' === $base_font ) {
-				$basefont = '"Merriweather", serif';
+			} elseif ( 'librefranklin' === $base_font ) {
+				$basefont = '"Libre Franklin", sans-serif';
+			} elseif ( 'montserrat' === $base_font ) {
+				$basefont = '"Montserrat", sans-serif';
+			} elseif ( 'montserratalternates' === $base_font ) {
+				$basefont = '"Montserrat Alternates", sans-serif';
+			} elseif ( 'muli' === $base_font ) {
+				$basefont = '"Muli", sans-serif';
+			} elseif ( 'notosans' === $base_font ) {
+				$basefont = '"Noto Sans", sans-serif';
+			} elseif ( 'nunito' === $base_font ) {
+				$basefont = '"Nunito", sans-serif';
+			} elseif ( 'opensans' === $base_font ) {
+				$basefont = '"Open Sans", sans-serif';
 			} elseif ( 'oswald' === $base_font ) {
 				$basefont = '"Oswald", sans-serif';
-			} elseif ( 'playfairdisplay' === $base_font ) {
-				$basefont = '"Playfair Display", serif';
+			} elseif ( 'oxygen' === $base_font ) {
+				$basefont = '"Oxygen", sans-serif';
+			} elseif ( 'poppins' === $base_font ) {
+				$basefont = '"Poppins", sans-serif';
+			} elseif ( 'prozalibre' === $base_font ) {
+				$basefont = '"Proza Libre", sans-serif';
+			} elseif ( 'ptsans' === $base_font ) {
+				$basefont = '"PT Sans", sans-serif';
 			} elseif ( 'raleway' === $base_font ) {
 				$basefont = '"Raleway", sans-serif';
 			} elseif ( 'roboto' === $base_font ) {
 				$basefont = '"Roboto", sans-serif';
-			} elseif ( 'robotoslab' === $base_font ) {
-				$basefont = '"Roboto Slab", serif';
-			} elseif ( 'playfairdisplay' === $base_font ) {
-				$basefont = '"Playfair Display", serif';
+			} elseif ( 'rubik' === $base_font ) {
+				$basefont = '"Rubik", sans-serif';
 			} elseif ( 'sourcesanspro' === $base_font ) {
 				$basefont = '"Source Sans Pro", sans-serif';
-			} elseif ( 'century' === $base_font ) {
-				$basefont = 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
-			} elseif ( 'verdana' === $base_font ) {
-				$basefont = 'Verdana, Geneva, sans-serif';
-			} elseif ( 'gillsans' === $base_font ) {
-				$basefont = '"Gill Sans", "Gill Sans MT", Calibri, sans-serif';
-			} elseif ( 'helvetica' === $base_font ) {
-				$basefont = '"Helvetica Neue", Helvetica, Arial, sans-serif';
-			} elseif ( 'impact' === $base_font ) {
-				$basefont = 'Impact, Haettenschweiler , Charcoal, "Arial Black", sans serif';
-			} elseif ( 'tahoma' === $base_font ) {
-				$basefont = 'Tahoma, Arial, Helvetica, sans-serif';
-			} elseif ( 'trebuchet' === $base_font ) {
-				$basefont = '"Trebuchet MS", Tahoma, sans-serif';
-			} elseif ( 'lucidagrande' === $base_font ) {
-				$basefont = '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif';
-			} elseif ( 'georgia' === $base_font ) {
-				$basefont = 'Georgia, "Times New Roman", Times, serif';
-			} elseif ( 'times' === $base_font ) {
-				$basefont = 'TimesNewRoman, "Times New Roman", Times, serif';
-			} elseif ( 'bookantiqua' === $base_font ) {
-				$basefont = '"Book Antiqua", Georgia, serif';
-			} elseif ( 'lucidabright' === $base_font ) {
-				$basefont = '"Lucida Bright", Georgia, serif';
-			} elseif ( 'palatino' === $base_font ) {
-				$basefont = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
-			} elseif ( 'courier' === $base_font ) {
-				$basefont = '"Courier New", Courier, monospace';
-			} elseif ( 'lucidatypewritter' === $base_font ) {
-				$basefont = '"Lucida Sans Typewriter", "Lucida Console", monaco, monospace';
-			} elseif ( 'copperplate' === $base_font ) {
-				$basefont = 'Copperplate, "Copperplate Gothic Light", fantasy';
-			} elseif ( 'papyrus' === $base_font ) {
-				$basefont = 'Papyrus, fantasy';
-			} elseif ( 'comicsans' === $base_font ) {
-				$basefont = 'Comic Sans MS, cursive';
+			} elseif ( 'titilliumweb' === $base_font ) {
+				$basefont = '"Titillium Web", sans-serif';
+			} elseif ( 'ubuntu' === $base_font ) {
+				$basefont = '"Ubuntu", sans-serif';
+			} elseif ( 'varela' === $base_font ) {
+				$basefont = '"Varela", sans-serif';
+			} elseif ( 'varelaround' === $base_font ) {
+				$basefont = '"Varela Round", sans-serif';
+			} elseif ( 'worksans' === $base_font ) {
+				$basefont = '"Work Sans", sans-serif';
+			} elseif ( 'alegreya' === $base_font ) {
+				$basefont = '"Alegreya", serif';
+			} elseif ( 'alegreyasc' === $base_font ) {
+				$basefont = '"Alegreya SC", serif';
+			} elseif ( 'arvo' === $base_font ) {
+				$basefont = '"Arvo", serif';
+			} elseif ( 'biothyme' === $base_font ) {
+				$basefont = '"BioRhyme", serif';
+			} elseif ( 'cardo' === $base_font ) {
+				$basefont = '"Cardo", serif';
+			} elseif ( 'cormorant' === $base_font ) {
+				$basefont = '"Cormorant", serif';
+			} elseif ( 'crimsontext' === $base_font ) {
+				$basefont = '"Crimson Text", serif';
+			} elseif ( 'domine' === $base_font ) {
+				$basefont = '"Domine", serif';
+			} elseif ( 'eczar' === $base_font ) {
+				$basefont = '"Eczar", serif';
+			} elseif ( 'frankruhllibre' === $base_font ) {
+				$basefont = '"Frank Ruhl Libre", serif';
+			} elseif ( 'ibmplexserif' === $base_font ) {
+				$basefont = '"IBM Plex Serif", serif';
+			} elseif ( 'inknutantiqua' === $base_font ) {
+				$basefont = '"Inknut Antiqua", serif';
+			} elseif ( 'librebaskerville' === $base_font ) {
+				$basefont = '"Libre Baskerville", serif';
+			} elseif ( 'lora' === $base_font ) {
+				$basefont = '"Lora", serif';
+			} elseif ( 'merriweather' === $base_font ) {
+				$basefont = '"Merriweather", serif';
+			} elseif ( 'neuton' === $base_font ) {
+				$basefont = '"Neuton", serif';
+			} elseif ( 'oldstandardtt' === $base_font ) {
+				$basefont = '"Old Standard TT", serif';
+			} elseif ( 'playfairdisplay' === $base_font ) {
+				$basefont = '"Playfair Display", serif';
+			} elseif ( 'ptserif' === $base_font ) {
+				$basefont = '"PT Serif", serif';
+			} elseif ( 'robotoslab' === $base_font ) {
+				$basefont = '"Roboto Slab", serif';
+			} elseif ( 'rokkitt' === $base_font ) {
+				$basefont = '"Rokkitt", serif';
+			} elseif ( 'sourceserifpro' === $base_font ) {
+				$basefont = '"Source Serif Pro", serif';
+			} elseif ( 'spectral' === $base_font ) {
+				$basefont = '"Spectral", serif';
+			} elseif ( 'vollkorn' === $base_font ) {
+				$basefont = '"Vollkorn", serif';
+			} elseif ( 'vollkornsc' === $base_font ) {
+				$basefont = '"Vollkorn SC", serif';
+			} elseif ( 'abrilfatface' === $base_font ) {
+				$basefont = '"Abril Fatface", cursive';
+			} elseif ( 'alfaslabone' === $base_font ) {
+				$basefont = '"Alfa Slab One", cursive';
+			} elseif ( 'baloo' === $base_font ) {
+				$basefont = '"Baloo", cursive';
+			} elseif ( 'barrio' === $base_font ) {
+				$basefont = '"Barrio", cursive';
+			} elseif ( 'blackopsone' === $base_font ) {
+				$basefont = '"Black Ops One", cursive';
+			} elseif ( 'cabinsketch' === $base_font ) {
+				$basefont = '"Cabin Sketch", cursive';
+			} elseif ( 'chelaone' === $base_font ) {
+				$basefont = '"Chela One", cursive';
+			} elseif ( 'concertone' === $base_font ) {
+				$basefont = '"Concert One", cursive';
+			} elseif ( 'ericaone' === $base_font ) {
+				$basefont = '"Erica One", cursive';
+			} elseif ( 'fascinate' === $base_font ) {
+				$basefont = '"Fascinate", cursive';
+			} elseif ( 'flamenco' === $base_font ) {
+				$basefont = '"Flamenco", cursive';
+			} elseif ( 'frederickathegreat' === $base_font ) {
+				$basefont = '"Fredericka the Great", cursive';
+			} elseif ( 'lilyscriptone' === $base_font ) {
+				$basefont = '"Lily Script One", cursive';
+			} elseif ( 'lobster' === $base_font ) {
+				$basefont = '"Lobster", cursive';
+			} elseif ( 'lobstertwo' === $base_font ) {
+				$basefont = '"Lobster Two", cursive';
+			} elseif ( 'monoton' === $base_font ) {
+				$basefont = '"Monoton", cursive';
+			} elseif ( 'nixieone' === $base_font ) {
+				$basefont = '"Nixie One", cursive';
+			} elseif ( 'oleoscript' === $base_font ) {
+				$basefont = '"Oleo Script", cursive';
+			} elseif ( 'oleoscriptswashcaps' === $base_font ) {
+				$basefont = '"Oleo Script Swash Caps", cursive';
+			} elseif ( 'ranchers' === $base_font ) {
+				$basefont = '"Ranchers", cursive';
+			} elseif ( 'rakkas' === $base_font ) {
+				$basefont = '"Rakkas", cursive';
+			} elseif ( 'specialelite' === $base_font ) {
+				$basefont = '"Special Elite", cursive';
+			} elseif ( 'yatraone' === $base_font ) {
+				$basefont = '"Yatra One", cursive';
+			} elseif ( 'inconsolata' === $base_font ) {
+				$basefont = '"Inconsolata", monospace';
+			} elseif ( 'spacemono' === $base_font ) {
+				$basefont = '"Space Mono", monospace';
 			}
 			$css->add_property( 'font-family', $basefont );
 		endif;
 
 		if ( $default_header_font !== $header_font ) :
 			$css->set_selector( 'h1:not(.site-title),h2,h3,h4,h5,h6' );
-			if ( 'lato' === $header_font ) {
+			if ( 'arialblack' === $header_font ) {
+				$headerfont = 'Arial Black, Gadget, sans-serif';
+			} elseif ( 'impact' === $header_font ) {
+				$headerfont = 'Impact, Charcoal, sans-serif';
+			} elseif ( 'trebuchet' === $header_font ) {
+				$headerfont = 'Trebuchet MS, sans-serif';
+			} elseif ( 'verdana' === $header_font ) {
+				$headerfont = 'Verdana, sans-serif';
+			} elseif ( 'georgia' === $header_font ) {
+				$headerfont = 'Georgia, serif';
+			} elseif ( 'palatino' === $header_font ) {
+				$headerfont = 'Palatino, Palatino Linotype, serif';
+			} elseif ( 'tahoma' === $header_font ) {
+				$headerfont = 'Tahoma, sans-serif';
+			} elseif ( 'times' === $header_font ) {
+				$headerfont = 'Times New Roman, Times, serif';
+			} elseif ( 'comicsans' === $header_font ) {
+				$headerfont = 'Comic Sans MS, cursive';
+			} elseif ( 'copperplate' === $header_font ) {
+				$headerfont = 'Copperplate, "Copperplate Gothic Light", fantasy';
+			} elseif ( 'papyrus' === $header_font ) {
+				$headerfont = 'Papyrus, cursive';
+			} elseif ( 'courier' === $header_font ) {
+				$headerfont = 'Courier, monospace';
+			} elseif ( 'lucidatypewritter' === $header_font ) {
+				$headerfont = '"Lucida Sans Typewriter", monaco, monospace';
+			} elseif ( 'alegreyasans' === $header_font ) {
+				$headerfont = '"Alegreya Sans", sans-serif';
+			} elseif ( 'alegreyasanssc' === $header_font ) {
+				$headerfont = '"Alegreya Sans SC", sans-serif';
+			} elseif ( 'archivo' === $header_font ) {
+				$headerfont = '"Archivo", sans-serif';
+			} elseif ( 'archivonarrow' === $header_font ) {
+				$headerfont = '"Archivo Narrow", sans-serif';
+			} elseif ( 'b612' === $header_font ) {
+				$headerfont = '"B612", sans-serif';
+			} elseif ( 'cabin' === $header_font ) {
+				$headerfont = '"Cabin", sans-serif';
+			} elseif ( 'cairo' === $header_font ) {
+				$headerfont = '"Cairo", sans-serif';
+			} elseif ( 'chivo' === $header_font ) {
+				$headerfont = '"Chivo", sans-serif';
+			} elseif ( 'exo2' === $header_font ) {
+				$headerfont = '"Exo 2", sans-serif';
+			} elseif ( 'fjallaone' === $header_font ) {
+				$headerfont = '"Fjalla One", sans-serif';
+			} elseif ( 'firasans' === $header_font ) {
+				$headerfont = '"Fira Sans", sans-serif';
+			} elseif ( 'ibmplexsans' === $header_font ) {
+				$headerfont = '"IBM Plex Sans", sans-serif';
+			} elseif ( 'karla' === $header_font ) {
+				$headerfont = '"Karla", sans-serif';
+			} elseif ( 'lato' === $header_font ) {
 				$headerfont = '"Lato", sans-serif';
-			} elseif ( 'lora' === $header_font ) {
-				$headerfont = '"Lora", serif';
-			} elseif ( 'merriweather' === $header_font ) {
-				$headerfont = '"Merriweather", serif';
+			} elseif ( 'librefranklin' === $header_font ) {
+				$headerfont = '"Libre Franklin", sans-serif';
+			} elseif ( 'montserrat' === $header_font ) {
+				$headerfont = '"Montserrat", sans-serif';
+			} elseif ( 'montserratalternates' === $header_font ) {
+				$headerfont = '"Montserrat Alternates", sans-serif';
+			} elseif ( 'muli' === $header_font ) {
+				$headerfont = '"Muli", sans-serif';
+			} elseif ( 'notosans' === $header_font ) {
+				$headerfont = '"Noto Sans", sans-serif';
+			} elseif ( 'nunito' === $header_font ) {
+				$headerfont = '"Nunito", sans-serif';
+			} elseif ( 'opensans' === $header_font ) {
+				$headerfont = '"Open Sans", sans-serif';
 			} elseif ( 'oswald' === $header_font ) {
 				$headerfont = '"Oswald", sans-serif';
-			} elseif ( 'playfairdisplay' === $header_font ) {
-				$headerfont = '"Playfair Display", serif';
+			} elseif ( 'oxygen' === $header_font ) {
+				$headerfont = '"Oxygen", sans-serif';
+			} elseif ( 'poppins' === $header_font ) {
+				$headerfont = '"Poppins", sans-serif';
+			} elseif ( 'prozalibre' === $header_font ) {
+				$headerfont = '"Proza Libre", sans-serif';
+			} elseif ( 'ptsans' === $header_font ) {
+				$headerfont = '"PT Sans", sans-serif';
 			} elseif ( 'raleway' === $header_font ) {
 				$headerfont = '"Raleway", sans-serif';
 			} elseif ( 'roboto' === $header_font ) {
 				$headerfont = '"Roboto", sans-serif';
-			} elseif ( 'robotoslab' === $header_font ) {
-				$headerfont = '"Roboto Slab", serif';
-			} elseif ( 'playfairdisplay' === $header_font ) {
-				$headerfont = '"Playfair Display", serif';
+			} elseif ( 'rubik' === $header_font ) {
+				$headerfont = '"Rubik", sans-serif';
 			} elseif ( 'sourcesanspro' === $header_font ) {
 				$headerfont = '"Source Sans Pro", sans-serif';
-			} elseif ( 'century' === $header_font ) {
-				$headerfont = 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
-			} elseif ( 'verdana' === $header_font ) {
-				$headerfont = 'Verdana, Geneva, sans-serif';
-			} elseif ( 'gillsans' === $header_font ) {
-				$headerfont = '"Gill Sans", "Gill Sans MT", Calibri, sans-serif';
-			} elseif ( 'helvetica' === $header_font ) {
-				$headerfont = '"Helvetica Neue", Helvetica, Arial, sans-serif';
-			} elseif ( 'impact' === $header_font ) {
-				$headerfont = 'Impact, Haettenschweiler , Charcoal, "Arial Black", sans serif';
-			} elseif ( 'tahoma' === $header_font ) {
-				$headerfont = 'Tahoma, Arial, Helvetica, sans-serif';
-			} elseif ( 'trebuchet' === $header_font ) {
-				$headerfont = '"Trebuchet MS", Tahoma, sans-serif';
-			} elseif ( 'lucidagrande' === $header_font ) {
-				$headerfont = '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif';
-			} elseif ( 'georgia' === $header_font ) {
-				$headerfont = 'Georgia, "Times New Roman", Times, serif';
-			} elseif ( 'times' === $header_font ) {
-				$headerfont = 'TimesNewRoman, "Times New Roman", Times, serif';
-			} elseif ( 'bookantiqua' === $header_font ) {
-				$headerfont = '"Book Antiqua", Georgia, serif';
-			} elseif ( 'lucidabright' === $header_font ) {
-				$headerfont = '"Lucida Bright", Georgia, serif';
-			} elseif ( 'palatino' === $header_font ) {
-				$headerfont = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
-			} elseif ( 'courier' === $header_font ) {
-				$headerfont = '"Courier New", Courier, monospace';
-			} elseif ( 'lucidatypewritter' === $header_font ) {
-				$headerfont = '"Lucida Sans Typewriter", "Lucida Console", monaco, monospace';
-			} elseif ( 'copperplate' === $header_font ) {
-				$headerfont = 'Copperplate, "Copperplate Gothic Light", fantasy';
-			} elseif ( 'papyrus' === $header_font ) {
-				$headerfont = 'Papyrus, fantasy';
-			} elseif ( 'comicsans' === $header_font ) {
-				$headerfont = 'Comic Sans MS, cursive';
+			} elseif ( 'titilliumweb' === $header_font ) {
+				$headerfont = '"Titillium Web", sans-serif';
+			} elseif ( 'ubuntu' === $header_font ) {
+				$headerfont = '"Ubuntu", sans-serif';
+			} elseif ( 'varela' === $header_font ) {
+				$headerfont = '"Varela", sans-serif';
+			} elseif ( 'varelaround' === $header_font ) {
+				$headerfont = '"Varela Round", sans-serif';
+			} elseif ( 'worksans' === $header_font ) {
+				$headerfont = '"Work Sans", sans-serif';
+			} elseif ( 'alegreya' === $header_font ) {
+				$headerfont = '"Alegreya", serif';
+			} elseif ( 'alegreyasc' === $header_font ) {
+				$headerfont = '"Alegreya SC", serif';
+			} elseif ( 'arvo' === $header_font ) {
+				$headerfont = '"Arvo", serif';
+			} elseif ( 'biothyme' === $header_font ) {
+				$headerfont = '"BioRhyme", serif';
+			} elseif ( 'cardo' === $header_font ) {
+				$headerfont = '"Cardo", serif';
+			} elseif ( 'cormorant' === $header_font ) {
+				$headerfont = '"Cormorant", serif';
+			} elseif ( 'crimsontext' === $header_font ) {
+				$headerfont = '"Crimson Text", serif';
+			} elseif ( 'domine' === $header_font ) {
+				$headerfont = '"Domine", serif';
+			} elseif ( 'eczar' === $header_font ) {
+				$headerfont = '"Eczar", serif';
+			} elseif ( 'frankruhllibre' === $header_font ) {
+				$headerfont = '"Frank Ruhl Libre", serif';
+			} elseif ( 'ibmplexserif' === $header_font ) {
+				$headerfont = '"IBM Plex Serif", serif';
+			} elseif ( 'inknutantiqua' === $header_font ) {
+				$headerfont = '"Inknut Antiqua", serif';
+			} elseif ( 'librebaskerville' === $header_font ) {
+				$headerfont = '"Libre Baskerville", serif';
+			} elseif ( 'lora' === $header_font ) {
+				$headerfont = '"Lora", serif';
+			} elseif ( 'merriweather' === $header_font ) {
+				$headerfont = '"Merriweather", serif';
+			} elseif ( 'neuton' === $header_font ) {
+				$headerfont = '"Neuton", serif';
+			} elseif ( 'oldstandardtt' === $header_font ) {
+				$headerfont = '"Old Standard TT", serif';
+			} elseif ( 'playfairdisplay' === $header_font ) {
+				$headerfont = '"Playfair Display", serif';
+			} elseif ( 'ptserif' === $header_font ) {
+				$headerfont = '"PT Serif", serif';
+			} elseif ( 'robotoslab' === $header_font ) {
+				$headerfont = '"Roboto Slab", serif';
+			} elseif ( 'rokkitt' === $header_font ) {
+				$headerfont = '"Rokkitt", serif';
+			} elseif ( 'sourceserifpro' === $header_font ) {
+				$headerfont = '"Source Serif Pro", serif';
+			} elseif ( 'spectral' === $header_font ) {
+				$headerfont = '"Spectral", serif';
+			} elseif ( 'vollkorn' === $header_font ) {
+				$headerfont = '"Vollkorn", serif';
+			} elseif ( 'vollkornsc' === $header_font ) {
+				$headerfont = '"Vollkorn SC", serif';
+			} elseif ( 'abrilfatface' === $header_font ) {
+				$headerfont = '"Abril Fatface", cursive';
+			} elseif ( 'alfaslabone' === $header_font ) {
+				$headerfont = '"Alfa Slab One", cursive';
+			} elseif ( 'baloo' === $header_font ) {
+				$headerfont = '"Baloo", cursive';
+			} elseif ( 'barrio' === $header_font ) {
+				$headerfont = '"Barrio", cursive';
+			} elseif ( 'blackopsone' === $header_font ) {
+				$headerfont = '"Black Ops One", cursive';
+			} elseif ( 'cabinsketch' === $header_font ) {
+				$headerfont = '"Cabin Sketch", cursive';
+			} elseif ( 'chelaone' === $header_font ) {
+				$headerfont = '"Chela One", cursive';
+			} elseif ( 'concertone' === $header_font ) {
+				$headerfont = '"Concert One", cursive';
+			} elseif ( 'ericaone' === $header_font ) {
+				$headerfont = '"Erica One", cursive';
+			} elseif ( 'fascinate' === $header_font ) {
+				$headerfont = '"Fascinate", cursive';
+			} elseif ( 'flamenco' === $header_font ) {
+				$headerfont = '"Flamenco", cursive';
+			} elseif ( 'frederickathegreat' === $header_font ) {
+				$headerfont = '"Fredericka the Great", cursive';
+			} elseif ( 'lilyscriptone' === $header_font ) {
+				$headerfont = '"Lily Script One", cursive';
+			} elseif ( 'lobster' === $header_font ) {
+				$headerfont = '"Lobster", cursive';
+			} elseif ( 'lobstertwo' === $header_font ) {
+				$headerfont = '"Lobster Two", cursive';
+			} elseif ( 'monoton' === $header_font ) {
+				$headerfont = '"Monoton", cursive';
+			} elseif ( 'nixieone' === $header_font ) {
+				$headerfont = '"Nixie One", cursive';
+			} elseif ( 'oleoscript' === $header_font ) {
+				$headerfont = '"Oleo Script", cursive';
+			} elseif ( 'oleoscriptswashcaps' === $header_font ) {
+				$headerfont = '"Oleo Script Swash Caps", cursive';
+			} elseif ( 'ranchers' === $header_font ) {
+				$headerfont = '"Ranchers", cursive';
+			} elseif ( 'rakkas' === $header_font ) {
+				$headerfont = '"Rakkas", cursive';
+			} elseif ( 'specialelite' === $header_font ) {
+				$headerfont = '"Special Elite", cursive';
+			} elseif ( 'yatraone' === $header_font ) {
+				$headerfont = '"Yatra One", cursive';
+			} elseif ( 'inconsolata' === $header_font ) {
+				$headerfont = '"Inconsolata", monospace';
+			} elseif ( 'spacemono' === $header_font ) {
+				$headerfont = '"Space Mono", monospace';
 			}
 			$css->add_property( 'font-family', $headerfont );
 		endif;
 
 		if ( $default_highlite_font !== $highlite_font ) :
-			if ( 'lato' === $highlite_font ) {
+			if ( 'arialblack' === $highlite_font ) {
+				$highlitefont = 'Arial Black, Gadget, sans-serif';
+			} elseif ( 'impact' === $highlite_font ) {
+				$highlitefont = 'Impact, Charcoal, sans-serif';
+			} elseif ( 'trebuchet' === $highlite_font ) {
+				$highlitefont = 'Trebuchet MS, sans-serif';
+			} elseif ( 'verdana' === $highlite_font ) {
+				$highlitefont = 'Verdana, sans-serif';
+			} elseif ( 'georgia' === $highlite_font ) {
+				$highlitefont = 'Georgia, serif';
+			} elseif ( 'palatino' === $highlite_font ) {
+				$highlitefont = 'Palatino, Palatino Linotype, serif';
+			} elseif ( 'tahoma' === $highlite_font ) {
+				$highlitefont = 'Tahoma, sans-serif';
+			} elseif ( 'times' === $highlite_font ) {
+				$highlitefont = 'Times New Roman, Times, serif';
+			} elseif ( 'comicsans' === $highlite_font ) {
+				$highlitefont = 'Comic Sans MS, cursive';
+			} elseif ( 'copperplate' === $highlite_font ) {
+				$highlitefont = 'Copperplate, "Copperplate Gothic Light", fantasy';
+			} elseif ( 'papyrus' === $highlite_font ) {
+				$highlitefont = 'Papyrus, cursive';
+			} elseif ( 'courier' === $highlite_font ) {
+				$highlitefont = 'Courier, monospace';
+			} elseif ( 'lucidatypewritter' === $highlite_font ) {
+				$highlitefont = '"Lucida Sans Typewriter", monaco, monospace';
+			} elseif ( 'alegreyasans' === $highlite_font ) {
+				$highlitefont = '"Alegreya Sans", sans-serif';
+			} elseif ( 'alegreyasanssc' === $highlite_font ) {
+				$highlitefont = '"Alegreya Sans SC", sans-serif';
+			} elseif ( 'archivo' === $highlite_font ) {
+				$highlitefont = '"Archivo", sans-serif';
+			} elseif ( 'archivonarrow' === $highlite_font ) {
+				$highlitefont = '"Archivo Narrow", sans-serif';
+			} elseif ( 'b612' === $highlite_font ) {
+				$highlitefont = '"B612", sans-serif';
+			} elseif ( 'cabin' === $highlite_font ) {
+				$highlitefont = '"Cabin", sans-serif';
+			} elseif ( 'cairo' === $highlite_font ) {
+				$highlitefont = '"Cairo", sans-serif';
+			} elseif ( 'chivo' === $highlite_font ) {
+				$highlitefont = '"Chivo", sans-serif';
+			} elseif ( 'exo2' === $highlite_font ) {
+				$highlitefont = '"Exo 2", sans-serif';
+			} elseif ( 'fjallaone' === $highlite_font ) {
+				$highlitefont = '"Fjalla One", sans-serif';
+			} elseif ( 'firasans' === $highlite_font ) {
+				$highlitefont = '"Fira Sans", sans-serif';
+			} elseif ( 'ibmplexsans' === $highlite_font ) {
+				$highlitefont = '"IBM Plex Sans", sans-serif';
+			} elseif ( 'karla' === $highlite_font ) {
+				$highlitefont = '"Karla", sans-serif';
+			} elseif ( 'lato' === $highlite_font ) {
 				$highlitefont = '"Lato", sans-serif';
-			} elseif ( 'lora' === $highlite_font ) {
-				$highlitefont = '"Lora", serif';
-			} elseif ( 'merriweather' === $highlite_font ) {
-				$highlitefont = '"Merriweather", serif';
+			} elseif ( 'librefranklin' === $highlite_font ) {
+				$highlitefont = '"Libre Franklin", sans-serif';
+			} elseif ( 'montserrat' === $highlite_font ) {
+				$highlitefont = '"Montserrat", sans-serif';
+			} elseif ( 'montserratalternates' === $highlite_font ) {
+				$highlitefont = '"Montserrat Alternates", sans-serif';
+			} elseif ( 'muli' === $highlite_font ) {
+				$highlitefont = '"Muli", sans-serif';
+			} elseif ( 'notosans' === $highlite_font ) {
+				$highlitefont = '"Noto Sans", sans-serif';
+			} elseif ( 'nunito' === $highlite_font ) {
+				$highlitefont = '"Nunito", sans-serif';
+			} elseif ( 'opensans' === $highlite_font ) {
+				$highlitefont = '"Open Sans", sans-serif';
 			} elseif ( 'oswald' === $highlite_font ) {
 				$highlitefont = '"Oswald", sans-serif';
-			} elseif ( 'playfairdisplay' === $highlite_font ) {
-				$highlitefont = '"Playfair Display", serif';
+			} elseif ( 'oxygen' === $highlite_font ) {
+				$highlitefont = '"Oxygen", sans-serif';
+			} elseif ( 'poppins' === $highlite_font ) {
+				$highlitefont = '"Poppins", sans-serif';
+			} elseif ( 'prozalibre' === $highlite_font ) {
+				$highlitefont = '"Proza Libre", sans-serif';
+			} elseif ( 'ptsans' === $highlite_font ) {
+				$highlitefont = '"PT Sans", sans-serif';
 			} elseif ( 'raleway' === $highlite_font ) {
 				$highlitefont = '"Raleway", sans-serif';
 			} elseif ( 'roboto' === $highlite_font ) {
 				$highlitefont = '"Roboto", sans-serif';
-			} elseif ( 'robotoslab' === $highlite_font ) {
-				$highlitefont = '"Roboto Slab", serif';
-			} elseif ( 'playfairdisplay' === $highlite_font ) {
-				$highlitefont = '"Playfair Display", serif';
+			} elseif ( 'rubik' === $highlite_font ) {
+				$highlitefont = '"Rubik", sans-serif';
 			} elseif ( 'sourcesanspro' === $highlite_font ) {
 				$highlitefont = '"Source Sans Pro", sans-serif';
-			} elseif ( 'century' === $highlite_font ) {
-				$highlitefont = 'Century Gothic, CenturyGothic, AppleGothic, sans-serif';
-			} elseif ( 'verdana' === $highlite_font ) {
-				$highlitefont = 'Verdana, Geneva, sans-serif';
-			} elseif ( 'gillsans' === $highlite_font ) {
-				$highlitefont = '"Gill Sans", "Gill Sans MT", Calibri, sans-serif';
-			} elseif ( 'helvetica' === $highlite_font ) {
-				$highlitefont = '"Helvetica Neue", Helvetica, Arial, sans-serif';
-			} elseif ( 'impact' === $highlite_font ) {
-				$highlitefont = 'Impact, Haettenschweiler , Charcoal, "Arial Black", sans serif';
-			} elseif ( 'tahoma' === $highlite_font ) {
-				$highlitefont = 'Tahoma, Arial, Helvetica, sans-serif';
-			} elseif ( 'trebuchet' === $highlite_font ) {
-				$highlitefont = '"Trebuchet MS", Tahoma, sans-serif';
-			} elseif ( 'lucidagrande' === $highlite_font ) {
-				$highlitefont = '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif';
-			} elseif ( 'georgia' === $highlite_font ) {
-				$highlitefont = 'Georgia, "Times New Roman", Times, serif';
-			} elseif ( 'times' === $highlite_font ) {
-				$highlitefont = 'TimesNewRoman, "Times New Roman", Times, serif';
-			} elseif ( 'bookantiqua' === $highlite_font ) {
-				$highlitefont = '"Book Antiqua", Georgia, serif';
-			} elseif ( 'lucidabright' === $highlite_font ) {
-				$highlitefont = '"Lucida Bright", Georgia, serif';
-			} elseif ( 'palatino' === $highlite_font ) {
-				$highlitefont = 'Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif';
-			} elseif ( 'courier' === $highlite_font ) {
-				$highlitefont = '"Courier New", Courier, monospace';
-			} elseif ( 'lucidatypewritter' === $highlite_font ) {
-				$highlitefont = '"Lucida Sans Typewriter", "Lucida Console", monaco, monospace';
-			} elseif ( 'copperplate' === $highlite_font ) {
-				$highlitefont = 'Copperplate, "Copperplate Gothic Light", fantasy';
-			} elseif ( 'papyrus' === $highlite_font ) {
-				$highlitefont = 'Papyrus, fantasy';
-			} elseif ( 'comicsans' === $highlite_font ) {
-				$highlitefont = 'Comic Sans MS, cursive';
+			} elseif ( 'titilliumweb' === $highlite_font ) {
+				$highlitefont = '"Titillium Web", sans-serif';
+			} elseif ( 'ubuntu' === $highlite_font ) {
+				$highlitefont = '"Ubuntu", sans-serif';
+			} elseif ( 'varela' === $highlite_font ) {
+				$highlitefont = '"Varela", sans-serif';
+			} elseif ( 'varelaround' === $highlite_font ) {
+				$highlitefont = '"Varela Round", sans-serif';
+			} elseif ( 'worksans' === $highlite_font ) {
+				$highlitefont = '"Work Sans", sans-serif';
+			} elseif ( 'alegreya' === $highlite_font ) {
+				$highlitefont = '"Alegreya", serif';
+			} elseif ( 'alegreyasc' === $highlite_font ) {
+				$highlitefont = '"Alegreya SC", serif';
+			} elseif ( 'arvo' === $highlite_font ) {
+				$highlitefont = '"Arvo", serif';
+			} elseif ( 'biothyme' === $highlite_font ) {
+				$highlitefont = '"BioRhyme", serif';
+			} elseif ( 'cardo' === $highlite_font ) {
+				$highlitefont = '"Cardo", serif';
+			} elseif ( 'cormorant' === $highlite_font ) {
+				$highlitefont = '"Cormorant", serif';
+			} elseif ( 'crimsontext' === $highlite_font ) {
+				$highlitefont = '"Crimson Text", serif';
+			} elseif ( 'domine' === $highlite_font ) {
+				$highlitefont = '"Domine", serif';
+			} elseif ( 'eczar' === $highlite_font ) {
+				$highlitefont = '"Eczar", serif';
+			} elseif ( 'frankruhllibre' === $highlite_font ) {
+				$highlitefont = '"Frank Ruhl Libre", serif';
+			} elseif ( 'ibmplexserif' === $highlite_font ) {
+				$highlitefont = '"IBM Plex Serif", serif';
+			} elseif ( 'inknutantiqua' === $highlite_font ) {
+				$highlitefont = '"Inknut Antiqua", serif';
+			} elseif ( 'librebaskerville' === $highlite_font ) {
+				$highlitefont = '"Libre Baskerville", serif';
+			} elseif ( 'lora' === $highlite_font ) {
+				$highlitefont = '"Lora", serif';
+			} elseif ( 'merriweather' === $highlite_font ) {
+				$highlitefont = '"Merriweather", serif';
+			} elseif ( 'neuton' === $highlite_font ) {
+				$highlitefont = '"Neuton", serif';
+			} elseif ( 'oldstandardtt' === $highlite_font ) {
+				$highlitefont = '"Old Standard TT", serif';
+			} elseif ( 'playfairdisplay' === $highlite_font ) {
+				$highlitefont = '"Playfair Display", serif';
+			} elseif ( 'ptserif' === $highlite_font ) {
+				$highlitefont = '"PT Serif", serif';
+			} elseif ( 'robotoslab' === $highlite_font ) {
+				$highlitefont = '"Roboto Slab", serif';
+			} elseif ( 'rokkitt' === $highlite_font ) {
+				$highlitefont = '"Rokkitt", serif';
+			} elseif ( 'sourceserifpro' === $highlite_font ) {
+				$highlitefont = '"Source Serif Pro", serif';
+			} elseif ( 'spectral' === $highlite_font ) {
+				$highlitefont = '"Spectral", serif';
+			} elseif ( 'vollkorn' === $highlite_font ) {
+				$highlitefont = '"Vollkorn", serif';
+			} elseif ( 'vollkornsc' === $highlite_font ) {
+				$highlitefont = '"Vollkorn SC", serif';
+			} elseif ( 'abrilfatface' === $highlite_font ) {
+				$highlitefont = '"Abril Fatface", cursive';
+			} elseif ( 'alfaslabone' === $highlite_font ) {
+				$highlitefont = '"Alfa Slab One", cursive';
+			} elseif ( 'baloo' === $highlite_font ) {
+				$highlitefont = '"Baloo", cursive';
+			} elseif ( 'barrio' === $highlite_font ) {
+				$highlitefont = '"Barrio", cursive';
+			} elseif ( 'blackopsone' === $highlite_font ) {
+				$highlitefont = '"Black Ops One", cursive';
+			} elseif ( 'cabinsketch' === $highlite_font ) {
+				$highlitefont = '"Cabin Sketch", cursive';
+			} elseif ( 'chelaone' === $highlite_font ) {
+				$highlitefont = '"Chela One", cursive';
+			} elseif ( 'concertone' === $highlite_font ) {
+				$highlitefont = '"Concert One", cursive';
+			} elseif ( 'ericaone' === $highlite_font ) {
+				$highlitefont = '"Erica One", cursive';
+			} elseif ( 'fascinate' === $highlite_font ) {
+				$highlitefont = '"Fascinate", cursive';
+			} elseif ( 'flamenco' === $highlite_font ) {
+				$highlitefont = '"Flamenco", cursive';
+			} elseif ( 'frederickathegreat' === $highlite_font ) {
+				$highlitefont = '"Fredericka the Great", cursive';
+			} elseif ( 'lilyscriptone' === $highlite_font ) {
+				$highlitefont = '"Lily Script One", cursive';
+			} elseif ( 'lobster' === $highlite_font ) {
+				$highlitefont = '"Lobster", cursive';
+			} elseif ( 'lobstertwo' === $highlite_font ) {
+				$highlitefont = '"Lobster Two", cursive';
+			} elseif ( 'monoton' === $highlite_font ) {
+				$highlitefont = '"Monoton", cursive';
+			} elseif ( 'nixieone' === $highlite_font ) {
+				$highlitefont = '"Nixie One", cursive';
+			} elseif ( 'oleoscript' === $highlite_font ) {
+				$highlitefont = '"Oleo Script", cursive';
+			} elseif ( 'oleoscriptswashcaps' === $highlite_font ) {
+				$highlitefont = '"Oleo Script Swash Caps", cursive';
+			} elseif ( 'ranchers' === $highlite_font ) {
+				$highlitefont = '"Ranchers", cursive';
+			} elseif ( 'rakkas' === $highlite_font ) {
+				$highlitefont = '"Rakkas", cursive';
+			} elseif ( 'specialelite' === $highlite_font ) {
+				$highlitefont = '"Special Elite", cursive';
+			} elseif ( 'yatraone' === $highlite_font ) {
+				$highlitefont = '"Yatra One", cursive';
+			} elseif ( 'inconsolata' === $highlite_font ) {
+				$highlitefont = '"Inconsolata", monospace';
+			} elseif ( 'spacemono' === $highlite_font ) {
+				$highlitefont = '"Space Mono", monospace';
 			}
 		endif;
 
@@ -579,22 +987,22 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 
 		if ( $default_header_font_weight !== $header_font_weight ) :
 			$css->set_selector( 'h1:not(.site-title), h2, h3, h4, h5, h6' );
-			$css->add_property( 'font-weight', 'bold' );
+			$css->add_property( 'font-weight', $header_font_weight );
 		endif;
 
 		if ( $default_sitetitle_font_weight !== $sitetitle_font_weight ) :
 			$css->set_selector( '.site-title' );
-			$css->add_property( 'font-weight', 'bold' );
+			$css->add_property( 'font-weight', $sitetitle_font_weight );
 		endif;
 
 		if ( $default_sitedescription_font_weight !== $sitedescription_font_weight ) :
 			$css->set_selector( '.site-description' );
-			$css->add_property( 'font-weight', 'bold' );
+			$css->add_property( 'font-weight', $sitedescription_font_weight );
 		endif;
 
 		if ( $default_menu_font_weight !== $menu_font_weight ) :
 			$css->set_selector( '.site-navigation a' );
-			$css->add_property( 'font-weight', 'bold' );
+			$css->add_property( 'font-weight', $menu_font_weight );
 		endif;
 
 		if ( $default_hero_text_primary_font !== $hero_text_primary_font ) :

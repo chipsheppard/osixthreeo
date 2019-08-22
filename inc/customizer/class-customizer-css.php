@@ -28,7 +28,7 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 * @access protected
 		 * @var string
 		 */
-		protected $_selector = '';
+		protected $osixthreeo_selector = '';
 
 		/**
 		 * Stores the final css output with all of its rules for the current selector.
@@ -36,7 +36,7 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 * @access protected
 		 * @var string
 		 */
-		protected $_selector_output = '';
+		protected $osixthreeo_selector_output = '';
 
 		/**
 		 * Stores all of the rules that will be added to the selector
@@ -44,7 +44,7 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 * @access protected
 		 * @var string
 		 */
-		protected $_css = '';
+		protected $osixthreeo_css = '';
 
 		/**
 		 * The string that holds all of the css to output
@@ -52,14 +52,14 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 * @access protected
 		 * @var string
 		 */
-		protected $_output = '';
+		protected $osixthreeo_output = '';
 
 		/**
 		 * Stores media queries
 		 *
 		 * @var null
 		 */
-		protected $_media_query = null;
+		protected $osixthreeo_media_query = null;
 
 		/**
 		 * The string that holds all of the css to output inside of the media query
@@ -67,7 +67,7 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 * @access protected
 		 * @var string
 		 */
-		protected $_media_query_output = '';
+		protected $osixthreeo_media_query_output = '';
 
 		/**
 		 * Sets a selector to the object and changes the current selector to a new one
@@ -80,11 +80,11 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 */
 		public function set_selector( $selector = '' ) {
 			// Render the css in the output string everytime the selector changes.
-			if ( '' !== $this->_selector ) {
+			if ( '' !== $this->osixthreeo_selector ) {
 				$this->add_selector_rules_to_output();
 			}
 
-			$this->_selector = $selector;
+			$this->osixthreeo_selector = $selector;
 			return $this;
 		}
 
@@ -114,7 +114,7 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 				return false;
 			}
 
-			$this->_css .= $property . ':' . $value . ';';
+			$this->osixthreeo_css .= $property . ':' . $value . ';';
 			return $this;
 		}
 
@@ -130,12 +130,12 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 			$this->add_selector_rules_to_output();
 
 			// Add any previous media queries to the output.
-			if ( ! empty( $this->_media_query ) ) {
+			if ( ! empty( $this->osixthreeo_media_query ) ) {
 				$this->add_media_query_rules_to_output();
 			}
 
 			// Set the new media query.
-			$this->_media_query = $value;
+			$this->osixthreeo_media_query = $value;
 			return $this;
 		}
 
@@ -158,11 +158,11 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 * @return $this
 		 */
 		private function add_media_query_rules_to_output() {
-			if ( ! empty( $this->_media_query_output ) ) {
-				$this->_output .= sprintf( '@media %1$s{%2$s}', $this->_media_query, $this->_media_query_output );
+			if ( ! empty( $this->osixthreeo_media_query_output ) ) {
+				$this->osixthreeo_output .= sprintf( '@media %1$s{%2$s}', $this->osixthreeo_media_query, $this->osixthreeo_media_query_output );
 
 				// Reset the media query output string.
-				$this->_media_query_output = '';
+				$this->osixthreeo_media_query_output = '';
 			}
 
 			return $this;
@@ -177,27 +177,27 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 		 * @return $this
 		 */
 		private function add_selector_rules_to_output() {
-			if ( ! empty( $this->_css ) ) {
-				$this->_selector_output = $this->_selector;
-				$selector_output        = sprintf( '%1$s{%2$s}', $this->_selector_output, $this->_css );
+			if ( ! empty( $this->osixthreeo_css ) ) {
+				$this->osixthreeo_selector_output = $this->osixthreeo_selector;
+				$selector_output                  = sprintf( '%1$s{%2$s}', $this->osixthreeo_selector_output, $this->osixthreeo_css );
 
 				// Add our CSS to the output.
-				if ( ! empty( $this->_media_query ) ) {
-					$this->_media_query_output .= $selector_output;
-					$this->_css                 = '';
+				if ( ! empty( $this->osixthreeo_media_query ) ) {
+					$this->osixthreeo_media_query_output .= $selector_output;
+					$this->osixthreeo_css                 = '';
 				} else {
-					$this->_output .= $selector_output;
+					$this->osixthreeo_output .= $selector_output;
 				}
 
 				// Reset the css.
-				$this->_css = '';
+				$this->osixthreeo_css = '';
 			}
 
 			return $this;
 		}
 
 		/**
-		 * Returns the minified css in the $_output variable
+		 * Returns the minified css in the $osixthreeo_output variable
 		 *
 		 * @access public
 		 * @since  1.0
@@ -209,7 +209,7 @@ if ( ! class_exists( 'Customizer_CSS' ) ) {
 			$this->add_selector_rules_to_output();
 
 			// Output minified css.
-			return $this->_output;
+			return $this->osixthreeo_output;
 		}
 
 	}

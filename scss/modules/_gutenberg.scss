@@ -251,6 +251,9 @@
 
 	// A styling expirement... just add a class!
 	&.boxed {
+		position: relative;
+		z-index: 2;
+
 		.wp-block-column {
 			background-color: #ffffff;
 			border-radius: 8px;
@@ -261,11 +264,21 @@
 				padding-right: 1.5rem;
 			}
 		}
-		
+
+		&.up100 {
+			margin-top: -100px;
+		}
+		&.up120 {
+			margin-top: -120px;
+		}
+		&.up140 {
+			margin-top: -140px;
+		}
 		&.up160 {
-			margin-top: -10em;
-			position: relative;
-			z-index: 2;
+			margin-top: -160px;
+		}
+		&.up180 {
+			margin-top: -180px;
 		}
 	}
 

@@ -99,28 +99,32 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		add_theme_support( 'title-tag' );
 
 		// Set the content width in pixels, based on the theme's design and stylesheet.
-		// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound
 		$GLOBALS['content_width'] = apply_filters( 'osixthreeo_content_width', 1024 );
 
 		// Enable support for Post Thumbnails on posts and pages.
 		add_theme_support( 'post-thumbnails' );
 
 		// wp_nav_menu() in 1 location.
-		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'osixthreeo' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => __( 'Primary Menu', 'osixthreeo' ),
+			)
+		);
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
 		 * to output valid HTML5.
 		 */
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		add_theme_support( 'post-formats', array( 'aside', 'status' ) );
 
@@ -132,18 +136,27 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 
 		// Customizer.
 		// -- Custom Logo.
-		add_theme_support( 'custom-logo', array(
-			'height'      => 40,
-			'width'       => 200,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) );
+		add_theme_support(
+			'custom-logo',
+			array(
+				'height'      => 40,
+				'width'       => 200,
+				'flex-height' => true,
+				'flex-width'  => true,
+			)
+		);
 
 		// -- WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'osixthreeo_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support(
+			'custom-background',
+			apply_filters(
+				'osixthreeo_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// -- Enable selective refresh in the customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );

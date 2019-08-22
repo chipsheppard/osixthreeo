@@ -109,8 +109,8 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[header_padding]', function( value ) {
 			value.bind(
 				function( newval ) {
-					$( '.header-wrap .inner-wrap' ).css( 'padding-top', newval + 'px' );
-					$( '.header-wrap .inner-wrap' ).css( 'padding-bottom', newval + 'px' );
+					$( '.header-wrap' ).css( 'padding-top', newval + 'px' );
+					$( '.header-wrap' ).css( 'padding-bottom', newval + 'px' );
 				}
 			);
 		}
@@ -157,6 +157,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'background-color',
 		'transparent'
 	);
+
 	wp.customize(
 		'osixthreeo_settings[nav_link_color]', function( value ) {
 			value.bind(
@@ -282,7 +283,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[header_font_weight]', function( value ) {
 			value.bind( function( newval ) {
 				if ( newval ) {
-					$( 'h1:not(.site-title), h2, h3, h4, h5, h6' ).css( 'font-weight', 'bold' );
+					$( 'h1:not(.site-title), h2, h3, h4, h5, h6' ).css( 'font-weight', newval );
 				} else {
 					$( 'h1:not(.site-title), h2, h3, h4, h5, h6' ).css( 'font-weight', 'normal' );
 				}
@@ -294,7 +295,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[sitetitle_font_weight]', function( value ) {
 			value.bind( function( newval ) {
 				if ( newval ) {
-					$( '.site-title' ).css( 'font-weight', 'bold' );
+					$( '.site-title' ).css( 'font-weight', newval );
 				} else {
 					$( '.site-title' ).css( 'font-weight', 'normal' );
 				}
@@ -306,7 +307,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[sitedescription_font_weight]', function( value ) {
 			value.bind( function( newval ) {
 				if ( newval ) {
-					$( '.site-description' ).css( 'font-weight', 'bold' );
+					$( '.site-description' ).css( 'font-weight', newval );
 				} else {
 					$( '.site-description' ).css( 'font-weight', 'normal' );
 				}
@@ -318,7 +319,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[menu_font_weight]', function( value ) {
 			value.bind( function( newval ) {
 				if ( newval ) {
-					$( '.site-navigation a' ).css( 'font-weight', 'bold' );
+					$( '.site-navigation a' ).css( 'font-weight', newval );
 				} else {
 					$( '.site-navigation a' ).css( 'font-weight', 'normal' );
 				}
