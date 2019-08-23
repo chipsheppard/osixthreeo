@@ -1,23 +1,22 @@
 .entry-meta {
 	color: $color__base-light;
 	display: inline-block;
-	font-size: 80%;
+	color: $color__base-medium;
+
+	a {
+		color: $color__base-medium;
+
+		&:hover {
+			color: currentColor;
+			opacity: .75;
+		}
+	}
 
 	.posted-on,
 	.updated-on,
 	.byline,
 	.comments-link {
-		color: $color__base-medium;
 		display: inline-block;
 		padding-right: .75em;
-
-		a {
-			color: $color__base-medium;
-
-			&:hover {
-				color: currentColor;
-				opacity: .75;
-			}
-		}
 	}
 }

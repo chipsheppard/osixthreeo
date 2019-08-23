@@ -110,6 +110,10 @@ function osixthreeo_display_entry_meta() {
 		$meta_comments       = $osixthreeo_settings['meta_comments'];
 		$meta_updated        = $osixthreeo_settings['meta_updated'];
 
+		if ( true !== $meta_date && true !== $meta_author && true !== $meta_comments && true !== $meta_updated ) {
+			return;
+		}
+
 		echo '<div class="entry-meta">';
 		if ( true === $meta_date ) {
 			osixthreeo_posted_on();

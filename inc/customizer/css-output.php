@@ -118,6 +118,15 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_hero_text_primary_font_size   = $defaults['hero_text_primary_font_size'];
 		$default_hero_text_secondary_font_size = $defaults['hero_text_secondary_font_size'];
 
+		$meta_font                             = $osixthreeo_settings['meta_font'];
+		$meta_font_size                        = $osixthreeo_settings['meta_font_size'];
+		$meta_font_weight                      = $osixthreeo_settings['meta_font_weight'];
+		$meta_color                            = $osixthreeo_settings['meta_color'];
+		$default_meta_font                     = $defaults['meta_font'];
+		$default_meta_font_size                = $defaults['meta_font_size'];
+		$default_meta_font_weight              = $defaults['meta_font_weight'];
+		$default_meta_color                    = $defaults['meta_color'];
+
 		// Initiate our class.
 		$css = new Customizer_CSS();
 
@@ -292,7 +301,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_text_color !== $text_color ) :
 			// Base Color.
 			$css->set_selector(
-				'body,button,input,select,textarea,h1 a,h2 a,h3 a,h4 a,h5 a,h6 a,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.posts-navigation .nav-previous a,.post-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-next a,.post-navigation .nav-next a'
+				'body,button,input,select,textarea,h1 a,h1 a:hover,h2 a,h2 a:hover,h3 a,h4 a,h5 a,h6 a,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.posts-navigation .nav-previous a,.post-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-next a,.post-navigation .nav-next a'
 			);
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['text_color'] ) );
 		endif;
@@ -349,6 +358,14 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_footer_link_color_hover !== $footer_link_color_hover ) :
 			$css->set_selector( '.site-info a:hover' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['footer_link_color_hover'] ) );
+		endif;
+
+		/*
+		 * Post Meta --------------------------------
+		 */
+		if ( $default_meta_color !== $meta_color ) :
+			$css->set_selector( '.entry-meta, .entry-meta a, .entry-footer, .entry-footer a' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['meta_color'] ) );
 		endif;
 
 		/*
@@ -966,7 +983,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 				$css->add_property( 'font-family', $highlitefont );
 			}
 		endif;
-
 		if ( $default_sitedescription_font !== $sitedescription_font ) :
 			$css->set_selector( '.site-description' );
 			if ( 'header' === $sitedescription_font && $default_header_font !== $header_font ) {
@@ -975,7 +991,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 				$css->add_property( 'font-family', $highlitefont );
 			}
 		endif;
-
 		if ( $default_menu_font !== $menu_font ) :
 			$css->set_selector( '.site-navigation' );
 			if ( 'header' === $menu_font && $default_header_font !== $header_font ) {
@@ -985,24 +1000,34 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			}
 		endif;
 
+		if ( $default_meta_font !== $meta_font ) :
+			$css->set_selector( '.entry-meta, , .entry-footer' );
+			if ( 'header' === $meta_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $meta_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+
 		if ( $default_header_font_weight !== $header_font_weight ) :
 			$css->set_selector( 'h1:not(.site-title), h2, h3, h4, h5, h6' );
 			$css->add_property( 'font-weight', $header_font_weight );
 		endif;
-
 		if ( $default_sitetitle_font_weight !== $sitetitle_font_weight ) :
 			$css->set_selector( '.site-title' );
 			$css->add_property( 'font-weight', $sitetitle_font_weight );
 		endif;
-
 		if ( $default_sitedescription_font_weight !== $sitedescription_font_weight ) :
 			$css->set_selector( '.site-description' );
 			$css->add_property( 'font-weight', $sitedescription_font_weight );
 		endif;
-
 		if ( $default_menu_font_weight !== $menu_font_weight ) :
 			$css->set_selector( '.site-navigation a' );
 			$css->add_property( 'font-weight', $menu_font_weight );
+		endif;
+		if ( $default_meta_font_weight !== $meta_font_weight ) :
+			$css->set_selector( '.entry-meta, .entry-footer' );
+			$css->add_property( 'font-weight', $meta_font_weight );
 		endif;
 
 		if ( $default_hero_text_primary_font !== $hero_text_primary_font ) :
@@ -1045,6 +1070,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( absint( $default_hero_text_secondary_font_size ) !== absint( $hero_text_secondary_font_size ) ) :
 			$css->set_selector( '.hero-secondary' );
 			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_secondary_font_size'] . 'px' ) );
+		endif;
+		if ( absint( $default_meta_font_size ) !== absint( $meta_font_size ) ) :
+			$css->set_selector( '.entry-meta, .entry-footer' );
+			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['meta_font_size'] . 'px' ) );
 		endif;
 
 		// Allow us to hook CSS into our output - where we would hook our "Pro" features?

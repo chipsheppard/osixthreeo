@@ -610,15 +610,38 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 6, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/elements/_headings.scss */
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+h1 a,
+h1 a:hover, h2 a,
+h2 a:hover, h3 a,
+h3 a:hover, h4 a,
+h4 a:hover, h5 a,
+h5 a:hover, h6 a,
+h6 a:hover {
   border-bottom: 1px solid transparent;
   color: #222222;
   display: inline-block;
 }
 
-/* line 11, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/elements/_headings.scss */
-h1 a:hover, h1 a:focus, h1 a:active, h2 a:hover, h2 a:focus, h2 a:active, h3 a:hover, h3 a:focus, h3 a:active, h4 a:hover, h4 a:focus, h4 a:active, h5 a:hover, h5 a:focus, h5 a:active, h6 a:hover, h6 a:focus, h6 a:active {
-  opacity: 0.8;
+/* line 12, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/elements/_headings.scss */
+h1 a:hover, h1 a:focus, h1 a:active,
+h1 a:hover:hover,
+h1 a:hover:focus,
+h1 a:hover:active, h2 a:hover, h2 a:focus, h2 a:active,
+h2 a:hover:hover,
+h2 a:hover:focus,
+h2 a:hover:active, h3 a:hover, h3 a:focus, h3 a:active,
+h3 a:hover:hover,
+h3 a:hover:focus,
+h3 a:hover:active, h4 a:hover, h4 a:focus, h4 a:active,
+h4 a:hover:hover,
+h4 a:hover:focus,
+h4 a:hover:active, h5 a:hover, h5 a:focus, h5 a:active,
+h5 a:hover:hover,
+h5 a:hover:focus,
+h5 a:hover:active, h6 a:hover, h6 a:focus, h6 a:active,
+h6 a:hover:hover,
+h6 a:hover:focus,
+h6 a:hover:active {
   border-bottom: 1px solid currentColor;
 }
 
@@ -3525,59 +3548,62 @@ body.error404 .page-title {
 .entry-meta {
   color: #c0c0c0;
   display: inline-block;
-  font-size: 80%;
+  color: #808080;
 }
 
 /* line 6, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-meta.scss */
+.entry-meta a {
+  color: #808080;
+}
+
+/* line 9, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-meta.scss */
+.entry-meta a:hover {
+  color: currentColor;
+  opacity: .75;
+}
+
+/* line 15, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-meta.scss */
 .entry-meta .posted-on,
 .entry-meta .updated-on,
 .entry-meta .byline,
 .entry-meta .comments-link {
-  color: #808080;
   display: inline-block;
   padding-right: .75em;
-}
-
-/* line 14, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-meta.scss */
-.entry-meta .posted-on a,
-.entry-meta .updated-on a,
-.entry-meta .byline a,
-.entry-meta .comments-link a {
-  color: #808080;
-}
-
-/* line 17, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-meta.scss */
-.entry-meta .posted-on a:hover,
-.entry-meta .updated-on a:hover,
-.entry-meta .byline a:hover,
-.entry-meta .comments-link a:hover {
-  color: currentColor;
-  opacity: .75;
 }
 
 /* line 1, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
 .entry-footer {
   border-top: 1px dashed #dcdcdc;
   border-bottom: 1px dashed #dcdcdc;
+  color: #808080;
   padding: .5em 0;
-  font-size: 80%;
 }
 
-/* line 8, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+/* line 7, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+.entry-footer a {
+  color: #808080;
+}
+
+/* line 10, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+.entry-footer a:hover {
+  color: currentColor;
+  opacity: .75;
+}
+
+/* line 17, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
 .cat-links,
 .tags-links {
-  color: #c0c0c0;
   display: inline;
   margin-right: .75em;
   padding: 5px 10px 5px 0;
 }
 
-/* line 16, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+/* line 24, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
 .edit-link {
   float: right;
 }
 
-/* line 19, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
+/* line 26, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entry-footer.scss */
 .edit-link a {
   display: inline-block;
 }

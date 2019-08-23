@@ -99,7 +99,13 @@ if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
 	 */
 	function osixthreeo_display_entry_footer() {
 
-		if ( is_single() && 'post' === get_post_type() ) :
+		$osixthreeo_settings = wp_parse_args(
+			get_option( 'osixthreeo_settings', array() ),
+			osixthreeo_get_defaults()
+		);
+		$meta_footer = $osixthreeo_settings['meta_footer'];
+
+		if ( true === $meta_footer && is_single() && 'post' === get_post_type() ) :
 			echo '<footer class="entry-footer">';
 
 			// Hide this on pages.
