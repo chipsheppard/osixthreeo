@@ -844,7 +844,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				$wp_customize,
 				'osixthreeo_settings[meta_color]',
 				array(
-					'label'    => esc_html__( 'Background', 'osixthreeo' ),
+					'label'    => esc_html__( 'Text & links', 'osixthreeo' ),
 					'section'  => 'colors',
 					'settings' => 'osixthreeo_settings[meta_color]',
 					'priority' => 81,
@@ -881,7 +881,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_typography',
 					'priority' => 5,
-					'label'  => esc_html__( '3 Fonts', 'osixthreeo' ),
+					'label'    => esc_html__( '3 Fonts', 'osixthreeo' ),
 				)
 			)
 		);
@@ -998,10 +998,10 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'raleway'              => esc_html__( 'Raleway', 'osixthreeo' ),
 					'roboto'               => esc_html__( 'Roboto', 'osixthreeo' ),
 					'rubik'                => esc_html__( 'Rubik', 'osixthreeo' ),
-					'robotoslab'           => esc_html__( 'Roboto Slab','osixthreeo' ),
+					'robotoslab'           => esc_html__( 'Roboto Slab', 'osixthreeo' ),
 					'rokkitt'              => esc_html__( 'Rokkitt', 'osixthreeo' ),
 					'ranchers'             => esc_html__( 'Ranchers', 'osixthreeo' ),
-					'rakkas'               => esc_html__( 'Rakkas',  'osixthreeo' ),
+					'rakkas'               => esc_html__( 'Rakkas', 'osixthreeo' ),
 
 					'sourcesanspro'        => esc_html__( 'Source Sans Pro', 'osixthreeo' ),
 					'sourceserifpro'       => esc_html__( 'Source Serif Pro', 'osixthreeo' ),
@@ -1038,7 +1038,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'type'     => 'select',
 				'label'    => esc_html__( 'Header font', 'osixthreeo' ),
 				'section'  => 'osixthreeo_typography',
-				'optgroup'          => true,
 				'choices'  => array(
 					''                     => esc_html__( 'Arial - default', 'osixthreeo' ),
 					'georgia'              => esc_html__( 'Georgia', 'osixthreeo' ),
@@ -1122,10 +1121,10 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'raleway'              => esc_html__( 'Raleway', 'osixthreeo' ),
 					'roboto'               => esc_html__( 'Roboto', 'osixthreeo' ),
 					'rubik'                => esc_html__( 'Rubik', 'osixthreeo' ),
-					'robotoslab'           => esc_html__( 'Roboto Slab','osixthreeo' ),
+					'robotoslab'           => esc_html__( 'Roboto Slab', 'osixthreeo' ),
 					'rokkitt'              => esc_html__( 'Rokkitt', 'osixthreeo' ),
 					'ranchers'             => esc_html__( 'Ranchers', 'osixthreeo' ),
-					'rakkas'               => esc_html__( 'Rakkas',  'osixthreeo' ),
+					'rakkas'               => esc_html__( 'Rakkas', 'osixthreeo' ),
 					'sourcesanspro'        => esc_html__( 'Source Sans Pro', 'osixthreeo' ),
 					'sourceserifpro'       => esc_html__( 'Source Serif Pro', 'osixthreeo' ),
 					'spectral'             => esc_html__( 'Spectral', 'osixthreeo' ),
@@ -1243,10 +1242,10 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'raleway'              => esc_html__( 'Raleway', 'osixthreeo' ),
 					'roboto'               => esc_html__( 'Roboto', 'osixthreeo' ),
 					'rubik'                => esc_html__( 'Rubik', 'osixthreeo' ),
-					'robotoslab'           => esc_html__( 'Roboto Slab','osixthreeo' ),
+					'robotoslab'           => esc_html__( 'Roboto Slab', 'osixthreeo' ),
 					'rokkitt'              => esc_html__( 'Rokkitt', 'osixthreeo' ),
 					'ranchers'             => esc_html__( 'Ranchers', 'osixthreeo' ),
-					'rakkas'               => esc_html__( 'Rakkas',  'osixthreeo' ),
+					'rakkas'               => esc_html__( 'Rakkas', 'osixthreeo' ),
 					'sourcesanspro'        => esc_html__( 'Source Sans Pro', 'osixthreeo' ),
 					'sourceserifpro'       => esc_html__( 'Source Serif Pro', 'osixthreeo' ),
 					'spectral'             => esc_html__( 'Spectral', 'osixthreeo' ),
@@ -1299,7 +1298,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_typography',
 					'priority' => 55,
-					'label'  => esc_html__( 'Site Title', 'osixthreeo' ),
+					'label'    => esc_html__( 'Site Title', 'osixthreeo' ),
 				)
 			)
 		);
@@ -1316,16 +1315,16 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		$wp_customize->add_control(
 			'osixthreeo_settings[sitetitle_font]',
 			array(
-				'type'        => 'select',
-				'label'       => esc_html__( 'Font family', 'osixthreeo' ),
-				'section'     => 'osixthreeo_typography',
-				'choices'     => array(
+				'type'     => 'select',
+				'label'    => esc_html__( 'Font family', 'osixthreeo' ),
+				'section'  => 'osixthreeo_typography',
+				'choices'  => array(
 					''         => esc_html__( 'Base font', 'osixthreeo' ),
 					'header'   => esc_html__( 'Header font', 'osixthreeo' ),
 					'highlite' => esc_html__( 'Highlite font', 'osixthreeo' ),
 				),
-				'settings'    => 'osixthreeo_settings[sitetitle_font]',
-				'priority'    => 60,
+				'settings' => 'osixthreeo_settings[sitetitle_font]',
+				'priority' => 60,
 			)
 		);
 
@@ -1375,7 +1374,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'Font weight', 'osixthreeo' ),
 				'section'  => 'osixthreeo_typography',
 				'choices'  => array(
-					'' => esc_html__( 'Default', 'osixthreeo' ),
+					''    => esc_html__( 'Default', 'osixthreeo' ),
 					'100' => esc_html__( 'Thin: 100', 'osixthreeo' ),
 					'200' => esc_html__( 'Light: 200', 'osixthreeo' ),
 					'300' => esc_html__( 'Book: 300', 'osixthreeo' ),
@@ -1405,7 +1404,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_typography',
 					'priority' => 67,
-					'label'  => esc_html__( 'Site Description', 'osixthreeo' ),
+					'label'    => esc_html__( 'Site Description', 'osixthreeo' ),
 				)
 			)
 		);
@@ -1422,16 +1421,16 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		$wp_customize->add_control(
 			'osixthreeo_settings[sitedescription_font]',
 			array(
-				'type'        => 'select',
-				'label'       => esc_html__( 'Font family', 'osixthreeo' ),
-				'section'     => 'osixthreeo_typography',
-				'choices'     => array(
+				'type'     => 'select',
+				'label'    => esc_html__( 'Font family', 'osixthreeo' ),
+				'section'  => 'osixthreeo_typography',
+				'choices'  => array(
 					''         => esc_html__( 'Base font', 'osixthreeo' ),
 					'header'   => esc_html__( 'Header font', 'osixthreeo' ),
 					'highlite' => esc_html__( 'Highlite font', 'osixthreeo' ),
 				),
-				'settings'    => 'osixthreeo_settings[sitedescription_font]',
-				'priority'    => 70,
+				'settings' => 'osixthreeo_settings[sitedescription_font]',
+				'priority' => 70,
 			)
 		);
 
@@ -1481,7 +1480,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'Font weight', 'osixthreeo' ),
 				'section'  => 'osixthreeo_typography',
 				'choices'  => array(
-					'' => esc_html__( 'Default', 'osixthreeo' ),
+					''    => esc_html__( 'Default', 'osixthreeo' ),
 					'100' => esc_html__( 'Thin: 100', 'osixthreeo' ),
 					'200' => esc_html__( 'Light: 200', 'osixthreeo' ),
 					'300' => esc_html__( 'Book: 300', 'osixthreeo' ),
@@ -1511,7 +1510,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_typography',
 					'priority' => 77,
-					'label'  => esc_html__( 'Menu', 'osixthreeo' ),
+					'label'    => esc_html__( 'Menu', 'osixthreeo' ),
 				)
 			)
 		);
@@ -1528,16 +1527,16 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		$wp_customize->add_control(
 			'osixthreeo_settings[menu_font]',
 			array(
-				'type'        => 'select',
-				'label'       => esc_html__( 'Font family', 'osixthreeo' ),
-				'section'     => 'osixthreeo_typography',
-				'choices'     => array(
+				'type'     => 'select',
+				'label'    => esc_html__( 'Font family', 'osixthreeo' ),
+				'section'  => 'osixthreeo_typography',
+				'choices'  => array(
 					''         => esc_html__( 'Base font', 'osixthreeo' ),
 					'header'   => esc_html__( 'Header font', 'osixthreeo' ),
 					'highlite' => esc_html__( 'Highlite font', 'osixthreeo' ),
 				),
-				'settings'    => 'osixthreeo_settings[menu_font]',
-				'priority'    => 80,
+				'settings' => 'osixthreeo_settings[menu_font]',
+				'priority' => 80,
 			)
 		);
 
@@ -1587,7 +1586,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'Font weight', 'osixthreeo' ),
 				'section'  => 'osixthreeo_typography',
 				'choices'  => array(
-					'' => esc_html__( 'Default', 'osixthreeo' ),
+					''    => esc_html__( 'Default', 'osixthreeo' ),
 					'100' => esc_html__( 'Thin: 100', 'osixthreeo' ),
 					'200' => esc_html__( 'Light: 200', 'osixthreeo' ),
 					'300' => esc_html__( 'Book: 300', 'osixthreeo' ),
@@ -1615,10 +1614,10 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				$wp_customize,
 				'content-typography-message',
 				array(
-					'section'  => 'osixthreeo_typography',
-					'priority' => 90,
-					'label'  => esc_html__( 'Content', 'osixthreeo' ),
-					'description' => esc_html__( 'Uses base font' ),
+					'section'     => 'osixthreeo_typography',
+					'priority'    => 90,
+					'label'       => esc_html__( 'Content', 'osixthreeo' ),
+					'description' => esc_html__( 'Uses base font', 'osixthreeo' ),
 				)
 			)
 		);
@@ -1664,10 +1663,10 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				$wp_customize,
 				'header-typography-message',
 				array(
-					'section'  => 'osixthreeo_typography',
-					'priority' => 100,
-					'label'  => esc_html__( 'Post/Page Titles & Headings', 'osixthreeo' ),
-					'description' => esc_html__( 'Uses header font' ),
+					'section'     => 'osixthreeo_typography',
+					'priority'    => 100,
+					'label'       => esc_html__( 'Post/Page Titles & Headings', 'osixthreeo' ),
+					'description' => esc_html__( 'Uses header font', 'osixthreeo' ),
 				)
 			)
 		);
@@ -1688,7 +1687,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'Font weight', 'osixthreeo' ),
 				'section'  => 'osixthreeo_typography',
 				'choices'  => array(
-					'' => esc_html__( 'Default', 'osixthreeo' ),
+					''    => esc_html__( 'Default', 'osixthreeo' ),
 					'100' => esc_html__( 'Thin: 100', 'osixthreeo' ),
 					'200' => esc_html__( 'Light: 200', 'osixthreeo' ),
 					'300' => esc_html__( 'Book: 300', 'osixthreeo' ),
@@ -1723,7 +1722,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_typography',
 					'priority' => 110,
-					'label'  => esc_html__( 'Post meta', 'osixthreeo' ),
+					'label'    => esc_html__( 'Post meta', 'osixthreeo' ),
 				)
 			)
 		);
@@ -1740,16 +1739,16 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		$wp_customize->add_control(
 			'osixthreeo_settings[meta_font]',
 			array(
-				'type'        => 'select',
-				'label'       => esc_html__( 'Font family', 'osixthreeo' ),
-				'section'     => 'osixthreeo_typography',
-				'choices'     => array(
+				'type'     => 'select',
+				'label'    => esc_html__( 'Font family', 'osixthreeo' ),
+				'section'  => 'osixthreeo_typography',
+				'choices'  => array(
 					''         => esc_html__( 'Base font', 'osixthreeo' ),
 					'header'   => esc_html__( 'Header font', 'osixthreeo' ),
 					'highlite' => esc_html__( 'Highlite font', 'osixthreeo' ),
 				),
-				'settings'    => 'osixthreeo_settings[meta_font]',
-				'priority'    => 111,
+				'settings' => 'osixthreeo_settings[meta_font]',
+				'priority' => 111,
 			)
 		);
 
@@ -1799,7 +1798,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'Font weight', 'osixthreeo' ),
 				'section'  => 'osixthreeo_typography',
 				'choices'  => array(
-					'' => esc_html__( 'Default', 'osixthreeo' ),
+					''    => esc_html__( 'Default', 'osixthreeo' ),
 					'100' => esc_html__( 'Thin: 100', 'osixthreeo' ),
 					'200' => esc_html__( 'Light: 200', 'osixthreeo' ),
 					'300' => esc_html__( 'Book: 300', 'osixthreeo' ),
@@ -1845,7 +1844,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_themeops',
 					'priority' => 10,
-					'label'  => esc_html__( 'Post meta', 'osixthreeo' ),
+					'label'    => esc_html__( 'Post meta', 'osixthreeo' ),
 				)
 			)
 		);
@@ -1862,12 +1861,12 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		$wp_customize->add_control(
 			'osixthreeo_settings[meta_footer]',
 			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Show footer meta', 'osixthreeo' ),
-				'description'    => esc_html__( 'Categories/Tags', 'osixthreeo' ),
-				'section'  => 'osixthreeo_themeops',
-				'settings' => 'osixthreeo_settings[meta_footer]',
-				'priority' => 20,
+				'type'        => 'checkbox',
+				'label'       => esc_html__( 'Show footer meta', 'osixthreeo' ),
+				'description' => esc_html__( 'Categories/Tags', 'osixthreeo' ),
+				'section'     => 'osixthreeo_themeops',
+				'settings'    => 'osixthreeo_settings[meta_footer]',
+				'priority'    => 20,
 			)
 		);
 
@@ -2169,7 +2168,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_ch_height',
 					'priority' => 5,
-					'label'  => esc_html__( 'Homepage Header Height', 'osixthreeo' ),
+					'label'    => esc_html__( 'Homepage Header Height', 'osixthreeo' ),
 				)
 			)
 		);
@@ -2212,7 +2211,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'osixthreeo_settings[home_header_height]',
 				array(
 					'type'        => 'range',
-					'label' => esc_html__( 'Desktop & large screens', 'osixthreeo' ),
+					'label'       => esc_html__( 'Desktop & large screens', 'osixthreeo' ),
 					'section'     => 'osixthreeo_ch_height',
 					'settings'    => 'osixthreeo_settings[home_header_height]',
 					'input_attrs' => array(
@@ -2239,7 +2238,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'osixthreeo_settings[home_mobile_header_height]',
 				array(
 					'type'        => 'range',
-					'label' => esc_html__( 'Mobile & small screens', 'osixthreeo' ),
+					'label'       => esc_html__( 'Mobile & small screens', 'osixthreeo' ),
 					'section'     => 'osixthreeo_ch_height',
 					'settings'    => 'osixthreeo_settings[home_mobile_header_height]',
 					'input_attrs' => array(
@@ -2283,7 +2282,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_ch_height',
 					'priority' => 35,
-					'label'  => esc_html__( 'Subpage header height', 'osixthreeo' ),
+					'label'    => esc_html__( 'Subpage header height', 'osixthreeo' ),
 				)
 			)
 		);
@@ -2330,7 +2329,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'osixthreeo_settings[subpage_mobile_header_height]',
 				array(
 					'type'        => 'range',
-					'label' => esc_html__( 'Mobile & small screens', 'osixthreeo' ),
+					'label'       => esc_html__( 'Mobile & small screens', 'osixthreeo' ),
 					'section'     => 'osixthreeo_ch_height',
 					'settings'    => 'osixthreeo_settings[subpage_mobile_header_height]',
 					'input_attrs' => array(
@@ -2369,7 +2368,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_ch_text',
 					'priority' => 5,
-					'label'  => esc_html__( 'Primary text', 'osixthreeo' ),
+					'label'    => esc_html__( 'Primary text', 'osixthreeo' ),
 				)
 			)
 		);
@@ -2387,7 +2386,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[hero_text_primary]',
 			array(
 				'type'     => 'textarea',
-				// 'label'    = > esc_html__( 'Primary text', 'osixthreeo' ),
 				'section'  => 'osixthreeo_ch_text',
 				'priority' => 10,
 			)
@@ -2484,7 +2482,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_ch_text',
 					'priority' => 25,
-					'label'  => esc_html__( 'Secondary text', 'osixthreeo' ),
+					'label'    => esc_html__( 'Secondary text', 'osixthreeo' ),
 				)
 			)
 		);
@@ -2502,7 +2500,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[hero_text_secondary]',
 			array(
 				'type'     => 'textarea',
-				// 'label'    = > esc_html__( 'Secondary text', 'osixthreeo' ),
 				'section'  => 'osixthreeo_ch_text',
 				'priority' => 30,
 			)

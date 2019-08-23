@@ -147,16 +147,10 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		);
 
 		// -- WordPress core custom background feature.
-		add_theme_support(
-			'custom-background',
-			apply_filters(
-				'osixthreeo_custom_background_args',
-				array(
-					'default-color' => 'ffffff',
-					'default-image' => '',
-				)
-			)
-		);
+		add_theme_support( 'custom-background', apply_filters( 'osixthreeo_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
 
 		// -- Enable selective refresh in the customizer.
 		add_theme_support( 'customize-selective-refresh-widgets' );

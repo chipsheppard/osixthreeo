@@ -24,15 +24,15 @@ function osixthreeo_theme_fonts_url() {
 
 	$gweights = ':100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i';
 
-	$gf1 = 'Alegreya+Sans' . $gweights;
-	$gf2 = 'Alegreya+Sans+SC' . $gweights;
-	$gf3 = 'Archivo' . $gweights;
-	$gf4 = 'Archivo+Narrow' . $gweights;
-	$gf5 = 'B612' . $gweights;
-	$gf6 = 'Cabin' . $gweights;
-	$gf7 = 'Cairo' . $gweights;
-	$gf8 = 'Chivo' . $gweights;
-	$gf9 = 'Exo 2' . $gweights;
+	$gf1  = 'Alegreya+Sans' . $gweights;
+	$gf2  = 'Alegreya+Sans+SC' . $gweights;
+	$gf3  = 'Archivo' . $gweights;
+	$gf4  = 'Archivo+Narrow' . $gweights;
+	$gf5  = 'B612' . $gweights;
+	$gf6  = 'Cabin' . $gweights;
+	$gf7  = 'Cairo' . $gweights;
+	$gf8  = 'Chivo' . $gweights;
+	$gf9  = 'Exo 2' . $gweights;
 	$gf10 = 'Fjalla+One' . $gweights;
 	$gf11 = 'Fira+Sans' . $gweights;
 	$gf12 = 'IBM+Plex+Sans' . $gweights;

@@ -117,7 +117,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_menu_font_size                = $defaults['menu_font_size'];
 		$default_hero_text_primary_font_size   = $defaults['hero_text_primary_font_size'];
 		$default_hero_text_secondary_font_size = $defaults['hero_text_secondary_font_size'];
-
 		$meta_font                             = $osixthreeo_settings['meta_font'];
 		$meta_font_size                        = $osixthreeo_settings['meta_font_size'];
 		$meta_font_weight                      = $osixthreeo_settings['meta_font_weight'];
