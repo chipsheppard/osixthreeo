@@ -58,6 +58,7 @@ if ( ! function_exists( 'osixthreeo_display_customheader' ) ) {
 		echo '</div>';
 	}
 }
+add_action( 'osixthreeo_header_after_wrap', 'osixthreeo_display_customheader' );
 
 
 if ( ! function_exists( 'osixthreeo_customheader_image_url' ) ) {

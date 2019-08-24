@@ -31,6 +31,7 @@
 
 	<?php tha_header_before(); ?>
 	<header id="masthead" class="site-header">
+		<?php osixthreeo_header_before_wrap(); ?>
 		<div class="header-wrap">
 			<div class="inner-wrap">
 				<?php
@@ -39,12 +40,7 @@
 				?>
 			</div>
 		</div>
-		<?php
-		/**
-		 * Write the Custom Header markup
-		 */
-		osixthreeo_display_customheader();
-		?>
+		<?php osixthreeo_header_after_wrap(); ?>
 	</header>
 	<?php tha_header_after(); ?>
 
