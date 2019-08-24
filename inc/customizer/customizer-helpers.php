@@ -14,13 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Controls.
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-alpha-color-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-radio-image-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-range-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-content-area.php';
 
 // Color Palette.
@@ -38,8 +38,8 @@ if ( ! function_exists( 'osixthreeo_get_default_color_palettes' ) ) {
 			'#b22222', // FireBrick.
 			'#ff8c00', // DarkOrange.
 			'#9acd32', // Yellowgreen.
-			'#0040a0',
-			'#4b0082', // Indigo.
+			'#3220c5', // ??.
+			'#9932cc', // DarkOrchid.
 		);
 		return apply_filters( 'osixthreeo_default_color_palettes', $palettes );
 	}

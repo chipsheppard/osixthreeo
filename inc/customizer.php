@@ -21,8 +21,7 @@ add_action( 'customize_register', 'osixthreeo_set_customizer_helpers', 1 );
  * @since 1.0
  */
 function osixthreeo_set_customizer_helpers() {
-	// Load helper customizer functions.
-	// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
+	// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 	require_once trailingslashit( get_template_directory() ) . 'inc/customizer/customizer-helpers.php';
 }
 
@@ -37,7 +36,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 
 		$defaults = osixthreeo_get_defaults();
 
-		// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
+		// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 		require_once trailingslashit( get_template_directory() ) . 'inc/customizer/customizer-helpers.php';
 
 		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';

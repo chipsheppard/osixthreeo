@@ -17,21 +17,88 @@ define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Sheppco' );
 define( 'OSIXTHREEO_AUTHOR_LINK', 'https://sheppco.com' );
 
-// Load all the things.
-require get_template_directory() . '/inc/tha-theme-hooks.php';
-require get_template_directory() . '/inc/wordpress-cleanup.php';
-require get_template_directory() . '/inc/widgets.php';
-require get_template_directory() . '/inc/entry-meta.php';
-require get_template_directory() . '/inc/theme-functions.php';
-require get_template_directory() . '/inc/loop.php';
-require get_template_directory() . '/inc/class-fi-checkbox.php';
-require get_template_directory() . '/inc/custom-header.php';
-require get_template_directory() . '/inc/customizer.php';
-require get_template_directory() . '/inc/fonts.php';
-require get_template_directory() . '/inc/customizer/defaults.php';
-require get_template_directory() . '/inc/customizer/customizer-functions.php';
-require get_template_directory() . '/inc/customizer/class-customizer-css.php';
-require get_template_directory() . '/inc/customizer/css-output.php';
+if ( ! function_exists( 'osixthreeo_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
+	 */
+	function osixthreeo_setup() {
+
+		// Make theme available for translation.
+		load_theme_textdomain( 'osixthreeo', get_template_directory() . '/languages' );
+
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
+
+		// Let WordPress manage the document title.
+		add_theme_support( 'title-tag' );
+
+		// Enable support for Post Thumbnails on posts and pages.
+		add_theme_support( 'post-thumbnails' );
+
+		// wp_nav_menu() in 1 location.
+		register_nav_menus( array(
+			'primary' => __( 'Primary Menu', 'osixthreeo' ),
+		) );
+
+		// Switch default core markup to output valid HTML5.
+		add_theme_support( 'html5', array(
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		) );
+
+		// -- WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( 'osixthreeo_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		// Custom Logo.
+		add_theme_support( 'custom-logo', array(
+			'height'      => 40,
+			'width'       => 200,
+			'flex-height' => true,
+			'flex-width'  => true,
+		) );
+
+		// Theme styles for the visual editor.
+		add_theme_support( 'editor-styles' );
+		add_editor_style( 'assets/css/editor-style.css' );
+
+		// Body open hook.
+		add_theme_support( 'body-open' );
+
+		add_theme_support( 'post-formats', array( 'aside', 'status' ) );
+
+		// Gutenberg.
+		// -- Responsive embeds.
+		add_theme_support( 'responsive-embeds' );
+		// -- Wide Images.
+		add_theme_support( 'align-wide' );
+	}
+endif;
+add_action( 'after_setup_theme', 'osixthreeo_setup' );
+
+/**
+ * Set the content width in pixels, based on the theme's design and stylesheet.
+ *
+ * Priority 0 to make it available to lower priority callbacks.
+ *
+ * @global int $content_width
+ */
+function osixthreeo_content_width() {
+	// This variable is intended to be overruled from themes.
+	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	$GLOBALS['content_width'] = apply_filters( 'osixthreeo_content_width', 640 );
+}
+add_action( 'after_setup_theme', 'osixthreeo_content_width', 0 );
+
 
 /**
  * Enqueue scripts and styles.
@@ -64,93 +131,29 @@ function osixthreeo_gutenberg_editor_styles() {
 add_action( 'enqueue_block_editor_assets', 'osixthreeo_gutenberg_editor_styles' );
 
 
+// Load all the things.
+require get_template_directory() . '/inc/tha-theme-hooks.php';
+require get_template_directory() . '/inc/wordpress-cleanup.php';
+require get_template_directory() . '/inc/widgets.php';
+require get_template_directory() . '/inc/entry-meta.php';
+require get_template_directory() . '/inc/theme-functions.php';
+require get_template_directory() . '/inc/loop.php';
+require get_template_directory() . '/inc/class-fi-checkbox.php';
+require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/fonts.php';
+require get_template_directory() . '/inc/customizer/defaults.php';
+require get_template_directory() . '/inc/customizer/customizer-functions.php';
+require get_template_directory() . '/inc/customizer/class-customizer-css.php';
+require get_template_directory() . '/inc/customizer/css-output.php';
 
-if ( ! function_exists( 'osixthreeo_setup' ) ) :
-	/**
-	 * Sets up theme defaults and registers support for various WordPress features.
-	 */
-	function osixthreeo_setup() {
-
-		// Make theme available for translation.
-		load_theme_textdomain( 'osixthreeo', get_template_directory() . '/languages' );
-
-		// Theme styles for the visual editor.
-		add_theme_support( 'editor-styles' );
-		add_editor_style( 'assets/css/editor-style.css' );
-
-		// Add default posts and comments RSS feed links to head.
-		add_theme_support( 'automatic-feed-links' );
-
-		// Body open hook.
-		add_theme_support( 'body-open' );
-
-		// Let WordPress manage the document title.
-		add_theme_support( 'title-tag' );
-
-		// Set the content width in pixels, based on the theme's design and stylesheet.
-		// phpcs:ignore WPThemeReview.CoreFunctionality.PrefixAllGlobals.NonPrefixedVariableFound .
-		$GLOBALS['content_width'] = apply_filters( 'osixthreeo_content_width', 1024 );
-
-		// Enable support for Post Thumbnails on posts and pages.
-		add_theme_support( 'post-thumbnails' );
-
-		// wp_nav_menu() in 1 location.
-		register_nav_menus(
-			array(
-				'primary' => __( 'Primary Menu', 'osixthreeo' ),
-			)
-		);
-
-		// Switch default core markup to output valid HTML5.
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'comment-list',
-				'gallery',
-				'caption',
-			)
-		);
-
-		add_theme_support( 'post-formats', array( 'aside', 'status' ) );
-
-		// Gutenberg.
-		// -- Responsive embeds.
-		add_theme_support( 'responsive-embeds' );
-		// -- Wide Images.
-		add_theme_support( 'align-wide' );
-
-		// Customizer.
-		// -- Custom Logo.
-		add_theme_support(
-			'custom-logo',
-			array(
-				'height'      => 40,
-				'width'       => 200,
-				'flex-height' => true,
-				'flex-width'  => true,
-			)
-		);
-
-		// -- WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'osixthreeo_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
-
-		// -- Enable selective refresh in the customizer.
-		add_theme_support( 'customize-selective-refresh-widgets' );
-	}
-endif;
-add_action( 'after_setup_theme', 'osixthreeo_setup' );
 
 // Load Jetpack compatibility file.
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// Add Theme support for WooCommerce.
+// Load WooCommerce compatibility file.
 define( 'OSIXTHREEO_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
 if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 	require get_template_directory() . '/inc/woocommerce.php';

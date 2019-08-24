@@ -912,7 +912,7 @@ blockquote {
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: #4836da;
+  background-color: #3220c5;
   color: #ffffff;
   border: 0;
   border-radius: 6px;
@@ -934,7 +934,7 @@ input[type="submit"]:hover {
 
 /* line 21, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/forms/_buttons.scss */
 .btn {
-  background-color: #4836da;
+  background-color: #3220c5;
   border-radius: 6px;
   color: #ffffff;
   cursor: pointer;
@@ -1144,7 +1144,7 @@ select {
 
 /* line 24, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/forms/_search.scss */
 .search-form input[type="submit"]:hover, .search-form input[type="submit"]:focus {
-  background: #4836da;
+  background: #3220c5;
   color: #fff;
 }
 
@@ -1153,7 +1153,7 @@ select {
 --------------------------------------------------------------*/
 /* line 1, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_links.scss */
 a {
-  color: #4836da;
+  color: #3220c5;
   text-decoration: none;
 }
 
@@ -1728,7 +1728,7 @@ button.dropdown-toggle.toggled-on:after {
 .posts-navigation .nav-next a:hover,
 .post-navigation .nav-previous a:hover,
 .post-navigation .nav-next a:hover {
-  color: #4836da;
+  color: #3220c5;
 }
 
 /* line 33, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_postnav.scss */
@@ -1839,7 +1839,7 @@ button.dropdown-toggle.toggled-on:after {
 /* line 115, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_postnav.scss */
 .comment-navigation .nav-previous a:hover,
 .comment-navigation .nav-next a:hover {
-  color: #4836da;
+  color: #3220c5;
 }
 
 /* line 121, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/navigation/_postnav.scss */
@@ -2633,7 +2633,7 @@ img.alignright,
 
 /* line 325, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_gutenberg.scss */
 .wp-block-search__button:hover, .wp-block-search__button:focus {
-  background: #4836da;
+  background: #3220c5;
   color: #fff;
   cursor: pointer;
 }
@@ -3198,9 +3198,9 @@ img.flex {
 /* line 5, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_custom-header.scss */
 .custom-header {
   background: #f3f5f7;
-  background: -webkit-gradient(linear, left top, right top, from(#4836da), to(#9932cc));
-  background: -webkit-linear-gradient(left, #4836da 0%, #9932cc 100%);
-  background: linear-gradient(90deg, #4836da 0%, #9932cc 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#3220c5), to(#9932cc));
+  background: -webkit-linear-gradient(left, #3220c5 0%, #9932cc 100%);
+  background: linear-gradient(90deg, #3220c5 0%, #9932cc 100%);
   position: absolute;
   top: 0;
   width: 100%;
@@ -3680,7 +3680,7 @@ body.error404 .page-title {
 /* line 24, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
 .blog .hentry.sticky,
 .archive .hentry.sticky {
-  border-top: 2px solid #4836da;
+  border-top: 2px solid #3220c5;
 }
 
 /* line 30, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_archives.scss */
@@ -4271,7 +4271,7 @@ body.headercentered .menu-wrap {
 
 /* line 34, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget ul a:hover {
-  color: #4836da;
+  color: #3220c5;
 }
 
 /* line 41, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/widgets/_sidebar-widgets.scss */
@@ -4283,7 +4283,7 @@ body.headercentered .menu-wrap {
 
 /* line 46, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu a:hover {
-  color: #4836da;
+  color: #3220c5;
 }
 
 /* line 52, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/widgets/_sidebar-widgets.scss */
@@ -4320,7 +4320,7 @@ body.headercentered .menu-wrap {
 
 /* line 81, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/widgets/_sidebar-widgets.scss */
 .sidebar-widget .menu li.current-menu-item > a {
-  color: #4836da;
+  color: #3220c5;
 }
 
 /* line 86, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/widgets/_sidebar-widgets.scss */
@@ -4505,7 +4505,7 @@ img#wpstats {
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
-  background-color: #4836da;
+  background-color: #3220c5;
   color: #ffffff;
   border: 0;
   border-radius: 6px;
@@ -4602,7 +4602,7 @@ img#wpstats {
 
 /* line 24, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/plugins/_bbpress.scss */
 .subscription-toggle {
-  background-color: #4836da;
+  background-color: #3220c5;
   border-radius: 6px;
   color: #ffffff;
   cursor: pointer;
