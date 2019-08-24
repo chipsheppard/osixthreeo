@@ -4,7 +4,7 @@ Contributors: Chip Sheppard
 Tags: translation-ready, theme-options, full-width-template, featured-image-header, featured-images, sticky-post, custom-logo, custom-header, custom-colors, custom-background, flexible-header, one-column, two-columns, wide-blocks, block-styles
 Requires at least: 4.0
 Tested up to: 5.2.2
-Stable tag: 1.2.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -81,16 +81,30 @@ The logo is constrained to 300px wide max.
 <hr class=“alt”> is 50% white
 
 BlockQuote:
-citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
+If NOT using the WP Block Editor... citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
+
+Gutenberg column blocks:
+Add a class of "boxed" to a Columns Block then add an image and a paragraph to each column. This will style the columns in nice boxes.
+Put a 3 columns block at the top of your homepage then give it another class of "up160". This will scoot it up 160 pixels so it overlaps the custom-header area for a nice effect.
+To accommodate different amounts of text on the homepage there are several options for the amount of scooting.
+- "up100" - scoots up 100 pixels
+- "up120" - scoots up 120 pixels
+- "up140" - scoots up 140 pixels
+- "up160" - scoots up 160 pixels
+- "up180" - scoots up 180 pixels
 
 == ChangeLog ==
 
+= 1.3.0 - 07 30 2019 =
+* Refine customizer interface.
+* Add typography controls.
+
 = 1.2.0 - 07 30 2019 =
 * Customizer control for site containment, content containment, sidebar placements, colors.
-* Added custom-header plus customizer enhancements & page-by-page display control.
+* Added custom-header, customizer controls, page-by-page featured image display control.
 
 = 1.1.0 - 06 30 2019 =
-* Adjust block-editor 'alignfull' styles for sidebar pages.
+* Adjust for Gutenberg editor styles.
 
 = 1.0.0 - 01 01 2019 =
 * Stable

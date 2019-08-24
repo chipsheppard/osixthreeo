@@ -294,17 +294,38 @@
     	flex-basis: 47%;
 	}
 }
-// 2 columns for all rows
-@media (max-width: 780px) {
-	.wp-block-column:nth-child(even) {
-	    //margin-right: 0;
-	}
-}
 
-// Override plugin styles to get even edges
-@media (min-width: 781px) {
-	.wp-block-column:not(:first-child),
-	.wp-block-column:nth-child(2n) {
-	    //margin-left: 0;
-	}
+/*
+ * Search
+ ---------------------------------- */
+
+ .wp-block-search {
+ 	background: transparent;
+ 	clear: both;
+ 	position: relative;
+
+ 	input[type="search"] {
+ 		display: inline-block;
+ 	}
 }
+ .wp-block-search__button {
+	 background: transparent;
+	 border: none;
+	 border-left: 1px solid $color__base-xlight;
+	 border-right: 1px solid $color__base-xlight;
+	 border-radius: 0;
+	 color: $color__base;
+	 display: inline-block;
+	 line-height: 1;
+	 padding: .9375em;
+	 position: absolute;
+	 right: 0;
+	 bottom: 0;
+
+	 &:hover,
+	 &:focus {
+		 background: $color__highlight;
+		 color: #fff;
+		 cursor: pointer;
+	 }
+ }

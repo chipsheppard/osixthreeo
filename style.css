@@ -2600,6 +2600,44 @@ img.alignright,
   }
 }
 
+/*
+ * Search
+ ---------------------------------- */
+/* line 302, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_gutenberg.scss */
+.wp-block-search {
+  background: transparent;
+  clear: both;
+  position: relative;
+}
+
+/* line 307, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_gutenberg.scss */
+.wp-block-search input[type="search"] {
+  display: inline-block;
+}
+
+/* line 311, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_gutenberg.scss */
+.wp-block-search__button {
+  background: transparent;
+  border: none;
+  border-left: 1px solid #dcdcdc;
+  border-right: 1px solid #dcdcdc;
+  border-radius: 0;
+  color: #222222;
+  display: inline-block;
+  line-height: 1;
+  padding: .9375em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* line 325, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_gutenberg.scss */
+.wp-block-search__button:hover, .wp-block-search__button:focus {
+  background: #4836da;
+  color: #fff;
+  cursor: pointer;
+}
+
 @media only screen and (min-width: 1024px) {
   /* line 2, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_utility.scss */
   .mobile-only {

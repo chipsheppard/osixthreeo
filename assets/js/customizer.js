@@ -30,7 +30,6 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 	} );
 }
 
-
 /*
 * Live Update elements
 */
@@ -66,19 +65,6 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			}
 		} );
 	} );
-
-	osixthreeo_colors_live_update(
-		'hero_text_primary_color',
-		'.hero-primary',
-		'color',
-		'#ffffff'
-	);
-	osixthreeo_colors_live_update(
-		'hero_text_secondary_color',
-		'.hero-secondary',
-		'color',
-		'#ffffff'
-	);
 
 	// Global Site Width.
 	wp.customize( 'osixthreeo_settings[containment_setting]', function( value ) {
@@ -150,7 +136,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		}
 	);
 
-	// HEADER --------------------------------------------- .
+	// HEADER COLORS --------------------------------------------- .
 	osixthreeo_colors_live_update(
 		'header_background_color',
 		'.header-wrap',
@@ -170,9 +156,21 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		}
 	);
 
-	// SUBNAV --------------------------------------------- .
+	// CUSTOM HEADER TEXT COLORS ---------------------------------------------
+	osixthreeo_colors_live_update(
+		'hero_text_primary_color',
+		'.hero-primary',
+		'color',
+		'#ffffff'
+	);
+	osixthreeo_colors_live_update(
+		'hero_text_secondary_color',
+		'.hero-secondary',
+		'color',
+		'#ffffff'
+	);
 
-	// CONTENT --------------------------------------------- .
+	// CONTENT AREA COLORS ---------------------------------------------
 	osixthreeo_colors_live_update(
 		'content_bgcolor',
 		'.site-content',
@@ -186,78 +184,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'#222222'
 	);
 
-	// Base font size.
-	wp.customize(
-		'osixthreeo_settings[base_font_size]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.content-inner-wrap' ).css( 'font-size', newval + 'px' );
-				}
-			);
-		}
-	);
-	// Site Title font size.
-	wp.customize(
-		'osixthreeo_settings[sitetitle_font_size]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.site-title' ).css( 'font-size', newval + 'px' );
-				}
-			);
-		}
-	);
-	// Site Description font size.
-	wp.customize(
-		'osixthreeo_settings[sitedescription_font_size]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.site-description' ).css( 'font-size', newval + 'px' );
-				}
-			);
-		}
-	);
-	// Menu font size.
-	wp.customize(
-		'osixthreeo_settings[menu_font_size]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '#primary-navigation' ).css( 'font-size', newval + 'px' );
-				}
-			);
-		}
-	);
-	// Hero Primary font size.
-	wp.customize(
-		'osixthreeo_settings[hero_text_primary_font_size]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.hero-primary' ).css( 'font-size', newval + 'px' );
-				}
-			);
-		}
-	);
-	// Hero Secondary font size.
-	wp.customize(
-		'osixthreeo_settings[hero_text_secondary_font_size]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.hero-secondary' ).css( 'font-size', newval + 'px' );
-				}
-			);
-		}
-	);
-	// Hero Secondary font size.
-	wp.customize(
-		'osixthreeo_settings[meta_font_size]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.entry-meta, .entry-footer' ).css( 'font-size', newval + 'px' );
-				}
-			);
-		}
-	);
-
-	// FOOTER --------------------------------------------- .
+	// FOOTER COLORS ---------------------------------------------
 	osixthreeo_colors_live_update(
 		'footer_background_color',
 		'.site-footer',
@@ -289,7 +216,80 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'#c0c0c0'
 	);
 
-	// HEADER BOLD ---------.
+    // FONT SIZE ----------------------------------------------------------
+	// base font size.
+	wp.customize(
+		'osixthreeo_settings[base_font_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.content-inner-wrap' ).css( 'font-size', newval + 'px' );
+				}
+			);
+		}
+	);
+	// site title
+	wp.customize(
+		'osixthreeo_settings[sitetitle_font_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.site-title' ).css( 'font-size', newval + 'px' );
+				}
+			);
+		}
+	);
+	// site description
+	wp.customize(
+		'osixthreeo_settings[sitedescription_font_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.site-description' ).css( 'font-size', newval + 'px' );
+				}
+			);
+		}
+	);
+	// menu
+	wp.customize(
+		'osixthreeo_settings[menu_font_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '#primary-navigation' ).css( 'font-size', newval + 'px' );
+				}
+			);
+		}
+	);
+	// hero primary
+	wp.customize(
+		'osixthreeo_settings[hero_text_primary_font_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.hero-primary' ).css( 'font-size', newval + 'px' );
+				}
+			);
+		}
+	);
+	// hero secondary
+	wp.customize(
+		'osixthreeo_settings[hero_text_secondary_font_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.hero-secondary' ).css( 'font-size', newval + 'px' );
+				}
+			);
+		}
+	);
+	// post meta
+	wp.customize(
+		'osixthreeo_settings[meta_font_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.entry-meta, .entry-footer' ).css( 'font-size', newval + 'px' );
+				}
+			);
+		}
+	);
+
+    // FONT WEIGHT -------------------------------------------------------------
+	// header
 	wp.customize(
 		'osixthreeo_settings[header_font_weight]', function( value ) {
 			value.bind( function( newval ) {
@@ -301,7 +301,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			} );
 		}
 	);
-	// SITE TITLE BOLD ---------.
+	// site title
 	wp.customize(
 		'osixthreeo_settings[sitetitle_font_weight]', function( value ) {
 			value.bind( function( newval ) {
@@ -313,7 +313,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			} );
 		}
 	);
-	// SITE DESCRIPTION BOLD ---------.
+	// site description
 	wp.customize(
 		'osixthreeo_settings[sitedescription_font_weight]', function( value ) {
 			value.bind( function( newval ) {
@@ -325,7 +325,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			} );
 		}
 	);
-	// MENU BOLD ---------.
+	// menu
 	wp.customize(
 		'osixthreeo_settings[menu_font_weight]', function( value ) {
 			value.bind( function( newval ) {
@@ -337,7 +337,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			} );
 		}
 	);
-	// META BOLD ---------.
+	// post meta
 	wp.customize(
 		'osixthreeo_settings[meta_font_weight]', function( value ) {
 			value.bind( function( newval ) {

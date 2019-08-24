@@ -195,7 +195,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		/*
-		 * Header Background Color --------------------------------
+		 * Header background color --------------------------------
 		 */
 		if ( $default_header_bg_color !== $header_bg_color ) :
 			$css->set_selector( '.header-wrap' );
@@ -203,7 +203,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		/*
-		 * Header Top/Bottom Padding --------------------------------
+		 * Header top/bottom padding --------------------------------
 		 */
 		if ( absint( $default_header_padding ) !== absint( $header_padding ) ) :
 			$css->set_selector( '.header-wrap' );
@@ -214,10 +214,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		/*
-		 * Navigation Link Color --------------------------------
+		 * Navigation link colors --------------------------------
 		 */
 		if ( $default_nav_link_color !== $nav_link_color ) :
-			// Color.
+			// Text.
 			$css->set_selector( '.site-navigation a, button.dropdown-toggle' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['nav_link_color'] ) );
 			// Background.
@@ -230,10 +230,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		/*
-		 * SubNav/Mobile Colors --------------------------------
+		 * SubNav/Mobile colors --------------------------------
 		 */
 
-		// Text Color.
+		// text.
 		if ( $default_subnav_text_color !== $subnav_text_color ) :
 			$css->set_selector( '.site-navigation .sub-menu a,.sub-menu button.dropdown-toggle' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['subnav_text_color'] ) );
@@ -243,7 +243,17 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->stop_media_query();
 		endif;
 
-		// BG Color.
+		// hover text.
+		if ( $default_subnav_hover_text_color !== $subnav_hover_text_color ) :
+			$css->set_selector( '.site-navigation .sub-menu a:hover,.site-navigation .sub-menu .current_page_item > a,.site-navigation .sub-menu .current-menu-item > a' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['subnav_hover_text_color'] ) );
+			$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
+				$css->set_selector( '.site-navigation a:hover' );
+				$css->add_property( 'color', esc_attr( $osixthreeo_settings['subnav_hover_text_color'] ) . '!important' );
+			$css->stop_media_query();
+		endif;
+
+		// bg.
 		if ( $default_subnav_bg_color !== $subnav_bg_color ) :
 			$css->set_selector( '.site-navigation .sub-menu a' );
 			$css->add_property( 'background', esc_attr( $osixthreeo_settings['subnav_bg_color'] ) );
@@ -253,35 +263,9 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->stop_media_query();
 		endif;
 
-		// Border Color.
-		if ( $default_subnav_border_color !== $subnav_border_color ) :
-			$css->set_selector(
-				'.site-navigation .sub-menu li,.site-navigation .sub-menu li:first-of-type'
-			);
-			$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['subnav_border_color'] ) );
-			$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
-				$css->set_selector( '.site-navigation li' );
-				$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['subnav_border_color'] ) . '!important' );
-			$css->stop_media_query();
-		endif;
-
-		// Hover Text Color.
-		if ( $default_subnav_hover_text_color !== $subnav_hover_text_color ) :
-			$css->set_selector(
-				'.site-navigation .sub-menu a:hover,.site-navigation .sub-menu .current_page_item > a,.site-navigation .sub-menu .current-menu-item > a'
-			);
-			$css->add_property( 'color', esc_attr( $osixthreeo_settings['subnav_hover_text_color'] ) );
-			$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
-				$css->set_selector( '.site-navigation a:hover' );
-				$css->add_property( 'color', esc_attr( $osixthreeo_settings['subnav_hover_text_color'] ) . '!important' );
-			$css->stop_media_query();
-		endif;
-
-		// Hover BG Color.
+		// hover bg.
 		if ( $default_subnav_hover_bg_color !== $subnav_hover_bg_color ) :
-			$css->set_selector(
-				'.site-navigation .sub-menu a:hover,.site-navigation .sub-menu .current_page_item > a,.site-navigation .sub-menu .current-menu-item > a'
-			);
+			$css->set_selector( '.site-navigation .sub-menu a:hover,.site-navigation .sub-menu .current_page_item > a,.site-navigation .sub-menu .current-menu-item > a' );
 			$css->add_property( 'background', esc_attr( $osixthreeo_settings['subnav_hover_bg_color'] ) );
 			$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
 				$css->set_selector( '.site-navigation a:hover,.site-navigation .current_page_item > a,.site-navigation .current-menu-item > a' );
@@ -289,58 +273,48 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->stop_media_query();
 		endif;
 
+		// border.
+		if ( $default_subnav_border_color !== $subnav_border_color ) :
+			$css->set_selector( '.site-navigation .sub-menu li,.site-navigation .sub-menu li:first-of-type' );
+			$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['subnav_border_color'] ) );
+			$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
+				$css->set_selector( '.site-navigation li' );
+				$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['subnav_border_color'] ) . '!important' );
+			$css->stop_media_query();
+		endif;
+
 		/*
-		 * Content Area --------------------------------
+		 * Content Area colors --------------------------------
 		 */
 		if ( $default_content_bgcolor !== $content_bgcolor ) :
 			$css->set_selector( '.site-content' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['content_bgcolor'] ) );
 		endif;
-
 		if ( $default_text_color !== $text_color ) :
-			// Base Color.
-			$css->set_selector(
-				'body,button,input,select,textarea,h1 a,h1 a:hover,h2 a,h2 a:hover,h3 a,h4 a,h5 a,h6 a,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.posts-navigation .nav-previous a,.post-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-next a,.post-navigation .nav-next a'
-			);
+			$css->set_selector( 'body,button,input,select,textarea,h1 a,h1 a:hover,h2 a,h2 a:hover,h3 a,h4 a,h5 a,h6 a,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.posts-navigation .nav-previous a,.post-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-next a,.post-navigation .nav-next a' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['text_color'] ) );
 		endif;
 
 		if ( $default_link_color !== $link_color ) :
-			// Link Color.
-			$css->set_selector(
-				'a,.site-content h2 a:hover,.site-content h3 a:hover,.site-content h4 a:hover,.site-content h5 a:hover,.site-content h6 a:hover,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover'
-			);
+			$css->set_selector( 'a,.site-content h2 a:hover,.site-content h3 a:hover,.site-content h4 a:hover,.site-content h5 a:hover,.site-content h6 a:hover,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color'] ) );
-
-			// Link Backgrounds.
-			$css->set_selector(
-				'input[type="button"],input[type="reset"],input[type="submit"],.btn,.woocommerce a.button,.woocommerce button.button,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button,.woocommerce #respond input#submit'
-			);
+			// button bg.
+			$css->set_selector( 'input[type="button"],input[type="reset"],input[type="submit"],.btn,.woocommerce a.button,.woocommerce button.button,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button,.woocommerce #respond input#submit' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color'] ) );
-
-			// Link Borders.
-			$css->set_selector(
-				'.sticky .entry-header,.blog .hentry.sticky,.archive .hentry.sticky'
-			);
+			// borders.
+			$css->set_selector( '.sticky .entry-header,.blog .hentry.sticky,.archive .hentry.sticky' );
 			$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['link_color'] ) );
 		endif;
 
 		if ( $default_link_color_hover !== $link_color_hover ) :
-			// Color.
-			$css->set_selector(
-				'.site-content a:not(.btn):hover,.site-content a:not(.btn):focus,.site-content a:not(.btn):active'
-			);
+			$css->set_selector( '.site-content a:not(.btn):hover,.site-content a:not(.btn):focus,.site-content a:not(.btn):active' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
-
-			// Backgrounds.
-			$css->set_selector(
-				'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.btn.secondary,.footer-widgets input[type="submit"],.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce #respond input#submit.alt,.woocommerce input.button.alt,.woocommerce input.button:hover,.woocommerce #respond input#submit:hover'
-			);
+			$css->set_selector( 'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.btn.secondary,.footer-widgets input[type="submit"],.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce #respond input#submit.alt,.woocommerce input.button.alt,.woocommerce input.button:hover,.woocommerce #respond input#submit:hover' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
 		endif;
 
 		/*
-		 * Site Footer --------------------------------
+		 * Site Footer colors --------------------------------
 		 */
 		if ( $default_footer_bg_color !== $footer_bg_color ) :
 			$css->set_selector( '.site-footer' );
@@ -360,7 +334,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		/*
-		 * Post Meta --------------------------------
+		 * Post Meta colors --------------------------------
 		 */
 		if ( $default_meta_color !== $meta_color ) :
 			$css->set_selector( '.entry-meta, .entry-meta a, .entry-footer, .entry-footer a' );
@@ -998,12 +972,27 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 				$css->add_property( 'font-family', $highlitefont );
 			}
 		endif;
-
 		if ( $default_meta_font !== $meta_font ) :
 			$css->set_selector( '.entry-meta, , .entry-footer' );
 			if ( 'header' === $meta_font && $default_header_font !== $header_font ) {
 				$css->add_property( 'font-family', $headerfont );
 			} elseif ( 'highlite' === $meta_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+		if ( $default_hero_text_primary_font !== $hero_text_primary_font ) :
+				$css->set_selector( '.hero-primary' );
+			if ( 'header' === $hero_text_primary_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $hero_text_primary_font && $default_highlite_font !== $highlite_font ) {
+				$css->add_property( 'font-family', $highlitefont );
+			}
+		endif;
+		if ( $default_hero_text_secondary_font !== $hero_text_secondary_font ) :
+				$css->set_selector( '.hero-secondary' );
+			if ( 'header' === $hero_text_secondary_font && $default_header_font !== $header_font ) {
+				$css->add_property( 'font-family', $headerfont );
+			} elseif ( 'highlite' === $hero_text_secondary_font && $default_highlite_font !== $highlite_font ) {
 				$css->add_property( 'font-family', $highlitefont );
 			}
 		endif;
@@ -1027,23 +1016,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_meta_font_weight !== $meta_font_weight ) :
 			$css->set_selector( '.entry-meta, .entry-footer' );
 			$css->add_property( 'font-weight', $meta_font_weight );
-		endif;
-
-		if ( $default_hero_text_primary_font !== $hero_text_primary_font ) :
-				$css->set_selector( '.hero-primary' );
-			if ( 'header' === $hero_text_primary_font && $default_header_font !== $header_font ) {
-				$css->add_property( 'font-family', $headerfont );
-			} elseif ( 'highlite' === $hero_text_primary_font && $default_highlite_font !== $highlite_font ) {
-				$css->add_property( 'font-family', $highlitefont );
-			}
-		endif;
-		if ( $default_hero_text_secondary_font !== $hero_text_secondary_font ) :
-				$css->set_selector( '.hero-secondary' );
-			if ( 'header' === $hero_text_secondary_font && $default_header_font !== $header_font ) {
-				$css->add_property( 'font-family', $headerfont );
-			} elseif ( 'highlite' === $hero_text_secondary_font && $default_highlite_font !== $highlite_font ) {
-				$css->add_property( 'font-family', $highlitefont );
-			}
 		endif;
 
 		if ( absint( $default_base_font_size ) !== absint( $base_font_size ) ) :

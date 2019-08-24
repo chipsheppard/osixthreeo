@@ -14,13 +14,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Controls.
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-alpha-color-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-radio-image-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-range-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
+// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound .
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-content-area.php';
 
 // Color Palette.

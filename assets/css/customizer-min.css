@@ -1,23 +1,26 @@
 /**
  * Main Customizer css
  */
+/* left-align the radio buttons to be next to each other */
 #sub-accordion-section-osixthreeo_ch_height .customize-control-radio .customize-inside-control-row,
 #sub-accordion-section-osixthreeo_site_layout .customize-control-radio .customize-inside-control-row {
   float: left;
   margin-right: 12px;
 }
 
-/* Header Media section ( Background Image/Video )
-*/
-#customize-control-external_header_video,
-#customize-control-osixthreeo_settings-header_bg_color_right {
+/* extra space for the 2 header layout PNGs */
+#customize-control-osixthreeo_settings-header_layout label {
+  margin-right: .5em;
+}
+
+/* Header Media section ( Background Image/Video ) */
+#customize-control-external_header_video {
   border-bottom: 1px dashed #bbbbbb;
   margin-bottom: 24px;
   padding-bottom: 24px;
 }
 
-/* Checkboxes
-*/
+/* Checkboxes */
 #customize-control-osixthreeo_settings-meta_date,
 #customize-control-osixthreeo_settings-meta_author,
 #customize-control-osixthreeo_settings-meta_comments,
@@ -27,125 +30,13 @@
 
 /* SECTIONS
 ----------------------------------------------- */
-/* Section Headings
--------------------------------- */
-#customize-control-title-message,
-#customize-control-description-message,
-#customize-control-menu-message,
-#customize-control-typography-message,
-#customize-control-content-typography-message,
-#customize-control-header-typography-message,
-#customize-control-footer-message,
-#customize-control-content-colors-message,
-#customize-control-footer-color-message,
-#customize-control-header-colors-message,
-#customize-control-layout-global-message,
-#customize-control-layout-header-message,
-#customize-control-layout-sidebars-message,
-#customize-control-primary-text-message,
-#customize-control-secondary-text-message,
-#customize-control-hometext-message,
-#customize-control-height-homepage-message,
-#customize-control-height-subpage-message,
-#customize-control-typography-meta-message,
-#customize-control-themeops-meta-message,
-#customize-control-color-meta-message {
-  margin: 24px 0 0 0;
-}
-
-/* Section Heading Labels
------------------------------------- */
-#customize-control-title-message .customize-control-title,
-#customize-control-description-message .customize-control-title,
-#customize-control-menu-message .customize-control-title,
-#customize-control-typography-message .customize-control-title,
-#customize-control-content-typography-message .customize-control-title,
-#customize-control-header-typography-message .customize-control-title,
-#customize-control-footer-message .customize-control-title,
-#customize-control-content-colors-message .customize-control-title,
-#customize-control-footer-color-message .customize-control-title,
-#customize-control-header-colors-message .customize-control-title,
-#customize-control-layout-global-message .customize-control-title,
-#customize-control-layout-header-message .customize-control-title,
-#customize-control-layout-sidebars-message .customize-control-title,
-#customize-control-primary-text-message .customize-control-title,
-#customize-control-secondary-text-message .customize-control-title,
-#customize-control-hometext-message .customize-control-title,
-#customize-control-height-homepage-message .customize-control-title,
-#customize-control-height-subpage-message .customize-control-title,
-#customize-control-typography-meta-message .customize-control-title,
-#customize-control-themeops-meta-message .customize-control-title,
-#customize-control-color-meta-message .customize-control-title {
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-/* Section Control Blocks
--------------------------------------- */
-#customize-control-header_textcolor,
-#customize-control-subnav-message,
-#customize-control-osixthreeo_settings-header_background_color,
-#customize-control-osixthreeo_settings-nav_link_color,
-#customize-control-osixthreeo_settings-subnav_bg_color,
-#customize-control-osixthreeo_settings-subnav_hover_bg_color,
-#customize-control-osixthreeo_settings-subnav_text_color,
-#customize-control-osixthreeo_settings-subnav_hover_text_color,
-#customize-control-osixthreeo_settings-subnav_border_color,
-#customize-control-osixthreeo_settings-content_bgcolor,
-#customize-control-osixthreeo_settings-text_color,
-#customize-control-osixthreeo_settings-link_color,
-#customize-control-osixthreeo_settings-link_color_hover,
-#customize-control-osixthreeo_settings-footer_background_color,
-#customize-control-osixthreeo_settings-footer_text_color,
-#customize-control-osixthreeo_settings-footer_link_color,
-#customize-control-osixthreeo_settings-footer_link_color_hover,
-#customize-control-osixthreeo_settings-sitetitle_font,
-#customize-control-osixthreeo_settings-sitetitle_font_size,
-#customize-control-osixthreeo_settings-sitetitle_font_weight,
-#customize-control-osixthreeo_settings-sitedescription_font,
-#customize-control-osixthreeo_settings-sitedescription_font_size,
-#customize-control-osixthreeo_settings-sitedescription_font_weight,
-#customize-control-osixthreeo_settings-containment_setting,
-#customize-control-osixthreeo_settings-header_layout,
-#customize-control-osixthreeo_settings-header_padding,
-#customize-control-osixthreeo_settings-home_layout_setting,
-#customize-control-osixthreeo_settings-page_layout_setting,
-#customize-control-osixthreeo_settings-single_layout_setting,
-#customize-control-osixthreeo_settings-archive_layout_setting,
-#customize-control-osixthreeo_settings-search_layout_setting,
-#customize-control-osixthreeo_settings-menu_font,
-#customize-control-osixthreeo_settings-menu_font_size,
-#customize-control-osixthreeo_settings-menu_font_weight,
-#customize-control-osixthreeo_settings-base_font_size,
-#customize-control-osixthreeo_settings-header_font_weight,
-#customize-control-osixthreeo_settings-base_font,
-#customize-control-osixthreeo_settings-header_font,
-#customize-control-osixthreeo_settings-highlite_font,
-#customize-control-osixthreeo_settings-hero_text_primary,
-#customize-control-osixthreeo_settings-hero_text_primary_font,
-#customize-control-osixthreeo_settings-hero_text_primary_color,
-#customize-control-osixthreeo_settings-hero_text_primary_font_size,
-#customize-control-osixthreeo_settings-hero_text_secondary,
-#customize-control-osixthreeo_settings-hero_text_secondary_font,
-#customize-control-osixthreeo_settings-hero_text_secondary_color,
-#customize-control-osixthreeo_settings-hero_text_secondary_font_size,
-#customize-control-osixthreeo_settings-home_header_fullheight,
-#customize-control-osixthreeo_settings-home_header_height,
-#customize-control-osixthreeo_settings-home_mobile_header_height,
-#customize-control-height-bottom-space,
-#customize-control-osixthreeo_settings-subpage_header_height,
-#customize-control-osixthreeo_settings-subpage_mobile_header_height,
-#customize-control-osixthreeo_settings-meta_footer,
-#customize-control-typography-metaheader-message,
-#customize-control-osixthreeo_settings-meta_date,
-#customize-control-osixthreeo_settings-meta_author,
-#customize-control-osixthreeo_settings-meta_comments,
-#customize-control-osixthreeo_settings-meta_updated,
-#customize-control-osixthreeo_settings-meta_font,
-#customize-control-osixthreeo_settings-meta_font_size,
-#customize-control-osixthreeo_settings-meta_font_weight,
-#customize-control-themeops-metaheader-message,
-#customize-control-osixthreeo_settings-meta_color {
+.customize-control-radio,
+.customize-control-select,
+.customize-control-checkbox,
+.customize-control-textarea,
+.customize-control-range,
+.customize-control-color,
+.customize-control-alpha-color {
   padding: 12px;
   background-color: #f3f3f3;
   border-left: 1px solid #ccc;
@@ -154,15 +45,20 @@
   box-sizing: border-box;
 }
 
-#customize-control-height-bottom-space {
-  padding: 0;
+.customize-control-radio .customize-control-title,
+.customize-control-select .customize-control-title,
+.customize-control-textarea .customize-control-title,
+.customize-control-range .customize-control-title,
+.customize-control-color .customize-control-title,
+.customize-control-alpha-color .customize-control-title {
+  font-weight: 400;
+  font-size: 12px;
 }
 
+#customize-control-height-bottom-space,
 #customize-control-osixthreeo_settings-meta_date,
 #customize-control-osixthreeo_settings-meta_author,
-#customize-control-osixthreeo_settings-meta_comments,
-#customize-control-typography-metaheader-message,
-#customize-control-themeops-metaheader-message {
+#customize-control-osixthreeo_settings-meta_comments {
   padding-top: 0;
   padding-bottom: 0;
 }
@@ -187,7 +83,9 @@
 #customize-control-osixthreeo_settings-home_header_fullheight,
 #customize-control-osixthreeo_settings-subpage_header_height,
 #customize-control-osixthreeo_settings-meta_footer,
-#customize-control-osixthreeo_settings-meta_font {
+#customize-control-osixthreeo_settings-meta_font,
+#customize-control-osixthreeo_settings-subnav_bg_color,
+#customize-control-osixthreeo_settings-header_bg_color_left {
   border-top: 1px solid #ccc;
 }
 
@@ -207,7 +105,9 @@
 #customize-control-height-bottom-space,
 #customize-control-osixthreeo_settings-subpage_mobile_header_height,
 #customize-control-osixthreeo_settings-meta_updated,
-#customize-control-osixthreeo_settings-meta_font_weight {
+#customize-control-osixthreeo_settings-meta_font_weight,
+#customize-control-osixthreeo_settings-nav_link_color,
+#customize-control-osixthreeo_settings-header_right_stop {
   border-bottom: 1px solid #ccc;
 }
 
@@ -216,77 +116,49 @@
 #customize-control-osixthreeo_settings-containment_setting,
 #customize-control-osixthreeo_settings-header_font_weight,
 #customize-control-osixthreeo_settings-base_font_size,
-#customize-control-osixthreeo_settings-meta_color {
+#customize-control-osixthreeo_settings-meta_color,
+#customize-control-background_color {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
 }
 
 /* LABELS
-------------------------------------------------- */
-#customize-control-header_textcolor .customize-control-title,
-#customize-control-osixthreeo_settings-header_background_color .customize-control-title,
-#customize-control-osixthreeo_settings-nav_link_color .customize-control-title,
-#customize-control-osixthreeo_settings-subnav_bg_color .customize-control-title,
-#customize-control-osixthreeo_settings-subnav_hover_bg_color .customize-control-title,
-#customize-control-osixthreeo_settings-subnav_text_color .customize-control-title,
-#customize-control-osixthreeo_settings-subnav_hover_text_color .customize-control-title,
-#customize-control-osixthreeo_settings-subnav_border_color .customize-control-title,
-#customize-control-osixthreeo_settings-content_bgcolor .customize-control-title,
-#customize-control-osixthreeo_settings-text_color .customize-control-title,
-#customize-control-osixthreeo_settings-link_color .customize-control-title,
-#customize-control-osixthreeo_settings-link_color_hover .customize-control-title,
-#customize-control-osixthreeo_settings-footer_background_color .customize-control-title,
-#customize-control-osixthreeo_settings-footer_text_color .customize-control-title,
-#customize-control-osixthreeo_settings-footer_link_color .customize-control-title,
-#customize-control-osixthreeo_settings-footer_link_color_hover .customize-control-title,
-#customize-control-osixthreeo_settings-sitetitle_font .customize-control-title,
-#customize-control-osixthreeo_settings-sitetitle_font_size .customize-control-title,
-#customize-control-osixthreeo_settings-sitetitle_font_weight .customize-control-title,
-#customize-control-osixthreeo_settings-sitedescription_font .customize-control-title,
-#customize-control-osixthreeo_settings-sitedescription_font_size .customize-control-title,
-#customize-control-osixthreeo_settings-sitedescription_font_weight .customize-control-title,
-#customize-control-osixthreeo_settings-containment_setting .customize-control-title,
-#customize-control-osixthreeo_settings-header_layout .customize-control-title,
-#customize-control-osixthreeo_settings-header_padding .customize-control-title,
-#customize-control-osixthreeo_settings-home_layout_setting .customize-control-title,
-#customize-control-osixthreeo_settings-page_layout_setting .customize-control-title,
-#customize-control-osixthreeo_settings-single_layout_setting .customize-control-title,
-#customize-control-osixthreeo_settings-archive_layout_setting .customize-control-title,
-#customize-control-osixthreeo_settings-search_layout_setting .customize-control-title,
-#customize-control-osixthreeo_settings-menu_font .customize-control-title,
-#customize-control-osixthreeo_settings-menu_font_size .customize-control-title,
-#customize-control-osixthreeo_settings-menu_font_weight .customize-control-title,
-#customize-control-osixthreeo_settings-base_font_size .customize-control-title,
-#customize-control-osixthreeo_settings-header_font_weight .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_primary .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_primary_font .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_primary_color .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_primary_font_size .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_secondary .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_secondary_font .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_secondary_color .customize-control-title,
-#customize-control-osixthreeo_settings-hero_text_secondary_font_size .customize-control-title,
-#customize-control-osixthreeo_settings-home_header_fullheight .customize-control-title,
-#customize-control-osixthreeo_settings-home_header_height .customize-control-title,
-#customize-control-osixthreeo_settings-home_mobile_header_height .customize-control-title,
-#customize-control-osixthreeo_settings-subpage_header_height .customize-control-title,
-#customize-control-osixthreeo_settings-subpage_mobile_header_height .customize-control-title,
-#customize-control-osixthreeo_settings-meta_font .customize-control-title,
-#customize-control-osixthreeo_settings-meta_font_size .customize-control-title,
-#customize-control-osixthreeo_settings-meta_font_weight .customize-control-title,
-#customize-control-osixthreeo_settings-meta_color .customize-control-title {
-  font-weight: 400;
-  font-size: 12px;
+------------------------------------------------ */
+#sub-accordion-section-colors .customize-control-text,
+#sub-accordion-section-osixthreeo_typography .customize-control-text,
+#sub-accordion-section-osixthreeo_ch_height .customize-control-text,
+#sub-accordion-section-osixthreeo_ch_text .customize-control-text,
+#sub-accordion-section-osixthreeo_themeops .customize-control-text,
+#sub-accordion-section-osixthreeo_site_layout .customize-control-text {
+  margin: 24px 0 0 0;
+}
+
+#sub-accordion-section-colors .customize-control-text .customize-control-title,
+#sub-accordion-section-osixthreeo_typography .customize-control-text .customize-control-title,
+#sub-accordion-section-osixthreeo_ch_height .customize-control-text .customize-control-title,
+#sub-accordion-section-osixthreeo_ch_text .customize-control-text .customize-control-title,
+#sub-accordion-section-osixthreeo_themeops .customize-control-text .customize-control-title,
+#sub-accordion-section-osixthreeo_site_layout .customize-control-text .customize-control-title {
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* INNER HEADING
 ------------------------------------------------- */
-#customize-control-subnav-message .customize-control-title {
-  border-top: 1px dashed #bbb;
-  border-bottom: 1px dashed #bbb;
-  padding: 12px 0 10px;
-  line-height: 1;
-  text-transform: uppercase;
-  font-size: 12px;
-  margin-top: 8px;
+#customize-control-height-bottom-space,
+#customize-control-themeops-metaheader-message {
+  background-color: #f3f3f3;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#customize-control-themeops-metaheader-message {
+  padding: 0 12px 6px;
+}
+
+#customize-control-height-bottom-space.customize-control-text,
+#customize-control-themeops-metaheader-message.customize-control-text {
+  margin-top: 0;
 }
