@@ -174,9 +174,9 @@ add_action( 'init', 'osixthreeo_remove_wc_sidebar' );
 
 /**
  * Move WooCommerce price
- */
-remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
-add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+ *-- remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+ *-- add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );
+*/
 
 
 if ( ! function_exists( 'osixthreeo_woocommerce_cart_link_fragment' ) ) {
@@ -197,6 +197,11 @@ if ( ! function_exists( 'osixthreeo_woocommerce_cart_link_fragment' ) ) {
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'osixthreeo_woocommerce_cart_link_fragment' );
 
+
+/**
+ * -- Woo MiniCart -------------------------------------------------
+ * -----------------------------------------------------------------
+ */
 if ( ! function_exists( 'osixthreeo_woocommerce_cart_link' ) ) {
 	/**
 	 * Cart Link.
@@ -220,7 +225,6 @@ if ( ! function_exists( 'osixthreeo_woocommerce_cart_link' ) ) {
 		<?php
 	}
 }
-
 
 if ( ! function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
 	/**
@@ -252,14 +256,14 @@ if ( ! function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
 	}
 }
 
-/**
+/*
+ * DISPLAY Woo MiniCart
  * From _s  the WooCommerce Mini Cart.
  *
  * You can add the WooCommerce Mini Cart to header.php like so ...
- *
-	<?php
-		if ( function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
-			osixthreeo_woocommerce_header_cart();
-		}
-	?>
+ * -----------------------------------------------------------------
+if ( function_exists( 'osixthreeo_woocommerce_header_cart' ) ) {
+	osixthreeo_woocommerce_header_cart();
+}
+add_action( 'tha_entry_top', 'osixthreeo_woocommerce_header_cart' );
  */
