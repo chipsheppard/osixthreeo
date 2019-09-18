@@ -11,7 +11,7 @@
 
 echo '<section class="no-results not-found">';
 echo '<header class="page-header">';
-	echo '<div class="inner-wrap title-wrap">';
+	echo '<div class="inner-wrap">';
 		echo '<h1 class="page-title">' . esc_html__( 'Nothing Found', 'osixthreeo' ) . '</h1>';
 	echo '</div>';
 echo '</header>';

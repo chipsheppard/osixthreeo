@@ -291,12 +291,12 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['content_bgcolor'] ) );
 		endif;
 		if ( $default_text_color !== $text_color ) :
-			$css->set_selector( 'body,button,input,select,textarea,h1 a,h1 a:hover,h2 a,h2 a:hover,h3 a,h4 a,h5 a,h6 a,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.posts-navigation .nav-previous a,.post-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-next a,.post-navigation .nav-next a' );
+			$css->set_selector( 'body,button,input,select,textarea,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.posts-navigation .nav-previous a,.post-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-next a,.post-navigation .nav-next a' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['text_color'] ) );
 		endif;
 
 		if ( $default_link_color !== $link_color ) :
-			$css->set_selector( 'a,.site-content h2 a:hover,.site-content h3 a:hover,.site-content h4 a:hover,.site-content h5 a:hover,.site-content h6 a:hover,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover' );
+			$css->set_selector( 'a,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color'] ) );
 			// button bg.
 			$css->set_selector( 'input[type="button"],input[type="reset"],input[type="submit"],.btn,.woocommerce a.button,.woocommerce button.button,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button,.woocommerce #respond input#submit' );
@@ -307,7 +307,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		if ( $default_link_color_hover !== $link_color_hover ) :
-			$css->set_selector( '.site-content a:not(.btn):hover,.site-content a:not(.btn):focus,.site-content a:not(.btn):active' );
+			$css->set_selector( '.site-content a:not(.btn):not(.button):hover,.site-content a:not(.btn):not(.button):focus,.site-content a:not(.btn):not(.button):active' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
 			$css->set_selector( 'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.btn.secondary,.footer-widgets input[type="submit"],.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce #respond input#submit.alt,.woocommerce input.button.alt,.woocommerce input.button:hover,.woocommerce #respond input#submit:hover' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );

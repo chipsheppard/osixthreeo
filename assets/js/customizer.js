@@ -144,18 +144,6 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'transparent'
 	);
 
-	wp.customize(
-		'osixthreeo_settings[nav_link_color]', function( value ) {
-			value.bind(
-				function( newval ) {
-					$( '.site-navigation a, button.dropdown-toggle' ).css( 'color', newval );
-					$( '.responsive-menu-icon .menu-icon,.responsive-menu-icon .menu-icon::before,.responsive-menu-icon .menu-icon::after, .site-navigation li.search-icon .theicon:before' ).css( 'background-color', newval );
-					$( '.site-navigation li.search-icon .theicon,.site-navigation li.search-icon:hover,.site-navigation .sub-menu,.topbar-widget.widget_nav_menu .sub-menu' ).css( 'border-color', newval );
-				}
-			);
-		}
-	);
-
 	// CUSTOM HEADER TEXT COLORS ---------------------------------------------
 	osixthreeo_colors_live_update(
 		'hero_text_primary_color',
@@ -179,7 +167,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 	);
 	osixthreeo_colors_live_update(
 		'text_color',
-		'body,button,input,select,textarea,h1 a,h1 a:hover,h2 a,h2 a:hover,h3 a,h4 a,h5 a,h6 a,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-previous a,.posts-navigation .nav-next a,.post-navigation .nav-previous a,.post-navigation .nav-next a,.site-navigation .sub-menu a',
+		'body,button,input,select,textarea,.sidebar-widget ul a,.sidebar-widget .menu a,.comment-navigation .nav-previous a,.comment-navigation .nav-next a,.posts-navigation .nav-previous a,.posts-navigation .nav-next a,.post-navigation .nav-previous a,.post-navigation .nav-next a,.site-navigation .sub-menu a',
 		'color',
 		'#222222'
 	);

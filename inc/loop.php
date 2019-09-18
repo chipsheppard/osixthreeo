@@ -52,7 +52,6 @@ add_action( 'tha_content_loop', 'osixthreeo_default_loop' );
 function osixthreeo_archive_page_titles() {
 	if ( is_home() && ! is_front_page() || is_archive() || is_search() ) :
 		echo '<header class="page-header">';
-		echo '<div class="inner-wrap title-wrap">';
 
 		if ( is_search() ) :
 			echo '<h1 class="page-title">';
@@ -64,7 +63,6 @@ function osixthreeo_archive_page_titles() {
 			the_archive_description( '<div class="archive-description">', '</div>' );
 		endif;
 
-		echo '</div>';
 		echo '</header>';
 	endif;
 }

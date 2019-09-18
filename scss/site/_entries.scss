@@ -16,11 +16,6 @@
 	}
 }
 
-.title-wrap {
-	margin-bottom: 1.5em;
-	padding: 0;
-}
-
 body.page .entry-title,
 body.single .entry-title,
 body.blog .page-title,
@@ -83,4 +78,12 @@ body.error404 .page-title {
 	.entry-content {
 		margin-bottom: 2em;
 	}
+}
+
+body.page .entry-header,
+body.single .entry-header,
+body.blog .page-header,
+body.archive .page-header,
+body.error404 .page-header {
+	margin-bottom: 2em;
 }

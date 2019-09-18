@@ -35,8 +35,8 @@
 		position:relative;
 
 		&:before {
-			border-bottom:3px solid currentColor;
-			content:'';
+			border-bottom: 1px solid currentColor;
+			content: '';
 			position: absolute;
 			top: 0;
 			bottom: 0;

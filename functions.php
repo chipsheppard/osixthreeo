@@ -94,7 +94,7 @@ add_action( 'after_setup_theme', 'osixthreeo_setup' );
 function osixthreeo_content_width() {
 	// This variable is intended to be overruled from themes.
 	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound
+	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound .
 	$GLOBALS['content_width'] = apply_filters( 'osixthreeo_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'osixthreeo_content_width', 0 );
@@ -118,7 +118,7 @@ add_action( 'wp_enqueue_scripts', 'osixthreeo_scripts' );
  * Enqueue editor styles for the customizer
  */
 function osixthreeo_customizer_custom_css() {
-	wp_enqueue_style( 'osixthreeo-customizer-css', get_stylesheet_directory_uri() . '/assets/css/customizer.css', array(), OSIXTHREEO_VERSION );
+	wp_enqueue_style( 'osixthreeo-customizer', get_stylesheet_directory_uri() . '/assets/css/customizer.css', array(), OSIXTHREEO_VERSION );
 }
 add_action( 'customize_controls_enqueue_scripts', 'osixthreeo_customizer_custom_css' );
 

@@ -37,7 +37,7 @@
 .customize-control-range,
 .customize-control-color,
 .customize-control-alpha-color {
-  padding: 12px;
+  padding: 12px 12px 0;
   background-color: #f3f3f3;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
@@ -53,6 +53,7 @@
 .customize-control-alpha-color .customize-control-title {
   font-weight: 400;
   font-size: 12px;
+  line-height: 1.25;
 }
 
 #customize-control-height-bottom-space,
@@ -109,6 +110,7 @@
 #customize-control-osixthreeo_settings-nav_link_color,
 #customize-control-osixthreeo_settings-header_right_stop {
   border-bottom: 1px solid #ccc;
+  padding-bottom: 12px;
 }
 
 /* TOP & BOTTOM - Single control
@@ -120,6 +122,7 @@
 #customize-control-background_color {
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  padding-bottom: 12px;
 }
 
 /* LABELS

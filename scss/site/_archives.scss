@@ -6,10 +6,6 @@
 		margin: 0 0 2em;
 		padding: 1.5em 1.5em 0;
 
-		.title-wrap {
-			margin-bottom: 0;
-		}
-
 		.wp-post-image {
 			display: block;
 			width: 100%;
@@ -42,6 +38,8 @@
 
 	.entry-title {
 		word-break: break-word;
+		line-height: 1.0625;
+		margin-bottom: .125em;
 	}
 }
 
@@ -54,7 +52,7 @@
 
 	@include breakpoint(tablet-v) {
 		float:none;
-		margin-bottom: 0;
+		margin-bottom: 1em;
 		margin-right: 0;
 		max-width: none;
 		width: 100%;
