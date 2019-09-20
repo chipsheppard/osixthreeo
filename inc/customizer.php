@@ -1859,7 +1859,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[meta_footer]',
 			array(
 				'type'        => 'checkbox',
-				'label'       => esc_html__( 'Show post footer meta', 'osixthreeo' ),
+				'label'       => esc_html__( 'Show post footer meta data', 'osixthreeo' ),
 				'description' => esc_html__( 'Categories/Tags', 'osixthreeo' ),
 				'section'     => 'osixthreeo_themeops',
 				'settings'    => 'osixthreeo_settings[meta_footer]',
@@ -1881,7 +1881,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_themeops',
 					'priority' => 52,
-					'content'  => esc_html__( 'Show post header meta.', 'osixthreeo' ),
+					'content'  => esc_html__( 'Show post header meta data.', 'osixthreeo' ),
 				)
 			)
 		);

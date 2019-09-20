@@ -11,7 +11,7 @@
 		border-bottom: 1px solid $color__base-light;
 		line-height: 1;
 		margin: 0 0 .5em 0;
-		padding: .625em .25em;
+		padding: .375em .25em .625em;
 	}
 
 	select {
@@ -25,7 +25,6 @@
 			padding: 0 .438em .5em;
 			margin-bottom: .5em;
 		}
-
 		a {
 			color: $color__base;
 			display: inline-block;

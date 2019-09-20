@@ -158,3 +158,6 @@ define( 'OSIXTHREEO_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
 if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+// Check for Osixthreeo Pro plugin.
+define( 'OSIXTHREEO_PRO', class_exists( 'Osixthreeopro' ) );
