@@ -16,10 +16,16 @@ tha_sidebars_before();
 echo '<aside id="secondary" class="widget-area" role="complementary">';
 tha_sidebar_top();
 if ( OSIXTHREEO_PRO ) :
-	if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) :
-		dynamic_sidebar( 'sidebar-w' );
+	if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) :
+		if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) :
+			dynamic_sidebar( 'sidebar-w' );
+		elseif ( is_page() ) :
+			dynamic_sidebar( 'sidebar-p' );
+		else :
+			dynamic_sidebar( 'sidebar' );
+		endif;
 	elseif ( is_page() ) :
-		dynamic_sidebar( 'sidebar-p' );
+			dynamic_sidebar( 'sidebar-p' );
 	else :
 		dynamic_sidebar( 'sidebar' );
 	endif;

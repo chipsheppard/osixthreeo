@@ -1,6 +1,6 @@
 === OsixthreeO ===
 
-Contributors: Chip Sheppard
+Contributors: ultranorman
 Tags: translation-ready, theme-options, full-width-template, featured-image-header, featured-images, sticky-post, custom-logo, custom-header, custom-colors, custom-background, flexible-header, one-column, two-columns, wide-blocks, block-styles
 Requires at least: 4.0
 Tested up to: 5.2.2

@@ -780,6 +780,29 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
+		// title.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[footer_title_color]',
+			array(
+				'default'           => $defaults['footer_title_color'],
+				'type'              => 'option',
+				'sanitize_callback' => 'sanitize_hex_color',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new WP_Customize_Color_Control(
+				$wp_customize,
+				'osixthreeo_settings[footer_title_color]',
+				array(
+					'label'    => esc_html__( 'Title', 'osixthreeo' ),
+					'section'  => 'colors',
+					'settings' => 'osixthreeo_settings[footer_title_color]',
+					'priority' => 92,
+				)
+			)
+		);
+
 		// text.
 		$wp_customize->add_setting(
 			'osixthreeo_settings[footer_text_color]',
@@ -798,7 +821,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'label'    => esc_html__( 'Text', 'osixthreeo' ),
 					'section'  => 'colors',
 					'settings' => 'osixthreeo_settings[footer_text_color]',
-					'priority' => 92,
+					'priority' => 93,
 				)
 			)
 		);
@@ -821,7 +844,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'label'    => esc_html__( 'Links', 'osixthreeo' ),
 					'section'  => 'colors',
 					'settings' => 'osixthreeo_settings[footer_link_color]',
-					'priority' => 93,
+					'priority' => 94,
 				)
 			)
 		);
@@ -844,7 +867,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'label'    => esc_html__( 'Hover links', 'osixthreeo' ),
 					'section'  => 'colors',
 					'settings' => 'osixthreeo_settings[footer_link_color_hover]',
-					'priority' => 94,
+					'priority' => 95,
 				)
 			)
 		);
@@ -2009,7 +2032,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				$wp_customize,
 				'osixthreeo_settings[header_bg_color_left]',
 				array(
-					'label'    => esc_html__( 'Header background gradient - Left', 'osixthreeo' ),
+					'label'    => esc_html__( 'Color left', 'osixthreeo' ),
 					'section'  => 'osixthreeo_ch_bgcolor',
 					'settings' => 'osixthreeo_settings[header_bg_color_left]',
 					'priority' => 10,
@@ -2031,7 +2054,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				$wp_customize,
 				'osixthreeo_settings[header_bg_color_right]',
 				array(
-					'label'    => esc_html__( 'Header Background Color - Right', 'osixthreeo' ),
+					'label'    => esc_html__( 'Color right', 'osixthreeo' ),
 					'section'  => 'osixthreeo_ch_bgcolor',
 					'settings' => 'osixthreeo_settings[header_bg_color_right]',
 					'priority' => 20,
@@ -2054,7 +2077,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'osixthreeo_settings[header_gradient_angle]',
 				array(
 					'type'        => 'range',
-					'label'       => esc_html__( 'Gradient Angle (0-180&deg;)', 'osixthreeo' ),
+					'label'       => esc_html__( 'Gradient angle (0-180&deg;)', 'osixthreeo' ),
 					'section'     => 'osixthreeo_ch_bgcolor',
 					'settings'    => 'osixthreeo_settings[header_gradient_angle]',
 					'input_attrs' => array(
@@ -2082,7 +2105,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'osixthreeo_settings[header_left_stop]',
 				array(
 					'type'        => 'range',
-					'label'       => esc_html__( 'Gradient Left Blend Point', 'osixthreeo' ),
+					'label'       => esc_html__( 'Gradient left blend point', 'osixthreeo' ),
 					'section'     => 'osixthreeo_ch_bgcolor',
 					'settings'    => 'osixthreeo_settings[header_left_stop]',
 					'input_attrs' => array(
@@ -2110,7 +2133,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'osixthreeo_settings[header_right_stop]',
 				array(
 					'type'        => 'range',
-					'label'       => esc_html__( 'Gradient Right Blend Point', 'osixthreeo' ),
+					'label'       => esc_html__( 'Gradient right blend point', 'osixthreeo' ),
 					'section'     => 'osixthreeo_ch_bgcolor',
 					'settings'    => 'osixthreeo_settings[header_right_stop]',
 					'input_attrs' => array(

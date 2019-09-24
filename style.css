@@ -2770,6 +2770,20 @@ img.flex {
   left: 0px;
 }
 
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+/* line 2, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_infinite-scroll.scss */
+.infinite-scroll .pagination,
+.infinite-scroll.neverending .site-footer {
+  /* Theme Footer (when set to scrolling) */
+  display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+/* line 8, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/modules/_infinite-scroll.scss */
+.infinity-end.neverending .site-footer {
+  display: block;
+}
+
 /*--------------------------------------------------------------
 # Layout
 --------------------------------------------------------------*/
@@ -3411,7 +3425,7 @@ img.flex {
 
 /* line 7, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_site-footer.scss */
 .site-info {
-  color: #c0c0c0;
+  color: #f5f5f5;
   letter-spacing: 1px;
   padding: 2em 0 .5em;
   position: relative;
@@ -3421,12 +3435,12 @@ img.flex {
 
 /* line 14, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_site-footer.scss */
 .site-info a {
-  color: #808080;
+  color: #dcdcdc;
 }
 
 /* line 17, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_site-footer.scss */
 .site-info a:hover {
-  color: #c0c0c0;
+  color: #ffffff;
 }
 
 /* line 1, Users/normansheppard/Local Sites/themes/app/public/wp-content/themes/osixthreeo/scss/site/_entries.scss */

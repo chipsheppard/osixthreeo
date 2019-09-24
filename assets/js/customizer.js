@@ -177,31 +177,37 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'footer_background_color',
 		'.site-footer',
 		'background-color',
-		'#525252'
+		'#000000'
+	);
+	osixthreeo_colors_live_update(
+		'footer_title_color',
+		'.site-info .widget-title',
+		'color',
+		'#ffffff'
 	);
 	osixthreeo_colors_live_update(
 		'footer_text_color',
 		'.site-info',
 		'color',
-		'#c0c0c0'
+		'#f5f5f5'
 	);
 	osixthreeo_colors_live_update(
 		'footer_link_color',
 		'.site-info a',
 		'color',
-		'#808080'
+		'#dcdcdc'
 	);
 	osixthreeo_colors_live_update(
 		'footer_link_color_hover',
 		'.site-info a:hover',
 		'color',
-		'#c0c0c0'
+		'#ffffff'
 	);
 	osixthreeo_colors_live_update(
 		'meta_color',
 		'.entry-meta, .entry-meta a, .entry-footer, .entry-footer a',
 		'color',
-		'#c0c0c0'
+		'#808080'
 	);
 
     // FONT SIZE ----------------------------------------------------------

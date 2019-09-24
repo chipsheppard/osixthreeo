@@ -74,10 +74,12 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_link_color                    = $defaults['link_color'];
 		$default_link_color_hover              = $defaults['link_color_hover'];
 		$footer_bg_color                       = $osixthreeo_settings['footer_background_color'];
+		$footer_title_color                     = $osixthreeo_settings['footer_title_color'];
 		$footer_text_color                     = $osixthreeo_settings['footer_text_color'];
 		$footer_link_color                     = $osixthreeo_settings['footer_link_color'];
 		$footer_link_color_hover               = $osixthreeo_settings['footer_link_color_hover'];
 		$default_footer_bg_color               = $defaults['footer_background_color'];
+		$default_footer_title_color             = $defaults['footer_title_color'];
 		$default_footer_text_color             = $defaults['footer_text_color'];
 		$default_footer_link_color             = $defaults['footer_link_color'];
 		$default_footer_link_color_hover       = $defaults['footer_link_color_hover'];
@@ -319,6 +321,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_footer_bg_color !== $footer_bg_color ) :
 			$css->set_selector( '.site-footer' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['footer_background_color'] ) );
+		endif;
+		if ( $default_footer_title_color !== $footer_title_color ) :
+			$css->set_selector( '.site-info .widget-title' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['footer_title_color'] ) );
 		endif;
 		if ( $default_footer_text_color !== $footer_text_color ) :
 			$css->set_selector( '.site-info' );
