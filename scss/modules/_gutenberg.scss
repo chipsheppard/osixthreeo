@@ -238,15 +238,18 @@
 	}
 
 	.wp-block-image {
-		margin: 0 0 1em;
+		margin: 0;
 		border-radius: 8px 8px 0 0;
 		overflow: hidden;
-		//height: 150px;
 
 		img {
 			width: 100%;
 			object-fit: cover;
 		}
+	}
+
+	h4 {
+		margin-top: 1em;
 	}
 
 	// A styling expirement... just add a class!

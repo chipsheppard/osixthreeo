@@ -92,7 +92,7 @@
 .hero-primary {
 	letter-spacing: 1px;
 	line-height: 1.25;
-	margin-bottom: .5em;
+	margin-bottom: .25em;
 	text-shadow: 1px 1px 8px rgba(0, 0, 0, .5);
 	@include font-size(3.75);
 
@@ -124,6 +124,21 @@
 
 		&:hover {
 			opacity: .8;
+		}
+
+		&.btn {
+			border: none;
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	div {
+		margin-top: 1.5em;
+		@include font-size(1.125);
+		@include breakpoint(phone-h) {
+			margin-top: 1em;
 		}
 	}
 }
