@@ -32,6 +32,12 @@ body.error404 .page-title {
 }
 
 .entry-content {
+	@include font-size(1.0625);
+
+	@include breakpoint(phone-h) {
+		@include font-size(1);
+	}
+
 	ol,
 	ul {
 		margin-left: 2.5em;
@@ -68,7 +74,6 @@ body.error404 .page-title {
 	dd {
 		margin: 0 1em 1em;
 	}
-
 }
 
 .single {
@@ -86,4 +91,8 @@ body.blog .page-header,
 body.archive .page-header,
 body.error404 .page-header {
 	margin-bottom: 2em;
+}
+
+body.home h1.entry-title {
+	display: none;
 }
