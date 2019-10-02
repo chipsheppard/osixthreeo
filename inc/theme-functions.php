@@ -68,7 +68,7 @@ if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
 		}
 
 		echo '<nav id="primary-navigation" class="site-navigation" role="navigation">';
-			echo '<button class="responsive-menu-icon" aria-controls="primary-menu" aria-expanded="false"><div class="menu-icon-wrap"><div class="menu-icon"></div></div></button>';
+			echo '<button class="responsive-menu-icon" aria-controls="primary-menu" aria-expanded="false"><span class="menu-icon-wrap"><span class="menu-icon"></span></span></button>';
 
 			echo '<div class="menu-wrap"><div class="menu-span">';
 

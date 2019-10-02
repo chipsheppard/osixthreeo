@@ -17,12 +17,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Header Meta Tags
  */
 function osixthreeo_header_meta_tags() {
-	echo '<meta charset="' . esc_html( get_bloginfo( 'charset' ) ) . '">';
-	echo '<meta name="viewport" content="width=device-width, initial-scale=1">';
-	echo '<link rel="profile" href="http://gmpg.org/xfn/11">';
-	echo '<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">';
+	echo '<meta charset="' . esc_html( get_bloginfo( 'charset' ) ) . '">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">
+';
 }
-add_action( 'wp_head', 'osixthreeo_header_meta_tags' );
+add_action( 'tha_head_top', 'osixthreeo_header_meta_tags' );
 
 
 /**
