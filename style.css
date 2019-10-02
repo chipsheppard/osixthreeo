@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /*!
 Theme Name: OsixthreeO
-Theme URI: https://sheppco.com/themes
+Theme URI: https://osixthreeo.com
 Author: Chip Sheppard
-Author URI: https://sheppco.com
+Author URI: https://osixthreeo.com
 Description: Flexibility but not the kitchen sink.
 Version: 1.3.0
 License: GNU General Public License v2 or later
@@ -1250,7 +1250,7 @@ button.dropdown-toggle.toggled-on:after {
     cursor: pointer;
     display: inline-block;
     margin-left: 0;
-    padding: .5em 2em .6125em;
+    padding: .6125em 1.75em;
     position: absolute;
     right: 0;
     top: 0;

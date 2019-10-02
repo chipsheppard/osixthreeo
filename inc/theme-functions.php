@@ -189,7 +189,7 @@ if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 			echo '</div>';
 		} else {
 			echo '<div class="site-info">';
-				echo '<p>"' . esc_html( OSIXTHREEO_THEME_NAME ) . '" by <a href="' . esc_html( OSIXTHREEO_AUTHOR_LINK ) . '">' . esc_html( OSIXTHREEO_AUTHOR_NAME ) . '</a></p>';
+				echo '<p>WordPress theme by <a href="' . esc_html( OSIXTHREEO_AUTHOR_LINK ) . '">' . esc_html( OSIXTHREEO_THEME_NAME ) . '</a></p>';
 				do_action( 'osixthreeo_inside_footer' );
 			echo '</div>';
 		}
