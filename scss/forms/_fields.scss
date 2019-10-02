@@ -16,6 +16,7 @@ input[type="color"],
 textarea {
 	background-color: #ffffff;
 	border: 1px solid $color__base-xlight;
+	margin-bottom: 1em;
 	padding: .5em;
 	width: 100%;
 	-webkit-appearance: none;
@@ -33,7 +34,6 @@ select {
 .post-password-form {
 	input[type="password"] {
 		width: auto;
-		margin-bottom: 1em;
 	}
 }
 

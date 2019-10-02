@@ -1,3 +1,4 @@
+/* Desktop Menu */
 .site-navigation {
 	display: table-cell;
 	text-align: right;
@@ -61,7 +62,7 @@
 		padding-right: 1.5em;
 	}
 
-	/* SUB MENU -------------------- */
+	/* sub-menu */
 	.sub-menu {
 		display: block;
 		left: -9999px;
@@ -114,8 +115,6 @@
 		}
 	}
 }
-
-
 
 button.dropdown-toggle {
 	border: 0;

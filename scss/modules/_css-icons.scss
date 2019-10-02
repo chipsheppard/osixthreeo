@@ -1,6 +1,4 @@
-/*
- * CSS Icons
---------------------------------------------- */
+/* CSS Icons */
 [class*=cssicon-] {
     display: inline-block;
     vertical-align: middle;
@@ -16,7 +14,7 @@
     pointer-events: none;
 }
 
-// CART
+// cart
 .cssicon-cart {
     width: 19px;
     height: 0;
@@ -36,8 +34,7 @@
     left: -2px;
 }
 
-
-// TAGS
+// tag
 .cssicon-tag {
 	background-color: currentColor;
 	border-radius: 1px 0 0 0;
@@ -75,7 +72,7 @@
     background-color: currentColor;
 }
 
-// GATEGORIES (folder)
+// folder (categories)
 .cssicon-folder {
 	width: 15px;
     height: 10px;

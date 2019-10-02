@@ -1,7 +1,4 @@
-/*
- * The Custom Header
----------------------------------------------------------------- */
-
+/* The Custom Header */
 .custom-header {
 	background: #f3f5f7;
 	background: linear-gradient(90deg, $color__highlight 0%, $color__secondary 100%);
@@ -77,8 +74,6 @@
 	}
 }
 
-/* THE TEXT
-- - - - - - - - - - - - - - - - - */
 .custom-header-image-text {
 	color: #ffffff;
 	position: absolute;
@@ -116,6 +111,7 @@
 		@include font-size(1.25);
 	}
 }
+
 .hero-primary,
 .hero-secondary {
 	a {

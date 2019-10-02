@@ -233,9 +233,9 @@
 
 	}
 
-	.wp-block-column {
-		margin-bottom: 2em;
-	}
+	//.wp-block-column {
+	//	margin-bottom: 2em;
+	//}
 
 	.wp-block-image {
 		margin: 0;
@@ -248,9 +248,20 @@
 		}
 	}
 
-	h4 {
+	h2,h3,h4,h5,h6 {
 		margin-top: 1em;
 	}
+
+	.wp-block-column {
+		&.up100, &.up150, &.up200 {position: relative; z-index:1;}
+		&.up100 {margin-top: -100px;}
+		&.up150 {margin-top: -150px;}
+		&.up200 {margin-top: -200px;}
+		@include breakpoint(phone-h) {
+			&.up100, &.up150, &.up200 {margin-top: 0;}
+		}
+	}
+
 
 	// A styling expirement... just add a class!
 	&.boxed {
@@ -262,7 +273,7 @@
 			border-radius: 8px;
 			box-shadow: 0px 0px 10px 0px rgba(176,180,183,0.17);
 
-			p, h2, h3, h4, div {
+			p, h2, h3, h4, h5, h6, div {
 				padding-left: 1.5rem;
 				padding-right: 1.5rem;
 			}

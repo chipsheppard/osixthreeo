@@ -7,7 +7,7 @@ html {
 
 *,
 *:before,
-*:after { /* see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+*:after {
 	box-sizing: inherit;
 }
 
@@ -28,11 +28,6 @@ ul, ol {
 	list-style: none;
 }
 
-
-/*
- * Typography
---------------------------------------------- */
-
 body,
 button,
 input,
@@ -43,8 +38,6 @@ textarea {
 	line-height: $font__line-height-body;
 	@include font-size(1);
 }
-
-/* Copy */
 
 p, form, address {
 	margin: 0 0 1.4em;
@@ -87,7 +80,6 @@ hr {
 	}
 }
 
-
 ::-moz-selection {
 	background-color: rgba(153,153,153,0.5);
 }
@@ -95,7 +87,6 @@ hr {
 	background-color: rgba(153,153,153,0.5);
 }
 
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {

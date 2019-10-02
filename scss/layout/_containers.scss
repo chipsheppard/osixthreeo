@@ -69,7 +69,6 @@
 	}
 }
 
-// Stack sidebars up for smaller devices
 @include breakpoint(tablet-v) {
 	.content-area,
 	.site-content .widget-area,

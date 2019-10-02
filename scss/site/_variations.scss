@@ -1,6 +1,5 @@
-/* Variations - ala WP Customizer controls
+/* WP Customizer layout variations
 --------------------------------------------- */
-
 // Site - Contained
 body.contained .site {
 	max-width: $size__site-max;
@@ -42,7 +41,6 @@ body.headercentered {
 		}
 	}
 }
-
 
 // Menu - Alternate Style
 .site-navigation.bgcolor {

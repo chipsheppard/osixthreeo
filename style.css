@@ -20,122 +20,61 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 /*-------------------------------------------------------------
+# Setup
 --------------------------------------------------------------*/
-/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
-/* from _s 11/11/2018
-
-/* Document
-========================================================================== */
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css - from _s 11/11/2018 */
 html {
   line-height: 1.15;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
 }
 
-/* Sections
-========================================================================== */
-/**
- * Remove the margin in all browsers.
- */
 body {
   margin: 0;
 }
 
-/**
- * Correct the font size and margin on `h1` elements within `section` and
- * `article` contexts in Chrome, Firefox, and Safari.
- */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-/* Grouping content
-========================================================================== */
-/**
- * 1. Add the correct box sizing in Firefox.
- * 2. Show the overflow in Edge and IE.
- */
 hr {
   box-sizing: content-box;
-  /* 1 */
   height: 0;
-  /* 1 */
   overflow: visible;
-  /* 2 */
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 pre {
   font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
 }
 
-/* Text-level semantics
-========================================================================== */
-/**
- * Remove the gray background on active links in IE 10.
- */
 a {
   background-color: transparent;
 }
 
-/**
- * 1. Remove the bottom border in Chrome 57-
- * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
- */
 abbr[title] {
   border-bottom: none;
-  /* 1 */
   text-decoration: underline;
-  /* 2 */
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
-  /* 2 */
 }
 
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
 b,
 strong {
   font-weight: bolder;
 }
 
-/**
- * 1. Correct the inheritance and scaling of font size in all browsers.
- * 2. Correct the odd `em` font sizing in all browsers.
- */
 code,
 kbd,
 samp {
   font-family: monospace, monospace;
-  /* 1 */
   font-size: 1em;
-  /* 2 */
 }
 
-/**
- * Add the correct font size in all browsers.
- */
 small {
   font-size: 80%;
 }
 
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in
- * all browsers.
- */
 sub,
 sup {
   font-size: 75%;
@@ -152,59 +91,31 @@ sup {
   top: -0.5em;
 }
 
-/* Embedded content
-========================================================================== */
-/**
- * Remove the border on images inside links in IE 10.
- */
 img {
   border-style: none;
 }
 
-/* Forms
-========================================================================== */
-/**
- * 1. Change the font styles in all browsers.
- * 2. Remove the margin in Firefox and Safari.
- */
 button,
 input,
 optgroup,
 select,
 textarea {
   font-family: inherit;
-  /* 1 */
   font-size: 100%;
-  /* 1 */
   line-height: 1.15;
-  /* 1 */
   margin: 0;
-  /* 2 */
 }
 
-/**
- * Show the overflow in IE.
- * 1. Show the overflow in Edge.
- */
 button,
 input {
-  /* 1 */
   overflow: visible;
 }
 
-/**
- * Remove the inheritance of text transform in Edge, Firefox, and IE.
- * 1. Remove the inheritance of text transform in Firefox.
- */
 button,
 select {
-  /* 1 */
   text-transform: none;
 }
 
-/**
- * Correct the inability to style clickable types in iOS and Safari.
- */
 button,
 [type="button"],
 [type="reset"],
@@ -212,9 +123,6 @@ button,
   -webkit-appearance: button;
 }
 
-/**
- * Remove the inner border and padding in Firefox.
- */
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
@@ -223,9 +131,6 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
-/**
- * Restore the focus styles unset by the previous rule.
- */
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
@@ -233,125 +138,64 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-/**
- * Correct the padding in Firefox.
- */
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
 
-/**
- * 1. Correct the text wrapping in Edge and IE.
- * 2. Correct the color inheritance from `fieldset` elements in IE.
- * 3. Remove the padding so developers are not caught out when they zero out
- *		`fieldset` elements in all browsers.
- */
 legend {
   box-sizing: border-box;
-  /* 1 */
   color: inherit;
-  /* 2 */
   display: table;
-  /* 1 */
   max-width: 100%;
-  /* 1 */
   padding: 0;
-  /* 3 */
   white-space: normal;
-  /* 1 */
 }
 
-/**
- * Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
 progress {
   vertical-align: baseline;
 }
 
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
 textarea {
   overflow: auto;
 }
 
-/**
- * 1. Add the correct box sizing in IE 10.
- * 2. Remove the padding in IE 10.
- */
 [type="checkbox"],
 [type="radio"] {
   box-sizing: border-box;
-  /* 1 */
   padding: 0;
-  /* 2 */
 }
 
-/**
- * Correct the cursor style of increment and decrement buttons in Chrome.
- */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
 [type="search"] {
   -webkit-appearance: textfield;
-  /* 1 */
   outline-offset: -2px;
-  /* 2 */
 }
 
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
 ::-webkit-file-upload-button {
   -webkit-appearance: button;
-  /* 1 */
   font: inherit;
-  /* 2 */
 }
 
-/* Interactive
-========================================================================== */
-/*
- * Add the correct display in Edge, IE 10+, and Firefox.
- */
 details {
   display: block;
 }
 
-/*
- * Add the correct display in all browsers.
- */
 summary {
   display: list-item;
 }
 
-/* Misc
-========================================================================== */
-/**
- * Add the correct display in IE 10+.
- */
 template {
   display: none;
 }
 
-/**
- * Add the correct display in IE 10.
- */
 [hidden] {
   display: none;
 }
@@ -400,7 +244,6 @@ template {
   clear: both;
 }
 
-/* Text meant only for screen readers. */
 .screen-reader-text {
   clip: rect(1px, 1px, 1px, 1px);
   position: absolute !important;
@@ -426,10 +269,8 @@ template {
   top: 5px;
   width: auto;
   z-index: 100000;
-  /* Above WP toolbar. */
 }
 
-/* Do not show the outline on the skip link target. */
 #content[tabindex="-1"]:focus {
   outline: 0;
 }
@@ -451,7 +292,6 @@ html {
 *,
 *:before,
 *:after {
-  /* see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
   box-sizing: inherit;
 }
 
@@ -471,9 +311,6 @@ ul, ol {
   list-style: none;
 }
 
-/*
- * Typography
---------------------------------------------- */
 body,
 button,
 input,
@@ -486,7 +323,6 @@ textarea {
   font-size: 1rem;
 }
 
-/* Copy */
 p, form, address {
   margin: 0 0 1.4em;
 }
@@ -537,7 +373,6 @@ hr.alt {
   background-color: rgba(153, 153, 153, 0.5);
 }
 
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
@@ -893,7 +728,6 @@ input[type="search"]::-webkit-search-results-button {
 }
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  /* IE10+ CSS styles go here */
   button,
   input[type="button"],
   input[type="reset"],
@@ -920,6 +754,7 @@ input[type="color"],
 textarea {
   background-color: #ffffff;
   border: 1px solid #dcdcdc;
+  margin-bottom: 1em;
   padding: .5em;
   width: 100%;
   -webkit-appearance: none;
@@ -951,7 +786,6 @@ select {
 
 .post-password-form input[type="password"] {
   width: auto;
-  margin-bottom: 1em;
 }
 
 ::-moz-placeholder {
@@ -1000,6 +834,7 @@ select {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+/* Links */
 a {
   color: #3220c5;
   text-decoration: none;
@@ -1017,12 +852,13 @@ a:hover, a:active {
   outline: 0;
 }
 
+/* Desktop Menu */
 .site-navigation {
   display: table-cell;
   text-align: right;
   vertical-align: middle;
   z-index: 2;
-  /* SUB MENU -------------------- */
+  /* sub-menu */
 }
 
 .site-navigation .menu-wrap {
@@ -1291,9 +1127,7 @@ button.dropdown-toggle.toggled-on:after {
   opacity: 0.8;
 }
 
-/*
- * Spin
- ------------------------------------------ */
+/* Spin function */
 .menu-icon {
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
@@ -1339,6 +1173,7 @@ button.dropdown-toggle.toggled-on:after {
   transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+/* Mobile Menu */
 @media all and (max-width: 768px) {
   .site-navigation {
     clear: both;
@@ -1469,8 +1304,7 @@ button.dropdown-toggle.toggled-on:after {
   }
 }
 
-/* POST NAVIGATION
---------------------------------------- */
+/* Post Navigation */
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
@@ -1662,6 +1496,7 @@ button.dropdown-toggle.toggled-on:after {
   }
 }
 
+/* Pagination */
 .pagination,
 .page-links {
   clear: both;
@@ -1828,8 +1663,7 @@ img.alignright,
   padding: 0;
 }
 
-/*
- * Captions */
+/* Captions */
 .wp-caption {
   margin-bottom: 1.5em;
   max-width: 100%;
@@ -1849,8 +1683,7 @@ img.alignright,
   text-align: center;
 }
 
-/*
- * Galleries */
+/* Galleries */
 .gallery {
   margin-bottom: 1.5em;
 }
@@ -1951,14 +1784,12 @@ img.alignright,
   width: 100%;
 }
 
-/*
- * Audio Embeds */
+/* Audio Embeds ???? */
 .mejs-button > button {
   background-color: transparent !important;
 }
 
-/*
- * Recent Comments Widget */
+/* Recent Comments Widget */
 .sidebar-widget.widget_recent_comments ul a {
   display: inline;
 }
@@ -2192,10 +2023,6 @@ img.alignright,
   margin-right: 0;
 }
 
-.wp-block-columns .wp-block-column {
-  margin-bottom: 2em;
-}
-
 .wp-block-columns .wp-block-image {
   margin: 0;
   border-radius: 8px 8px 0 0;
@@ -2208,8 +2035,31 @@ img.alignright,
      object-fit: cover;
 }
 
-.wp-block-columns h4 {
+.wp-block-columns h2, .wp-block-columns h3, .wp-block-columns h4, .wp-block-columns h5, .wp-block-columns h6 {
   margin-top: 1em;
+}
+
+.wp-block-columns .wp-block-column.up100, .wp-block-columns .wp-block-column.up150, .wp-block-columns .wp-block-column.up200 {
+  position: relative;
+  z-index: 1;
+}
+
+.wp-block-columns .wp-block-column.up100 {
+  margin-top: -100px;
+}
+
+.wp-block-columns .wp-block-column.up150 {
+  margin-top: -150px;
+}
+
+.wp-block-columns .wp-block-column.up200 {
+  margin-top: -200px;
+}
+
+@media all and (max-width: 640px) {
+  .wp-block-columns .wp-block-column.up100, .wp-block-columns .wp-block-column.up150, .wp-block-columns .wp-block-column.up200 {
+    margin-top: 0;
+  }
 }
 
 .wp-block-columns.boxed {
@@ -2223,7 +2073,7 @@ img.alignright,
   box-shadow: 0px 0px 10px 0px rgba(176, 180, 183, 0.17);
 }
 
-.wp-block-columns.boxed .wp-block-column p, .wp-block-columns.boxed .wp-block-column h2, .wp-block-columns.boxed .wp-block-column h3, .wp-block-columns.boxed .wp-block-column h4, .wp-block-columns.boxed .wp-block-column div {
+.wp-block-columns.boxed .wp-block-column p, .wp-block-columns.boxed .wp-block-column h2, .wp-block-columns.boxed .wp-block-column h3, .wp-block-columns.boxed .wp-block-column h4, .wp-block-columns.boxed .wp-block-column h5, .wp-block-columns.boxed .wp-block-column h6, .wp-block-columns.boxed .wp-block-column div {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
 }
@@ -2350,9 +2200,7 @@ img.flex {
   width: 100%;
 }
 
-/*
- * CSS Icons
---------------------------------------------- */
+/* CSS Icons */
 [class*=cssicon-] {
   display: inline-block;
   vertical-align: middle;
@@ -2447,18 +2295,6 @@ img.flex {
   position: absolute;
   top: -2px;
   left: 0px;
-}
-
-/* Globally hidden elements when Infinite Scroll is supported and in use. */
-.infinite-scroll .pagination,
-.infinite-scroll.neverending .site-footer {
-  /* Theme Footer (when set to scrolling) */
-  display: none;
-}
-
-/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
-.infinity-end.neverending .site-footer {
-  display: block;
 }
 
 /*--------------------------------------------------------------
@@ -2654,6 +2490,11 @@ img.flex {
   margin: 0 auto;
 }
 
+.wp-block-columns.silo {
+  display: -webkit-box;
+  display: flex;
+}
+
 .pullright {
   float: right;
 }
@@ -2803,9 +2644,7 @@ img.flex {
   padding-top: .5em;
 }
 
-/*
- * The Custom Header
----------------------------------------------------------------- */
+/* The Custom Header */
 .custom-header {
   background: #f3f5f7;
   background: -webkit-gradient(linear, left top, right top, from(#3220c5), to(#9932cc));
@@ -2880,8 +2719,6 @@ img.flex {
   width: 65px;
 }
 
-/* THE TEXT
-- - - - - - - - - - - - - - - - - */
 .custom-header-image-text {
   color: #ffffff;
   position: absolute;
@@ -3051,11 +2888,6 @@ img.flex {
   color: #ffffff;
 }
 
-.page-links {
-  clear: both;
-  margin: 0 0 1.5em;
-}
-
 .entry-title {
   margin: 0;
 }
@@ -3068,6 +2900,14 @@ img.flex {
   font-size: 16px;
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+body.page .entry-header,
+body.single .entry-header,
+body.blog .page-header,
+body.archive .page-header,
+body.error404 .page-header {
+  margin-bottom: 2em;
 }
 
 body.page .entry-title,
@@ -3091,6 +2931,10 @@ body.error404 .page-title {
     font-size: 30px;
     font-size: 1.875rem;
   }
+}
+
+body.home h1.entry-title {
+  display: none;
 }
 
 .entry-content {
@@ -3144,24 +2988,17 @@ body.error404 .page-title {
   margin: 0 1em 1em;
 }
 
+.page-links {
+  clear: both;
+  margin: 0 0 1.5em;
+}
+
 .single .hentry {
   margin-bottom: 6em;
 }
 
 .single .entry-content {
   margin-bottom: 2em;
-}
-
-body.page .entry-header,
-body.single .entry-header,
-body.blog .page-header,
-body.archive .page-header,
-body.error404 .page-header {
-  margin-bottom: 2em;
-}
-
-body.home h1.entry-title {
-  display: none;
 }
 
 .archive .format-aside .entry-header,
@@ -3324,7 +3161,6 @@ body.home h1.entry-title {
   line-height: 1.2;
 }
 
-/* READ MORE LINKS */
 .more-link {
   display: block;
   font-weight: 700;
@@ -3567,12 +3403,6 @@ body.home h1.entry-title {
   margin-bottom: 0;
 }
 
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-  width: 50%;
-}
-
 .comment-respond input:focus {
   border: 0;
 }
@@ -3605,11 +3435,6 @@ body.home h1.entry-title {
   position: absolute;
   left: 0;
   top: .5em;
-}
-
-.comment-respond label {
-  display: block;
-  margin-right: 12px;
 }
 
 .comment-list li,
@@ -3656,6 +3481,17 @@ body.home h1.entry-title {
   background-color: #ffffff;
 }
 
+.comment-form .comment-form-comment,
+.comment-form .comment-form-author,
+.comment-form .comment-form-email,
+.comment-form .comment-form-url {
+  margin-bottom: 0;
+}
+
+.comment-form-cookies-consent label {
+  margin-left: 12px;
+}
+
 .entry-pings .reply {
   display: none;
 }
@@ -3669,7 +3505,7 @@ body.home h1.entry-title {
   display: inline-block;
 }
 
-/* Variations - ala WP Customizer controls
+/* WP Customizer layout variations
 --------------------------------------------- */
 body.contained .site {
   max-width: 80em;

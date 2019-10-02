@@ -160,7 +160,9 @@ function tha_header_bottom() {
 	do_action( 'tha_header_bottom' );
 }
 
-/** XTRA Hook */
+/**
+ * XTRA Hooks addedby theme author.
+ * ------------------------------------------------ */
 function osixthreeo_header_before_wrap() {
 	do_action( 'osixthreeo_header_before_wrap' );
 }

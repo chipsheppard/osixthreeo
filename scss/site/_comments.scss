@@ -21,12 +21,6 @@
 	margin-bottom: 0;
 }
 
-.comment-respond input[type="email"],
-.comment-respond input[type="text"],
-.comment-respond input[type="url"] {
-	width: 50%
-}
-
 .comment-respond {
 
 	input:focus {
@@ -59,11 +53,6 @@
 			left: 0;
 			top: .5em;
 		}
-	}
-
-	label {
-		display: block;
-		margin-right: 12px;
 	}
 }
 
@@ -100,6 +89,19 @@
 			}
 		}
 	}
+}
+
+.comment-form {
+	.comment-form-comment,
+	.comment-form-author,
+	.comment-form-email,
+	.comment-form-url {
+		margin-bottom: 0;
+	}
+}
+
+.comment-form-cookies-consent label {
+	margin-left: 12px;
 }
 
 .entry-pings .reply {

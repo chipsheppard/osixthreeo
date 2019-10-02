@@ -14,13 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Controls.
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-alpha-color-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-radio-image-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-range-control.php';
-// phpcs:ignore WPThemeReview.CoreFunctionality.FileInclude.FileIncludeFound
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-content-area.php';
 
 // Color Palette.
@@ -59,8 +55,7 @@ if ( ! function_exists( 'osixthreeo_enqueue_color_palettes' ) ) {
 		// Grab our palette array and turn it into JS.
 		$palettes = wp_json_encode( osixthreeo_get_default_color_palettes() );
 
-		// Add our custom palettes
-		// json_encode takes care of escaping.
+		// Add our custom palettes - json_encode takes care of escaping.
 		wp_add_inline_script( 'wp-color-picker', 'jQuery.wp.wpColorPicker.prototype.options.palettes = ' . $palettes . ';' );
 	}
 }
