@@ -251,7 +251,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			);
 		}
 	);
-	// hero primary
+	// hero primary size
 	wp.customize(
 		'osixthreeo_settings[hero_text_primary_font_size]', function( value ) {
 			value.bind(
@@ -261,7 +261,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			);
 		}
 	);
-	// hero secondary
+	// hero secondary size
 	wp.customize(
 		'osixthreeo_settings[hero_text_secondary_font_size]', function( value ) {
 			value.bind(
@@ -271,6 +271,27 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			);
 		}
 	);
+	// hero primary alignment
+	wp.customize(
+		'osixthreeo_settings[hero_text_primary_alignment]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.hero-primary' ).css( 'text-align', newval );
+				}
+			);
+		}
+	);
+	// hero secondary alignment
+	wp.customize(
+		'osixthreeo_settings[hero_text_secondary_alignment]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.hero-secondary' ).css( 'text-align', newval );
+				}
+			);
+		}
+	);
+
 	// post meta
 	wp.customize(
 		'osixthreeo_settings[meta_font_size]', function( value ) {

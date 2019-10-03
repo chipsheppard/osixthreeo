@@ -3,7 +3,7 @@
 
 	.content-area {
 		padding: 2.5em 0;
-		width: $size__site-main;
+		width: 100%;
 	}
 
 	.widget-area {
@@ -18,7 +18,7 @@
 .content-inner-wrap {
 	margin: 0 auto;
 	max-width: $size__site-max;
-	width: $size__site-main;
+	width: 100%;
 	padding: 0 $size__site-padding;
 }
 
@@ -78,7 +78,7 @@
 	.sidebar-left .site-content .widget-area {
 		display: block;
 		float: none;
-		width: $size__site-main;
+		width: 100%;
 	}
 	.site-content .widget-area,
 	.sidebar-right .site-content .widget-area,

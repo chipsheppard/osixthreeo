@@ -25,10 +25,10 @@
     @media all and (max-width: 900px) { @content; }
   }
   @if $point == tablet-v {
-    @media all and (max-width: 768px) { @content; }
+    @media all and (max-width: 768px) { @content; }// device is less than or equal to... apply styles
   }
   @if $point == tablet-min-v {
-    @media all and (min-width: 769px) { @content; }
+    @media all and (min-width: 769px) { @content; }// device is greater than or equal to... apply styles
   }
   @if $point == phone-h {
     @media all and (max-width: 640px) { @content; }

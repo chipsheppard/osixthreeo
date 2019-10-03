@@ -2462,6 +2462,32 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
+		// primary alignment.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[hero_text_primary_alignment]',
+			array(
+				'default'           => $defaults['hero_text_primary_alignment'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_choices',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[hero_text_primary_alignment]',
+			array(
+				'type'     => 'select',
+				'label'    => esc_html__( 'Alignment', 'osixthreeo' ),
+				'section'  => 'osixthreeo_ch_text',
+				'choices'  => array(
+					''         => esc_html__( 'Left', 'osixthreeo' ),
+					'right'   => esc_html__( 'Right', 'osixthreeo' ),
+					'center' => esc_html__( 'Centered', 'osixthreeo' ),
+				),
+				'settings' => 'osixthreeo_settings[hero_text_primary_alignment]',
+				'priority' => 19,
+			)
+		);
+
 		// primary color.
 		$wp_customize->add_setting(
 			'osixthreeo_settings[hero_text_primary_color]',
@@ -2573,6 +2599,32 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					),
 					'priority'    => 38,
 				)
+			)
+		);
+
+		// secondary alignment.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[hero_text_secondary_alignment]',
+			array(
+				'default'           => $defaults['hero_text_secondary_alignment'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_choices',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[hero_text_secondary_alignment]',
+			array(
+				'type'     => 'select',
+				'label'    => esc_html__( 'Alignment', 'osixthreeo' ),
+				'section'  => 'osixthreeo_ch_text',
+				'choices'  => array(
+					''         => esc_html__( 'Left', 'osixthreeo' ),
+					'right'   => esc_html__( 'Right', 'osixthreeo' ),
+					'center' => esc_html__( 'Centered', 'osixthreeo' ),
+				),
+				'settings' => 'osixthreeo_settings[hero_text_secondary_alignment]',
+				'priority' => 39,
 			)
 		);
 

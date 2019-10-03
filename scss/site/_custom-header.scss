@@ -77,9 +77,13 @@
 .custom-header-image-text {
 	color: #ffffff;
 	position: absolute;
-	text-align: center;
+	//text-align: center;
 	top: 50%;
-	transform: translateY(-30%);
+	left: 50%;
+	transform: translate(-50%, -30%);
+	margin: 0 auto;
+	max-width: $size__site-max;
+	padding: 0 $size__site-padding;
 	width: 100%;
 	z-index: 5;
 }

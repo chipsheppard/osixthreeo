@@ -1220,8 +1220,6 @@ button.dropdown-toggle.toggled-on:after {
     padding-right: 0;
   }
   .site-navigation ul {
-    display: block;
-    float: none;
     margin-left: 0;
   }
   .site-navigation li {
@@ -2723,10 +2721,13 @@ img.flex {
 .custom-header-image-text {
   color: #ffffff;
   position: absolute;
-  text-align: center;
   top: 50%;
-  -webkit-transform: translateY(-30%);
-          transform: translateY(-30%);
+  left: 50%;
+  -webkit-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  margin: 0 auto;
+  max-width: 80em;
+  padding: 0 4%;
   width: 100%;
   z-index: 5;
 }
