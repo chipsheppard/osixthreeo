@@ -9,8 +9,12 @@
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 2.5em 0;
+		padding: 6em 0 2.5em;
 		width: $size__site-sidebar;
+
+		@include breakpoint(tablet-v) {
+			padding: 2em 0;
+		}
 	}
 }
 
@@ -37,7 +41,10 @@
 
 	.site-content .widget-area {
 		float: left;
-		margin-bottom: 1.5em;
+
+		@include breakpoint(tablet-v) {
+			padding-bottom: 0;
+		}
 	}
 }
 

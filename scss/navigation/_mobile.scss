@@ -7,16 +7,15 @@
 		margin-right: calc(50% - 50vw);
 		width: auto;
 		max-width: 1000%;
+		min-width: 100%;
 		padding-top: 0;
 		text-align: left;
-		min-width: 100%;
 		@include font-size(.875);
 
 		.menu-wrap {
 			display: none;
 			overflow: hidden;
 			max-height: 0;
-			transition: all .25s ease;
 		}
 
 		&.toggled-on .menu-wrap {

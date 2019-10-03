@@ -253,12 +253,15 @@
 	}
 
 	.wp-block-column {
-		&.up100, &.up150, &.up200 {position: relative; z-index:1;}
+		&.up100, &.up125, &.up150, &.up160, &.up175, &.up200 {position: relative; z-index:1;}
 		&.up100 {margin-top: -100px;}
+		&.up125 {margin-top: -125px;}
 		&.up150 {margin-top: -150px;}
+		&.up160 {margin-top: -160px;}
+		&.up175 {margin-top: -175px;}
 		&.up200 {margin-top: -200px;}
 		@include breakpoint(phone-h) {
-			&.up100, &.up150, &.up200 {margin-top: 0;}
+			&.up100, &.up125, &.up150, &.up160, &.up175, &.up200 {margin-top: 0;}
 		}
 	}
 
@@ -280,18 +283,18 @@
 		}
 
 		&.up100 {margin-top: -100px;}
-		&.up120 {margin-top: -120px;}
-		&.up140 {margin-top: -140px;}
+		&.up125 {margin-top: -125px;}
+		&.up150 {margin-top: -150px;}
 		&.up160 {margin-top: -160px;}
-		&.up180 {margin-top: -180px;}
+		&.up175 {margin-top: -175px;}
 		&.up200 {margin-top: -200px;}
 		@include breakpoint(phone-h) {
-			&.up100 {margin-top: -70px;}
-			&.up120 {margin-top: -90px;}
-			&.up140 {margin-top: -110px;}
-			&.up160 {margin-top: -130px;}
-			&.up180 {margin-top: -150px;}
-			&.up200 {margin-top: -170px;}
+			&.up100 {margin-top: -50px;}
+			&.up125 {margin-top: -62px;}
+			&.up150 {margin-top: -75px;}
+			&.up160 {margin-top: -80px;}
+			&.up175 {margin-top: -87px;}
+			&.up200 {margin-top: -100px;}
 		}
 	}
 

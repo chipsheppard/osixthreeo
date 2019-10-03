@@ -8,7 +8,7 @@
  * @license  GPL-2.0+
  */
 
-if ( ! is_active_sidebar( 'sidebar' ) ) {
+if ( ! is_active_sidebar( 'sidebar' ) && ! is_active_sidebar( 'sidebar-p' ) && ! is_active_sidebar( 'sidebar-w' ) ) {
 	return;
 }
 
@@ -17,15 +17,15 @@ echo '<aside id="secondary" class="widget-area" role="complementary">';
 tha_sidebar_top();
 if ( OSIXTHREEO_PRO ) :
 	if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) :
-		if ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) :
+		if ( is_active_sidebar( 'sidebar-w' ) && ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) ) :
 			dynamic_sidebar( 'sidebar-w' );
-		elseif ( is_page() ) :
+		elseif ( is_page() && is_active_sidebar( 'sidebar-p' ) ) :
 			dynamic_sidebar( 'sidebar-p' );
 		else :
 			dynamic_sidebar( 'sidebar' );
 		endif;
-	elseif ( is_page() ) :
-			dynamic_sidebar( 'sidebar-p' );
+	elseif ( is_page() && is_active_sidebar( 'sidebar-p' ) ) :
+		dynamic_sidebar( 'sidebar-p' );
 	else :
 		dynamic_sidebar( 'sidebar' );
 	endif;
