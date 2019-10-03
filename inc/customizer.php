@@ -2670,7 +2670,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				)
 			)
 		);
-
 	}
 }
 
