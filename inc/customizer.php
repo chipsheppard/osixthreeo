@@ -383,6 +383,26 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
+		// section message.
+		$wp_customize->add_setting(
+			'layout-pro-callout',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'layout-pro-callout',
+				array(
+					'section'  => 'osixthreeo_site_layout',
+					'priority' => 42,
+					'label'    => esc_html__( 'Get more control with the OsixthreeO Pro add-on', 'osixthreeo' ),
+					'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+				)
+			)
+		);
+
 		/*
 		 * COLORS tab ------------------------------------------------------------------------
 		 * -----------------------------------------------------------------------------------

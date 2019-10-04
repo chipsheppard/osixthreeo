@@ -1,15 +1,17 @@
 === OsixthreeO ===
 
 Contributors: ultranorman
-Tags: translation-ready, theme-options, full-width-template, featured-image-header, featured-images, sticky-post, custom-logo, custom-header, custom-colors, custom-background, flexible-header, one-column, two-columns, wide-blocks, block-styles
+Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
 Requires at least: 4.0
 Tested up to: 5.2.3
-Stable tag: 1.0.0
 License: GPLv2 or later
+Stable tag: 1.0.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+OsixthreeO is a flexible theme for WordPress 5.0+. Extensive customizer controls allow over layout, color and typography settings.
+
 == Description ==
-OsixthreeO is a basic but flexible starter theme for WordPress 5.0+.
+OsixthreeO has a unique custom header area with color, layout, text and height controls that let you decide what your site looks like.
 
 2 Widget Areas
   - Sidebar

@@ -4,7 +4,7 @@ Theme Name: OsixthreeO
 Theme URI: https://osixthreeo.com
 Author: Chip Sheppard
 Author URI: https://osixthreeo.com
-Description: Flexibility but not the kitchen sink.
+Description: A flexibile, lightweight, multi-purpose theme with a colorful header.
 Version: 1.3.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -620,7 +620,7 @@ blockquote {
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  background-color: #3220c5;
+  background-color: #4169e1;
   color: #ffffff;
   border: 0;
   border-radius: 6px;
@@ -636,11 +636,11 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
   color: #ffffff;
-  background-color: #9932cc;
+  background-color: #ba55d3;
 }
 
 .btn {
-  background-color: #3220c5;
+  background-color: #4169e1;
   border-radius: 6px;
   color: #ffffff;
   cursor: pointer;
@@ -698,7 +698,7 @@ input[type="submit"]:hover {
 }
 
 .btn.secondary {
-  background-color: #9932cc;
+  background-color: #ba55d3;
 }
 
 .btn.dark {
@@ -823,7 +823,7 @@ select {
 }
 
 .search-form input[type="submit"]:hover, .search-form input[type="submit"]:focus {
-  background: #3220c5;
+  background: #4169e1;
   color: #fff;
 }
 
@@ -836,12 +836,12 @@ select {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #3220c5;
+  color: #4169e1;
   text-decoration: none;
 }
 
 a:hover, a:focus, a:active {
-  color: #9932cc;
+  color: #ba55d3;
 }
 
 a:focus {
@@ -1334,7 +1334,7 @@ button.dropdown-toggle.toggled-on:after {
 .posts-navigation .nav-next a:hover,
 .post-navigation .nav-previous a:hover,
 .post-navigation .nav-next a:hover {
-  color: #3220c5;
+  color: #4169e1;
 }
 
 .posts-navigation .nav-previous a span,
@@ -1434,7 +1434,7 @@ button.dropdown-toggle.toggled-on:after {
 
 .comment-navigation .nav-previous a:hover,
 .comment-navigation .nav-next a:hover {
-  color: #3220c5;
+  color: #4169e1;
 }
 
 .comment-navigation .nav-previous {
@@ -2193,7 +2193,7 @@ img.alignright,
 }
 
 .wp-block-search__button:hover, .wp-block-search__button:focus {
-  background: #3220c5;
+  background: #4169e1;
   color: #fff;
   cursor: pointer;
 }
@@ -2689,9 +2689,9 @@ img.flex {
 /* The Custom Header */
 .custom-header {
   background: #f3f5f7;
-  background: -webkit-gradient(linear, left top, right top, from(#3220c5), to(#9932cc));
-  background: -webkit-linear-gradient(left, #3220c5 0%, #9932cc 100%);
-  background: linear-gradient(90deg, #3220c5 0%, #9932cc 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#4169e1), to(#ba55d3));
+  background: -webkit-linear-gradient(left, #4169e1 0%, #ba55d3 100%);
+  background: linear-gradient(90deg, #4169e1 0%, #ba55d3 100%);
   position: absolute;
   top: 0;
   width: 100%;
@@ -3148,7 +3148,7 @@ body.home h1.entry-title {
 
 .blog .hentry.sticky,
 .archive .hentry.sticky {
-  border-top: 2px solid #3220c5;
+  border-top: 2px solid #4169e1;
 }
 
 .blog .entry-content p,
@@ -3657,7 +3657,7 @@ body.headercentered .menu-wrap {
 }
 
 .sidebar-widget ul a:hover {
-  color: #3220c5;
+  color: #4169e1;
 }
 
 .sidebar-widget .menu a {
@@ -3666,7 +3666,7 @@ body.headercentered .menu-wrap {
 }
 
 .sidebar-widget .menu a:hover {
-  color: #3220c5;
+  color: #4169e1;
 }
 
 .sidebar-widget .menu li li {
@@ -3696,7 +3696,7 @@ body.headercentered .menu-wrap {
 }
 
 .sidebar-widget .menu li.current-menu-item > a {
-  color: #3220c5;
+  color: #4169e1;
 }
 
 .sidebar-widget .menu-item-has-children.current-menu-item > a,
@@ -3765,7 +3765,7 @@ img#wpstats {
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
-  background-color: #3220c5;
+  background-color: #4169e1;
   color: #ffffff;
   border: 0;
   border-radius: 6px;
@@ -3781,7 +3781,7 @@ img#wpstats {
 .woocommerce button.button:hover,
 .woocommerce input.button:hover {
   color: #ffffff;
-  background-color: #9932cc;
+  background-color: #ba55d3;
 }
 
 .woocommerce #respond input#submit:focus, .woocommerce #respond input#submit:active,
@@ -3825,7 +3825,7 @@ img#wpstats {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-  background-color: #9932cc;
+  background-color: #ba55d3;
 }
 
 .woocommerce #respond input#submit.alt:hover,
@@ -3875,7 +3875,7 @@ img#wpstats {
 }
 
 .subscription-toggle {
-  background-color: #3220c5;
+  background-color: #4169e1;
   border-radius: 6px;
   color: #ffffff;
   cursor: pointer;
