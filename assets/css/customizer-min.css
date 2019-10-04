@@ -168,16 +168,24 @@
 
 /* PRO CALLOUTS
 ------------------------------------------------- */
-#customize-control-layout-pro-callout {
+#customize-control-layout-pro-callout,
+#customize-control-colors-pro-callout,
+#customize-control-typography-pro-callout,
+#customize-control-themeops-pro-callout {
   background-color: #f3f3f3;
   border: 1px solid #ccc;
 }
 
-#sub-accordion-section-osixthreeo_site_layout #customize-control-layout-pro-callout .customize-control-title {
-  padding: 12px 12px 12px 48px;
-  text-transform: none;
-  letter-spacing: 0;
+#sub-accordion-section-osixthreeo_site_layout #customize-control-layout-pro-callout .customize-control-title,
+#sub-accordion-section-colors #customize-control-colors-pro-callout .customize-control-title,
+#sub-accordion-section-osixthreeo_typography #customize-control-typography-pro-callout .customize-control-title,
+#sub-accordion-section-osixthreeo_themeops #customize-control-themeops-pro-callout .customize-control-title {
+  background: url("../images/o.png") no-repeat 12px 13px;
   font-size: 14px;
+  letter-spacing: 0;
+  line-height: 1.4;
+  padding: 12px 12px 12px 36px;
+  text-transform: none;
 }
 
 #customize-controls .probtn {
@@ -187,7 +195,7 @@
   border-radius: 6px;
   color: #fff;
   font-weight: bold;
-  margin: 0 12px;
+  margin: 0 0 14px 36px;
   text-decoration: none;
   display: inline-block;
 }

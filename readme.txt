@@ -8,7 +8,7 @@ License: GPLv2 or later
 Stable tag: 1.0.0
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-OsixthreeO is a flexible theme for WordPress 5.0+. Extensive customizer controls allow over layout, color and typography settings.
+OsixthreeO is a flexible, lightweight, multi-purpose theme with extensive customizer controls and a colorful custom header.
 
 == Description ==
 OsixthreeO has a unique custom header area with color, layout, text and height controls that let you decide what your site looks like.
@@ -31,6 +31,7 @@ https://github.com/zamoose/themehookalliance
 
 Gutenberg column blocks:
 Add a class of "boxed" to a Columns Block to style the columns in nice boxes.
+Add the class "up100" to push a column up for a staggered look - up125, up150, up160, up175 & up200 are also available.
 
 
 == ChangeLog ==

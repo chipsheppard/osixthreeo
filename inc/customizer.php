@@ -383,25 +383,27 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		// section message.
-		$wp_customize->add_setting(
-			'layout-pro-callout',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
+		if ( ! OSIXTHREEO_PRO ) :
+			// section message.
+			$wp_customize->add_setting(
 				'layout-pro-callout',
 				array(
-					'section'  => 'osixthreeo_site_layout',
-					'priority' => 42,
-					'label'    => esc_html__( 'Get more control with the OsixthreeO Pro add-on', 'osixthreeo' ),
-					'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+					'sanitize_callback' => 'wp_kses_post',
 				)
-			)
-		);
+			);
+			$wp_customize->add_control(
+				new Osixthreeo_Content_Area(
+					$wp_customize,
+					'layout-pro-callout',
+					array(
+						'section'  => 'osixthreeo_site_layout',
+						'priority' => 42,
+						'label'    => esc_html__( 'Get more layout controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
+						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+					)
+				)
+			);
+		endif;
 
 		/*
 		 * COLORS tab ------------------------------------------------------------------------
@@ -891,6 +893,28 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				)
 			)
 		);
+
+		if ( ! OSIXTHREEO_PRO ) :
+			// section message.
+			$wp_customize->add_setting(
+				'colors-pro-callout',
+				array(
+					'sanitize_callback' => 'wp_kses_post',
+				)
+			);
+			$wp_customize->add_control(
+				new Osixthreeo_Content_Area(
+					$wp_customize,
+					'colors-pro-callout',
+					array(
+						'section'  => 'colors',
+						'priority' => 100,
+						'label'    => esc_html__( 'Get more color controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
+						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+					)
+				)
+			);
+		endif;
 
 		/*
 		 * Typography - tab -------------------------------------------------------------------
@@ -1853,6 +1877,27 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
+		if ( ! OSIXTHREEO_PRO ) :
+			$wp_customize->add_setting(
+				'typography-pro-callout',
+				array(
+					'sanitize_callback' => 'wp_kses_post',
+				)
+			);
+			$wp_customize->add_control(
+				new Osixthreeo_Content_Area(
+					$wp_customize,
+					'typography-pro-callout',
+					array(
+						'section'  => 'osixthreeo_typography',
+						'priority' => 115,
+						'label'    => esc_html__( 'Get more controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
+						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+					)
+				)
+			);
+		endif;
+
 		/*
 		 * THEME OPTIONS ------------------------------------------------------------------------
 		 * new tab ------------------------------------------------------------------------------
@@ -2007,6 +2052,27 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'priority' => 56,
 			)
 		);
+
+		if ( ! OSIXTHREEO_PRO ) :
+			$wp_customize->add_setting(
+				'themeops-pro-callout',
+				array(
+					'sanitize_callback' => 'wp_kses_post',
+				)
+			);
+			$wp_customize->add_control(
+				new Osixthreeo_Content_Area(
+					$wp_customize,
+					'themeops-pro-callout',
+					array(
+						'section'  => 'osixthreeo_themeops',
+						'priority' => 58,
+						'label'    => esc_html__( 'Get more controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
+						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+					)
+				)
+			);
+		endif;
 
 		/*
 		 * CUSTOM HEADER --------------------------------------------------------------------------
