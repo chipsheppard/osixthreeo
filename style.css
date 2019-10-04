@@ -2036,9 +2036,17 @@ img.alignright,
   margin-top: 1em;
 }
 
-.wp-block-columns .wp-block-column.up100, .wp-block-columns .wp-block-column.up125, .wp-block-columns .wp-block-column.up150, .wp-block-columns .wp-block-column.up160, .wp-block-columns .wp-block-column.up175, .wp-block-columns .wp-block-column.up200 {
+.wp-block-columns .wp-block-column.up50, .wp-block-columns .wp-block-column.up75, .wp-block-columns .wp-block-column.up100, .wp-block-columns .wp-block-column.up125, .wp-block-columns .wp-block-column.up150, .wp-block-columns .wp-block-column.up160, .wp-block-columns .wp-block-column.up175, .wp-block-columns .wp-block-column.up200 {
   position: relative;
   z-index: 1;
+}
+
+.wp-block-columns .wp-block-column.up50 {
+  margin-top: -50px;
+}
+
+.wp-block-columns .wp-block-column.up75 {
+  margin-top: -75px;
 }
 
 .wp-block-columns .wp-block-column.up100 {
@@ -2066,7 +2074,7 @@ img.alignright,
 }
 
 @media all and (max-width: 640px) {
-  .wp-block-columns .wp-block-column.up100, .wp-block-columns .wp-block-column.up125, .wp-block-columns .wp-block-column.up150, .wp-block-columns .wp-block-column.up160, .wp-block-columns .wp-block-column.up175, .wp-block-columns .wp-block-column.up200 {
+  .wp-block-columns .wp-block-column.up50, .wp-block-columns .wp-block-column.up75, .wp-block-columns .wp-block-column.up100, .wp-block-columns .wp-block-column.up125, .wp-block-columns .wp-block-column.up150, .wp-block-columns .wp-block-column.up160, .wp-block-columns .wp-block-column.up175, .wp-block-columns .wp-block-column.up200 {
     margin-top: 0;
   }
 }
@@ -2085,6 +2093,14 @@ img.alignright,
 .wp-block-columns.boxed .wp-block-column p, .wp-block-columns.boxed .wp-block-column h2, .wp-block-columns.boxed .wp-block-column h3, .wp-block-columns.boxed .wp-block-column h4, .wp-block-columns.boxed .wp-block-column h5, .wp-block-columns.boxed .wp-block-column h6, .wp-block-columns.boxed .wp-block-column div {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
+}
+
+.wp-block-columns.boxed.up50 {
+  margin-top: -50px;
+}
+
+.wp-block-columns.boxed.up75 {
+  margin-top: -75px;
 }
 
 .wp-block-columns.boxed.up100 {
@@ -2112,6 +2128,12 @@ img.alignright,
 }
 
 @media all and (max-width: 640px) {
+  .wp-block-columns.boxed.up50 {
+    margin-top: -25px;
+  }
+  .wp-block-columns.boxed.up75 {
+    margin-top: -37px;
+  }
   .wp-block-columns.boxed.up100 {
     margin-top: -50px;
   }
