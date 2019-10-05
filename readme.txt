@@ -1,17 +1,17 @@
 === OsixthreeO ===
 
-Contributors: ultranorman
+Contributors: Chip Sheppard
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
-Requires at least: 4.0
+Requires at least: 4.5
 Tested up to: 5.2.3
-License: GPLv2 or later
 Stable tag: 1.0.0
+License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 OsixthreeO is a flexible, lightweight, multi-purpose theme with extensive customizer controls and a colorful custom header.
 
 == Description ==
-OsixthreeO has a unique custom header area with color, layout, text and height controls that let you decide what your site looks like.
+OsixthreeO has a unique custom header with color, layout, text and height controls that let you decide what your site looks like.
 
 2 Widget Areas
   - Sidebar
@@ -36,7 +36,7 @@ Add the class "up100" to push a column up for a staggered look - up125, up150, u
 
 == ChangeLog ==
 
-= 1.0.0 - 10 30 2019 =
+= 1.0.0 - 10 04 2019 =
 * Submit to WordPress.org.
 
 = 0.9.0 - 09 30 2019 =
