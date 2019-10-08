@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * Header Meta Tags
  */
 function osixthreeo_header_meta_tags() {
-	echo '<meta charset="' . esc_html( get_bloginfo( 'charset' ) ) . '">
+	echo '<meta charset="' . esc_attr( get_bloginfo( 'charset' ) ) . '">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">
@@ -92,11 +92,17 @@ add_filter( 'excerpt_length', 'osixthreeo_custom_excerpt_length', 999 );
 /**
  * SEARCH Change Text in Submit Button
  *
- * @param string $text string of text.
+ * @param String $form string of text.
  * @link https://wordpress.org/support/topic/how-do-i-change-some-details-of-the-search-widget
  */
-function osixthreeo_search_button( $text ) {
-	$text = str_replace( 'value="Search"', 'value="go"', $text );
-	return $text;
+function osixthreeo_search_button( $form ) {
+	$form = '<form role="search" method="get" class="search-form" action="' . home_url( '/' ) . '" >
+	<label for="s">
+		<span class="screen-reader-text">' . __( 'search for', 'osixthreeo' ) . '</span>
+		<input type="search" class="search-field" placeholder="' . esc_attr__( 'Search ...', 'osixthreeo' ) . '" value="' . get_search_query() . '" name="s" />
+	</label>
+	<input type="submit" class="search-submit" value="' . esc_attr__( 'go', 'osixthreeo' ) . '" />
+	</form>';
+	return $form;
 }
 add_filter( 'get_search_form', 'osixthreeo_search_button' );

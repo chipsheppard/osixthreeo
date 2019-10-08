@@ -9,14 +9,13 @@
  * @license  GPL-2.0+
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 /**
- * The Customize Radio Image Control class extends the WP_Customize_Control class.
+ * Extends the WP_Customize_Control class.
  * Creates the ever-coveted list of 'image' radio inputs.
- *
- * @author     Chip Sheppard w/ props to Justin Tadlock <justin@justintadlock.com>
- * @link       http://themehybrid.com/hybrid-core
- * @link       https://napitwptech.com/tutorial/wordpress-development/extend-customizer-options-include-radio-image-option/
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
  */
 class Osixthreeo_Radio_Image_Control extends WP_Customize_Control {
 

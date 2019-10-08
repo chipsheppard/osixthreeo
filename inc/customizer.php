@@ -42,7 +42,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 		$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 		$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-		$wp_customize->get_control( 'header_textcolor' )->label     = 'Site title & description';
 		$wp_customize->get_control( 'header_textcolor' )->priority  = 22;
 
 		if ( isset( $wp_customize->selective_refresh ) ) {
@@ -399,7 +398,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'section'  => 'osixthreeo_site_layout',
 						'priority' => 42,
 						'label'    => esc_html__( 'Get more layout controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
 					)
 				)
 			);
@@ -910,7 +909,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'section'  => 'colors',
 						'priority' => 100,
 						'label'    => esc_html__( 'Get more color controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
 					)
 				)
 			);
@@ -1892,7 +1891,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'section'  => 'osixthreeo_typography',
 						'priority' => 115,
 						'label'    => esc_html__( 'Get more controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
 					)
 				)
 			);
@@ -2068,7 +2067,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'section'  => 'osixthreeo_themeops',
 						'priority' => 58,
 						'label'    => esc_html__( 'Get more controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => __( '<a href="https://osixthreeo.com" class="probtn" target="_blank" rel="noopener">Get OsixthreeO Pro</a>', 'osixthreeo' ) . '</p>',
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
 					)
 				)
 			);
@@ -2565,8 +2564,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'Alignment', 'osixthreeo' ),
 				'section'  => 'osixthreeo_ch_text',
 				'choices'  => array(
-					''         => esc_html__( 'Left', 'osixthreeo' ),
-					'right'   => esc_html__( 'Right', 'osixthreeo' ),
+					'left'   => esc_html__( 'Left', 'osixthreeo' ),
+					'right'  => esc_html__( 'Right', 'osixthreeo' ),
 					'center' => esc_html__( 'Centered', 'osixthreeo' ),
 				),
 				'settings' => 'osixthreeo_settings[hero_text_primary_alignment]',
@@ -2705,8 +2704,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'Alignment', 'osixthreeo' ),
 				'section'  => 'osixthreeo_ch_text',
 				'choices'  => array(
-					''         => esc_html__( 'Left', 'osixthreeo' ),
-					'right'   => esc_html__( 'Right', 'osixthreeo' ),
+					'left'   => esc_html__( 'Left', 'osixthreeo' ),
+					'right'  => esc_html__( 'Right', 'osixthreeo' ),
 					'center' => esc_html__( 'Centered', 'osixthreeo' ),
 				),
 				'settings' => 'osixthreeo_settings[hero_text_secondary_alignment]',

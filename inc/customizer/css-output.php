@@ -133,7 +133,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_meta_color                    = $defaults['meta_color'];
 
 		// Initiate our class.
-		$css = new Customizer_CSS();
+		$css = new Osixthreeo_Customizer_CSS();
 
 		/*
 		 * get_header_textcolor() options: Any hex value, 'blank' to hide text. Default: HEADER_TEXTCOLOR.

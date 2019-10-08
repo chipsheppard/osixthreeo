@@ -15,7 +15,7 @@
  * Calls the class on the post edit screen.
  */
 function osixthreeo_fi_checkbox() {
-	new Fi_Checkbox();
+	new Osixthreeo_Featuredimage_Checkbox();
 }
 
 if ( is_admin() ) {
@@ -26,7 +26,7 @@ if ( is_admin() ) {
 /**
  * The Class.
  */
-class Fi_Checkbox {
+class Osixthreeo_Featuredimage_Checkbox {
 
 	/**
 	 * Hook into the appropriate actions when the class is constructed.

@@ -9,13 +9,12 @@
  * @license  GPL-2.0+
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 /**
- * This control adds a second slider for opacity to the stock WordPress color picker,
- * and it includes logic to seamlessly convert between RGBa and Hex color values as.
- *
- * @author     Chip Sheppard w/ props to Justin Tadlock <justin@justintadlock.com>
- * @link       http://themehybrid.com/hybrid-core
- * @license    http://www.gnu.org/licenses/old-licenses/gpl-2.0.html
+ * Color control with alpha slider.
  */
 class Osixthreeo_Alpha_Color_Control extends WP_Customize_Control {
 

@@ -30,10 +30,7 @@ function osixthreeo_posted_on() {
 		)
 	);
 
-	$posted_on = sprintf(
-		esc_html( '%s', 'post date', 'osixthreeo' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-	);
+	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 	echo '<span class="posted-on">' . wp_kses_post( $posted_on ) . '</span> ';
 }
@@ -88,9 +85,19 @@ function osixthreeo_comment_count() {
 
 	$num_comments = get_comments_number();
 
-	if ( is_single() || is_archive() || is_home() && ! post_password_required() && comments_open() && ( $num_comments > 0 ) ) {
+	if ( '0' === $num_comments ) {
+		return;
+	}
+
+	if ( is_single() || is_archive() || is_home() || is_blog() && ! post_password_required() && comments_open() ) {
 		echo '<span class="comments-link">';
-		comments_popup_link( 'No comments yet', '1 comment', '% comments' );
+		comments_popup_link(
+			'',
+			__( '1 comment', 'osixthreeo' ),
+			__( '% comments', 'osixthreeo' ),
+			'',
+			''
+		);
 		echo '</span>';
 	}
 }

@@ -161,13 +161,15 @@ function tha_header_bottom() {
 }
 
 /**
- * XTRA Hooks addedby theme author.
- * ------------------------------------------------ */
+ * XTRA Hook addedby theme author
+ * ----------------------------------------------------------------------------- */
 function osixthreeo_header_before_wrap() {
 	do_action( 'osixthreeo_header_before_wrap' );
 }
 
-/** XTRA Hook */
+/**
+ * XTRA Hook addedby theme author
+ * ----------------------------------------------------------------------------- */
 function osixthreeo_header_after_wrap() {
 	do_action( 'osixthreeo_header_after_wrap' );
 }

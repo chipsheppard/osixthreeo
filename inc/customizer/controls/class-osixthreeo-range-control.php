@@ -6,12 +6,12 @@
  * @subpackage osixthreeo/inc/customizer
  * @author   Chip Sheppard
  * @since    1.2.0
+ * @license  GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
-
 
 if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Osixthreeo_Range_Control' ) ) :
 	/**

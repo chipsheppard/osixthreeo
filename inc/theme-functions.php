@@ -33,7 +33,7 @@ if ( ! function_exists( 'osixthreeo_display_branding' ) ) {
 
 		if ( has_custom_logo() ) {
 			echo '<div class="custom-logo">';
-			echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home"><img src="' . esc_url( $logo[0] ) . '" height="' . esc_html( $logoheight ) . '" width="' . esc_html( $logowidth ) . '" alt="' . esc_html( $sitename ) . '"></a>';
+			echo '<a href="' . esc_url( home_url( '/' ) ) . '" rel="home"><img src="' . esc_url( $logo[0] ) . '" height="' . esc_attr( $logoheight ) . '" width="' . esc_attr( $logowidth ) . '" alt="' . esc_attr( $sitename ) . '"></a>';
 			echo '</div>';
 		} else {
 			if ( is_front_page() && is_home() ) :
@@ -184,13 +184,20 @@ if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 	function osixthreeo_display_site_footer() {
 		if ( is_active_sidebar( 'footer' ) ) {
 			echo '<div class="site-info">';
-				dynamic_sidebar( 'footer' );
-				do_action( 'osixthreeo_inside_footer' );
+			dynamic_sidebar( 'footer' );
+			do_action( 'osixthreeo_inside_footer' );
 			echo '</div>';
 		} else {
 			echo '<div class="site-info">';
-				echo '<p>WordPress theme by <a href="' . esc_html( OSIXTHREEO_AUTHOR_LINK ) . '">' . esc_html( OSIXTHREEO_THEME_NAME ) . '</a></p>';
-				do_action( 'osixthreeo_inside_footer' );
+			?>
+			<a href="<?php echo esc_url( __( 'https://osixthreeo.com/', 'osixthreeo' ) ); ?>">
+				<?php
+				/* translators: %s: theme name. */
+				printf( esc_html__( 'Powered by %s', 'osixthreeo' ), 'OsixthreeO' );
+				?>
+			</a>
+			<?php
+			do_action( 'osixthreeo_inside_footer' );
 			echo '</div>';
 		}
 	}

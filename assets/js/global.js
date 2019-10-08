@@ -47,7 +47,7 @@
 	masthead       = $( '#masthead' );
 	menuToggle     = masthead.find( '.responsive-menu-icon' );
 	siteNavContain = masthead.find( '.site-navigation' );
-	siteNavigation = masthead.find( '.site-navigation > div > ul' );
+	siteNavigation = masthead.find( '.site-navigation > .menu-wrap > div > ul' );
 
 	(function() {
 
@@ -104,6 +104,18 @@
 		} );
 	} )();
 
+	/*
+	 * Adjust the tabindex of the buttons next to 'parent' menu items
+	 * so they do not interfere with keyboard navigation.
+	**/
+	$(window).on('load resize', function() {
+		if(window.innerWidth > 768) {
+			$('.dropdown-toggle').attr('tabindex', -1);
+		}
+		if(window.innerWidth < 769) {
+			$('.dropdown-toggle').removeAttr( 'tabindex' );
+		}
+	});
 
 
 	/*

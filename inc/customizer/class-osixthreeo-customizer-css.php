@@ -13,14 +13,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
-if ( ! class_exists( 'Customizer_CSS' ) ) {
+if ( ! class_exists( 'Osixthreeo_Customizer_CSS' ) ) {
 	/**
 	 * Creates minified css via PHP.
 	 *
 	 * @author  Carlos Rios
 	 * Modified by Tom Usborne for GeneratePress and Chip Sheppard for osixthreeo
 	 */
-	class Customizer_CSS {
+	class Osixthreeo_Customizer_CSS {
 
 		/**
 		 * The css selector that you're currently adding rules to

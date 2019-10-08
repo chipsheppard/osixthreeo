@@ -40,8 +40,8 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'home_mobile_header_height'     => '400',
 			'subpage_header_height'         => '360',
 			'subpage_mobile_header_height'  => '270',
-			'hero_text_primary'             => 'This is OsixthreeO',
-			'hero_text_secondary'           => 'Built with love for WordPress',
+			'hero_text_primary'             => '',
+			'hero_text_secondary'           => '',
 			'hero_text_primary_color'       => '#ffffff',
 			'hero_text_secondary_color'     => '#ffffff',
 			'meta_date'                     => true,
@@ -59,7 +59,7 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'content_bgcolor'               => '',
 			'text_color'                    => '#222222',
 			'link_color'                    => '#4169e1',
-			'link_color_hover'              => '#9932cc',
+			'link_color_hover'              => '#ba55d3',
 			'footer_background_color'       => '#000000',
 			'footer_title_color'            => '#ffffff',
 			'footer_text_color'             => '#f5f5f5',
@@ -87,8 +87,8 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'meta_font_size'                => '16',
 			'hero_text_primary_font_size'   => '60',
 			'hero_text_secondary_font_size' => '40',
-			'hero_text_primary_alignment'   => '',
-			'hero_text_secondary_alignment' => '',
+			'hero_text_primary_alignment'   => 'left',
+			'hero_text_secondary_alignment' => 'left',
 		);
 
 		return apply_filters( 'osixthreeo_option_defaults', $osixthreeo_defaults );

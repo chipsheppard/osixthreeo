@@ -13,10 +13,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.0.0' );
+define( 'OSIXTHREEO_VERSION', '1.0.1' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
+define( 'OSIXTHREEO_THEME_LINK', 'https://osixthreeo.com' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Chip Sheppard' );
-define( 'OSIXTHREEO_AUTHOR_LINK', 'https://osixthreeo.com' );
+define( 'OSIXTHREEO_AUTHOR_LINK', 'https://chipsheppard.com' );
 
 if ( ! function_exists( 'osixthreeo_setup' ) ) :
 	/**
@@ -139,13 +140,13 @@ require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/entry-meta.php';
 require get_template_directory() . '/inc/theme-functions.php';
 require get_template_directory() . '/inc/loop.php';
-require get_template_directory() . '/inc/class-fi-checkbox.php';
+require get_template_directory() . '/inc/class-osixthreeo-featuredimage-checkbox.php';
 require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/fonts.php';
 require get_template_directory() . '/inc/customizer/defaults.php';
 require get_template_directory() . '/inc/customizer/customizer-functions.php';
-require get_template_directory() . '/inc/customizer/class-customizer-css.php';
+require get_template_directory() . '/inc/customizer/class-osixthreeo-customizer-css.php';
 require get_template_directory() . '/inc/customizer/css-output.php';
 
 

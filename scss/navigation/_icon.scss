@@ -23,7 +23,9 @@
 	&:focus,
 	&:active {
 		background: transparent;
-		outline: 0;
+	}
+	&:focus {
+		//outline: 0;
 	}
 
 	.menu-icon-wrap {
@@ -40,7 +42,7 @@
 	.menu-icon {
 		opacity: 1;
 		position: relative;
-		top: 13px;
+		top: 16px;
 		left: 7px;
 	}
 	.menu-icon,
