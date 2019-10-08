@@ -4,14 +4,15 @@ Contributors: ultranorman
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
 Requires at least: 4.5
 Tested up to: 5.2.3
-Stable tag: 1.3.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-OsixthreeO is a flexible, lightweight, multi-purpose theme with extensive customizer controls and a colorful custom header.
+OsixthreeO is a lightweight, multi-purpose theme with extensive customizer controls and a unique custom header.
 
 == Description ==
-OsixthreeO has a unique custom header with color, layout, text and height controls that let you decide what your site looks like.
+OsixthreeO provides color, layout, font and header controls that will allow you to craft something unique. The custom header displays a color gradient, a video or an image in the background which can be overridden with a page or post's featured image.
+
 
 2 Widget Areas
   - Sidebar
@@ -27,15 +28,13 @@ OsixthreeO has a unique custom header with color, layout, text and height contro
 This theme follows the standard set by the Theme Hook Alliance (THA).
 https://github.com/zamoose/themehookalliance
 
-For more information about Twenty Seventeen please go to https://codex.wordpress.org/Twenty_Seventeen.
-
 == Installation ==
 
 1. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 2. Type in OsixthreeO in the search form and press the 'Enter' key on your keyboard.
 3. Click on the 'Activate' button to use your new theme right away.
-4. Go to https://osixthreeo.com for a guide on how to customize this theme.
-5. Navigate to Appearance > Customize in your admin panel and customize to taste.
+4. Navigate to Appearance > Customize in your admin panel and customize to taste.
+5. Go to https://osixthreeo.com for a guide on how to customize this theme.
 
 == Copyright ==
 
@@ -58,16 +57,15 @@ along with this program. If not, see http://www.gnu.org/copyleft/gpl.html
 * Started out as an Underscores starter theme http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Uses normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
-= Anything else I should know? =
+== Anything else I should know? ==
 
 Gutenberg column blocks:
 Add a class of "boxed" to a Columns Block to style the columns in nice boxes.
 Add the class "up100" to push a column up for a staggered look - up50, up75, up125, up150, up160, up175 & up200 are also available.
 
-hr             is 10% black
-hr class=“alt” is 50% white
-
-Blockquote: If NOT using the WP Block Editor... citations go in <cite> tags. A <span> tag inside the <cite> tag will unBold the text.
+Horizontal Rule: If NOT using the WP Block Editor...  the horizontal rule tag (hr) is 10% black.  Add class=“alt” for 50% white.
+Blockquote:      If NOT using the WP Block Editor... citations go in 'cite' tags. A 'span' tag inside the 'cite' tag will unBold the text.
+Buttons:         If NOT using the WP Block Editor... you can make a link into a button by placing class="btn" into the anchor tag. Or class="btn secondary" to reverse link/hover the colors.
 
 
 == ChangeLog ==

@@ -1,6 +1,22 @@
 @import "mixins";
 @import "variables";
+
+/*
+ ## 1a. Normalize
+-------------------------------*/
 @import "normalize";
+
+/*
+ ## 1b. Clearing
+-------------------------------*/
 @import "clearings";
+
+/*
+ ## 1c. Accessibility
+-------------------------------*/
 @import "accessibility";
+
+/*
+ ## 1d. IE \o/
+-------------------------------*/
 @import "ie";
