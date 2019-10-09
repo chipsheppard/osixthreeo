@@ -71,10 +71,9 @@ Buttons:         If NOT using the WP Block Editor... you can make a link into a 
 == ChangeLog ==
 
 = 1.0.1 - 10 07 2019 =
-* Changed default footer text
+* Adjusted default footer text.
 * Adjustments to menu script for accessibility.
-* Removed default text from customizer Primary & Secondary text areas
-* Added copyright & installation instructions to readme.txt
+* Removed default text from Homepage text areas.
 
 = 1.0.0 - 10 04 2019 =
 * Submit to WordPress.org.
