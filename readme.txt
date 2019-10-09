@@ -4,7 +4,7 @@ Contributors: ultranorman
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
 Requires at least: 4.5
 Tested up to: 5.2.3
-Stable tag: 1.0.1
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,30 +70,31 @@ Buttons:         If NOT using the WP Block Editor... you can make a link into a 
 
 == ChangeLog ==
 
-= 1.0.1 - 10 07 2019 =
+= 1.3.1 - 10 07 2019 =
 * Adjusted default footer text.
 * Adjustments to menu script for accessibility.
 * Removed default text from Homepage text areas.
 
-= 1.0.0 - 10 04 2019 =
+= 1.3.0 - 10 04 2019 =
+* Pro Add-on integration.
 * Submit to WordPress.org.
 
-= 0.9.0 - 09 30 2019 =
-* Pro Add-on integration.
+= 0.2.9 - 09 30 2019 =
 * Add typography controls.
 
-= 0.8.0 - 07 30 2019 =
+= 0.2.8 - 07 30 2019 =
 * Customizer control for site containment, content containment, sidebar placements, colors.
 * Added custom-header, customizer controls, page-by-page featured image display control.
 
-= 0.7.0 - 06 30 2019 =
+= 0.2.3 - 06 30 2019 =
 * Adjust for Gutenberg editor styles.
 
-= 0.6.0 - 01 01 2019 =
+= 1.2.2 - 01 01 2019 =
 * Stable
 
-= 0.5.0 - 11 11 2018 =
+= 1.2.1 - 11 11 2018 =
+* File structure
 * First deploy to GIT
 
-= 0.0.1 - 11 07 2018 =
+= 1.0.0 - 11 07 2018 =
 * _s downloaded and renamed to "osixthreeo"
