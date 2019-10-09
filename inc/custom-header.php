@@ -22,15 +22,19 @@ if ( ! function_exists( 'osixthreeo_header_setup' ) ) :
 	 */
 	function osixthreeo_header_setup() {
 		// Custom header.
-		add_theme_support( 'custom-header', apply_filters( 'osixthreeo_custom_header_args', array(
-			'default-text-color' => 'ffffff',
-			'height'             => 1200,
-			'width'              => 1600,
-			'flex-height'        => true,
-			'flex-width'         => true,
-			'video'              => true,
-			'wp-head-callback'   => 'osixthreeo_base_css',
-		) ) );
+		add_theme_support( 'custom-header',
+			apply_filters( 'osixthreeo_custom_header_args',
+				array(
+					'default-text-color' => 'ffffff',
+					'height'             => 1200,
+					'width'              => 1600,
+					'flex-height'        => true,
+					'flex-width'         => true,
+					'video'              => true,
+					'wp-head-callback'   => 'osixthreeo_base_css',
+				)
+			)
+		);
 	}
 endif;
 add_action( 'after_setup_theme', 'osixthreeo_header_setup' );

@@ -38,35 +38,45 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// wp_nav_menu() in 1 location.
-		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'osixthreeo' ),
-		) );
+		register_nav_menus(
+			array(
+				'primary' => __( 'Primary Menu', 'osixthreeo' ),
+			)
+		);
 
 		// Switch default core markup to output valid HTML5.
-		add_theme_support( 'html5', array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-		) );
+		add_theme_support( 'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
 
 		// -- WordPress core custom background feature.
-		add_theme_support( 'custom-background', apply_filters( 'osixthreeo_custom_background_args', array(
-			'default-color' => 'ffffff',
-			'default-image' => '',
-		) ) );
+		add_theme_support( 'custom-background',
+			apply_filters( 'osixthreeo_custom_background_args',
+				array(
+					'default-color' => 'ffffff',
+					'default-image' => '',
+				)
+			)
+		);
 
 		// Add theme support for selective refresh for widgets.
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Custom Logo.
-		add_theme_support( 'custom-logo', array(
-			'height'      => 40,
-			'width'       => 200,
-			'flex-height' => true,
-			'flex-width'  => true,
-		) );
+		add_theme_support( 'custom-logo',
+			array(
+				'height'      => 40,
+				'width'       => 200,
+				'flex-height' => true,
+				'flex-width'  => true,
+			)
+		);
 
 		// Theme styles for the visual editor.
 		add_theme_support( 'editor-styles' );
@@ -95,8 +105,6 @@ add_action( 'after_setup_theme', 'osixthreeo_setup' );
  */
 function osixthreeo_content_width() {
 	// This variable is intended to be overruled from themes.
-	// Open WPCS issue: {@link https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards/issues/1043}.
-	// phpcs:ignore WordPress.NamingConventions.PrefixAllGlobals.NonPrefixedVariableFound .
 	$GLOBALS['content_width'] = apply_filters( 'osixthreeo_content_width', 640 );
 }
 add_action( 'after_setup_theme', 'osixthreeo_content_width', 0 );
