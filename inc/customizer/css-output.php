@@ -983,7 +983,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			}
 		endif;
 		if ( $default_meta_font !== $meta_font ) :
-			$css->set_selector( '.entry-meta, , .entry-footer' );
+			$css->set_selector( '.entry-meta, .entry-footer' );
 			if ( 'header' === $meta_font && $default_header_font !== $header_font ) {
 				$css->add_property( 'font-family', $headerfont );
 			} elseif ( 'highlite' === $meta_font && $default_highlite_font !== $highlite_font ) {

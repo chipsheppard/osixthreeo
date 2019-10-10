@@ -84,7 +84,7 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'sitetitle_font_size'           => '48',
 			'sitedescription_font_size'     => '16',
 			'menu_font_size'                => '16',
-			'meta_font_size'                => '16',
+			'meta_font_size'                => '14',
 			'hero_text_primary_font_size'   => '60',
 			'hero_text_secondary_font_size' => '40',
 			'hero_text_primary_alignment'   => 'left',

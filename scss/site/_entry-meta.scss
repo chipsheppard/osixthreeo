@@ -2,6 +2,7 @@
 	color: $color__base-medium;
 	display: inline-block;
 	line-height: 1.25;
+	@include font-size(.875);
 
 	a {
 		color: $color__base-medium;
@@ -19,4 +20,7 @@
 		display: inline-block;
 		padding-right: .75em;
 	}
+}
+.single .entry-meta {
+	margin-top: 12px;
 }

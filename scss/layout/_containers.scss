@@ -9,7 +9,7 @@
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 6em 0 2.5em;
+		padding: 3.25em 0 2.5em;
 		width: $size__site-sidebar;
 
 		@include breakpoint(tablet-v) {
@@ -87,10 +87,10 @@
 		float: none;
 		width: 100%;
 	}
-	.site-content .widget-area,
-	.sidebar-right .site-content .widget-area,
-	.sidebar-left .site-content .widget-area {
-		padding-right: $size__site-padding;
-		padding-left: $size__site-padding;
+	.sidebar-right .site-content .widget-area {
+		padding-top: 0;
+	}
+	.sidebar-left .content-area{
+		padding-top: 0;
 	}
 }

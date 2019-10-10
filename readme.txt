@@ -4,7 +4,7 @@ Contributors: ultranorman
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
 Requires at least: 4.5
 Tested up to: 5.2.3
-Stable tag: 1.3.1
+Stable tag: 1.3.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,8 +67,20 @@ Horizontal Rule: If NOT using the WP Block Editor...  the horizontal rule tag (h
 Blockquote:      If NOT using the WP Block Editor... citations go in 'cite' tags. A 'span' tag inside the 'cite' tag will unBold the text.
 Buttons:         If NOT using the WP Block Editor... you can make a link into a button by placing class="btn" into the anchor tag. Or class="btn secondary" to reverse link/hover the colors.
 
+Other utility styles if NOT using the WP Block Editor:
+ta-right - text-align = right
+ta-center - text-align = center
+
+Other utility styles:
+mobile-only - will only display on devices 768 pixels wide and lower.
+desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
+
+= 1.3.2 - 10 07 2019 =
+* Fixed sidebar padding on mobile views.
+* Moved the quote in blockquotes out a tad.
+* Sized down and added top pad to entry-meta.
 
 = 1.3.1 - 10 07 2019 =
 * Adjusted default footer text.
