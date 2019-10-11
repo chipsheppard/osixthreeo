@@ -115,6 +115,8 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$hero_text_secondary_font_size         = $osixthreeo_settings['hero_text_secondary_font_size'];
 		$hero_text_primary_alignment           = $osixthreeo_settings['hero_text_primary_alignment'];
 		$hero_text_secondary_alignment         = $osixthreeo_settings['hero_text_secondary_alignment'];
+		$hero_scroll_button                    = $osixthreeo_settings['hero_scroll_button'];
+		$hero_scroll_button_alignment          = $osixthreeo_settings['hero_scroll_button_alignment'];
 		$default_base_font_size                = $defaults['base_font_size'];
 		$default_sitetitle_font_size           = $defaults['sitetitle_font_size'];
 		$default_sitedescription_font_size     = $defaults['sitedescription_font_size'];
@@ -123,6 +125,8 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_hero_text_secondary_font_size = $defaults['hero_text_secondary_font_size'];
 		$default_hero_text_primary_alignment   = $defaults['hero_text_primary_alignment'];
 		$default_hero_text_secondary_alignment = $defaults['hero_text_secondary_alignment'];
+		$default_hero_scroll_button            = $defaults['hero_scroll_button'];
+		$default_hero_scroll_button_alignment  = $defaults['hero_scroll_button_alignment'];
 		$meta_font                             = $osixthreeo_settings['meta_font'];
 		$meta_font_size                        = $osixthreeo_settings['meta_font_size'];
 		$meta_font_weight                      = $osixthreeo_settings['meta_font_weight'];
@@ -1064,6 +1068,11 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_hero_text_secondary_alignment !== $hero_text_secondary_alignment ) :
 			$css->set_selector( '.hero-secondary' );
 			$css->add_property( 'text-align', $hero_text_secondary_alignment );
+		endif;
+
+		if ( $default_hero_scroll_button_alignment !== $hero_scroll_button_alignment ) :
+			$css->set_selector( '.hero-scroll-button' );
+			$css->add_property( 'text-align', $hero_scroll_button_alignment );
 		endif;
 
 		// Allow us to hook CSS into our output - where we would hook our "Pro" features?

@@ -111,6 +111,7 @@ if ( ! function_exists( 'osixthreeo_customheader_content' ) ) {
 
 		$herotextprimary   = $osixthreeo_settings['hero_text_primary'];
 		$herotextsecondary = $osixthreeo_settings['hero_text_secondary'];
+		$heroscrollbar     = $osixthreeo_settings['hero_scroll_button'];
 
 		// Get the video if there is one.
 		if ( is_header_video_active() && ( has_header_video() || is_customize_preview() ) ) {
@@ -127,13 +128,13 @@ if ( ! function_exists( 'osixthreeo_customheader_content' ) ) {
 		if ( '' !== $herotextsecondary ) :
 			echo '<div class="hero-secondary">' . wp_kses_post( $herotextsecondary ) . '</div>';
 		endif;
-		if ( 'full' === $osixthreeo_settings['home_header_fullheight'] ) :
-			echo '<a href="#custom-header-scroll-target" class="scrollbutton"><div class="arrow-down white"></div></a>';
+		if ( true === $heroscrollbar ) :
+			echo '<div class="hero-scroll-button"><a href="#custom-header-scroll-target" class="scrollbutton"><div class="arrow-down white"></div></a></div>';
 		endif;
 
 		echo '</div>';
 
-		if ( 'full' === $osixthreeo_settings['home_header_fullheight'] ) :
+		if ( true === $heroscrollbar ) :
 			echo '<div id="custom-header-scroll-target"></div>';
 		endif;
 	}

@@ -4,7 +4,7 @@ Contributors: ultranorman
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
 Requires at least: 4.5
 Tested up to: 5.2.3
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,7 +77,10 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.3.2 - 10 07 2019 =
+= 1.3.3 - 10 10 2019 =
+* Reduce to one main alignment control for custom header.
+
+= 1.3.2 - 10  07 2019 =
 * Fixed sidebar padding on mobile views.
 * Moved the quote in blockquotes out a tad.
 * Sized down and added top pad to entry-meta.

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-10-08 20:51-0400\n"
-"PO-Revision-Date: 2019-10-08 20:53-0400\n"
+"POT-Creation-Date: 2019-10-11 10:29-0400\n"
+"PO-Revision-Date: 2019-10-11 10:31-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_001\n"
@@ -835,19 +835,19 @@ msgstr ""
 msgid "Primary text"
 msgstr ""
 
-#: inc/customizer.php:2564 inc/customizer.php:2704
+#: inc/customizer.php:2564 inc/customizer.php:2704 inc/customizer.php:2792
 msgid "Alignment"
 msgstr ""
 
-#: inc/customizer.php:2567 inc/customizer.php:2707
+#: inc/customizer.php:2567 inc/customizer.php:2707 inc/customizer.php:2795
 msgid "Left"
 msgstr ""
 
-#: inc/customizer.php:2568 inc/customizer.php:2708
+#: inc/customizer.php:2568 inc/customizer.php:2708 inc/customizer.php:2796
 msgid "Right"
 msgstr ""
 
-#: inc/customizer.php:2569 inc/customizer.php:2709
+#: inc/customizer.php:2569 inc/customizer.php:2709 inc/customizer.php:2797
 msgid "Centered"
 msgstr ""
 
@@ -860,11 +860,19 @@ msgid "Secondary text"
 msgstr ""
 
 #: inc/customizer.php:2753
+msgid "Scroll-to-content button"
+msgstr ""
+
+#: inc/customizer.php:2771
+msgid "Display button"
+msgstr ""
+
+#: inc/customizer.php:2818
 msgid "Note:"
 msgstr ""
 
-#: inc/customizer.php:2754
-msgid "Text entered above only displays on the homepage."
+#: inc/customizer.php:2819
+msgid "Text above only displays on the homepage."
 msgstr ""
 
 #: inc/entry-meta.php:60

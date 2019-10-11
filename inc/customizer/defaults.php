@@ -89,6 +89,8 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'hero_text_secondary_font_size' => '40',
 			'hero_text_primary_alignment'   => 'left',
 			'hero_text_secondary_alignment' => 'left',
+			'hero_scroll_button'            => '',
+			'hero_scroll_button_alignment'  => '',
 		);
 
 		return apply_filters( 'osixthreeo_option_defaults', $osixthreeo_defaults );

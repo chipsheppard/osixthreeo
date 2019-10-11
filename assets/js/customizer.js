@@ -291,6 +291,16 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			);
 		}
 	);
+	// hero scrollbar alignment
+	wp.customize(
+		'osixthreeo_settings[hero_scroll_button_alignment]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.hero-scroll-button' ).css( 'text-align', newval );
+				}
+			);
+		}
+	);
 
 	// post meta
 	wp.customize(

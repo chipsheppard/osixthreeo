@@ -2738,6 +2738,71 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 
 		// section message.
 		$wp_customize->add_setting(
+			'scroll-button-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'scroll-button-message',
+				array(
+					'section'  => 'osixthreeo_ch_text',
+					'priority' => 41,
+					'label'    => esc_html__( 'Scroll-to-content button', 'osixthreeo' ),
+				)
+			)
+		);
+
+		// show scroll button.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[hero_scroll_button]',
+			array(
+				'default'           => $defaults['hero_scroll_button'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[hero_scroll_button]',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__( 'Display button', 'osixthreeo' ),
+				'section'     => 'osixthreeo_ch_text',
+				'settings'    => 'osixthreeo_settings[hero_scroll_button]',
+				'priority'    => 42,
+			)
+		);
+
+		// hero scroll button alignment.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[hero_scroll_button_alignment]',
+			array(
+				'default'           => $defaults['hero_scroll_button_alignment'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_choices',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[hero_scroll_button_alignment]',
+			array(
+				'type'     => 'select',
+				'label'    => esc_html__( 'Alignment', 'osixthreeo' ),
+				'section'  => 'osixthreeo_ch_text',
+				'choices'  => array(
+					'left'   => esc_html__( 'Left', 'osixthreeo' ),
+					'right'  => esc_html__( 'Right', 'osixthreeo' ),
+					'center' => esc_html__( 'Centered', 'osixthreeo' ),
+				),
+				'settings' => 'osixthreeo_settings[hero_scroll_button_alignment]',
+				'priority' => 43,
+			)
+		);
+
+		// section message.
+		$wp_customize->add_setting(
 			'hometext-message',
 			array(
 				'sanitize_callback' => 'wp_kses_post',
@@ -2751,7 +2816,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'section'  => 'osixthreeo_ch_text',
 					'priority' => 50,
 					'label'    => esc_html__( 'Note:', 'osixthreeo' ),
-					'content'  => esc_html__( 'Text entered above only displays on the homepage.', 'osixthreeo' ) . '</p>',
+					'content'  => esc_html__( 'Text above only displays on the homepage.', 'osixthreeo' ) . '</p>',
 				)
 			)
 		);
