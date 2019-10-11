@@ -78,7 +78,7 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 == ChangeLog ==
 
 = 1.3.3 - 10 10 2019 =
-* Reduce to one main alignment control for custom header.
+* Add controls for scroll button.
 
 = 1.3.2 - 10  07 2019 =
 * Fixed sidebar padding on mobile views.
