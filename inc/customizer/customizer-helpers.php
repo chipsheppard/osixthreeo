@@ -30,10 +30,10 @@ if ( ! function_exists( 'osixthreeo_get_default_color_palettes' ) ) {
 		$palettes = array(
 			'#000000',
 			'#ffffff',
-			'#1e90ff', // DogerBlue.
 			'#b22222', // FireBrick.
 			'#ff8c00', // DarkOrange.
-			'#9acd32', // Yellowgreen.
+			'#008000', // Green.
+			'#4169e1', // RoyalBlue.
 			'#3220c5', // ??.
 			'#9932cc', // DarkOrchid.
 		);

@@ -46,8 +46,12 @@ body.home h1.entry-title {
 	}
 
 	ol,
-	ul {
+	ul:not(.alignfull):not(.alignwide) {
 		margin-left: 2.5em;
+	}
+
+	ol,
+	ul {
 		margin-bottom: 1.5em;
 
 		li {
