@@ -1077,7 +1077,7 @@ button.dropdown-toggle {
   padding: 0;
   position: relative;
   right: .5em;
-  z-index: 1;
+  z-index: -1;
 }
 
 button.dropdown-toggle:after {
@@ -2464,7 +2464,7 @@ img.flex {
 .site-content .widget-area {
   display: inline-block;
   overflow: hidden;
-  padding: 3.25em 0 2.5em;
+  padding: 3em 0 2.5em;
   width: 26%;
 }
 
@@ -2819,7 +2819,6 @@ img.flex {
 .custom-header {
   background: #f3f5f7;
   background: -webkit-gradient(linear, left top, right top, from(#4169e1), to(#ba55d3));
-  background: -webkit-linear-gradient(left, #4169e1 0%, #ba55d3 100%);
   background: linear-gradient(90deg, #4169e1 0%, #ba55d3 100%);
   position: absolute;
   top: 0;
@@ -2969,20 +2968,6 @@ img.flex {
   opacity: 1;
 }
 
-.hero-primary div,
-.hero-secondary div {
-  margin-top: 1.5em;
-  font-size: 18px;
-  font-size: 1.125rem;
-}
-
-@media all and (max-width: 640px) {
-  .hero-primary div,
-  .hero-secondary div {
-    margin-top: 1em;
-  }
-}
-
 .scrollbutton {
   display: inline-block;
   margin-top: 5em;
@@ -3119,6 +3104,10 @@ body.error404 .page-title {
 
 body.home h1.entry-title {
   display: none;
+}
+
+body.home.page .entry-header {
+  margin-bottom: 0;
 }
 
 .entry-content {
@@ -3285,50 +3274,54 @@ body.home h1.entry-title {
 /*
  ## 7h. Archives
 -------------------------------*/
-.blog .hentry,
-.archive .hentry {
-  background-color: #ffffff;
-  margin: 0 0 2em;
-  padding: 1.5em 1.5em 0;
+.blog article,
+.archive article,
+.search article {
+  margin-bottom: 2.5em;
+  padding-top: 1em;
+  position: relative;
 }
 
-.blog .hentry .wp-post-image,
-.archive .hentry .wp-post-image {
+.blog article .wp-post-image,
+.archive article .wp-post-image,
+.search article .wp-post-image {
   display: block;
   width: 100%;
 }
 
-.blog .hentry .entry-header,
-.blog .hentry .entry-content,
-.blog .hentry .link-more,
-.archive .hentry .entry-header,
-.archive .hentry .entry-content,
-.archive .hentry .link-more {
+.blog article .entry-header,
+.blog article .entry-content,
+.blog article .link-more,
+.archive article .entry-header,
+.archive article .entry-content,
+.archive article .link-more,
+.search article .entry-header,
+.search article .entry-content,
+.search article .link-more {
   overflow: hidden;
 }
 
-.blog .hentry.sticky,
-.archive .hentry.sticky {
+.blog article.sticky,
+.archive article.sticky,
+.search article.sticky {
   border-top: 2px solid #4169e1;
 }
 
-.blog .entry-content p,
-.archive .entry-content p {
-  margin-bottom: .25em;
-}
-
 .blog .format-status .entry-content p,
-.archive .format-status .entry-content p {
+.archive .format-status .entry-content p,
+.search .format-status .entry-content p {
   margin-bottom: 1em;
 }
 
 .blog .entry-header,
-.archive .entry-header {
+.archive .entry-header,
+.search .entry-header {
   padding: 0 0 1em;
 }
 
 .blog .entry-title,
-.archive .entry-title {
+.archive .entry-title,
+.search .entry-title {
   word-break: break-word;
   line-height: 1.0625;
   margin-bottom: .125em;
@@ -3371,7 +3364,8 @@ body.home h1.entry-title {
   display: block;
   font-weight: 700;
   line-height: 1;
-  padding: 2em 0;
+  margin-bottom: 1.5em;
+  padding: .5em 0;
   position: relative;
   text-transform: uppercase;
   font-size: 75%;
@@ -3392,11 +3386,6 @@ body.home h1.entry-title {
   display: block;
   font-size: 16px;
   font-size: 1rem;
-}
-
-.search article {
-  margin: 0 0 3.5em 0;
-  position: relative;
 }
 
 .search article:before, .search article:after {
@@ -3420,29 +3409,6 @@ body.home h1.entry-title {
     margin: 0;
     text-align: center;
   }
-}
-
-.search .fi-link {
-  margin: 0 1.5em 1.5em 0;
-}
-
-.search .entry-header {
-  overflow: hidden;
-}
-
-.search .entry-title {
-  font-size: 22px;
-  font-size: 1.375rem;
-}
-
-.search .entry-content,
-.search .entry-summary {
-  margin: 0;
-  overflow: hidden;
-}
-
-.search .more-link {
-  padding: 0;
 }
 
 /*
@@ -3714,32 +3680,6 @@ body.headercentered .menu-wrap {
   }
 }
 
-.site-navigation.bgcolor li {
-  margin: 0;
-}
-
-.site-navigation.bgcolor a {
-  padding-left: 1em;
-  padding-right: 1.5em;
-}
-
-.site-navigation.bgcolor a:hover {
-  background-color: rgba(153, 153, 153, 0.1);
-  border-bottom-color: transparent;
-}
-
-.site-navigation.bgcolor ul:not(.sub-menu) > a:hover,
-.site-navigation.bgcolor ul:not(.sub-menu) > .current_page_ancestor > a,
-.site-navigation.bgcolor ul:not(.sub-menu) > .current-menu-ancestor > a,
-.site-navigation.bgcolor ul:not(.sub-menu) > .current_page_item > a,
-.site-navigation.bgcolor ul:not(.sub-menu) > .current-menu-item > a {
-  border-bottom-color: transparent;
-}
-
-.site-navigation.bgcolor button.dropdown-toggle {
-  right: 1em;
-}
-
 /*-------------------------------
  #  8. Widgets
 -------------------------------*/
@@ -3761,7 +3701,7 @@ body.headercentered .menu-wrap {
   border-bottom: 1px solid #c0c0c0;
   line-height: 1;
   margin: 0 0 .5em 0;
-  padding: .375em .25em .625em;
+  padding: .5em 0;
 }
 
 .sidebar-widget select {

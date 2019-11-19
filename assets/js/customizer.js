@@ -78,6 +78,17 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		} );
 	} );
 
+	// Content Max Width.
+	wp.customize(
+		'osixthreeo_settings[max_width]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.inner-wrap, .content-inner-wrap' ).css( 'max-width', newval + 'px' );
+				}
+			);
+		}
+	);
+
 	// Header Layout.
 	wp.customize( 'osixthreeo_settings[header_layout]', function( value ) {
 		value.bind( function( newval ) {

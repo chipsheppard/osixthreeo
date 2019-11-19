@@ -9,7 +9,7 @@
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 3.25em 0 2.5em;
+		padding: 3em 0 2.5em;
 		width: $size__site-sidebar;
 
 		@include breakpoint(tablet-v) {

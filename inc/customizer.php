@@ -5,7 +5,7 @@
  * @package  osixthreeo
  * @subpackage osixthreeo/inc
  * @author   Chip Sheppard
- * @since    1.2.0
+ * @since    1.0.0
  * @license  GPL-2.0+
  */
 
@@ -103,7 +103,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_site_layout',
 					'priority' => 10,
-					'label'    => esc_html__( 'Global', 'osixthreeo' ),
+					'label'    => esc_html__( 'Site Width', 'osixthreeo' ),
 				)
 			)
 		);
@@ -130,6 +130,35 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				),
 				'settings' => 'osixthreeo_settings[containment_setting]',
 				'priority' => 15,
+			)
+		);
+
+		// CONTENT MAX WIDTH.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[max_width]',
+			array(
+				'default'           => $defaults['max_width'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Range_Control(
+				$wp_customize,
+				'osixthreeo_settings[max_width]',
+				array(
+					'type'        => 'range',
+					'label'       => esc_html__( 'Content area max width', 'osixthreeo' ),
+					'section'     => 'osixthreeo_site_layout',
+					'settings'    => 'osixthreeo_settings[max_width]',
+					'input_attrs' => array(
+						'min'  => 800,
+						'max'  => 2400,
+						'step' => 5,
+					),
+					'priority'    => 16,
+				)
 			)
 		);
 
@@ -382,7 +411,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		if ( ! OSIXTHREEO_PRO ) :
+		if ( ! OSIXTHREEO_CONTENT_ADDON ) :
 			// section message.
 			$wp_customize->add_setting(
 				'layout-pro-callout',
@@ -396,9 +425,9 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'layout-pro-callout',
 					array(
 						'section'  => 'osixthreeo_site_layout',
-						'priority' => 42,
-						'label'    => esc_html__( 'Get more layout controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
+						'priority' => 60,
+						'label'    => esc_html__( 'Get more layout controls with an OsixthreeO Extension', 'osixthreeo' ),
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
 					)
 				)
 			);
@@ -893,7 +922,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		if ( ! OSIXTHREEO_PRO ) :
+		if ( ! OSIXTHREEO_CONTENT_ADDON || ! OSIXTHREEO_HEADERFOOTER_ADDON ) :
 			// section message.
 			$wp_customize->add_setting(
 				'colors-pro-callout',
@@ -907,9 +936,9 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'colors-pro-callout',
 					array(
 						'section'  => 'colors',
-						'priority' => 100,
-						'label'    => esc_html__( 'Get more color controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
+						'priority' => 200,
+						'label'    => esc_html__( 'Get more color controls with an OsixthreeO Extension', 'osixthreeo' ),
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
 					)
 				)
 			);
@@ -1876,7 +1905,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		if ( ! OSIXTHREEO_PRO ) :
+		if ( ! OSIXTHREEO_ARCHIVES_ADDON || ! OSIXTHREEO_HEADERFOOTER_ADDON ) :
 			$wp_customize->add_setting(
 				'typography-pro-callout',
 				array(
@@ -1890,8 +1919,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					array(
 						'section'  => 'osixthreeo_typography',
 						'priority' => 115,
-						'label'    => esc_html__( 'Get more controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
+						'label'    => esc_html__( 'Get more controls with an OsixthreeO Extension', 'osixthreeo' ),
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
 					)
 				)
 			);
@@ -2052,7 +2081,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		if ( ! OSIXTHREEO_PRO ) :
+		if ( ! OSIXTHREEO_ARCHIVES_ADDON || ! OSIXTHREEO_HEADERFOOTER_ADDON ) :
 			$wp_customize->add_setting(
 				'themeops-pro-callout',
 				array(
@@ -2066,8 +2095,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					array(
 						'section'  => 'osixthreeo_themeops',
 						'priority' => 58,
-						'label'    => esc_html__( 'Get more controls with the OsixthreeO Pro add-on', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO Pro</a>',
+						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
 					)
 				)
 			);
@@ -2767,11 +2796,11 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		$wp_customize->add_control(
 			'osixthreeo_settings[hero_scroll_button]',
 			array(
-				'type'        => 'checkbox',
-				'label'       => esc_html__( 'Display button', 'osixthreeo' ),
-				'section'     => 'osixthreeo_ch_text',
-				'settings'    => 'osixthreeo_settings[hero_scroll_button]',
-				'priority'    => 42,
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Display button', 'osixthreeo' ),
+				'section'  => 'osixthreeo_ch_text',
+				'settings' => 'osixthreeo_settings[hero_scroll_button]',
+				'priority' => 42,
 			)
 		);
 

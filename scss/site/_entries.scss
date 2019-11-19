@@ -37,6 +37,9 @@ body.error404 .page-title {
 body.home h1.entry-title {
 	display: none;
 }
+body.home.page .entry-header {
+	margin-bottom: 0;
+}
 
 .entry-content {
 	@include font-size(1.0625);

@@ -39,28 +39,3 @@ body.headercentered {
 		}
 	}
 }
-
-// Menu - Alternate Style
-.site-navigation.bgcolor {
-	li {
-		margin: 0;
-	}
-	a {
-		padding-left: 1em;
-		padding-right: 1.5em;
-	}
-	a:hover {
-		background-color: rgba(153, 153, 153, 0.1);
-		border-bottom-color: transparent;
-	}
-	ul:not(.sub-menu) > a:hover,
-	ul:not(.sub-menu) > .current_page_ancestor > a,
-	ul:not(.sub-menu) > .current-menu-ancestor > a,
-	ul:not(.sub-menu) > .current_page_item > a,
-	ul:not(.sub-menu) > .current-menu-item > a {
-		border-bottom-color: transparent;
-	}
-	button.dropdown-toggle {
-	    right: 1em;
-	}
-}

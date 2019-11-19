@@ -27,6 +27,8 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		);
 		$defaults            = osixthreeo_get_defaults();
 
+		$max_width                             = $osixthreeo_settings['max_width'];
+		$default_max_width                     = $defaults['max_width'];
 		$header_bg_color_left                  = $osixthreeo_settings['header_bg_color_left'];
 		$header_bg_color_right                 = $osixthreeo_settings['header_bg_color_right'];
 		$header_gradient_angle                 = $osixthreeo_settings['header_gradient_angle'];
@@ -154,6 +156,14 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 				$css->set_selector( '.site-title,.site-title a,.site-description' );
 				$css->add_property( 'color', esc_attr( $ht_color ) );
 			endif;
+		endif;
+
+		/*
+		 * Site Width --------------------------------
+		 */
+		if ( absint( $default_max_width ) !== absint( $max_width ) ) :
+			$css->set_selector( '.inner-wrap, .content-inner-wrap' );
+			$css->add_property( 'max-width', esc_attr( $osixthreeo_settings['max_width'] . 'px' ) );
 		endif;
 
 		/*
@@ -359,7 +369,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		 * Fonts --------------------------------
 		 */
 		if ( $default_base_font !== $base_font ) :
-			$css->set_selector( 'body,button,input,select,textarea,blockquote,h1 div,h2 div,h3 div,h4 div,h5 div,h6 div,.search .page-title span' );
+			$css->set_selector( 'body,button,input,select,textarea,blockquote,.search .page-title span' );
 			if ( 'arialblack' === $base_font ) {
 				$basefont = 'Arial Black, Gadget, sans-serif';
 			} elseif ( 'impact' === $base_font ) {

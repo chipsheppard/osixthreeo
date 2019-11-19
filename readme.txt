@@ -3,7 +3,8 @@
 Contributors: ultranorman
 Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
 Requires at least: 4.5
-Tested up to: 5.2.4
+Requires PHP: 5.6
+Tested up to: 5.3
 Stable tag: 1.3.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -78,6 +79,11 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 == ChangeLog ==
 
 = 1.3.4 - 10 19 2019 =
+* Add control for site content max-width
+* Remove styles for 'div' inside hero text.
+* Fixed issue with menu css icons.
+* Correct call to customizer.css for child themes.
+* Change upsell language in customizer.
 * Adjust list styles for alignwide & alignfull blocks.
 * Added Area-Label to responsive menu icon.
 * Fixed font issue in editor-styles.

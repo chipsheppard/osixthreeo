@@ -131,14 +131,6 @@
 			}
 		}
 	}
-
-	div {
-		margin-top: 1.5em;
-		@include font-size(1.125);
-		@include breakpoint(phone-h) {
-			margin-top: 1em;
-		}
-	}
 }
 
 .scrollbutton {

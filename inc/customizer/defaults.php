@@ -23,6 +23,7 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 		$osixthreeo_defaults = array(
 			'background_color'              => '#f3f5f7',
 			'containment_setting'           => 'full',
+			'max_width'                     => '1280',
 			'header_layout'                 => '',
 			'header_padding'                => '16',
 			'home_layout_setting'           => 'layout-ns',

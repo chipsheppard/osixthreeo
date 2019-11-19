@@ -71,6 +71,7 @@
 
 /* TOP Control Blocks
 ----------------------------------------------- */
+#customize-control-osixthreeo_settings-containment_setting,
 #customize-control-osixthreeo_settings-content_bgcolor,
 #customize-control-osixthreeo_settings-footer_background_color,
 #customize-control-osixthreeo_settings-header_background_color,
@@ -93,6 +94,7 @@
 }
 /* BOTTOM Control Blocks
 ------------------------------------------------- */
+#customize-control-osixthreeo_settings-max_width,
 #customize-control-osixthreeo_settings-subnav_border_color,
 #customize-control-osixthreeo_settings-link_color_hover,
 #customize-control-osixthreeo_settings-footer_link_color_hover,
@@ -116,7 +118,6 @@
 }
 /* TOP & BOTTOM - Single control
 ------------------------------------------------- */
-#customize-control-osixthreeo_settings-containment_setting,
 #customize-control-osixthreeo_settings-header_font_weight,
 #customize-control-osixthreeo_settings-base_font_size,
 #customize-control-osixthreeo_settings-meta_color,

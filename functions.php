@@ -128,7 +128,7 @@ add_action( 'wp_enqueue_scripts', 'osixthreeo_scripts' );
  * Enqueue editor styles for the customizer
  */
 function osixthreeo_customizer_custom_css() {
-	wp_enqueue_style( 'osixthreeo-customizer', get_stylesheet_directory_uri() . '/assets/css/customizer.css', array(), OSIXTHREEO_VERSION );
+	wp_enqueue_style( 'osixthreeo-customizer', get_template_directory_uri() . '/assets/css/customizer-min.css', array(), OSIXTHREEO_VERSION );
 }
 add_action( 'customize_controls_enqueue_scripts', 'osixthreeo_customizer_custom_css' );
 
@@ -136,7 +136,7 @@ add_action( 'customize_controls_enqueue_scripts', 'osixthreeo_customizer_custom_
  * Enqueue editor styles for Gutenberg
  */
 function osixthreeo_gutenberg_editor_styles() {
-	wp_enqueue_style( 'osixthreeo-gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style.css', array(), OSIXTHREEO_VERSION );
+	wp_enqueue_style( 'osixthreeo-gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style-min.css', array(), OSIXTHREEO_VERSION );
 }
 add_action( 'enqueue_block_editor_assets', 'osixthreeo_gutenberg_editor_styles' );
 
@@ -169,5 +169,13 @@ if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-// Check for Osixthreeo Pro plugin.
-define( 'OSIXTHREEO_PRO', class_exists( 'Osixthreeopro' ) );
+// Check for Osixthreeo Content Add On.
+define( 'OSIXTHREEO_CONTENT_ADDON', class_exists( 'Osixthreeo_Content' ) );
+// Check for Osixthreeo Templates Add On.
+define( 'OSIXTHREEO_TEMPLATES_ADDON', class_exists( 'Osixthreeo_Templates' ) );
+// Check for Osixthreeo Archives Add On.
+define( 'OSIXTHREEO_ARCHIVES_ADDON', class_exists( 'Osixthreeo_Archives' ) );
+// Check for Osixthreeo Widgets Add On.
+define( 'OSIXTHREEO_WIDGETS_ADDON', class_exists( 'Osixthreeo_Widgets' ) );
+// Check for Osixthreeo Header-Footer Add On.
+define( 'OSIXTHREEO_HEADERFOOTER_ADDON', class_exists( 'Osixthreeo_Headerfooter' ) );

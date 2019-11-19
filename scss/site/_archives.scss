@@ -1,10 +1,11 @@
 .blog,
-.archive {
+.archive,
+.search {
 
-	.hentry {
-		background-color: #ffffff;
-		margin: 0 0 2em;
-		padding: 1.5em 1.5em 0;
+	article {
+		margin-bottom: 2.5em;
+		padding-top: 1em;
+		position: relative;
 
 		.wp-post-image {
 			display: block;
@@ -19,12 +20,6 @@
 
 		&.sticky {
 			border-top:2px solid $color__highlight;
-		}
-	}
-
-	.entry-content {
-		p {
-			margin-bottom: .25em;
 		}
 	}
 
@@ -76,7 +71,8 @@
 	display: block;
 	font-weight: $font__weight-bold;
 	line-height: 1;
-	padding: 2em 0;
+	margin-bottom: 1.5em;
+	padding: .5em 0;
 	position: relative;
 	text-transform: uppercase;
 	font-size: 75%;

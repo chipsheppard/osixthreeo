@@ -124,7 +124,7 @@ button.dropdown-toggle {
 	padding: 0;
     position: relative;
     right: .5em;
-	z-index: 1;
+	z-index: -1;
 }
 
 button.dropdown-toggle:after {
