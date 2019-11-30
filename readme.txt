@@ -5,7 +5,7 @@ Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, c
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.3
-Stable tag: 1.3.4
+Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -77,6 +77,10 @@ mobile-only - will only display on devices 768 pixels wide and lower.
 desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
+
+= 1.4.0 - 11 22 2019 =
+* Add conditionals for up-sell blocks.
+* Moved header and footer markup to theme-functions.
 
 = 1.3.4 - 10 19 2019 =
 * Add control for site content max-width

@@ -1,10 +1,10 @@
 .site-header {
-	min-height: 360px;
+	min-height: 200px;
 	position: relative;
 	width: 100%;
 
 	@include breakpoint(phone-h) {
-		min-height: 270px;
+		min-height: 120px;
 	}
 
 	.inner-wrap {
@@ -13,7 +13,7 @@
 }
 
 .home .site-header {
-	min-height: 640px;
+	min-height: 600px;
 
 	@include breakpoint(phone-h) {
 		min-height: 400px;

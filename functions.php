@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.3.4' );
+define( 'OSIXTHREEO_VERSION', '1.4.0' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_THEME_LINK', 'https://osixthreeo.com' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Chip Sheppard' );
@@ -163,19 +163,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// Load WooCommerce compatibility file.
+// WooCommerce?
 define( 'OSIXTHREEO_WOOCOMMERCE_ACTIVE', class_exists( 'WooCommerce' ) );
 if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-// Check for Osixthreeo Content Add On.
-define( 'OSIXTHREEO_CONTENT_ADDON', class_exists( 'Osixthreeo_Content' ) );
-// Check for Osixthreeo Templates Add On.
-define( 'OSIXTHREEO_TEMPLATES_ADDON', class_exists( 'Osixthreeo_Templates' ) );
-// Check for Osixthreeo Archives Add On.
-define( 'OSIXTHREEO_ARCHIVES_ADDON', class_exists( 'Osixthreeo_Archives' ) );
-// Check for Osixthreeo Widgets Add On.
-define( 'OSIXTHREEO_WIDGETS_ADDON', class_exists( 'Osixthreeo_Widgets' ) );
-// Check for Osixthreeo Header-Footer Add On.
-define( 'OSIXTHREEO_HEADERFOOTER_ADDON', class_exists( 'Osixthreeo_Headerfooter' ) );
+// Osixthreeo Content Extension?
+define( 'OSIXTHREEO_CONTENT_EXT', class_exists( 'Osixthreeo_Content' ) );
+// Osixthreeo Templates Extension?
+define( 'OSIXTHREEO_TEMPLATES_EXT', class_exists( 'Osixthreeo_Templates' ) );
+// Osixthreeo Archives Extension?
+define( 'OSIXTHREEO_ARCHIVES_EXT', class_exists( 'Osixthreeo_Archives' ) );
+// Osixthreeo Widgets Extension?
+define( 'OSIXTHREEO_WIDGETS_EXT', class_exists( 'Osixthreeo_Widgets' ) );
+// Osixthreeo Header-Footer Extension?
+define( 'OSIXTHREEO_HEADERFOOTER_EXT', class_exists( 'Osixthreeo_Headerfooter' ) );

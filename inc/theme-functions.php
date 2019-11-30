@@ -13,6 +13,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+
+/*
+ * DISPLAY Header
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_display_header' ) ) {
+	/**
+	 * Get the branding markup
+	 */
+	function osixthreeo_display_header() {
+		echo '<header id="masthead" class="site-header">';
+		osixthreeo_header_before_wrap();
+		echo '<div class="header-wrap">';
+		echo '<div class="inner-wrap">';
+			tha_header_top();
+			tha_header_bottom();
+		echo '</div>';
+		echo '</div>';
+		osixthreeo_header_after_wrap();
+		echo '</header>';
+	}
+}
+add_action( 'tha_header_before', 'osixthreeo_display_header' );
+
+
 /*
  * DISPLAY Branding
  * -----------------------------------------------------------------
@@ -179,9 +204,14 @@ add_action( 'tha_entry_bottom', 'osixthreeo_display_read_more' );
  */
 if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 	/**
-	 * The Site Footer MArkup
+	 * The Site Footer Markup
 	 */
 	function osixthreeo_display_site_footer() {
+		echo '<footer id="colophon" class="site-footer" role="contentinfo">';
+		echo '<div class="inner-wrap">';
+
+		tha_footer_top();
+
 		if ( is_active_sidebar( 'footer' ) ) {
 			echo '<div class="site-info">';
 			dynamic_sidebar( 'footer' );
@@ -200,6 +230,12 @@ if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 			do_action( 'osixthreeo_inside_footer' );
 			echo '</div>';
 		}
+
+		tha_footer_bottom();
+
+		echo '</div>';
+		echo '</footer>';
+
 	}
 }
-add_action( 'tha_footer_top', 'osixthreeo_display_site_footer' );
+add_action( 'tha_footer_before', 'osixthreeo_display_site_footer' );

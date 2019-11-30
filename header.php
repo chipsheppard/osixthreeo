@@ -30,18 +30,6 @@ tha_body_top();
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'osixthreeo' ); ?></a>
 
 	<?php tha_header_before(); ?>
-	<header id="masthead" class="site-header">
-		<?php osixthreeo_header_before_wrap(); ?>
-		<div class="header-wrap">
-			<div class="inner-wrap">
-				<?php
-				tha_header_top();
-				tha_header_bottom();
-				?>
-			</div>
-		</div>
-		<?php osixthreeo_header_after_wrap(); ?>
-	</header>
 	<?php tha_header_after(); ?>
 
 	<div id="content" class="site-content">

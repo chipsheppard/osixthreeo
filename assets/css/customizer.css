@@ -38,6 +38,7 @@
 .customize-control-textarea,
 .customize-control-range,
 .customize-control-color,
+.customize-control-number,
 .customize-control-alpha-color {
 	padding: 12px 12px 0;
 	background-color: #f3f3f3;
@@ -51,6 +52,7 @@
 .customize-control-textarea .customize-control-title,
 .customize-control-range .customize-control-title,
 .customize-control-color .customize-control-title,
+.customize-control-number .customize-control-title,
 .customize-control-alpha-color .customize-control-title {
 	font-weight: 400;
 	font-size: 12px;
@@ -98,7 +100,6 @@
 #customize-control-osixthreeo_settings-subnav_border_color,
 #customize-control-osixthreeo_settings-link_color_hover,
 #customize-control-osixthreeo_settings-footer_link_color_hover,
-#customize-control-osixthreeo_settings-header_padding,
 #customize-control-osixthreeo_settings-search_layout_setting,
 #customize-control-osixthreeo_settings-sitetitle_font_weight,
 #customize-control-osixthreeo_settings-sitedescription_font_weight,
@@ -118,6 +119,7 @@
 }
 /* TOP & BOTTOM - Single control
 ------------------------------------------------- */
+#customize-control-osixthreeo_settings-header_padding,
 #customize-control-osixthreeo_settings-header_font_weight,
 #customize-control-osixthreeo_settings-base_font_size,
 #customize-control-osixthreeo_settings-meta_color,
@@ -134,7 +136,7 @@
 #sub-accordion-section-osixthreeo_typography .customize-control-text,
 #sub-accordion-section-osixthreeo_ch_height .customize-control-text,
 #sub-accordion-section-osixthreeo_ch_text .customize-control-text,
-#sub-accordion-section-osixthreeo_themeops .customize-control-text,
+#sub-accordion-section-osixthreeo_to_content .customize-control-text,
 #sub-accordion-section-osixthreeo_site_layout .customize-control-text {
 	margin: 24px 0 0 0;
 }
@@ -142,7 +144,7 @@
 #sub-accordion-section-osixthreeo_typography .customize-control-text .customize-control-title,
 #sub-accordion-section-osixthreeo_ch_height .customize-control-text .customize-control-title,
 #sub-accordion-section-osixthreeo_ch_text .customize-control-text .customize-control-title,
-#sub-accordion-section-osixthreeo_themeops .customize-control-text .customize-control-title,
+#sub-accordion-section-osixthreeo_to_content .customize-control-text .customize-control-title,
 #sub-accordion-section-osixthreeo_site_layout .customize-control-text .customize-control-title {
 	letter-spacing: 1px;
 	text-transform: uppercase;

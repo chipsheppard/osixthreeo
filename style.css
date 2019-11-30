@@ -2,7 +2,7 @@
 /*
 	Theme Name: OsixthreeO
 	Text Domain: osixthreeo
-	Version: 1.3.4
+	Version: 1.4.0
 	Description: A flexibile, lightweight, multi-purpose theme with a colorful header and customizer controls for crafting a unique design.
 	Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, custom-logo, custom-background, flexible-header, grid-layout
 	Author: Chip Sheppard
@@ -1120,7 +1120,7 @@ button.dropdown-toggle.toggled-on:after {
   display: none;
   position: absolute;
   right: .75em;
-  top: 1.25em;
+  top: 1em;
   overflow: visible;
   -webkit-transition-property: opacity, -webkit-filter;
   transition-property: opacity, -webkit-filter;
@@ -2693,14 +2693,14 @@ img.flex {
  ## 7a. Site Header
 -------------------------------*/
 .site-header {
-  min-height: 360px;
+  min-height: 200px;
   position: relative;
   width: 100%;
 }
 
 @media all and (max-width: 640px) {
   .site-header {
-    min-height: 270px;
+    min-height: 120px;
   }
 }
 
@@ -2709,7 +2709,7 @@ img.flex {
 }
 
 .home .site-header {
-  min-height: 640px;
+  min-height: 600px;
 }
 
 @media all and (max-width: 640px) {
@@ -2904,43 +2904,28 @@ img.flex {
 }
 
 .hero-primary {
-  letter-spacing: 1px;
   line-height: 1.25;
   margin-bottom: .25em;
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-  font-size: 60px;
-  font-size: 3.75rem;
+  font-size: 48px;
+  font-size: 3rem;
 }
 
 @media all and (max-width: 768px) {
   .hero-primary {
-    font-size: 48px;
-    font-size: 3rem;
-  }
-}
-
-@media all and (max-width: 640px) {
-  .hero-primary {
-    font-size: 28px;
-    font-size: 1.75rem;
+    font-size: 32px;
+    font-size: 2rem;
   }
 }
 
 .hero-secondary {
   text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   line-height: 1.25;
-  font-size: 40px;
-  font-size: 2.5rem;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 @media all and (max-width: 768px) {
-  .hero-secondary {
-    font-size: 30px;
-    font-size: 1.875rem;
-  }
-}
-
-@media all and (max-width: 640px) {
   .hero-secondary {
     font-size: 20px;
     font-size: 1.25rem;
@@ -2961,6 +2946,9 @@ img.flex {
 .hero-primary a.btn,
 .hero-secondary a.btn {
   border: none;
+  margin-top: 1em;
+  font-size: 20px;
+  font-size: 1.25rem;
 }
 
 .hero-primary a.btn:hover,
@@ -3564,6 +3552,10 @@ body.home.page .entry-header {
   position: absolute;
   left: 0;
   top: .5em;
+}
+
+.comment-list {
+  margin-bottom: 1em;
 }
 
 .comment-list li,
