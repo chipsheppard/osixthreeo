@@ -55,6 +55,12 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$header_padding                               = $osixthreeo_settings['header_padding'];
 		$default_header_bg_color                      = $defaults['header_background_color'];
 		$default_header_padding                       = $defaults['header_padding'];
+		$header_bg_position                           = $osixthreeo_settings['header_bg_position'];
+		$header_bg_repeat                             = $osixthreeo_settings['header_bg_repeat'];
+		$header_bg_size                               = $osixthreeo_settings['header_bg_size'];
+		$default_header_bg_position                   = $defaults['header_bg_position'];
+		$default_header_bg_repeat                     = $defaults['header_bg_repeat'];
+		$default_header_bg_size                       = $defaults['header_bg_size'];
 		$nav_link_color                               = $osixthreeo_settings['nav_link_color'];
 		$default_nav_link_color                       = $defaults['nav_link_color'];
 		$subnav_text_color                            = $osixthreeo_settings['subnav_text_color'];
@@ -216,6 +222,45 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 				$css->set_selector( '.home .site-header' );
 				$css->add_property( 'min-height', esc_attr( $osixthreeo_settings['home_mobile_header_height'] . 'px' ) );
 			$css->stop_media_query();
+		endif;
+
+		if ( $default_header_bg_position !== $header_bg_position ) :
+			if ( 'left-top' === $header_bg_position ) :
+				$lcr = 'left';
+				$tcb = 'top';
+			elseif ( 'left-center' === $header_bg_position ) :
+				$lcr = 'left';
+				$tcb = 'center';
+			elseif ( 'left-bottom' === $header_bg_position ) :
+				$lcr = 'left';
+				$tcb = 'bottom';
+			elseif ( 'right-top' === $header_bg_position ) :
+				$lcr = 'right';
+				$tcb = 'top';
+			elseif ( 'right-center' === $header_bg_position ) :
+				$lcr = 'right';
+				$tcb = 'center';
+			elseif ( 'right-bottom' === $header_bg_position ) :
+				$lcr = 'right';
+				$tcb = 'bottom';
+			elseif ( 'center-top' === $header_bg_position ) :
+				$lcr = 'center';
+				$tcb = 'top';
+			elseif ( 'center-bottom' === $header_bg_position ) :
+				$lcr = 'center';
+				$tcb = 'bottom';
+			endif;
+			$prop    = sprintf( '%1$s %2$s', $lcr, $tcb );
+			$css->set_selector( '.custom-header .custom-header-image' );
+			$css->add_property( 'background-position', $prop );
+		endif;
+		if ( $default_header_bg_repeat !== $header_bg_repeat ) :
+			$css->set_selector( '.custom-header .custom-header-image' );
+			$css->add_property( 'background-repeat', esc_attr( $osixthreeo_settings['header_bg_repeat'] ) );
+		endif;
+		if ( $default_header_bg_size !== $header_bg_size ) :
+			$css->set_selector( '.custom-header .custom-header-image' );
+			$css->add_property( 'background-size', esc_attr( $osixthreeo_settings['header_bg_size'] ) );
 		endif;
 
 		/*

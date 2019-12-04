@@ -79,44 +79,34 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 == ChangeLog ==
 
 = 1.4.0 - 11 22 2019 =
+* Default custom header image size to 1600x800.
+* Utility styles update.
+* Position, repeat & size controls for custom header background image.
 * Add conditionals for up-sell blocks.
 * Moved header and footer markup to theme-functions.
 
 = 1.3.4 - 10 19 2019 =
 * Add control for site content max-width
-* Remove styles for 'div' inside hero text.
-* Fixed issue with menu css icons.
 * Correct call to customizer.css for child themes.
 * Change upsell language in customizer.
 * Adjust list styles for alignwide & alignfull blocks.
 * Added Area-Label to responsive menu icon.
-* Fixed font issue in editor-styles.
 
-= 1.3.3 - 10 10 2019 =
-* Add controls for scroll button.
-
-= 1.3.2 - 10  07 2019 =
-* Fixed sidebar padding on mobile views.
-* Moved the quote in blockquotes out a tad.
-* Sized down and added top pad to entry-meta.
-
-= 1.3.1 - 10 07 2019 =
+= 1.3.3 - 10 07 2019 =
 * Adjusted default footer text.
 * Adjustments to menu script for accessibility.
 * Removed default text from Homepage text areas.
 
 = 1.3.0 - 10 04 2019 =
-* Pro Add-on integration.
 * Submit to WordPress.org.
-
-= 0.2.9 - 09 30 2019 =
 * Add typography controls.
+* Pro Add-on integration.
 
-= 0.2.8 - 07 30 2019 =
+= 1.2.5 - 07 30 2019 =
 * Customizer control for site containment, content containment, sidebar placements, colors.
 * Added custom-header, customizer controls, page-by-page featured image display control.
 
-= 0.2.3 - 06 30 2019 =
+= 1.2.3 - 06 30 2019 =
 * Adjust for Gutenberg editor styles.
 
 = 1.2.2 - 01 01 2019 =

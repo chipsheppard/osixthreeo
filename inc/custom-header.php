@@ -26,7 +26,7 @@ if ( ! function_exists( 'osixthreeo_header_setup' ) ) :
 			apply_filters( 'osixthreeo_custom_header_args',
 				array(
 					'default-text-color' => 'ffffff',
-					'height'             => 1200,
+					'height'             => 800,
 					'width'              => 1600,
 					'flex-height'        => true,
 					'flex-width'         => true,

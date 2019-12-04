@@ -147,6 +147,65 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		}
 	);
 
+	// Custom header background image position.
+	wp.customize(
+		'osixthreeo_settings[header_bg_position]', function( value ) {
+			value.bind(
+				function( newval ) {
+
+					var pos1 = '';
+					var pos2 = '';
+
+					if ( 'left-top' === newval ) {
+						pos1 = 'left'; pos2 = 'top';
+					}
+					if ( 'left-center' === newval )  {
+						pos1 = 'left'; pos2 = 'center';
+					}
+					if ( 'left-bottom' === newval )  {
+						pos1 = 'left'; pos2 = 'bottom';
+					}
+					if ( 'right-top' === newval ) {
+						pos1 = 'right'; pos2 = 'top';
+					}
+					if ( 'right-center' === newval )  {
+						pos1 = 'right'; pos2 = 'center';
+					}
+					if ( 'right-bottom' === newval )  {
+						pos1 = 'right'; pos2 = 'bottom';
+					}
+					if ( 'center-top' === newval ) {
+						pos1 = 'center'; pos2 = 'top';
+					}
+					if ( 'center-bottom' === newval )  {
+						pos1 = 'center'; pos2 = 'bottom';
+					}
+					$( '.custom-header .custom-header-image' ).css( 'background-position', pos1 + ' ' + pos2 );
+				}
+			);
+		}
+	);
+	// Custom header background image repeat.
+	wp.customize(
+		'osixthreeo_settings[header_bg_repeat]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.custom-header .custom-header-image' ).css( 'background-repeat', newval );
+				}
+			);
+		}
+	);
+	// Custom header background image size.
+	wp.customize(
+		'osixthreeo_settings[header_bg_size]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.custom-header .custom-header-image' ).css( 'background-size', newval );
+				}
+			);
+		}
+	);
+
 	// HEADER COLORS --------------------------------------------- .
 	osixthreeo_colors_live_update(
 		'header_background_color',

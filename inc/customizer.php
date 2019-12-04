@@ -2245,6 +2245,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		 * Section where header images options are automatically added
 		 */
 
+		// Put WP stuff into a new panel.
 		$wp_customize->add_section(
 			'header_image',
 			array(
@@ -2254,8 +2255,92 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
+		// BG Size.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[header_bg_size]',
+			array(
+				'default'           => $defaults['header_bg_size'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_choices',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[header_bg_size]',
+			array(
+				'type'        => 'select',
+				'label'       => __( 'Background image size', 'osixthreeo' ),
+				'section'     => 'header_image',
+				'choices'     => array(
+					'cover'   => __( 'Cover (default)', 'osixthreeo' ),
+					'contain' => __( 'Contain', 'osixthreeo' ),
+					'auto'    => __( 'Auto', 'osixthreeo' ),
+				),
+				'settings'    => 'osixthreeo_settings[header_bg_size]',
+				'priority'    => 70,
+			)
+		);
+
+		// BG Image Position.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[header_bg_position]',
+			array(
+				'default'           => $defaults['header_bg_position'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_choices',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[header_bg_position]',
+			array(
+				'type'        => 'select',
+				'label'       => __( 'Background image position', 'osixthreeo' ),
+				'section'     => 'header_image',
+				'choices'     => array(
+					'left-top'      => __( 'Left Top', 'osixthreeo' ),
+					'left-center'   => __( 'Left Center', 'osixthreeo' ),
+					'left-bottom'   => __( 'Left Bottom', 'osixthreeo' ),
+					'right-top'     => __( 'Right Top', 'osixthreeo' ),
+					'right-center'  => __( 'Right Center', 'osixthreeo' ),
+					'right-bottom'  => __( 'Right Bottom', 'osixthreeo' ),
+					'center-top'    => __( 'Center Top', 'osixthreeo' ),
+					'center-center' => __( 'Center Center (default)', 'osixthreeo' ),
+					'center-bottom' => __( 'Center Bottom', 'osixthreeo' ),
+				),
+				'settings'    => 'osixthreeo_settings[header_bg_position]',
+				'priority'    => 71,
+			)
+		);
+		// BG Repeat.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[header_bg_repeat]',
+			array(
+				'default'           => $defaults['header_bg_repeat'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_choices',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[header_bg_repeat]',
+			array(
+				'type'        => 'select',
+				'label'       => __( 'Background image repeat', 'osixthreeo' ),
+				'section'     => 'header_image',
+				'choices'     => array(
+					'no-repeat' => __( 'No Repeat (default)', 'osixthreeo' ),
+					'repeat'    => __( 'Tile', 'osixthreeo' ),
+					'repeat-x'  => __( 'Tile Horizontally', 'osixthreeo' ),
+					'repeat-y'  => __( 'Tile Vertically', 'osixthreeo' ),
+				),
+				'settings'    => 'osixthreeo_settings[header_bg_repeat]',
+				'priority'    => 72,
+			)
+		);
+
 		/*
-		 * HEIGHT ------------------------------
+		 * New Panel - HEIGHT ------------------------------
 		 */
 		$wp_customize->add_section(
 			'osixthreeo_ch_height',
@@ -2502,7 +2587,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		/*
-		 * OVERLAY TEXT ------------------------------
+		 * NEW PANEL - OVERLAY TEXT ------------------------------
 		 */
 		$wp_customize->add_section(
 			'osixthreeo_ch_text',

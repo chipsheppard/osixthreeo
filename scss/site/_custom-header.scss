@@ -18,7 +18,7 @@
 		right: 0;
 		overflow: hidden;
 		background-repeat: no-repeat;
-		background-position: center 50%;
+		background-position: center center;
 		background-size: cover;
 
 		.inner-wrap {
@@ -78,7 +78,7 @@
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -30%);
+	transform: translate(-50%, -40%);
 	margin: 0 auto;
 	max-width: $size__site-max;
 	padding: 0 $size__site-padding;

@@ -91,7 +91,8 @@
 #customize-control-osixthreeo_settings-meta_font,
 #customize-control-osixthreeo_settings-subnav_bg_color,
 #customize-control-osixthreeo_settings-header_bg_color_left,
-#customize-control-osixthreeo_settings-hero_scroll_button {
+#customize-control-osixthreeo_settings-hero_scroll_button,
+#customize-control-osixthreeo_settings-header_bg_size {
 	border-top: 1px solid #ccc;
 }
 /* BOTTOM Control Blocks
@@ -113,7 +114,8 @@
 #customize-control-osixthreeo_settings-meta_font_weight,
 #customize-control-osixthreeo_settings-nav_link_color,
 #customize-control-osixthreeo_settings-header_right_stop,
-#customize-control-osixthreeo_settings-hero_scroll_button_alignment {
+#customize-control-osixthreeo_settings-hero_scroll_button_alignment,
+#customize-control-osixthreeo_settings-header_bg_repeat {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 12px;
 }

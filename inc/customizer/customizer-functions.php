@@ -184,7 +184,7 @@ add_action( 'osixthreeo_init', 'osixthreeo_header_layout_class' );
 
 
 /**
- * HOMEPAGE HEADER HEIGHT Checkbox
+ * HOMEPAGE HEADER FULL-HEIGHT Checkbox
  * -----------------------------------------------------------------
  * Check if full-height is selected, write a body class if it is..
  */
