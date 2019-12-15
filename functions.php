@@ -1,6 +1,6 @@
 <?php
 /**
- * Main Functions File
+ * Main functions file
  *
  * @package  osixthreeo
  * @author   Chip Sheppard
@@ -9,7 +9,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+	exit;
 }
 
 // Theme data.

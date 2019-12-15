@@ -1,12 +1,12 @@
 <?php
 /**
- * Sets all of our theme defaults.
+ * Sets all of our customizer defaults.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/inc/customizer
- * @author   Chip Sheppard
- * @since    1.2.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.2.0
+ * @license    GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -41,10 +41,6 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'home_mobile_header_height'            => '400',
 			'subpage_header_height'                => '200',
 			'subpage_mobile_header_height'         => '120',
-			'hero_text_primary'                    => '',
-			'hero_text_secondary'                  => '',
-			'hero_text_primary_color'              => '#ffffff',
-			'hero_text_secondary_color'            => '#ffffff',
 			'header_bg_position'                   => 'center-center',
 			'header_bg_repeat'                     => 'no-repeat',
 			'header_bg_size'                       => 'cover',
@@ -77,8 +73,6 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'sitedescription_font'                 => '',
 			'menu_font'                            => '',
 			'meta_font'                            => '',
-			'hero_text_primary_font'               => '',
-			'hero_text_secondary_font'             => '',
 			'header_font_weight'                   => '',
 			'sitetitle_font_weight'                => '',
 			'sitedescription_font_weight'          => '',
@@ -89,12 +83,26 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'sitedescription_font_size'            => '16',
 			'menu_font_size'                       => '16',
 			'meta_font_size'                       => '14',
+			'hero_text_primary'                    => '',
+			'hero_text_secondary'                  => '',
+			'hero_text_primary_font'               => '',
+			'hero_text_secondary_font'             => '',
 			'hero_text_primary_font_size'          => '48',
 			'hero_text_primary_font_size_mobile'   => '32',
 			'hero_text_secondary_font_size'        => '24',
 			'hero_text_secondary_font_size_mobile' => '18',
+			'hero_text_primary_color'              => '#ffffff',
+			'hero_text_secondary_color'            => '#ffffff',
 			'hero_text_primary_alignment'          => 'left',
 			'hero_text_secondary_alignment'        => 'left',
+			'hero_text_primary_shadow_color'       => '#000000',
+			'hero_text_secondary_shadow_color'     => '#000000',
+			'hero_text_primary_shadow_x'           => '0',
+			'hero_text_secondary_shadow_x'         => '0',
+			'hero_text_primary_shadow_y'           => '0',
+			'hero_text_secondary_shadow_y'         => '0',
+			'hero_text_primary_shadow_blur'        => '0',
+			'hero_text_secondary_shadow_blur'      => '0',
 			'hero_scroll_button'                   => '',
 			'hero_scroll_button_alignment'         => '',
 		);

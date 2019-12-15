@@ -1,12 +1,12 @@
 <?php
 /**
- * Template part for the content area
+ * Template part for the content area.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/template-parts
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  */
 
 ?>

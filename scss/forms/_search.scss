@@ -32,4 +32,7 @@
 	input[type="submit"] {
 		border-right: 1px solid $color__base-xlight;
 	}
+	input[type="search"] {
+		margin-bottom: 0;
+	}
 }

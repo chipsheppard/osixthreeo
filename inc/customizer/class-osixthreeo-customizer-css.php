@@ -2,11 +2,11 @@
 /**
  * Builds our customizer CSS.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/inc/customizer
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

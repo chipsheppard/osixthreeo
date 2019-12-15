@@ -2,11 +2,11 @@
 /**
  * Display Featured Image checkbox.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/inc
- * @author   Chip Sheppard
- * @since    1.2.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.2.0
+ * @license    GPL-2.0+
  *
  * @link https://www.pmg.com/blog/wordpress-how-to-adding-a-custom-checkbox-to-the-post-publish-box/
  */

@@ -5,11 +5,11 @@
  *
  * Learn more: https://git.io/vWdr2
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/assets/js
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  */
 
 ( function() {

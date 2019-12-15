@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2019-12-04 09:47-0500\n"
-"PO-Revision-Date: 2019-12-04 09:48-0500\n"
+"POT-Creation-Date: 2019-12-15 15:09-0500\n"
+"PO-Revision-Date: 2019-12-15 15:10-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_001\n"
@@ -28,7 +28,7 @@ msgstr ""
 msgid "Please use the menu in the header or try a search."
 msgstr ""
 
-#: comments.php:26 inc/customizer.php:2038
+#: comments.php:26 inc/customizer.php:1974
 msgid "Comments"
 msgstr ""
 
@@ -60,914 +60,931 @@ msgstr ""
 msgid "Featured Image Display"
 msgstr ""
 
-#: inc/customizer.php:88
+#: inc/customizer.php:86
 msgid "Layouts"
 msgstr ""
 
-#: inc/customizer.php:107
+#: inc/customizer.php:105
 msgid "Site Width"
 msgstr ""
 
-#: inc/customizer.php:126
+#: inc/customizer.php:124
 msgid "Site Containment"
 msgstr ""
 
-#: inc/customizer.php:129
+#: inc/customizer.php:127
 msgid "Full Width"
 msgstr ""
 
-#: inc/customizer.php:130
+#: inc/customizer.php:128
 msgid "Contained"
 msgstr ""
 
-#: inc/customizer.php:153
+#: inc/customizer.php:151
 msgid "Content area max width"
 msgstr ""
 
-#: inc/customizer.php:182 inc/customizer.php:2099
+#: inc/customizer.php:180 inc/customizer.php:2072
 msgid "Header"
 msgstr ""
 
-#: inc/customizer.php:205
+#: inc/customizer.php:203
 msgid "Logo & Navigation."
 msgstr ""
 
-#: inc/customizer.php:206
+#: inc/customizer.php:204
 msgid "left & right &nbsp; &nbsp; &nbsp; &nbsp; centered"
 msgstr ""
 
-#: inc/customizer.php:209
+#: inc/customizer.php:207
 msgid "headernormal"
 msgstr ""
 
-#: inc/customizer.php:210
+#: inc/customizer.php:208
 msgid "headercentered"
 msgstr ""
 
-#: inc/customizer.php:236
+#: inc/customizer.php:234
 msgid "Sidebars"
 msgstr ""
 
-#: inc/customizer.php:256
+#: inc/customizer.php:254
 msgid "Homepage"
+msgstr ""
+
+#: inc/customizer.php:257 inc/customizer.php:286 inc/customizer.php:315
+#: inc/customizer.php:344 inc/customizer.php:373
+msgid "layout-ns"
+msgstr ""
+
+#: inc/customizer.php:258 inc/customizer.php:287 inc/customizer.php:316
+#: inc/customizer.php:345 inc/customizer.php:374
+msgid "layout-ls"
 msgstr ""
 
 #: inc/customizer.php:259 inc/customizer.php:288 inc/customizer.php:317
 #: inc/customizer.php:346 inc/customizer.php:375
-msgid "layout-ns"
+msgid "layout-rs"
 msgstr ""
 
 #: inc/customizer.php:260 inc/customizer.php:289 inc/customizer.php:318
 #: inc/customizer.php:347 inc/customizer.php:376
-msgid "layout-ls"
-msgstr ""
-
-#: inc/customizer.php:261 inc/customizer.php:290 inc/customizer.php:319
-#: inc/customizer.php:348 inc/customizer.php:377
-msgid "layout-rs"
-msgstr ""
-
-#: inc/customizer.php:262 inc/customizer.php:291 inc/customizer.php:320
-#: inc/customizer.php:349 inc/customizer.php:378
 msgid "layout-c"
 msgstr ""
 
-#: inc/customizer.php:285
+#: inc/customizer.php:283
 msgid "Pages"
 msgstr ""
 
-#: inc/customizer.php:314
+#: inc/customizer.php:312
 msgid "Single Post"
 msgstr ""
 
-#: inc/customizer.php:343
+#: inc/customizer.php:341
 msgid "Archive/Blog"
 msgstr ""
 
-#: inc/customizer.php:372
+#: inc/customizer.php:370
 msgid "Search Results"
 msgstr ""
 
-#: inc/customizer.php:401
+#: inc/customizer.php:399
 msgid "Get more layout controls with an OsixthreeO Extension"
 msgstr ""
 
-#: inc/customizer.php:430
+#: inc/customizer.php:428
 msgid "Branding/Menu"
 msgstr ""
 
-#: inc/customizer.php:450 inc/customizer.php:516 inc/customizer.php:644
-#: inc/customizer.php:796
+#: inc/customizer.php:448 inc/customizer.php:514 inc/customizer.php:642
+#: inc/customizer.php:794
 msgid "Background"
 msgstr ""
 
-#: inc/customizer.php:475
+#: inc/customizer.php:473
 msgid "Menu links"
 msgstr ""
 
-#: inc/customizer.php:497
+#: inc/customizer.php:495
 msgid "Mobile / sub menus"
 msgstr ""
 
-#: inc/customizer.php:537
+#: inc/customizer.php:535
 msgid "Hover background"
 msgstr ""
 
-#: inc/customizer.php:559 inc/customizer.php:690 inc/customizer.php:865
+#: inc/customizer.php:557 inc/customizer.php:688 inc/customizer.php:863
 msgid "Links"
 msgstr ""
 
-#: inc/customizer.php:580 inc/customizer.php:712 inc/customizer.php:888
+#: inc/customizer.php:578 inc/customizer.php:710 inc/customizer.php:886
 msgid "Hover links"
 msgstr ""
 
-#: inc/customizer.php:602
+#: inc/customizer.php:600
 msgid "Border"
 msgstr ""
 
-#: inc/customizer.php:624 inc/customizer.php:1920
+#: inc/customizer.php:622 inc/customizer.php:1880
 msgid "Content Area"
 msgstr ""
 
-#: inc/customizer.php:668 inc/customizer.php:842
+#: inc/customizer.php:666 inc/customizer.php:840
 msgid "Text"
 msgstr ""
 
-#: inc/customizer.php:734
+#: inc/customizer.php:732 inc/customizer.php:1746
 msgid "Post Meta"
 msgstr ""
 
-#: inc/customizer.php:754
+#: inc/customizer.php:752
 msgid "Text & links"
 msgstr ""
 
-#: inc/customizer.php:776
+#: inc/customizer.php:774
 msgid "Footer"
 msgstr ""
 
-#: inc/customizer.php:819
+#: inc/customizer.php:817
 msgid "Title"
 msgstr ""
 
-#: inc/customizer.php:911
+#: inc/customizer.php:909
 msgid "Get more color controls with an OsixthreeO Extension"
 msgstr ""
 
-#: inc/customizer.php:927
+#: inc/customizer.php:925
 msgid "Typography"
 msgstr ""
 
-#: inc/customizer.php:946
+#: inc/customizer.php:944
 msgid "3 Fonts"
 msgstr ""
 
-#: inc/customizer.php:964 inc/customizer.php:1384 inc/customizer.php:1490
-#: inc/customizer.php:1596 inc/customizer.php:1808 inc/customizer.php:2654
-#: inc/customizer.php:2822
-msgid "Base font"
+#: inc/customizer.php:962
+msgid "Base font family"
 msgstr ""
 
-#: inc/customizer.php:967 inc/customizer.php:1104 inc/customizer.php:1225
+#: inc/customizer.php:965 inc/customizer.php:1131 inc/customizer.php:1286
 msgid "Arial - default"
 msgstr ""
 
-#: inc/customizer.php:968 inc/customizer.php:1105 inc/customizer.php:1226
+#: inc/customizer.php:966 inc/customizer.php:1132 inc/customizer.php:1287
 msgid "Georgia"
 msgstr ""
 
-#: inc/customizer.php:969 inc/customizer.php:1106 inc/customizer.php:1227
+#: inc/customizer.php:967 inc/customizer.php:1133 inc/customizer.php:1288
 msgid "Verdana"
 msgstr ""
 
-#: inc/customizer.php:970 inc/customizer.php:1107 inc/customizer.php:1228
+#: inc/customizer.php:968 inc/customizer.php:1134 inc/customizer.php:1289
 msgid "Trebuchet"
 msgstr ""
 
-#: inc/customizer.php:971 inc/customizer.php:1108 inc/customizer.php:1229
+#: inc/customizer.php:969 inc/customizer.php:1135 inc/customizer.php:1290
 msgid "Palatino"
 msgstr ""
 
-#: inc/customizer.php:972 inc/customizer.php:1109 inc/customizer.php:1230
+#: inc/customizer.php:970 inc/customizer.php:1136 inc/customizer.php:1291
 msgid "Tahoma"
 msgstr ""
 
-#: inc/customizer.php:973 inc/customizer.php:1110 inc/customizer.php:1231
+#: inc/customizer.php:971 inc/customizer.php:1137 inc/customizer.php:1292
 msgid "Times"
 msgstr ""
 
-#: inc/customizer.php:974 inc/customizer.php:1111 inc/customizer.php:1232
+#: inc/customizer.php:972 inc/customizer.php:1138 inc/customizer.php:1293
 msgid "Arial Black"
 msgstr ""
 
-#: inc/customizer.php:975 inc/customizer.php:1112 inc/customizer.php:1233
+#: inc/customizer.php:973 inc/customizer.php:1139 inc/customizer.php:1294
 msgid "Impact"
 msgstr ""
 
-#: inc/customizer.php:976 inc/customizer.php:1113 inc/customizer.php:1234
+#: inc/customizer.php:974 inc/customizer.php:1140 inc/customizer.php:1295
 msgid "Copperplate"
 msgstr ""
 
-#: inc/customizer.php:977 inc/customizer.php:1114 inc/customizer.php:1235
+#: inc/customizer.php:975 inc/customizer.php:1141 inc/customizer.php:1296
 msgid "Papyrus"
 msgstr ""
 
-#: inc/customizer.php:978 inc/customizer.php:1115 inc/customizer.php:1236
+#: inc/customizer.php:976 inc/customizer.php:1142 inc/customizer.php:1297
 msgid "Courier"
 msgstr ""
 
-#: inc/customizer.php:979 inc/customizer.php:1116 inc/customizer.php:1237
+#: inc/customizer.php:977 inc/customizer.php:1143 inc/customizer.php:1298
 msgid "Lucida Typewritter"
 msgstr ""
 
-#: inc/customizer.php:980 inc/customizer.php:1117 inc/customizer.php:1238
+#: inc/customizer.php:978 inc/customizer.php:1144 inc/customizer.php:1299
 msgid "Comic Sans"
 msgstr ""
 
-#: inc/customizer.php:982 inc/customizer.php:1118 inc/customizer.php:1239
+#: inc/customizer.php:980 inc/customizer.php:1145 inc/customizer.php:1300
 msgid "Alegreya"
 msgstr ""
 
-#: inc/customizer.php:983 inc/customizer.php:1119 inc/customizer.php:1240
+#: inc/customizer.php:981 inc/customizer.php:1146 inc/customizer.php:1301
 msgid "Alegreya SC"
 msgstr ""
 
-#: inc/customizer.php:984 inc/customizer.php:1120 inc/customizer.php:1241
+#: inc/customizer.php:982 inc/customizer.php:1147 inc/customizer.php:1302
 msgid "Alegreya Sans"
 msgstr ""
 
-#: inc/customizer.php:985 inc/customizer.php:1121 inc/customizer.php:1242
+#: inc/customizer.php:983 inc/customizer.php:1148 inc/customizer.php:1303
 msgid "Alegreya Sans SC"
 msgstr ""
 
-#: inc/customizer.php:986 inc/customizer.php:1122 inc/customizer.php:1243
+#: inc/customizer.php:984 inc/customizer.php:1149 inc/customizer.php:1304
 msgid "Archivo"
 msgstr ""
 
-#: inc/customizer.php:987 inc/customizer.php:1123 inc/customizer.php:1244
+#: inc/customizer.php:985 inc/customizer.php:1150 inc/customizer.php:1305
 msgid "Archivo Narrow"
 msgstr ""
 
-#: inc/customizer.php:988 inc/customizer.php:1124 inc/customizer.php:1245
+#: inc/customizer.php:986 inc/customizer.php:1151 inc/customizer.php:1306
 msgid "Arvo"
 msgstr ""
 
-#: inc/customizer.php:989 inc/customizer.php:1125 inc/customizer.php:1246
+#: inc/customizer.php:987 inc/customizer.php:1152 inc/customizer.php:1307
 msgid "Abril Fatface"
 msgstr ""
 
-#: inc/customizer.php:990 inc/customizer.php:1126 inc/customizer.php:1247
+#: inc/customizer.php:988 inc/customizer.php:1153 inc/customizer.php:1308
 msgid "Alfa Slab One"
 msgstr ""
 
-#: inc/customizer.php:992 inc/customizer.php:1127 inc/customizer.php:1248
+#: inc/customizer.php:990 inc/customizer.php:1154 inc/customizer.php:1309
 msgid "B612"
 msgstr ""
 
-#: inc/customizer.php:993 inc/customizer.php:1128 inc/customizer.php:1249
+#: inc/customizer.php:991 inc/customizer.php:1155 inc/customizer.php:1310
 msgid "BioRhyme"
 msgstr ""
 
-#: inc/customizer.php:994 inc/customizer.php:1129 inc/customizer.php:1250
+#: inc/customizer.php:992 inc/customizer.php:1156 inc/customizer.php:1311
 msgid "Baloo"
 msgstr ""
 
-#: inc/customizer.php:995 inc/customizer.php:1130 inc/customizer.php:1251
+#: inc/customizer.php:993 inc/customizer.php:1157 inc/customizer.php:1312
 msgid "Barrio"
 msgstr ""
 
-#: inc/customizer.php:996 inc/customizer.php:1131 inc/customizer.php:1252
+#: inc/customizer.php:994 inc/customizer.php:1158 inc/customizer.php:1313
 msgid "Black Ops One"
 msgstr ""
 
-#: inc/customizer.php:998 inc/customizer.php:1132 inc/customizer.php:1253
+#: inc/customizer.php:996 inc/customizer.php:1159 inc/customizer.php:1314
 msgid "Cabin"
 msgstr ""
 
-#: inc/customizer.php:999 inc/customizer.php:1133 inc/customizer.php:1254
+#: inc/customizer.php:997 inc/customizer.php:1160 inc/customizer.php:1315
 msgid "Cairo"
 msgstr ""
 
-#: inc/customizer.php:1000 inc/customizer.php:1134 inc/customizer.php:1255
+#: inc/customizer.php:998 inc/customizer.php:1161 inc/customizer.php:1316
 msgid "Chivo"
 msgstr ""
 
-#: inc/customizer.php:1001 inc/customizer.php:1135 inc/customizer.php:1256
+#: inc/customizer.php:999 inc/customizer.php:1162 inc/customizer.php:1317
 msgid "Cardo"
 msgstr ""
 
-#: inc/customizer.php:1002 inc/customizer.php:1136 inc/customizer.php:1257
+#: inc/customizer.php:1000 inc/customizer.php:1163 inc/customizer.php:1318
 msgid "Cormorant"
 msgstr ""
 
-#: inc/customizer.php:1003 inc/customizer.php:1137 inc/customizer.php:1258
+#: inc/customizer.php:1001 inc/customizer.php:1164 inc/customizer.php:1319
 msgid "Crimson Text"
 msgstr ""
 
-#: inc/customizer.php:1004 inc/customizer.php:1138 inc/customizer.php:1259
+#: inc/customizer.php:1002 inc/customizer.php:1165 inc/customizer.php:1320
 msgid "Cabin Sketch"
 msgstr ""
 
-#: inc/customizer.php:1005 inc/customizer.php:1139 inc/customizer.php:1260
+#: inc/customizer.php:1003 inc/customizer.php:1166 inc/customizer.php:1321
 msgid "Chela One"
 msgstr ""
 
-#: inc/customizer.php:1006 inc/customizer.php:1140 inc/customizer.php:1261
+#: inc/customizer.php:1004 inc/customizer.php:1167 inc/customizer.php:1322
 msgid "Concert One"
 msgstr ""
 
-#: inc/customizer.php:1008 inc/customizer.php:1141 inc/customizer.php:1262
+#: inc/customizer.php:1006 inc/customizer.php:1168 inc/customizer.php:1323
 msgid "Domine"
 msgstr ""
 
-#: inc/customizer.php:1010 inc/customizer.php:1142 inc/customizer.php:1263
+#: inc/customizer.php:1008 inc/customizer.php:1169 inc/customizer.php:1324
 msgid "Exo 2"
 msgstr ""
 
-#: inc/customizer.php:1011 inc/customizer.php:1143 inc/customizer.php:1264
+#: inc/customizer.php:1009 inc/customizer.php:1170 inc/customizer.php:1325
 msgid "Eczar"
 msgstr ""
 
-#: inc/customizer.php:1012 inc/customizer.php:1144 inc/customizer.php:1265
+#: inc/customizer.php:1010 inc/customizer.php:1171 inc/customizer.php:1326
 msgid "Erica One"
 msgstr ""
 
-#: inc/customizer.php:1014 inc/customizer.php:1145 inc/customizer.php:1266
+#: inc/customizer.php:1012 inc/customizer.php:1172 inc/customizer.php:1327
 msgid "Fjalla One"
 msgstr ""
 
-#: inc/customizer.php:1015 inc/customizer.php:1146 inc/customizer.php:1267
+#: inc/customizer.php:1013 inc/customizer.php:1173 inc/customizer.php:1328
 msgid "Fira Sans"
 msgstr ""
 
-#: inc/customizer.php:1016 inc/customizer.php:1147 inc/customizer.php:1268
+#: inc/customizer.php:1014 inc/customizer.php:1174 inc/customizer.php:1329
 msgid "Frank Ruhl Libre"
 msgstr ""
 
-#: inc/customizer.php:1017 inc/customizer.php:1148 inc/customizer.php:1269
+#: inc/customizer.php:1015 inc/customizer.php:1175 inc/customizer.php:1330
 msgid "Fascinate"
 msgstr ""
 
-#: inc/customizer.php:1018 inc/customizer.php:1149 inc/customizer.php:1270
+#: inc/customizer.php:1016 inc/customizer.php:1176 inc/customizer.php:1331
 msgid "Flamenco"
 msgstr ""
 
-#: inc/customizer.php:1019 inc/customizer.php:1150 inc/customizer.php:1271
+#: inc/customizer.php:1017 inc/customizer.php:1177 inc/customizer.php:1332
 msgid "Fredericka the Great"
 msgstr ""
 
-#: inc/customizer.php:1021 inc/customizer.php:1151 inc/customizer.php:1272
+#: inc/customizer.php:1019 inc/customizer.php:1178 inc/customizer.php:1333
 msgid "IBM Plex Sans"
 msgstr ""
 
-#: inc/customizer.php:1022 inc/customizer.php:1152 inc/customizer.php:1273
+#: inc/customizer.php:1020 inc/customizer.php:1179 inc/customizer.php:1334
 msgid "IBM Plex Serif"
 msgstr ""
 
-#: inc/customizer.php:1023 inc/customizer.php:1153 inc/customizer.php:1274
+#: inc/customizer.php:1021 inc/customizer.php:1180 inc/customizer.php:1335
 msgid "Inknut Antiqua"
 msgstr ""
 
-#: inc/customizer.php:1024 inc/customizer.php:1154 inc/customizer.php:1275
+#: inc/customizer.php:1022 inc/customizer.php:1181 inc/customizer.php:1336
 msgid "Inconsolata"
 msgstr ""
 
-#: inc/customizer.php:1026 inc/customizer.php:1155 inc/customizer.php:1276
+#: inc/customizer.php:1024 inc/customizer.php:1182 inc/customizer.php:1337
 msgid "Karla"
 msgstr ""
 
-#: inc/customizer.php:1028 inc/customizer.php:1156 inc/customizer.php:1277
+#: inc/customizer.php:1026 inc/customizer.php:1183 inc/customizer.php:1338
 msgid "Lato"
 msgstr ""
 
-#: inc/customizer.php:1029 inc/customizer.php:1157 inc/customizer.php:1278
+#: inc/customizer.php:1027 inc/customizer.php:1184 inc/customizer.php:1339
 msgid "Libre Franklin"
 msgstr ""
 
-#: inc/customizer.php:1030 inc/customizer.php:1158 inc/customizer.php:1279
+#: inc/customizer.php:1028 inc/customizer.php:1185 inc/customizer.php:1340
 msgid "Libre Baskerville"
 msgstr ""
 
-#: inc/customizer.php:1031 inc/customizer.php:1159 inc/customizer.php:1280
+#: inc/customizer.php:1029 inc/customizer.php:1186 inc/customizer.php:1341
 msgid "Lora"
 msgstr ""
 
-#: inc/customizer.php:1032 inc/customizer.php:1160 inc/customizer.php:1281
+#: inc/customizer.php:1030 inc/customizer.php:1187 inc/customizer.php:1342
 msgid "Lily Script One"
 msgstr ""
 
-#: inc/customizer.php:1033 inc/customizer.php:1161 inc/customizer.php:1282
+#: inc/customizer.php:1031 inc/customizer.php:1188 inc/customizer.php:1343
 msgid "Lobster"
 msgstr ""
 
-#: inc/customizer.php:1034 inc/customizer.php:1162 inc/customizer.php:1283
+#: inc/customizer.php:1032 inc/customizer.php:1189 inc/customizer.php:1344
 msgid "Lobster Two"
 msgstr ""
 
-#: inc/customizer.php:1036 inc/customizer.php:1163 inc/customizer.php:1284
+#: inc/customizer.php:1034 inc/customizer.php:1190 inc/customizer.php:1345
 msgid "Montserrat"
 msgstr ""
 
-#: inc/customizer.php:1037 inc/customizer.php:1164 inc/customizer.php:1285
+#: inc/customizer.php:1035 inc/customizer.php:1191 inc/customizer.php:1346
 msgid "Montserrat Alternates"
 msgstr ""
 
-#: inc/customizer.php:1038 inc/customizer.php:1165 inc/customizer.php:1286
+#: inc/customizer.php:1036 inc/customizer.php:1192 inc/customizer.php:1347
 msgid "Muli"
 msgstr ""
 
-#: inc/customizer.php:1039 inc/customizer.php:1166 inc/customizer.php:1287
+#: inc/customizer.php:1037 inc/customizer.php:1193 inc/customizer.php:1348
 msgid "Merriweather"
 msgstr ""
 
-#: inc/customizer.php:1040 inc/customizer.php:1167 inc/customizer.php:1288
+#: inc/customizer.php:1038 inc/customizer.php:1194 inc/customizer.php:1349
 msgid "Monoton"
 msgstr ""
 
-#: inc/customizer.php:1042 inc/customizer.php:1168 inc/customizer.php:1289
+#: inc/customizer.php:1040 inc/customizer.php:1195 inc/customizer.php:1350
 msgid "Noto Sans"
 msgstr ""
 
-#: inc/customizer.php:1043 inc/customizer.php:1169 inc/customizer.php:1290
+#: inc/customizer.php:1041 inc/customizer.php:1196 inc/customizer.php:1351
 msgid "Nunito"
 msgstr ""
 
-#: inc/customizer.php:1044 inc/customizer.php:1170 inc/customizer.php:1291
+#: inc/customizer.php:1042 inc/customizer.php:1197 inc/customizer.php:1352
 msgid "Neuton"
 msgstr ""
 
-#: inc/customizer.php:1045 inc/customizer.php:1171 inc/customizer.php:1292
+#: inc/customizer.php:1043 inc/customizer.php:1198 inc/customizer.php:1353
 msgid "Nixie One"
 msgstr ""
 
-#: inc/customizer.php:1047 inc/customizer.php:1172 inc/customizer.php:1293
+#: inc/customizer.php:1045 inc/customizer.php:1199 inc/customizer.php:1354
 msgid "Open Sans"
 msgstr ""
 
-#: inc/customizer.php:1048 inc/customizer.php:1173 inc/customizer.php:1294
+#: inc/customizer.php:1046 inc/customizer.php:1200 inc/customizer.php:1355
 msgid "Oswald"
 msgstr ""
 
-#: inc/customizer.php:1049 inc/customizer.php:1174 inc/customizer.php:1295
+#: inc/customizer.php:1047 inc/customizer.php:1201 inc/customizer.php:1356
 msgid "Oxygen"
 msgstr ""
 
-#: inc/customizer.php:1050 inc/customizer.php:1175 inc/customizer.php:1296
+#: inc/customizer.php:1048 inc/customizer.php:1202 inc/customizer.php:1357
 msgid "Old Standard TT"
 msgstr ""
 
-#: inc/customizer.php:1051 inc/customizer.php:1176 inc/customizer.php:1297
+#: inc/customizer.php:1049 inc/customizer.php:1203 inc/customizer.php:1358
 msgid "Oleo Script"
 msgstr ""
 
-#: inc/customizer.php:1052 inc/customizer.php:1177 inc/customizer.php:1298
+#: inc/customizer.php:1050 inc/customizer.php:1204 inc/customizer.php:1359
 msgid "Oleo Script Swash Caps"
 msgstr ""
 
-#: inc/customizer.php:1054 inc/customizer.php:1178 inc/customizer.php:1299
+#: inc/customizer.php:1052 inc/customizer.php:1205 inc/customizer.php:1360
 msgid "Poppins"
 msgstr ""
 
-#: inc/customizer.php:1055 inc/customizer.php:1179 inc/customizer.php:1300
+#: inc/customizer.php:1053 inc/customizer.php:1206 inc/customizer.php:1361
 msgid "Proza Libre"
 msgstr ""
 
-#: inc/customizer.php:1056 inc/customizer.php:1180 inc/customizer.php:1301
+#: inc/customizer.php:1054 inc/customizer.php:1207 inc/customizer.php:1362
 msgid "PT Sans"
 msgstr ""
 
-#: inc/customizer.php:1057 inc/customizer.php:1181 inc/customizer.php:1302
+#: inc/customizer.php:1055 inc/customizer.php:1208 inc/customizer.php:1363
 msgid "Playfair Display"
 msgstr ""
 
-#: inc/customizer.php:1058 inc/customizer.php:1182 inc/customizer.php:1303
+#: inc/customizer.php:1056 inc/customizer.php:1209 inc/customizer.php:1364
 msgid "PT Serif"
 msgstr ""
 
-#: inc/customizer.php:1060 inc/customizer.php:1183 inc/customizer.php:1304
+#: inc/customizer.php:1058 inc/customizer.php:1210 inc/customizer.php:1365
 msgid "Raleway"
 msgstr ""
 
-#: inc/customizer.php:1061 inc/customizer.php:1184 inc/customizer.php:1305
+#: inc/customizer.php:1059 inc/customizer.php:1211 inc/customizer.php:1366
 msgid "Roboto"
 msgstr ""
 
-#: inc/customizer.php:1062 inc/customizer.php:1185 inc/customizer.php:1306
+#: inc/customizer.php:1060 inc/customizer.php:1212 inc/customizer.php:1367
 msgid "Rubik"
 msgstr ""
 
-#: inc/customizer.php:1063 inc/customizer.php:1186 inc/customizer.php:1307
+#: inc/customizer.php:1061 inc/customizer.php:1213 inc/customizer.php:1368
 msgid "Roboto Slab"
 msgstr ""
 
-#: inc/customizer.php:1064 inc/customizer.php:1187 inc/customizer.php:1308
+#: inc/customizer.php:1062 inc/customizer.php:1214 inc/customizer.php:1369
 msgid "Rokkitt"
 msgstr ""
 
-#: inc/customizer.php:1065 inc/customizer.php:1188 inc/customizer.php:1309
+#: inc/customizer.php:1063 inc/customizer.php:1215 inc/customizer.php:1370
 msgid "Ranchers"
 msgstr ""
 
-#: inc/customizer.php:1066 inc/customizer.php:1189 inc/customizer.php:1310
+#: inc/customizer.php:1064 inc/customizer.php:1216 inc/customizer.php:1371
 msgid "Rakkas"
 msgstr ""
 
-#: inc/customizer.php:1068 inc/customizer.php:1190 inc/customizer.php:1311
+#: inc/customizer.php:1066 inc/customizer.php:1217 inc/customizer.php:1372
 msgid "Source Sans Pro"
 msgstr ""
 
-#: inc/customizer.php:1069 inc/customizer.php:1191 inc/customizer.php:1312
+#: inc/customizer.php:1067 inc/customizer.php:1218 inc/customizer.php:1373
 msgid "Source Serif Pro"
 msgstr ""
 
-#: inc/customizer.php:1070 inc/customizer.php:1192 inc/customizer.php:1313
+#: inc/customizer.php:1068 inc/customizer.php:1219 inc/customizer.php:1374
 msgid "Spectral"
 msgstr ""
 
-#: inc/customizer.php:1071 inc/customizer.php:1193 inc/customizer.php:1314
+#: inc/customizer.php:1069 inc/customizer.php:1220 inc/customizer.php:1375
 msgid "Special Elite"
 msgstr ""
 
-#: inc/customizer.php:1072 inc/customizer.php:1194 inc/customizer.php:1315
+#: inc/customizer.php:1070 inc/customizer.php:1221 inc/customizer.php:1376
 msgid "Space Mono"
 msgstr ""
 
-#: inc/customizer.php:1074 inc/customizer.php:1195 inc/customizer.php:1316
+#: inc/customizer.php:1072 inc/customizer.php:1222 inc/customizer.php:1377
 msgid "Titillium Web"
 msgstr ""
 
-#: inc/customizer.php:1075 inc/customizer.php:1196 inc/customizer.php:1317
+#: inc/customizer.php:1073 inc/customizer.php:1223 inc/customizer.php:1378
 msgid "Ubuntu"
 msgstr ""
 
-#: inc/customizer.php:1076 inc/customizer.php:1197 inc/customizer.php:1318
+#: inc/customizer.php:1074 inc/customizer.php:1224 inc/customizer.php:1379
 msgid "Varela"
 msgstr ""
 
-#: inc/customizer.php:1077 inc/customizer.php:1198 inc/customizer.php:1319
+#: inc/customizer.php:1075 inc/customizer.php:1225 inc/customizer.php:1380
 msgid "Varela Round"
 msgstr ""
 
-#: inc/customizer.php:1078 inc/customizer.php:1199 inc/customizer.php:1320
+#: inc/customizer.php:1076 inc/customizer.php:1226 inc/customizer.php:1381
 msgid "Vollkorn"
 msgstr ""
 
-#: inc/customizer.php:1079 inc/customizer.php:1200 inc/customizer.php:1321
+#: inc/customizer.php:1077 inc/customizer.php:1227 inc/customizer.php:1382
 msgid "Vollkorn SC"
 msgstr ""
 
-#: inc/customizer.php:1080 inc/customizer.php:1201 inc/customizer.php:1322
+#: inc/customizer.php:1078 inc/customizer.php:1228 inc/customizer.php:1383
 msgid "Work Sans"
 msgstr ""
 
-#: inc/customizer.php:1081 inc/customizer.php:1202 inc/customizer.php:1323
+#: inc/customizer.php:1079 inc/customizer.php:1229 inc/customizer.php:1384
 msgid "Yatra One"
 msgstr ""
 
-#: inc/customizer.php:1101 inc/customizer.php:1385 inc/customizer.php:1491
-#: inc/customizer.php:1597 inc/customizer.php:1809 inc/customizer.php:2655
-#: inc/customizer.php:2823
-msgid "Header font"
+#: inc/customizer.php:1102
+msgid "Base font size"
 msgstr ""
 
-#: inc/customizer.php:1222 inc/customizer.php:1386 inc/customizer.php:1492
-#: inc/customizer.php:1598 inc/customizer.php:1810 inc/customizer.php:2656
-#: inc/customizer.php:2824
-msgid "Highlite font"
+#: inc/customizer.php:1128
+msgid "Header font family"
 msgstr ""
 
-#: inc/customizer.php:1344
-msgid ""
-"<br />Using the controls below, and in other sections of the Customizer, the "
-"above 3 fonts can be assigned to various areas of the site."
+#: inc/customizer.php:1250
+msgid "Header font weight"
 msgstr ""
 
-#: inc/customizer.php:1363
-msgid "Site Title"
-msgstr ""
-
-#: inc/customizer.php:1381 inc/customizer.php:1487 inc/customizer.php:1593
-#: inc/customizer.php:1805 inc/customizer.php:2651 inc/customizer.php:2819
-msgid "Font family"
-msgstr ""
-
-#: inc/customizer.php:1409 inc/customizer.php:1515 inc/customizer.php:1621
-#: inc/customizer.php:1703 inc/customizer.php:1833 inc/customizer.php:2847
-#: inc/customizer.php:2874
-msgid "Font size"
-msgstr ""
-
-#: inc/customizer.php:1436 inc/customizer.php:1542 inc/customizer.php:1648
-#: inc/customizer.php:1749 inc/customizer.php:1860
-msgid "Font weight"
-msgstr ""
-
-#: inc/customizer.php:1439 inc/customizer.php:1545 inc/customizer.php:1651
-#: inc/customizer.php:1752 inc/customizer.php:1863
+#: inc/customizer.php:1254 inc/customizer.php:1500 inc/customizer.php:1606
+#: inc/customizer.php:1712 inc/customizer.php:1823
 msgid "Default"
 msgstr ""
 
-#: inc/customizer.php:1440 inc/customizer.php:1546 inc/customizer.php:1652
-#: inc/customizer.php:1753 inc/customizer.php:1864
+#: inc/customizer.php:1255 inc/customizer.php:1501 inc/customizer.php:1607
+#: inc/customizer.php:1713 inc/customizer.php:1824
 msgid "Thin: 100"
 msgstr ""
 
-#: inc/customizer.php:1441 inc/customizer.php:1547 inc/customizer.php:1653
-#: inc/customizer.php:1754 inc/customizer.php:1865
+#: inc/customizer.php:1256 inc/customizer.php:1502 inc/customizer.php:1608
+#: inc/customizer.php:1714 inc/customizer.php:1825
 msgid "Light: 200"
 msgstr ""
 
-#: inc/customizer.php:1442 inc/customizer.php:1548 inc/customizer.php:1654
-#: inc/customizer.php:1755 inc/customizer.php:1866
+#: inc/customizer.php:1257 inc/customizer.php:1503 inc/customizer.php:1609
+#: inc/customizer.php:1715 inc/customizer.php:1826
 msgid "Book: 300"
 msgstr ""
 
-#: inc/customizer.php:1443 inc/customizer.php:1549 inc/customizer.php:1655
-#: inc/customizer.php:1756 inc/customizer.php:1867
+#: inc/customizer.php:1258 inc/customizer.php:1504 inc/customizer.php:1610
+#: inc/customizer.php:1716 inc/customizer.php:1827
 msgid "Normal: 400"
 msgstr ""
 
-#: inc/customizer.php:1444 inc/customizer.php:1550 inc/customizer.php:1656
-#: inc/customizer.php:1757 inc/customizer.php:1868
+#: inc/customizer.php:1259 inc/customizer.php:1505 inc/customizer.php:1611
+#: inc/customizer.php:1717 inc/customizer.php:1828
 msgid "Medium: 500"
 msgstr ""
 
-#: inc/customizer.php:1445 inc/customizer.php:1551 inc/customizer.php:1657
-#: inc/customizer.php:1758 inc/customizer.php:1869
+#: inc/customizer.php:1260 inc/customizer.php:1506 inc/customizer.php:1612
+#: inc/customizer.php:1718 inc/customizer.php:1829
 msgid "Semibold: 600"
 msgstr ""
 
-#: inc/customizer.php:1446 inc/customizer.php:1552 inc/customizer.php:1658
-#: inc/customizer.php:1759 inc/customizer.php:1870
+#: inc/customizer.php:1261 inc/customizer.php:1507 inc/customizer.php:1613
+#: inc/customizer.php:1719 inc/customizer.php:1830
 msgid "Bold: 700"
 msgstr ""
 
-#: inc/customizer.php:1447 inc/customizer.php:1553 inc/customizer.php:1659
-#: inc/customizer.php:1760 inc/customizer.php:1871
+#: inc/customizer.php:1262 inc/customizer.php:1508 inc/customizer.php:1614
+#: inc/customizer.php:1720 inc/customizer.php:1831
 msgid "Extra Bold: 800"
 msgstr ""
 
-#: inc/customizer.php:1448 inc/customizer.php:1554 inc/customizer.php:1660
-#: inc/customizer.php:1761 inc/customizer.php:1872
+#: inc/customizer.php:1263 inc/customizer.php:1509 inc/customizer.php:1615
+#: inc/customizer.php:1721 inc/customizer.php:1832
 msgid "Black: 900"
 msgstr ""
 
-#: inc/customizer.php:1469
+#: inc/customizer.php:1283
+msgid "Highlite font family"
+msgstr ""
+
+#: inc/customizer.php:1405
+msgid ""
+"<br />Using the controls below the 3 fonts selected above can be assigned to "
+"various areas of the site."
+msgstr ""
+
+#: inc/customizer.php:1424
+msgid "Site Title"
+msgstr ""
+
+#: inc/customizer.php:1442 inc/customizer.php:1548 inc/customizer.php:1654
+#: inc/customizer.php:1765 inc/customizer.php:2624 inc/customizer.php:2890
+msgid "Font family"
+msgstr ""
+
+#: inc/customizer.php:1445 inc/customizer.php:1551 inc/customizer.php:1657
+#: inc/customizer.php:1768 inc/customizer.php:2627 inc/customizer.php:2893
+msgid "Base font"
+msgstr ""
+
+#: inc/customizer.php:1446 inc/customizer.php:1552 inc/customizer.php:1658
+#: inc/customizer.php:1769 inc/customizer.php:2628 inc/customizer.php:2894
+msgid "Header font"
+msgstr ""
+
+#: inc/customizer.php:1447 inc/customizer.php:1553 inc/customizer.php:1659
+#: inc/customizer.php:1770 inc/customizer.php:2629 inc/customizer.php:2895
+msgid "Highlite font"
+msgstr ""
+
+#: inc/customizer.php:1470 inc/customizer.php:1576 inc/customizer.php:1682
+#: inc/customizer.php:1793 inc/customizer.php:2941 inc/customizer.php:2968
+msgid "Font size"
+msgstr ""
+
+#: inc/customizer.php:1497 inc/customizer.php:1603 inc/customizer.php:1709
+#: inc/customizer.php:1820
+msgid "Font weight"
+msgstr ""
+
+#: inc/customizer.php:1530
 msgid "Site Description"
 msgstr ""
 
-#: inc/customizer.php:1575
+#: inc/customizer.php:1636
 msgid "Menu"
 msgstr ""
 
-#: inc/customizer.php:1681
-msgid "Content"
-msgstr ""
-
-#: inc/customizer.php:1682
-msgid "Uses base font"
-msgstr ""
-
-#: inc/customizer.php:1730
-msgid "Post/Page Titles & Headings"
-msgstr ""
-
-#: inc/customizer.php:1731
-msgid "Uses header font"
-msgstr ""
-
-#: inc/customizer.php:1787 inc/customizer.php:1940
-msgid "Post meta"
-msgstr ""
-
-#: inc/customizer.php:1893
+#: inc/customizer.php:1853
 msgid "Get more controls with an OsixthreeO Extension"
 msgstr ""
 
-#: inc/customizer.php:1911
+#: inc/customizer.php:1871
 msgid "Theme Options"
 msgstr ""
 
-#: inc/customizer.php:1958
-msgid "Show post footer meta data"
+#: inc/customizer.php:1899
+msgid "Meta Data"
 msgstr ""
 
-#: inc/customizer.php:1959
-msgid "Categories/Tags"
+#: inc/customizer.php:1918
+msgid "Post header"
 msgstr ""
 
-#: inc/customizer.php:1980
-msgid "Show post header meta data."
-msgstr ""
-
-#: inc/customizer.php:1998
+#: inc/customizer.php:1936
 msgid "Publish Date"
 msgstr ""
 
-#: inc/customizer.php:2018
+#: inc/customizer.php:1955
 msgid "Author"
 msgstr ""
 
-#: inc/customizer.php:2058
+#: inc/customizer.php:1993
 msgid "Updated"
 msgstr ""
 
-#: inc/customizer.php:2079
+#: inc/customizer.php:2014
+msgid "Post footer"
+msgstr ""
+
+#: inc/customizer.php:2031
+msgid "Categories & Tags"
+msgstr ""
+
+#: inc/customizer.php:2052
 msgid "Get more options with an OsixthreeO Extension"
 msgstr ""
 
-#: inc/customizer.php:2109
+#: inc/customizer.php:2082
 msgid "Background Colors"
 msgstr ""
 
-#: inc/customizer.php:2129
+#: inc/customizer.php:2102
 msgid "Color left"
 msgstr ""
 
-#: inc/customizer.php:2151
+#: inc/customizer.php:2124
 msgid "Color right"
 msgstr ""
 
-#: inc/customizer.php:2174
+#: inc/customizer.php:2147
 msgid "Gradient angle (0-180&deg;)"
 msgstr ""
 
-#: inc/customizer.php:2202
+#: inc/customizer.php:2175
 msgid "Gradient left blend point"
 msgstr ""
 
-#: inc/customizer.php:2230
+#: inc/customizer.php:2203
 msgid "Gradient right blend point"
 msgstr ""
 
-#: inc/customizer.php:2252
+#: inc/customizer.php:2225
 msgid "Background Image/Video"
 msgstr ""
 
-#: inc/customizer.php:2272
+#: inc/customizer.php:2245
 msgid "Background image size"
 msgstr ""
 
-#: inc/customizer.php:2275
+#: inc/customizer.php:2248
 msgid "Cover (default)"
 msgstr ""
 
-#: inc/customizer.php:2276
+#: inc/customizer.php:2249
 msgid "Contain"
 msgstr ""
 
-#: inc/customizer.php:2277
+#: inc/customizer.php:2250
 msgid "Auto"
 msgstr ""
 
-#: inc/customizer.php:2298
+#: inc/customizer.php:2271
 msgid "Background image position"
 msgstr ""
 
-#: inc/customizer.php:2301
+#: inc/customizer.php:2274
 msgid "Left Top"
 msgstr ""
 
-#: inc/customizer.php:2302
+#: inc/customizer.php:2275
 msgid "Left Center"
 msgstr ""
 
-#: inc/customizer.php:2303
+#: inc/customizer.php:2276
 msgid "Left Bottom"
 msgstr ""
 
-#: inc/customizer.php:2304
+#: inc/customizer.php:2277
 msgid "Right Top"
 msgstr ""
 
-#: inc/customizer.php:2305
+#: inc/customizer.php:2278
 msgid "Right Center"
 msgstr ""
 
-#: inc/customizer.php:2306
+#: inc/customizer.php:2279
 msgid "Right Bottom"
 msgstr ""
 
-#: inc/customizer.php:2307
+#: inc/customizer.php:2280
 msgid "Center Top"
 msgstr ""
 
-#: inc/customizer.php:2308
+#: inc/customizer.php:2281
 msgid "Center Center (default)"
 msgstr ""
 
-#: inc/customizer.php:2309
+#: inc/customizer.php:2282
 msgid "Center Bottom"
 msgstr ""
 
-#: inc/customizer.php:2329
+#: inc/customizer.php:2302
 msgid "Background image repeat"
 msgstr ""
 
-#: inc/customizer.php:2332
+#: inc/customizer.php:2305
 msgid "No Repeat (default)"
 msgstr ""
 
-#: inc/customizer.php:2333
+#: inc/customizer.php:2306
 msgid "Tile"
 msgstr ""
 
-#: inc/customizer.php:2334
+#: inc/customizer.php:2307
 msgid "Tile Horizontally"
 msgstr ""
 
-#: inc/customizer.php:2335
+#: inc/customizer.php:2308
 msgid "Tile Vertically"
 msgstr ""
 
-#: inc/customizer.php:2348
+#: inc/customizer.php:2321
 msgid "Height"
 msgstr ""
 
-#: inc/customizer.php:2368
+#: inc/customizer.php:2341
 msgid "Homepage Header"
 msgstr ""
 
-#: inc/customizer.php:2388
+#: inc/customizer.php:2361
 msgid "Full Height"
 msgstr ""
 
-#: inc/customizer.php:2389
+#: inc/customizer.php:2362
 msgid "Adjustable"
 msgstr ""
 
-#: inc/customizer.php:2411 inc/customizer.php:2502
+#: inc/customizer.php:2384 inc/customizer.php:2475
 msgid "Desktop & large screens"
 msgstr ""
 
-#: inc/customizer.php:2438 inc/customizer.php:2529
+#: inc/customizer.php:2411 inc/customizer.php:2502
 msgid "Mobile & small screens"
 msgstr ""
 
-#: inc/customizer.php:2482
+#: inc/customizer.php:2455
 msgid "Subpage Header"
 msgstr ""
 
-#: inc/customizer.php:2556
+#: inc/customizer.php:2529
 msgid "Logo/Menu bar padding"
 msgstr ""
 
-#: inc/customizer.php:2576
+#: inc/customizer.php:2549
 msgid "Top/Bottom Padding"
 msgstr ""
 
-#: inc/customizer.php:2595
+#: inc/customizer.php:2568
 msgid "Overlay Text"
 msgstr ""
 
-#: inc/customizer.php:2615
+#: inc/customizer.php:2588
 msgid "Primary text"
 msgstr ""
 
-#: inc/customizer.php:2679
-msgid "Font size - Desktop"
-msgstr ""
-
-#: inc/customizer.php:2707
-msgid "Font size - Mobile"
-msgstr ""
-
-#: inc/customizer.php:2734 inc/customizer.php:2901 inc/customizer.php:2989
-msgid "Alignment"
-msgstr ""
-
-#: inc/customizer.php:2737 inc/customizer.php:2904 inc/customizer.php:2992
-msgid "Left"
-msgstr ""
-
-#: inc/customizer.php:2738 inc/customizer.php:2905 inc/customizer.php:2993
-msgid "Right"
-msgstr ""
-
-#: inc/customizer.php:2739 inc/customizer.php:2906 inc/customizer.php:2994
-msgid "Centered"
-msgstr ""
-
-#: inc/customizer.php:2761 inc/customizer.php:2928
+#: inc/customizer.php:2651 inc/customizer.php:2775 inc/customizer.php:2917
+#: inc/customizer.php:3039
 msgid "Color"
 msgstr ""
 
-#: inc/customizer.php:2783
+#: inc/customizer.php:2675
+msgid "Font size - Desktop"
+msgstr ""
+
+#: inc/customizer.php:2703
+msgid "Font size - Mobile"
+msgstr ""
+
+#: inc/customizer.php:2730 inc/customizer.php:2994 inc/customizer.php:3155
+msgid "Alignment"
+msgstr ""
+
+#: inc/customizer.php:2733 inc/customizer.php:2997 inc/customizer.php:3158
+msgid "Left"
+msgstr ""
+
+#: inc/customizer.php:2734 inc/customizer.php:2998 inc/customizer.php:3159
+msgid "Right"
+msgstr ""
+
+#: inc/customizer.php:2735 inc/customizer.php:2999 inc/customizer.php:3160
+msgid "Centered"
+msgstr ""
+
+#: inc/customizer.php:2755 inc/customizer.php:3019
+msgid "Text Shadow"
+msgstr ""
+
+#: inc/customizer.php:2795 inc/customizer.php:3059
+msgid "x offset"
+msgstr ""
+
+#: inc/customizer.php:2814 inc/customizer.php:3078
+msgid "y offset"
+msgstr ""
+
+#: inc/customizer.php:2833 inc/customizer.php:3097
+msgid "Blur"
+msgstr ""
+
+#: inc/customizer.php:2854
 msgid "Secondary text"
 msgstr ""
 
-#: inc/customizer.php:2950
+#: inc/customizer.php:3118
 msgid "Scroll-to-content button"
 msgstr ""
 
-#: inc/customizer.php:2968
+#: inc/customizer.php:3135
 msgid "Display button"
 msgstr ""
 
-#: inc/customizer.php:3015
+#: inc/customizer.php:3180
 msgid "Note:"
 msgstr ""
 
-#: inc/customizer.php:3016
+#: inc/customizer.php:3181
 msgid "Text above only displays on the homepage."
 msgstr ""
 

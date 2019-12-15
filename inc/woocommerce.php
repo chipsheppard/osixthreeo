@@ -2,18 +2,16 @@
 /**
  * Custom functions for WooCommerce.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/inc
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  * @link https://docs.woocommerce.com/document/woocommerce-theme-developer-handbook/
- * @link https://docs.woocommerce.com/document/third-party-custom-theme-compatibility/
- * @link http://www.wpexplorer.com/woocommerce-compatible-theme/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+	exit;
 }
 
 /**
@@ -128,6 +126,7 @@ if ( ! function_exists( 'osixthreeo_woocommerce_product_columns_wrapper_close' )
 add_action( 'woocommerce_after_shop_loop', 'osixthreeo_woocommerce_product_columns_wrapper_close', 40 );
 
 
+// Remove their wrapper then add our own.
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 add_action( 'woocommerce_before_main_content', 'osixthreeo_theme_wrapper_start', 10 );
@@ -136,7 +135,6 @@ add_action( 'woocommerce_after_main_content', 'osixthreeo_theme_wrapper_end', 10
 // Since we are using Woo templates (with adjustments)
 // we need to include our Global functions.
 do_action( 'osixthreeo_init' );
-
 
 /**
  * The opening wrapper.
@@ -160,11 +158,8 @@ function osixthreeo_theme_wrapper_end() {
 	tha_content_after();
 }
 
-
 /**
  * Remove the sidebar.
- *
- * @link https://www.kadencethemes.com/support-forums/topic/woocommerce-single-product-move-title-above-page-and-make-fullwidth/
  */
 function osixthreeo_remove_wc_sidebar() {
 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );

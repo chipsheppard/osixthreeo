@@ -2,11 +2,11 @@
 /**
  * Helper functions for the Customizer.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/inc/customizer
- * @author   Chip Sheppard
- * @since    1.2.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.2.0
+ * @license    GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -68,6 +68,17 @@ if ( ! function_exists( 'osixthreeo_sanitize_integer' ) ) {
 	 */
 	function osixthreeo_sanitize_integer( $input ) {
 		return absint( $input );
+	}
+}
+
+if ( ! function_exists( 'osixthreeo_sanitize_intval' ) ) {
+	/**
+	 * Sanitize negative values.
+	 *
+	 * @param Int $input number.
+	 */
+	function osixthreeo_sanitize_intval( $input ) {
+		return intval( $input );
 	}
 }
 

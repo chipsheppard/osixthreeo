@@ -42,14 +42,8 @@ body.home.page .entry-header {
 }
 
 .entry-content {
-	@include font-size(1.0625);
-
-	@include breakpoint(phone-h) {
-		@include font-size(1);
-	}
-
 	ol,
-	ul:not(.alignfull):not(.alignwide) {
+	ul:not(.alignfull):not(.alignwide):not(.wp-block-gallery) {
 		margin-left: 2.5em;
 	}
 

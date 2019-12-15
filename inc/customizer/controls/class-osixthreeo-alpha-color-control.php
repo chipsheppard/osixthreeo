@@ -2,11 +2,11 @@
 /**
  * Alpha Color Picker Customizer Control
  *
- * @package  osixthreeo
- * @subpackage osixthreeo/inc/customizer
- * @author   Chip Sheppard
- * @since    1.2.0
- * @license  GPL-2.0+
+ * @package    osixthreeo
+ * @subpackage osixthreeo/inc/customizer/controls
+ * @author     Chip Sheppard
+ * @since      1.2.0
+ * @license    GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

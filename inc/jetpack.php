@@ -2,16 +2,16 @@
 /**
  * Jetpack Compatibility File.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/inc
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
- * @link https://jetpack.com/
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
+ * @link       https://jetpack.com/
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+	exit;
 }
 
 /**

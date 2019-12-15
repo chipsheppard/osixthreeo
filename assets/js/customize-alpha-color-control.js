@@ -1,13 +1,11 @@
 /**
  * Alpha Color Picker JS
  *
- * This file includes several helper functions and the core control JS.
- *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/assets/js
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  */
 
 /**

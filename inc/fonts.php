@@ -2,10 +2,11 @@
 /**
  * FONTS
  *
- * @package  osixthreeo
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @package    osixthreeo
+ * @subpackage osixthreeo/inc
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  */
 
 if ( ! defined( 'ABSPATH' ) ) {

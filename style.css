@@ -73,7 +73,7 @@
 		a. 	Jetpack
 		b. 	Woo Commerce
 		c. 	BBPress
-		d. Contact Form 7
+		d.  Contact Form 7
 
 ---------------------------------
  #  1. Setup
@@ -922,6 +922,10 @@ select {
   border-right: 1px solid #dcdcdc;
 }
 
+.site-header .search-form input[type="search"] {
+  margin-bottom: 0;
+}
+
 /*-------------------------------
  #  4. Navigation
 -------------------------------*/
@@ -1345,22 +1349,12 @@ button.dropdown-toggle.toggled-on:after {
     cursor: pointer;
     display: inline-block;
     margin-left: 0;
-    padding: .6125em 1.75em;
+    padding: .6125em 1.5em;
     position: absolute;
     right: 0;
     top: 0;
     z-index: 2;
   }
-}
-
-@media all and (max-width: 768px) and (max-width: 380px) {
-  .site-navigation .dropdown-toggle {
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-  }
-}
-
-@media all and (max-width: 768px) {
   .site-navigation .dropdown-toggle:hover {
     background-color: rgba(153, 153, 153, 0.25);
   }
@@ -2456,7 +2450,7 @@ img.alignright,
 .inner-wrap,
 .content-inner-wrap {
   margin: 0 auto;
-  max-width: 80em;
+  max-width: 1280px;
   width: 100%;
   padding: 0 4%;
 }
@@ -2876,7 +2870,7 @@ img.alignright,
   -webkit-transform: translate(-50%, -40%);
           transform: translate(-50%, -40%);
   margin: 0 auto;
-  max-width: 80em;
+  max-width: 1280px;
   padding: 0 4%;
   width: 100%;
   z-index: 5;
@@ -2885,7 +2879,6 @@ img.alignright,
 .hero-primary {
   line-height: 1.25;
   margin-bottom: .25em;
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   font-size: 48px;
   font-size: 3rem;
 }
@@ -2898,7 +2891,6 @@ img.alignright,
 }
 
 .hero-secondary {
-  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   line-height: 1.25;
   font-size: 24px;
   font-size: 1.5rem;
@@ -3077,20 +3069,8 @@ body.home.page .entry-header {
   margin-bottom: 0;
 }
 
-.entry-content {
-  font-size: 17px;
-  font-size: 1.0625rem;
-}
-
-@media all and (max-width: 640px) {
-  .entry-content {
-    font-size: 16px;
-    font-size: 1rem;
-  }
-}
-
 .entry-content ol,
-.entry-content ul:not(.alignfull):not(.alignwide) {
+.entry-content ul:not(.alignfull):not(.alignwide):not(.wp-block-gallery) {
   margin-left: 2.5em;
 }
 
@@ -3163,13 +3143,6 @@ body.home.page .entry-header {
 .blog .format-status .entry-meta,
 .blog .format-status .entry-title {
   display: none;
-}
-
-.archive .format-aside,
-.archive .format-status,
-.blog .format-aside,
-.blog .format-status {
-  padding-top: 1em;
 }
 
 /*
@@ -3245,7 +3218,6 @@ body.home.page .entry-header {
 .archive article,
 .search article {
   margin-bottom: 2.5em;
-  padding-top: 1em;
   position: relative;
 }
 
@@ -3272,6 +3244,7 @@ body.home.page .entry-header {
 .archive article.sticky,
 .search article.sticky {
   border-top: 2px solid #4169e1;
+  padding-top: .5em;
 }
 
 .blog .format-status .entry-content p,
@@ -3331,7 +3304,6 @@ body.home.page .entry-header {
   display: block;
   font-weight: 700;
   line-height: 1;
-  margin-bottom: 1.5em;
   padding: .5em 0;
   position: relative;
   text-transform: uppercase;
@@ -3609,7 +3581,7 @@ body.home.page .entry-header {
  ## 7l. Variations
 -------------------------------*/
 body.contained .site {
-  max-width: 80em;
+  max-width: 1280px;
   margin: 0 auto;
 }
 

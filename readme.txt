@@ -1,7 +1,7 @@
 === OsixthreeO ===
 
 Contributors: ultranorman
-Tags: one-column, two-columns, left-sidebar, right-sidebar, custom-background, custom-colors, custom-logo, custom-header, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, theme-options, translation-ready, wide-blocks
+Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, sticky-post, two-columns, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.3
@@ -12,20 +12,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 OsixthreeO is a lightweight, multi-purpose theme with extensive customizer controls and a unique custom header.
 
 == Description ==
-OsixthreeO provides color, layout, font and header controls that will allow you to craft something unique. The custom header displays a color gradient, a video or an image in the background which can be overridden with a page or post's featured image.
+OsixthreeO provides customizer controls enabling anyone to make a unique website. Select header and sidebar layouts, set colors for text, links, site title and description. Customize the header with color, image and height controls for the header. Craft your homepage with text controls, full-width image/video background with full-height option.
 
-
-2 Widget Areas
-  - Sidebar
-  - Footer
-
-2 Supported Post Formats
-  - Aside
-  - Status
-
-70 Customizer controls for layout, coloring and more.
-
-34 Theme Action Hooks.
 This theme follows the standard set by the Theme Hook Alliance (THA).
 https://github.com/zamoose/themehookalliance
 
@@ -61,7 +49,9 @@ along with this program. If not, see http://www.gnu.org/copyleft/gpl.html
 == Anything else I should know? ==
 
 Gutenberg column blocks:
-Add a class of "boxed" to a Columns Block to style the columns in nice boxes.
+Add the css class "boxed" to a Columns Block to style the columns in nice boxes.
+Add "bdr" to add a border.
+Add "shade" to add a shadow.
 Add the class "up100" to push a column up for a staggered look - up50, up75, up125, up150, up160, up175 & up200 are also available.
 
 Horizontal Rule: If NOT using the WP Block Editor...  the horizontal rule tag (hr) is 10% black.  Add class=“alt” for 50% white.
@@ -78,18 +68,17 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.4.0 - 11 22 2019 =
+= 1.4.0 - 12 11 2019 =
+* Box shadow, border and text shadow controls.
 * Default custom header image size to 1600x800.
 * Utility styles update.
-* Position, repeat & size controls for custom header background image.
+* Custom header background image controls.
 * Add conditionals for up-sell blocks.
 * Moved header and footer markup to theme-functions.
 
 = 1.3.4 - 10 19 2019 =
 * Add control for site content max-width
 * Correct call to customizer.css for child themes.
-* Change upsell language in customizer.
-* Adjust list styles for alignwide & alignfull blocks.
 * Added Area-Label to responsive menu icon.
 
 = 1.3.3 - 10 07 2019 =
@@ -98,21 +87,13 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 * Removed default text from Homepage text areas.
 
 = 1.3.0 - 10 04 2019 =
-* Submit to WordPress.org.
-* Add typography controls.
 * Pro Add-on integration.
+* !!! Submit to WordPress.org.
 
-= 1.2.5 - 07 30 2019 =
-* Customizer control for site containment, content containment, sidebar placements, colors.
-* Added custom-header, customizer controls, page-by-page featured image display control.
-
-= 1.2.3 - 06 30 2019 =
-* Adjust for Gutenberg editor styles.
-
-= 1.2.2 - 01 01 2019 =
+= 1.2.0 - 01 01 2019 =
 * Stable
 
-= 1.2.1 - 11 11 2018 =
+= 1.1.0 - 11 11 2018 =
 * File structure
 * First deploy to GIT
 

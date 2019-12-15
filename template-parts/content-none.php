@@ -2,11 +2,11 @@
 /**
  * Template part for displaying a message that posts cannot be found.
  *
- * @package  osixthreeo
+ * @package    osixthreeo
  * @subpackage osixthreeo/template-parts
- * @author   Chip Sheppard
- * @since    1.0.0
- * @license  GPL-2.0+
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  */
 
 echo '<section class="no-results not-found">';

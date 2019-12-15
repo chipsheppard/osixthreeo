@@ -4,7 +4,6 @@
 
 	article {
 		margin-bottom: 2.5em;
-		padding-top: 1em;
 		position: relative;
 
 		.wp-post-image {
@@ -20,6 +19,7 @@
 
 		&.sticky {
 			border-top:2px solid $color__highlight;
+			padding-top: .5em;
 		}
 	}
 
@@ -71,7 +71,6 @@
 	display: block;
 	font-weight: $font__weight-bold;
 	line-height: 1;
-	margin-bottom: 1.5em;
 	padding: .5em 0;
 	position: relative;
 	text-transform: uppercase;
