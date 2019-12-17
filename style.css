@@ -1114,6 +1114,14 @@ button.dropdown-toggle.toggled-on:after {
   z-index: 1;
 }
 
+.sub-menu button.dropdown-toggle:after {
+  top: 2px;
+}
+
+.sub-menu button.dropdown-toggle.toggled-on:after {
+  top: 4px;
+}
+
 /*
  ## 4c. Mobile menu icon
 -------------------------------*/

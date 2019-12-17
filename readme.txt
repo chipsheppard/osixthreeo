@@ -68,7 +68,7 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.4.0 - 12 11 2019 =
+= 1.4.0 - 12 16 2019 =
 * Box shadow, border and text shadow controls.
 * Default custom header image size to 1600x800.
 * Utility styles update.
