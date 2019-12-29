@@ -2,7 +2,7 @@
 	Theme Name: OsixthreeO
 	Text Domain: osixthreeo
 	Version: 1.4.0
-	Description: A flexibile, lightweight, multi-purpose theme with a colorful header and customizer controls for crafting a unique design.
+	Description: A flexibile, lightweight, multi-purpose theme with a colorful header and heaps of customizer controls for crafting a unique design with no code or plugins.
 	Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, custom-logo, custom-background, flexible-header, grid-layout
 	Author: Chip Sheppard
 	Author URI: https://chipsheppard.com
@@ -63,7 +63,6 @@
 		i. 	search
 		j. 	404
 		k. 	comments
-		l. 	variations
 	8. 	Widgets
 		a. 	Sidebar widgets
 		b. 	Footer widgets
@@ -73,6 +72,13 @@
 		b. 	Woo Commerce
 		c. 	BBPress
 		d.  Contact Form 7
+	11. Customizer Functions
+		a. 	Back To Top
+		b. 	Footer Columns
+		c. 	Header Layouts
+		d.  Menu Search
+		e.  Title Lift
+		f.  Page Templates
 
 ---------------------------------
  #  1. Setup
@@ -123,3 +129,8 @@
  #  10. Plugins
 -------------------------------*/
 @import "plugins/plugins";
+
+/*-------------------------------
+ #  11. Customizer Function Styles
+-------------------------------*/
+@import "customizer/customizer";

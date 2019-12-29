@@ -1,0 +1,151 @@
+.site-navigation {
+
+	input[type="search"] {
+		padding: .5em 7.5em .563em 1em;
+
+		@include breakpoint(tablet-v) {
+			border-bottom: 0;
+		}
+	}
+
+	input[type="submit"].search-submit {
+		line-height: 1;
+		padding: .563em .75em .688em;
+		right: 50px;
+		top: 0;
+
+		@include breakpoint(tablet-v) {
+			right: 0;
+		}
+
+		&:hover,
+		&:focus {
+			color: #ffffff;
+		}
+	}
+
+	.menu-span {
+		display: inline-block;
+		position: relative;
+
+		@include breakpoint(tablet-v) {
+			display: block;
+		}
+	}
+
+	li.search-icon {
+		border-bottom: 1px solid transparent;
+	    float: right;
+		margin-right: 0;
+		position: relative;
+		width: 3.125rem;
+	    z-index: 4;
+
+		@include breakpoint(tablet-v) {
+			display: none;
+		}
+
+		&:hover {
+			cursor: pointer;
+			opacity: .85;
+			border-bottom: 1px solid currentColor;
+		}
+
+		.theicon {
+			border: solid 2px #ffffff; // len circle
+			border-radius: 100%;
+			height: 12px;
+			margin: 1em 0 1.125em .875em;
+		    padding: 0;
+			transform: rotate(-45deg);
+			width: 12px;
+
+			&:before {
+				background-color: #ffffff; // mag handle & / part of X
+				content: '';
+				position: absolute;
+				height: 8px;
+				left: 3px;
+				top: 10px;
+				width: 2px;
+			}
+
+			&:focus {
+				outline: 0;
+			}
+		}
+	}
+
+	.search-form {
+	    left: -99999px;
+		margin: 0;
+	    opacity: 0;
+		position: absolute;
+		top: 0;
+		transition: opacity .2s ease-in-out;
+	    visibility: hidden;
+	    z-index: 4;
+
+		@include breakpoint(tablet-v) {
+			left: 0;
+			//margin-bottom: 1em;
+			opacity: 1;
+			position: relative;
+			visibility: visible;
+		}
+	}
+
+
+	&.nav-search-active {
+
+		.menu-wrap {
+			padding-top: 0;
+
+			span {
+				display: inline-block;
+			}
+		}
+
+		.search-form {
+		    left: 0;
+		    right: 0;
+		    visibility: visible;
+		    opacity: 1;
+		}
+
+		li.search-icon {
+
+			&:hover {
+				border-bottom: 1px solid transparent;
+			}
+
+			.theicon {
+				padding: 0;
+				margin: .75em 0 .625em .75em;
+				width: 24px;
+				height: 24px;
+				border: 0;
+				border-radius: 0;
+
+				&:before,
+				&:after {
+					content: '';
+					position: absolute;
+					top: 12px; // diag position tl -> br
+					left: 2px; // diag position lb -> tr
+					height: 2px; // thickness
+					width: 18px; // overall size
+					background-color: #000000;
+				}
+
+				&:after {
+					transform:rotate(-90deg);
+				}
+			}
+
+			@include breakpoint(tablet-v) {
+				float: right;
+			}
+		}
+	}
+}

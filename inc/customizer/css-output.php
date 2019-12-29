@@ -29,7 +29,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 
 		$max_width                                    = $osixthreeo_settings['max_width'];
 		$default_max_width                            = $defaults['max_width'];
-
 		$header_bg_color_left                         = $osixthreeo_settings['header_bg_color_left'];
 		$header_bg_color_right                        = $osixthreeo_settings['header_bg_color_right'];
 		$header_gradient_angle                        = $osixthreeo_settings['header_gradient_angle'];
@@ -40,7 +39,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_header_gradient_angle                = $defaults['header_gradient_angle'];
 		$default_header_left_stop                     = $defaults['header_left_stop'];
 		$default_header_right_stop                    = $defaults['header_right_stop'];
-
 		$home_header_height                           = $osixthreeo_settings['home_header_height'];
 		$subpage_header_height                        = $osixthreeo_settings['subpage_header_height'];
 		$home_mobile_header_height                    = $osixthreeo_settings['home_mobile_header_height'];
@@ -49,22 +47,18 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_subpage_header_height                = $defaults['subpage_header_height'];
 		$default_home_mobile_header_height            = $defaults['home_mobile_header_height'];
 		$default_subpage_mobile_header_height         = $defaults['subpage_mobile_header_height'];
-
 		$header_bg_color                              = $osixthreeo_settings['header_background_color'];
 		$header_padding                               = $osixthreeo_settings['header_padding'];
 		$default_header_bg_color                      = $defaults['header_background_color'];
 		$default_header_padding                       = $defaults['header_padding'];
-
 		$header_bg_position                           = $osixthreeo_settings['header_bg_position'];
 		$header_bg_repeat                             = $osixthreeo_settings['header_bg_repeat'];
 		$header_bg_size                               = $osixthreeo_settings['header_bg_size'];
 		$default_header_bg_position                   = $defaults['header_bg_position'];
 		$default_header_bg_repeat                     = $defaults['header_bg_repeat'];
 		$default_header_bg_size                       = $defaults['header_bg_size'];
-
 		$nav_link_color                               = $osixthreeo_settings['nav_link_color'];
 		$default_nav_link_color                       = $defaults['nav_link_color'];
-
 		$subnav_text_color                            = $osixthreeo_settings['subnav_text_color'];
 		$subnav_bg_color                              = $osixthreeo_settings['subnav_bg_color'];
 		$subnav_border_color                          = $osixthreeo_settings['subnav_border_color'];
@@ -75,16 +69,16 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_subnav_border_color                  = $defaults['subnav_border_color'];
 		$default_subnav_hover_text_color              = $defaults['subnav_hover_text_color'];
 		$default_subnav_hover_bg_color                = $defaults['subnav_hover_bg_color'];
-
+		$content_title_color                          = $osixthreeo_settings['content_title_color'];
 		$content_bgcolor                              = $osixthreeo_settings['content_bgcolor'];
 		$text_color                                   = $osixthreeo_settings['text_color'];
 		$link_color                                   = $osixthreeo_settings['link_color'];
 		$link_color_hover                             = $osixthreeo_settings['link_color_hover'];
+		$default_content_title_color                  = $defaults['content_title_color'];
 		$default_content_bgcolor                      = $defaults['content_bgcolor'];
 		$default_text_color                           = $defaults['text_color'];
 		$default_link_color                           = $defaults['link_color'];
 		$default_link_color_hover                     = $defaults['link_color_hover'];
-
 		$footer_bg_color                              = $osixthreeo_settings['footer_background_color'];
 		$footer_title_color                           = $osixthreeo_settings['footer_title_color'];
 		$footer_text_color                            = $osixthreeo_settings['footer_text_color'];
@@ -95,21 +89,18 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_footer_text_color                    = $defaults['footer_text_color'];
 		$default_footer_link_color                    = $defaults['footer_link_color'];
 		$default_footer_link_color_hover              = $defaults['footer_link_color_hover'];
-
 		$base_font                                    = $osixthreeo_settings['base_font'];
 		$header_font                                  = $osixthreeo_settings['header_font'];
 		$highlite_font                                = $osixthreeo_settings['highlite_font'];
 		$default_base_font                            = $defaults['base_font'];
 		$default_header_font                          = $defaults['header_font'];
 		$default_highlite_font                        = $defaults['highlite_font'];
-
 		$sitetitle_font                               = $osixthreeo_settings['sitetitle_font'];
 		$sitedescription_font                         = $osixthreeo_settings['sitedescription_font'];
 		$menu_font                                    = $osixthreeo_settings['menu_font'];
 		$default_sitetitle_font                       = $defaults['sitetitle_font'];
 		$default_sitedescription_font                 = $defaults['sitedescription_font'];
 		$default_menu_font                            = $defaults['menu_font'];
-
 		$header_font_weight                           = $osixthreeo_settings['header_font_weight'];
 		$sitetitle_font_weight                        = $osixthreeo_settings['sitetitle_font_weight'];
 		$sitedescription_font_weight                  = $osixthreeo_settings['sitedescription_font_weight'];
@@ -118,7 +109,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_sitetitle_font_weight                = $defaults['sitetitle_font_weight'];
 		$default_sitedescription_font_weight          = $defaults['sitedescription_font_weight'];
 		$default_menu_font_weight                     = $defaults['menu_font_weight'];
-
 		$base_font_size                               = $osixthreeo_settings['base_font_size'];
 		$sitetitle_font_size                          = $osixthreeo_settings['sitetitle_font_size'];
 		$sitedescription_font_size                    = $osixthreeo_settings['sitedescription_font_size'];
@@ -127,7 +117,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_sitetitle_font_size                  = $defaults['sitetitle_font_size'];
 		$default_sitedescription_font_size            = $defaults['sitedescription_font_size'];
 		$default_menu_font_size                       = $defaults['menu_font_size'];
-
 		$hero_text_primary_font                       = $osixthreeo_settings['hero_text_primary_font'];
 		$hero_text_secondary_font                     = $osixthreeo_settings['hero_text_secondary_font'];
 		$hero_text_primary_font_size                  = $osixthreeo_settings['hero_text_primary_font_size'];
@@ -148,7 +137,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_hero_text_primary_shadow_x           = $defaults['hero_text_primary_shadow_x'];
 		$default_hero_text_primary_shadow_y           = $defaults['hero_text_primary_shadow_y'];
 		$default_hero_text_primary_shadow_blur        = $defaults['hero_text_primary_shadow_blur'];
-
 		$hero_text_secondary_font_size                = $osixthreeo_settings['hero_text_secondary_font_size'];
 		$hero_text_secondary_font_size_mobile         = $osixthreeo_settings['hero_text_secondary_font_size_mobile'];
 		$hero_text_secondary_color                    = $osixthreeo_settings['hero_text_secondary_color'];
@@ -165,12 +153,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_hero_text_secondary_shadow_x         = $defaults['hero_text_secondary_shadow_x'];
 		$default_hero_text_secondary_shadow_y         = $defaults['hero_text_secondary_shadow_y'];
 		$default_hero_text_secondary_shadow_blur      = $defaults['hero_text_secondary_shadow_blur'];
-
 		$hero_scroll_button                           = $osixthreeo_settings['hero_scroll_button'];
 		$hero_scroll_button_alignment                 = $osixthreeo_settings['hero_scroll_button_alignment'];
 		$default_hero_scroll_button                   = $defaults['hero_scroll_button'];
 		$default_hero_scroll_button_alignment         = $defaults['hero_scroll_button_alignment'];
-
 		$meta_font                                    = $osixthreeo_settings['meta_font'];
 		$meta_font_size                               = $osixthreeo_settings['meta_font_size'];
 		$meta_font_weight                             = $osixthreeo_settings['meta_font_weight'];
@@ -179,6 +165,42 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_meta_font_size                       = $defaults['meta_font_size'];
 		$default_meta_font_weight                     = $defaults['meta_font_weight'];
 		$default_meta_color                           = $defaults['meta_color'];
+		$archives_text_color                          = $osixthreeo_settings['archives_text_color'];
+		$archives_title_color                         = $osixthreeo_settings['archives_title_color'];
+		$archives_meta_color                          = $osixthreeo_settings['archives_meta_color'];
+		$archives_link_color                          = $osixthreeo_settings['archives_link_color'];
+		$archives_link_color_hover                    = $osixthreeo_settings['archives_link_color_hover'];
+		$default_archives_text_color                  = $defaults['archives_text_color'];
+		$default_archives_title_color                 = $defaults['archives_title_color'];
+		$default_archives_meta_color                  = $defaults['archives_meta_color'];
+		$default_archives_link_color                  = $defaults['archives_link_color'];
+		$default_archives_link_color_hover            = $defaults['archives_link_color_hover'];
+		$archives_bg_color                            = $osixthreeo_settings['archives_background_color'];
+		$archives_pad_left                            = $osixthreeo_settings['archives_pad_left'];
+		$archives_pad_right                           = $osixthreeo_settings['archives_pad_right'];
+		$archives_pad_top                             = $osixthreeo_settings['archives_pad_top'];
+		$archives_pad_bottom                          = $osixthreeo_settings['archives_pad_bottom'];
+		$archives_box_shadow_color                    = $osixthreeo_settings['archives_box_shadow_color'];
+		$archives_box_shadow_x                        = $osixthreeo_settings['archives_box_shadow_x'];
+		$archives_box_shadow_y                        = $osixthreeo_settings['archives_box_shadow_y'];
+		$archives_box_shadow_blur                     = $osixthreeo_settings['archives_box_shadow_blur'];
+		$archives_box_shadow_spread                   = $osixthreeo_settings['archives_box_shadow_spread'];
+		$archives_border_color                        = $osixthreeo_settings['archives_border_color'];
+		$archives_border_width                        = $osixthreeo_settings['archives_border_width'];
+		$archives_border_radius                       = $osixthreeo_settings['archives_border_radius'];
+		$default_archives_bg_color                    = $defaults['archives_background_color'];
+		$default_archives_pad_left                    = $defaults['archives_pad_left'];
+		$default_archives_pad_right                   = $defaults['archives_pad_right'];
+		$default_archives_pad_top                     = $defaults['archives_pad_top'];
+		$default_archives_pad_bottom                  = $defaults['archives_pad_bottom'];
+		$default_archives_box_shadow_color            = $defaults['archives_box_shadow_color'];
+		$default_archives_box_shadow_x                = $defaults['archives_box_shadow_x'];
+		$default_archives_box_shadow_y                = $defaults['archives_box_shadow_y'];
+		$default_archives_box_shadow_blur             = $defaults['archives_box_shadow_blur'];
+		$default_archives_box_shadow_spread           = $defaults['archives_box_shadow_spread'];
+		$default_archives_border_color                = $defaults['archives_border_color'];
+		$default_archives_border_width                = $defaults['archives_border_width'];
+		$default_archives_border_radius               = $defaults['archives_border_radius'];
 
 		// Initiate our class.
 		$css = new Osixthreeo_Customizer_CSS();
@@ -282,7 +304,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 				$lcr = 'center';
 				$tcb = 'bottom';
 			endif;
-			$prop    = sprintf( '%1$s %2$s', $lcr, $tcb );
+			$prop = sprintf( '%1$s %2$s', $lcr, $tcb );
 			$css->set_selector( '.custom-header .custom-header-image' );
 			$css->add_property( 'background-position', $prop );
 		endif;
@@ -436,6 +458,14 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_footer_link_color_hover !== $footer_link_color_hover ) :
 			$css->set_selector( '.site-info a:hover' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['footer_link_color_hover'] ) );
+		endif;
+
+		/*
+		 * Post Title colors --------------------------------
+		 */
+		if ( $default_content_title_color !== $content_title_color ) :
+			$css->set_selector( 'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.woocommerce-products-header,.product_title.entry-title,body.page.titlelift .entry-title,body.single.titlelift .entry-title,body.blog.titlelift .page-title,body.archive.titlelift .page-title,body.search.titlelift .page-title,body.error404.titlelift .page-title,.single.titlelift .entry-meta a,.single.titlelift .entry-meta,.titlelift .archive-description,.titlelift .woocommerce-products-header,.titlelift .product_title.entry-title' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['content_title_color'] ) );
 		endif;
 
 		/*
@@ -1174,34 +1204,111 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		if ( $default_hero_text_primary_shadow_color !== $hero_text_primary_shadow_color ||
-			 $default_hero_text_primary_shadow_x !== $hero_text_primary_shadow_x ||
-			 $default_hero_text_primary_shadow_y !== $hero_text_primary_shadow_y ||
-			 $default_hero_text_primary_shadow_blur !== $hero_text_primary_shadow_blur ) :
-			 $p_bgcolor  = $osixthreeo_settings['hero_text_primary_shadow_color'];
-			 $p_bgx = $osixthreeo_settings['hero_text_primary_shadow_x'];
-			 $p_bgy = $osixthreeo_settings['hero_text_primary_shadow_y'];
-			 $p_bgblur = $osixthreeo_settings['hero_text_primary_shadow_blur'];
-			 $prop_p     = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
-			 $css->set_selector( '.hero-primary' );
-			 $css->add_property( 'text-shadow', $prop_p );
+			intval( $default_hero_text_primary_shadow_x ) !== intval( $hero_text_primary_shadow_x ) ||
+			intval( $default_hero_text_primary_shadow_y ) !== intval( $hero_text_primary_shadow_y ) ||
+			absint( $default_hero_text_primary_shadow_blur ) !== absint( $hero_text_primary_shadow_blur ) ) :
+			$p_bgcolor = $osixthreeo_settings['hero_text_primary_shadow_color'];
+			$p_bgx     = intval( $osixthreeo_settings['hero_text_primary_shadow_x'] );
+			$p_bgy     = intval( $osixthreeo_settings['hero_text_primary_shadow_y'] );
+			$p_bgblur  = absint( $osixthreeo_settings['hero_text_primary_shadow_blur'] );
+			$prop_p    = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
+			$css->set_selector( '.hero-primary' );
+			$css->add_property( 'text-shadow', $prop_p );
 		endif;
 
 		if ( $default_hero_text_secondary_shadow_color !== $hero_text_secondary_shadow_color ||
-			 $default_hero_text_secondary_shadow_x !== $hero_text_secondary_shadow_x ||
-			 $default_hero_text_secondary_shadow_y !== $hero_text_secondary_shadow_y ||
-			 $default_hero_text_secondary_shadow_blur !== $hero_text_secondary_shadow_blur ) :
-			 $p_bgcolor  = $osixthreeo_settings['hero_text_secondary_shadow_color'];
-			 $p_bgx = $osixthreeo_settings['hero_text_secondary_shadow_x'];
-			 $p_bgy = $osixthreeo_settings['hero_text_secondary_shadow_y'];
-			 $p_bgblur = $osixthreeo_settings['hero_text_secondary_shadow_blur'];
-			 $prop_p     = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
-			 $css->set_selector( '.hero-secondary' );
-			 $css->add_property( 'text-shadow', $prop_p );
+			intval( $default_hero_text_secondary_shadow_x ) !== intval( $hero_text_secondary_shadow_x ) ||
+			intval( $default_hero_text_secondary_shadow_y ) !== intval( $hero_text_secondary_shadow_y ) ||
+			absint( $default_hero_text_secondary_shadow_blur ) !== absint( $hero_text_secondary_shadow_blur ) ) :
+			$p_bgcolor = $osixthreeo_settings['hero_text_secondary_shadow_color'];
+			$p_bgx     = intval( $osixthreeo_settings['hero_text_secondary_shadow_x'] );
+			$p_bgy     = intval( $osixthreeo_settings['hero_text_secondary_shadow_y'] );
+			$p_bgblur  = absint( $osixthreeo_settings['hero_text_secondary_shadow_blur'] );
+			$prop_p    = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
+			$css->set_selector( '.hero-secondary' );
+			$css->add_property( 'text-shadow', $prop_p );
 		endif;
 
 		if ( $default_hero_scroll_button_alignment !== $hero_scroll_button_alignment ) :
 			$css->set_selector( '.hero-scroll-button' );
 			$css->add_property( 'text-align', $hero_scroll_button_alignment );
+		endif;
+
+		// ARCHIVES ------------------------------------------ .
+		if ( $default_archives_bg_color !== $archives_bg_color ) :
+			$css->set_selector( '.blog article,.archive article,.search article' );
+			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['archives_background_color'] ) );
+		endif;
+
+		if ( $default_archives_text_color !== $archives_text_color ) :
+			$css->set_selector( '.blog article,.archive article,.search article' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_text_color'] ) );
+		endif;
+		if ( $default_archives_title_color !== $archives_title_color ) :
+			$css->set_selector( '.blog article .entry-title,.archive article .entry-title,.search article .entry-title,.blog article .entry-title a,.archive article .entry-title a,.search article .entry-title a' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_title_color'] ) );
+		endif;
+		if ( $default_archives_meta_color !== $archives_meta_color ) :
+			$css->set_selector( '.blog article .entry-meta,.archive article .entry-meta,.search article .entry-meta, .blog article .entry-meta a,.archive article .entry-meta a,.search article .entry-meta a' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_meta_color'] ) );
+		endif;
+		if ( $default_archives_link_color !== $archives_link_color ) :
+			$css->set_selector( '.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_link_color'] ) );
+		endif;
+		if ( $default_archives_link_color_hover !== $archives_link_color_hover ) :
+			$css->set_selector( '.blog article .entry-content a:hover,.archive article .entry-content a:hover,.search article .entry-content a:hover' );
+			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_link_color_hover'] ) );
+		endif;
+
+		if ( absint( $default_archives_pad_left ) !== absint( $archives_pad_left ) ) :
+			$css->set_selector( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' );
+			$css->add_property( 'padding-left', esc_attr( $osixthreeo_settings['archives_pad_left'] . 'px' ) );
+		endif;
+		if ( absint( $default_archives_pad_right ) !== absint( $archives_pad_right ) ) :
+			$css->set_selector( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' );
+			$css->add_property( 'padding-right', esc_attr( $osixthreeo_settings['archives_pad_right'] . 'px' ) );
+		endif;
+
+		if ( absint( $default_archives_pad_top ) !== absint( $archives_pad_top ) ) :
+			$css->set_selector( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.archive article.format-aside .entry-content,.blog article.format-aside .entry-content,.search article.format-aside .entry-content,.archive article.format-status .entry-content,.blog article.format-status .entry-content,.search article.format-status .entry-content' );
+			$css->add_property( 'padding-top', esc_attr( $osixthreeo_settings['archives_pad_top'] . 'px' ) );
+		endif;
+
+		if ( absint( $default_archives_pad_bottom ) !== absint( $archives_pad_bottom ) ) :
+			$css->set_selector( '.blog article .entry-content,.archive article .entry-content,.search article .entry-content' );
+			$css->add_property( 'padding-bottom', esc_attr( $osixthreeo_settings['archives_pad_bottom'] . 'px' ) );
+		endif;
+
+		// Border.
+		if ( $default_archives_border_color !== $archives_border_color ||
+			absint( $default_archives_border_width ) !== absint( $archives_border_width ) ) :
+			$a_bgcolor = $osixthreeo_settings['archives_border_color'];
+			$a_bgwidth = absint( $osixthreeo_settings['archives_border_width'] );
+			$prop      = sprintf( '%1$spx solid %2$s', $a_bgwidth, $a_bgcolor );
+			$css->set_selector( '.blog article,.archive article,.search article' );
+			$css->add_property( 'border', $prop );
+		endif;
+		// Border Radius.
+		if ( absint( $default_archives_border_radius ) !== absint( $archives_border_radius ) ) :
+			$rad = absint( $osixthreeo_settings['archives_border_radius'] );
+			$css->set_selector( '.blog article,.archive article,.search article' );
+			$css->add_property( 'border-radius', esc_attr( $osixthreeo_settings['archives_border_radius'] . 'px' ) );
+		endif;
+
+		if ( $default_archives_box_shadow_color !== $archives_box_shadow_color ||
+			intval( $default_archives_box_shadow_x ) !== intval( $archives_box_shadow_x ) ||
+			intval( $default_archives_box_shadow_y ) !== intval( $archives_box_shadow_y ) ||
+			absint( $default_archives_box_shadow_blur ) !== absint( $archives_box_shadow_blur ) ||
+			absint( $default_archives_box_shadow_spread ) !== absint( $archives_box_shadow_spread ) ) :
+			$a_bgcolor  = $osixthreeo_settings['archives_box_shadow_color'];
+			$a_bgx      = intval( $osixthreeo_settings['archives_box_shadow_x'] );
+			$a_bgy      = intval( $osixthreeo_settings['archives_box_shadow_y'] );
+			$a_bgblur   = absint( $osixthreeo_settings['archives_box_shadow_blur'] );
+			$a_bgspread = absint( $osixthreeo_settings['archives_box_shadow_spread'] );
+			$prop       = sprintf( '%1$spx %2$spx %3$spx %4$spx %5$s', $a_bgx, $a_bgy, $a_bgblur, $a_bgspread, $a_bgcolor );
+			$css->set_selector( '.blog article,.archive article,.search article' );
+			$css->add_property( 'box-shadow', $prop );
 		endif;
 
 		// Allow us to hook CSS into our output - where we would hook our "Pro" features?

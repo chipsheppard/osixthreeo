@@ -33,7 +33,13 @@
   @if $point == phone-h {
     @media all and (max-width: 640px) { @content; }
   }
+  @if $point == phone-min-h {
+    @media all and (min-width: 641px) { @content; }
+  }
   @if $point == phone-v {
     @media all and (max-width: 380px) { @content; }
+  }
+  @if $point == phone-min-v {
+    @media all and (min-width: 381px) { @content; }
   }
 }

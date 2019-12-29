@@ -121,6 +121,18 @@ function osixthreeo_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( $osixthreeo_settings['parallax_header'] ) {
+		wp_enqueue_script( 'osixthreeo_parallax_js', get_template_directory_uri() . '/assets/js/osixthreeo-parallax-min.js', array( 'jquery' ), OSIXTHREEO_VERSION, true );
+	}
+
+	if ( $osixthreeo_settings['nav_search'] && ! is_page_template( 'osixthreeo-blank.php' ) && ! is_page_template( 'osixthreeo-landing.php' ) ) {
+		wp_enqueue_script( 'osixthreeo_navsearch_js', get_template_directory_uri() . '/assets/js/osixthreeo-navsearch-min.js', array(), OSIXTHREEO_VERSION, true );
+	}
 }
 add_action( 'wp_enqueue_scripts', 'osixthreeo_scripts' );
 
@@ -169,13 +181,8 @@ if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
 
-// Osixthreeo Content Extension?
-define( 'OSIXTHREEO_CONTENT_EXT', class_exists( 'Osixthreeo_Content' ) );
-// Osixthreeo Templates Extension?
-define( 'OSIXTHREEO_TEMPLATES_EXT', class_exists( 'Osixthreeo_Templates' ) );
-// Osixthreeo Archives Extension?
-define( 'OSIXTHREEO_ARCHIVES_EXT', class_exists( 'Osixthreeo_Archives' ) );
-// Osixthreeo Widgets Extension?
-define( 'OSIXTHREEO_WIDGETS_EXT', class_exists( 'Osixthreeo_Widgets' ) );
-// Osixthreeo Header-Footer Extension?
-define( 'OSIXTHREEO_HEADERFOOTER_EXT', class_exists( 'Osixthreeo_Headerfooter' ) );
+// Check for Extensions.
+define( 'OSTO_EXT_1', class_exists( 'Osixthreeo_Templates' ) );
+define( 'OSTO_EXT_2', class_exists( 'Osixthreeo_Layouts' ) );
+define( 'OSTO_EXT_3', class_exists( 'Osixthreeo_Widgets' ) );
+define( 'OSTO_EXT_4', class_exists( 'Osixthreeo_Sticky_Header' ) );

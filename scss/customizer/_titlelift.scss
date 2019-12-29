@@ -1,0 +1,77 @@
+/* TITLE LIFTED */
+body.page.titlelift .entry-header,
+body.single.titlelift .entry-header,
+body.blog.titlelift .page-header,
+body.archive.titlelift .page-header,
+body.search.titlelift .page-header,
+body.error404.titlelift .page-header {
+	position: relative;
+	margin-bottom: 0;
+}
+
+body.page.titlelift .entry-header .title-wrap,
+body.single.titlelift .entry-header .title-wrap,
+body.blog.titlelift .page-header .title-wrap,
+body.archive.titlelift .page-header .title-wrap,
+body.search.titlelift .page-header .title-wrap,
+body.error404.titlelift .page-header .title-wrap {
+	position: absolute;
+	bottom: 80px;
+}
+
+body.page.titlelift.content-inner-contain .entry-header .title-wrap,
+body.single.titlelift.content-inner-contain .entry-header .title-wrap,
+body.blog.titlelift.content-inner-contain .page-header .title-wrap,
+body.archive.titlelift.content-inner-contain .page-header .title-wrap,
+body.search.titlelift.content-inner-contain .page-header .title-wrap,
+body.error404.titlelift.content-inner-contain .page-header .title-wrap {
+	bottom: 114px;
+	/* left: -62%;  for full left alignment */
+}
+
+/* device is less than or equal to... apply styles */
+@include breakpoint(tablet-v) {
+	body.page.sidebar-left.titlelift .entry-header,
+	body.single.sidebar-left.titlelift .entry-header,
+	body.blog.sidebar-left.titlelift .page-header,
+	body.archive.sidebar-left.titlelift .page-header,
+	body.search.sidebar-left.titlelift .page-header,
+	body.error404.sidebar-left.titlelift .page-header {
+		margin-bottom: 2em;
+	}
+	body.page.sidebar-left.titlelift .entry-header .title-wrap,
+	body.single.sidebar-left.titlelift .entry-header .title-wrap,
+	body.blog.sidebar-left.titlelift .page-header .title-wrap,
+	body.archive.sidebar-left.titlelift .page-header .title-wrap,
+	body.search.sidebar-left.titlelift .page-header .title-wrap,
+	body.error404.sidebar-left.titlelift .page-header .title-wrap,
+	body.page.titlelift.content-inner-contain .entry-header .title-wrap,
+	body.single.titlelift.content-inner-contain .entry-header .title-wrap,
+	body.blog.titlelift.content-inner-contain .page-header .title-wrap,
+	body.archive.titlelift.content-inner-contain .page-header .title-wrap,
+	body.search.titlelift.content-inner-contain .page-header .title-wrap,
+	body.error404.titlelift.content-inner-contain .page-header .title-wrap {
+		position: static;
+		bottom: 0;
+	}
+}
+
+body.page.titlelift .entry-title,
+body.single.titlelift .entry-title,
+body.single.titlelift .entry-meta,
+body.single.titlelift .entry-meta a,
+body.blog.titlelift .page-title,
+body.archive.titlelift .page-title,
+body.search.titlelift .page-title,
+body.error404.titlelift .page-title {
+	color: #ffffff;
+	text-shadow: 0 0 8px rgba(0, 0, 0, .25);
+}
+
+.single.titlelift .entry-meta {
+	text-shadow: 1px 1px 12px rgba(0, 0, 0, .25);
+}
+
+.titlelift .archive-description {
+	color: #ffffff;
+}

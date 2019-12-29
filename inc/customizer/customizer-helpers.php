@@ -18,6 +18,7 @@ require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-radio-image-control.php';
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-range-control.php';
 require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-content-area.php';
+require_once trailingslashit( dirname( __FILE__ ) ) . 'controls/class-osixthreeo-number-control.php';
 
 // Color Palette.
 if ( ! function_exists( 'osixthreeo_get_default_color_palettes' ) ) {
@@ -62,7 +63,7 @@ if ( ! function_exists( 'osixthreeo_enqueue_color_palettes' ) ) {
 
 if ( ! function_exists( 'osixthreeo_sanitize_integer' ) ) {
 	/**
-	 * Sanitize integers.
+	 * Sanitize to positive integers.
 	 *
 	 * @param Int $input number.
 	 */
@@ -111,7 +112,6 @@ if ( ! function_exists( 'osixthreeo_sanitize_choices' ) ) {
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 	}
 }
-
 
 if ( ! function_exists( 'osixthreeo_sanitize_rgba' ) ) {
 	/**

@@ -2,18 +2,18 @@
 	clear: both;
 
 	.content-area {
-		padding: 2.5em 0;
+		margin: 2.5em 0;
 		width: 100%;
 	}
 
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		padding: 3em 0 2.5em;
+		margin: 3em 0 2.5em;
 		width: $size__site-sidebar;
 
 		@include breakpoint(tablet-v) {
-			padding: 2em 0;
+			margin: 2em 0;
 		}
 	}
 }
@@ -42,7 +42,7 @@
 		float: left;
 
 		@include breakpoint(tablet-v) {
-			padding-bottom: 0;
+			margin-bottom: 0;
 		}
 	}
 }
@@ -87,9 +87,9 @@
 		width: 100%;
 	}
 	.sidebar-right .site-content .widget-area {
-		padding-top: 0;
+		margin-top: 0;
 	}
 	.sidebar-left .content-area {
-		padding-top: 0;
+		margin-top: 0;
 	}
 }

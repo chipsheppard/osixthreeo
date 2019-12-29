@@ -89,7 +89,7 @@ function osixthreeo_comment_count() {
 		return;
 	}
 
-	if ( is_single() || is_archive() || is_home() || is_blog() && ! post_password_required() && comments_open() ) {
+	if ( is_single() || is_archive() || is_home() && ! post_password_required() && comments_open() ) {
 		echo '<span class="comments-link">';
 		comments_popup_link(
 			'',

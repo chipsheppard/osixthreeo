@@ -115,7 +115,64 @@ add_action( 'tha_header_top', 'osixthreeo_display_nav' );
 
 
 /*
- * DISPLAY Entry Footer
+ * DISPLAY The Content
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_display_content' ) ) {
+	/**
+	 * The Content & pagination on pages /  The Excerpt on archives.
+	 */
+	function osixthreeo_display_content() {
+		if ( is_singular() ) :
+			// Single posts, attachments, pages, custom post types.
+			the_content();
+
+			wp_link_pages(
+				array(
+					'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'osixthreeo' ),
+					'after'  => '</div>',
+				)
+			);
+
+		else :
+			// Archives & search.
+			the_excerpt();
+
+		endif;
+	}
+}
+add_action( 'tha_entry_content_before', 'osixthreeo_display_content' );
+
+
+/*
+ * DISPLAY Read More link
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
+	/**
+	 * The Read More link markup
+	 */
+	function osixthreeo_display_read_more() {
+		if ( is_archive() || is_home() || is_search() ) :
+			$link = sprintf(
+				'<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
+				get_permalink( get_the_ID() ),
+				sprintf(
+					/* translators: %s: Name of current post */
+					__( 'Continue<span class="screen-reader-text"> "%s"</span>', 'osixthreeo' ),
+					get_the_title( get_the_ID() )
+				)
+			);
+			echo wp_kses_post( $link );
+			echo '<div class="cf"></div>';
+		endif;
+	}
+}
+add_action( 'tha_entry_bottom', 'osixthreeo_display_read_more' );
+
+
+/*
+ * DISPLAY Entry Footer Meta
  * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
@@ -169,33 +226,6 @@ if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
 	}
 }
 add_action( 'tha_entry_bottom', 'osixthreeo_display_entry_footer' );
-
-
-/*
- * DISPLAY Read More link
- * -----------------------------------------------------------------
- */
-if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
-	/**
-	 * The Read More link markup
-	 */
-	function osixthreeo_display_read_more() {
-		if ( is_archive() || is_home() || is_search() ) :
-			$link = sprintf(
-				'<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
-				get_permalink( get_the_ID() ),
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Read more<span class="screen-reader-text"> "%s"</span>', 'osixthreeo' ),
-					get_the_title( get_the_ID() )
-				)
-			);
-			echo wp_kses_post( $link );
-			echo '<div class="cf"></div>';
-		endif;
-	}
-}
-add_action( 'tha_entry_bottom', 'osixthreeo_display_read_more' );
 
 
 /*

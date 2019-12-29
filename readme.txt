@@ -4,18 +4,15 @@ Contributors: ultranorman
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, sticky-post, two-columns, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.5
 Requires PHP: 5.6
-Tested up to: 5.3
+Tested up to: 5.3.2
 Stable tag: 1.4.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-OsixthreeO is a lightweight, multi-purpose theme with extensive customizer controls and a unique custom header.
+OsixthreeO is a flexible, lightweight, multi-purpose theme with a colorful header and heaps of customizer controls for crafting a unique design with no code or plugins.
 
 == Description ==
-OsixthreeO provides customizer controls enabling anyone to make a unique website. Select header and sidebar layouts, set colors for text, links, site title and description. Customize the header with color, image and height controls for the header. Craft your homepage with text controls, full-width image/video background with full-height option.
-
-This theme follows the standard set by the Theme Hook Alliance (THA).
-https://github.com/zamoose/themehookalliance
+OsixthreeO is a great selection for any website. Craft your site with font, color, layout and padding controls via the WordPress customizer. The custom header controls enable a plethora of homepage and header designs enabling anyone to make a unique website. OsixthreeO provides easy selection of sidebar layouts for posts, pages, blog, search and the homepage as well as blank templates for page-builders.
 
 == Installation ==
 
@@ -48,6 +45,9 @@ along with this program. If not, see http://www.gnu.org/copyleft/gpl.html
 
 == Anything else I should know? ==
 
+This theme follows the standard set by the Theme Hook Alliance (THA).
+https://github.com/zamoose/themehookalliance
+
 Gutenberg column blocks:
 Add the css class "boxed" to a Columns Block to style the columns in nice boxes.
 Add "bdr" to add a border.
@@ -68,17 +68,12 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.4.0 - 12 16 2019 =
-* Box shadow, border and text shadow controls.
-* Default custom header image size to 1600x800.
-* Utility styles update.
-* Custom header background image controls.
+= 1.4.0 - 01 01 2020 =
 * Add conditionals for up-sell blocks.
 * Moved header and footer markup to theme-functions.
+* Re-Submit to WordPress.org.
 
 = 1.3.4 - 10 19 2019 =
-* Add control for site content max-width
-* Correct call to customizer.css for child themes.
 * Added Area-Label to responsive menu icon.
 
 = 1.3.3 - 10 07 2019 =
@@ -87,7 +82,7 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 * Removed default text from Homepage text areas.
 
 = 1.3.0 - 10 04 2019 =
-* Pro Add-on integration.
+* Add-on integration.
 * !!! Submit to WordPress.org.
 
 = 1.2.0 - 01 01 2019 =

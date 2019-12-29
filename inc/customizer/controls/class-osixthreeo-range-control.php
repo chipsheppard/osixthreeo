@@ -48,7 +48,7 @@ if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Osixthreeo_Range
 				<?php if ( ! empty( $this->description ) ) : ?>
 					<span class="description customize-control-description"><?php echo esc_html( $this->description ); ?></span>
 				<?php endif; ?>
-				<input data-input-type="range" type="range" <?php $this->input_attrs(); ?> value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> data-reset_value="<?php echo esc_html( $default ); ?>" />
+				<input data-input-type="range" type="range" <?php $this->input_attrs(); ?> value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> data-reset_value="<?php echo esc_attr( $default ); ?>" />
 				<input data-input-type="number" type="number" <?php $this->input_attrs(); ?> class="osixthreeo-range-value" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> />
 				<span class="osixthreeo-reset-slider"><span class="dashicons dashicons-image-rotate"></span></span>
 			</label>

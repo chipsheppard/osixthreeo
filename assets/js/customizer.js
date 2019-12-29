@@ -229,6 +229,13 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 	);
 
 	// CONTENT AREA COLORS ---------------------------------------------
+	// Title Color.
+	osixthreeo_colors_live_update(
+		'content_title_color',
+		'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.woocommerce-products-header,.product_title.entry-title,body.page.titlelift .entry-title,body.single.titlelift .entry-title,body.blog.titlelift .page-title,body.archive.titlelift .page-title,body.search.titlelift .page-title,body.error404.titlelift .page-title,.single.titlelift .entry-meta a,.single.titlelift .entry-meta,.titlelift .archive-description,.titlelift .woocommerce-products-header,.titlelift .product_title.entry-title',
+		'color',
+		''
+	);
 	osixthreeo_colors_live_update(
 		'content_bgcolor',
 		'.site-content',
@@ -442,6 +449,139 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 					$( '.entry-meta, .entry-footer' ).css( 'font-weight', 'normal' );
 				}
 			} );
+		}
+	);
+
+	// Background Color.
+	osixthreeo_colors_live_update(
+		'archives_background_color',
+		'.blog article, .archive article, .search article',
+		'background-color',
+		'transparent'
+	);
+	osixthreeo_colors_live_update(
+		'archives_text_color',
+		'.blog article, .archive article, .search article',
+		'color',
+		''
+	);
+	osixthreeo_colors_live_update(
+		'archives_title_color',
+		'.blog article .entry-title,.archive article .entry-title,.search article .entry-title,.blog article .entry-title a,.archive article .entry-title a,.search article .entry-title a',
+		'color',
+		''
+	);
+	osixthreeo_colors_live_update(
+		'archives_meta_color',
+		'.blog article .entry-meta,.archive article .entry-meta,.search article .entry-meta, .blog article .entry-meta a,.archive article .entry-meta a,.search article .entry-meta a',
+		'color',
+		''
+	);
+	osixthreeo_colors_live_update(
+		'archives_link_color',
+		'.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a',
+		'color',
+		''
+	);
+	osixthreeo_colors_live_update(
+		'archives_link_color_hover',
+		'.blog article .entry-content a:hover,.archive article .entry-content a:hover,.search article .entry-content a:hover',
+		'color',
+		''
+	);
+	wp.customize(
+		'osixthreeo_settings[archives_hide_featuredimage]', function( value ) {
+			value.bind( function( newval ) {
+				if ( newval === true ) {
+					$( '.blog article .fi-link,.archive article .fi-link,.search article .fi-link' ).css( 'display', 'none' );
+				} else {
+					$( '.blog article .fi-link,.archive article .fi-link,.search article .fi-link' ).css( 'display', 'block' );
+				}
+			} );
+		}
+	);
+	wp.customize(
+		'osixthreeo_settings[archives_hide_excerpt]', function( value ) {
+			value.bind( function( newval ) {
+				if ( newval === true ) {
+					$( '.blog article .entry-content,.archive article .entry-content,.search article .entry-content' ).css( 'display', 'none' );
+				} else {
+					$( '.blog article .entry-content,.archive article .entry-content,.search article .entry-content' ).css( 'display', 'block' );
+				}
+			} );
+		}
+	);
+	wp.customize(
+		'osixthreeo_settings[archives_hide_readmore]', function( value ) {
+			value.bind( function( newval ) {
+				if ( newval === true ) {
+					$( '.blog article footer,.archive article footer,.search article footer' ).css( 'display', 'none' );
+				} else {
+					$( '.blog article footer,.archive article footer,.search article footer' ).css( 'display', 'block' );
+				}
+			} );
+		}
+	);
+	wp.customize(
+		'osixthreeo_settings[archives_hide_meta]', function( value ) {
+			value.bind( function( newval ) {
+				if ( newval === true ) {
+					$( '.blog article .entry-meta,.archive article .entry-meta,.search article .entry-meta' ).css( 'display', 'none' );
+				} else {
+					$( '.blog article .entry-meta,.archive article .entry-meta,.search article .entry-meta' ).css( 'display', 'block' );
+				}
+			} );
+		}
+	);
+
+
+
+	// Padding.
+	wp.customize(
+		'osixthreeo_settings[archives_pad_left]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' ).css( 'padding-left', newval + 'px' );
+				}
+			);
+		}
+	);
+	wp.customize(
+		'osixthreeo_settings[archives_pad_right]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' ).css( 'padding-right', newval + 'px' );
+				}
+			);
+		}
+	);
+	wp.customize(
+		'osixthreeo_settings[archives_pad_top]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.archive article.format-aside .entry-content,.blog article.format-aside .entry-content,.search article.format-aside .entry-content,.archive article.format-status .entry-content,.blog article.format-status .entry-content,.search article.format-status .entry-content' ).css( 'padding-top', newval + 'px' );
+				}
+			);
+		}
+	);
+	wp.customize(
+		'osixthreeo_settings[archives_pad_bottom]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.blog article .link-more,.archive article .link-more,.search article .link-more' ).css( 'padding-bottom', newval + 'px' );
+				}
+			);
+		}
+	);
+
+	// Border Radius.
+	wp.customize(
+		'osixthreeo_settings[archives_border_radius]', function( value ) {
+			value.bind(
+				function( newval ) {
+					$( '.blog article, .archive article, .search article' ).css( 'border-radius', newval + 'px' );
+				}
+			);
 		}
 	);
 

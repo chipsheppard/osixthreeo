@@ -213,3 +213,172 @@ function osixthreeo_home_header_fullheight() {
 	}
 }
 add_action( 'osixthreeo_init', 'osixthreeo_home_header_fullheight' );
+
+
+/**
+ * MENU SEARCH FORM - Checkbox
+ * -----------------------------------------------------------------
+ * Add search to primary menu if set.
+ */
+function osixthreeo_navigation_search() {
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( ! $osixthreeo_settings['nav_search'] ) {
+		return;
+	}
+
+	get_search_form();
+}
+add_action( 'osixthreeo_inside_navigation', 'osixthreeo_navigation_search' );
+
+
+/**
+ * MENU SEARCH ICON
+ *
+ * @param string   $nav The HTML list of menu items.
+ * @param stdClass $args Object containing wp_nav_menu() arguments.
+ * @return string The search icon HTML.
+ */
+function osixthreeo_menu_search_icon( $nav, $args ) {
+	if ( ! has_nav_menu( 'primary' ) ) {
+		return;
+	}
+
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( ! $osixthreeo_settings['nav_search'] ) {
+		return $nav;
+	}
+
+	// only for primary menu.
+	if ( 'primary' === $args->theme_location ) {
+		return $nav . '<li class="search-icon" title="' . esc_attr_x( 'Search', 'submit button', 'osixthreeo' ) . '"><div class="theicon"><span class="screen-reader-text">' . _x( 'Search', 'submit button', 'osixthreeo' ) . '</span></div></li>';
+	}
+
+	return $nav;
+}
+add_filter( 'wp_nav_menu_items', 'osixthreeo_menu_search_icon', 10, 2 );
+
+
+/**
+ * TITLE LIFT - Checkbox
+ * -----------------------------------------------------------------
+ * Adds body class if customizer setting is true.
+ */
+function osixthreeo_content_title_lift_class() {
+
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( ! $osixthreeo_settings['content_title_lift'] || is_page_template( array( 'osixthreeo-blank.php', 'osixthreeo-fullbleed.php' ) ) ) {
+		return;
+	}
+
+	add_filter(
+		'body_class',
+		function( $classes ) {
+			return array_merge(
+				$classes,
+				array(
+					'titlelift',
+				)
+			);
+		}
+	);
+}
+add_action( 'osixthreeo_init', 'osixthreeo_content_title_lift_class' );
+
+
+/**
+ * PARALLAX HEADER - Checkbox
+ * -----------------------------------------------------------------
+ * Adds body class if customizer setting is true.
+ */
+function osixthreeo_parallax_header_class() {
+
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( ! $osixthreeo_settings['parallax_header'] || is_page_template( array( 'page-blank.php', 'page-landing.php' ) ) ) {
+		return;
+	}
+
+	add_filter(
+		'body_class',
+		function( $classes ) {
+			return array_merge(
+				$classes,
+				array(
+					'osixthreeo-parallax-header',
+				)
+			);
+		}
+	);
+}
+add_action( 'osixthreeo_init', 'osixthreeo_parallax_header_class' );
+
+
+/**
+ * BACK TO TOP - Checkbox
+ * -----------------------------------------------------------------
+ * Build the back to top button
+ */
+function osixthreeo_back_to_top() {
+
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( ! $osixthreeo_settings['back_to_top'] ) {
+		return;
+	}
+
+	echo '<div class="cf"></div>';
+	echo '<div class="osixthreeo-backtotop"></div>';
+}
+add_action( 'osixthreeo_inside_footer', 'osixthreeo_back_to_top' );
+
+
+/**
+ * FOOTER COLUMNS - Checkbox
+ * -----------------------------------------------------------------
+ * Give footer widgets a class depending on how many there are.
+ *
+ * @link https://wordpress.stackexchange.com/questions/54162/get-number-of-widgets-in-sidebar
+ * @param Array $params Sidebar parameters to target.
+ */
+function osixthreeo_footer_widget_params( $params ) {
+
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( ! $osixthreeo_settings['footer_columns'] ) {
+		return $params;
+	}
+
+	$sidebar_id = $params[0]['id'];
+
+	if ( 'footer' === $sidebar_id ) {
+
+		$total_widgets   = wp_get_sidebars_widgets();
+		$sidebar_widgets = count( $total_widgets[ $sidebar_id ] );
+
+		$params[0]['before_widget'] = str_replace( 'class="', 'class="col-1-' . floor( $sidebar_widgets ) . ' ', $params[0]['before_widget'] );
+	}
+
+	return $params;
+}
+add_filter( 'dynamic_sidebar_params', 'osixthreeo_footer_widget_params' );
