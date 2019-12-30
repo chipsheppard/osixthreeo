@@ -13,7 +13,7 @@ th, td {
 th {
     padding: 1em;
 	text-align: left;
-	background-color: rgba(153,153,153,0.15);
+	background-color: rgba(153,153,153,0.1);
 }
 td {
     padding: 1em;
@@ -31,13 +31,6 @@ thead:first-child tr:first-child td {
     border-top: 0;
 }
 
-tbody + tbody {
-    border-top: 2px solid rgba(153,153,153,0.5);
-}
-
-.striped tr:nth-child(odd) > td {
-  background: rgba(153,153,153,0.1);
-}
 .striped tr:nth-child(even) > td {
   background: rgba(153,153,153,0.05);
 }

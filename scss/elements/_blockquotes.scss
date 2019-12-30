@@ -9,30 +9,35 @@ q:after {
 }
 
 blockquote {
-	background: rgba(153,153,153,0.15);
-	margin: .75em 1.5em 1.5em 0;
-	padding: 1.5em 2em 1.5em 3.5em;
+	background: rgba(153,153,153,0.05);
+	margin: .75em 0 1.5em;
+	padding: 1.5em 1.75em;
 	position: relative;
 	quotes: "\201C""\201D""\201C""\201D";
 
 	@include breakpoint(phone-h) {
-		padding: 1.25em 1.25em 1.25em 2.5em;
+		padding: 1.25em 1.25em;
 	}
 
 	&:after {
-		content: "";
+		content: '';
 	}
 
 	&:before {
+		//color: rgba(153,153,153,0.5);
+		// content: "\201C";
+		// line-height: 1.125;
+		// font-family: Georgia, serif;
+		background-color: rgba(153,153,153,0.2);
+		content:'';
 		display: block;
-		content: "\201C";
-		font-family: Georgia, serif;
-		color: rgba(153,153,153,0.25);
-		height: 0;
+		height: 100%;
+		left: 0;
 		position: absolute;
 		top: 0;
-		left: 8px;
-		@include font-size(3.75);
+		bottom: 0;
+		width: 8px;
+		@include font-size(3.5);
 
 	}
 

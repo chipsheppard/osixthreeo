@@ -382,8 +382,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_1 || ! OSTO_EXT_2 || ! OSTO_EXT_3 || ! OSTO_EXT_4 ) :
-			// section message.
+		if ( ! OSTO_EXT_1 && ! OSTO_EXT_2 ) :
 			$wp_customize->add_setting(
 				'layout-pro-callout',
 				array(
@@ -1034,8 +1033,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_1 || ! OSTO_EXT_2 || ! OSTO_EXT_4 ) :
-			// section message.
+		if ( ! OSTO_EXT_2 && ! OSTO_EXT_3 && ! OSTO_EXT_4 ) :
 			$wp_customize->add_setting(
 				'colors-pro-callout',
 				array(
@@ -1968,7 +1966,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_1 || ! OSTO_EXT_2 || ! OSTO_EXT_4 ) :
+		if ( ! OSTO_EXT_1 && ! OSTO_EXT_2 && ! OSTO_EXT_3 && ! OSTO_EXT_4 ) :
 			$wp_customize->add_setting(
 				'typography-pro-callout',
 				array(
@@ -2204,7 +2202,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_1 || ! OSTO_EXT_2 ) :
+		if ( ! OSTO_EXT_2 ) :
 			$wp_customize->add_setting(
 				'themeops-pro-callout',
 				array(
@@ -2682,7 +2680,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_1 || ! OSTO_EXT_2 || ! OSTO_EXT_4 ) :
+		if ( ! OSTO_EXT_2 ) :
 			$wp_customize->add_setting(
 				'themeops-a-pro-callout',
 				array(

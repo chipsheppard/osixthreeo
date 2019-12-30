@@ -135,7 +135,8 @@
 #customize-control-osixthreeo_settings-archives_meta_color,
 #customize-control-osixthreeo_settings-archives_min_height,
 #customize-control-osixthreeo_settings-archives_border_width,
-#customize-control-osixthreeo_settings-archives_border_radius {
+#customize-control-osixthreeo_settings-archives_border_radius,
+#customize-control-osixthreeo_settings-archives_hide_readmore {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 12px;
 	margin-bottom: 24px;

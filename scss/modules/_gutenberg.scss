@@ -107,10 +107,6 @@
  ---------------------------------------------- */
 .wp-block-pullquote {
 
-	&:before {
-		display: none;
-	}
-
 	&.alignwide,
 	&.alignfull {
 		border: none;
@@ -118,10 +114,8 @@
 		padding-right: 40px;
 	}
 
-	&.alignleft,
-	&.alignright {
-		padding-left: 24px;
-		padding-right: 24px;
+	&.alignleft {
+		margin: 0 1.5em 1.5em 0;
 	}
 	&.alignright {
 		margin: 0 0 1.5em 1.5em;
@@ -130,8 +124,8 @@
 
 .wp-block-quote.is-large,
 .wp-block-quote.is-style-large {
- 	margin: 0 0 1.5em;
- 	padding: 1.5em 2em 1.5em 3.5em;
+	margin: .75em 0 1.5em;
+	padding: 1.5em 1.75em;
 }
 
 /*
