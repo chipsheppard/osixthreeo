@@ -22,11 +22,13 @@
 		margin-bottom: 2em;
 		overflow: hidden;
 		position: relative;
-		width: 98%;
+		width: 100%;
 
+		// Less than or equal to 641
 		@include breakpoint(phone-min-h) {
 			float: left;
-			width: 48%;
+			margin-left: 0;
+			width: calc( 48% - 1px );
 
 			&:nth-of-type(odd) {
 				clear: both;
@@ -34,8 +36,9 @@
 			}
 		}
 
+		// Less than or equal to 769
 		@include breakpoint(tablet-min-v) {
-			width: 32%;
+			width: calc( 32% - 1px );
 			margin-right: 0;
 			margin-left: 2%;
 
@@ -60,15 +63,15 @@
 		}
 
 		.entry-content {
-			// flex: 1 0 auto;
 			overflow: hidden;
 			padding: 0 16px 16px;
 		}
 
 		.link-more {
+			line-height: 2.5;
+			margin-bottom: 1em;
 			overflow: hidden;
 			padding: 0 16px 0;
-			margin-bottom: 1em;
 		}
 
 		&.format-aside,

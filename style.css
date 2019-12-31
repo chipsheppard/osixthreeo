@@ -3249,7 +3249,7 @@ body.home.page .entry-header {
   margin-bottom: 2em;
   overflow: hidden;
   position: relative;
-  width: 98%;
+  width: 100%;
 }
 
 @media all and (min-width: 641px) {
@@ -3257,7 +3257,8 @@ body.home.page .entry-header {
   .archive article,
   .search article {
     float: left;
-    width: 48%;
+    margin-left: 0;
+    width: calc( 48% - 1px);
   }
   .blog article:nth-of-type(odd),
   .archive article:nth-of-type(odd),
@@ -3271,7 +3272,7 @@ body.home.page .entry-header {
   .blog article,
   .archive article,
   .search article {
-    width: 32%;
+    width: calc( 32% - 1px);
     margin-right: 0;
     margin-left: 2%;
   }
@@ -3313,9 +3314,10 @@ body.home.page .entry-header {
 .blog article .link-more,
 .archive article .link-more,
 .search article .link-more {
+  line-height: 2.5;
+  margin-bottom: 1em;
   overflow: hidden;
   padding: 0 16px 0;
-  margin-bottom: 1em;
 }
 
 .blog article.format-aside .entry-content, .blog article.format-status .entry-content,

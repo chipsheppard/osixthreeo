@@ -1055,7 +1055,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		endif;
 
 		/*
-		 * Typography - tab -------------------------------------------------------------------
+		 * TYPOGRAPHY - tab -------------------------------------------------------------------
 		 * ------------------------------------------------------------------------------------
 		 * ------------------------------------------------------------------------------------
 		 * ------------------------------------------------------------------------------------
@@ -1116,7 +1116,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'courier'              => esc_html__( 'Courier', 'osixthreeo' ),
 					'lucidatypewritter'    => esc_html__( 'Lucida Typewritter', 'osixthreeo' ),
 					'comicsans'            => esc_html__( 'Comic Sans', 'osixthreeo' ),
-
 					'alegreya'             => esc_html__( 'Alegreya', 'osixthreeo' ),
 					'alegreyasc'           => esc_html__( 'Alegreya SC', 'osixthreeo' ),
 					'alegreyasans'         => esc_html__( 'Alegreya Sans', 'osixthreeo' ),
@@ -1126,13 +1125,11 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'arvo'                 => esc_html__( 'Arvo', 'osixthreeo' ),
 					'abrilfatface'         => esc_html__( 'Abril Fatface', 'osixthreeo' ),
 					'alfaslabone'          => esc_html__( 'Alfa Slab One', 'osixthreeo' ),
-
 					'b612'                 => esc_html__( 'B612', 'osixthreeo' ),
 					'biothyme'             => esc_html__( 'BioRhyme', 'osixthreeo' ),
 					'baloo'                => esc_html__( 'Baloo', 'osixthreeo' ),
 					'barrio'               => esc_html__( 'Barrio', 'osixthreeo' ),
 					'blackopsone'          => esc_html__( 'Black Ops One', 'osixthreeo' ),
-
 					'cabin'                => esc_html__( 'Cabin', 'osixthreeo' ),
 					'cairo'                => esc_html__( 'Cairo', 'osixthreeo' ),
 					'chivo'                => esc_html__( 'Chivo', 'osixthreeo' ),
@@ -1142,27 +1139,21 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'cabinsketch'          => esc_html__( 'Cabin Sketch', 'osixthreeo' ),
 					'chelaone'             => esc_html__( 'Chela One', 'osixthreeo' ),
 					'concertone'           => esc_html__( 'Concert One', 'osixthreeo' ),
-
 					'domine'               => esc_html__( 'Domine', 'osixthreeo' ),
-
 					'exo2'                 => esc_html__( 'Exo 2', 'osixthreeo' ),
 					'eczar'                => esc_html__( 'Eczar', 'osixthreeo' ),
 					'ericaone'             => esc_html__( 'Erica One', 'osixthreeo' ),
-
 					'fjallaone'            => esc_html__( 'Fjalla One', 'osixthreeo' ),
 					'firasans'             => esc_html__( 'Fira Sans', 'osixthreeo' ),
 					'frankruhllibre'       => esc_html__( 'Frank Ruhl Libre', 'osixthreeo' ),
 					'fascinate'            => esc_html__( 'Fascinate', 'osixthreeo' ),
 					'flamenco'             => esc_html__( 'Flamenco', 'osixthreeo' ),
 					'frederickathegreat'   => esc_html__( 'Fredericka the Great', 'osixthreeo' ),
-
 					'ibmplexsans'          => esc_html__( 'IBM Plex Sans', 'osixthreeo' ),
 					'ibmplexserif'         => esc_html__( 'IBM Plex Serif', 'osixthreeo' ),
 					'inknutantiqua'        => esc_html__( 'Inknut Antiqua', 'osixthreeo' ),
 					'inconsolata'          => esc_html__( 'Inconsolata', 'osixthreeo' ),
-
 					'karla'                => esc_html__( 'Karla', 'osixthreeo' ),
-
 					'lato'                 => esc_html__( 'Lato', 'osixthreeo' ),
 					'librefranklin'        => esc_html__( 'Libre Franklin', 'osixthreeo' ),
 					'librebaskerville'     => esc_html__( 'Libre Baskerville', 'osixthreeo' ),
@@ -1170,31 +1161,26 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'lilyscriptone'        => esc_html__( 'Lily Script One', 'osixthreeo' ),
 					'lobster'              => esc_html__( 'Lobster', 'osixthreeo' ),
 					'lobstertwo'           => esc_html__( 'Lobster Two', 'osixthreeo' ),
-
 					'montserrat'           => esc_html__( 'Montserrat', 'osixthreeo' ),
 					'montserratalternates' => esc_html__( 'Montserrat Alternates', 'osixthreeo' ),
 					'muli'                 => esc_html__( 'Muli', 'osixthreeo' ),
 					'merriweather'         => esc_html__( 'Merriweather', 'osixthreeo' ),
 					'monoton'              => esc_html__( 'Monoton', 'osixthreeo' ),
-
 					'notosans'             => esc_html__( 'Noto Sans', 'osixthreeo' ),
 					'nunito'               => esc_html__( 'Nunito', 'osixthreeo' ),
 					'neuton'               => esc_html__( 'Neuton', 'osixthreeo' ),
 					'nixieone'             => esc_html__( 'Nixie One', 'osixthreeo' ),
-
 					'opensans'             => esc_html__( 'Open Sans', 'osixthreeo' ),
 					'oswald'               => esc_html__( 'Oswald', 'osixthreeo' ),
 					'oxygen'               => esc_html__( 'Oxygen', 'osixthreeo' ),
 					'oldstandardtt'        => esc_html__( 'Old Standard TT', 'osixthreeo' ),
 					'oleoscript'           => esc_html__( 'Oleo Script', 'osixthreeo' ),
 					'oleoscriptswashcaps'  => esc_html__( 'Oleo Script Swash Caps', 'osixthreeo' ),
-
 					'poppins'              => esc_html__( 'Poppins', 'osixthreeo' ),
 					'prozalibre'           => esc_html__( 'Proza Libre', 'osixthreeo' ),
 					'ptsans'               => esc_html__( 'PT Sans', 'osixthreeo' ),
 					'playfairdisplay'      => esc_html__( 'Playfair Display', 'osixthreeo' ),
 					'ptserif'              => esc_html__( 'PT Serif', 'osixthreeo' ),
-
 					'raleway'              => esc_html__( 'Raleway', 'osixthreeo' ),
 					'roboto'               => esc_html__( 'Roboto', 'osixthreeo' ),
 					'rubik'                => esc_html__( 'Rubik', 'osixthreeo' ),
@@ -1202,13 +1188,11 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'rokkitt'              => esc_html__( 'Rokkitt', 'osixthreeo' ),
 					'ranchers'             => esc_html__( 'Ranchers', 'osixthreeo' ),
 					'rakkas'               => esc_html__( 'Rakkas', 'osixthreeo' ),
-
 					'sourcesanspro'        => esc_html__( 'Source Sans Pro', 'osixthreeo' ),
 					'sourceserifpro'       => esc_html__( 'Source Serif Pro', 'osixthreeo' ),
 					'spectral'             => esc_html__( 'Spectral', 'osixthreeo' ),
 					'specialelite'         => esc_html__( 'Special Elite', 'osixthreeo' ),
 					'spacemono'            => esc_html__( 'Space Mono', 'osixthreeo' ),
-
 					'titilliumweb'         => esc_html__( 'Titillium Web', 'osixthreeo' ),
 					'ubuntu'               => esc_html__( 'Ubuntu', 'osixthreeo' ),
 					'varela'               => esc_html__( 'Varela', 'osixthreeo' ),
@@ -1988,859 +1972,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		endif;
 
 		/*
-		 * THEME OPTIONS ------------------------------------------------------------------------
-		 * new tab ------------------------------------------------------------------------------
-		 * --------------------------------------------------------------------------------------
-		 * --------------------------------------------------------------------------------------
-		 */
-
-		// PANEL - THEME OPTIONS ------------------------------------------.
-		$wp_customize->add_panel(
-			'osixthreeo_themeops',
-			array(
-				'title'    => esc_html__( 'Theme Options', 'osixthreeo' ),
-				'priority' => 70,
-			)
-		);
-
-		// SUBPANEL - CONTENT AREA ------------------------- .
-		// ------------------------------------------------- .
-		$wp_customize->add_section(
-			'osixthreeo_to_content',
-			array(
-				'title'    => esc_html__( 'Post/Page Entries', 'osixthreeo' ),
-				'priority' => 10,
-				'panel'    => 'osixthreeo_themeops',
-			)
-		);
-
-		// Post/Page Content.
-		$wp_customize->add_setting(
-			'to-c-layout-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-c-layout-message',
-				array(
-					'section'  => 'osixthreeo_to_content',
-					'label'    => esc_html__( 'Layout', 'osixthreeo' ),
-					'priority' => 10,
-				)
-			)
-		);
-		// Title Lift.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[content_title_lift]',
-			array(
-				'default'           => $defaults['content_title_lift'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[content_title_lift]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Lift titles into custom header area.', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_content',
-				'settings' => 'osixthreeo_settings[content_title_lift]',
-				'priority' => 11,
-			)
-		);
-		// META DATA -------------------------.
-		$wp_customize->add_setting(
-			'themeops-meta-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'themeops-meta-message',
-				array(
-					'section'  => 'osixthreeo_to_content',
-					'label'    => esc_html__( 'Meta Data', 'osixthreeo' ),
-					'priority' => 30,
-				)
-			)
-		);
-		// section message.
-		$wp_customize->add_setting(
-			'themeops-metaheader-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'themeops-metaheader-message',
-				array(
-					'section'  => 'osixthreeo_to_content',
-					'content'  => esc_html__( 'Post header', 'osixthreeo' ),
-					'priority' => 31,
-				)
-			)
-		);
-		// date.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[meta_date]',
-			array(
-				'default'           => $defaults['meta_date'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[meta_date]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Publish Date', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_content',
-				'settings' => 'osixthreeo_settings[meta_date]',
-				'priority' => 32,
-			)
-		);
-		// author.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[meta_author]',
-			array(
-				'default'           => $defaults['meta_author'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[meta_author]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Author', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_content',
-				'settings' => 'osixthreeo_settings[meta_author]',
-				'priority' => 33,
-			)
-		);
-		// comments.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[meta_comments]',
-			array(
-				'default'           => $defaults['meta_comments'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[meta_comments]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Comments', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_content',
-				'settings' => 'osixthreeo_settings[meta_comments]',
-				'priority' => 34,
-			)
-		);
-		// updated.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[meta_updated]',
-			array(
-				'default'           => $defaults['meta_updated'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[meta_updated]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Updated', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_content',
-				'settings' => 'osixthreeo_settings[meta_updated]',
-				'priority' => 35,
-			)
-		);
-		// section message.
-		$wp_customize->add_setting(
-			'themeops-metafooter-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'themeops-metafooter-message',
-				array(
-					'section'  => 'osixthreeo_to_content',
-					'priority' => 36,
-					'content'  => esc_html__( 'Post footer', 'osixthreeo' ),
-				)
-			)
-		);
-		// show footer meta.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[meta_footer]',
-			array(
-				'default'           => $defaults['meta_footer'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[meta_footer]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Categories & Tags', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_content',
-				'settings' => 'osixthreeo_settings[meta_footer]',
-				'priority' => 37,
-			)
-		);
-
-		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_2 ) :
-			$wp_customize->add_setting(
-				'themeops-pro-callout',
-				array(
-					'sanitize_callback' => 'wp_kses_post',
-				)
-			);
-			$wp_customize->add_control(
-				new Osixthreeo_Content_Area(
-					$wp_customize,
-					'themeops-pro-callout',
-					array(
-						'section'  => 'osixthreeo_to_content',
-						'priority' => 100,
-						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
-					)
-				)
-			);
-		endif;
-
-		// SUBPANEL - ARCHIVE ENTRIES ----------------------------------- .
-		// -------------------------------------------------------------- .
-		$wp_customize->add_section(
-			'osixthreeo_to_archives',
-			array(
-				'title'    => esc_html__( 'Archive Entries', 'osixthreeo' ),
-				'priority' => 20,
-				'panel'    => 'osixthreeo_themeops',
-			)
-		);
-
-		// Entry Elements.
-		$wp_customize->add_setting(
-			'to-a-elements-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-a-elements-message',
-				array(
-					'section'  => 'osixthreeo_to_archives',
-					'label'    => esc_html__( 'Entry Elements', 'osixthreeo' ),
-					'priority' => 10,
-				)
-			)
-		);
-		// Hide featured images.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_hide_featuredimage]',
-			array(
-				'default'           => $defaults['archives_hide_featuredimage'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_hide_featuredimage]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Hide the featured image', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_archives',
-				'settings' => 'osixthreeo_settings[archives_hide_featuredimage]',
-				'priority' => 11,
-			)
-		);
-		// Hide excerpt.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_hide_meta]',
-			array(
-				'default'           => $defaults['archives_hide_meta'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_hide_meta]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Hide the meta data', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_archives',
-				'settings' => 'osixthreeo_settings[archives_hide_meta]',
-				'priority' => 12,
-			)
-		);
-		// Hide excerpt.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_hide_excerpt]',
-			array(
-				'default'           => $defaults['archives_hide_excerpt'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_hide_excerpt]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Hide the excerpt', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_archives',
-				'settings' => 'osixthreeo_settings[archives_hide_excerpt]',
-				'priority' => 13,
-			)
-		);
-		// Hide readmore.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_hide_readmore]',
-			array(
-				'default'           => $defaults['archives_hide_readmore'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_hide_readmore]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => esc_html__( 'Hide the Continue button', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_archives',
-				'settings' => 'osixthreeo_settings[archives_hide_readmore]',
-				'priority' => 14,
-			)
-		);
-		// Archives Padding.
-		$wp_customize->add_setting(
-			'to-a-padding-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-a-padding-message',
-				array(
-					'section'  => 'osixthreeo_to_archives',
-					'label'    => esc_html__( 'Padding', 'osixthreeo' ),
-					'priority' => 16,
-				)
-			)
-		);
-		// Padding - Left.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_pad_left]',
-			array(
-				'default'           => $defaults['archives_pad_left'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Number_Control(
-				$wp_customize,
-				'osixthreeo_settings[archives_pad_left]',
-				array(
-					'type'        => 'number',
-					'label'       => esc_html__( 'Left', 'osixthreeo' ),
-					'section'     => 'osixthreeo_to_archives',
-					'input_attrs' => array(
-						'min'  => 0,
-						'max'  => 24,
-						'step' => 1,
-					),
-					'settings'    => 'osixthreeo_settings[archives_pad_left]',
-					'priority'    => 17,
-				)
-			)
-		);
-		// Padding - Left.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_pad_right]',
-			array(
-				'default'           => $defaults['archives_pad_right'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Number_Control(
-				$wp_customize,
-				'osixthreeo_settings[archives_pad_right]',
-				array(
-					'type'        => 'number',
-					'label'       => esc_html__( 'Right', 'osixthreeo' ),
-					'section'     => 'osixthreeo_to_archives',
-					'input_attrs' => array(
-						'min'  => 0,
-						'max'  => 24,
-						'step' => 1,
-					),
-					'settings'    => 'osixthreeo_settings[archives_pad_right]',
-					'priority'    => 18,
-				)
-			)
-		);
-		// Padding - Top.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_pad_top]',
-			array(
-				'default'           => $defaults['archives_pad_top'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Number_Control(
-				$wp_customize,
-				'osixthreeo_settings[archives_pad_top]',
-				array(
-					'type'        => 'number',
-					'label'       => esc_html__( 'Top', 'osixthreeo' ),
-					'section'     => 'osixthreeo_to_archives',
-					'input_attrs' => array(
-						'min'  => 0,
-						'max'  => 24,
-						'step' => 1,
-					),
-					'settings'    => 'osixthreeo_settings[archives_pad_top]',
-					'priority'    => 19,
-				)
-			)
-		);
-		// Padding - Bottom.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_pad_bottom]',
-			array(
-				'default'           => $defaults['archives_pad_bottom'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Number_Control(
-				$wp_customize,
-				'osixthreeo_settings[archives_pad_bottom]',
-				array(
-					'type'        => 'number',
-					'label'       => esc_html__( 'Bottom', 'osixthreeo' ),
-					'section'     => 'osixthreeo_to_archives',
-					'input_attrs' => array(
-						'min'  => 0,
-						'max'  => 24,
-						'step' => 1,
-					),
-					'settings'    => 'osixthreeo_settings[archives_pad_bottom]',
-					'priority'    => 20,
-				)
-			)
-		);
-		// BORDER.
-		$wp_customize->add_setting(
-			'to-a-border-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-a-border-message',
-				array(
-					'section'  => 'osixthreeo_to_archives',
-					'label'    => esc_html__( 'Border', 'osixthreeo' ),
-					'priority' => 21,
-				)
-			)
-		);
-		// Border - Color.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_border_color]',
-			array(
-				'default'           => $defaults['archives_border_color'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_rgba',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Alpha_Color_Control(
-				$wp_customize,
-				'osixthreeo_settings[archives_border_color]',
-				array(
-					'label'    => esc_html__( 'Color', 'osixthreeo' ),
-					'section'  => 'osixthreeo_to_archives',
-					'settings' => 'osixthreeo_settings[archives_border_color]',
-					'priority' => 22,
-				)
-			)
-		);
-		// Border - width.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_border_width]',
-			array(
-				'default'           => $defaults['archives_border_width'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_border_width]',
-			array(
-				'type'        => 'number',
-				'label'       => esc_html__( 'Width', 'osixthreeo' ),
-				'section'     => 'osixthreeo_to_archives',
-				'input_attrs' => array(
-					'min'  => 0,
-					'max'  => 10,
-					'step' => 1,
-				),
-				'settings'    => 'osixthreeo_settings[archives_border_width]',
-				'priority'    => 23,
-			)
-		);
-		// Border - Radius.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_border_radius]',
-			array(
-				'default'           => $defaults['archives_border_radius'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_border_radius]',
-			array(
-				'type'        => 'number',
-				'label'       => esc_html__( 'Corner radius', 'osixthreeo' ),
-				'section'     => 'osixthreeo_to_archives',
-				'input_attrs' => array(
-					'min'  => 0,
-					'max'  => 120,
-					'step' => 1,
-				),
-				'settings'    => 'osixthreeo_settings[archives_border_radius]',
-				'priority'    => 24,
-			)
-		);
-
-		// BOX SHADOW.
-		$wp_customize->add_setting(
-			'to-a-shadow-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-a-shadow-message',
-				array(
-					'section'  => 'osixthreeo_to_archives',
-					'label'    => esc_html__( 'Box Shadow', 'osixthreeo' ),
-					'priority' => 25,
-				)
-			)
-		);
-		// Shadow - Color.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_box_shadow_color]',
-			array(
-				'default'           => $defaults['archives_box_shadow_color'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_rgba',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Alpha_Color_Control(
-				$wp_customize,
-				'osixthreeo_settings[archives_box_shadow_color]',
-				array(
-					'label'        => esc_html__( 'Color', 'osixthreeo' ),
-					'section'      => 'osixthreeo_to_archives',
-					'settings'     => 'osixthreeo_settings[archives_box_shadow_color]',
-					'show_opacity' => true,
-					'priority'     => 26,
-				)
-			)
-		);
-
-		// SHADOW - X.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_box_shadow_x]',
-			array(
-				'default'           => $defaults['archives_box_shadow_x'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_box_shadow_x]',
-			array(
-				'type'     => 'number',
-				'label'    => esc_html__( 'x offset', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_archives',
-				'settings' => 'osixthreeo_settings[archives_box_shadow_x]',
-				'priority' => 27,
-			)
-		);
-		// SHADOW - Y.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_box_shadow_y]',
-			array(
-				'default'           => $defaults['archives_box_shadow_y'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_box_shadow_y]',
-			array(
-				'type'     => 'number',
-				'label'    => esc_html__( 'y offset', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_archives',
-				'settings' => 'osixthreeo_settings[archives_box_shadow_y]',
-				'priority' => 28,
-			)
-		);
-		// SHADOW - Blur.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_box_shadow_blur]',
-			array(
-				'default'           => $defaults['archives_box_shadow_blur'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_box_shadow_blur]',
-			array(
-				'type'        => 'number',
-				'label'       => esc_html__( 'Blur', 'osixthreeo' ),
-				'section'     => 'osixthreeo_to_archives',
-				'settings'    => 'osixthreeo_settings[archives_box_shadow_blur]',
-				'input_attrs' => array(
-					'min'  => 0,
-					'max'  => 100,
-					'step' => 1,
-				),
-				'priority'    => 29,
-			)
-		);
-		// Shadow - Spread.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[archives_box_shadow_spread]',
-			array(
-				'default'           => $defaults['archives_box_shadow_spread'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[archives_box_shadow_spread]',
-			array(
-				'type'        => 'number',
-				'label'       => esc_html__( 'Spread', 'osixthreeo' ),
-				'section'     => 'osixthreeo_to_archives',
-				'settings'    => 'osixthreeo_settings[archives_box_shadow_spread]',
-				'input_attrs' => array(
-					'min'  => 0,
-					'max'  => 100,
-					'step' => 1,
-				),
-				'priority'    => 30,
-			)
-		);
-
-		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_2 ) :
-			$wp_customize->add_setting(
-				'themeops-a-pro-callout',
-				array(
-					'sanitize_callback' => 'wp_kses_post',
-				)
-			);
-			$wp_customize->add_control(
-				new Osixthreeo_Content_Area(
-					$wp_customize,
-					'themeops-a-pro-callout',
-					array(
-						'section'  => 'osixthreeo_to_archives',
-						'priority' => 100,
-						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
-					)
-				)
-			);
-		endif;
-
-		// SUBPANEL - SITE HEADER --------------------------------------- .
-		// -------------------------------------------------------------- .
-		$wp_customize->add_section(
-			'osixthreeo_to_header',
-			array(
-				'title'    => esc_html__( 'Site Header', 'osixthreeo' ),
-				'priority' => 30,
-				'panel'    => 'osixthreeo_themeops',
-			)
-		);
-
-		// Append Search to Nav -------------------- .
-		$wp_customize->add_setting(
-			'to-h-appendsearch-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-h-appendsearch-message',
-				array(
-					'section'  => 'osixthreeo_to_header',
-					'priority' => 10,
-					'label'    => esc_html__( 'Menu', 'osixthreeo' ),
-				)
-			)
-		);
-
-		$wp_customize->add_setting(
-			'osixthreeo_settings[nav_search]',
-			array(
-				'default'           => $defaults['nav_search'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[nav_search]',
-			array(
-				'type'        => 'checkbox',
-				'label'       => __( 'MENU SEARCH', 'osixthreeo' ),
-				'description' => __( 'Append search functionality to the menu.', 'osixthreeo' ),
-				'section'     => 'osixthreeo_to_header',
-				'settings'    => 'osixthreeo_settings[nav_search]',
-				'priority'    => 11,
-			)
-		);
-
-		// SUBPANEL - SITE FOOTER ---------------------------------------
-		// -------------------------------------------------------------- .
-		$wp_customize->add_section(
-			'osixthreeo_to_footer',
-			array(
-				'title'    => esc_html__( 'Site Footer', 'osixthreeo' ),
-				'priority' => 40,
-				'panel'    => 'osixthreeo_themeops',
-			)
-		);
-
-		// Back To Top.
-		$wp_customize->add_setting(
-			'to-f-backtotop-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-f-backtotop-message',
-				array(
-					'section'  => 'osixthreeo_to_footer',
-					'label'    => esc_html__( 'Back To Top', 'osixthreeo' ),
-					'priority' => 10,
-				)
-			)
-		);
-
-		// Add Button.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[back_to_top]',
-			array(
-				'default'           => $defaults['back_to_top'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[back_to_top]',
-			array(
-				'type'        => 'checkbox',
-				'label'       => __( 'Add a Back To Top button', 'osixthreeo' ),
-				'description' => __( 'Appears on the right side of the site footer.', 'osixthreeo' ),
-				'section'     => 'osixthreeo_to_footer',
-				'settings'    => 'osixthreeo_settings[back_to_top]',
-				'priority'    => 11,
-			)
-		);
-
-		// Footer Columns --------------------------------------------- .
-		$wp_customize->add_setting(
-			'to-f-columns-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'to-f-columns-message',
-				array(
-					'section'  => 'osixthreeo_to_footer',
-					'label'    => esc_html__( 'Widget Columns', 'osixthreeo' ),
-					'priority' => 12,
-				)
-			)
-		);
-		// Engage script.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[footer_columns]',
-			array(
-				'default'           => $defaults['footer_columns'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
-			)
-		);
-		$wp_customize->add_control(
-			'osixthreeo_settings[footer_columns]',
-			array(
-				'type'     => 'checkbox',
-				'label'    => __( 'Display multiple widgets as responsive columns.', 'osixthreeo' ),
-				'section'  => 'osixthreeo_to_footer',
-				'settings' => 'osixthreeo_settings[footer_columns]',
-				'priority' => 13,
-			)
-		);
-
-		/*
 		 * CUSTOM HEADER -------------------------------------------------------------------
 		 * new tab  ------------------------------------------------------------------------
 		 * ---------------------------------------------------------------------------------
@@ -2859,7 +1990,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			}
 		}
 
-		// bg color.
+		// SUB PANEL -----------------------------------------------
 		$wp_customize->add_section(
 			'osixthreeo_ch_bgcolor',
 			array(
@@ -2998,11 +2129,11 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		/*
-		 * Header Media --------------------------------------
-		 * Section where header images options are automatically added
+		 * SUB PANEL -------------------------------------
+		 * Header Media - Section where options are added by WP
 		 */
 
-		// Put WP stuff into a new panel.
+		// SUB PANEL -----------------------------------------.
 		$wp_customize->add_section(
 			'header_image',
 			array(
@@ -3117,9 +2248,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		/*
-		 * New Panel - HEIGHT ------------------------------
-		 */
+		// SUB PANEL -----------------------------------------.
+		// Height ------------------------------.
 		$wp_customize->add_section(
 			'osixthreeo_ch_height',
 			array(
@@ -3129,7 +2259,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		// section message.
 		$wp_customize->add_setting(
 			'height-homepage-message',
 			array(
@@ -3347,9 +2476,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		/*
-		 * NEW PANEL - OVERLAY TEXT ------------------------------
-		 */
+		// SUB PANEL -----------------------------------------.
+		// Overlay Text --------------------------------------
 		$wp_customize->add_section(
 			'osixthreeo_ch_text',
 			array(
@@ -3977,6 +3105,858 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'content'  => esc_html__( 'Text above only displays on the homepage.', 'osixthreeo' ) . '</p>',
 					'priority' => 53,
 				)
+			)
+		);
+
+		/*
+		 * THEME OPTIONS ------------------------------------------------------------------------
+		 * new tab 70 ---------------------------------------------------------------------------
+		 * --------------------------------------------------------------------------------------
+		 * --------------------------------------------------------------------------------------
+		 */
+
+		// PANEL - THEME OPTIONS ------------------------------------------.
+		$wp_customize->add_panel(
+			'osixthreeo_themeops',
+			array(
+				'title'    => esc_html__( 'Theme Options', 'osixthreeo' ),
+				'priority' => 70,
+			)
+		);
+
+		// SUBPANEL - SITE HEADER --------------------------------------- .
+		// -------------------------------------------------------------- .
+		$wp_customize->add_section(
+			'osixthreeo_to_header',
+			array(
+				'title'    => esc_html__( 'Site Header', 'osixthreeo' ),
+				'priority' => 10,
+				'panel'    => 'osixthreeo_themeops',
+			)
+		);
+
+		// Append Search to Nav -------------------- .
+		$wp_customize->add_setting(
+			'to-h-appendsearch-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-h-appendsearch-message',
+				array(
+					'section'  => 'osixthreeo_to_header',
+					'priority' => 10,
+					'label'    => esc_html__( 'Menu', 'osixthreeo' ),
+				)
+			)
+		);
+
+		$wp_customize->add_setting(
+			'osixthreeo_settings[nav_search]',
+			array(
+				'default'           => $defaults['nav_search'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[nav_search]',
+			array(
+				'type'        => 'checkbox',
+				'label'       => __( 'MENU SEARCH', 'osixthreeo' ),
+				'description' => __( 'Append search functionality to the menu.', 'osixthreeo' ),
+				'section'     => 'osixthreeo_to_header',
+				'settings'    => 'osixthreeo_settings[nav_search]',
+				'priority'    => 11,
+			)
+		);
+
+		// SUBPANEL - CONTENT AREA ------------------------- .
+		// ------------------------------------------------- .
+		$wp_customize->add_section(
+			'osixthreeo_to_content',
+			array(
+				'title'    => esc_html__( 'Post/Page Entries', 'osixthreeo' ),
+				'priority' => 20,
+				'panel'    => 'osixthreeo_themeops',
+			)
+		);
+
+		// Post/Page Content.
+		$wp_customize->add_setting(
+			'to-c-layout-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-c-layout-message',
+				array(
+					'section'  => 'osixthreeo_to_content',
+					'label'    => esc_html__( 'Layout', 'osixthreeo' ),
+					'priority' => 10,
+				)
+			)
+		);
+		// Title Lift.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[content_title_lift]',
+			array(
+				'default'           => $defaults['content_title_lift'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[content_title_lift]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Lift titles into custom header area.', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_content',
+				'settings' => 'osixthreeo_settings[content_title_lift]',
+				'priority' => 11,
+			)
+		);
+		// META DATA -------------------------.
+		$wp_customize->add_setting(
+			'themeops-meta-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'themeops-meta-message',
+				array(
+					'section'  => 'osixthreeo_to_content',
+					'label'    => esc_html__( 'Meta Data', 'osixthreeo' ),
+					'priority' => 30,
+				)
+			)
+		);
+		// section message.
+		$wp_customize->add_setting(
+			'themeops-metaheader-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'themeops-metaheader-message',
+				array(
+					'section'  => 'osixthreeo_to_content',
+					'content'  => esc_html__( 'Post header', 'osixthreeo' ),
+					'priority' => 31,
+				)
+			)
+		);
+		// date.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[meta_date]',
+			array(
+				'default'           => $defaults['meta_date'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[meta_date]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Publish Date', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_content',
+				'settings' => 'osixthreeo_settings[meta_date]',
+				'priority' => 32,
+			)
+		);
+		// author.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[meta_author]',
+			array(
+				'default'           => $defaults['meta_author'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[meta_author]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Author', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_content',
+				'settings' => 'osixthreeo_settings[meta_author]',
+				'priority' => 33,
+			)
+		);
+		// comments.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[meta_comments]',
+			array(
+				'default'           => $defaults['meta_comments'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[meta_comments]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Comments', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_content',
+				'settings' => 'osixthreeo_settings[meta_comments]',
+				'priority' => 34,
+			)
+		);
+		// updated.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[meta_updated]',
+			array(
+				'default'           => $defaults['meta_updated'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[meta_updated]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Updated', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_content',
+				'settings' => 'osixthreeo_settings[meta_updated]',
+				'priority' => 35,
+			)
+		);
+		// section message.
+		$wp_customize->add_setting(
+			'themeops-metafooter-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'themeops-metafooter-message',
+				array(
+					'section'  => 'osixthreeo_to_content',
+					'priority' => 36,
+					'content'  => esc_html__( 'Post footer', 'osixthreeo' ),
+				)
+			)
+		);
+		// show footer meta.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[meta_footer]',
+			array(
+				'default'           => $defaults['meta_footer'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[meta_footer]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Categories & Tags', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_content',
+				'settings' => 'osixthreeo_settings[meta_footer]',
+				'priority' => 37,
+			)
+		);
+
+		// GET EXTENSIONS.
+		if ( ! OSTO_EXT_2 ) :
+			$wp_customize->add_setting(
+				'themeops-pro-callout',
+				array(
+					'sanitize_callback' => 'wp_kses_post',
+				)
+			);
+			$wp_customize->add_control(
+				new Osixthreeo_Content_Area(
+					$wp_customize,
+					'themeops-pro-callout',
+					array(
+						'section'  => 'osixthreeo_to_content',
+						'priority' => 100,
+						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
+					)
+				)
+			);
+		endif;
+
+		// SUBPANEL - ARCHIVE ENTRIES ----------------------------------- .
+		// -------------------------------------------------------------- .
+		$wp_customize->add_section(
+			'osixthreeo_to_archives',
+			array(
+				'title'    => esc_html__( 'Archive Entries', 'osixthreeo' ),
+				'priority' => 30,
+				'panel'    => 'osixthreeo_themeops',
+			)
+		);
+
+		// Entry Elements.
+		$wp_customize->add_setting(
+			'to-a-elements-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-a-elements-message',
+				array(
+					'section'  => 'osixthreeo_to_archives',
+					'label'    => esc_html__( 'Entry Elements', 'osixthreeo' ),
+					'priority' => 10,
+				)
+			)
+		);
+		// Hide featured images.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_hide_featuredimage]',
+			array(
+				'default'           => $defaults['archives_hide_featuredimage'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_hide_featuredimage]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Hide the featured image', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_archives',
+				'settings' => 'osixthreeo_settings[archives_hide_featuredimage]',
+				'priority' => 11,
+			)
+		);
+		// Hide excerpt.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_hide_meta]',
+			array(
+				'default'           => $defaults['archives_hide_meta'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_hide_meta]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Hide the meta data', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_archives',
+				'settings' => 'osixthreeo_settings[archives_hide_meta]',
+				'priority' => 12,
+			)
+		);
+		// Hide excerpt.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_hide_excerpt]',
+			array(
+				'default'           => $defaults['archives_hide_excerpt'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_hide_excerpt]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Hide the excerpt', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_archives',
+				'settings' => 'osixthreeo_settings[archives_hide_excerpt]',
+				'priority' => 13,
+			)
+		);
+		// Hide readmore.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_hide_readmore]',
+			array(
+				'default'           => $defaults['archives_hide_readmore'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_hide_readmore]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Hide the Continue button', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_archives',
+				'settings' => 'osixthreeo_settings[archives_hide_readmore]',
+				'priority' => 14,
+			)
+		);
+
+		// Padding.
+		$wp_customize->add_setting(
+			'to-a-padding-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-a-padding-message',
+				array(
+					'section'  => 'osixthreeo_to_archives',
+					'label'    => esc_html__( 'Padding', 'osixthreeo' ),
+					'priority' => 16,
+				)
+			)
+		);
+		// Padding - Left.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_pad_left]',
+			array(
+				'default'           => $defaults['archives_pad_left'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Number_Control(
+				$wp_customize,
+				'osixthreeo_settings[archives_pad_left]',
+				array(
+					'type'        => 'number',
+					'label'       => esc_html__( 'Left', 'osixthreeo' ),
+					'section'     => 'osixthreeo_to_archives',
+					'input_attrs' => array(
+						'min'  => 0,
+						'max'  => 24,
+						'step' => 1,
+					),
+					'settings'    => 'osixthreeo_settings[archives_pad_left]',
+					'priority'    => 17,
+				)
+			)
+		);
+		// Padding - Left.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_pad_right]',
+			array(
+				'default'           => $defaults['archives_pad_right'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Number_Control(
+				$wp_customize,
+				'osixthreeo_settings[archives_pad_right]',
+				array(
+					'type'        => 'number',
+					'label'       => esc_html__( 'Right', 'osixthreeo' ),
+					'section'     => 'osixthreeo_to_archives',
+					'input_attrs' => array(
+						'min'  => 0,
+						'max'  => 24,
+						'step' => 1,
+					),
+					'settings'    => 'osixthreeo_settings[archives_pad_right]',
+					'priority'    => 18,
+				)
+			)
+		);
+		// Padding - Top.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_pad_top]',
+			array(
+				'default'           => $defaults['archives_pad_top'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Number_Control(
+				$wp_customize,
+				'osixthreeo_settings[archives_pad_top]',
+				array(
+					'type'        => 'number',
+					'label'       => esc_html__( 'Top', 'osixthreeo' ),
+					'section'     => 'osixthreeo_to_archives',
+					'input_attrs' => array(
+						'min'  => 0,
+						'max'  => 24,
+						'step' => 1,
+					),
+					'settings'    => 'osixthreeo_settings[archives_pad_top]',
+					'priority'    => 19,
+				)
+			)
+		);
+		// Padding - Bottom.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_pad_bottom]',
+			array(
+				'default'           => $defaults['archives_pad_bottom'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Number_Control(
+				$wp_customize,
+				'osixthreeo_settings[archives_pad_bottom]',
+				array(
+					'type'        => 'number',
+					'label'       => esc_html__( 'Bottom', 'osixthreeo' ),
+					'section'     => 'osixthreeo_to_archives',
+					'input_attrs' => array(
+						'min'  => 0,
+						'max'  => 24,
+						'step' => 1,
+					),
+					'settings'    => 'osixthreeo_settings[archives_pad_bottom]',
+					'priority'    => 20,
+				)
+			)
+		);
+
+		// BORDER.
+		$wp_customize->add_setting(
+			'to-a-border-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-a-border-message',
+				array(
+					'section'  => 'osixthreeo_to_archives',
+					'label'    => esc_html__( 'Border', 'osixthreeo' ),
+					'priority' => 21,
+				)
+			)
+		);
+		// Border - Color.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_border_color]',
+			array(
+				'default'           => $defaults['archives_border_color'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_rgba',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Alpha_Color_Control(
+				$wp_customize,
+				'osixthreeo_settings[archives_border_color]',
+				array(
+					'label'    => esc_html__( 'Color', 'osixthreeo' ),
+					'section'  => 'osixthreeo_to_archives',
+					'settings' => 'osixthreeo_settings[archives_border_color]',
+					'priority' => 22,
+				)
+			)
+		);
+		// Border - width.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_border_width]',
+			array(
+				'default'           => $defaults['archives_border_width'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_border_width]',
+			array(
+				'type'        => 'number',
+				'label'       => esc_html__( 'Width', 'osixthreeo' ),
+				'section'     => 'osixthreeo_to_archives',
+				'input_attrs' => array(
+					'min'  => 0,
+					'max'  => 10,
+					'step' => 1,
+				),
+				'settings'    => 'osixthreeo_settings[archives_border_width]',
+				'priority'    => 23,
+			)
+		);
+		// Border - Radius.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_border_radius]',
+			array(
+				'default'           => $defaults['archives_border_radius'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_border_radius]',
+			array(
+				'type'        => 'number',
+				'label'       => esc_html__( 'Corner radius', 'osixthreeo' ),
+				'section'     => 'osixthreeo_to_archives',
+				'input_attrs' => array(
+					'min'  => 0,
+					'max'  => 120,
+					'step' => 1,
+				),
+				'settings'    => 'osixthreeo_settings[archives_border_radius]',
+				'priority'    => 24,
+			)
+		);
+
+		// BOX SHADOW.
+		$wp_customize->add_setting(
+			'to-a-shadow-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-a-shadow-message',
+				array(
+					'section'  => 'osixthreeo_to_archives',
+					'label'    => esc_html__( 'Box Shadow', 'osixthreeo' ),
+					'priority' => 25,
+				)
+			)
+		);
+		// Shadow - Color.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_box_shadow_color]',
+			array(
+				'default'           => $defaults['archives_box_shadow_color'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_rgba',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Alpha_Color_Control(
+				$wp_customize,
+				'osixthreeo_settings[archives_box_shadow_color]',
+				array(
+					'label'        => esc_html__( 'Color', 'osixthreeo' ),
+					'section'      => 'osixthreeo_to_archives',
+					'settings'     => 'osixthreeo_settings[archives_box_shadow_color]',
+					'show_opacity' => true,
+					'priority'     => 26,
+				)
+			)
+		);
+
+		// SHADOW - X.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_box_shadow_x]',
+			array(
+				'default'           => $defaults['archives_box_shadow_x'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_box_shadow_x]',
+			array(
+				'type'     => 'number',
+				'label'    => esc_html__( 'x offset', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_archives',
+				'settings' => 'osixthreeo_settings[archives_box_shadow_x]',
+				'priority' => 27,
+			)
+		);
+		// SHADOW - Y.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_box_shadow_y]',
+			array(
+				'default'           => $defaults['archives_box_shadow_y'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_box_shadow_y]',
+			array(
+				'type'     => 'number',
+				'label'    => esc_html__( 'y offset', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_archives',
+				'settings' => 'osixthreeo_settings[archives_box_shadow_y]',
+				'priority' => 28,
+			)
+		);
+		// SHADOW - Blur.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_box_shadow_blur]',
+			array(
+				'default'           => $defaults['archives_box_shadow_blur'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_box_shadow_blur]',
+			array(
+				'type'        => 'number',
+				'label'       => esc_html__( 'Blur', 'osixthreeo' ),
+				'section'     => 'osixthreeo_to_archives',
+				'settings'    => 'osixthreeo_settings[archives_box_shadow_blur]',
+				'input_attrs' => array(
+					'min'  => 0,
+					'max'  => 100,
+					'step' => 1,
+				),
+				'priority'    => 29,
+			)
+		);
+		// Shadow - Spread.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[archives_box_shadow_spread]',
+			array(
+				'default'           => $defaults['archives_box_shadow_spread'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[archives_box_shadow_spread]',
+			array(
+				'type'        => 'number',
+				'label'       => esc_html__( 'Spread', 'osixthreeo' ),
+				'section'     => 'osixthreeo_to_archives',
+				'settings'    => 'osixthreeo_settings[archives_box_shadow_spread]',
+				'input_attrs' => array(
+					'min'  => 0,
+					'max'  => 100,
+					'step' => 1,
+				),
+				'priority'    => 30,
+			)
+		);
+
+		// GET EXTENSIONS.
+		if ( ! OSTO_EXT_2 ) :
+			$wp_customize->add_setting(
+				'themeops-a-pro-callout',
+				array(
+					'sanitize_callback' => 'wp_kses_post',
+				)
+			);
+			$wp_customize->add_control(
+				new Osixthreeo_Content_Area(
+					$wp_customize,
+					'themeops-a-pro-callout',
+					array(
+						'section'  => 'osixthreeo_to_archives',
+						'priority' => 100,
+						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
+						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
+					)
+				)
+			);
+		endif;
+
+		// SUBPANEL - SITE FOOTER ---------------------------------------
+		// -------------------------------------------------------------- .
+		$wp_customize->add_section(
+			'osixthreeo_to_footer',
+			array(
+				'title'    => esc_html__( 'Site Footer', 'osixthreeo' ),
+				'priority' => 40,
+				'panel'    => 'osixthreeo_themeops',
+			)
+		);
+
+		// Back To Top.
+		$wp_customize->add_setting(
+			'to-f-backtotop-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-f-backtotop-message',
+				array(
+					'section'  => 'osixthreeo_to_footer',
+					'label'    => esc_html__( 'Back To Top', 'osixthreeo' ),
+					'priority' => 10,
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'osixthreeo_settings[back_to_top]',
+			array(
+				'default'           => $defaults['back_to_top'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[back_to_top]',
+			array(
+				'type'        => 'checkbox',
+				'label'       => __( 'Add a Back To Top button', 'osixthreeo' ),
+				'description' => __( 'Appears on the right side of the site footer.', 'osixthreeo' ),
+				'section'     => 'osixthreeo_to_footer',
+				'settings'    => 'osixthreeo_settings[back_to_top]',
+				'priority'    => 11,
+			)
+		);
+
+		// Footer Columns.
+		$wp_customize->add_setting(
+			'to-f-columns-message',
+			array(
+				'sanitize_callback' => 'wp_kses_post',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Content_Area(
+				$wp_customize,
+				'to-f-columns-message',
+				array(
+					'section'  => 'osixthreeo_to_footer',
+					'label'    => esc_html__( 'Widget Columns', 'osixthreeo' ),
+					'priority' => 12,
+				)
+			)
+		);
+		$wp_customize->add_setting(
+			'osixthreeo_settings[footer_columns]',
+			array(
+				'default'           => $defaults['footer_columns'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[footer_columns]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => __( 'Display multiple widgets as responsive columns.', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_footer',
+				'settings' => 'osixthreeo_settings[footer_columns]',
+				'priority' => 13,
 			)
 		);
 	}
