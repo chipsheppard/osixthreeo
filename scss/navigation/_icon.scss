@@ -4,8 +4,8 @@
 	cursor: pointer;
 	display: none;
 	position: absolute;
-	right: .75em;
-	top: 1em;
+	right: .25em;
+	top: .25em;
 	overflow: visible;
 	transition-property: opacity, filter;
 	transition-duration: 0.15s;
@@ -23,9 +23,6 @@
 	&:focus,
 	&:active {
 		background: transparent;
-	}
-	&:focus {
-		//outline: 0;
 	}
 
 	.menu-icon-wrap {

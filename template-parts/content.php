@@ -12,7 +12,13 @@
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php
-if ( ! is_singular() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) :
+$osixthreeo_settings = wp_parse_args(
+	get_option( 'osixthreeo_settings', array() ),
+	osixthreeo_get_defaults()
+);
+$hide_fi = $osixthreeo_settings['archives_hide_featuredimage'];
+
+if ( true !== $hide_fi && ! is_singular() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) :
 
 	echo '<a href="' . esc_url( get_permalink() ) . '" class="fi-link">';
 	the_post_thumbnail(

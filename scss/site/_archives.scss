@@ -24,7 +24,7 @@
 		position: relative;
 		width: 100%;
 
-		// Less than or equal to 641
+		// Greater than or equal to 641
 		@include breakpoint(phone-min-h) {
 			float: left;
 			margin-left: 0;
@@ -36,7 +36,7 @@
 			}
 		}
 
-		// Less than or equal to 769
+		// Greater than or equal to 769
 		@include breakpoint(tablet-min-v) {
 			width: calc( 32% - 1px );
 			margin-right: 0;

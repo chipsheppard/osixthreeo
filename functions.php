@@ -72,7 +72,7 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		add_theme_support( 'custom-logo',
 			array(
 				'height'      => 40,
-				'width'       => 200,
+				'width'       => 280,
 				'flex-height' => true,
 				'flex-width'  => true,
 			)

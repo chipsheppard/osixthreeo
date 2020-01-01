@@ -97,6 +97,7 @@
 #customize-control-osixthreeo_settings-archives_background_color,
 #customize-control-osixthreeo_settings-archives_hide_featuredimage,
 #customize-control-osixthreeo_settings-archives_border_color,
+#customize-control-osixthreeo_settings-header_layout,
 #customize-control-osixthreeo_settings-archives_box_shadow_color {
 	border-top: 1px solid #ccc;
 }
@@ -136,6 +137,7 @@
 #customize-control-osixthreeo_settings-archives_min_height,
 #customize-control-osixthreeo_settings-archives_border_width,
 #customize-control-osixthreeo_settings-archives_border_radius,
+#customize-control-osixthreeo_settings-header_padding,
 #customize-control-osixthreeo_settings-archives_hide_readmore {
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 12px;
@@ -144,8 +146,6 @@
 
 /* TOP & BOTTOM - Single controls
 -------------------------------------------------*/
-#customize-control-osixthreeo_settings-header_layout,
-#customize-control-osixthreeo_settings-header_padding,
 #customize-control-osixthreeo_settings-highlite_font,
 #customize-control-background_color,
 #customize-control-osixthreeo_settings-nav_search,
@@ -263,7 +263,6 @@
 #customize-control-primary-text-message,
 #customize-control-secondary-text-message,
 #customize-control-scroll-button-message,
-#customize-control-ch-h-padding-message,
 #customize-control-height-subpage-message,
 #customize-control-height-homepage-message,
 #customize-control-to-h-appendsearch-message,

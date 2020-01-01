@@ -212,12 +212,36 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				)
 			)
 		);
+		// PADDING.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[header_padding]',
+			array(
+				'default'           => $defaults['header_padding'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_integer',
+				'transport'         => 'postMessage',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Range_Control(
+				$wp_customize,
+				'osixthreeo_settings[header_padding]',
+				array(
+					'type'        => 'range',
+					'label'       => esc_html__( 'Top/Bottom Padding', 'osixthreeo' ),
+					'section'     => 'osixthreeo_site_layout',
+					'settings'    => 'osixthreeo_settings[header_padding]',
+					'input_attrs' => array(
+						'min'  => 0,
+						'max'  => 100,
+						'step' => 2,
+					),
+					'priority'    => 23,
+				)
+			)
+		);
 
-		/*
-		 * Sidebars ------------------------
-		 */
-
-		// section message.
+		// Sidebars ------------------------.
 		$wp_customize->add_setting(
 			'layout-sidebars-message',
 			array(
@@ -2425,53 +2449,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'step' => 5,
 					),
 					'priority'    => 50,
-				)
-			)
-		);
-
-		// PADDING section message.
-		$wp_customize->add_setting(
-			'ch-h-padding-message',
-			array(
-				'sanitize_callback' => 'wp_kses_post',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Content_Area(
-				$wp_customize,
-				'ch-h-padding-message',
-				array(
-					'section'  => 'osixthreeo_ch_height',
-					'priority' => 60,
-					'label'    => esc_html__( 'Logo/Menu bar padding', 'osixthreeo' ),
-				)
-			)
-		);
-		// PADDING.
-		$wp_customize->add_setting(
-			'osixthreeo_settings[header_padding]',
-			array(
-				'default'           => $defaults['header_padding'],
-				'type'              => 'option',
-				'sanitize_callback' => 'osixthreeo_sanitize_integer',
-				'transport'         => 'postMessage',
-			)
-		);
-		$wp_customize->add_control(
-			new Osixthreeo_Range_Control(
-				$wp_customize,
-				'osixthreeo_settings[header_padding]',
-				array(
-					'type'        => 'range',
-					'label'       => esc_html__( 'Top/Bottom Padding', 'osixthreeo' ),
-					'section'     => 'osixthreeo_ch_height',
-					'settings'    => 'osixthreeo_settings[header_padding]',
-					'input_attrs' => array(
-						'min'  => 0,
-						'max'  => 100,
-						'step' => 2,
-					),
-					'priority'    => 61,
 				)
 			)
 		);

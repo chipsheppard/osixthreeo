@@ -123,6 +123,7 @@ if ( ! function_exists( 'osixthreeo_display_content' ) ) {
 	 * The Content & pagination on pages /  The Excerpt on archives.
 	 */
 	function osixthreeo_display_content() {
+
 		if ( is_singular() ) :
 			// Single posts, attachments, pages, custom post types.
 			the_content();
@@ -135,7 +136,18 @@ if ( ! function_exists( 'osixthreeo_display_content' ) ) {
 			);
 
 		else :
+
+			$osixthreeo_settings = wp_parse_args(
+				get_option( 'osixthreeo_settings', array() ),
+				osixthreeo_get_defaults()
+			);
+			$hide_ex = $osixthreeo_settings['archives_hide_excerpt'];
+
 			// Archives & search.
+			if ( true === $hide_ex ) {
+				return;
+			}
+
 			the_excerpt();
 
 		endif;
@@ -153,6 +165,16 @@ if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
 	 * The Read More link markup
 	 */
 	function osixthreeo_display_read_more() {
+		$osixthreeo_settings = wp_parse_args(
+			get_option( 'osixthreeo_settings', array() ),
+			osixthreeo_get_defaults()
+		);
+		$hide_rm = $osixthreeo_settings['archives_hide_readmore'];
+
+		if ( true === $hide_rm ) {
+			return;
+		}
+
 		if ( is_archive() || is_home() || is_search() ) :
 			$link = sprintf(
 				'<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
@@ -185,7 +207,7 @@ if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
 			get_option( 'osixthreeo_settings', array() ),
 			osixthreeo_get_defaults()
 		);
-		$meta_footer         = $osixthreeo_settings['meta_footer'];
+		$meta_footer = $osixthreeo_settings['meta_footer'];
 
 		if ( true === $meta_footer && is_single() && 'post' === get_post_type() ) :
 			echo '<footer class="entry-footer">';

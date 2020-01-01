@@ -116,8 +116,13 @@ function osixthreeo_display_entry_meta() {
 		$meta_author         = $osixthreeo_settings['meta_author'];
 		$meta_comments       = $osixthreeo_settings['meta_comments'];
 		$meta_updated        = $osixthreeo_settings['meta_updated'];
+		$hide_m              = $osixthreeo_settings['archives_hide_meta'];
 
 		if ( true !== $meta_date && true !== $meta_author && true !== $meta_comments && true !== $meta_updated ) {
+			return;
+		}
+
+		if ( true === $hide_m && ( is_archive() || is_home() || is_search() ) ) {
 			return;
 		}
 
