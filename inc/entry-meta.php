@@ -30,7 +30,7 @@ function osixthreeo_posted_on() {
 		)
 	);
 
-	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
+	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" class="meta-link" rel="bookmark">' . $time_string . '</a>';
 
 	echo '<span class="posted-on">' . wp_kses_post( $posted_on ) . '</span> ';
 }
@@ -58,7 +58,7 @@ function osixthreeo_updated_on() {
 	$updated_on     = sprintf(
 		/* translators: %s: modified date. */
 		esc_html_x( 'updated %s', 'modified date', 'osixthreeo' ),
-		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $updated_string . '</a>'
+		'<a href="' . esc_url( get_permalink() ) . '" class="meta-link" rel="bookmark">' . $updated_string . '</a>'
 	);
 
 	echo '<span class="updated-on">' . wp_kses_post( $updated_on ) . '</span>';
@@ -72,7 +72,7 @@ function osixthreeo_posted_by() {
 	$byline = sprintf(
 		/* translators: %s: post author */
 		esc_html_x( 'by %s', 'post author', 'osixthreeo' ),
-		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		'<span class="author vcard"><a class="url fn n meta-link" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
 	echo '<span class="byline">' . wp_kses_post( $byline ) . '</span>';
@@ -95,7 +95,7 @@ function osixthreeo_comment_count() {
 			'',
 			__( '1 comment', 'osixthreeo' ),
 			__( '% comments', 'osixthreeo' ),
-			'',
+			'meta-link',
 			''
 		);
 		echo '</span>';

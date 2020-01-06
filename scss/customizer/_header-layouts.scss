@@ -10,6 +10,10 @@ body.headercentered {
 	.site-branding {
 		display: block;
 		text-align: center;
+
+		@include breakpoint(tablet-v) {
+			width: auto;
+		}
 	}
 
 	.site-navigation {

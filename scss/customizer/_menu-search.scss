@@ -1,16 +1,18 @@
 .site-navigation {
 
 	input[type="search"] {
-		padding: .5em 7.5em .563em 1em;
+		margin-bottom: 0;
 
 		@include breakpoint(tablet-v) {
 			border-bottom: 0;
+			padding-left: 4%;
 		}
 	}
 
 	input[type="submit"].search-submit {
+		border-right: 1px solid $color__base-xlight;
 		line-height: 1;
-		padding: .563em .75em .688em;
+		padding: .563em .75em .625em;
 		right: 50px;
 		top: 0;
 
@@ -47,11 +49,11 @@
 	}
 
 	li.search-icon {
-		border-bottom: 1px solid transparent;
 	    float: right;
 		margin-right: 0;
 		width: 3.125rem;
-	    z-index: 4;
+		z-index: 4;
+		@include font-size(1);
 
 		@include breakpoint(tablet-v) {
 			display: none;
@@ -59,8 +61,7 @@
 
 		&:hover {
 			cursor: pointer;
-			opacity: .85;
-			border-bottom: 1px solid currentColor;
+			opacity: .80;
 		}
 
 		// lens circle
@@ -127,11 +128,7 @@
 		}
 
 		li.search-icon {
-
-			&:hover {
-				border-bottom: 1px solid transparent;
-			}
-
+			// the X
 			.theicon {
 				padding: 0;
 				margin: .6875em 0 .6875em .75em;

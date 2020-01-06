@@ -1,9 +1,6 @@
 .footer-widget {
+	margin-top: 2em;
 	@include font-size(.875);
-
-	@include breakpoint(phone-h) {
-		margin-bottom: 2.5em;
-	}
 
 	ul {
 		list-style: none;

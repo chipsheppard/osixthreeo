@@ -117,6 +117,8 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_sitetitle_font_size                  = $defaults['sitetitle_font_size'];
 		$default_sitedescription_font_size            = $defaults['sitedescription_font_size'];
 		$default_menu_font_size                       = $defaults['menu_font_size'];
+		$hero_text_primary                            = $osixthreeo_settings['hero_text_primary'];
+		$hero_text_secondary                          = $osixthreeo_settings['hero_text_secondary'];
 		$hero_text_primary_font                       = $osixthreeo_settings['hero_text_primary_font'];
 		$hero_text_secondary_font                     = $osixthreeo_settings['hero_text_secondary_font'];
 		$hero_text_primary_font_size                  = $osixthreeo_settings['hero_text_primary_font_size'];
@@ -127,6 +129,8 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$hero_text_primary_shadow_x                   = $osixthreeo_settings['hero_text_primary_shadow_x'];
 		$hero_text_primary_shadow_y                   = $osixthreeo_settings['hero_text_primary_shadow_y'];
 		$hero_text_primary_shadow_blur                = $osixthreeo_settings['hero_text_primary_shadow_blur'];
+		$default_hero_text_primary                    = $defaults['hero_text_primary'];
+		$default_hero_text_secondary                  = $defaults['hero_text_secondary'];
 		$default_hero_text_primary_font               = $defaults['hero_text_primary_font'];
 		$default_hero_text_secondary_font             = $defaults['hero_text_secondary_font'];
 		$default_hero_text_primary_font_size          = $defaults['hero_text_primary_font_size'];
@@ -157,6 +161,18 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$hero_scroll_button_alignment                 = $osixthreeo_settings['hero_scroll_button_alignment'];
 		$default_hero_scroll_button                   = $defaults['hero_scroll_button'];
 		$default_hero_scroll_button_alignment         = $defaults['hero_scroll_button_alignment'];
+		$meta_date                                    = $osixthreeo_settings['meta_date'];
+		$meta_author                                  = $osixthreeo_settings['meta_author'];
+		$meta_comments                                = $osixthreeo_settings['meta_comments'];
+		$meta_updated                                 = $osixthreeo_settings['meta_updated'];
+		$meta_footer                                  = $osixthreeo_settings['meta_footer'];
+		$archives_hide_meta                           = $osixthreeo_settings['archives_hide_meta'];
+		$default_meta_date                            = $defaults['meta_date'];
+		$default_meta_author                          = $defaults['meta_author'];
+		$default_meta_comments                        = $defaults['meta_comments'];
+		$default_meta_updated                         = $defaults['meta_updated'];
+		$default_meta_footer                          = $defaults['meta_footer'];
+		$default_archives_hide_meta                   = $defaults['archives_hide_meta'];
 		$meta_font                                    = $osixthreeo_settings['meta_font'];
 		$meta_font_size                               = $osixthreeo_settings['meta_font_size'];
 		$meta_font_weight                             = $osixthreeo_settings['meta_font_weight'];
@@ -226,7 +242,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		 * Site Width --------------------------------
 		 */
 		if ( absint( $default_max_width ) !== absint( $max_width ) ) :
-			$css->set_selector( '.inner-wrap, .content-inner-wrap' );
+			$css->set_selector( 'body.contained .site' );
 			$css->add_property( 'max-width', esc_attr( $osixthreeo_settings['max_width'] . 'px' ) );
 		endif;
 
@@ -246,15 +262,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$prop      = sprintf( 'linear-gradient(%1$sdeg, %2$s %3$s%%, %4$s %5$s%%)', $angle, $clr1, $stopleft, $clr2, $stopright );
 			$css->set_selector( '.custom-header' );
 			$css->add_property( 'background', $prop );
-		endif;
-
-		if ( $default_hero_text_primary_color !== $hero_text_primary_color ) :
-			$css->set_selector( '.hero-primary' );
-			$css->add_property( 'color', esc_attr( $osixthreeo_settings['hero_text_primary_color'] ) );
-		endif;
-		if ( $default_hero_text_secondary_color !== $hero_text_secondary_color ) :
-			$css->set_selector( '.hero-secondary' );
-			$css->add_property( 'color', esc_attr( $osixthreeo_settings['hero_text_secondary_color'] ) );
 		endif;
 
 		if ( absint( $default_subpage_header_height ) !== absint( $subpage_header_height ) ) :
@@ -426,11 +433,11 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color'] ) );
 			// borders.
 			$css->set_selector( '.sticky .entry-header,.blog .hentry.sticky,.archive .hentry.sticky' );
-			$css->add_property( 'border-color', esc_attr( $osixthreeo_settings['link_color'] ) );
+			$css->add_property( 'border-top-color', esc_attr( $osixthreeo_settings['link_color'] ) );
 		endif;
 
 		if ( $default_link_color_hover !== $link_color_hover ) :
-			$css->set_selector( '.site-content a:not(.btn):not(.button):hover,.site-content a:not(.btn):not(.button):focus,.site-content a:not(.btn):not(.button):active' );
+			$css->set_selector( '.site-content a:not(.btn):not(.button):not(.more-link):not(.meta-link):hover,.site-content a:not(.btn):not(.button):not(.more-link):not(.meta-link):focus,.site-content a:not(.btn):not(.button):not(.more-link):not(.meta-link):active' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
 			$css->set_selector( 'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.btn.secondary,.footer-widgets input[type="submit"],.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce #respond input#submit.alt,.woocommerce input.button.alt,.woocommerce input.button:hover,.woocommerce #respond input#submit:hover' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
@@ -461,19 +468,11 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		/*
-		 * Post Title colors --------------------------------
+		 * Post Title colors (+ lifted entry meta) --------------------------------
 		 */
 		if ( $default_content_title_color !== $content_title_color ) :
 			$css->set_selector( 'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.woocommerce-products-header,.product_title.entry-title,body.page.titlelift .entry-title,body.single.titlelift .entry-title,body.blog.titlelift .page-title,body.archive.titlelift .page-title,body.search.titlelift .page-title,body.error404.titlelift .page-title,.single.titlelift .entry-meta a,.single.titlelift .entry-meta,.titlelift .archive-description,.titlelift .woocommerce-products-header,.titlelift .product_title.entry-title' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['content_title_color'] ) );
-		endif;
-
-		/*
-		 * Post Meta colors --------------------------------
-		 */
-		if ( $default_meta_color !== $meta_color ) :
-			$css->set_selector( '.entry-meta, .entry-meta a, .entry-footer, .entry-footer a' );
-			$css->add_property( 'color', esc_attr( $osixthreeo_settings['meta_color'] ) );
 		endif;
 
 		/*
@@ -1107,30 +1106,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 				$css->add_property( 'font-family', $highlitefont );
 			}
 		endif;
-		if ( $default_meta_font !== $meta_font ) :
-			$css->set_selector( '.entry-meta, .entry-footer' );
-			if ( 'header' === $meta_font && $default_header_font !== $header_font ) {
-				$css->add_property( 'font-family', $headerfont );
-			} elseif ( 'highlite' === $meta_font && $default_highlite_font !== $highlite_font ) {
-				$css->add_property( 'font-family', $highlitefont );
-			}
-		endif;
-		if ( $default_hero_text_primary_font !== $hero_text_primary_font ) :
-				$css->set_selector( '.hero-primary' );
-			if ( 'header' === $hero_text_primary_font && $default_header_font !== $header_font ) {
-				$css->add_property( 'font-family', $headerfont );
-			} elseif ( 'highlite' === $hero_text_primary_font && $default_highlite_font !== $highlite_font ) {
-				$css->add_property( 'font-family', $highlitefont );
-			}
-		endif;
-		if ( $default_hero_text_secondary_font !== $hero_text_secondary_font ) :
-				$css->set_selector( '.hero-secondary' );
-			if ( 'header' === $hero_text_secondary_font && $default_header_font !== $header_font ) {
-				$css->add_property( 'font-family', $headerfont );
-			} elseif ( 'highlite' === $hero_text_secondary_font && $default_highlite_font !== $highlite_font ) {
-				$css->add_property( 'font-family', $highlitefont );
-			}
-		endif;
 
 		if ( $default_header_font_weight !== $header_font_weight ) :
 			$css->set_selector( 'h1:not(.site-title), h2, h3, h4, h5, h6' );
@@ -1147,10 +1122,6 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_menu_font_weight !== $menu_font_weight ) :
 			$css->set_selector( '.site-navigation a' );
 			$css->add_property( 'font-weight', $menu_font_weight );
-		endif;
-		if ( $default_meta_font_weight !== $meta_font_weight ) :
-			$css->set_selector( '.entry-meta, .entry-footer' );
-			$css->add_property( 'font-weight', $meta_font_weight );
 		endif;
 
 		if ( absint( $default_base_font_size ) !== absint( $base_font_size ) ) :
@@ -1169,64 +1140,159 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->set_selector( '#primary-navigation' );
 			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['menu_font_size'] . 'px' ) );
 		endif;
-		if ( absint( $default_hero_text_primary_font_size ) !== absint( $hero_text_primary_font_size ) ) :
-			$css->set_selector( '.hero-primary' );
-			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_primary_font_size'] . 'px' ) );
+
+		/*
+		 * Post Meta --------------------------------
+		 */
+		// Header/Footer colors.
+		if ( $default_meta_date === $meta_date || $default_meta_author === $meta_author || $default_meta_comments === $meta_comments || $default_meta_updated === $meta_updated ) :
+			if ( $default_meta_color !== $meta_color ) :
+				$css->set_selector( '.entry-meta, .entry-meta a' );
+				$css->add_property( 'color', esc_attr( $osixthreeo_settings['meta_color'] ) );
+			endif;
+			if ( $default_archives_meta_color !== $archives_meta_color ) :
+				$css->set_selector( '.blog article .entry-meta,.archive article .entry-meta,.search article .entry-meta, .blog article .entry-meta a,.archive article .entry-meta a,.search article .entry-meta a' );
+				$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_meta_color'] ) );
+			endif;
 		endif;
-		if ( absint( $default_hero_text_primary_font_size_mobile ) !== absint( $hero_text_primary_font_size_mobile ) ) :
-			$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
+		if ( $default_meta_footer === $meta_footer ) :
+			if ( $default_meta_color !== $meta_color ) :
+				$css->set_selector( '.entry-footer, .entry-footer a' );
+				$css->add_property( 'color', esc_attr( $osixthreeo_settings['meta_color'] ) );
+			endif;
+		endif;
+		// Header meta.
+		if ( $default_meta_date === $meta_date || $default_meta_author === $meta_author || $default_meta_comments === $meta_comments || $default_meta_updated === $meta_updated ) :
+			if ( $default_meta_font !== $meta_font ) :
+				$css->set_selector( '.entry-meta' );
+				if ( 'header' === $meta_font && $default_header_font !== $header_font ) {
+					$css->add_property( 'font-family', $headerfont );
+				} elseif ( 'highlite' === $meta_font && $default_highlite_font !== $highlite_font ) {
+					$css->add_property( 'font-family', $highlitefont );
+				}
+			endif;
+			if ( $default_meta_font_weight !== $meta_font_weight ) :
+				$css->set_selector( '.entry-meta' );
+				$css->add_property( 'font-weight', $meta_font_weight );
+			endif;
+			if ( absint( $default_meta_font_size ) !== absint( $meta_font_size ) ) :
+				$css->set_selector( '.entry-meta' );
+				$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['meta_font_size'] . 'px' ) );
+			endif;
+		endif;
+		// Footer meta.
+		if ( $default_meta_footer === $meta_footer ) :
+			if ( $default_meta_font !== $meta_font ) :
+				$css->set_selector( '.entry-footer' );
+				if ( 'header' === $meta_font && $default_header_font !== $header_font ) {
+					$css->add_property( 'font-family', $headerfont );
+				} elseif ( 'highlite' === $meta_font && $default_highlite_font !== $highlite_font ) {
+					$css->add_property( 'font-family', $highlitefont );
+				}
+			endif;
+			if ( $default_meta_font_weight !== $meta_font_weight ) :
+				$css->set_selector( '.entry-footer' );
+				$css->add_property( 'font-weight', $meta_font_weight );
+			endif;
+			if ( absint( $default_meta_font_size ) !== absint( $meta_font_size ) ) :
+				$css->set_selector( '.entry-footer' );
+				$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['meta_font_size'] . 'px' ) );
+			endif;
+		endif;
+
+		// PRIMARY HERO TEXT.
+		if ( $default_hero_text_primary !== $hero_text_primary ) :
+
+			if ( $default_hero_text_primary_font !== $hero_text_primary_font ) :
+					$css->set_selector( '.hero-primary' );
+				if ( 'header' === $hero_text_primary_font && $default_header_font !== $header_font ) {
+					$css->add_property( 'font-family', $headerfont );
+				} elseif ( 'highlite' === $hero_text_primary_font && $default_highlite_font !== $highlite_font ) {
+					$css->add_property( 'font-family', $highlitefont );
+				}
+			endif;
+
+			if ( absint( $default_hero_text_primary_font_size ) !== absint( $hero_text_primary_font_size ) ) :
 				$css->set_selector( '.hero-primary' );
-				$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_primary_font_size_mobile'] . 'px' ) );
-			$css->stop_media_query();
+				$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_primary_font_size'] . 'px' ) );
+			endif;
+			if ( absint( $default_hero_text_primary_font_size_mobile ) !== absint( $hero_text_primary_font_size_mobile ) ) :
+				$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
+					$css->set_selector( '.hero-primary' );
+					$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_primary_font_size_mobile'] . 'px' ) );
+				$css->stop_media_query();
+			endif;
+
+			if ( $default_hero_text_primary_color !== $hero_text_primary_color ) :
+				$css->set_selector( '.hero-primary' );
+				$css->add_property( 'color', esc_attr( $osixthreeo_settings['hero_text_primary_color'] ) );
+			endif;
+
+			if ( $default_hero_text_primary_alignment !== $hero_text_primary_alignment ) :
+				$css->set_selector( '.hero-primary' );
+				$css->add_property( 'text-align', $hero_text_primary_alignment );
+			endif;
+
+			if ( $default_hero_text_primary_shadow_color !== $hero_text_primary_shadow_color ||
+				intval( $default_hero_text_primary_shadow_x ) !== intval( $hero_text_primary_shadow_x ) ||
+				intval( $default_hero_text_primary_shadow_y ) !== intval( $hero_text_primary_shadow_y ) ||
+				absint( $default_hero_text_primary_shadow_blur ) !== absint( $hero_text_primary_shadow_blur ) ) :
+				$p_bgcolor = $osixthreeo_settings['hero_text_primary_shadow_color'];
+				$p_bgx     = intval( $osixthreeo_settings['hero_text_primary_shadow_x'] );
+				$p_bgy     = intval( $osixthreeo_settings['hero_text_primary_shadow_y'] );
+				$p_bgblur  = absint( $osixthreeo_settings['hero_text_primary_shadow_blur'] );
+				$prop_p    = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
+				$css->set_selector( '.hero-primary' );
+				$css->add_property( 'text-shadow', $prop_p );
+			endif;
+
 		endif;
-		if ( absint( $default_hero_text_secondary_font_size ) !== absint( $hero_text_secondary_font_size ) ) :
-			$css->set_selector( '.hero-secondary' );
-			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_secondary_font_size'] . 'px' ) );
-		endif;
-		if ( absint( $default_hero_text_secondary_font_size_mobile ) !== absint( $hero_text_secondary_font_size_mobile ) ) :
-			$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
+
+		// SECONDARY HERO TEXT.
+		if ( $default_hero_text_secondary !== $hero_text_secondary ) :
+
+			if ( $default_hero_text_secondary_font !== $hero_text_secondary_font ) :
+					$css->set_selector( '.hero-secondary' );
+				if ( 'header' === $hero_text_secondary_font && $default_header_font !== $header_font ) {
+					$css->add_property( 'font-family', $headerfont );
+				} elseif ( 'highlite' === $hero_text_secondary_font && $default_highlite_font !== $highlite_font ) {
+					$css->add_property( 'font-family', $highlitefont );
+				}
+			endif;
+
+			if ( absint( $default_hero_text_secondary_font_size ) !== absint( $hero_text_secondary_font_size ) ) :
 				$css->set_selector( '.hero-secondary' );
-				$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_secondary_font_size_mobile'] . 'px' ) );
-			$css->stop_media_query();
-		endif;
-		if ( absint( $default_meta_font_size ) !== absint( $meta_font_size ) ) :
-			$css->set_selector( '.entry-meta, .entry-footer' );
-			$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['meta_font_size'] . 'px' ) );
-		endif;
+				$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_secondary_font_size'] . 'px' ) );
+			endif;
+			if ( absint( $default_hero_text_secondary_font_size_mobile ) !== absint( $hero_text_secondary_font_size_mobile ) ) :
+				$css->start_media_query( apply_filters( 'osixthreeo_mobile_media_query', '(max-width:768px)' ) );
+					$css->set_selector( '.hero-secondary' );
+					$css->add_property( 'font-size', esc_attr( $osixthreeo_settings['hero_text_secondary_font_size_mobile'] . 'px' ) );
+				$css->stop_media_query();
+			endif;
 
-		if ( $default_hero_text_primary_alignment !== $hero_text_primary_alignment ) :
-			$css->set_selector( '.hero-primary' );
-			$css->add_property( 'text-align', $hero_text_primary_alignment );
-		endif;
-		if ( $default_hero_text_secondary_alignment !== $hero_text_secondary_alignment ) :
-			$css->set_selector( '.hero-secondary' );
-			$css->add_property( 'text-align', $hero_text_secondary_alignment );
-		endif;
+			if ( $default_hero_text_secondary_color !== $hero_text_secondary_color ) :
+				$css->set_selector( '.hero-secondary' );
+				$css->add_property( 'color', esc_attr( $osixthreeo_settings['hero_text_secondary_color'] ) );
+			endif;
 
-		if ( $default_hero_text_primary_shadow_color !== $hero_text_primary_shadow_color ||
-			intval( $default_hero_text_primary_shadow_x ) !== intval( $hero_text_primary_shadow_x ) ||
-			intval( $default_hero_text_primary_shadow_y ) !== intval( $hero_text_primary_shadow_y ) ||
-			absint( $default_hero_text_primary_shadow_blur ) !== absint( $hero_text_primary_shadow_blur ) ) :
-			$p_bgcolor = $osixthreeo_settings['hero_text_primary_shadow_color'];
-			$p_bgx     = intval( $osixthreeo_settings['hero_text_primary_shadow_x'] );
-			$p_bgy     = intval( $osixthreeo_settings['hero_text_primary_shadow_y'] );
-			$p_bgblur  = absint( $osixthreeo_settings['hero_text_primary_shadow_blur'] );
-			$prop_p    = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
-			$css->set_selector( '.hero-primary' );
-			$css->add_property( 'text-shadow', $prop_p );
-		endif;
+			if ( $default_hero_text_secondary_alignment !== $hero_text_secondary_alignment ) :
+				$css->set_selector( '.hero-secondary' );
+				$css->add_property( 'text-align', $hero_text_secondary_alignment );
+			endif;
 
-		if ( $default_hero_text_secondary_shadow_color !== $hero_text_secondary_shadow_color ||
-			intval( $default_hero_text_secondary_shadow_x ) !== intval( $hero_text_secondary_shadow_x ) ||
-			intval( $default_hero_text_secondary_shadow_y ) !== intval( $hero_text_secondary_shadow_y ) ||
-			absint( $default_hero_text_secondary_shadow_blur ) !== absint( $hero_text_secondary_shadow_blur ) ) :
-			$p_bgcolor = $osixthreeo_settings['hero_text_secondary_shadow_color'];
-			$p_bgx     = intval( $osixthreeo_settings['hero_text_secondary_shadow_x'] );
-			$p_bgy     = intval( $osixthreeo_settings['hero_text_secondary_shadow_y'] );
-			$p_bgblur  = absint( $osixthreeo_settings['hero_text_secondary_shadow_blur'] );
-			$prop_p    = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
-			$css->set_selector( '.hero-secondary' );
-			$css->add_property( 'text-shadow', $prop_p );
+			if ( $default_hero_text_secondary_shadow_color !== $hero_text_secondary_shadow_color ||
+				intval( $default_hero_text_secondary_shadow_x ) !== intval( $hero_text_secondary_shadow_x ) ||
+				intval( $default_hero_text_secondary_shadow_y ) !== intval( $hero_text_secondary_shadow_y ) ||
+				absint( $default_hero_text_secondary_shadow_blur ) !== absint( $hero_text_secondary_shadow_blur ) ) :
+				$p_bgcolor = $osixthreeo_settings['hero_text_secondary_shadow_color'];
+				$p_bgx     = intval( $osixthreeo_settings['hero_text_secondary_shadow_x'] );
+				$p_bgy     = intval( $osixthreeo_settings['hero_text_secondary_shadow_y'] );
+				$p_bgblur  = absint( $osixthreeo_settings['hero_text_secondary_shadow_blur'] );
+				$prop_p    = sprintf( '%1$spx %2$spx %3$spx %4$s', $p_bgx, $p_bgy, $p_bgblur, $p_bgcolor );
+				$css->set_selector( '.hero-secondary' );
+				$css->add_property( 'text-shadow', $prop_p );
+			endif;
 		endif;
 
 		if ( $default_hero_scroll_button_alignment !== $hero_scroll_button_alignment ) :
@@ -1248,16 +1314,12 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->set_selector( '.blog article .entry-title,.archive article .entry-title,.search article .entry-title,.blog article .entry-title a,.archive article .entry-title a,.search article .entry-title a' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_title_color'] ) );
 		endif;
-		if ( $default_archives_meta_color !== $archives_meta_color ) :
-			$css->set_selector( '.blog article .entry-meta,.archive article .entry-meta,.search article .entry-meta, .blog article .entry-meta a,.archive article .entry-meta a,.search article .entry-meta a' );
-			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_meta_color'] ) );
-		endif;
 		if ( $default_archives_link_color !== $archives_link_color ) :
-			$css->set_selector( '.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a' );
+			$css->set_selector( '.blog article .entry-content a,.blog article .link-more a,.archive article .entry-content a,.archive article .link-more a,.search article .entry-content a,.search article .link-more a' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_link_color'] ) );
 		endif;
 		if ( $default_archives_link_color_hover !== $archives_link_color_hover ) :
-			$css->set_selector( '.blog article .entry-content a:hover,.archive article .entry-content a:hover,.search article .entry-content a:hover' );
+			$css->set_selector( '.blog article .entry-content a:hover,.blog article .link-more a:hover,.archive article .entry-content a:hover,.archive article .link-more a:hover,.search article .entry-content a:hover,.search article .link-more a:hover' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_link_color_hover'] ) );
 		endif;
 
@@ -1296,7 +1358,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->add_property( 'border-radius', esc_attr( $osixthreeo_settings['archives_border_radius'] . 'px' ) );
 		endif;
 
-		if ( $default_archives_box_shadow_color !== $archives_box_shadow_color ||
+		if ( $default_archives_box_shadow_color !== $archives_box_shadow_color &&
 			intval( $default_archives_box_shadow_x ) !== intval( $archives_box_shadow_x ) ||
 			intval( $default_archives_box_shadow_y ) !== intval( $archives_box_shadow_y ) ||
 			absint( $default_archives_box_shadow_blur ) !== absint( $archives_box_shadow_blur ) ||

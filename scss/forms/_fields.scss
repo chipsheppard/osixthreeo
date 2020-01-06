@@ -16,8 +16,10 @@ input[type="color"],
 textarea {
 	background-color: #ffffff;
 	border: 1px solid $color__base-xlight;
+	font-family: $font__sans;
+	line-height: 1;
 	margin-bottom: 1em;
-	padding: .5em;
+	padding: .75em .5em;
 	width: 100%;
 	-webkit-appearance: none;
 

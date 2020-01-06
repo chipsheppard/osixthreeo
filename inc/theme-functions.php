@@ -141,7 +141,7 @@ if ( ! function_exists( 'osixthreeo_display_content' ) ) {
 				get_option( 'osixthreeo_settings', array() ),
 				osixthreeo_get_defaults()
 			);
-			$hide_ex = $osixthreeo_settings['archives_hide_excerpt'];
+			$hide_ex             = $osixthreeo_settings['archives_hide_excerpt'];
 
 			// Archives & search.
 			if ( true === $hide_ex ) {
@@ -169,7 +169,7 @@ if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
 			get_option( 'osixthreeo_settings', array() ),
 			osixthreeo_get_defaults()
 		);
-		$hide_rm = $osixthreeo_settings['archives_hide_readmore'];
+		$hide_rm             = $osixthreeo_settings['archives_hide_readmore'];
 
 		if ( true === $hide_rm ) {
 			return;
@@ -177,7 +177,7 @@ if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
 
 		if ( is_archive() || is_home() || is_search() ) :
 			$link = sprintf(
-				'<footer class="link-more"><a href="%1$s" class="more-link arrow">%2$s</a></footer>',
+				'<footer class="link-more"><a href="%1$s" class="more-link">%2$s</a></footer>',
 				get_permalink( get_the_ID() ),
 				sprintf(
 					/* translators: %s: Name of current post */
@@ -207,7 +207,7 @@ if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
 			get_option( 'osixthreeo_settings', array() ),
 			osixthreeo_get_defaults()
 		);
-		$meta_footer = $osixthreeo_settings['meta_footer'];
+		$meta_footer         = $osixthreeo_settings['meta_footer'];
 
 		if ( true === $meta_footer && is_single() && 'post' === get_post_type() ) :
 			echo '<footer class="entry-footer">';
@@ -272,12 +272,12 @@ if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 		} else {
 			echo '<div class="site-info">';
 			?>
-			<a href="<?php echo esc_url( __( 'https://osixthreeo.com/', 'osixthreeo' ) ); ?>">
+			<p></p><a href="<?php echo esc_url( __( 'https://osixthreeo.com/', 'osixthreeo' ) ); ?>">
 				<?php
 				/* translators: %s: theme name. */
 				printf( esc_html__( 'Powered by %s', 'osixthreeo' ), 'OsixthreeO' );
 				?>
-			</a>
+			</a></p>
 			<?php
 			do_action( 'osixthreeo_inside_footer' );
 			echo '</div>';

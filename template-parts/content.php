@@ -16,7 +16,7 @@ $osixthreeo_settings = wp_parse_args(
 	get_option( 'osixthreeo_settings', array() ),
 	osixthreeo_get_defaults()
 );
-$hide_fi = $osixthreeo_settings['archives_hide_featuredimage'];
+$hide_fi             = $osixthreeo_settings['archives_hide_featuredimage'];
 
 if ( true !== $hide_fi && ! is_singular() && ! has_post_format( 'aside' ) && ! has_post_format( 'status' ) && has_post_thumbnail() ) :
 

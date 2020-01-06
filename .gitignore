@@ -3,3 +3,4 @@
 php_errorlog
 php_errorlog.txt
 *_archive
+*.json

@@ -71,6 +71,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		value.bind( function( newval ) {
 			if ( 'full' === newval ) {
 				$( 'body' ).removeClass( 'contained' );
+				$( '.site' ).removeAttr( 'style' );
 			}
 			if ( 'contained' === newval ) {
 				$( 'body' ).addClass( 'contained' );
@@ -83,7 +84,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[max_width]', function( value ) {
 			value.bind(
 				function( newval ) {
-					$( '.inner-wrap, .content-inner-wrap' ).css( 'max-width', newval + 'px' );
+					$( '.contained .site' ).css( 'max-width', newval + 'px' );
 				}
 			);
 		}
@@ -452,7 +453,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		}
 	);
 
-	// Background Color.
+	// Archive Colors.
 	osixthreeo_colors_live_update(
 		'archives_background_color',
 		'.blog article, .archive article, .search article',
@@ -475,11 +476,11 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'archives_meta_color',
 		'.blog article .entry-meta,.archive article .entry-meta,.search article .entry-meta, .blog article .entry-meta a,.archive article .entry-meta a,.search article .entry-meta a',
 		'color',
-		''
+		'#808080'
 	);
 	osixthreeo_colors_live_update(
 		'archives_link_color',
-		'.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a',
+		'.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a,.blog article .entry-content a.more-link,.archive article .entry-content a.more-link,.search article .entry-content a.more-link',
 		'color',
 		''
 	);
@@ -489,6 +490,8 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'color',
 		''
 	);
+
+	// Hiding.
 	wp.customize(
 		'osixthreeo_settings[archives_hide_featuredimage]', function( value ) {
 			value.bind( function( newval ) {
@@ -533,8 +536,6 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 			} );
 		}
 	);
-
-
 
 	// Padding.
 	wp.customize(

@@ -7,7 +7,7 @@
 .site-info {
 	color: $color__base-xxlight;
 	letter-spacing: 1px;
-	padding: 2em 0;
+	padding: .5rem;
 	position: relative;
 	@include font-size(.875);
 
@@ -17,8 +17,5 @@
 		&:hover {
 			color: #ffffff;
 		}
-	}
-	p:last-of-type {
-		margin-bottom: 0;
 	}
 }

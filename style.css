@@ -841,8 +841,10 @@ input[type="color"],
 textarea {
   background-color: #ffffff;
   border: 1px solid #dcdcdc;
+  font-family: Helvetica, sans-serif;
+  line-height: 1;
   margin-bottom: 1em;
-  padding: .5em;
+  padding: .75em .5em;
   width: 100%;
   -webkit-appearance: none;
 }
@@ -908,6 +910,7 @@ select {
   position: absolute;
   right: 0;
   top: 0;
+  width: 55px;
   font-size: 20px;
   font-size: 1.25rem;
 }
@@ -915,14 +918,6 @@ select {
 .search-form input[type="submit"]:hover, .search-form input[type="submit"]:focus {
   background: #4169e1;
   color: #fff;
-}
-
-.site-header .search-form input[type="submit"] {
-  border-right: 1px solid #dcdcdc;
-}
-
-.site-header .search-form input[type="search"] {
-  margin-bottom: 0;
 }
 
 /*-------------------------------
@@ -963,7 +958,7 @@ a:hover, a:active {
 }
 
 .site-navigation ul {
-  line-height: 1;
+  line-height: 0;
 }
 
 .site-navigation ul ul {
@@ -986,7 +981,7 @@ a:hover, a:active {
   color: #ffffff;
   display: inline-block;
   letter-spacing: 1px;
-  padding: .9375em .25em;
+  padding: 1.5rem .25rem 1.25rem;
   position: relative;
 }
 
@@ -1036,7 +1031,7 @@ a:hover, a:active {
   border: 0;
   color: #222222;
   line-height: 1.25;
-  padding: .75em 1.125em;
+  padding: .75rem 1.125rem;
   text-transform: none;
   -webkit-transition: all .05s ease-in;
   transition: all .05s ease-in;
@@ -1315,7 +1310,7 @@ button.dropdown-toggle.toggled-on:after {
     color: #222222 !important;
     display: block;
     overflow: hidden;
-    padding: 1.25em 1em 1em 1.5em;
+    padding: 1.5rem 0 1.5rem 4%;
     position: relative;
     width: 100%;
   }
@@ -1356,7 +1351,7 @@ button.dropdown-toggle.toggled-on:after {
     cursor: pointer;
     display: inline-block;
     margin-left: 0;
-    padding: .6125em 1.5em;
+    padding: .6875rem 1.5rem;
     position: absolute;
     right: 0;
     top: 0;
@@ -1390,7 +1385,7 @@ button.dropdown-toggle.toggled-on:after {
     width: 100%;
   }
   .site-navigation .sub-menu button.dropdown-toggle {
-    padding: 0 1.375em .425em;
+    padding: 0 1em .425em;
     right: 0;
   }
   .site-navigation .sub-menu .sub-menu {
@@ -1429,7 +1424,6 @@ button.dropdown-toggle.toggled-on:after {
   padding: 1em .5em;
   position: relative;
   width: 100%;
-  word-break: break-all;
 }
 
 .posts-navigation .nav-previous a:hover,
@@ -2985,7 +2979,7 @@ img.alignright,
 .site-info {
   color: #f5f5f5;
   letter-spacing: 1px;
-  padding: 2em 0;
+  padding: .5rem;
   position: relative;
   font-size: 14px;
   font-size: 0.875rem;
@@ -2997,10 +2991,6 @@ img.alignright,
 
 .site-info a:hover {
   color: #ffffff;
-}
-
-.site-info p:last-of-type {
-  margin-bottom: 0;
 }
 
 /*
@@ -3737,14 +3727,9 @@ body.home.page .entry-header {
  ## 8b. Footer widgets
 -------------------------------*/
 .footer-widget {
+  margin-top: 2em;
   font-size: 14px;
   font-size: 0.875rem;
-}
-
-@media all and (max-width: 640px) {
-  .footer-widget {
-    margin-bottom: 2.5em;
-  }
 }
 
 .footer-widget ul {
@@ -4032,6 +4017,12 @@ body.headercentered .site-branding {
   text-align: center;
 }
 
+@media all and (max-width: 768px) {
+  body.headercentered .site-branding {
+    width: auto;
+  }
+}
+
 body.headercentered .site-navigation {
   display: block;
   text-align: center;
@@ -4074,18 +4065,20 @@ body.headercentered .menu-wrap {
 ## 11d. Menu Search
 -------------------------------*/
 .site-navigation input[type="search"] {
-  padding: .5em 7.5em .563em 1em;
+  margin-bottom: 0;
 }
 
 @media all and (max-width: 768px) {
   .site-navigation input[type="search"] {
     border-bottom: 0;
+    padding-left: 4%;
   }
 }
 
 .site-navigation input[type="submit"].search-submit {
+  border-right: 1px solid #dcdcdc;
   line-height: 1;
-  padding: .563em .75em .688em;
+  padding: .563em .75em .625em;
   right: 50px;
   top: 0;
 }
@@ -4124,11 +4117,12 @@ body.headercentered .menu-wrap {
 }
 
 .site-navigation li.search-icon {
-  border-bottom: 1px solid transparent;
   float: right;
   margin-right: 0;
   width: 3.125rem;
   z-index: 4;
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 @media all and (max-width: 768px) {
@@ -4139,8 +4133,7 @@ body.headercentered .menu-wrap {
 
 .site-navigation li.search-icon:hover {
   cursor: pointer;
-  opacity: .85;
-  border-bottom: 1px solid currentColor;
+  opacity: .80;
 }
 
 .site-navigation li.search-icon .theicon {
@@ -4202,10 +4195,6 @@ body.headercentered .menu-wrap {
   right: 0;
   visibility: visible;
   opacity: 1;
-}
-
-.site-navigation.nav-search-active li.search-icon:hover {
-  border-bottom: 1px solid transparent;
 }
 
 .site-navigation.nav-search-active li.search-icon .theicon {
