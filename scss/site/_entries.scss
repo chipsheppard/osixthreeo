@@ -6,8 +6,8 @@
 	margin: 0;
 
 	div {
-		@include font-size(1);
 		text-transform: uppercase;
+		@include font-size(1);
 	}
 }
 

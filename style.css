@@ -2,7 +2,7 @@
 /*
 	Theme Name: OsixthreeO
 	Text Domain: osixthreeo
-	Version: 1.4.0
+	Version: 1.4.1
 	Description: A flexibile, lightweight, multi-purpose theme with a colorful header and heaps of customizer controls for crafting a unique design with no code or plugins.
 	Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, custom-logo, custom-background, flexible-header, grid-layout
 	Author: Chip Sheppard
@@ -1030,7 +1030,7 @@ a:hover, a:active {
   background: #ffffff;
   border: 0;
   color: #222222;
-  line-height: 1.25;
+  line-height: 1;
   padding: .75rem 1.125rem;
   text-transform: none;
   -webkit-transition: all .05s ease-in;
@@ -1074,7 +1074,7 @@ button.dropdown-toggle {
   color: #ffffff;
   padding: 0;
   position: relative;
-  right: .5em;
+  right: 1rem;
   z-index: -1;
 }
 
@@ -1338,7 +1338,7 @@ button.dropdown-toggle.toggled-on:after {
     display: block;
   }
   .site-navigation li li a {
-    padding-left: .5em;
+    padding-left: .5rem;
     font-size: 14px;
     font-size: 0.875rem;
   }
@@ -1381,18 +1381,18 @@ button.dropdown-toggle.toggled-on:after {
   }
   .site-navigation .sub-menu a {
     border: 0;
-    padding-left: 4em;
+    padding-left: 4rem;
     width: 100%;
   }
   .site-navigation .sub-menu button.dropdown-toggle {
-    padding: 0 1em .425em;
+    padding: 0 1rem .6875rem;
     right: 0;
   }
   .site-navigation .sub-menu .sub-menu {
     margin: 0;
   }
   .site-navigation .sub-menu .sub-menu a {
-    padding-left: 6em;
+    padding-left: 6rem;
   }
 }
 
@@ -2692,10 +2692,10 @@ img.alignright,
 }
 
 .header-wrap {
-  position: relative;
-  z-index: 100;
   padding-top: 16px;
   padding-bottom: 16px;
+  position: relative;
+  z-index: 100;
 }
 
 .site-branding {
@@ -2721,7 +2721,7 @@ img.alignright,
 .custom-logo {
   display: table-cell;
   line-height: 1;
-  padding-right: 1em;
+  padding-right: 1rem;
 }
 
 .custom-logo img {
@@ -2979,7 +2979,6 @@ img.alignright,
 .site-info {
   color: #f5f5f5;
   letter-spacing: 1px;
-  padding: .5rem;
   position: relative;
   font-size: 14px;
   font-size: 0.875rem;
@@ -3005,9 +3004,9 @@ img.alignright,
 }
 
 .page-title div {
+  text-transform: uppercase;
   font-size: 16px;
   font-size: 1rem;
-  text-transform: uppercase;
 }
 
 body.page .entry-header,
@@ -3279,23 +3278,23 @@ body.home.page .entry-header {
 .archive article .entry-header,
 .search article .entry-header {
   overflow: hidden;
-  padding: 16px;
+  padding: 1rem;
 }
 
 .blog article .entry-content,
 .archive article .entry-content,
 .search article .entry-content {
   overflow: hidden;
-  padding: 0 16px 16px;
+  padding: 0 1rem 1rem;
 }
 
 .blog article .link-more,
 .archive article .link-more,
 .search article .link-more {
   line-height: 2.5;
-  margin-bottom: 1em;
+  margin-bottom: 1rem;
   overflow: hidden;
-  padding: 0 16px 0;
+  padding: 0 1rem 0;
 }
 
 .blog article.format-aside .entry-content, .blog article.format-status .entry-content,

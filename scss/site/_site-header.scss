@@ -25,10 +25,10 @@
 }
 
 .header-wrap {
-	position: relative;
-	z-index: 100;
 	padding-top: 16px;
 	padding-bottom: 16px;
+	position: relative;
+	z-index: 100;
 }
 
 .site-branding {
@@ -51,7 +51,7 @@
 .custom-logo {
 	display: table-cell;
 	line-height: 1;
-	padding-right: 1em;
+	padding-right: 1rem;
 
 	img {
 		display: block;

@@ -15,7 +15,7 @@ if ( ! is_active_sidebar( 'sidebar' ) && ! is_active_sidebar( 'sidebar-p' ) && !
 tha_sidebars_before();
 echo '<aside id="secondary" class="widget-area" role="complementary">';
 tha_sidebar_top();
-if ( OSTO_EXT_3 ) {
+if ( OSTO_XTRAS ) {
 	if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 		if ( is_active_sidebar( 'sidebar-w' ) && ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) ) {
 			dynamic_sidebar( 'sidebar-w' );

@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.3.2
-Stable tag: 1.4.0
+Stable tag: 1.4.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,7 +68,11 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.4.0 - 01 01 2020 =
+= 1.4.1 - 01 11 2020 =
+* Three column achive display.
+* Adjust meta color labels. 
+
+= 1.4.0 - 01 06 2020 =
 * Add conditionals for up-sell blocks.
 * Moved header and footer markup to theme-functions.
 * Re-Submit to WordPress.org.

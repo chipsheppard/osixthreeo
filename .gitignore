@@ -2,5 +2,6 @@
 *config.codekit3
 php_errorlog
 php_errorlog.txt
+*.code-workspace
 *_archive
 *.json

@@ -611,7 +611,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_1 && ! OSTO_EXT_2 ) :
+		if ( ! OSTO_XTRAS ) :
 			$wp_customize->add_setting(
 				'layout-pro-callout',
 				array(
@@ -1264,7 +1264,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_2 && ! OSTO_EXT_3 && ! OSTO_EXT_4 ) :
+		if ( ! OSTO_XTRAS && ! OSTO_STKHDR ) :
 			$wp_customize->add_setting(
 				'colors-pro-callout',
 				array(
@@ -2201,7 +2201,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_1 && ! OSTO_EXT_2 && ! OSTO_EXT_3 && ! OSTO_EXT_4 ) :
+		if ( ! OSTO_XTRAS && ! OSTO_STKHDR ) :
 			$wp_customize->add_setting(
 				'typography-pro-callout',
 				array(
@@ -3353,7 +3353,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_2 ) :
+		if ( ! OSTO_XTRAS ) :
 			$wp_customize->add_setting(
 				'themeops-pro-callout',
 				array(
@@ -3498,7 +3498,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_to_archives',
 					'label'    => esc_html__( 'Padding', 'osixthreeo' ),
-					'priority' => 16,
+					'priority' => 20,
 				)
 			)
 		);
@@ -3526,7 +3526,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'step' => 1,
 					),
 					'settings'    => 'osixthreeo_settings[archives_pad_left]',
-					'priority'    => 17,
+					'priority'    => 21,
 				)
 			)
 		);
@@ -3554,7 +3554,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'step' => 1,
 					),
 					'settings'    => 'osixthreeo_settings[archives_pad_right]',
-					'priority'    => 18,
+					'priority'    => 22,
 				)
 			)
 		);
@@ -3582,7 +3582,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'step' => 1,
 					),
 					'settings'    => 'osixthreeo_settings[archives_pad_top]',
-					'priority'    => 19,
+					'priority'    => 23,
 				)
 			)
 		);
@@ -3610,7 +3610,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 						'step' => 1,
 					),
 					'settings'    => 'osixthreeo_settings[archives_pad_bottom]',
-					'priority'    => 20,
+					'priority'    => 24,
 				)
 			)
 		);
@@ -3629,7 +3629,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_to_archives',
 					'label'    => esc_html__( 'Border', 'osixthreeo' ),
-					'priority' => 21,
+					'priority' => 30,
 				)
 			)
 		);
@@ -3650,7 +3650,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'label'    => esc_html__( 'Color', 'osixthreeo' ),
 					'section'  => 'osixthreeo_to_archives',
 					'settings' => 'osixthreeo_settings[archives_border_color]',
-					'priority' => 22,
+					'priority' => 31,
 				)
 			)
 		);
@@ -3675,7 +3675,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'step' => 1,
 				),
 				'settings'    => 'osixthreeo_settings[archives_border_width]',
-				'priority'    => 23,
+				'priority'    => 32,
 			)
 		);
 		// Border - Radius.
@@ -3700,7 +3700,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'step' => 1,
 				),
 				'settings'    => 'osixthreeo_settings[archives_border_radius]',
-				'priority'    => 24,
+				'priority'    => 33,
 			)
 		);
 
@@ -3718,7 +3718,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				array(
 					'section'  => 'osixthreeo_to_archives',
 					'label'    => esc_html__( 'Box Shadow', 'osixthreeo' ),
-					'priority' => 25,
+					'priority' => 40,
 				)
 			)
 		);
@@ -3740,7 +3740,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'section'      => 'osixthreeo_to_archives',
 					'settings'     => 'osixthreeo_settings[archives_box_shadow_color]',
 					'show_opacity' => true,
-					'priority'     => 26,
+					'priority'     => 41,
 				)
 			)
 		);
@@ -3761,7 +3761,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'x offset', 'osixthreeo' ),
 				'section'  => 'osixthreeo_to_archives',
 				'settings' => 'osixthreeo_settings[archives_box_shadow_x]',
-				'priority' => 27,
+				'priority' => 42,
 			)
 		);
 		// SHADOW - Y.
@@ -3780,7 +3780,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'label'    => esc_html__( 'y offset', 'osixthreeo' ),
 				'section'  => 'osixthreeo_to_archives',
 				'settings' => 'osixthreeo_settings[archives_box_shadow_y]',
-				'priority' => 28,
+				'priority' => 43,
 			)
 		);
 		// SHADOW - Blur.
@@ -3804,7 +3804,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'max'  => 100,
 					'step' => 1,
 				),
-				'priority'    => 29,
+				'priority'    => 44,
 			)
 		);
 		// Shadow - Spread.
@@ -3828,12 +3828,12 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'max'  => 100,
 					'step' => 1,
 				),
-				'priority'    => 30,
+				'priority'    => 45,
 			)
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_EXT_2 ) :
+		if ( ! OSTO_XTRAS ) :
 			$wp_customize->add_setting(
 				'themeops-a-pro-callout',
 				array(

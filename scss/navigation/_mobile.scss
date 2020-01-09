@@ -61,7 +61,7 @@
 				display: block;
 
 				a {
-					padding-left: .5em;
+					padding-left: .5rem;
 					@include font-size(.875);
 				}
 			}
@@ -113,12 +113,12 @@
 
 			a {
 				border: 0;
-				padding-left: 4em;
+				padding-left: 4rem;
 				width: 100%;
 			}
 
 			button.dropdown-toggle {
-				padding: 0 1em .425em;
+				padding: 0 1rem .6875rem;
 				right: 0;
 			}
 
@@ -126,7 +126,7 @@
 				margin: 0;
 
 				a {
-					padding-left: 6em;
+					padding-left: 6rem;
 				}
 			}
 		}
