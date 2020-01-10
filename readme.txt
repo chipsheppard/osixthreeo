@@ -5,14 +5,15 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.3.2
-Stable tag: 1.4.1
+Stable tag: 1.4.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 OsixthreeO is a flexible, lightweight, multi-purpose theme with a colorful header and heaps of customizer controls for crafting a unique design with no code or plugins.
 
 == Description ==
-OsixthreeO is a great selection for any website. Craft your site with font, color, layout and padding controls via the WordPress customizer. The custom header controls enable a plethora of homepage and header designs enabling anyone to make a unique website. OsixthreeO provides easy selection of sidebar layouts for posts, pages, blog, search and the homepage as well as blank templates for page-builders.
+
+OsixthreeO is a great selection for any website. Create your own design with a flexible, lightweight, multi-purpose theme that provides font, color, layout and many other controls via the WordPress customizer.
 
 == Installation ==
 
@@ -67,6 +68,9 @@ mobile-only - will only display on devices 768 pixels wide and lower.
 desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
+
+= 1.4.2 - 01 11 2020 =
+* Fix 'Gutenberg' alignwide styles for gallery.
 
 = 1.4.1 - 01 11 2020 =
 * Three column achive display.

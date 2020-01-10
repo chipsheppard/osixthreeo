@@ -2,7 +2,8 @@
  * Wide & Full width images
  ---------------------------------- */
 
-.alignwide {
+.alignwide,
+.entry-content ul.wp-block-gallery.alignwide {
 	margin-left: -40px;
 	margin-right: -40px;
 	width: auto;
@@ -18,7 +19,8 @@
 	}
 }
 
-.alignfull {
+.alignfull,
+.entry-content ul.wp-block-gallery.alignfull {
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	width: auto;
