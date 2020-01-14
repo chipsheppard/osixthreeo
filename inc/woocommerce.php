@@ -132,7 +132,7 @@ remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wra
 add_action( 'woocommerce_before_main_content', 'osixthreeo_theme_wrapper_start', 10 );
 add_action( 'woocommerce_after_main_content', 'osixthreeo_theme_wrapper_end', 10 );
 
-// Since we are using Woo templates (with adjustments)
+// Since we are using Woo templates in OsixthreeO territory
 // we need to include our Global functions.
 do_action( 'osixthreeo_init' );
 
@@ -165,3 +165,61 @@ function osixthreeo_remove_wc_sidebar() {
 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
 add_action( 'init', 'osixthreeo_remove_wc_sidebar' );
+
+
+/**
+ * Check if TitleLifted is selected, if so move Woo product title.
+ */
+function osixthreeo_woo_single_title() {
+
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( true !== $osixthreeo_settings['content_title_lift'] || ! osixthreeo_is_prod() ) {
+		return;
+	}
+
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+
+	echo '<div class="entry-header"><div class="title-wrap">';
+	echo '<h1 itemprop="name" class="product_title entry-title">';
+	the_title();
+	echo '</h1>';
+	echo '</div></div>';
+
+}
+add_action( 'tha_content_top', 'osixthreeo_woo_single_title', 5 );
+
+/**
+ * Check if TitleLifted is selected, if so move Woo Shop title.
+ */
+function osixthreeo_woo_shop_title() {
+
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( true !== $osixthreeo_settings['content_title_lift'] || ! osixthreeo_is_shop() ) {
+		return;
+	}
+
+	add_filter( 'woocommerce_show_page_title', '__return_false' );
+
+	echo '<div class="page-header"><div class="title-wrap">';
+	echo '<h1 itemprop="name" class="page-title">';
+	woocommerce_page_title();
+	echo '</h1>';
+	echo '</div></div>';
+
+}
+add_action( 'tha_content_top', 'osixthreeo_woo_shop_title', 5 );
+
+
+/**
+ * Move WooCommerce price
+ */
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 10 );
+add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_price', 25 );

@@ -1264,7 +1264,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_XTRAS && ! OSTO_STKHDR ) :
+		if ( ! OSTO_XTRAS || ! OSTO_STKHDR ) :
 			$wp_customize->add_setting(
 				'colors-pro-callout',
 				array(
@@ -2201,7 +2201,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 		);
 
 		// GET EXTENSIONS.
-		if ( ! OSTO_XTRAS && ! OSTO_STKHDR ) :
+		if ( ! OSTO_XTRAS || ! OSTO_STKHDR ) :
 			$wp_customize->add_setting(
 				'typography-pro-callout',
 				array(

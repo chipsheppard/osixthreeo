@@ -11,7 +11,7 @@
 		border-bottom: 1px solid $color__base-light;
 		line-height: 1;
 		margin: 0 0 .5em 0;
-		padding: .5em 0;
+		padding: .125em 0 .5em;
 	}
 
 	select {
@@ -79,10 +79,15 @@
 		li.current-menu-item > a {
 			color: $color__highlight;
 		}
+
 	}
 
 	.menu-item-has-children.current-menu-item > a,
 	.menu-item-has-children.current-menu-ancestor > a{
 		padding-bottom: .5em;
+	}
+	
+	.search-form {
+		margin-bottom: 0;
 	}
 }

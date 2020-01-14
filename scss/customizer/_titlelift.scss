@@ -19,16 +19,6 @@ body.error404.titlelift .page-header .title-wrap {
 	bottom: 80px;
 }
 
-body.page.titlelift.content-inner-contain .entry-header .title-wrap,
-body.single.titlelift.content-inner-contain .entry-header .title-wrap,
-body.blog.titlelift.content-inner-contain .page-header .title-wrap,
-body.archive.titlelift.content-inner-contain .page-header .title-wrap,
-body.search.titlelift.content-inner-contain .page-header .title-wrap,
-body.error404.titlelift.content-inner-contain .page-header .title-wrap {
-	bottom: 114px;
-	/* left: -62%;  for full left alignment */
-}
-
 /* device is less than or equal to... apply styles */
 @include breakpoint(tablet-v) {
 	body.page.sidebar-left.titlelift .entry-header,
@@ -44,13 +34,7 @@ body.error404.titlelift.content-inner-contain .page-header .title-wrap {
 	body.blog.sidebar-left.titlelift .page-header .title-wrap,
 	body.archive.sidebar-left.titlelift .page-header .title-wrap,
 	body.search.sidebar-left.titlelift .page-header .title-wrap,
-	body.error404.sidebar-left.titlelift .page-header .title-wrap,
-	body.page.titlelift.content-inner-contain .entry-header .title-wrap,
-	body.single.titlelift.content-inner-contain .entry-header .title-wrap,
-	body.blog.titlelift.content-inner-contain .page-header .title-wrap,
-	body.archive.titlelift.content-inner-contain .page-header .title-wrap,
-	body.search.titlelift.content-inner-contain .page-header .title-wrap,
-	body.error404.titlelift.content-inner-contain .page-header .title-wrap {
+	body.error404.sidebar-left.titlelift .page-header .title-wrap {
 		position: static;
 		bottom: 0;
 	}
@@ -74,4 +58,7 @@ body.error404.titlelift .page-title {
 
 .titlelift .archive-description {
 	color: #ffffff;
+}
+.titlelift .site-content .widget-area {
+	margin-top: 2.5em;
 }

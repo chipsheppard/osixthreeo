@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.3.2
-Stable tag: 1.4.2
+Stable tag: 1.5.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,7 +13,7 @@ OsixthreeO is a flexible, lightweight, multi-purpose theme with a colorful heade
 
 == Description ==
 
-OsixthreeO is a great selection for any website. Create your own design with a flexible, lightweight, multi-purpose theme that provides font, color, layout and many other controls via the WordPress customizer.
+OsixthreeO is a great selection for any website. Create your own unique design with a flexible, lightweight theme that provides font, color, layout and many other controls via the WordPress customizer.
 
 == Installation ==
 
@@ -69,25 +69,11 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.4.2 - 01 11 2020 =
-* Fix 'Gutenberg' alignwide styles for gallery.
-
-= 1.4.1 - 01 11 2020 =
-* Three column achive display.
-* Adjust meta color labels. 
+= 1.5.0 - 01 12 2020 =
+* Style adjustments for Woo & Block Editor
 
 = 1.4.0 - 01 06 2020 =
 * Add conditionals for up-sell blocks.
-* Moved header and footer markup to theme-functions.
-* Re-Submit to WordPress.org.
-
-= 1.3.4 - 10 19 2019 =
-* Added Area-Label to responsive menu icon.
-
-= 1.3.3 - 10 07 2019 =
-* Adjusted default footer text.
-* Adjustments to menu script for accessibility.
-* Removed default text from Homepage text areas.
 
 = 1.3.0 - 10 04 2019 =
 * Add-on integration.
@@ -100,5 +86,5 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 * File structure
 * First deploy to GIT
 
-= 1.0.0 - 11 07 2018 =
+= 0.0.1 - 11 07 2018 =
 * _s downloaded and renamed to "osixthreeo"

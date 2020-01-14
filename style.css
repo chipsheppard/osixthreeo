@@ -2,7 +2,7 @@
 /*
 	Theme Name: OsixthreeO
 	Text Domain: osixthreeo
-	Version: 1.4.2
+	Version: 1.5.0
 	Description: A flexibile, lightweight, multi-purpose theme with a colorful header and heaps of customizer controls for crafting a unique design with no code or plugins.
 	Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, custom-logo, custom-background, flexible-header, grid-layout
 	Author: Chip Sheppard
@@ -31,7 +31,7 @@
 		b. 	Headings
 		c. 	Blockquotes
 		d.	Tables
-		e.  Base font
+		e.	Base font
 	3. 	Forms
 		a. 	Buttons
 		b. 	Fields
@@ -203,7 +203,8 @@ button:-moz-focusring,
 }
 
 fieldset {
-  padding: 0.35em 0.75em 0.625em;
+  padding: 0.35em 0.75em 0.5em;
+  margin-bottom: 1em;
 }
 
 legend {
@@ -1074,7 +1075,7 @@ button.dropdown-toggle {
   color: #ffffff;
   padding: 0;
   position: relative;
-  right: 1rem;
+  right: .5rem;
   z-index: -1;
 }
 
@@ -2078,6 +2079,7 @@ img.alignright,
   cursor: pointer;
   display: inline-block;
   font-size: 1rem;
+  overflow: hidden;
   padding-top: .625em;
   padding-bottom: .625em;
   position: relative;
@@ -3657,7 +3659,7 @@ body.home.page .entry-header {
   border-bottom: 1px solid #c0c0c0;
   line-height: 1;
   margin: 0 0 .5em 0;
-  padding: .5em 0;
+  padding: .125em 0 .5em;
 }
 
 .sidebar-widget select {
@@ -3723,6 +3725,10 @@ body.home.page .entry-header {
 .sidebar-widget .menu-item-has-children.current-menu-item > a,
 .sidebar-widget .menu-item-has-children.current-menu-ancestor > a {
   padding-bottom: .5em;
+}
+
+.sidebar-widget .search-form {
+  margin-bottom: 0;
 }
 
 /*
@@ -3872,6 +3878,18 @@ img#wpstats {
 .woocommerce-page #content table.cart td.actions .input-text,
 .woocommerce-page table.cart td.actions .input-text {
   width: 120px;
+}
+
+#add_payment_method #payment ul.payment_methods li,
+.woocommerce-cart #payment ul.payment_methods li,
+.woocommerce-checkout #payment ul.payment_methods li {
+  list-style: none;
+}
+
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+  background: rgba(204, 153, 255, 0.1);
 }
 
 /*
@@ -4253,16 +4271,6 @@ body.error404.titlelift .page-header .title-wrap {
   bottom: 80px;
 }
 
-body.page.titlelift.content-inner-contain .entry-header .title-wrap,
-body.single.titlelift.content-inner-contain .entry-header .title-wrap,
-body.blog.titlelift.content-inner-contain .page-header .title-wrap,
-body.archive.titlelift.content-inner-contain .page-header .title-wrap,
-body.search.titlelift.content-inner-contain .page-header .title-wrap,
-body.error404.titlelift.content-inner-contain .page-header .title-wrap {
-  bottom: 114px;
-  /* left: -62%;  for full left alignment */
-}
-
 /* device is less than or equal to... apply styles */
 @media all and (max-width: 768px) {
   body.page.sidebar-left.titlelift .entry-header,
@@ -4278,13 +4286,7 @@ body.error404.titlelift.content-inner-contain .page-header .title-wrap {
   body.blog.sidebar-left.titlelift .page-header .title-wrap,
   body.archive.sidebar-left.titlelift .page-header .title-wrap,
   body.search.sidebar-left.titlelift .page-header .title-wrap,
-  body.error404.sidebar-left.titlelift .page-header .title-wrap,
-  body.page.titlelift.content-inner-contain .entry-header .title-wrap,
-  body.single.titlelift.content-inner-contain .entry-header .title-wrap,
-  body.blog.titlelift.content-inner-contain .page-header .title-wrap,
-  body.archive.titlelift.content-inner-contain .page-header .title-wrap,
-  body.search.titlelift.content-inner-contain .page-header .title-wrap,
-  body.error404.titlelift.content-inner-contain .page-header .title-wrap {
+  body.error404.sidebar-left.titlelift .page-header .title-wrap {
     position: static;
     bottom: 0;
   }
@@ -4308,6 +4310,10 @@ body.error404.titlelift .page-title {
 
 .titlelift .archive-description {
   color: #ffffff;
+}
+
+.titlelift .site-content .widget-area {
+  margin-top: 2.5em;
 }
 
 /*

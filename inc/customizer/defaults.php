@@ -49,7 +49,7 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'meta_comments'                        => true,
 			'meta_updated'                         => true,
 			'meta_footer'                          => true,
-			'content_title_lift'                   => '',
+			'content_title_lift'                   => false,
 			'content_title_color'                  => '',
 			'header_background_color'              => '',
 			'nav_link_color'                       => '#ffffff',

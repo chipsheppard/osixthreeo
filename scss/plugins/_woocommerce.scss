@@ -91,3 +91,14 @@
 .woocommerce-page table.cart td.actions .input-text {
     width: 120px;
 }
+
+#add_payment_method #payment ul.payment_methods li,
+.woocommerce-cart #payment ul.payment_methods li,
+.woocommerce-checkout #payment ul.payment_methods li {
+	list-style: none;
+}
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+	background:rgba(204, 153, 255, 0.1);
+}

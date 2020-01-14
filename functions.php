@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.4.2' );
+define( 'OSIXTHREEO_VERSION', '1.5.0' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_THEME_LINK', 'https://osixthreeo.com' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Chip Sheppard' );
@@ -183,4 +183,4 @@ if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 
 // Check for Extensions.
 define( 'OSTO_XTRAS', class_exists( 'Osixthreeo_Xtras' ) );
-define( 'OSTO_STKHDR', class_exists( 'Osixthreeo_Sticky_Header' ) );
+define( 'OSTO_STKHDR', class_exists( 'Osixthreeo_Stickyheader' ) );
