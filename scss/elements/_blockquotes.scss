@@ -16,7 +16,7 @@ blockquote {
 	quotes: "\201C""\201D""\201C""\201D";
 
 	@include breakpoint(phone-h) {
-		padding: 1.25em 1.25em;
+		padding: 1.25em;
 	}
 
 	&:after {
@@ -24,10 +24,6 @@ blockquote {
 	}
 
 	&:before {
-		//color: rgba(153,153,153,0.5);
-		// content: "\201C";
-		// line-height: 1.125;
-		// font-family: Georgia, serif;
 		background-color: rgba(153,153,153,0.2);
 		content:'';
 		display: block;
@@ -37,15 +33,13 @@ blockquote {
 		top: 0;
 		bottom: 0;
 		width: 8px;
-		@include font-size(3.5);
-
 	}
 
 	cite {
 		display: block;
 		font-weight: $font__weight-bold;
 		font-style: normal;
-		line-height:1.25;
+		line-height: 1.25;
 		margin-top: .5em;
 		text-transform: uppercase;
 		@include font-size(.875);
