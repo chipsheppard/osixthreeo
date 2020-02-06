@@ -101,8 +101,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'layout-sitewidth-message',
 				array(
 					'section'  => 'osixthreeo_site_layout',
-					'priority' => 10,
 					'label'    => esc_html__( 'Site Width', 'osixthreeo' ),
+					'priority' => 10,
 				)
 			)
 		);
@@ -624,9 +624,9 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'layout-pro-callout',
 					array(
 						'section'  => 'osixthreeo_site_layout',
-						'priority' => 100,
 						'label'    => esc_html__( 'Get more layout controls with an OsixthreeO Extension', 'osixthreeo' ),
 						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
+						'priority' => 100,
 					)
 				)
 			);
@@ -653,8 +653,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'colors-logomenu-message',
 				array(
 					'section'  => 'colors',
-					'priority' => 20,
 					'label'    => esc_html__( 'Branding/Menu Bar', 'osixthreeo' ),
+					'priority' => 20,
 				)
 			)
 		);
@@ -677,8 +677,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'label'        => esc_html__( 'Background', 'osixthreeo' ),
 					'section'      => 'colors',
 					'settings'     => 'osixthreeo_settings[header_background_color]',
-					'priority'     => 21,
 					'show_opacity' => true,
+					'priority'     => 21,
 				)
 			)
 		);
@@ -719,8 +719,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'colors-subnav-message',
 				array(
 					'section'  => 'colors',
-					'priority' => 30,
 					'label'    => esc_html__( 'Mobile menu & Sub menus', 'osixthreeo' ),
+					'priority' => 30,
 				)
 			)
 		);
@@ -845,8 +845,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'colors-content-message',
 				array(
 					'section'  => 'colors',
-					'priority' => 50,
 					'label'    => esc_html__( 'Post & Page Content', 'osixthreeo' ),
+					'priority' => 50,
 				)
 			)
 		);
@@ -869,8 +869,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'label'        => esc_html__( 'Background', 'osixthreeo' ),
 					'section'      => 'colors',
 					'settings'     => 'osixthreeo_settings[content_bgcolor]',
-					'priority'     => 51,
 					'show_opacity' => true,
+					'priority'     => 51,
 				)
 			)
 		);
@@ -996,8 +996,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'colors-archives-message',
 				array(
 					'section'  => 'colors',
-					'priority' => 60,
 					'label'    => esc_html__( 'Blog, Archive & Search entries', 'osixthreeo' ),
+					'priority' => 60,
 				)
 			)
 		);
@@ -1147,8 +1147,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'colors-footer-message',
 				array(
 					'section'  => 'colors',
-					'priority' => 90,
 					'label'    => esc_html__( 'Footer', 'osixthreeo' ),
+					'priority' => 90,
 				)
 			)
 		);
@@ -1277,9 +1277,9 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'colors-pro-callout',
 					array(
 						'section'  => 'colors',
-						'priority' => 200,
 						'label'    => esc_html__( 'Get more color controls with an OsixthreeO Extension', 'osixthreeo' ),
 						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
+						'priority' => 200,
 					)
 				)
 			);
@@ -1312,8 +1312,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'typography-fonts-message',
 				array(
 					'section'  => 'osixthreeo_typography',
-					'priority' => 1,
 					'label'    => esc_html__( '3 Fonts', 'osixthreeo' ),
+					'priority' => 1,
 				)
 			)
 		);
@@ -1776,7 +1776,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'typographu-fonts-message',
 				array(
 					'section'  => 'osixthreeo_typography',
-					'content'  => __( 'Using the controls below the 3 fonts selected above can be assigned to various areas of the site.', 'osixthreeo' ) . '</p>',
+					'content'  => esc_html__( 'Using the controls below the 3 fonts selected above can be assigned to various areas of the site.', 'osixthreeo' ) . '</p>',
 					'priority' => 8,
 				)
 			)
@@ -2246,8 +2246,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_ch_bgcolor',
 			array(
 				'title'    => esc_html__( 'Background Colors', 'osixthreeo' ),
-				'priority' => 10,
 				'panel'    => 'osixthreeo_header_panel',
+				'priority' => 10,
 			)
 		);
 
@@ -2384,8 +2384,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'header_image',
 			array(
 				'title'    => esc_html__( 'Background Image/Video', 'osixthreeo' ),
-				'priority' => 20,
 				'panel'    => 'osixthreeo_header_panel',
+				'priority' => 20,
 			)
 		);
 
@@ -2403,12 +2403,12 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[header_bg_size]',
 			array(
 				'type'     => 'select',
-				'label'    => __( 'Background image size', 'osixthreeo' ),
+				'label'    => esc_html__( 'Background image size', 'osixthreeo' ),
 				'section'  => 'header_image',
 				'choices'  => array(
-					'cover'   => __( 'Cover (default)', 'osixthreeo' ),
-					'contain' => __( 'Contain', 'osixthreeo' ),
-					'auto'    => __( 'Auto', 'osixthreeo' ),
+					'cover'   => esc_html__( 'Cover (default)', 'osixthreeo' ),
+					'contain' => esc_html__( 'Contain', 'osixthreeo' ),
+					'auto'    => esc_html__( 'Auto', 'osixthreeo' ),
 				),
 				'settings' => 'osixthreeo_settings[header_bg_size]',
 				'priority' => 70,
@@ -2429,18 +2429,18 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[header_bg_position]',
 			array(
 				'type'     => 'select',
-				'label'    => __( 'Background image position', 'osixthreeo' ),
+				'label'    => esc_html__( 'Background image position', 'osixthreeo' ),
 				'section'  => 'header_image',
 				'choices'  => array(
-					'left-top'      => __( 'Left Top', 'osixthreeo' ),
-					'left-center'   => __( 'Left Center', 'osixthreeo' ),
-					'left-bottom'   => __( 'Left Bottom', 'osixthreeo' ),
-					'right-top'     => __( 'Right Top', 'osixthreeo' ),
-					'right-center'  => __( 'Right Center', 'osixthreeo' ),
-					'right-bottom'  => __( 'Right Bottom', 'osixthreeo' ),
-					'center-top'    => __( 'Center Top', 'osixthreeo' ),
-					'center-center' => __( 'Center Center (default)', 'osixthreeo' ),
-					'center-bottom' => __( 'Center Bottom', 'osixthreeo' ),
+					'left-top'      => esc_html__( 'Left Top', 'osixthreeo' ),
+					'left-center'   => esc_html__( 'Left Center', 'osixthreeo' ),
+					'left-bottom'   => esc_html__( 'Left Bottom', 'osixthreeo' ),
+					'right-top'     => esc_html__( 'Right Top', 'osixthreeo' ),
+					'right-center'  => esc_html__( 'Right Center', 'osixthreeo' ),
+					'right-bottom'  => esc_html__( 'Right Bottom', 'osixthreeo' ),
+					'center-top'    => esc_html__( 'Center Top', 'osixthreeo' ),
+					'center-center' => esc_html__( 'Center Center (default)', 'osixthreeo' ),
+					'center-bottom' => esc_html__( 'Center Bottom', 'osixthreeo' ),
 				),
 				'settings' => 'osixthreeo_settings[header_bg_position]',
 				'priority' => 71,
@@ -2460,13 +2460,13 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[header_bg_repeat]',
 			array(
 				'type'     => 'select',
-				'label'    => __( 'Background image repeat', 'osixthreeo' ),
+				'label'    => esc_html__( 'Background image repeat', 'osixthreeo' ),
 				'section'  => 'header_image',
 				'choices'  => array(
-					'no-repeat' => __( 'No Repeat (default)', 'osixthreeo' ),
-					'repeat'    => __( 'Tile', 'osixthreeo' ),
-					'repeat-x'  => __( 'Tile Horizontally', 'osixthreeo' ),
-					'repeat-y'  => __( 'Tile Vertically', 'osixthreeo' ),
+					'no-repeat' => esc_html__( 'No Repeat (default)', 'osixthreeo' ),
+					'repeat'    => esc_html__( 'Tile', 'osixthreeo' ),
+					'repeat-x'  => esc_html__( 'Tile Horizontally', 'osixthreeo' ),
+					'repeat-y'  => esc_html__( 'Tile Vertically', 'osixthreeo' ),
 				),
 				'settings' => 'osixthreeo_settings[header_bg_repeat]',
 				'priority' => 72,
@@ -2486,8 +2486,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[parallax_header]',
 			array(
 				'type'        => 'checkbox',
-				'label'       => __( 'APPLY PARALLAX', 'osixthreeo' ),
-				'description' => __( 'Apply a parallax effect to images in the custom header', 'osixthreeo' ),
+				'label'       => esc_html__( 'APPLY PARALLAX', 'osixthreeo' ),
+				'description' => esc_html__( 'Apply a parallax effect to images in the custom header', 'osixthreeo' ),
 				'section'     => 'header_image',
 				'settings'    => 'osixthreeo_settings[parallax_header]',
 				'priority'    => 80,
@@ -2499,8 +2499,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_ch_text',
 			array(
 				'title'    => esc_html__( 'Homepage Overlay Text', 'osixthreeo' ),
-				'priority' => 30,
 				'panel'    => 'osixthreeo_header_panel',
+				'priority' => 30,
 			)
 		);
 
@@ -2787,8 +2787,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'secondary-text-message',
 				array(
 					'section'  => 'osixthreeo_ch_text',
-					'priority' => 30,
 					'label'    => esc_html__( 'Secondary text', 'osixthreeo' ),
+					'priority' => 30,
 				)
 			)
 		);
@@ -3055,8 +3055,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'scroll-button-message',
 				array(
 					'section'  => 'osixthreeo_ch_text',
-					'priority' => 50,
 					'label'    => esc_html__( 'Scroll-to-content button', 'osixthreeo' ),
+					'priority' => 50,
 				)
 			)
 		);
@@ -3147,8 +3147,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_to_header',
 			array(
 				'title'    => esc_html__( 'Site Header', 'osixthreeo' ),
-				'priority' => 10,
 				'panel'    => 'osixthreeo_themeops',
+				'priority' => 10,
 			)
 		);
 
@@ -3165,8 +3165,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'themeops-appendsearch-message',
 				array(
 					'section'  => 'osixthreeo_to_header',
-					'priority' => 10,
 					'label'    => esc_html__( 'Menu', 'osixthreeo' ),
+					'priority' => 10,
 				)
 			)
 		);
@@ -3183,8 +3183,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[nav_search]',
 			array(
 				'type'        => 'checkbox',
-				'label'       => __( 'MENU SEARCH', 'osixthreeo' ),
-				'description' => __( 'Append search functionality to the menu.', 'osixthreeo' ),
+				'label'       => esc_html__( 'MENU SEARCH', 'osixthreeo' ),
+				'description' => esc_html__( 'Append search functionality to the menu.', 'osixthreeo' ),
 				'section'     => 'osixthreeo_to_header',
 				'settings'    => 'osixthreeo_settings[nav_search]',
 				'priority'    => 11,
@@ -3197,8 +3197,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_to_content',
 			array(
 				'title'    => esc_html__( 'Post/Page Entries', 'osixthreeo' ),
-				'priority' => 20,
 				'panel'    => 'osixthreeo_themeops',
+				'priority' => 20,
 			)
 		);
 
@@ -3327,8 +3327,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'themeops-metafooter-message',
 				array(
 					'section'  => 'osixthreeo_to_content',
-					'priority' => 36,
 					'content'  => esc_html__( 'Post footer', 'osixthreeo' ),
+					'priority' => 36,
 				)
 			)
 		);
@@ -3846,9 +3846,9 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'themeops-a-pro-callout',
 					array(
 						'section'  => 'osixthreeo_to_archives',
-						'priority' => 100,
 						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
 						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
+						'priority' => 100,
 					)
 				)
 			);
@@ -3860,8 +3860,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_to_footer',
 			array(
 				'title'    => esc_html__( 'Site Footer', 'osixthreeo' ),
-				'priority' => 40,
 				'panel'    => 'osixthreeo_themeops',
+				'priority' => 40,
 			)
 		);
 
@@ -3895,8 +3895,8 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[back_to_top]',
 			array(
 				'type'        => 'checkbox',
-				'label'       => __( 'Add a Back To Top button', 'osixthreeo' ),
-				'description' => __( 'Appears on the right side of the site footer.', 'osixthreeo' ),
+				'label'       => esc_html__( 'Add a Back To Top button', 'osixthreeo' ),
+				'description' => esc_html__( 'Appears on the right side of the site footer.', 'osixthreeo' ),
 				'section'     => 'osixthreeo_to_footer',
 				'settings'    => 'osixthreeo_settings[back_to_top]',
 				'priority'    => 11,
@@ -3933,7 +3933,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			'osixthreeo_settings[footer_columns]',
 			array(
 				'type'     => 'checkbox',
-				'label'    => __( 'Display multiple widgets as responsive columns.', 'osixthreeo' ),
+				'label'    => esc_html__( 'Display multiple widgets as responsive columns.', 'osixthreeo' ),
 				'section'  => 'osixthreeo_to_footer',
 				'settings' => 'osixthreeo_settings[footer_columns]',
 				'priority' => 13,

@@ -111,7 +111,7 @@ if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
 		echo '</nav>';
 	}
 }
-add_action( 'tha_header_top', 'osixthreeo_display_nav' );
+add_action( 'tha_header_bottom', 'osixthreeo_display_nav' );
 
 
 /*
@@ -272,7 +272,7 @@ if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 		} else {
 			echo '<div class="site-info">';
 			?>
-			<p></p><a href="<?php echo esc_url( __( 'https://osixthreeo.com/', 'osixthreeo' ) ); ?>">
+			<p><a href="<?php echo esc_url( __( 'https://osixthreeo.com/', 'osixthreeo' ) ); ?>">
 				<?php
 				/* translators: %s: theme name. */
 				printf( esc_html__( 'Powered by %s', 'osixthreeo' ), 'OsixthreeO' );

@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.3.2
-Stable tag: 1.5.1
+Stable tag: 1.5.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -68,6 +68,9 @@ mobile-only - will only display on devices 768 pixels wide and lower.
 desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
+
+= 1.5.2 - 02 05 2020 =
+* Style adjustments for Block Editor
 
 = 1.5.1 - 01 12 2020 =
 * Style adjustments for Woo & Block Editor

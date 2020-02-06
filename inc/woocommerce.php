@@ -25,7 +25,7 @@ function osixthreeo_is_shop() {
 	}
 }
 /**
- * Is this the Shop page?
+ * Is this a Product page?
  */
 function osixthreeo_is_prod() {
 	if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE && is_product() ) {
@@ -61,7 +61,6 @@ function osixthreeo_woocommerce_products_per_page() {
 }
 add_filter( 'loop_shop_per_page', 'osixthreeo_woocommerce_products_per_page' );
 
-
 /**
  * Product gallery thumnbail columns.
  *
@@ -72,7 +71,6 @@ function osixthreeo_woocommerce_thumbnail_columns() {
 }
 add_filter( 'woocommerce_product_thumbnails_columns', 'osixthreeo_woocommerce_thumbnail_columns' );
 
-
 /**
  * Default loop columns on product archives.
  *
@@ -82,7 +80,6 @@ function osixthreeo_woocommerce_loop_columns() {
 	return 3;
 }
 add_filter( 'loop_shop_columns', 'osixthreeo_woocommerce_loop_columns' );
-
 
 /**
  * Related Products Args.
@@ -125,7 +122,6 @@ if ( ! function_exists( 'osixthreeo_woocommerce_product_columns_wrapper_close' )
 }
 add_action( 'woocommerce_after_shop_loop', 'osixthreeo_woocommerce_product_columns_wrapper_close', 40 );
 
-
 // Remove their wrapper then add our own.
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
@@ -165,7 +161,6 @@ function osixthreeo_remove_wc_sidebar() {
 	remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
 }
 add_action( 'init', 'osixthreeo_remove_wc_sidebar' );
-
 
 /**
  * Check if TitleLifted is selected, if so move Woo product title.
@@ -216,7 +211,6 @@ function osixthreeo_woo_shop_title() {
 
 }
 add_action( 'tha_content_top', 'osixthreeo_woo_shop_title', 5 );
-
 
 /**
  * Move WooCommerce price

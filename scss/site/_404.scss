@@ -8,17 +8,12 @@
     animation-fill-mode: both;
     -webkit-animation-timing-function: ease-in-out;
     animation-timing-function: ease-in-out;
-}
-
-.error404 .error-message {
     -webkit-animation-duration: 3s;
     animation-duration: 3s;
-}
-
-.error404 .error-message {
     -webkit-animation-name: hinge;
     animation-name: hinge;
 }
+
 @-webkit-keyframes hinge {
     0% { -webkit-transform: rotate(0); -webkit-transform-origin: center center; -webkit-animation-timing-function: ease-in-out; }
     30%, 60% { -webkit-transform: rotate(40deg); -webkit-transform-origin: center center; -webkit-animation-timing-function: ease-in-out; }
