@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.5.2' );
+define( 'OSIXTHREEO_VERSION', '1.5.3' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_THEME_LINK', 'https://osixthreeo.com' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Chip Sheppard' );

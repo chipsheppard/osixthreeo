@@ -3530,7 +3530,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				)
 			)
 		);
-		// Padding - Left.
+		// Padding - Right.
 		$wp_customize->add_setting(
 			'osixthreeo_settings[archives_pad_right]',
 			array(

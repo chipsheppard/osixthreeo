@@ -3,10 +3,6 @@
 	margin-bottom: 1em;
 	@include font-size(.9375);
 
-	&:last-of-type {
-		border: none;
-	}
-
 	.widget-title {
 		border-bottom: 1px solid $color__base-light;
 		line-height: 1;
