@@ -69,8 +69,10 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.5.2 - 02 15 2020 =
-* changed stuff *
+= 1.5.3 - 02 15 2020 =
+* Adjust home-hero-text max-font sizes *
+* Fix color issue with read-more (continue) button *
+* Fix padding issue with footer columns *
 
 = 1.5.2 - 02 05 2020 =
 * Style adjustments for Block Editor

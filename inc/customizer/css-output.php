@@ -426,7 +426,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		if ( $default_link_color !== $link_color ) :
-			$css->set_selector( 'a,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover' );
+			$css->set_selector( 'a,.sidebar-widget ul a:hover,.sidebar-widget menu a:hover,.comment-navigation .nav-previous a:hover,.posts-navigation .nav-previous a:hover,.post-navigation .nav-previous a:hover,.comment-navigation .nav-next a:hover,.posts-navigation .nav-next a:hover,.post-navigation .nav-next a:hover,.link-more' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color'] ) );
 			// button bg.
 			$css->set_selector( 'input[type="button"],input[type="reset"],input[type="submit"],.btn,.woocommerce a.button,.woocommerce button.button,.woocommerce a.button:hover,.woocommerce button.button:hover,.woocommerce input.button,.woocommerce #respond input#submit' );
@@ -437,7 +437,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		if ( $default_link_color_hover !== $link_color_hover ) :
-			$css->set_selector( '.site-content a:not(.btn):not(.button):not(.more-link):not(.meta-link):hover,.site-content a:not(.btn):not(.button):not(.more-link):not(.meta-link):focus,.site-content a:not(.btn):not(.button):not(.more-link):not(.meta-link):active' );
+			$css->set_selector( '.site-content a:not(.btn):not(.button):not(.meta-link):hover,.site-content a:not(.btn):not(.button):not(.meta-link):focus,.site-content a:not(.btn):not(.button):not(.meta-link):active' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
 			$css->set_selector( 'input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,.btn.secondary,.footer-widgets input[type="submit"],.woocommerce a.button.alt,.woocommerce button.button.alt,.woocommerce #respond input#submit.alt,.woocommerce input.button.alt,.woocommerce input.button:hover,.woocommerce #respond input#submit:hover' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['link_color_hover'] ) );
@@ -1315,20 +1315,20 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_title_color'] ) );
 		endif;
 		if ( $default_archives_link_color !== $archives_link_color ) :
-			$css->set_selector( '.blog article .entry-content a,.blog article .link-more a,.archive article .entry-content a,.archive article .link-more a,.search article .entry-content a,.search article .link-more a' );
+			$css->set_selector( '.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a,.link-more' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_link_color'] ) );
 		endif;
 		if ( $default_archives_link_color_hover !== $archives_link_color_hover ) :
-			$css->set_selector( '.blog article .entry-content a:hover,.blog article .link-more a:hover,.archive article .entry-content a:hover,.archive article .link-more a:hover,.search article .entry-content a:hover,.search article .link-more a:hover' );
+			$css->set_selector( '.blog article .entry-content a:hover,.archive article .entry-content a:hover,.search article .entry-content a:hover' );
 			$css->add_property( 'color', esc_attr( $osixthreeo_settings['archives_link_color_hover'] ) );
 		endif;
 
 		if ( absint( $default_archives_pad_left ) !== absint( $archives_pad_left ) ) :
-			$css->set_selector( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' );
+			$css->set_selector( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.link-more' );
 			$css->add_property( 'padding-left', esc_attr( $osixthreeo_settings['archives_pad_left'] . 'px' ) );
 		endif;
 		if ( absint( $default_archives_pad_right ) !== absint( $archives_pad_right ) ) :
-			$css->set_selector( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' );
+			$css->set_selector( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.link-more' );
 			$css->add_property( 'padding-right', esc_attr( $osixthreeo_settings['archives_pad_right'] . 'px' ) );
 		endif;
 
@@ -1338,7 +1338,7 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		endif;
 
 		if ( absint( $default_archives_pad_bottom ) !== absint( $archives_pad_bottom ) ) :
-			$css->set_selector( '.blog article .entry-content,.archive article .entry-content,.search article .entry-content' );
+			$css->set_selector( '.link-more' );
 			$css->add_property( 'padding-bottom', esc_attr( $osixthreeo_settings['archives_pad_bottom'] . 'px' ) );
 		endif;
 

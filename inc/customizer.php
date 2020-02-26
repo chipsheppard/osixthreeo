@@ -2610,7 +2610,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'settings'    => 'osixthreeo_settings[hero_text_primary_font_size]',
 					'input_attrs' => array(
 						'min'  => 16,
-						'max'  => 80,
+						'max'  => 120,
 						'step' => 1,
 					),
 					'priority'    => 13,
@@ -2880,7 +2880,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'settings'    => 'osixthreeo_settings[hero_text_secondary_font_size]',
 					'input_attrs' => array(
 						'min'  => 14,
-						'max'  => 48,
+						'max'  => 80,
 						'step' => 1,
 					),
 					'priority'    => 34,

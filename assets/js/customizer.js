@@ -480,7 +480,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 	);
 	osixthreeo_colors_live_update(
 		'archives_link_color',
-		'.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a,.blog article .entry-content a.more-link,.archive article .entry-content a.more-link,.search article .entry-content a.more-link',
+		'.blog article .entry-content a,.archive article .entry-content a,.search article .entry-content a,.link-more',
 		'color',
 		''
 	);
@@ -542,7 +542,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[archives_pad_left]', function( value ) {
 			value.bind(
 				function( newval ) {
-					$( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' ).css( 'padding-left', newval + 'px' );
+					$( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.link-more' ).css( 'padding-left', newval + 'px' );
 				}
 			);
 		}
@@ -551,7 +551,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[archives_pad_right]', function( value ) {
 			value.bind(
 				function( newval ) {
-					$( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.blog article .link-more,.archive article .link-more,.search article .link-more' ).css( 'padding-right', newval + 'px' );
+					$( '.blog article .entry-header,.archive article .entry-header,.search article .entry-header,.blog article .entry-content,.archive article .entry-content,.search article .entry-content,.link-more' ).css( 'padding-right', newval + 'px' );
 				}
 			);
 		}
@@ -569,7 +569,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'osixthreeo_settings[archives_pad_bottom]', function( value ) {
 			value.bind(
 				function( newval ) {
-					$( '.blog article .link-more,.archive article .link-more,.search article .link-more' ).css( 'padding-bottom', newval + 'px' );
+					$( '.link-more' ).css( 'padding-bottom', newval + 'px' );
 				}
 			);
 		}

@@ -124,7 +124,7 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'archives_pad_left'                    => '16',
 			'archives_pad_right'                   => '16',
 			'archives_pad_top'                     => '16',
-			'archives_pad_bottom'                  => '16',
+			'archives_pad_bottom'                  => '0',
 			'archives_box_shadow_color'            => '',
 			'archives_box_shadow_x'                => '0',
 			'archives_box_shadow_y'                => '0',
