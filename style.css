@@ -964,7 +964,6 @@ a:hover, a:active {
 .site-navigation .menu-span {
   display: inline-block;
   position: relative;
-  width: 100%;
 }
 
 @media all and (max-width: 768px) {
@@ -1092,13 +1091,12 @@ a:hover, a:active {
     display: flex;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
   }
   .site-navigation .menu .sub-menu {
     white-space: normal;
   }
   .menu > li {
-    margin-right: 0;
     white-space: nowrap;
   }
   .sub-menu li {
@@ -3713,7 +3711,6 @@ body.home.page .entry-header {
 
 .sidebar-widget .widget-title {
   border-bottom: 1px solid #c0c0c0;
-  line-height: 1;
   margin: 0 0 .5em 0;
   padding: .125em 0 .5em;
 }
@@ -3785,6 +3782,7 @@ body.home.page .entry-header {
 
 .sidebar-widget .search-form {
   margin-bottom: 0;
+  margin-top: .5rem;
 }
 
 /*
@@ -4166,6 +4164,7 @@ body.headercentered .site-navigation > ul {
   float: right;
   margin-right: 0;
   width: 3.125rem;
+  position: relative;
   z-index: 4;
   font-size: 16px;
   font-size: 1rem;
@@ -4175,6 +4174,12 @@ body.headercentered .site-navigation > ul {
   .site-navigation li.search-icon {
     display: none;
   }
+}
+
+.site-navigation li.search-icon[aria-expanded|="true"] {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .site-navigation li.search-icon:hover {

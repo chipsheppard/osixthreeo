@@ -11,7 +11,7 @@
 	.menu-span {
 		display: inline-block;
 		position: relative;
-		width: 100%;
+		//width: 100%;
 
 		@include breakpoint(tablet-v) {
 			display: block;
@@ -133,15 +133,13 @@
 	.site-navigation .menu {
 		display: flex;
 		justify-content: space-between;
-		flex-wrap: wrap-reverse;
+		flex-wrap: wrap;
 		
 		.sub-menu {
 			white-space: normal;
-
 		}
 	}
 	.menu > li {
-		margin-right: 0;
 		white-space: nowrap;
 	}
 	.sub-menu li {

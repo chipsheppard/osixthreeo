@@ -31,11 +31,18 @@
 	    float: right;
 		margin-right: 0;
 		width: 3.125rem;
+		position: relative;
 		z-index: 4;
 		@include font-size(1);
 
 		@include breakpoint(tablet-v) {
 			display: none;
+		}
+
+		&[aria-expanded|="true"] {
+			position: absolute;
+			right: 0;
+			top: 0;
 		}
 
 		&:hover {
