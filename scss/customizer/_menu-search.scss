@@ -12,39 +12,18 @@
 	input[type="submit"].search-submit {
 		border-right: 1px solid $color__base-xlight;
 		line-height: 1;
-		padding: .563em .75em .625em;
+		padding: .75rem .8125rem .75rem;
 		right: 50px;
 		top: 0;
 
 		@include breakpoint(tablet-v) {
 			right: 0;
+			padding-bottom: .625rem;
 		}
 
 		&:hover,
 		&:focus {
 			color: #ffffff;
-		}
-	}
-
-	.menu-span {
-		display: inline-block;
-		position: relative;
-
-		@include breakpoint(tablet-v) {
-			display: block;
-		}
-	}
-
-	@include breakpoint(tablet-min-v) {
-		.menu {
-			display: flex;
-			flex-wrap:nowrap;
-			white-space:nowrap;
-
-			.sub-menu {
-				white-space: normal;
-
-			}
 		}
 	}
 

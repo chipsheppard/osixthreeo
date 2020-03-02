@@ -2,7 +2,7 @@
 /*
 	Theme Name: OsixthreeO
 	Text Domain: osixthreeo
-	Version: 1.5.3
+	Version: 1.5.4
 	Description: A flexibile, lightweight, multi-purpose theme with a colorful header and heaps of customizer controls for crafting a unique design with no code or plugins.
 	Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, custom-logo, custom-background, flexible-header, grid-layout
 	Author: Chip Sheppard
@@ -961,6 +961,18 @@ a:hover, a:active {
   position: relative;
 }
 
+.site-navigation .menu-span {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+@media all and (max-width: 768px) {
+  .site-navigation .menu-span {
+    display: block;
+  }
+}
+
 .site-navigation ul {
   line-height: 0;
 }
@@ -1020,6 +1032,7 @@ a:hover, a:active {
   display: block;
   left: -9999px;
   margin-top: -1px;
+  margin-left: -.875em;
   opacity: 0;
   position: absolute;
   text-align: left;
@@ -1071,6 +1084,27 @@ a:hover, a:active {
 
 .site-navigation .sub-menu .sub-menu {
   margin: -14% 0 0 90%;
+}
+
+@media all and (min-width: 769px) {
+  .site-navigation .menu {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    flex-wrap: wrap-reverse;
+  }
+  .site-navigation .menu .sub-menu {
+    white-space: normal;
+  }
+  .menu > li {
+    margin-right: 0;
+    white-space: nowrap;
+  }
+  .sub-menu li {
+    display: block;
+    white-space: normal;
+  }
 }
 
 button.dropdown-toggle {
@@ -2145,6 +2179,10 @@ img.alignright,
      object-fit: cover;
 }
 
+.wp-block-columns .wp-block-column {
+  overflow: hidden;
+}
+
 @media all and (max-width: 768px) {
   .wp-block-columns .wp-block-column {
     margin-bottom: 2em;
@@ -2435,14 +2473,14 @@ img.alignright,
 }
 
 .site-content .content-area {
-  margin: 2.5em 0;
+  margin: 2.5rem 0;
   width: 100%;
 }
 
 .site-content .widget-area {
   display: inline-block;
   overflow: hidden;
-  margin: 3em 0 2.5em;
+  margin: 2.5rem 0 2.5em;
   width: 26%;
 }
 
@@ -4055,21 +4093,15 @@ body.headercentered .site-branding {
   text-align: center;
 }
 
-@media all and (max-width: 768px) {
-  body.headercentered .site-branding {
-    width: auto;
-  }
+body.headercentered .custom-logo {
+  display: block;
+  padding-right: 0;
 }
 
 body.headercentered .site-navigation {
   display: block;
+  margin-top: 1rem;
   text-align: center;
-}
-
-@media all and (max-width: 768px) {
-  body.headercentered .site-navigation {
-    text-align: left;
-  }
 }
 
 body.headercentered .site-navigation > ul {
@@ -4077,18 +4109,18 @@ body.headercentered .site-navigation > ul {
 }
 
 @media all and (max-width: 768px) {
-  body.headercentered .site-navigation > ul {
-    display: block;
+  body.headercentered .site-branding {
+    width: auto;
   }
-}
-
-body.headercentered .menu-wrap {
-  display: inline-block;
-}
-
-@media all and (max-width: 768px) {
   body.headercentered .menu-wrap {
     display: none;
+  }
+  body.headercentered .site-navigation {
+    text-align: left;
+    margin-top: 0;
+  }
+  body.headercentered .site-navigation > ul {
+    display: block;
   }
 }
 
@@ -4114,7 +4146,7 @@ body.headercentered .menu-wrap {
 .site-navigation input[type="submit"].search-submit {
   border-right: 1px solid #dcdcdc;
   line-height: 1;
-  padding: .563em .75em .625em;
+  padding: .75rem .8125rem .75rem;
   right: 50px;
   top: 0;
 }
@@ -4122,34 +4154,12 @@ body.headercentered .menu-wrap {
 @media all and (max-width: 768px) {
   .site-navigation input[type="submit"].search-submit {
     right: 0;
+    padding-bottom: .625rem;
   }
 }
 
 .site-navigation input[type="submit"].search-submit:hover, .site-navigation input[type="submit"].search-submit:focus {
   color: #ffffff;
-}
-
-.site-navigation .menu-span {
-  display: inline-block;
-  position: relative;
-}
-
-@media all and (max-width: 768px) {
-  .site-navigation .menu-span {
-    display: block;
-  }
-}
-
-@media all and (min-width: 769px) {
-  .site-navigation .menu {
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: nowrap;
-    white-space: nowrap;
-  }
-  .site-navigation .menu .sub-menu {
-    white-space: normal;
-  }
 }
 
 .site-navigation li.search-icon {

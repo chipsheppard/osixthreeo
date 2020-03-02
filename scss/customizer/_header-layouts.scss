@@ -10,34 +10,37 @@ body.headercentered {
 	.site-branding {
 		display: block;
 		text-align: center;
+	}
 
-		@include breakpoint(tablet-v) {
-			width: auto;
-		}
+	.custom-logo {
+		display: block;
+		padding-right: 0;
 	}
 
 	.site-navigation {
 		display: block;
+		margin-top: 1rem;
 		text-align: center;
-
-		@include breakpoint(tablet-v) {
-			text-align: left;
-		}
 	}
 
 	.site-navigation > ul {
 	    display: inline-block;
-
-		@include breakpoint(tablet-v) {
-			display: block;
-		}
 	}
 
-	.menu-wrap {
-		display: inline-block;
-
-		@include breakpoint(tablet-v) {
+	@include breakpoint(tablet-v) {
+		
+		.site-branding {
+			width: auto;
+		}
+		.menu-wrap {
 			display: none;
+		}
+		.site-navigation {
+			text-align: left;
+			margin-top: 0;
+		}
+		.site-navigation > ul {
+			display: block;
 		}
 	}
 }

@@ -767,6 +767,10 @@ img.alignright,
 /*
 BOXED
 - - - - - - - - - - - - - */
+.wp-block-columns .wp-block-column {
+	overflow: hidden;
+}
+
 .wp-block-columns.boxed {
 	position: relative;
 	z-index: 2;

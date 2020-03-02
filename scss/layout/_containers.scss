@@ -2,14 +2,14 @@
 	clear: both;
 
 	.content-area {
-		margin: 2.5em 0;
+		margin: 2.5rem 0;
 		width: 100%;
 	}
 
 	.widget-area {
 		display: inline-block;
 		overflow: hidden;
-		margin: 3em 0 2.5em ;
+		margin: 2.5rem 0 2.5em ;
 		width: $size__site-sidebar;
 
 		@include breakpoint(tablet-v) {

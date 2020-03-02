@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.5.3' );
+define( 'OSIXTHREEO_VERSION', '1.5.4' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_THEME_LINK', 'https://osixthreeo.com' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Chip Sheppard' );
@@ -59,7 +59,7 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		add_theme_support( 'custom-background',
 			apply_filters( 'osixthreeo_custom_background_args',
 				array(
-					'default-color' => 'ffffff',
+					'default-color' => 'f3f5f7',
 					'default-image' => '',
 				)
 			)

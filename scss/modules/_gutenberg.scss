@@ -240,6 +240,8 @@
 	}
 
 	.wp-block-column {
+		overflow: hidden;
+		
 		@include breakpoint(tablet-v) {
 			margin-bottom: 2em;
 		}
