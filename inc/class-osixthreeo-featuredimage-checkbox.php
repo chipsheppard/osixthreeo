@@ -5,7 +5,7 @@
  * @package    osixthreeo
  * @subpackage osixthreeo/inc
  * @author     Chip Sheppard
- * @since      1.2.0
+ * @since      1.0.0
  * @license    GPL-2.0+
  *
  * @link https://www.pmg.com/blog/wordpress-how-to-adding-a-custom-checkbox-to-the-post-publish-box/
@@ -45,7 +45,7 @@ class Osixthreeo_Featuredimage_Checkbox {
 	 */
 	public function add_fi_checkbox( $post_type ) {
 		$types = array( 'post', 'page' );
-		if ( in_array( $post_type, $types, true ) ) {
+		if ( in_array( $post_type, $types, true ) && has_post_thumbnail() ) {
 			add_meta_box(
 				'fi_checkbox_id',
 				__( 'Featured Image Display', 'osixthreeo' ),

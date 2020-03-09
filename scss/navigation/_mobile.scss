@@ -56,7 +56,11 @@
 			&:first-of-type {
 				border-top: 1px solid $color__base-xlight;
 			}
-
+			
+			&.menu-item-has-children {
+				margin-right: 0;
+			}
+	
 			li  {
 				display: block;
 
