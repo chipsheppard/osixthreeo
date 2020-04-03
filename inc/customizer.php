@@ -420,7 +420,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'layout-titles-message',
 				array(
 					'section'  => 'osixthreeo_site_layout',
-					'label'    => esc_html__( 'Post/Page Titles.', 'osixthreeo' ),
+					'label'    => esc_html__( 'Post/Page Titles', 'osixthreeo' ),
 					'priority' => 23,
 				)
 			)

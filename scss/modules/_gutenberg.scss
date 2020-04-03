@@ -168,7 +168,6 @@
 	.wp-block-button__link {
 	    border: none;
 	    border-radius: 6px;
-	    box-shadow: none;
 	    cursor: pointer;
 	    display: inline-block;
 		font-size: 1rem;
@@ -306,7 +305,6 @@
 .has-medium-font-size {
 	line-height: 1.2;
 }
-
 
 // Transition to 2 columns for all rows
 @media (max-width: 780px) and (min-width: 600px) {

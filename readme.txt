@@ -69,6 +69,10 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
+= 1.5.7 - 04 ?? 2020 =
+* Remove letter spacing from entry headers *
+* Adjustments for Gutenberg button styles *
+
 = 1.5.6 - 03 15 2020 =
 * Fixed block button color issue with customizer *
 
