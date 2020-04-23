@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // Theme data.
-define( 'OSIXTHREEO_VERSION', '1.5.7' );
+define( 'OSIXTHREEO_VERSION', '1.5.8' );
 define( 'OSIXTHREEO_THEME_NAME', 'OsixthreeO' );
 define( 'OSIXTHREEO_THEME_LINK', 'https://osixthreeo.com' );
 define( 'OSIXTHREEO_AUTHOR_NAME', 'Chip Sheppard' );
@@ -83,7 +83,7 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 
 		// Theme styles for the visual editor.
 		add_theme_support( 'editor-styles' );
-		add_editor_style( 'assets/css/editor-style.css' );
+		add_editor_style( 'assets/css/editor-style-min.css' );
 
 		// Body open hook.
 		add_theme_support( 'body-open' );
@@ -146,15 +146,6 @@ function osixthreeo_customizer_custom_css() {
 	wp_enqueue_style( 'osixthreeo-customizer', get_template_directory_uri() . '/assets/css/customizer-min.css', array(), OSIXTHREEO_VERSION );
 }
 add_action( 'customize_controls_enqueue_scripts', 'osixthreeo_customizer_custom_css' );
-
-/**
- * Enqueue editor styles for Gutenberg
- */
-function osixthreeo_gutenberg_editor_styles() {
-	wp_enqueue_style( 'osixthreeo-gutenberg-editor-style', get_template_directory_uri() . '/assets/css/editor-style-min.css', array(), OSIXTHREEO_VERSION );
-}
-add_action( 'enqueue_block_editor_assets', 'osixthreeo_gutenberg_editor_styles' );
-
 
 // Load all the things.
 require get_template_directory() . '/inc/theme-hooks.php';

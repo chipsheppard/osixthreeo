@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.4
-Stable tag: 1.5.7
+Stable tag: 1.5.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,25 +70,28 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
+= 1.5.8 - 04 23 2020 =
+* Editor style enhancements
+
 = 1.5.7 - 04 22 2020 =
 * Remove THA hook prefix in favor of theme namspace
-* Remove letter spacing from entry headers *
-* Adjustments for Gutenberg button and blockquote styles *
+* Remove letter spacing from entry headers
+* Adjustments for Gutenberg button and blockquote styles
 
 = 1.5.6 - 03 15 2020 =
-* Fixed block button color issue with customizer *
+* Fixed block button color issue with customizer
 
 = 1.5.5 - 03 09 2020 =
-* Display featured image checkbox only if an image is loaded *
+* Display featured image checkbox only if an image is loaded
 
 = 1.5.4 - 02 28 2020 =
-* Logo image not centering when header is centered *
-* Improvements to flex menu css *
+* Logo image not centering when header is centered
+* Improvements to flex menu css
 
 = 1.5.3 - 02 15 2020 =
-* Adjust home-hero-text max-font sizes *
-* Fix color issue with read-more (continue) button *
-* Fix padding issue with footer columns *
+* Adjust home-hero-text max-font sizes
+* Fix color issue with read-more (continue) button
+* Fix padding issue with footer columns
 
 = 1.5.2 - 02 05 2020 =
 * Style adjustments for Block Editor
@@ -97,11 +100,11 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 * Style adjustments for Woo & Block Editor
 
 = 1.4.0 - 01 06 2020 =
-* Add conditionals for up-sell blocks.
+* Add conditionals for up-sell blocks
 
 = 1.3.0 - 10 04 2019 =
-* Add-on integration.
-* !!! Submit to WordPress.org.
+* Add-on integration
+* !!! Submit to WordPress.org
 
 = 1.2.0 - 01 01 2019 =
 * Stable

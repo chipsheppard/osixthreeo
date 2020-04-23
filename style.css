@@ -2,7 +2,7 @@
 /*
 	Theme Name: OsixthreeO
 	Text Domain: osixthreeo
-	Version: 1.5.7
+	Version: 1.5.8
 	Description: A flexibile, lightweight, multi-purpose theme with a colorful custom header and heaps of customizer controls for crafting a unique design with no code or plugins.
 	Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, custom-logo, custom-background, flexible-header, grid-layout
 	Author: Chip Sheppard
@@ -576,6 +576,7 @@ q:after {
 blockquote,
 .wp-block-quote {
   background: rgba(153, 153, 153, 0.05);
+  border: none;
   margin: .75em 0 1.5em;
   padding: 1.5em 1.75em;
   position: relative;
@@ -695,12 +696,8 @@ blockquote.is-large p, blockquote.is-style-large p,
 }
 
 /*
- * BLOCK EDITOR
+ * BLOCK EDITOR SPECIFIC
  ---------------------------------------------- */
-.editor-styles-wrapper .wp-block-quote {
-  border: none;
-}
-
 .editor-styles-wrapper .wp-block-quote.is-style-large .rich-text {
   padding-left: .5em;
 }

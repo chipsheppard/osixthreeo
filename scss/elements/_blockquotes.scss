@@ -11,6 +11,7 @@ q:after {
 blockquote,
 .wp-block-quote {
 	background: rgba(153,153,153,0.05);
+	border: none;
 	margin: .75em 0 1.5em;
 	padding: 1.5em 1.75em;
 	position: relative;
@@ -103,19 +104,13 @@ blockquote,
 }
 
 /*
- * BLOCK EDITOR
+ * BLOCK EDITOR SPECIFIC
  ---------------------------------------------- */
- .editor-styles-wrapper .wp-block-quote {
-	border: none;
-
-	&.is-style-large {
-
-		.rich-text {
-			padding-left: .5em;
-		}
-	
-		.wp-block-quote__citation {
-			text-align: right;
-		}
-	}	
+ .editor-styles-wrapper .wp-block-quote.is-style-large {
+	.rich-text {
+		padding-left: .5em;
+	}
+	.wp-block-quote__citation {
+		text-align: right;
+	}
 }
