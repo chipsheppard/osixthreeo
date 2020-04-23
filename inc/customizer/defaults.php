@@ -21,6 +21,7 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 	 */
 	function osixthreeo_get_defaults() {
 		$osixthreeo_defaults = array(
+			'tagline_align'                        => '',
 			'background_color'                     => '#f3f5f7',
 			'containment_setting'                  => 'full',
 			'max_width'                            => '1280',
@@ -52,6 +53,7 @@ if ( ! function_exists( 'osixthreeo_get_defaults' ) ) {
 			'content_title_lift'                   => false,
 			'content_title_color'                  => '',
 			'header_background_color'              => '',
+			'header_background_color_home'         => '',
 			'nav_link_color'                       => '#ffffff',
 			'subnav_text_color'                    => '#222222',
 			'subnav_bg_color'                      => '#ffffff',

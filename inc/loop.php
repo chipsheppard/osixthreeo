@@ -20,30 +20,30 @@ function osixthreeo_default_loop() {
 
 	if ( have_posts() ) :
 
-		tha_content_while_before();
+		osixthreeo_content_while_before();
 
 		echo '<div class="loop-wrap">';
 
 		while ( have_posts() ) :
 			the_post();
-			tha_entry_before();
+			osixthreeo_entry_before();
 			get_template_part( 'template-parts/content', get_post_format() );
-			tha_entry_after();
+			osixthreeo_entry_after();
 		endwhile;
 
 		echo '</div>';
 
-		tha_content_while_after();
+		osixthreeo_content_while_after();
 
 		else :
 
-			tha_entry_before();
+			osixthreeo_entry_before();
 			get_template_part( 'template-parts/content', 'none' );
-			tha_entry_after();
+			osixthreeo_entry_after();
 
 		endif;
 }
-add_action( 'tha_content_loop', 'osixthreeo_default_loop' );
+add_action( 'osixthreeo_content_loop', 'osixthreeo_default_loop' );
 
 
 /**
@@ -68,7 +68,7 @@ function osixthreeo_archive_page_titles() {
 		echo '</header>';
 	endif;
 }
-add_action( 'tha_content_while_before', 'osixthreeo_archive_page_titles' );
+add_action( 'osixthreeo_content_while_before', 'osixthreeo_archive_page_titles' );
 
 
 /**
@@ -87,7 +87,7 @@ function osixthreeo_postpagination() {
 	endif;
 
 }
-add_action( 'tha_content_while_after', 'osixthreeo_postpagination' );
+add_action( 'osixthreeo_content_while_after', 'osixthreeo_postpagination' );
 
 
 /**
@@ -105,7 +105,7 @@ function osixthreeo_postnav() {
 	endif;
 
 }
-add_action( 'tha_entry_after', 'osixthreeo_postnav' );
+add_action( 'osixthreeo_entry_after', 'osixthreeo_postnav' );
 
 
 /**
@@ -118,4 +118,4 @@ function osixthreeo_comments() {
 	}
 
 }
-add_action( 'tha_content_while_after', 'osixthreeo_comments' );
+add_action( 'osixthreeo_content_while_after', 'osixthreeo_comments' );

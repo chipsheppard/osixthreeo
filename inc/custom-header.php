@@ -23,7 +23,8 @@ if ( ! function_exists( 'osixthreeo_header_setup' ) ) :
 	function osixthreeo_header_setup() {
 		// Custom header.
 		add_theme_support( 'custom-header',
-			apply_filters( 'osixthreeo_custom_header_args',
+			apply_filters(
+				'osixthreeo_custom_header_args',
 				array(
 					'default-text-color' => 'ffffff',
 					'height'             => 800,

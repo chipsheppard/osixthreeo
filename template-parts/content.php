@@ -48,18 +48,18 @@ else :
 
 endif;
 
-tha_entry_top();
+osixthreeo_entry_top();
 
 echo '</div>';
 echo '</header>';
 
 echo '<div class="entry-content">';
 
-	tha_entry_content_before();
-	tha_entry_content_after();
+	osixthreeo_entry_content_before();
+	osixthreeo_entry_content_after();
 
 echo '</div>';
 
-tha_entry_bottom();
+osixthreeo_entry_bottom();
 
 echo '</article>';

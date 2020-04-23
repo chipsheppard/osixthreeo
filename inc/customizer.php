@@ -74,6 +74,26 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			bloginfo( 'description' );
 		}
 
+		$wp_customize->add_setting(
+			'osixthreeo_settings[tagline_align]',
+			array(
+				'default'           => $defaults['tagline_align'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[tagline_align]',
+			array(
+				'type'        => 'checkbox',
+				'label'       => esc_html__( 'Tagline align', 'osixthreeo' ),
+				'description' => esc_html__( 'Place the tagline next to the title or logo', 'osixthreeo' ),
+				'section'     => 'title_tagline',
+				'settings'    => 'osixthreeo_settings[tagline_align]',
+				'priority'    => 50,
+			)
+		);
+
 		/*
 		 * LAYOUTS -------------------------------------------------------------------------
 		 * tab -----------------------------------------------------------------------------
@@ -173,7 +193,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				$wp_customize,
 				'layout-header-message',
 				array(
-					'label'    => esc_html__( 'Logo/Menu Bar', 'osixthreeo' ),
+					'label'    => esc_html__( 'Logo/Menu Align', 'osixthreeo' ),
 					'section'  => 'osixthreeo_site_layout',
 					'priority' => 13,
 				)
@@ -420,7 +440,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'layout-titles-message',
 				array(
 					'section'  => 'osixthreeo_site_layout',
-					'label'    => esc_html__( 'Post/Page Titles', 'osixthreeo' ),
+					'label'    => esc_html__( 'Title Lift', 'osixthreeo' ),
 					'priority' => 23,
 				)
 			)
@@ -653,13 +673,13 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'colors-logomenu-message',
 				array(
 					'section'  => 'colors',
-					'label'    => esc_html__( 'Branding/Menu Bar', 'osixthreeo' ),
+					'label'    => esc_html__( 'Header Bar', 'osixthreeo' ),
 					'priority' => 20,
 				)
 			)
 		);
 
-		// branding/nav bg.
+		// background.
 		$wp_customize->add_setting(
 			'osixthreeo_settings[header_background_color]',
 			array(
@@ -674,7 +694,7 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				$wp_customize,
 				'osixthreeo_settings[header_background_color]',
 				array(
-					'label'        => esc_html__( 'Background', 'osixthreeo' ),
+					'label'        => esc_html__( 'Background color', 'osixthreeo' ),
 					'section'      => 'colors',
 					'settings'     => 'osixthreeo_settings[header_background_color]',
 					'show_opacity' => true,
@@ -702,6 +722,28 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 					'section'  => 'colors',
 					'settings' => 'osixthreeo_settings[nav_link_color]',
 					'priority' => 23,
+				)
+			)
+		);
+		// background HOMEPAGE.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[header_background_color_home]',
+			array(
+				'default'           => $defaults['header_background_color_home'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_rgba',
+			)
+		);
+		$wp_customize->add_control(
+			new Osixthreeo_Alpha_Color_Control(
+				$wp_customize,
+				'osixthreeo_settings[header_background_color_home]',
+				array(
+					'label'        => esc_html__( 'Background color (homepage only)', 'osixthreeo' ),
+					'section'      => 'colors',
+					'settings'     => 'osixthreeo_settings[header_background_color_home]',
+					'show_opacity' => true,
+					'priority'     => 24,
 				)
 			)
 		);

@@ -1,0 +1,11 @@
+.tagline-align {
+    .custom-logo,
+    .site-title,
+    .site-description {
+        display: table-cell;
+        vertical-align: middle;
+    }
+    .site-title {
+        padding-right: .25em;
+    }
+}

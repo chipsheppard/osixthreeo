@@ -45,7 +45,8 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		);
 
 		// Switch default core markup to output valid HTML5.
-		add_theme_support( 'html5',
+		add_theme_support(
+			'html5',
 			array(
 				'search-form',
 				'comment-form',
@@ -70,7 +71,8 @@ if ( ! function_exists( 'osixthreeo_setup' ) ) :
 		add_theme_support( 'customize-selective-refresh-widgets' );
 
 		// Custom Logo.
-		add_theme_support( 'custom-logo',
+		add_theme_support(
+			'custom-logo',
 			array(
 				'height'      => 40,
 				'width'       => 280,
@@ -155,7 +157,7 @@ add_action( 'enqueue_block_editor_assets', 'osixthreeo_gutenberg_editor_styles' 
 
 
 // Load all the things.
-require get_template_directory() . '/inc/tha-theme-hooks.php';
+require get_template_directory() . '/inc/theme-hooks.php';
 require get_template_directory() . '/inc/wordpress-cleanup.php';
 require get_template_directory() . '/inc/widgets.php';
 require get_template_directory() . '/inc/entry-meta.php';

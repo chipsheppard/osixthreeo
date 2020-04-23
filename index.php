@@ -12,16 +12,16 @@ do_action( 'osixthreeo_init' );
 
 get_header();
 
-tha_content_before();
+osixthreeo_content_before();
 echo '<div id="primary" class="content-area">';
-	tha_content_wrap_before();
+	osixthreeo_content_wrap_before();
 	echo '<main id="main" class="site-main" role="main">';
-	tha_content_top();
-	tha_content_loop();
-	tha_content_bottom();
+	osixthreeo_content_top();
+	osixthreeo_content_loop();
+	osixthreeo_content_bottom();
 	echo '</main>';
-	tha_content_wrap_after();
+	osixthreeo_content_wrap_after();
 echo '</div>';
-tha_content_after();
+osixthreeo_content_after();
 
 get_footer();

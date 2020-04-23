@@ -27,6 +27,8 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		);
 		$defaults            = osixthreeo_get_defaults();
 
+		$tagline_align                                = $osixthreeo_settings['tagline_align'];
+		$default_tagline_align                        = $defaults['tagline_align'];
 		$max_width                                    = $osixthreeo_settings['max_width'];
 		$default_max_width                            = $defaults['max_width'];
 		$header_bg_color_left                         = $osixthreeo_settings['header_bg_color_left'];
@@ -48,8 +50,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$default_home_mobile_header_height            = $defaults['home_mobile_header_height'];
 		$default_subpage_mobile_header_height         = $defaults['subpage_mobile_header_height'];
 		$header_bg_color                              = $osixthreeo_settings['header_background_color'];
-		$header_padding                               = $osixthreeo_settings['header_padding'];
 		$default_header_bg_color                      = $defaults['header_background_color'];
+		$header_bg_color_home                         = $osixthreeo_settings['header_background_color_home'];
+		$default_header_bg_color_home                 = $defaults['header_background_color_home'];
+		$header_padding                               = $osixthreeo_settings['header_padding'];
 		$default_header_padding                       = $defaults['header_padding'];
 		$header_bg_position                           = $osixthreeo_settings['header_bg_position'];
 		$header_bg_repeat                             = $osixthreeo_settings['header_bg_repeat'];
@@ -166,13 +170,11 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		$meta_comments                                = $osixthreeo_settings['meta_comments'];
 		$meta_updated                                 = $osixthreeo_settings['meta_updated'];
 		$meta_footer                                  = $osixthreeo_settings['meta_footer'];
-		$archives_hide_meta                           = $osixthreeo_settings['archives_hide_meta'];
 		$default_meta_date                            = $defaults['meta_date'];
 		$default_meta_author                          = $defaults['meta_author'];
 		$default_meta_comments                        = $defaults['meta_comments'];
 		$default_meta_updated                         = $defaults['meta_updated'];
 		$default_meta_footer                          = $defaults['meta_footer'];
-		$default_archives_hide_meta                   = $defaults['archives_hide_meta'];
 		$meta_font                                    = $osixthreeo_settings['meta_font'];
 		$meta_font_size                               = $osixthreeo_settings['meta_font_size'];
 		$meta_font_weight                             = $osixthreeo_settings['meta_font_weight'];
@@ -330,6 +332,14 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		if ( $default_header_bg_color !== $header_bg_color ) :
 			$css->set_selector( '.header-wrap' );
 			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['header_background_color'] ) );
+		endif;
+
+		/*
+		 * Header background color HOME --------------------------------
+		 */
+		if ( $default_header_bg_color_home !== $header_bg_color_home ) :
+			$css->set_selector( '.home .header-wrap' );
+			$css->add_property( 'background-color', esc_attr( $osixthreeo_settings['header_background_color_home'] ) );
 		endif;
 
 		/*

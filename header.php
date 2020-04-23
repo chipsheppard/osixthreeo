@@ -9,13 +9,13 @@
  */
 
 ?><!doctype html>
-<?php tha_html_before(); ?>
+<?php osixthreeo_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
 <?php
-tha_head_top();
+osixthreeo_head_top();
 wp_head();
-tha_head_bottom();
+osixthreeo_head_bottom();
 ?>
 </head>
 <body <?php body_class(); ?>>
@@ -24,13 +24,13 @@ if ( function_exists( 'wp_body_open' ) ) {
 	wp_body_open();
 }
 
-tha_body_top();
+osixthreeo_body_top();
 ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'osixthreeo' ); ?></a>
 
-	<?php tha_header_before(); ?>
-	<?php tha_header_after(); ?>
+	<?php osixthreeo_header_before(); ?>
+	<?php osixthreeo_header_after(); ?>
 
 	<div id="content" class="site-content">
 		<div class="content-inner-wrap">

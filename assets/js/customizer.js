@@ -3,7 +3,6 @@
  *
  * @package    osixthreeo
  * @subpackage osixthreeo/assets/js
- * @author     Chip Sheppard
  * @since      1.0.0
  * @license    GPL-2.0+
  */
@@ -207,15 +206,22 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		}
 	);
 
-	// HEADER COLORS --------------------------------------------- .
+	// HEADER COLORS ------------------------------------------------ .
 	osixthreeo_colors_live_update(
 		'header_background_color',
 		'.header-wrap',
 		'background-color',
 		'transparent'
 	);
+	// HEADER COLORS HOMEPAGE --------------------------------------- .
+	osixthreeo_colors_live_update(
+		'header_background_color_home',
+		'.home .header-wrap',
+		'background-color',
+		'transparent'
+	);
 
-	// CUSTOM HEADER TEXT COLORS ---------------------------------------------
+	// CUSTOM HEADER TEXT COLORS ------------------------------------ .
 	osixthreeo_colors_live_update(
 		'hero_text_primary_color',
 		'.hero-primary',
@@ -229,8 +235,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'#ffffff'
 	);
 
-	// CONTENT AREA COLORS ---------------------------------------------
-	// Title Color.
+	// CONTENT AREA COLORS ------------------------------------------
 	osixthreeo_colors_live_update(
 		'content_title_color',
 		'body.page .entry-title,body.single .entry-title,body.blog .page-title,body.archive .page-title,body.search .page-title,body.error404 .page-title,.woocommerce-products-header,.product_title.entry-title,body.page.titlelift .entry-title,body.single.titlelift .entry-title,body.blog.titlelift .page-title,body.archive.titlelift .page-title,body.search.titlelift .page-title,body.error404.titlelift .page-title,.single.titlelift .entry-meta a,.single.titlelift .entry-meta,.titlelift .archive-description,.titlelift .woocommerce-products-header,.titlelift .product_title.entry-title',
@@ -250,7 +255,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'#222222'
 	);
 
-	// FOOTER COLORS ---------------------------------------------
+	// FOOTER COLORS ------------------------------------------------
 	osixthreeo_colors_live_update(
 		'footer_background_color',
 		'.site-footer',
@@ -288,7 +293,7 @@ function osixthreeo_colors_live_update( id, selector, property, default_value ) 
 		'#808080'
 	);
 
-    // FONT SIZE ----------------------------------------------------------
+    // FONT SIZE ----------------------------------------------------
 	// base font size.
 	wp.customize(
 		'osixthreeo_settings[base_font_size]', function( value ) {

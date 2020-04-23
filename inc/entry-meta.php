@@ -142,4 +142,4 @@ function osixthreeo_display_entry_meta() {
 		echo '</div>';
 	endif;
 }
-add_action( 'tha_entry_top', 'osixthreeo_display_entry_meta' );
+add_action( 'osixthreeo_entry_top', 'osixthreeo_display_entry_meta' );

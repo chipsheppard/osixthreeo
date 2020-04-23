@@ -23,7 +23,7 @@ function osixthreeo_header_meta_tags() {
 <link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">
 ';
 }
-add_action( 'tha_head_top', 'osixthreeo_header_meta_tags' );
+add_action( 'osixthreeo_head_top', 'osixthreeo_header_meta_tags' );
 
 
 /**

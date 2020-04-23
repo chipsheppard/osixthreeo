@@ -27,15 +27,15 @@ if ( ! function_exists( 'osixthreeo_display_header' ) ) {
 		osixthreeo_header_before_wrap();
 		echo '<div class="header-wrap">';
 		echo '<div class="inner-wrap">';
-			tha_header_top();
-			tha_header_bottom();
+			osixthreeo_header_top();
+			osixthreeo_header_bottom();
 		echo '</div>';
 		echo '</div>';
 		osixthreeo_header_after_wrap();
 		echo '</header>';
 	}
 }
-add_action( 'tha_header_before', 'osixthreeo_display_header' );
+add_action( 'osixthreeo_header_before', 'osixthreeo_display_header' );
 
 
 /*
@@ -74,7 +74,7 @@ if ( ! function_exists( 'osixthreeo_display_branding' ) ) {
 		echo '</div>';
 	}
 }
-add_action( 'tha_header_top', 'osixthreeo_display_branding' );
+add_action( 'osixthreeo_header_top', 'osixthreeo_display_branding' );
 
 
 /*
@@ -111,7 +111,7 @@ if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
 		echo '</nav>';
 	}
 }
-add_action( 'tha_header_bottom', 'osixthreeo_display_nav' );
+add_action( 'osixthreeo_header_bottom', 'osixthreeo_display_nav' );
 
 
 /*
@@ -153,7 +153,7 @@ if ( ! function_exists( 'osixthreeo_display_content' ) ) {
 		endif;
 	}
 }
-add_action( 'tha_entry_content_before', 'osixthreeo_display_content' );
+add_action( 'osixthreeo_entry_content_before', 'osixthreeo_display_content' );
 
 
 /*
@@ -190,7 +190,7 @@ if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
 		endif;
 	}
 }
-add_action( 'tha_entry_bottom', 'osixthreeo_display_read_more' );
+add_action( 'osixthreeo_entry_bottom', 'osixthreeo_display_read_more' );
 
 
 /*
@@ -247,7 +247,7 @@ if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
 		endif;
 	}
 }
-add_action( 'tha_entry_bottom', 'osixthreeo_display_entry_footer' );
+add_action( 'osixthreeo_entry_bottom', 'osixthreeo_display_entry_footer' );
 
 
 /*
@@ -262,7 +262,7 @@ if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 		echo '<footer id="colophon" class="site-footer" role="contentinfo">';
 		echo '<div class="inner-wrap">';
 
-		tha_footer_top();
+		osixthreeo_footer_top();
 
 		if ( is_active_sidebar( 'footer' ) ) {
 			echo '<div class="site-info">';
@@ -283,11 +283,11 @@ if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {
 			echo '</div>';
 		}
 
-		tha_footer_bottom();
+		osixthreeo_footer_bottom();
 
 		echo '</div>';
 		echo '</footer>';
 
 	}
 }
-add_action( 'tha_footer_before', 'osixthreeo_display_site_footer' );
+add_action( 'osixthreeo_footer_before', 'osixthreeo_display_site_footer' );

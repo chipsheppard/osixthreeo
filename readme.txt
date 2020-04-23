@@ -4,8 +4,8 @@ Contributors: ultranorman
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, sticky-post, two-columns, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.5
 Requires PHP: 5.6
-Tested up to: 5.3.2
-Stable tag: 1.5.6
+Tested up to: 5.4
+Stable tag: 1.5.7
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -41,6 +41,7 @@ You should have received a copy of the GNU General Public License
 along with this program. If not, see http://www.gnu.org/copyleft/gpl.html
 
 == Credits ==
+
 * Started out as an Underscores starter theme http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * Uses normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
@@ -69,9 +70,10 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
-= 1.5.7 - 04 ?? 2020 =
+= 1.5.7 - 04 22 2020 =
+* Remove THA hook prefix in favor of theme namspace
 * Remove letter spacing from entry headers *
-* Adjustments for Gutenberg button styles *
+* Adjustments for Gutenberg button and blockquote styles *
 
 = 1.5.6 - 03 15 2020 =
 * Fixed block button color issue with customizer *

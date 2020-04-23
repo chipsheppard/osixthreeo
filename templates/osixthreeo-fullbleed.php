@@ -10,10 +10,10 @@
  * @subpackage osixthreeo/public/partials/templates
  */
 
-remove_action( 'tha_content_before', 'osixthreeo_get_left_sidebar' );
-remove_action( 'tha_content_after', 'osixthreeo_get_right_sidebar' );
-remove_action( 'tha_header_before', 'osixthreeo_widgets_display_preheader' );
-remove_action( 'tha_footer_before', 'osixthreeo_widgets_display_prefooter' );
+remove_action( 'osixthreeo_content_before', 'osixthreeo_get_left_sidebar' );
+remove_action( 'osixthreeo_content_after', 'osixthreeo_get_right_sidebar' );
+remove_action( 'osixthreeo_header_before', 'osixthreeo_widgets_display_preheader' );
+remove_action( 'osixthreeo_footer_before', 'osixthreeo_widgets_display_prefooter' );
 remove_filter( 'body_class', 'osixthreeo_sidebar_bodyclass' );
 
 add_filter(

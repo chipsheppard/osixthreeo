@@ -12,9 +12,9 @@ if ( ! is_active_sidebar( 'sidebar' ) && ! is_active_sidebar( 'sidebar-p' ) && !
 	return;
 }
 
-tha_sidebars_before();
+osixthreeo_sidebars_before();
 echo '<aside id="secondary" class="widget-area" role="complementary">';
-tha_sidebar_top();
+osixthreeo_sidebar_top();
 if ( OSTO_XTRAS ) {
 	if ( OSIXTHREEO_WOOCOMMERCE_ACTIVE ) {
 		if ( is_active_sidebar( 'sidebar-w' ) && ( is_woocommerce() || is_cart() || is_checkout() || is_account_page() ) ) {
@@ -32,6 +32,6 @@ if ( OSTO_XTRAS ) {
 } else {
 	dynamic_sidebar( 'sidebar' );
 };
-tha_sidebar_bottom();
+osixthreeo_sidebar_bottom();
 echo '</aside>';
-tha_sidebars_after();
+osixthreeo_sidebars_after();

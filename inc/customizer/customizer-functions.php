@@ -111,7 +111,7 @@ function osixthreeo_get_left_sidebar() {
 	endif;
 	get_sidebar();
 }
-add_action( 'tha_content_before', 'osixthreeo_get_left_sidebar' );
+add_action( 'osixthreeo_content_before', 'osixthreeo_get_left_sidebar' );
 
 /**
  * SIDEBAR RIGHT ----------------------
@@ -124,7 +124,7 @@ function osixthreeo_get_right_sidebar() {
 	endif;
 	get_sidebar();
 }
-add_action( 'tha_content_after', 'osixthreeo_get_right_sidebar' );
+add_action( 'osixthreeo_content_after', 'osixthreeo_get_right_sidebar' );
 
 
 /**
@@ -213,6 +213,31 @@ function osixthreeo_home_header_fullheight() {
 	}
 }
 add_action( 'osixthreeo_init', 'osixthreeo_home_header_fullheight' );
+
+
+/**
+ * TAGLINE ALIGN - Checkbox
+ * -----------------------------------------------------------------
+ * Add a body class that aligns the tagline next to the title/logo.
+ */
+function osixthreeo_tagline_align() {
+	$osixthreeo_settings = wp_parse_args(
+		get_option( 'osixthreeo_settings', array() ),
+		osixthreeo_get_defaults()
+	);
+
+	if ( ! $osixthreeo_settings['tagline_align'] ) {
+		return;
+	}
+
+	add_filter(
+		'body_class',
+		function( $classes ) {
+			return array_merge( $classes, array( 'tagline-align' ) );
+		}
+	);
+}
+add_action( 'osixthreeo_init', 'osixthreeo_tagline_align' );
 
 
 /**

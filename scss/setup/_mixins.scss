@@ -14,32 +14,31 @@
 }
 
 @mixin breakpoint($point) {
-
-  @if $point == site-max {
-    @media all and (max-width: 1280px) { @content; }
-  }
-  @if $point == tablet-h {
-    @media all and (max-width: 1025px) { @content; }
-  }
-  @if $point == tablet-m {
-    @media all and (max-width: 900px) { @content; }
-  }
-  @if $point == tablet-v {
-    @media all and (max-width: 768px) { @content; }// device is less than or equal to... apply styles
-  }
-  @if $point == tablet-min-v {
-    @media all and (min-width: 769px) { @content; }// device is greater than or equal to... apply styles
-  }
-  @if $point == phone-h {
-    @media all and (max-width: 640px) { @content; }
-  }
-  @if $point == phone-min-h {
-    @media all and (min-width: 641px) { @content; }
-  }
-  @if $point == phone-v {
-    @media all and (max-width: 380px) { @content; }
-  }
-  @if $point == phone-min-v {
-    @media all and (min-width: 381px) { @content; }
-  }
+	@if $point == site-max {
+		@media all and (max-width: 1280px) { @content; }
+	}
+	@if $point == tablet-h {
+		@media all and (max-width: 1025px) { @content; }
+	}
+	@if $point == tablet-m {
+		@media all and (max-width: 900px) { @content; }
+	}
+	@if $point == tablet-v {
+		@media all and (max-width: 768px) { @content; } // device is less than or equal to... apply styles
+	}
+	@if $point == tablet-min-v {
+		@media all and (min-width: 769px) { @content; } // device is greater than or equal to... apply styles
+	}
+	@if $point == phone-h {
+		@media all and (max-width: 640px) { @content; }
+	}
+	@if $point == phone-min-h {
+		@media all and (min-width: 641px) { @content; }
+	}
+	@if $point == phone-v {
+		@media all and (max-width: 380px) { @content; }
+	}
+	@if $point == phone-min-v {
+		@media all and (min-width: 381px) { @content; }
+	}
 }
