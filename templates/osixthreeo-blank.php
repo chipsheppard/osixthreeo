@@ -2,7 +2,7 @@
 /**
  * The template for displaying a page with no sidebar.
  *
- * Template Name: Blank
+ * Template Name: Osixthreeo Blank
  *
  * @since      1.0.0
  *

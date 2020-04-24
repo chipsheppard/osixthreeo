@@ -2,9 +2,11 @@
 /**
  * Theme hook stub list.
  *
- * @package  osixthreeo
- * @author   Chip Sheppard
- * @since    1.0.0
+ * @package    osixthreeo
+ * @subpackage osixthreeo/inc
+ * @author     Chip Sheppard
+ * @since      1.0.0
+ * @license    GPL-2.0+
  */
 
 /**
@@ -13,9 +15,8 @@
 function osixthreeo_html_before() {
 	do_action( 'osixthreeo_html_before' );
 }
-/**
- * <body> hooks
- */
+
+/** <body> hooks */
 function osixthreeo_body_top() {
 	do_action( 'osixthreeo_body_top' );
 }

@@ -2,7 +2,7 @@
 /**
  * The template for displaying a page with no sidebar.
  *
- * Template Name: Fullbleed - Not Contained
+ * Template Name: Osixthreeo Fullbleed
  *
  * @since      1.0.0
  *

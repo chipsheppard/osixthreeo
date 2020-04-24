@@ -32,19 +32,23 @@ if ( true !== $osixthreeo_hide_fi && ! is_singular() && ! has_post_format( 'asid
 
 endif;
 
-echo '<header class="entry-header">';
+if ( ! is_page_template( array( 'templates/osixthreeo-blank.php', 'templates/osixthreeo-fullbleed.php' ) ) ) :
 
-if ( is_singular() ) :
+	echo '<header class="entry-header">';
 
-	// Title for posts, attachments, pages, custom post types.
-	echo '<div class="title-wrap">';
-	the_title( '<h1 class="entry-title">', '</h1>' );
+	if ( is_singular() ) :
 
-else :
+		// Title for posts, attachments, pages, custom post types.
+		echo '<div class="title-wrap">';
+		the_title( '<h1 class="entry-title">', '</h1>' );
 
-	// Title for archives & search.
-	echo '<div class="title-wrap">';
-	the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+	else :
+
+		// Title for archives & search.
+		echo '<div class="title-wrap">';
+		the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+
+	endif;
 
 endif;
 

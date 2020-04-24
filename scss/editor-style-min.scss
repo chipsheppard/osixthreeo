@@ -23,14 +23,6 @@
 	7. 	Site Content
 		d. 	entries
 		f. 	entry-meta
-		j. 	404
-	10. Plugins
-		a. 	Jetpack
-		b. 	Woo Commerce
-		c. 	BBPress
-		d.  Contact Form 7
-	11. Customizer Functions
-		e.  Title Lift
 
 ---------------------------------
  #  1. Setup
@@ -51,11 +43,6 @@
 @import "forms/search";
 
 /*-------------------------------
- #  4. Navigation
-@import "navigation/navigation";
--------------------------------*/
-
-/*-------------------------------
  #  5. Modules
 -------------------------------*/
 @import "modules/modules";
@@ -68,33 +55,11 @@
 /*-------------------------------
  #  7. Site Content
 -------------------------------*/
-@import "site/404";
 @import "site/entries";
 @import "site/entry-meta";
 
-
 /*-------------------------------
- #  8. Widgets
-@import "widgets/widgets";
--------------------------------*/
-
-/*-------------------------------
- #  9. Infinite scroll
-@import "modules/infinite-scroll";
--------------------------------*/
-
-/*-------------------------------
- #  10. Plugins
--------------------------------*/
-@import "plugins/plugins";
-
-/*-------------------------------
- #  11. Customizer Function Styles
--------------------------------*/
-@import "customizer/titlelift";
-
-/*-------------------------------
-#  12. Editor Specific
+Editor Specific
 -------------------------------*/
 
 img.size-auto,
@@ -104,6 +69,3 @@ img.size-medium {
 	max-width: 100%;
 	height: auto;
 }
-
-
-
