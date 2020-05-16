@@ -1,15 +1,15 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-04-22 18:23-0400\n"
-"PO-Revision-Date: 2020-04-22 18:24-0400\n"
+"POT-Creation-Date: 2020-05-16 18:25-0400\n"
+"PO-Revision-Date: 2020-05-16 18:28-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_001\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-KeywordsList: __;_e;esc_html__;esc_html_e;esc_html_x;esc_attr_x;_n;"
@@ -231,7 +231,7 @@ msgstr ""
 msgid "Hover links"
 msgstr ""
 
-#: inc/customizer.php:868 inc/customizer.php:3673
+#: inc/customizer.php:868 inc/customizer.php:3692
 msgid "Border"
 msgstr ""
 
@@ -938,7 +938,7 @@ msgid "Primary text"
 msgstr ""
 
 #: inc/customizer.php:2626 inc/customizer.php:2749 inc/customizer.php:2896
-#: inc/customizer.php:3017 inc/customizer.php:3692 inc/customizer.php:3781
+#: inc/customizer.php:3017 inc/customizer.php:3711 inc/customizer.php:3800
 msgid "Color"
 msgstr ""
 
@@ -955,12 +955,12 @@ msgid "Alignment"
 msgstr ""
 
 #: inc/customizer.php:2708 inc/customizer.php:2976 inc/customizer.php:3141
-#: inc/customizer.php:3563
+#: inc/customizer.php:3582
 msgid "Left"
 msgstr ""
 
 #: inc/customizer.php:2709 inc/customizer.php:2977 inc/customizer.php:3142
-#: inc/customizer.php:3591
+#: inc/customizer.php:3610
 msgid "Right"
 msgstr ""
 
@@ -972,15 +972,15 @@ msgstr ""
 msgid "Text Shadow"
 msgstr ""
 
-#: inc/customizer.php:2769 inc/customizer.php:3037 inc/customizer.php:3803
+#: inc/customizer.php:2769 inc/customizer.php:3037 inc/customizer.php:3822
 msgid "x offset"
 msgstr ""
 
-#: inc/customizer.php:2788 inc/customizer.php:3056 inc/customizer.php:3822
+#: inc/customizer.php:2788 inc/customizer.php:3056 inc/customizer.php:3841
 msgid "y offset"
 msgstr ""
 
-#: inc/customizer.php:2807 inc/customizer.php:3075 inc/customizer.php:3841
+#: inc/customizer.php:2807 inc/customizer.php:3075 inc/customizer.php:3860
 msgid "Blur"
 msgstr ""
 
@@ -1052,83 +1052,87 @@ msgstr ""
 msgid "Categories & Tags"
 msgstr ""
 
-#: inc/customizer.php:3412 inc/customizer.php:3891
+#: inc/customizer.php:3409
+msgid "Post Navigation (prev, next)"
+msgstr ""
+
+#: inc/customizer.php:3431 inc/customizer.php:3910
 msgid "Get more options with an OsixthreeO Extension"
 msgstr ""
 
-#: inc/customizer.php:3424
+#: inc/customizer.php:3443
 msgid "Archive Entries"
 msgstr ""
 
-#: inc/customizer.php:3443
+#: inc/customizer.php:3462
 msgid "Entry Elements"
 msgstr ""
 
-#: inc/customizer.php:3462
+#: inc/customizer.php:3481
 msgid "Hide the featured image"
 msgstr ""
 
-#: inc/customizer.php:3482
+#: inc/customizer.php:3501
 msgid "Hide the meta data"
 msgstr ""
 
-#: inc/customizer.php:3502
+#: inc/customizer.php:3521
 msgid "Hide the excerpt"
 msgstr ""
 
-#: inc/customizer.php:3522
+#: inc/customizer.php:3541
 msgid "Hide the Continue button"
 msgstr ""
 
-#: inc/customizer.php:3542
+#: inc/customizer.php:3561
 msgid "Padding"
 msgstr ""
 
-#: inc/customizer.php:3619
+#: inc/customizer.php:3638
 msgid "Top"
 msgstr ""
 
-#: inc/customizer.php:3647
+#: inc/customizer.php:3666
 msgid "Bottom"
 msgstr ""
 
-#: inc/customizer.php:3712
+#: inc/customizer.php:3731
 msgid "Width"
 msgstr ""
 
-#: inc/customizer.php:3737
+#: inc/customizer.php:3756
 msgid "Border radius"
 msgstr ""
 
-#: inc/customizer.php:3762
+#: inc/customizer.php:3781
 msgid "Box Shadow"
 msgstr ""
 
-#: inc/customizer.php:3865
+#: inc/customizer.php:3884
 msgid "Spread"
 msgstr ""
 
-#: inc/customizer.php:3904
+#: inc/customizer.php:3923
 msgid "Site Footer"
 msgstr ""
 
-#: inc/customizer.php:3923
+#: inc/customizer.php:3942
 msgid "Back To Top"
 msgstr ""
 
-#: inc/customizer.php:3940
+#: inc/customizer.php:3959
 msgid "Add a Back To Top button"
 msgstr ""
 
-#: inc/customizer.php:3941
+#: inc/customizer.php:3960
 msgid "Appears on the right side of the site footer."
 msgstr ""
 
-#: inc/customizer.php:3961
+#: inc/customizer.php:3980
 msgid "Widget Columns"
 msgstr ""
 
-#: inc/customizer.php:3978
+#: inc/customizer.php:3997
 msgid "Display multiple widgets as responsive columns."
 msgstr ""
 
@@ -1155,50 +1159,50 @@ msgstr ""
 msgid "% comments"
 msgstr ""
 
-#: inc/loop.php:60 template-parts/content-none.php:19
-#, php-format
-msgid "Search Results for:%1$s %2$s"
-msgstr ""
-
-#: inc/loop.php:83
-msgid "&laquo; Previous"
-msgstr ""
-
-#: inc/loop.php:84
-msgid "Next &raquo;"
-msgstr ""
-
-#: inc/loop.php:101
-msgid "<span>previous</span> %title"
-msgstr ""
-
-#: inc/loop.php:102
-msgid "<span>next</span> %title"
-msgstr ""
-
 #: inc/theme-functions.php:133
 msgid "Pages:"
 msgstr ""
 
-#: inc/theme-functions.php:184
-#, php-format
-msgid "Continue<span class=\"screen-reader-text\"> \"%s\"</span>"
-msgstr ""
-
-#: inc/theme-functions.php:218 inc/theme-functions.php:224
+#: inc/theme-functions.php:199 inc/theme-functions.php:205
 msgid ", "
 msgstr ""
 
-#: inc/theme-functions.php:234
+#: inc/theme-functions.php:215
 #, php-format
 msgid "Edit <span class=\"screen-reader-text\">%s</span>"
 msgstr ""
 
-#: inc/theme-functions.php:275
+#: inc/theme-functions.php:253
+msgid "<span>previous</span> %title"
+msgstr ""
+
+#: inc/theme-functions.php:254
+msgid "<span>next</span> %title"
+msgstr ""
+
+#: inc/theme-functions.php:279 template-parts/content-none.php:19
+#, php-format
+msgid "Search Results for:%1$s %2$s"
+msgstr ""
+
+#: inc/theme-functions.php:308
+msgid "&laquo; Previous"
+msgstr ""
+
+#: inc/theme-functions.php:309
+msgid "Next &raquo;"
+msgstr ""
+
+#: inc/theme-functions.php:343
+#, php-format
+msgid "Continue<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: inc/theme-functions.php:377
 msgid "https://osixthreeo.com/"
 msgstr ""
 
-#: inc/theme-functions.php:278
+#: inc/theme-functions.php:380
 #, php-format
 msgid "Powered by %s"
 msgstr ""
