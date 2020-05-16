@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 /*
- * DISPLAY Header
+ * HEADER
  * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_header' ) ) {
@@ -39,7 +39,7 @@ add_action( 'osixthreeo_header_before', 'osixthreeo_display_header' );
 
 
 /*
- * DISPLAY Branding
+ * HEADER Branding
  * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_branding' ) ) {
@@ -78,7 +78,7 @@ add_action( 'osixthreeo_header_top', 'osixthreeo_display_branding' );
 
 
 /*
- * DISPLAY Navigation
+ * HEADER Navigation
  * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_nav' ) ) {
@@ -115,7 +115,7 @@ add_action( 'osixthreeo_header_bottom', 'osixthreeo_display_nav' );
 
 
 /*
- * DISPLAY The Content
+ * The Content
  * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_content' ) ) {
@@ -157,44 +157,25 @@ add_action( 'osixthreeo_entry_content_before', 'osixthreeo_display_content' );
 
 
 /*
- * DISPLAY Read More link
+ * Comments
  * -----------------------------------------------------------------
  */
-if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
+if ( ! function_exists( 'osixthreeo_comments' ) ) {
 	/**
-	 * The Read More link markup
+	 * WP Comments
 	 */
-	function osixthreeo_display_read_more() {
-		$osixthreeo_settings = wp_parse_args(
-			get_option( 'osixthreeo_settings', array() ),
-			osixthreeo_get_defaults()
-		);
-		$hide_rm             = $osixthreeo_settings['archives_hide_readmore'];
+	function osixthreeo_comments() {
 
-		if ( true === $hide_rm ) {
-			return;
+		if ( is_singular() && ( comments_open() || get_comments_number() ) ) {
+			comments_template();
 		}
-
-		if ( is_archive() || is_home() || is_search() ) :
-			$link = sprintf(
-				'<footer class="link-more"><a href="%1$s" class="more-link">%2$s</a></footer>',
-				get_permalink( get_the_ID() ),
-				sprintf(
-					/* translators: %s: Name of current post */
-					__( 'Continue<span class="screen-reader-text"> "%s"</span>', 'osixthreeo' ),
-					get_the_title( get_the_ID() )
-				)
-			);
-			echo wp_kses_post( $link );
-			echo '<div class="cf"></div>';
-		endif;
 	}
 }
-add_action( 'osixthreeo_entry_bottom', 'osixthreeo_display_read_more' );
+add_action( 'osixthreeo_content_while_after', 'osixthreeo_comments' );
 
 
 /*
- * DISPLAY Entry Footer Meta
+ * POST Footer Meta
  * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_entry_footer' ) ) {
@@ -251,7 +232,128 @@ add_action( 'osixthreeo_entry_bottom', 'osixthreeo_display_entry_footer' );
 
 
 /*
- * DISPLAY Site Footer
+ * POST Navigation (prev - next)
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_postnav' ) ) {
+	/**
+	 * Post Navigation
+	 */
+	function osixthreeo_postnav() {
+
+		$osixthreeo_settings = wp_parse_args(
+			get_option( 'osixthreeo_settings', array() ),
+			osixthreeo_get_defaults()
+		);
+		$post_nav            = $osixthreeo_settings['post_nav'];
+
+		if ( true === $post_nav && is_single() ) :
+			the_post_navigation(
+				array(
+					'prev_text' => __( '<span>previous</span> %title', 'osixthreeo' ),
+					'next_text' => __( '<span>next</span> %title', 'osixthreeo' ),
+				)
+			);
+		endif;
+	}
+}
+add_action( 'osixthreeo_entry_after', 'osixthreeo_postnav' );
+
+
+/*
+ * ARCHIVE Page Titles
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_archive_page_title' ) ) {
+	/**
+	 * Archive Page Titles
+	 */
+	function osixthreeo_archive_page_titles() {
+		if ( is_home() && ! is_front_page() || is_archive() || is_search() ) :
+			echo '<header class="page-header">';
+			echo '<div class="title-wrap">';
+
+			if ( is_search() ) :
+				echo '<h1 class="page-title">';
+				/* translators: %$2s: is the search term */
+				printf( '<span>' . esc_html__( 'Search Results for:%1$s %2$s', 'osixthreeo' ), '</span>', get_search_query() );
+				echo '</h1>';
+			else :
+				the_archive_title( '<h1 class="page-title">', '</h1>' );
+				the_archive_description( '<div class="archive-description">', '</div>' );
+			endif;
+
+			echo '</div>';
+			echo '</header>';
+		endif;
+	}
+}
+add_action( 'osixthreeo_content_while_before', 'osixthreeo_archive_page_titles' );
+
+
+/*
+ * ARCHIVE Pagination (<< 1 of 10 >>)
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_postpagination' ) ) {
+	/**
+	 * Do Post Pagination on Post archive pages only.
+	 */
+	function osixthreeo_postpagination() {
+
+		if ( is_archive() || is_home() ) :
+			the_posts_pagination(
+				array(
+					'mid_size'  => 2,
+					'prev_text' => __( '&laquo; Previous', 'osixthreeo' ),
+					'next_text' => __( 'Next &raquo;', 'osixthreeo' ),
+				)
+			);
+		endif;
+	}
+}
+add_action( 'osixthreeo_content_while_after', 'osixthreeo_postpagination' );
+
+
+/*
+ * ARCHIVE Read More link
+ * -----------------------------------------------------------------
+ */
+if ( ! function_exists( 'osixthreeo_display_read_more' ) ) {
+	/**
+	 * The Read More link markup
+	 */
+	function osixthreeo_display_read_more() {
+		$osixthreeo_settings = wp_parse_args(
+			get_option( 'osixthreeo_settings', array() ),
+			osixthreeo_get_defaults()
+		);
+		$hide_rm             = $osixthreeo_settings['archives_hide_readmore'];
+
+		if ( true === $hide_rm ) {
+			return;
+		}
+
+		if ( is_archive() || is_home() || is_search() ) :
+			$link = sprintf(
+				'<footer class="link-more"><a href="%1$s" class="more-link">%2$s</a></footer>',
+				get_permalink( get_the_ID() ),
+				sprintf(
+					/* translators: %s: Name of current post */
+					__( 'Continue<span class="screen-reader-text"> "%s"</span>', 'osixthreeo' ),
+					get_the_title( get_the_ID() )
+				)
+			);
+			echo wp_kses_post( $link );
+			echo '<div class="cf"></div>';
+		endif;
+	}
+}
+add_action( 'osixthreeo_entry_bottom', 'osixthreeo_display_read_more' );
+
+
+/*
+ * FOOTER
  * -----------------------------------------------------------------
  */
 if ( ! function_exists( 'osixthreeo_display_site_footer' ) ) {

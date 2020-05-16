@@ -4,8 +4,8 @@ Contributors: ultranorman
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, sticky-post, two-columns, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.5
 Requires PHP: 5.6
-Tested up to: 5.4
-Stable tag: 1.5.9
+Tested up to: 5.4.1
+Stable tag: 1.6.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,6 +69,11 @@ mobile-only - will only display on devices 768 pixels wide and lower.
 desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
+
+= 1.6.0 - 05 16 2020 =
+* Alternate button, blockquote styles
+* Move loop functions to theme-functions file
+* Post navigation option
 
 = 1.5.9 - 04 24 2020 =
 * Remove title from page-builder templates

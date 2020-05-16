@@ -3393,6 +3393,25 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'priority' => 37,
 			)
 		);
+		// show post navigation.
+		$wp_customize->add_setting(
+			'osixthreeo_settings[post_nav]',
+			array(
+				'default'           => $defaults['post_nav'],
+				'type'              => 'option',
+				'sanitize_callback' => 'osixthreeo_sanitize_checkbox',
+			)
+		);
+		$wp_customize->add_control(
+			'osixthreeo_settings[post_nav]',
+			array(
+				'type'     => 'checkbox',
+				'label'    => esc_html__( 'Post Navigation (prev, next)', 'osixthreeo' ),
+				'section'  => 'osixthreeo_to_content',
+				'settings' => 'osixthreeo_settings[post_nav]',
+				'priority' => 38,
+			)
+		);
 
 		// GET EXTENSIONS.
 		if ( ! OSTO_XTRAS ) :
