@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.4.1
-Stable tag: 1.6.0
+Stable tag: 1.6.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
