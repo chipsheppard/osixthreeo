@@ -16,17 +16,16 @@ remove_action( 'osixthreeo_header_before', 'osixthreeo_widgets_display_preheader
 remove_action( 'osixthreeo_footer_before', 'osixthreeo_widgets_display_prefooter' );
 remove_filter( 'body_class', 'osixthreeo_sidebar_bodyclass' );
 
-add_filter(
-	'body_class',
-	function( $classes ) {
-		return array_merge(
-			$classes,
-			array(
-				'osixthreeo-fullbleed',
-			)
-		);
-	}
-);
+/**
+ * Add a body class
+ *
+ * @param Array $classes the body classes.
+ */
+function osixthreeo_fullbleed_template_body_classes( $classes ) {
+	$classes[] = 'osixthreeo-fullbleed';
+	return $classes;
+}
+add_filter( 'body_class', 'osixthreeo_fullbleed_template_body_classes' );
 
 // Build the page.
 get_template_part( 'index' );

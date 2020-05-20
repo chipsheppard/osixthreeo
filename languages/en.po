@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2020-05-16 18:25-0400\n"
-"PO-Revision-Date: 2020-05-16 18:28-0400\n"
+"POT-Creation-Date: 2020-05-20 15:37-0400\n"
+"PO-Revision-Date: 2020-05-20 15:38-0400\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_001\n"
@@ -52,12 +52,16 @@ msgstr ""
 msgid "Primary Menu"
 msgstr ""
 
-#: header.php:30
+#: header.php:32
 msgid "Skip to content"
 msgstr ""
 
-#: inc/class-osixthreeo-featuredimage-checkbox.php:51
+#: inc/class-osixthreeo-featuredimage-checkbox.php:52
 msgid "Featured Image Display"
+msgstr ""
+
+#: inc/class-osixthreeo-featuredimage-checkbox.php:120
+msgid "Display in the custom header."
 msgstr ""
 
 #: inc/customizer.php:89
@@ -1225,27 +1229,27 @@ msgid ""
 "your website."
 msgstr ""
 
-#: inc/wordpress-cleanup.php:53
+#: inc/wordpress-cleanup.php:66
 msgid "<div>written by:</div><span class=\"vcard\">"
 msgstr ""
 
-#: inc/wordpress-cleanup.php:55
+#: inc/wordpress-cleanup.php:68
 msgid "<div>archive by year:</div>"
 msgstr ""
 
-#: inc/wordpress-cleanup.php:57
+#: inc/wordpress-cleanup.php:70
 msgid "<div>archive by month:</div>"
 msgstr ""
 
-#: inc/wordpress-cleanup.php:59
+#: inc/wordpress-cleanup.php:72
 msgid "<div>archive by day:</div>"
 msgstr ""
 
-#: inc/wordpress-cleanup.php:67
+#: inc/wordpress-cleanup.php:80
 msgid "Archives"
 msgstr ""
 
-#: inc/wordpress-cleanup.php:101
+#: inc/wordpress-cleanup.php:116
 msgid "search for"
 msgstr ""
 

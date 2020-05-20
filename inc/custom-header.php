@@ -74,8 +74,8 @@ if ( ! function_exists( 'osixthreeo_customheader_image_url' ) ) {
 
 		$blog_id        = get_option( 'page_for_posts' );
 		$_post          = get_queried_object();
-		$key_value      = get_post_meta( get_the_ID(), '_show_featured_image', true );
-		$blog_key_value = get_post_meta( $blog_id, '_show_featured_image', true );
+		$key_value      = get_post_meta( get_the_ID(), '_osixthreeo_show_featured_image', true );
+		$blog_key_value = get_post_meta( $blog_id, '_osixthreeo_show_featured_image', true );
 
 		/**
 		 * Is it a Blog page (or home) that has a featured image with checkbox checked?

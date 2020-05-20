@@ -19,12 +19,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 function osixthreeo_header_meta_tags() {
 	echo '<meta charset="' . esc_attr( get_bloginfo( 'charset' ) ) . '">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
-<link rel="pingback" href="' . esc_url( get_bloginfo( 'pingback_url' ) ) . '">
-';
+<link rel="profile" href="http://gmpg.org/xfn/11">';
 }
 add_action( 'osixthreeo_head_top', 'osixthreeo_header_meta_tags' );
 
+/**
+ * Add a pingback url auto-discovery header for single posts, pages, or attachments.
+ */
+function osixthreeo_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		printf(
+			'<link rel="pingback" href="%s">
+',
+			esc_url(
+				get_bloginfo( 'pingback_url' )
+			)
+		);
+	}
+}
+add_action( 'osixthreeo_head_top', 'osixthreeo_pingback_header' );
 
 /**
  * Remove injected styles from recent comments widget.
@@ -78,7 +91,9 @@ add_filter( 'get_the_archive_title', 'osixthreeo_archive_title_part' );
  * @return int modified excerpt length.
  */
 function osixthreeo_custom_excerpt_length( $length ) {
-	if ( has_post_format( 'aside' ) || has_post_format( 'status' ) ) :
+	if ( is_admin() ) :
+		return $length;
+	elseif ( has_post_format( 'aside' ) || has_post_format( 'status' ) ) :
 		return 48;
 	elseif ( is_search() ) :
 		return 32;
@@ -98,7 +113,7 @@ add_filter( 'excerpt_length', 'osixthreeo_custom_excerpt_length', 999 );
 function osixthreeo_search_button( $form ) {
 	$form = '<form role="search" method="get" class="search-form" action="' . home_url( '/' ) . '" >
 	<label for="s">
-		<span class="screen-reader-text">' . __( 'search for', 'osixthreeo' ) . '</span>
+		<span class="screen-reader-text">' . esc_html__( 'search for', 'osixthreeo' ) . '</span>
 		<input type="search" class="search-field" placeholder="' . esc_attr__( 'Search ...', 'osixthreeo' ) . '" value="' . get_search_query() . '" name="s" />
 	</label>
 	<input type="submit" class="search-submit" value="' . esc_attr__( 'go', 'osixthreeo' ) . '" />
