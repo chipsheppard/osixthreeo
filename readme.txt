@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.4.1
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -70,10 +70,13 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
+= 1.6.3 - 05 21 2020 =
+* Single array in css-output
+
 = 1.6.2 - 05 20 2020 =
 * Round 2 review edits
 
-= 1.6.1 - 05 16 2020 =
+= 1.6.1 - 05 18 2020 =
 * Editor button styles
 
 = 1.6.0 - 05 16 2020 =

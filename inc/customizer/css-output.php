@@ -1399,10 +1399,10 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 function osixthreeo_enqueue_customizer_css() {
 	$handle = 'osixthreeo-style';
 	// If there are no settings set Or if we're in the customizer.
-	if ( ! get_option( 'osixthreeo_customizer_css_output', true ) || is_customize_preview() ) {
+	if ( ! get_option( 'osixthreeo_base_css_output', true ) || is_customize_preview() ) {
 		$css = osixthreeo_base_css();
 	} else {
-		$css = get_option( 'osixthreeo_customizer_css_output' ) . '/* OsixthreeO customizer CSS */';
+		$css = get_option( 'osixthreeo_base_css_output' ) . '/* OsixthreeO customizer CSS */';
 	}
 	wp_add_inline_style( $handle, $css );
 }
@@ -1415,6 +1415,6 @@ add_action( 'wp_enqueue_scripts', 'osixthreeo_enqueue_customizer_css', 50 );
  */
 function osixthreeo_update_customizer_css_cache() {
 	$css = osixthreeo_base_css();
-	update_option( 'osixthreeo_customizer_css_output', $css );
+	update_option( 'osixthreeo_base_css_output', $css );
 }
 add_action( 'customize_save_after', 'osixthreeo_update_customizer_css_cache' );
