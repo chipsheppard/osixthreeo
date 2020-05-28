@@ -17,15 +17,14 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 	/**
 	 * Generate the CSS in the <head> section using the Theme Customizer.
 	 *
+	 * @param null $css an array.
 	 * @since 0.1
 	 */
-	function osixthreeo_base_css() {
-		// Get our settings.
-		$osixthreeo_settings = wp_parse_args(
-			get_option( 'osixthreeo_settings', array() ),
-			osixthreeo_get_defaults()
-		);
+	function osixthreeo_base_css( $css = null ) {
+		$saved               = (array) get_option( 'osixthreeo_settings' );
 		$defaults            = osixthreeo_get_defaults();
+		$osixthreeo_settings = wp_parse_args( $saved, $defaults );
+		$osixthreeo_settings = array_intersect_key( $osixthreeo_settings, $defaults );
 
 		$tagline_align                                = $osixthreeo_settings['tagline_align'];
 		$default_tagline_align                        = $defaults['tagline_align'];
@@ -1386,7 +1385,11 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
 		// Allow us to hook CSS into our output - where we would hook our "Pro" features?
 		do_action( 'osixthreeo_base_css', $css );
 
-		return apply_filters( 'osixthreeo_base_css_output', $css->css_output() );
+		if ( null !== $css ) {
+			return apply_filters( 'osixthreeo_settings', $css->css_output() );
+		}
+
+		return $osixthreeo_settings;
 	}
 }
 
@@ -1397,24 +1400,13 @@ if ( ! function_exists( 'osixthreeo_base_css' ) ) {
  * @since 1.0.0
  */
 function osixthreeo_enqueue_customizer_css() {
-	$handle = 'osixthreeo-style';
+	$css = osixthreeo_base_css();
 	// If there are no settings set Or if we're in the customizer.
-	if ( ! get_option( 'osixthreeo_base_css_output', true ) || is_customize_preview() ) {
+	if ( '' === $css || is_customize_preview() ) {
 		$css = osixthreeo_base_css();
 	} else {
-		$css = get_option( 'osixthreeo_base_css_output' ) . '/* OsixthreeO customizer CSS */';
+		$css = osixthreeo_base_css() . '/* OsixthreeO customizer CSS */';
 	}
-	wp_add_inline_style( $handle, $css );
+	wp_add_inline_style( 'osixthreeo-style', $css );
 }
 add_action( 'wp_enqueue_scripts', 'osixthreeo_enqueue_customizer_css', 50 );
-
-/**
- * Save our generated CSS as a WP Option which gets cached.
- *
- * @since 1.0.0
- */
-function osixthreeo_update_customizer_css_cache() {
-	$css = osixthreeo_base_css();
-	update_option( 'osixthreeo_base_css_output', $css );
-}
-add_action( 'customize_save_after', 'osixthreeo_update_customizer_css_cache' );

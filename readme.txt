@@ -5,7 +5,7 @@ Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom
 Requires at least: 4.5
 Requires PHP: 5.6
 Tested up to: 5.4.1
-Stable tag: 1.6.3
+Stable tag: 1.6.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -42,8 +42,14 @@ along with this program. If not, see http://www.gnu.org/copyleft/gpl.html
 
 == Credits ==
 
-* Started out as an Underscores starter theme http://underscores.me/, (C) 2012-2018 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Uses normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
+Screenshot graphic by Chip Sheppard
+License: Creative Commons Zero (CC0), https://creativecommons.org/publicdomain/zero/1.0/  
+
+Underscores 
+https://underscores.me/, (C) 2012-2019 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
+
+Normalize.cs
+http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
 == Anything else I should know? ==
 
@@ -72,6 +78,7 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 = 1.6.3 - 05 21 2020 =
 * Single array in css-output
+* License for screenshot graphics
 
 = 1.6.2 - 05 20 2020 =
 * Round 2 review edits
