@@ -76,6 +76,11 @@ desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
 
+= 1.7.0 - 01 05 2021 =
+* German translation file added
+* Setup for OsixthreeO Xtras plugin release
+* Adjustments to editor styles
+
 = 1.6.3 - 05 21 2020 =
 * Single array in css-output
 * License for screenshot graphics
