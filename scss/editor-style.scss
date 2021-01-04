@@ -1,6 +1,7 @@
 /*
  * Theme Name: osixthreeo
  * Description: Used to style the WP Block Editor.
+ * Copy compiled .css file to /assets/css/editor-style.css
 ----------------------------------------------------------------
 
 	2. 	Elements
@@ -29,7 +30,6 @@
 -------------------------------*/
 @import "setup/mixins";
 @import "setup/variables";
-@import "setup/clearings";
 
 /*-------------------------------
  #  2. Elements
