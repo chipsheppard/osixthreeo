@@ -1005,11 +1005,6 @@ img.alignright {
 /*
  * Columns
  ---------------------------------- */
-.wp-block-columns {
-  /*
-  * BOXING - just add a class!
-  ---------------------------------- */
-}
 .wp-block-columns.has-6-columns .wp-block-column:last-of-type, .wp-block-columns.has-5-columns .wp-block-column:last-of-type, .wp-block-columns.has-4-columns .wp-block-column:last-of-type, .wp-block-columns.has-3-columns .wp-block-column:last-of-type, .wp-block-columns.has-2-columns .wp-block-column:last-of-type {
   margin-right: 0;
 }
