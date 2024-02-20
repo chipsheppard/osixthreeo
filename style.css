@@ -833,6 +833,9 @@ input[type=submit]:hover {
   border-radius: 6px;
   color: #ffffff;
 }
+.btn:hover {
+  color: #ffffff;
+}
 
 .wp-block-button.alignleft {
   margin-right: 1.5em;
