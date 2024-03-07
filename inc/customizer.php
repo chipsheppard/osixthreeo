@@ -630,28 +630,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		// GET EXTENSIONS.
-		if ( ! OSTO_XTRAS ) :
-			$wp_customize->add_setting(
-				'layout-pro-callout',
-				array(
-					'sanitize_callback' => 'wp_kses_post',
-				)
-			);
-			$wp_customize->add_control(
-				new Osixthreeo_Content_Area(
-					$wp_customize,
-					'layout-pro-callout',
-					array(
-						'section'  => 'osixthreeo_site_layout',
-						'label'    => esc_html__( 'Get more layout controls with an OsixthreeO Extension', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
-						'priority' => 100,
-					)
-				)
-			);
-		endif;
-
 		/*
 		 * COLORS --------------------------------------------------------------------------
 		 * tab -----------------------------------------------------------------------------
@@ -1304,28 +1282,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				)
 			)
 		);
-
-		// GET EXTENSIONS.
-		if ( ! OSTO_XTRAS ) :
-			$wp_customize->add_setting(
-				'colors-pro-callout',
-				array(
-					'sanitize_callback' => 'wp_kses_post',
-				)
-			);
-			$wp_customize->add_control(
-				new Osixthreeo_Content_Area(
-					$wp_customize,
-					'colors-pro-callout',
-					array(
-						'section'  => 'colors',
-						'label'    => esc_html__( 'Get more color controls with an OsixthreeO Extension', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
-						'priority' => 200,
-					)
-				)
-			);
-		endif;
 
 		/*
 		 * TYPOGRAPHY ----------------------------------------------------------------------
@@ -2241,28 +2197,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'priority' => 24,
 			)
 		);
-
-		// GET EXTENSIONS.
-		if ( ! OSTO_XTRAS ) :
-			$wp_customize->add_setting(
-				'typography-pro-callout',
-				array(
-					'sanitize_callback' => 'wp_kses_post',
-				)
-			);
-			$wp_customize->add_control(
-				new Osixthreeo_Content_Area(
-					$wp_customize,
-					'typography-pro-callout',
-					array(
-						'section'  => 'osixthreeo_typography',
-						'label'    => esc_html__( 'Get more controls with an OsixthreeO Extension', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
-						'priority' => 100,
-					)
-				)
-			);
-		endif;
 
 		/*
 		 * CUSTOM HEADER -------------------------------------------------------------------
@@ -3413,28 +3347,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 			)
 		);
 
-		// GET EXTENSIONS.
-		if ( ! OSTO_XTRAS ) :
-			$wp_customize->add_setting(
-				'themeops-pro-callout',
-				array(
-					'sanitize_callback' => 'wp_kses_post',
-				)
-			);
-			$wp_customize->add_control(
-				new Osixthreeo_Content_Area(
-					$wp_customize,
-					'themeops-pro-callout',
-					array(
-						'section'  => 'osixthreeo_to_content',
-						'priority' => 100,
-						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
-					)
-				)
-			);
-		endif;
-
 		// SUBPANEL - ARCHIVE ENTRIES ----------------------------------- .
 		// -------------------------------------------------------------- .
 		$wp_customize->add_section(
@@ -3892,28 +3804,6 @@ if ( ! function_exists( 'osixthreeo_customize_register' ) ) {
 				'priority'    => 45,
 			)
 		);
-
-		// GET EXTENSIONS.
-		if ( ! OSTO_XTRAS ) :
-			$wp_customize->add_setting(
-				'themeops-a-pro-callout',
-				array(
-					'sanitize_callback' => 'wp_kses_post',
-				)
-			);
-			$wp_customize->add_control(
-				new Osixthreeo_Content_Area(
-					$wp_customize,
-					'themeops-a-pro-callout',
-					array(
-						'section'  => 'osixthreeo_to_archives',
-						'label'    => esc_html__( 'Get more options with an OsixthreeO Extension', 'osixthreeo' ),
-						'content'  => '<a href="' . OSIXTHREEO_THEME_LINK . '" class="probtn" target="_blank" rel="noopener">OsixthreeO.com</a>',
-						'priority' => 100,
-					)
-				)
-			);
-		endif;
 
 		// SUBPANEL - SITE FOOTER --------------------------------------- .
 		// -------------------------------------------------------------- .

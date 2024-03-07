@@ -18,11 +18,11 @@
 		border-radius: 0;
 		color: $color__base;
 		display: inline-block;
-		padding: .375em .75em .5em;
+		padding: .5em .75em .5em;
 		position: absolute;
 		right: 0;
 		top: 1px;
-		width: 55px;
+		// width: 55px;
 		@include font-size(1.25);
 
 		&:hover,

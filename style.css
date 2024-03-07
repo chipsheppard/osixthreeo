@@ -2,7 +2,7 @@
 /*
 	Theme Name: OsixthreeO
 	Text Domain: osixthreeo
-	Version: 1.7.0
+	Version: 1.7.3
 	Description: A flexibile, lightweight, multi-purpose theme with a colorful custom header and heaps of customizer controls for crafting a unique design with no code or plugins.
 	Tags: translation-ready, theme-options, full-width-template, footer-widgets, featured-images, custom-logo, custom-background, flexible-header, grid-layout
 	Tested up to: 5.6
@@ -833,6 +833,7 @@ input[type=submit]:hover {
   border-radius: 6px;
   color: #ffffff;
 }
+
 .btn:hover {
   color: #ffffff;
 }
@@ -848,7 +849,7 @@ input[type=submit]:hover {
 .btn.alt,
 .is-style-outline .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-  padding-right: 52px;
+  padding-right: 52px !important;
 }
 .btn.alt:before,
 .is-style-outline .wp-block-button__link:before,
@@ -995,11 +996,10 @@ select {
   border-radius: 0;
   color: #222222;
   display: inline-block;
-  padding: 0.375em 0.75em 0.5em;
+  padding: 0.5em 0.75em 0.5em;
   position: absolute;
   right: 0;
   top: 1px;
-  width: 55px;
   font-size: 20px;
   font-size: 1.25rem;
 }

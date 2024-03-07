@@ -4,8 +4,8 @@ Contributors: ultranorman
 Tags: blog, custom-background, custom-colors, custom-header, custom-logo, custom-menu, featured-image-header, featured-images, flexible-header, footer-widgets, full-width-template, left-sidebar, one-column, right-sidebar, sticky-post, two-columns, theme-options, threaded-comments, translation-ready, wide-blocks
 Requires at least: 4.5
 Requires PHP: 5.6
-Tested up to: 5.6
-Stable tag: 1.7.0
+Tested up to: 6.4.3
+Stable tag: 1.7.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,11 @@ mobile-only - will only display on devices 768 pixels wide and lower.
 desktop-only - will only display on devices 769 pixels wide and greater.
 
 == ChangeLog ==
+
+= 1.7.3 - 03 05 2024 =
+* Removed upsell links in customizer
+* fix padding issue with block editor buttons
+* removed function that changes "Search" button text
 
 = 1.7.0 - 01 05 2021 =
 * German translation file added

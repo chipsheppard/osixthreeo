@@ -78,7 +78,7 @@ input[type="submit"] {
 .btn.alt,
 .is-style-outline .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-	padding-right: 52px;
+	padding-right: 52px !important;
 
 	&:before {
 		border-style: solid;

@@ -503,6 +503,10 @@ input[type=submit]:hover {
   color: #ffffff;
 }
 
+.btn:hover {
+  color: #ffffff;
+}
+
 .wp-block-button.alignleft {
   margin-right: 1.5em;
 }
@@ -514,7 +518,7 @@ input[type=submit]:hover {
 .btn.alt,
 .is-style-outline .wp-block-button__link,
 .editor-styles-wrapper .wp-block-button.is-style-outline .wp-block-button__link {
-  padding-right: 52px;
+  padding-right: 52px !important;
 }
 .btn.alt:before,
 .is-style-outline .wp-block-button__link:before,
@@ -593,11 +597,10 @@ input[type=submit] {
   border-radius: 0;
   color: #222222;
   display: inline-block;
-  padding: 0.375em 0.75em 0.5em;
+  padding: 0.5em 0.75em 0.5em;
   position: absolute;
   right: 0;
   top: 1px;
-  width: 55px;
   font-size: 20px;
   font-size: 1.25rem;
 }

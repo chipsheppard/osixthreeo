@@ -102,22 +102,3 @@ function osixthreeo_custom_excerpt_length( $length ) {
 	endif;
 }
 add_filter( 'excerpt_length', 'osixthreeo_custom_excerpt_length', 999 );
-
-
-/**
- * SEARCH Change Text in Submit Button
- *
- * @param String $form string of text.
- * @link https://wordpress.org/support/topic/how-do-i-change-some-details-of-the-search-widget
- */
-function osixthreeo_search_button( $form ) {
-	$form = '<form role="search" method="get" class="search-form" action="' . home_url( '/' ) . '" >
-	<label for="s">
-		<span class="screen-reader-text">' . esc_html__( 'search for', 'osixthreeo' ) . '</span>
-		<input type="search" class="search-field" placeholder="' . esc_attr__( 'Search ...', 'osixthreeo' ) . '" value="' . get_search_query() . '" name="s" />
-	</label>
-	<input type="submit" class="search-submit" value="' . esc_attr__( 'go', 'osixthreeo' ) . '" />
-	</form>';
-	return $form;
-}
-add_filter( 'get_search_form', 'osixthreeo_search_button' );
